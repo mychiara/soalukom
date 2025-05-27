@@ -1,7 +1,7 @@
 body {
     font-family: "Times New Roman", Times, serif;
-    background-color: #f0f4f8; /* Latar belakang lebih lembut dan modern */
-    color: #333; /* Warna teks default lebih gelap untuk kontras */
+    background-color: #f0f4f8;
+    color: #333;
     margin: 0;
     padding: 20px;
     font-weight: normal;
@@ -10,18 +10,18 @@ body {
     align-items: center;
     min-height: 100vh;
     box-sizing: border-box;
-    line-height: 1.6; /* Meningkatkan keterbacaan */
+    line-height: 1.6;
 }
 
 /* Container untuk setiap view (login, menu, kuis, hasil) */
 .container-view {
-    max-width: 700px; /* Sedikit lebih lebar untuk konten */
+    max-width: 700px;
     width: 90%;
-    margin: 25px auto; /* Margin lebih konsisten */
+    margin: 25px auto;
     background: #ffffff;
-    padding: 25px 30px; /* Padding internal lebih besar */
-    border-radius: 12px; /* Border radius lebih besar untuk kelembutan */
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1); /* Bayangan lebih halus dan modern */
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
@@ -31,25 +31,24 @@ body {
 
 /* Judul */
 h1, h2, h3 {
-    font-family: "Georgia", "Times New Roman", Times, serif; /* Georgia sebagai alternatif serif yang elegan */
-    color: #2c3e50; /* Warna biru tua untuk judul */
+    font-family: "Georgia", "Times New Roman", Times, serif;
+    color: #2c3e50;
     margin-bottom: 20px;
 }
 h1 { font-size: 2.3em; }
 h2 { font-size: 1.9em; }
 h3 { font-size: 1.6em; }
 
-
-/* Styling untuk login container (sekarang license-form-container) */
+/* Styling untuk login container (license-form-container) */
 #license-form-container {
-    /* ... properti background dan overlay dari sebelumnya ... */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    padding: 25px 30px;
+    padding: 25px 30px; /* Padding disesuaikan untuk kerapatan */
     position: relative;
     z-index: 1;
     text-align: center;
+    border-radius: 12px; /* Pastikan border-radius ada */
 }
 
 #license-form-container::before {
@@ -60,109 +59,95 @@ h3 { font-size: 1.6em; }
     right: 0;
     bottom: 0;
     background-image: linear-gradient(
-        rgba(0, 0, 0, 0.4),  /* Tingkatkan sedikit kegelapan overlay awal */
-        rgba(0, 0, 0, 0.6)   /* Tingkatkan sedikit kegelapan overlay akhir */
+        rgba(0, 0, 0, 0.4),  /* Kegelapan overlay disesuaikan */
+        rgba(0, 0, 0, 0.6)
     ), url('background.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    border-radius: 12px;
+    border-radius: 12px; /* Samakan dengan container */
     z-index: -1;
-    /* opacity: 0.85; // Opacity bisa diatur di sini atau di gradasi rgba */
-}
-
-/* MEMBUAT TEKS LEBIH MENCOLOK */
-#license-form-container h1,
-#license-form-container .app-description,
-#license-form-container .app-features-intro,
-#license-form-container .login-prompt,
-#license-form-container .app-features li {
-    color: #ffffff; /* Teks putih cerah */
-    /* text-shadow: horizontal-offset vertical-offset blur-radius color; */
-    text-shadow:
-        0px 0px 5px rgba(0, 0, 0, 0.9),  /* Bayangan hitam lembut untuk kedalaman */
-        0px 0px 10px rgba(0, 0, 0, 0.7), /* Bayangan hitam lebih menyebar */
-        1px 1px 2px rgba(0,0,0,0.5);     /* Bayangan hitam tipis untuk outline */
-    /* Alternatif: satu bayangan tebal */
-    /* text-shadow: 0px 0px 7px rgba(0, 0, 0, 1); */
 }
 
 #license-form-container h1 {
-    font-size: 2.4em; /* Sedikit perbesar judul utama */
-    margin-bottom: 12px;
-    font-weight: bold; /* Pastikan tebal */
+    font-size: 2.4em;
+    margin-bottom: 12px; /* Rapat */
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.9), 0px 0px 10px rgba(0,0,0,0.7), 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 #license-form-container .app-title-highlight {
-    color: #FFD700; /* Warna emas atau kuning cerah untuk highlight */
-    /* Atau biarkan putih jika efek shadow sudah cukup */
-    /* color: #f0f8ff; */
+    color: #FFD700; /* Emas */
     font-weight: bold;
-    text-shadow: /* Shadow khusus untuk highlight jika perlu */
-        0px 0px 6px rgba(0, 0, 0, 0.9),
-        0px 0px 3px rgba(255,223,0,0.6); /* Glow effect dengan warna highlight */
+    text-shadow: 0px 0px 6px rgba(0,0,0,0.9), 0px 0px 3px rgba(255,223,0,0.6);
 }
 
 #license-form-container .app-description,
 #license-form-container .app-features-intro,
 #license-form-container .login-prompt {
-    font-size: 1.1em; /* Sedikit perbesar font pendukung */
-    margin-bottom: 10px;
-    line-height: 1.45;
+    font-size: 1.1em;
+    color: #ffffff;
+    margin-bottom: 10px; /* Rapat */
+    line-height: 1.45;   /* Rapat */
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.9), 0px 0px 10px rgba(0,0,0,0.7), 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+#license-form-container .app-description {
+    margin-bottom: 12px;
 }
 
 #license-form-container .app-features {
     list-style-type: none;
     padding-left: 0;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 15px auto; /* Rapat */
     max-width: 85%;
     text-align: left;
 }
 
 #license-form-container .app-features li {
-    padding-left: 1.8em; /* Beri ruang lebih untuk checklist yang lebih jelas */
+    padding-left: 1.8em;
     position: relative;
-    margin-bottom: 7px;
-    font-size: 1.05em; /* Sedikit perbesar font list */
-    line-height: 1.35;
+    margin-bottom: 7px; /* Rapat */
+    font-size: 1.05em;
+    color: #ffffff;
+    line-height: 1.35;  /* Rapat */
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.9), 0px 0px 10px rgba(0,0,0,0.7), 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 #license-form-container .app-features li::before {
-    content: "\2714"; /* Checklist yang lebih tegas, atau \2713 juga oke */
-    color: #98FB98; /* PaleGreen, hijau yang lebih cerah dan jelas */
+    content: "\2714";
+    color: #98FB98; /* PaleGreen */
     font-weight: bold;
-    font-size: 1.2em; /* Perbesar sedikit ikon checklist */
+    font-size: 1.2em;
     position: absolute;
     left: 0;
-    top: -1px; /* Sesuaikan posisi vertikal */
-    text-shadow: 0px 0px 4px rgba(0,0,0,0.7); /* Shadow untuk checklist */
+    top: -1px;
+    text-shadow: 0px 0px 4px rgba(0,0,0,0.7);
 }
 
 #license-form-container .login-prompt {
-    margin-top: 18px;
-    margin-bottom: 10px;
-    font-weight: 500; /* Pastikan bobot font cukup */
+    margin-top: 18px; /* Rapat */
+    margin-bottom: 10px; /* Rapat */
+    font-weight: 500;
 }
 
-/* Input dan tombol bisa dibiarkan dengan styling sebelumnya */
 #license-form-container input[type="text"] {
     padding: 11px 13px;
     margin: 8px 0 14px 0;
-    /* ... sisa properti input ... */
-    border: 1px solid #c0c0c0; /* Border sedikit lebih gelap untuk kontras dengan background input */
+    border: 1px solid #c0c0c0;
     border-radius: 8px;
     width: calc(100% - 28px);
     box-sizing: border-box;
     font-size: 1em;
     font-family: "Times New Roman", Times, serif;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.92); /* Background input yang cukup solid */
-    color: #1c1c1c; /* Teks input lebih gelap */
+    background-color: rgba(255, 255, 255, 0.92);
+    color: #1c1c1c;
 }
 #license-form-container input[type="text"]::placeholder {
     color: #5a5a5a;
 }
-/* ... :focus styles ... */
 #license-form-container input[type="text"]:focus {
     border-color: #007BFF;
     box-shadow: 0 0 0 0.2rem rgba(100, 173, 255, 0.35);
@@ -170,34 +155,40 @@ h3 { font-size: 1.6em; }
     background-color: #ffffff;
 }
 
-
 #license-form-container button#submit-license-button {
     margin-top: 10px;
     margin-bottom: 18px;
-    padding: 11px 22px; /* Padding tombol disesuaikan */
-    font-size: 1.05em; /* Sedikit perbesar font tombol */
+    padding: 11px 22px;
+    font-size: 1.05em;
     font-weight: bold;
 }
 
-/* Penyesuaian untuk developer credit agar tetap terbaca */
-#license-form-container .developer-credit p,
-#license-form-container .developer-credit a {
-    color: #f5f5f5; /* Teks putih pudar */
-    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8); /* Shadow yang cukup */
+#license-form-container .developer-credit {
+    margin-top: 15px;
+}
+#license-form-container .developer-credit p {
+    font-size: 0.9em; /* Disesuaikan agar tidak terlalu kecil */
+    margin-bottom: 4px;
+    line-height: 1.35;
+    color: #f5f5f5;
+    text-shadow: 0px 0px 3px rgba(0,0,0,0.8);
 }
 #license-form-container .developer-credit a {
-    color: #c1e0ff; /* Biru muda yang lebih cerah untuk link */
+    color: #c1e0ff;
 }
 #license-form-container .developer-credit a:hover {
     color: #ffffff;
 }
 #license-form-container .developer-credit img {
-    width: 70px; /* Ukuran gambar developer bisa sedikit dikurangi */
-    height: 70px;
+    width: 75px; /* Sedikit disesuaikan */
+    height: 75px;
     margin-bottom: 8px;
     border-color: #e0e0e0;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
+
+/* Tombol Umum */
 button {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -215,7 +206,6 @@ button {
     letter-spacing: 0.5px;
     transition: background-color 0.2s ease-in-out, transform 0.15s ease-out, box-shadow 0.15s ease-out;
 }
-
 button:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
@@ -226,48 +216,21 @@ button:active {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Tombol Previous - Hijau */
-.btn-prev {
-    background-color: #28a745;
-}
-.btn-prev:hover {
-    background-color: #1f7a34;
-}
+/* Tombol Navigasi Khusus */
+.btn-prev { background-color: #28a745; }
+.btn-prev:hover { background-color: #1f7a34; }
+.btn-home { background-color: #dc3545; }
+.btn-home:hover { background-color: #b02a37; }
+.btn-doubtful { background-color: #ffc107; color: #212529; }
+.btn-doubtful:hover { background-color: #e0a800; }
 
-/* Tombol Next - Biru (sudah diatur di button umum) */
-.btn-next {
-    /* background-color: #007BFF; */
-}
-.btn-next:hover {
-    /* background-color: #0056b3; */
-}
-
-
-/* Tombol Home/Kembali ke Menu - Merah */
-.btn-home {
-    background-color: #dc3545;
-}
-.btn-home:hover {
-    background-color: #b02a37;
-}
-
-/* Tombol Ragu-ragu - Kuning */
-.btn-doubtful {
-    background-color: #ffc107; /* Kuning amber */
-    color: #212529; /* Teks gelap agar kontras */
-}
-.btn-doubtful:hover {
-    background-color: #e0a800; /* Kuning lebih gelap saat hover */
-}
-
-
+/* Tombol Opsi Jawaban */
 #options-container {
     display: flex;
     flex-direction: column;
     gap: 12px;
     margin-top: 20px;
 }
-
 .option-button {
     padding: 14px 18px;
     border: 1px solid #d1d8e0;
@@ -293,29 +256,25 @@ button:active {
     transform: none;
     background-color: #f8f9fa;
 }
-
-
 .option-button.correct {
     background-color: #4CAF50 !important;
     color: white !important;
     border-color: #388E3C !important;
     font-weight: bold;
 }
-
 .option-button.incorrect {
     background-color: #f44336 !important;
     color: white !important;
     border-color: #D32F2F !important;
     font-weight: bold;
 }
-
 .option-button.selected-tryout {
     background-color: #cce5ff !important;
     border-color: #b8daff !important;
     color: black !important;
 }
 
-
+/* Pertanyaan dan Pesan Selamat Datang */
 #question {
     font-family: "Times New Roman", Times, serif;
     font-weight: normal;
@@ -325,13 +284,13 @@ button:active {
     color: #34495e;
     line-height: 1.5;
 }
-
 #welcome-user-message {
     margin-bottom: 25px;
     font-size: 1.4em;
     color: #34495e;
 }
 
+/* Menu Container */
 #menu-container button {
     display: block;
     width: 70%;
@@ -339,232 +298,63 @@ button:active {
     padding: 14px 20px;
     font-size: 1.1em;
 }
+#menu-container #tryout-button { background-color: #28a745; }
+#menu-container #tryout-button:hover { background-color: #1f7a34; }
+#menu-container button#logout-button { background-color: #dc3545; margin-top: 15px; }
+#menu-container button#logout-button:hover { background-color: #b02a37; }
 
-/* Tombol Try Out - Hijau */
-#menu-container #tryout-button {
-    background-color: #28a745; /* Green */
-}
-#menu-container #tryout-button:hover {
-    background-color: #1f7a34; /* Darker Green */
-}
-
-
+/* Tombol Navigasi (Next, Prev, Back) */
 #navigation-buttons {
     margin-top: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Memungkinkan tombol untuk wrap jika tidak cukup ruang */
-    gap: 10px; /* Jarak antar tombol */
+    flex-wrap: wrap;
+    gap: 10px;
 }
+#navigation-buttons button { margin-bottom: 5px; }
 
-#navigation-buttons button { /* Beri margin bawah untuk tombol jika wrap */
-    margin-bottom: 5px;
-}
-
-
-/* ... CSS Anda yang sudah ada ... */
-
-/* Styling untuk Result Container yang Lebih Menarik */
-#result-container {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradasi ungu-biru elegan */
-    color: #ffffff; /* Teks utama putih agar kontras */
-    padding: 40px 35px; /* Padding lebih besar */
-    border-radius: 15px; /* Border radius lebih halus */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 15px rgba(118, 75, 162, 0.5); /* Bayangan lebih dramatis */
-    text-align: center;
-    animation: fadeInResult 0.8s ease-out; /* Animasi fade-in halus */
-}
-
-@keyframes fadeInResult {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-#result-container h2.result-title { /* Tambahkan class jika perlu untuk judul "Hasil" */
-    font-family: "Georgia", "Times New Roman", Times, serif;
-    font-size: 2.8em;
-    color: #f0e6ff; /* Lavender terang untuk judul */
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-}
-
-#result-container p#score {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Font modern dan bersih */
-    font-size: 1.5em; /* Ukuran font skor */
-    line-height: 1.8; /* Jarak baris yang nyaman */
-    margin-bottom: 30px; /* Jarak lebih besar sebelum tombol */
-    white-space: pre-wrap;
-    background-color: rgba(255, 255, 255, 0.1); /* Latar belakang semi-transparan untuk blok skor */
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block; /* Agar background hanya melingkupi teks */
-    max-width: 90%; /* Batasi lebar agar tidak terlalu memanjang di layar besar */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-/* Styling untuk menyorot bagian skor angka (jika Anda bisa memisahkannya di HTML/JS) */
-#result-container p#score .score-value {
-    font-size: 2.5em; /* Angka skor lebih besar */
-    font-weight: bold;
-    color: #ffd700; /* Emas untuk angka skor */
-    display: block; /* Jadikan blok agar bisa di tengah */
-    margin: 10px 0;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-}
-
-#result-container p#score .user-name-result {
-    font-weight: bold;
-    color: #c4e1ff; /* Biru muda untuk nama pengguna */
-}
-
-#result-container p#score .category-breakdown-title {
-    font-weight: bold;
-    margin-top: 15px;
-    display: block;
-    color: #e6e6fa; /* Lavender */
-    font-size: 1.1em;
-}
-
-#result-container p#score .category-item {
-    display: block; /* Setiap item kategori jadi baris baru */
-    margin-bottom: 5px;
-    font-size: 1em;
-    color: #f0f0f0; /* Warna lebih netral untuk detail */
-}
-#result-container p#score .category-item .category-name {
-    font-weight: 500;
-    color: #d1c4e9; /* Ungu muda untuk nama kategori */
-}
-#result-container p#score .category-item .category-score {
-    font-weight: bold;
-    color: #b2dfdb; /* Teal muda untuk skor kategori */
-}
-
-
-/* Tombol Restart yang Lebih Gaya */
-#result-container #restart-button {
-    background-color: #ffc107; /* Kuning cerah */
-    color: #333; /* Teks gelap */
-    font-size: 1.15em;
-    font-weight: bold;
-    padding: 15px 30px;
-    border-radius: 25px; /* Tombol lebih membulat */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    border: none;
-    letter-spacing: 0.5px;
-}
-
-#result-container #restart-button:hover {
-    background-color: #e0a800; /* Kuning lebih gelap */
-    transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-}
-#result-container #restart-button:active {
-    transform: translateY(-1px) scale(1.01);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-/* Media Queries untuk responsivitas jika diperlukan */
-@media (max-width: 768px) {
-    #result-container {
-        padding: 30px 20px;
-    }
-    #result-container h2.result-title {
-        font-size: 2.2em;
-    }
-    #result-container p#score {
-        font-size: 1.2em;
-        padding: 15px;
-    }
-    #result-container p#score .score-value {
-        font-size: 2em;
-    }
-    #result-container #restart-button {
-        font-size: 1em;
-        padding: 12px 25px;
-    }
-}
-
-
-#footer {
-    width: 100%;
-    text-align: center;
-    background-color: #007BFF; /* Biru primary, atau pilih biru lain yang sesuai */
-    color: #ffffff; /* Teks putih untuk kontras yang baik dengan biru */
-    padding: 10px 0; /* Padding atas dan bawah dikurangi, 0 untuk kiri-kanan */
-    margin-top: auto; /* Ini akan mendorong footer ke bawah halaman */
-    box-sizing: border-box;
-    font-size: 0.9em;
-}
-
+/* Kategori Latihan Container */
 #kategori-latihan-container .kategori-button {
     display: block;
     width: 70%;
     margin: 10px auto;
     padding: 12px 15px;
-    background-color: #007BFF; /* Default - akan di-override oleh nth-of-type */
     font-size: 1.05em;
-    color: white; /* Default text color */
+    color: white;
 }
+#kategori-latihan-container .kategori-button:nth-of-type(1) { background-color: #17a2b8; } /* Jiwa */
+#kategori-latihan-container .kategori-button:nth-of-type(1):hover { background-color: #117a8b; }
+#kategori-latihan-container .kategori-button:nth-of-type(2) { background-color: #ffc107; color: #212529;} /* Anak */
+#kategori-latihan-container .kategori-button:nth-of-type(2):hover { background-color: #e0a800; color: #212529;}
+#kategori-latihan-container .kategori-button:nth-of-type(3) { background-color: #fd7e14; } /* Keluarga */
+#kategori-latihan-container .kategori-button:nth-of-type(3):hover { background-color: #d36307; }
+#kategori-latihan-container .kategori-button:nth-of-type(4) { background-color: #6610f2; } /* Komunitas */
+#kategori-latihan-container .kategori-button:nth-of-type(4):hover { background-color: #520dc2; }
+#kategori-latihan-container .kategori-button:nth-of-type(5) { background-color: #20c997; } /* Medikal Bedah */
+#kategori-latihan-container .kategori-button:nth-of-type(5):hover { background-color: #1baa80; }
+#kategori-latihan-container .kategori-button:nth-of-type(6) { background-color: #e83e8c; } /* Gadar */
+#kategori-latihan-container .kategori-button:nth-of-type(6):hover { background-color: #c22670; }
+#kategori-latihan-container .kategori-button:nth-of-type(7) { background-color: #795548; } /* Manajemen */
+#kategori-latihan-container .kategori-button:nth-of-type(7):hover { background-color: #5d4037; }
 
-/* Warna berbeda untuk setiap tombol kategori */
-#kategori-latihan-container .kategori-button:nth-of-type(1) { /* Keperawatan Jiwa */
-    background-color: #17a2b8; /* Teal */
+#kategori-latihan-container #kembali-ke-menu-utama-button.btn-home {
+    background-color: #6f42c1; /* Ungu */
+    margin-top: 25px;
 }
-#kategori-latihan-container .kategori-button:nth-of-type(1):hover {
-    background-color: #117a8b; /* Darker Teal */
+#kategori-latihan-container #kembali-ke-menu-utama-button.btn-home:hover {
+    background-color: #5a32a3;
 }
-#kategori-latihan-container .kategori-button:nth-of-type(2) { /* Keperawatan Anak */
-    background-color: #ffc107; /* Yellow */
-    color: #212529; /* Dark text for yellow */
+/* Fallback jika ada .btn-home lain di kategori container */
+#kategori-latihan-container .btn-home {
+    background-color: #6c757d;
 }
-#kategori-latihan-container .kategori-button:nth-of-type(2):hover {
-    background-color: #e0a800; /* Darker Yellow */
-    color: #212529;
-}
-#kategori-latihan-container .kategori-button:nth-of-type(3) { /* Keperawatan Keluarga */
-    background-color: #fd7e14; /* Orange */
-}
-#kategori-latihan-container .kategori-button:nth-of-type(3):hover {
-    background-color: #d36307; /* Darker Orange */
-}
-#kategori-latihan-container .kategori-button:nth-of-type(4) { /* Keperawatan Komunitas */
-    background-color: #6610f2; /* Indigo */
-}
-#kategori-latihan-container .kategori-button:nth-of-type(4):hover {
-    background-color: #520dc2; /* Darker Indigo */
-}
-#kategori-latihan-container .kategori-button:nth-of-type(5) { /* Keperawatan Medikal Bedah */
-    background-color: #20c997; /* Turquoise */
-}
-#kategori-latihan-container .kategori-button:nth-of-type(5):hover {
-    background-color: #1baa80; /* Darker Turquoise */
-}
-#kategori-latihan-container .kategori-button:nth-of-type(6) { /* Keperawatan Gawat Darurat */
-    background-color: #e83e8c; /* Pink */
-}
-#kategori-latihan-container .kategori-button:nth-of-type(6):hover {
-    background-color: #c22670; /* Darker Pink */
-}
-#kategori-latihan-container .kategori-button:nth-of-type(7) { /* Manajemen Keperawatan */
-    background-color: #795548; /* Brown */
-}
-#kategori-latihan-container .kategori-button:nth-of-type(7):hover {
-    background-color: #5d4037; /* Darker Brown */
-}
-
-/* Tombol Kembali ke Menu Utama di Kategori View - Ungu */
-#kategori-latihan-container #kembali-ke-menu-utama-button {
-    background-color: #6f42c1; /* Purple */
-    margin-top: 25px; /* Keep existing margin if needed */
-}
-#kategori-latihan-container #kembali-ke-menu-utama-button:hover {
-    background-color: #5a32a3; /* Darker Purple */
+#kategori-latihan-container .btn-home:hover {
+    background-color: #545b62;
 }
 
 
+/* Penjelasan Jawaban */
 #explanation {
     margin-top: 20px;
     padding: 15px;
@@ -576,12 +366,12 @@ button:active {
     line-height: 1.7;
     color: #495057;
 }
-
 #explanation strong {
     font-weight: bold;
     color: #2c3e50;
 }
 
+/* Quiz Layout */
 #quiz-header {
     display: flex;
     justify-content: space-between;
@@ -590,7 +380,6 @@ button:active {
     padding-bottom: 10px;
     border-bottom: 1px solid #eee;
 }
-
 #question-counter {
     font-size: 1em;
     color: #555e68;
@@ -598,7 +387,6 @@ button:active {
     margin-bottom: 15px;
     text-align: left;
 }
-
 #timer-display-sidebar {
     font-size: 1.1em;
     font-weight: bold;
@@ -609,8 +397,6 @@ button:active {
     border: 1px solid #f7c6c7;
     text-align: center;
 }
-
-
 #quiz-layout-container {
     display: flex;
     flex-direction: row;
@@ -622,7 +408,6 @@ button:active {
     box-shadow: none;
     margin: 25px auto;
 }
-
 #quiz-main-content {
     flex: 2.5;
     padding: 25px 30px;
@@ -633,7 +418,6 @@ button:active {
     flex-direction: column;
     text-align: left;
 }
-
 #quiz-sidebar {
     flex: 1;
     padding: 25px;
@@ -645,33 +429,26 @@ button:active {
     gap: 20px;
     align-self: flex-start;
 }
-
 #user-biodata {
     text-align: center;
     border-bottom: 1px solid #e7e9ec;
     padding-bottom: 20px;
     margin-bottom: 0;
 }
-
-#user-photo-icon {
+#user-photo-icon { /* Ini untuk ikon FontAwesome, jika Anda pakai <img>, style di HTML */
     font-size: 64px;
     color: #007BFF;
     margin-bottom: 12px;
 }
-#user-photo-icon .fa-user-circle {
-    transition: transform 0.3s ease;
-}
-#user-photo-icon:hover .fa-user-circle {
-    transform: scale(1.1);
-}
-
-
+#user-photo-icon .fa-user-circle { transition: transform 0.3s ease; }
+#user-photo-icon:hover .fa-user-circle { transform: scale(1.1); }
 #user-name-display {
     font-weight: bold;
     font-size: 1.25em;
     color: #34495e;
 }
 
+/* Navigasi Soal di Sidebar */
 #question-navigation-panel {
     background-color: #ffffff;
     padding: 15px;
@@ -685,7 +462,6 @@ button:active {
     font-size: 1.2em;
     color: #34495e;
 }
-
 #question-navigation-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
@@ -695,7 +471,6 @@ button:active {
     padding: 5px;
     border-radius: 6px;
 }
-
 .nav-question-box {
     width: 40px;
     height: 40px;
@@ -710,14 +485,12 @@ button:active {
     color: #495057;
     transition: background-color 0.2s, border-color 0.2s, color 0.2s, transform 0.15s ease, box-shadow 0.15s ease;
 }
-
 .nav-question-box:hover {
     background-color: #e9ecef;
     border-color: #adb5bd;
     transform: translateY(-2px) scale(1.05);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
 .nav-question-box.current {
     background-color: #007BFF;
     color: white;
@@ -726,7 +499,6 @@ button:active {
     transform: scale(1.1);
     box-shadow: 0 3px 8px rgba(0, 123, 255, 0.3);
 }
-
 .nav-question-box.answered {
     background-color: #d4edda;
     border-color: #b2dfc8;
@@ -736,18 +508,145 @@ button:active {
     background-color: #c3e6cb;
     border-color: #a1d4b7;
 }
-
-
 .nav-question-box.doubtful {
-    background-color: #fff3cd; /* Kuning muda */
+    background-color: #fff3cd;
     border-color: #ffeeba;
-    color: #664d03; /* Teks kuning tua */
+    color: #664d03;
 }
 .nav-question-box.doubtful:hover {
     background-color: #ffeeba;
     border-color: #ffd891;
 }
 
+
+/* Result Container - Tampilan Skor yang Dipercantik */
+#result-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradasi ungu-biru elegan */
+    color: #ffffff; /* Teks utama putih agar kontras */
+    padding: 35px 30px; /* Padding disesuaikan */
+    border-radius: 15px; /* Border radius lebih halus */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 15px rgba(118, 75, 162, 0.5); /* Bayangan lebih dramatis */
+    text-align: center;
+    animation: fadeInResult 0.8s ease-out; /* Animasi fade-in halus */
+}
+
+@keyframes fadeInResult {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Bisa ditambahkan jika ada judul "Hasil" di HTML */
+/* #result-container h2.result-title {
+    font-family: "Georgia", "Times New Roman", Times, serif;
+    font-size: 2.6em;
+    color: #f0e6ff;
+    margin-bottom: 12px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+} */
+
+#result-container p#score {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.3em; /* Ukuran font dasar untuk teks skor */
+    line-height: 1.5; /* KERAPATAN BARIS UTAMA */
+    margin-bottom: 25px;
+    white-space: pre-wrap; /* Biarkan pre-wrap untuk menghormati <br> dari JS */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 95%; /* Sedikit lebih lebar */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: left; /* Teks di dalam blok skor rata kiri */
+}
+
+#result-container p#score span { /* Aturan umum untuk span di dalam skor */
+    display: block; /* Membuat setiap span (baris) memulai baris baru */
+    margin-bottom: 4px; /* Jarak antar baris yang dibentuk oleh span */
+}
+#result-container p#score span:last-child {
+    margin-bottom: 0; /* Tidak ada margin bawah untuk elemen terakhir */
+}
+
+
+#result-container p#score .user-name-result {
+    font-weight: bold;
+    color: #c4e1ff; /* Biru muda untuk nama pengguna */
+    font-size: 1.2em; /* Sedikit lebih besar */
+    margin-bottom: 8px !important; /* Jarak setelah nama pengguna */
+}
+
+#result-container p#score .score-value {
+    font-size: 2.8em; /* Angka skor sangat besar */
+    font-weight: bold;
+    color: #ffd700; /* Emas untuk angka skor */
+    display: block;
+    margin: 5px 0 10px 0 !important; /* Jarak vertikal untuk skor utama */
+    text-align: center; /* Skor utama di tengah blok */
+    line-height: 1.1; /* Line height khusus untuk angka besar */
+}
+
+#result-container p#score .category-breakdown-title {
+    font-weight: bold;
+    margin-top: 12px !important; /* Jarak sebelum judul breakdown */
+    margin-bottom: 6px !important; /* Jarak setelah judul breakdown */
+    display: block;
+    color: #e6e6fa; /* Lavender */
+    font-size: 1.15em;
+}
+
+#result-container p#score .category-item {
+    display: block;
+    margin-bottom: 3px !important; /* Jarak antar item kategori lebih rapat */
+    font-size: 0.95em;
+    color: #f0f0f0;
+    line-height: 1.4; /* Line height untuk item kategori */
+}
+#result-container p#score .category-item .category-name {
+    font-weight: 500;
+    color: #d1c4e9; /* Ungu muda */
+}
+#result-container p#score .category-item .category-score {
+    font-weight: bold;
+    color: #b2dfdb; /* Teal muda */
+}
+
+#result-container #restart-button {
+    background-color: #ffc107;
+    color: #333;
+    font-size: 1.15em;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    letter-spacing: 0.5px;
+    margin-top: 10px; /* Jarak dari blok skor */
+}
+#result-container #restart-button:hover {
+    background-color: #e0a800;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+#result-container #restart-button:active {
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+
+/* Footer */
+#footer {
+    width: 100%;
+    text-align: center;
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 10px 0;
+    margin-top: auto;
+    box-sizing: border-box;
+    font-size: 0.9em;
+}
+
+/* Media Queries (Responsivitas) */
 @media (max-width: 992px) {
     #quiz-layout-container {
         flex-direction: column;
@@ -758,31 +657,18 @@ button:active {
         width: 100%;
         box-sizing: border-box;
     }
-    #quiz-sidebar {
-        margin-top: 25px;
-    }
-    #navigation-buttons { /* Pastikan tombol tetap bisa diakses */
-        justify-content: center; /* Atau space-around */
-    }
+    #quiz-sidebar { margin-top: 25px; }
+    #navigation-buttons { justify-content: center; }
 }
 
 @media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-    .container-view {
-        padding: 20px 15px;
-        margin: 15px auto;
-    }
-    #license-form-container { /* Penyesuaian padding untuk mobile agar tidak terlalu sempit dengan background */
-        padding: 25px 20px;
-    }
+    body { padding: 10px; }
+    .container-view { padding: 20px 15px; margin: 15px auto; }
+    #license-form-container { padding: 25px 20px; } /* Padding mobile untuk form lisensi */
+    #quiz-main-content, #quiz-sidebar { padding: 20px; }
 
-    #quiz-main-content, #quiz-sidebar {
-        padding: 20px;
-    }
     h1 { font-size: 2em; }
-    #license-form-container h1 { font-size: 2.2em; }
+    #license-form-container h1 { font-size: 2.1em; } /* Disesuaikan agar tidak terlalu besar di mobile */
     .app-description, .app-features-intro, .login-prompt { font-size: 1em; }
     .app-features li { font-size: 0.95em; }
 
@@ -798,32 +684,29 @@ button:active {
     .option-button { padding: 12px 15px; }
     .nav-question-box { width: 36px; height: 36px; font-size: 0.85em; }
     #question-navigation-grid { grid-template-columns: repeat(auto-fill, minmax(36px, 1fr)); }
-}
 
-/* Tombol Logout - Merah */
-#menu-container button#logout-button {
-    background-color: #dc3545; /* Red */
-    margin-top: 15px;
-}
-
-#menu-container button#logout-button:hover {
-    background-color: #b02a37; /* Darker Red */
-}
-
-/* Fallback for .btn-home in kategori-latihan-container if not the #kembali-ke-menu-utama-button */
-/* This rule was previously making #kembali-ke-menu-utama-button grey, it's now overridden by ID */
-#kategori-latihan-container .btn-home {
-    margin-top: 25px;
-    background-color: #6c757d; /* Default grey for other .btn-home in this container if any */
-}
-#kategori-latihan-container .btn-home:hover {
-    background-color: #545b62;
-}
-
-/* Ensure the purple button rule for #kembali-ke-menu-utama-button overrides the above .btn-home rule */
-#kategori-latihan-container #kembali-ke-menu-utama-button.btn-home { /* More specific if needed */
-    background-color: #6f42c1; /* Purple */
-}
-#kategori-latihan-container #kembali-ke-menu-utama-button.btn-home:hover {
-    background-color: #5a32a3; /* Darker Purple */
+    /* Penyesuaian tampilan skor untuk mobile */
+    #result-container {
+        padding: 25px 15px;
+    }
+    /* #result-container h2.result-title { font-size: 2em; } */
+    #result-container p#score {
+        font-size: 1.1em; /* Font lebih kecil di mobile */
+        padding: 15px;
+        line-height: 1.45; /* Line height disesuaikan lagi untuk mobile */
+    }
+    #result-container p#score .score-value {
+        font-size: 2.2em; /* Skor utama tetap menonjol tapi disesuaikan */
+    }
+    #result-container p#score .category-breakdown-title {
+        font-size: 1.05em;
+    }
+     #result-container p#score .category-item {
+        font-size: 0.9em;
+        line-height: 1.35;
+    }
+    #result-container #restart-button {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
 }
