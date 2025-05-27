@@ -104,15 +104,18 @@
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
       import { getFirestore, doc, getDoc, updateDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
 
+      // !!! GANTI DENGAN KREDENSIAL FIREBASE ANDA SENDIRI !!!
       const firebaseConfig = {
-        apiKey: "AIzaSyDnJvECVfNJIXPh9rZTsA3QcHQaTiE4Awc", // GANTI DENGAN API KEY ANDA
-        authDomain: "apodaca-bessie4762.firebaseapp.com", // GANTI DENGAN AUTH DOMAIN ANDA
-        databaseURL: "https://apodaca-bessie4762.firebaseio.com", // GANTI DENGAN DATABASE URL ANDA (jika menggunakan Realtime DB)
-        projectId: "apodaca-bessie4762", // GANTI DENGAN PROJECT ID ANDA
-        storageBucket: "apodaca-bessie4762.firebasestorage.app", // GANTI DENGAN STORAGE BUCKET ANDA
-        messagingSenderId: "809433417541", // GANTI DENGAN MESSAGING SENDER ID ANDA
-        appId: "1:809433417541:web:48632b970a90840ab1602c" // GANTI DENGAN APP ID ANDA
+        apiKey: "AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", // GANTI INI
+        authDomain: "nama-proyek-anda.firebaseapp.com", // GANTI INI
+        databaseURL: "https://nama-proyek-anda.firebaseio.com", // GANTI INI (jika pakai Realtime DB, tapi kita Firestore)
+        projectId: "nama-proyek-anda", // GANTI INI
+        storageBucket: "nama-proyek-anda.appspot.com", // GANTI INI
+        messagingSenderId: "000000000000", // GANTI INI
+        appId: "1:000000000000:web:xxxxxxxxxxxxxxxxxxxxxx" // GANTI INI
       };
+      // !!! BATAS KREDENSIAL FIREBASE !!!
+
 
       let db;
 
@@ -130,8 +133,8 @@
 
 
       // Session Management Constants & Variables
-      const STALE_SESSION_THRESHOLD = 5 * 60 * 1000; // 5 minutes
-      const HEARTBEAT_INTERVAL = 2 * 60 * 1000; // 2 minutes
+      const STALE_SESSION_THRESHOLD = 5 * 60 * 1000; // 5 menit - Lisensi dianggap basi setelah waktu ini tanpa heartbeat
+      const HEARTBEAT_INTERVAL = 2 * 60 * 1000; // 2 menit - Interval client mengirim "ping" masih aktif
       let heartbeatIntervalId = null;
 
       function generateClientSessionId() {
@@ -157,11 +160,15 @@
           if (mainAppContent) mainAppContent.style.display = "none";
           if (msgElement) {
               msgElement.textContent = message;
-              msgElement.style.color = message.toLowerCase().includes("error") || message.toLowerCase().includes("gagal") || message.toLowerCase().includes("tidak") || message.toLowerCase().includes("kesalahan") ? "red" : "blue";
+              const isErrorMessage = message.toLowerCase().includes("error") || 
+                                   message.toLowerCase().includes("gagal") || 
+                                   message.toLowerCase().includes("tidak") || 
+                                   message.toLowerCase().includes("kesalahan");
+              msgElement.style.color = isErrorMessage ? "red" : "blue";
           }
           if (submitButton) submitButton.disabled = false;
           if (licenseInput) licenseInput.value = "";
-          // Do not clear name input, user might want to retry
+          // nameInputElement.value = ""; // Bisa dikomentari jika ingin nama tetap ada saat retry
       }
 
       function proceedToApp(userName, licenseKey, clientSessionId) {
@@ -180,12 +187,12 @@
           if (menuContainerEl) menuContainerEl.classList.remove("hidden");
           if (msgElement) msgElement.textContent = ""; // Clear any previous messages
 
-
           startHeartbeat(licenseKey, clientSessionId);
 
-          if (typeof loadGeneratedArticles === 'function') {
-              loadGeneratedArticles();
-          }
+          // Jika Anda memiliki fungsi untuk memuat artikel/data lain setelah login
+          // if (typeof loadGeneratedArticles === 'function') {
+          //    loadGeneratedArticles();
+          // }
       }
 
       async function heartbeat(licenseKey, clientSessionId) {
@@ -209,12 +216,11 @@
               }
           } catch (error) {
               console.error("Heartbeat error:", error);
-              // Don't logout on transient network errors for heartbeat
-              // Check if it's a permission error, which is more serious
               if (error.code === 'permission-denied' || error.code === 'unauthenticated') {
                   showLoginForm(`Kesalahan izin pada heartbeat (${error.code}). Sesi diakhiri.`);
               }
-              // Other errors might be transient, user might get logged out on next interaction or reload.
+              // Untuk error lain (misal jaringan sementara), jangan langsung logout, 
+              // biarkan percobaan berikutnya atau login ulang yang menanganinya.
           }
       }
 
@@ -268,17 +274,17 @@
                           
                           let canTakeLicense = false;
 
-                          if (!storedSessionId) {
+                          if (!storedSessionId) { // Lisensi belum pernah dipakai / sudah di-release
                               canTakeLicense = true;
-                          } else {
-                              if (!lastSeenDate) {
+                          } else { // Ada session ID, cek apakah basi atau orphaned
+                              if (!lastSeenDate) { // Ada session ID tapi tidak ada lastSeenAt (orphaned)
                                   console.warn(`License ${licenseKey} has activeSessionId (${storedSessionId}) but no valid lastSeenAt timestamp. Considering it available.`);
                                   canTakeLicense = true;
-                              } else {
+                              } else { // Ada session ID dan lastSeenAt, cek apakah basi
                                   if ((new Date().getTime() - lastSeenDate.getTime()) > STALE_SESSION_THRESHOLD) {
                                       console.log(`License ${licenseKey} session ${storedSessionId} is stale. Last seen: ${lastSeenDate}. Current time: ${new Date()}`);
                                       canTakeLicense = true; 
-                                  } else {
+                                  } else { // Sesi masih aktif dan belum basi
                                       console.log(`License ${licenseKey} session ${storedSessionId} is active and not stale. Last seen: ${lastSeenDate}`);
                                       canTakeLicense = false; 
                                   }
@@ -303,10 +309,10 @@
                           msgElement.style.color = "red";
                           if (!docSnap.exists()) {
                              msgElement.textContent = "Mohon maaf, Lisensi tidak ditemukan.";
-                          } else if (docSnap.data().active === false) {
+                          } else if (docSnap.data().active === false) { // Periksa jika ada field active dan false
                              msgElement.textContent = "Mohon maaf, Lisensi ini tidak aktif.";
-                          } else {
-                             msgElement.textContent = "Mohon maaf, Lisensi tidak valid atau tidak aktif.";
+                          } else { // Fallback jika field active tidak ada atau kondisi lain
+                             msgElement.textContent = "Mohon maaf, Lisensi tidak ditemukan atau tidak aktif.";
                           }
                           clearLocalSessionData();
                       }
@@ -340,7 +346,7 @@
                                   docSnap.data().active === true && 
                                   docSnap.data().activeSessionId === savedClientSessionId) {
                                   
-                                  await updateDoc(docRef, { lastSeenAt: serverTimestamp() });
+                                  await updateDoc(docRef, { lastSeenAt: serverTimestamp() }); // Perbarui lastSeenAt saat resume
                                   proceedToApp(savedUserName, savedLicenseKey, savedClientSessionId);
                               } else {
                                   showLoginForm("Sesi sebelumnya tidak valid atau telah diambil alih. Silakan masuk kembali.");
@@ -350,7 +356,7 @@
                               showLoginForm(`Gagal memvalidasi sesi (${err.code || 'Tidak Diketahui'}). Silakan masuk kembali.`);
                           }
                       })();
-                  } else {
+                  } else { // Data session storage tidak lengkap
                       clearLocalSessionData();
                   }
               }
@@ -374,44 +380,62 @@
       if (logoutButton) {
           logoutButton.addEventListener('click', async () => {
               const licenseKey = sessionStorage.getItem('licenseKey');
-              const clientSessionId = sessionStorage.getItem('clientSessionId');
+              const clientSessionId = sessionStorage.getItem('clientSessionId'); // Ambil clientSessionId saat ini
 
-              if (db && licenseKey && clientSessionId) {
+              if (db && licenseKey && clientSessionId) { // Pastikan clientSessionId juga ada
                   try {
                       const docRef = doc(db, "licenses", licenseKey);
                       const docSnap = await getDoc(docRef); 
+                      // Hanya bebaskan lisensi jika session ID di server sama dengan session ID browser ini
                       if (docSnap.exists() && docSnap.data().activeSessionId === clientSessionId) {
                           await updateDoc(docRef, {
-                              activeSessionId: null,
-                              lastSeenAt: serverTimestamp() 
+                              activeSessionId: null, // Kosongkan session ID
+                              lastSeenAt: serverTimestamp() // Catat waktu logout
                           });
                           console.log("License released on logout.");
+                      } else if (docSnap.exists()) {
+                          console.log("Session already released or taken by another client. Local logout only.");
                       } else {
-                          console.log("Session already released or taken by another client.");
+                          console.log("License document not found during logout. Local logout only.");
                       }
                   } catch (error) {
                       console.error("Error releasing license on logout:", error);
-                      // Masih lanjutkan logout lokal meskipun gagal update server
+                      // Tetap lanjutkan logout lokal meskipun gagal update server
                   }
               }
               showLoginForm("Anda telah berhasil logout.");
           });
       }
 
+      // beforeunload handler: Best effort untuk update lastSeenAt
+      // Ini membantu agar sesi lebih cepat dianggap basi jika browser ditutup mendadak
       window.addEventListener('beforeunload', (event) => {
           if (sessionStorage && sessionStorage.getItem('licenseValidated') === 'true') {
               const licenseKey = sessionStorage.getItem('licenseKey');
-              // const clientSessionId = sessionStorage.getItem('clientSessionId'); // Tidak digunakan di sini
+              const clientSessionId = sessionStorage.getItem('clientSessionId'); // Ambil session ID kita
 
-              if (db && licenseKey) { // clientSessionId tidak esensial untuk hanya update lastSeenAt
+              // Hanya update jika licenseKey dan clientSessionId ada, dan db terinisialisasi
+              if (db && licenseKey && clientSessionId) { 
                   const docRef = doc(db, "licenses", licenseKey);
-                  // Ini adalah fire-and-forget. Tidak ada jaminan akan selesai.
-                  // Stabilitas check (lastSeenAt) saat login adalah fallback yang lebih kuat.
-                  // Hanya update lastSeenAt. Jangan set activeSessionId jadi null karena refresh biasa bisa membebaskan lisensi.
+                  
+                  // Ini adalah "fire-and-forget". Browser tidak akan menunggu ini selesai.
+                  // Kita tidak bisa menggunakan 'await' di sini.
+                  // Tujuannya hanya untuk memberi tahu server "saya terakhir terlihat sekarang".
+                  // Jangan set activeSessionId ke null, karena refresh halaman biasa juga memicu beforeunload.
+                  // Staleness check saat login adalah mekanisme utama yang lebih andal.
+
+                  // Untuk meningkatkan keandalan, kita bisa coba periksa dulu apakah session masih milik kita,
+                  // tapi ini akan membutuhkan getDoc() yang asinkron, yang sulit di beforeunload.
+                  // Jadi, kita langsung coba update lastSeenAt. Heartbeat akan mengoreksi jika sesi sudah diambil alih.
+                  
+                  // Solusi yang lebih andal untuk 'beforeunload' adalah menggunakan navigator.sendBeacon()
+                  // ke sebuah Cloud Function yang kemudian mengupdate Firestore.
+                  // Namun, untuk solusi client-side murni, ini adalah pendekatan yang wajar.
+                  
                   updateDoc(docRef, {
                       lastSeenAt: serverTimestamp() 
                   }).then(() => {
-                      // console.log("beforeunload: Attempted to update lastSeenAt.");
+                      // console.log("beforeunload: Attempted to update lastSeenAt for our session.");
                   }).catch(err => {
                       // console.warn("beforeunload: Error updating lastSeenAt (non-critical):", err);
                   });
@@ -458,7 +482,7 @@
             <div id="quiz-sidebar">
                 <div id="user-biodata"> <!-- Container untuk foto dan nama -->
                     <div id="user-photo-icon">
-                        <img src="user.png" alt="Foto Pengguna">
+                        <img src="user.png" alt="Foto Pengguna"> <!-- Pastikan user.png ada -->
                     </div>
                     <div id="user-name-display">Nama Pengguna</div>
                 </div>
@@ -484,7 +508,7 @@
     </div>
 
 
-    <!-- Skrip Aplikasi Utama Anda -->
+    <!-- Skrip Aplikasi Utama Anda (logika kuis, dll.) -->
     <script src="script.js"></script>
        <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
 <script type="text/javascript">var _Hasync= _Hasync|| [];
