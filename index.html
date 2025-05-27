@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulasi Soal Keperawatan</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
     <style>
         .developer-credit {
             margin-top: 20px;
@@ -29,45 +30,54 @@
         .developer-credit a:hover {
             text-decoration: underline;
         }
-        #license-input {
+        #license-input { /* ID diubah ke license untuk script baru */
             margin-top: 10px;
         }
         #license-msg {
             margin-top: 10px;
             font-weight: bold;
         }
+        /* Awalnya, main-app disembunyikan */
         #main-app-content {
             display: none;
         }
+
+        /* Styling untuk foto pengguna di sidebar */
         #user-biodata {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin-bottom: 20px;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center;   /* Center items horizontally */
+            text-align: center;    /* Center text for children like user-name-display */
+            margin-bottom: 20px; /* Increased margin for more space */
         }
+
         #user-photo-icon {
-            margin-bottom: 10px;
+            /* margin-right: 10px; /* No longer needed */
+            margin-bottom: 10px; /* Space between image and name */
         }
+
         #user-photo-icon img {
-            width: 80px;
-            height: 80px;
+            width: 80px;  /* PERBESAR UKURAN GAMBAR */
+            height: 80px; /* PERBESAR UKURAN GAMBAR */
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #007bff;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            border: 2px solid #007bff; /* Optional: thicker or different color border */
+            display: block; /* Helps with centering if parent is not flex */
+            margin-left: auto; /* Center image if parent is not flex & display: block */
+            margin-right: auto;/* Center image if parent is not flex & display: block */
         }
+
         #user-name-display {
             font-weight: bold;
-            font-size: 1.1em;
+            font-size: 1.1em; /* Slightly larger font for the name */
         }
+
     </style>
 </head>
 <body>
 
-    <div id="license-form-container" class="container-view">
+    <!-- Container untuk Form Lisensi dan Login Awal -->
+    <div id="license-form-container" class="container-view"> <!-- ID diubah menjadi license-form-container -->
         <h1><span class="app-title-highlight">Selamat Datang!</span></h1>
         <p class="app-description">
             Platform ini dirancang untuk membantu Anda, para calon perawat dalam mengasah pengetahuan dan mempersiapkan diri menghadapi berbagai ujian kompetensi keperawatan.
@@ -80,135 +90,66 @@
         </ul>
         <p class="login-prompt">Siap untuk memulai? Silakan masukkan nama dan kode lisensi Anda:</p>
         <input type="text" id="name-input" placeholder="Nama Lengkap Anda">
-        <input type="text" id="license" placeholder="Masukkan Kode Lisensi">
-        <button id="submit-license-button">Masuk & Mulai Belajar</button>
-        <div id="license-msg"></div>
+        <input type="text" id="license" placeholder="Masukkan Kode Lisensi"> <!-- ID diubah ke 'license' -->
+        <button id="submit-license-button">Masuk & Mulai Belajar</button> <!-- ID diubah ke 'submit-license-button' -->
+        <div id="license-msg"></div> <!-- Elemen untuk pesan status lisensi -->
         <div class="developer-credit">
             <img src="https://masandigital.com/assets/images/author-photo.jpeg" alt="Developer Photo">
             <p>Dikembangkan oleh: Mas Andy -- Kunjungi: <a href="https://masandigital.com" target="_blank">masandigital.com </a>
             </p>
         </div>
     </div>
-
+    <!-- Skrip Lisensi Firebase -->
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-      import { getFirestore, doc, getDoc, updateDoc, serverTimestamp, deleteField } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+      import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
 
       const firebaseConfig = {
-          apiKey: "AIzaSyDnJvECVfNJIXPh9rZTsA3QcHQaTiE4Awc", // GANTI DENGAN API KEY ANDA
-          authDomain: "apodaca-bessie4762.firebaseapp.com",
-          databaseURL: "https://apodaca-bessie4762.firebaseio.com",
-          projectId: "apodaca-bessie4762",
-          storageBucket: "apodaca-bessie4762.firebasestorage.app",
-          messagingSenderId: "809433417541",
-          appId: "1:809433417541:web:48632b970a90840ab1602c"
-      };
+  apiKey: "AIzaSyDnJvECVfNJIXPh9rZTsA3QcHQaTiE4Awc",
+  authDomain: "apodaca-bessie4762.firebaseapp.com",
+  databaseURL: "https://apodaca-bessie4762.firebaseio.com",
+  projectId: "apodaca-bessie4762",
+  storageBucket: "apodaca-bessie4762.firebasestorage.app",
+  messagingSenderId: "809433417541",
+  appId: "1:809433417541:web:48632b970a90840ab1602c"
+};
 
       let db;
 
+      // DOM Elements for license and app control
       const licenseFormContainer = document.getElementById("license-form-container");
       const mainAppContent = document.getElementById("main-app-content");
       const submitButton = document.getElementById("submit-license-button");
       const licenseInput = document.getElementById("license");
       const nameInputElement = document.getElementById("name-input");
       const msgElement = document.getElementById("license-msg");
-      const welcomeUserMessageEl = document.getElementById("welcome-user-message");
-      const menuContainerEl = document.getElementById("menu-container");
-      const userNameDisplayQuizEl = document.getElementById("user-name-display");
-      const logoutButton = document.getElementById("logout-button");
+      const welcomeUserMessageEl = document.getElementById("welcome-user-message"); // Renamed to avoid conflict
+      const menuContainerEl = document.getElementById("menu-container"); // Renamed to avoid conflict
+      const userNameDisplayQuizEl = document.getElementById("user-name-display"); // Renamed to avoid conflict
 
-      function getOrCreateDeviceId() {
-          let deviceId = localStorage.getItem('appDeviceId');
-          if (!deviceId) {
-              deviceId = 'device_' + Math.random().toString(36).substring(2, 15) + Date.now();
-              localStorage.setItem('appDeviceId', deviceId);
+      function proceedToApp(currentUserName) { // Parameter name changed
+          if (welcomeUserMessageEl) {
+              welcomeUserMessageEl.textContent = `Selamat datang, ${currentUserName}!`;
           }
-          return deviceId;
-      }
-      const currentDeviceId = getOrCreateDeviceId(); // Dapatkan deviceId saat skrip dimuat
+          if (userNameDisplayQuizEl) {
+              userNameDisplayQuizEl.textContent = currentUserName;
+          }
+          if (sessionStorage) {
+            sessionStorage.setItem('licenseValidated', 'true');
+            sessionStorage.setItem('userName', currentUserName);
+          }
 
-      function proceedToApp(userName, licenseKey) {
-          if (welcomeUserMessageEl) welcomeUserMessageEl.textContent = `Selamat datang, ${userName}!`;
-          if (userNameDisplayQuizEl) userNameDisplayQuizEl.textContent = userName;
-
-          sessionStorage.setItem('licenseValidated', 'true');
-          sessionStorage.setItem('userName', userName);
-          sessionStorage.setItem('licenseKey', licenseKey);
-          // Tidak perlu simpan deviceId di session, karena kita selalu dapatkan dari localStorage via getOrCreateDeviceId()
-          // dan kita bandingkan langsung dengan yang ada di Firestore.
 
           if (licenseFormContainer) licenseFormContainer.style.display = "none";
           if (mainAppContent) mainAppContent.style.display = "block";
           if (menuContainerEl) menuContainerEl.classList.remove("hidden");
 
+          // Load saved articles after validation (jika fungsi ini ada)
           if (typeof loadGeneratedArticles === 'function') {
              loadGeneratedArticles();
-          }
-      }
-
-      async function handleLogout() {
-          const validatedLicenseKey = sessionStorage.getItem('licenseKey');
-          // Dapatkan deviceId dari localStorage, karena ini yang akan dibandingkan
-          const deviceIdForLogout = localStorage.getItem('appDeviceId');
-
-          if (validatedLicenseKey && deviceIdForLogout && db) {
-              msgElement.textContent = "Memproses logout...";
-              msgElement.style.color = "orange";
-              try {
-                  const docRef = doc(db, "licenses", validatedLicenseKey);
-                  const docSnap = await getDoc(docRef);
-
-                  // Hanya hapus activeDeviceId jika device yang logout adalah device yang tercatat
-                  if (docSnap.exists() && docSnap.data().activeDeviceId === deviceIdForLogout) {
-                      await updateDoc(docRef, {
-                          activeDeviceId: deleteField(),
-                          lastSeen: deleteField(),
-                          // userName: deleteField() // Hapus juga userName jika Anda menyimpannya di Firestore
-                      });
-                      console.log("Device ID and related info cleared from license on logout.");
-                      msgElement.textContent = "Anda telah logout. Lisensi telah dibebaskan.";
-                      msgElement.style.color = "green";
-                  } else if (docSnap.exists() && docSnap.data().activeDeviceId && docSnap.data().activeDeviceId !== deviceIdForLogout) {
-                      // Ini skenario aneh, device lain yang tercatat, bukan device ini.
-                      // Tetap logout sisi klien, tapi beri tahu user.
-                      console.warn("Logout initiated, but a different device ID was active on the license.");
-                      msgElement.textContent = "Anda telah logout. Lisensi ini masih terdaftar aktif oleh perangkat lain.";
-                      msgElement.style.color = "orange";
-                  } else {
-                      // Lisensi tidak ada atau activeDeviceId sudah kosong.
-                      console.log("Logout processed, license was already free or not found.");
-                      msgElement.textContent = "Anda telah logout.";
-                      msgElement.style.color = "blue";
-                  }
-              } catch (error) {
-                  console.error("Error clearing device ID on logout:", error);
-                  msgElement.textContent = "Terjadi kesalahan saat logout. Coba lagi.";
-                  msgElement.style.color = "red";
-                  // Jangan langsung lanjutkan ke pembersihan session jika gagal update DB
-                  return;
-              }
           } else {
-              msgElement.textContent = "Informasi sesi tidak lengkap untuk logout.";
-              msgElement.style.color = "red";
+             // console.warn('loadGeneratedArticles function not found yet.');
           }
-
-          // Selalu lakukan pembersihan sisi klien setelah upaya logout (berhasil atau tidak interaksi DB-nya)
-          sessionStorage.removeItem('licenseValidated');
-          sessionStorage.removeItem('userName');
-          sessionStorage.removeItem('licenseKey');
-          // localStorage.removeItem('appDeviceId'); // JANGAN HAPUS appDeviceId dari localStorage,
-                                                  // karena ini identitas browser/perangkat.
-
-          if (mainAppContent) mainAppContent.style.display = "none";
-          if (licenseFormContainer) licenseFormContainer.style.display = "block";
-          if (menuContainerEl) menuContainerEl.classList.add("hidden");
-          if (licenseInput) licenseInput.value = "";
-          if (nameInputElement) nameInputElement.value = "";
-          // Pesan sudah diatur di atas
-      }
-
-      if (logoutButton) {
-          logoutButton.addEventListener('click', handleLogout);
       }
 
       try {
@@ -219,19 +160,19 @@
               submitButton.addEventListener("click", async (e) => {
                   e.preventDefault();
                   const licenseKey = licenseInput.value.trim();
-                  const inputUserName = nameInputElement.value.trim() || "Pengguna";
-                  const deviceIdForLogin = getOrCreateDeviceId(); // Gunakan deviceId saat ini untuk login
+                  const inputUserName = nameInputElement.value.trim() || "Pengguna"; // Renamed variable
 
                   if (!licenseKey) {
                       msgElement.textContent = "Silakan masukkan kode lisensi.";
                       msgElement.style.color = "red";
                       return;
                   }
-                  if (!inputUserName || (inputUserName === "Pengguna" && nameInputElement.value.trim() === "")) {
-                      msgElement.textContent = "Silakan masukkan nama Anda.";
-                      msgElement.style.color = "red";
-                      return;
-                  }
+                   if (!inputUserName || (inputUserName === "Pengguna" && nameInputElement.value.trim() === "")) {
+                        msgElement.textContent = "Silakan masukkan nama Anda.";
+                        msgElement.style.color = "red";
+                        return;
+                    }
+
 
                   msgElement.textContent = "Memeriksa lisensi...";
                   msgElement.style.color = "orange";
@@ -242,92 +183,30 @@
                       const docSnap = await getDoc(docRef);
 
                       if (docSnap.exists() && docSnap.data().active === true) {
-                          const licenseData = docSnap.data();
-
-                          // Cek apakah lisensi sedang digunakan oleh device lain
-                          if (licenseData.activeDeviceId && licenseData.activeDeviceId !== deviceIdForLogin) {
-                              // Tambahan: Cek lastSeen untuk potensi sesi "stale"
-                              const lastSeenTimestamp = licenseData.lastSeen ? licenseData.lastSeen.toDate() : null;
-                              const STALE_SESSION_TIMEOUT_MS = 30 * 60 * 1000; // Contoh: 30 menit
-
-                              if (lastSeenTimestamp && (Date.now() - lastSeenTimestamp.getTime()) > STALE_SESSION_TIMEOUT_MS) {
-                                  console.warn(`License ${licenseKey} was active on ${licenseData.activeDeviceId}, but lastSeen is stale. Overwriting.`);
-                                  // Anggap sesi sebelumnya stale, izinkan login
-                                  await updateDoc(docRef, {
-                                      activeDeviceId: deviceIdForLogin,
-                                      lastSeen: serverTimestamp(),
-                                      // userName: inputUserName // Simpan nama jika diinginkan
-                                  });
-                                  msgElement.style.color = "green";
-                                  msgElement.textContent = "Lisensi valid (sesi sebelumnya kedaluwarsa). Akses diberikan!";
-                                  proceedToApp(inputUserName, licenseKey);
-                              } else {
-                                  msgElement.style.color = "red";
-                                  msgElement.textContent = `Lisensi ini sedang digunakan di perangkat lain (${licenseData.activeDeviceId ? '...' + licenseData.activeDeviceId.slice(-6) : 'ID tidak diketahui'}). Silakan logout dari perangkat tersebut atau tunggu.`;
-                                  sessionStorage.removeItem('licenseValidated');
-                              }
-                          } else {
-                              // Lisensi valid dan (tidak sedang digunakan ATAU digunakan oleh device ini sebelumnya)
-                              await updateDoc(docRef, {
-                                  activeDeviceId: deviceIdForLogin,
-                                  lastSeen: serverTimestamp(),
-                                  // userName: inputUserName // Simpan nama jika diinginkan
-                              });
-                              msgElement.style.color = "green";
-                              msgElement.textContent = "Lisensi valid. Akses diberikan!";
-                              proceedToApp(inputUserName, licenseKey);
-                          }
+                          msgElement.style.color = "green";
+                          msgElement.textContent = "Lisensi valid. Akses diberikan!";
+                          proceedToApp(inputUserName); // Pass validated user name
                       } else {
                           msgElement.style.color = "red";
-                          msgElement.textContent = docSnap.exists() && !docSnap.data().active ? "Lisensi tidak aktif." : "Lisensi tidak ditemukan.";
-                          sessionStorage.removeItem('licenseValidated');
+                          msgElement.textContent = "Mohon maaf, Lisensi tidak ditemukan atau tidak aktif.";
+                          if(sessionStorage) sessionStorage.removeItem('licenseValidated');
                       }
                   } catch (error) {
                       console.error("Terjadi kesalahan saat memeriksa lisensi:", error);
                       msgElement.style.color = "red";
                       msgElement.textContent = "Terjadi kesalahan saat memeriksa lisensi. Cek koneksi internet Anda.";
-                      sessionStorage.removeItem('licenseValidated');
+                      if(sessionStorage) sessionStorage.removeItem('licenseValidated');
                   } finally {
                       submitButton.disabled = false;
                   }
               });
 
               // Check session storage on page load
-              if (sessionStorage.getItem('licenseValidated') === 'true') {
+              if (sessionStorage && sessionStorage.getItem('licenseValidated') === 'true') {
                    const savedUserName = sessionStorage.getItem('userName') || "Pengguna";
-                   const savedLicenseKey = sessionStorage.getItem('licenseKey');
-                   const deviceIdFromStorage = localStorage.getItem('appDeviceId'); // Ini ID perangkat saat ini
-
-                   if (savedLicenseKey && deviceIdFromStorage && db) { // Pastikan db juga sudah siap
-                        // Verifikasi ulang ke Firebase apakah device ini masih yang berhak
-                        (async () => {
-                            try {
-                                const docRef = doc(db, "licenses", savedLicenseKey);
-                                const docSnap = await getDoc(docRef);
-                                if (docSnap.exists() && docSnap.data().active === true && docSnap.data().activeDeviceId === deviceIdFromStorage) {
-                                    // Update lastSeen saat memuat ulang sesi yang valid
-                                    await updateDoc(docRef, { lastSeen: serverTimestamp() });
-                                    proceedToApp(savedUserName, savedLicenseKey);
-                                } else {
-                                    // Sesi tidak valid lagi (mungkin diambil alih atau lisensi nonaktif)
-                                    msgElement.textContent = "Sesi Anda tidak valid lagi. Silakan login kembali.";
-                                    msgElement.style.color = "red";
-                                    handleLogout(); // Lakukan proses logout bersih
-                                }
-                            } catch (error) {
-                                console.error("Error re-validating session:", error);
-                                msgElement.textContent = "Gagal memvalidasi ulang sesi. Silakan login kembali.";
-                                msgElement.style.color = "red";
-                                handleLogout(); // Lakukan proses logout bersih
-                            }
-                        })();
-                   } else {
-                       // Jika ada yang kurang, paksa login ulang
-                       sessionStorage.removeItem('licenseValidated');
-                       sessionStorage.removeItem('userName');
-                       sessionStorage.removeItem('licenseKey');
-                   }
+                   proceedToApp(savedUserName);
               }
+
           } else {
               console.error("Elemen form lisensi atau aplikasi utama tidak ditemukan! Periksa ID elemen.");
               if(msgElement) {
@@ -335,7 +214,7 @@
                 msgElement.style.color = "red";
               }
           }
-      } catch (error) {
+      } catch (error) { // <<< PERBAIKAN DI SINI: (error)_ menjadi (error)
           console.error("Inisialisasi Firebase gagal:", error);
           if(msgElement) {
              msgElement.textContent = "Gagal menginisialisasi koneksi. Silakan coba lagi nanti.";
@@ -343,14 +222,14 @@
           }
       }
     </script>
-
-    <div id="main-app-content">
+    <!-- Kontainer untuk Aplikasi Utama (setelah lisensi valid) -->
+    <div id="main-app-content"> <!-- ID diubah menjadi main-app-content -->
         <div id="menu-container" class="container-view hidden">
             <h2 id="welcome-user-message"></h2>
             <h3>Silakan pilih mode:</h3>
             <button id="latihan-soal-menu-button">Latihan Soal</button>
             <button id="tryout-button">Try Out</button>
-            <button id="logout-button" class="btn-home">Logout</button>
+            <button id="logout-button" class="btn-home">Logout</button> <!-- INLINE STYLE REMOVED -->
         </div>
 
         <div id="kategori-latihan-container" class="container-view hidden">
@@ -379,7 +258,7 @@
             </div>
 
             <div id="quiz-sidebar">
-                <div id="user-biodata">
+                <div id="user-biodata"> <!-- Container untuk foto dan nama -->
                     <div id="user-photo-icon">
                         <img src="user.png" alt="Foto Pengguna">
                     </div>
@@ -406,7 +285,20 @@
         </footer>
     </div>
 
+
+    <!-- Skrip Aplikasi Utama Anda -->
     <script src="script.js"></script>
-    <!-- Histats -->
+       <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4842415,4,1,120,40,00011111']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4842415&101" alt="" border="0"></a></noscript>
+
 </body>
 </html>
