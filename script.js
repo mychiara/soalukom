@@ -353,7 +353,7 @@ function startGame(mode) {
     } else {
         timerDisplaySidebar.classList.add('hidden');
         stopOverallTimer();
-        if (doubtfulButton) doubtfulButton.classList.add('hidden');
+        if (doubtfulButton) doubtfulButton.classList.add('hidden'); // Ensure doubtful button is hidden for non-tryout (or shown based on logic)
     }
 
     const prevViewForQuiz = isTryOut ? menuContainer : kategoriLatihanContainer;
@@ -391,10 +391,14 @@ function updateOverallTimerDisplaySidebar() {
 
 function finalizeTryOut() {
     console.log("Try Out Selesai. Menampilkan hasil.");
+    // Ensure the last selected option for the current question is recorded if the timer runs out
     if (currentQuestionIndex < questions.length && questionStates[currentQuestionIndex]) {
-        questionStates[currentQuestionIndex].selectedAnswer = selectedOptionIndex;
-        if (!questionStates[currentQuestionIndex].answered) {
-            questionStates[currentQuestionIndex].answered = true;
+        const currentQState = questionStates[currentQuestionIndex];
+        if (selectedOptionIndex !== -1 && currentQState.selectedAnswer === -1) { // If an option was selected but not yet saved to state
+            currentQState.selectedAnswer = selectedOptionIndex;
+        }
+        if (!currentQState.answered && selectedOptionIndex !== -1) { // Mark as answered if an option was selected
+            currentQState.answered = true;
         }
     }
     showResult();
@@ -422,8 +426,10 @@ function renderQuestionNavigation() {
         }
 
         navBox.addEventListener('click', () => {
+            // Before navigating, save the state of the current question for TryOut
             if (isTryOut && questionStates[currentQuestionIndex]) {
                 questionStates[currentQuestionIndex].selectedAnswer = selectedOptionIndex;
+                // Mark as answered if an option was selected, even if not "next" was clicked
                 if (!questionStates[currentQuestionIndex].answered && selectedOptionIndex !== -1) {
                     questionStates[currentQuestionIndex].answered = true;
                     const currentNavBox = questionNavigationGrid.querySelector(`.nav-question-box[data-index="${currentQuestionIndex}"]`);
@@ -431,13 +437,15 @@ function renderQuestionNavigation() {
                          currentNavBox.classList.add('answered');
                     }
                 }
-            } else if (!isTryOut && questionStates[currentQuestionIndex] && !questionStates[currentQuestionIndex].answered && selectedOptionIndex !== -1) {
-                 submitAnswer(false);
             }
+            // For non-TryOut, answer is submitted immediately on option click, so no special handling here for saving state before nav.
 
             currentQuestionIndex = parseInt(navBox.dataset.index);
+            // Load state for the new question
             if (questionStates[currentQuestionIndex]) {
                 selectedOptionIndex = questionStates[currentQuestionIndex].selectedAnswer;
+                // answerSubmitted reflects if the *newly navigated to* question has been answered.
+                // For non-TryOut, this implies immediate feedback was shown. For TryOut, it means an option was at least picked.
                 answerSubmitted = questionStates[currentQuestionIndex].answered;
             } else {
                 selectedOptionIndex = -1;
@@ -455,6 +463,8 @@ function submitAnswer(isFinalizing = false) {
         console.error("submitAnswer: No state for current question index:", currentQuestionIndex);
         return;
     }
+    // For non-TryOut, once answered (feedback shown), don't re-process.
+    // For TryOut, this function might be called (e.g. by next button) but primarily marks selection, feedback is at the end.
     if (!isTryOut && currentQState.answered && !isFinalizing) return;
 
     const currentQ = questions[currentQuestionIndex];
@@ -463,42 +473,43 @@ function submitAnswer(isFinalizing = false) {
         return;
     }
 
-    currentQState.answered = true;
-    currentQState.selectedAnswer = selectedOptionIndex; // Ensure selectedOptionIndex is recorded
+    currentQState.answered = true; // Mark the question as "interacted with" or "attempted"
+    currentQState.selectedAnswer = selectedOptionIndex;
     if (!isTryOut) {
-      answerSubmitted = true;
+      answerSubmitted = true; // For non-TryOut, this means feedback is shown
     }
 
     const correctIndex = currentQ.answer;
     const explanationText = currentQ.explanation;
     const optionButtons = optionsContainer.querySelectorAll('.option-button');
 
+    // Score calculation only for non-TryOut mode here. TryOut score is tallied at the end.
     if (!isTryOut) {
-        optionButtons.forEach(button => button.disabled = true);
+        optionButtons.forEach(button => button.disabled = true); // Disable options after answering
         if (selectedOptionIndex !== -1 && selectedOptionIndex === correctIndex && !currentQState.answeredForScore) {
             score++;
-            currentQState.answeredForScore = true;
+            currentQState.answeredForScore = true; // Ensure score is only added once
         }
     }
 
     const navBox = questionNavigationGrid.querySelector(`.nav-question-box[data-index="${currentQuestionIndex}"]`);
     if (navBox) {
         navBox.classList.add('answered');
-        if (currentQState.doubtful) {
+        if (currentQState.doubtful) { // If it was doubtful, answering removes doubtful status
             currentQState.doubtful = false;
             navBox.classList.remove('doubtful');
             if (doubtfulButton) doubtfulButton.textContent = "Tandai Ragu-ragu";
         }
     }
 
-    if (!isTryOut) {
+    if (!isTryOut) { // Show immediate feedback and explanation for Latihan Soal
         optionButtons.forEach((btn, i) => {
-            btn.classList.remove('selected-tryout');
+            btn.classList.remove('selected-tryout'); // Clear any tryout specific class
             if (i === correctIndex) btn.classList.add('correct');
             if (i === selectedOptionIndex && i !== correctIndex) btn.classList.add('incorrect');
         });
 
-        if (selectedOptionIndex === -1) {
+        if (selectedOptionIndex === -1) { // If no option was selected
             explanationElement.innerHTML = `<strong>Anda tidak memilih jawaban.</strong> Jawaban yang benar adalah opsi ke-${correctIndex + 1}.<br><strong>Penjelasan:</strong> ${explanationText || 'Tidak ada penjelasan.'}`;
         } else if (selectedOptionIndex === correctIndex) {
             explanationElement.innerHTML = `<strong>Jawaban Benar!</strong><br>${explanationText || 'Tidak ada penjelasan.'}`;
@@ -506,22 +517,23 @@ function submitAnswer(isFinalizing = false) {
             explanationElement.innerHTML = `<strong>Jawaban Salah.</strong> Jawaban yang benar adalah opsi ke-${correctIndex + 1}.<br><strong>Penjelasan:</strong> ${explanationText || 'Tidak ada penjelasan.'}`;
         }
         explanationElement.classList.remove('hidden');
-    } else {
+    } else { // For TryOut, just visually mark the selected option if any, no explanation yet
         optionButtons.forEach(btn => btn.classList.remove('selected-tryout'));
         if (selectedOptionIndex !== -1 && optionButtons[selectedOptionIndex]) {
             optionButtons[selectedOptionIndex].classList.add('selected-tryout');
         }
-        explanationElement.classList.add('hidden');
+        explanationElement.classList.add('hidden'); // No explanation during TryOut
         explanationElement.innerHTML = '';
     }
 
+    // Update "Next" button text; only if not finalizing (e.g., called by timer timeout)
     if (!isFinalizing) {
         if (currentQuestionIndex < questions.length - 1) {
             nextQuestionButton.innerText = "Soal Berikutnya";
         } else {
             nextQuestionButton.innerText = isTryOut ? "Selesaikan Try Out" : "Lihat Hasil";
         }
-        nextQuestionButton.classList.remove('hidden');
+        nextQuestionButton.classList.remove('hidden'); // Ensure it's visible
     }
 }
 
@@ -536,12 +548,13 @@ function showQuestion(questionData) {
     }
 
     const currentQState = questionStates[currentQuestionIndex];
-    if (!currentQState) {
-        console.error("showQuestion: No state for current question index:", currentQuestionIndex);
-        return;
+    if (!currentQState) { // Should ideally not happen if startGame initializes states correctly
+        console.error("showQuestion: No state for current question index:", currentQuestionIndex, "Re-initializing state for safety.");
+        questionStates[currentQuestionIndex] = { answered: false, doubtful: false, selectedAnswer: -1, answeredForScore: false };
+        // currentQState = questionStates[currentQuestionIndex]; // This line was missing, re-assign after re-init
     }
-    selectedOptionIndex = currentQState.selectedAnswer;
-    answerSubmitted = currentQState.answered;
+    // selectedOptionIndex and answerSubmitted are now set by the navigation logic or selectOption
+    // So, we directly use currentQState.selectedAnswer and currentQState.answered
 
     if (questionCounterElement) {
         questionCounterElement.innerText = `Soal ${currentQuestionIndex + 1} dari ${questions.length}`;
@@ -556,29 +569,32 @@ function showQuestion(questionData) {
         }
     });
 
-    questionElement.textContent = questionData.question; // Use textContent for safety
+    questionElement.textContent = questionData.question;
     optionsContainer.innerHTML = '';
     explanationElement.classList.add('hidden');
     explanationElement.innerHTML = '';
 
     questionData.options.forEach((option, index) => {
         const button = document.createElement('button');
-        button.textContent = option; // Use textContent for safety
+        button.textContent = option;
         button.classList.add('option-button');
-        button.style.color = "black";
+        button.style.color = "black"; // Ensure default text color if not overridden by state classes
         button.addEventListener('click', () => selectOption(index));
         optionsContainer.appendChild(button);
     });
 
     const optionButtons = optionsContainer.querySelectorAll('.option-button');
     optionButtons.forEach((btn, index) => {
-        btn.disabled = (!isTryOut && currentQState.answered);
-        btn.classList.remove('correct', 'incorrect', 'selected-tryout');
+        btn.disabled = (!isTryOut && currentQState.answered); // Disable if non-TryOut and answered
+        btn.classList.remove('correct', 'incorrect', 'selected-tryout'); // Reset classes
 
-        if (!isTryOut && currentQState.answered) {
-            if (index === questionData.answer) btn.classList.add('correct'); // Always show correct
-            if (index === selectedOptionIndex && index !== questionData.answer) btn.classList.add('incorrect'); // Mark selected incorrect
-        } else if (index === selectedOptionIndex) {
+        if (!isTryOut && currentQState.answered) { // Latihan Soal - feedback shown
+            if (index === questionData.answer) btn.classList.add('correct');
+            if (index === currentQState.selectedAnswer && index !== questionData.answer) btn.classList.add('incorrect');
+             if (index === currentQState.selectedAnswer) { // Also mark the selected one, even if correct
+                btn.classList.add('selected-tryout'); // Re-using class, or make a new one like 'selected-latihan'
+            }
+        } else if (index === currentQState.selectedAnswer) { // TryOut or Latihan (before answer) - mark selected
              btn.classList.add('selected-tryout');
         }
     });
@@ -586,17 +602,17 @@ function showQuestion(questionData) {
     if (isTryOut && doubtfulButton) {
         doubtfulButton.classList.remove('hidden');
         doubtfulButton.textContent = currentQState.doubtful ? "Hapus Tanda Ragu" : "Tandai Ragu-ragu";
-    } else if (doubtfulButton) {
+    } else if (doubtfulButton) { // For non-TryOut, hide doubtful button
         doubtfulButton.classList.add('hidden');
     }
 
 
-    if (!isTryOut && currentQState.answered) {
+    if (!isTryOut && currentQState.answered) { // Show explanation if Latihan Soal and answered
         const correctIndex = questionData.answer;
         const explanationText = questionData.explanation || 'Tidak ada penjelasan.';
-        if (selectedOptionIndex === -1) {
+        if (currentQState.selectedAnswer === -1) {
             explanationElement.innerHTML = `<strong>Anda tidak memilih jawaban.</strong> Jawaban yang benar adalah opsi ke-${correctIndex + 1}.<br><strong>Penjelasan:</strong> ${explanationText}`;
-        } else if (selectedOptionIndex === correctIndex) {
+        } else if (currentQState.selectedAnswer === correctIndex) {
              explanationElement.innerHTML = `<strong>Jawaban Benar!</strong><br>${explanationText}`;
         } else {
              explanationElement.innerHTML = `<strong>Jawaban Salah.</strong> Jawaban yang benar adalah opsi ke-${correctIndex + 1}.<br><strong>Penjelasan:</strong> ${explanationText}`;
@@ -604,31 +620,47 @@ function showQuestion(questionData) {
         explanationElement.classList.remove('hidden');
     }
 
+    // Setup "Next" button
     if (currentQuestionIndex < questions.length - 1) {
         nextQuestionButton.innerText = "Soal Berikutnya";
     } else {
         nextQuestionButton.innerText = isTryOut ? "Selesaikan Try Out" : "Lihat Hasil";
     }
-    nextQuestionButton.classList.remove('hidden');
+    // Visibility of next button:
+    // For non-TryOut, show it if answered or if no answer is selected yet (to allow skipping, though current logic doesn't directly support skipping without answering)
+    // For TryOut, always show it.
+    if (!isTryOut) {
+        // Show next button if answered, or if no option has been selected yet (to allow proceeding if desired)
+        // If an option must be selected to proceed, this logic might need adjustment
+        // For now, assume it's okay to show if not answered, or if answered.
+        // If selectedOptionIndex is -1 AND not answered, it means user hasn't picked.
+        // If selectedOptionIndex is NOT -1 AND not answered, means user picked but hasn't "submitted" (which happens on click for Latihan)
+        // If currentQState.answered is true, it means feedback is shown, so show next.
+        nextQuestionButton.classList.remove('hidden');
+    } else { // For TryOut, always show next button
+        nextQuestionButton.classList.remove('hidden');
+    }
 }
 
 function selectOption(selectedIndex) {
     const currentQState = questionStates[currentQuestionIndex];
-    if (!isTryOut && currentQState && currentQState.answered) return;
+    if (!isTryOut && currentQState && currentQState.answered) return; // Don't allow re-selecting if Latihan and already answered
 
-    selectedOptionIndex = selectedIndex;
+    selectedOptionIndex = selectedIndex; // Update the global tracker for the current interaction
     if (currentQState) {
-        currentQState.selectedAnswer = selectedIndex;
+        currentQState.selectedAnswer = selectedIndex; // Persist to state immediately
     }
 
     const optionButtons = optionsContainer.querySelectorAll('.option-button');
     optionButtons.forEach((button, i) => {
+        // Toggle 'selected-tryout' for visual feedback of selection
         button.classList.toggle('selected-tryout', i === selectedIndex);
     });
 
-    if (!isTryOut) {
+    if (!isTryOut) { // For Latihan Soal, submit the answer immediately upon selection
         submitAnswer(false);
     }
+    // For TryOut, selection is just marked. submitAnswer is called by "Next" or "Finish"
 }
 
 if (doubtfulButton) {
@@ -649,14 +681,10 @@ if (doubtfulButton) {
 nextQuestionButton.addEventListener('click', () => {
     const currentQState = questionStates[currentQuestionIndex];
 
-    if (!isTryOut) {
-        if (currentQState && !currentQState.answered && selectedOptionIndex !== -1) {
-            submitAnswer(false);
-        }
-    } else {
+    if (isTryOut) { // For TryOut, "Next" button confirms the selection for the current question
         if (currentQState) {
-            currentQState.selectedAnswer = selectedOptionIndex;
-            if (!currentQState.answered && selectedOptionIndex !== -1) {
+            currentQState.selectedAnswer = selectedOptionIndex; // Ensure current selection is in state
+            if (!currentQState.answered && selectedOptionIndex !== -1) { // If an option was selected, mark as answered
                 currentQState.answered = true;
                 const navBox = questionNavigationGrid.querySelector(`.nav-question-box[data-index="${currentQuestionIndex}"]`);
                 if (navBox && !navBox.classList.contains('answered')) {
@@ -664,22 +692,29 @@ nextQuestionButton.addEventListener('click', () => {
                 }
             }
         }
+    } else { // For non-TryOut (Latihan Soal)
+        // If an answer hasn't been submitted yet (e.g., if user must click "Next" after selecting an option, though current logic auto-submits)
+        // This path is mostly redundant if selectOption calls submitAnswer for non-TryOut
+        if (currentQState && !currentQState.answered && selectedOptionIndex !== -1) {
+            // submitAnswer(false); // This would re-trigger feedback, usually not needed if selectOption already did.
+        }
     }
 
     if (currentQuestionIndex < questions.length - 1) {
         currentQuestionIndex++;
+        // Reset/load state for the new question
         if (questionStates[currentQuestionIndex]) {
             selectedOptionIndex = questionStates[currentQuestionIndex].selectedAnswer;
             answerSubmitted = questionStates[currentQuestionIndex].answered;
-        } else {
+        } else { // Should not happen if states are initialized
             selectedOptionIndex = -1;
             answerSubmitted = false;
         }
         showQuestion(questions[currentQuestionIndex]);
-    } else {
+    } else { // Last question
         if (isTryOut) {
-            stopOverallTimer();
-            finalizeTryOut();
+            stopOverallTimer(); // Stop timer before finalizing
+            finalizeTryOut(); // This will call showResult
         } else {
             showResult();
         }
@@ -687,10 +722,10 @@ nextQuestionButton.addEventListener('click', () => {
 });
 
 function showResult() {
-    stopOverallTimer();
+    stopOverallTimer(); // Ensure timer is stopped
     if (timerDisplaySidebar) timerDisplaySidebar.classList.add('hidden');
     if (questionCounterElement) questionCounterElement.classList.add('hidden');
-    if (questionNavigationGrid) questionNavigationGrid.innerHTML = '';
+    if (questionNavigationGrid) questionNavigationGrid.innerHTML = ''; // Clear nav grid
     explanationElement.classList.add('hidden');
     explanationElement.innerHTML = '';
     if (doubtfulButton) doubtfulButton.classList.add('hidden');
@@ -698,51 +733,68 @@ function showResult() {
     const prevViewForResult = quizLayoutContainer;
     showView(resultContainer, prevViewForResult);
 
-    const currentUserNameForResult = sessionStorage.getItem('userName') || userName || "Peserta"; // Use a local var for clarity
-    let message = `Selamat ${currentUserNameForResult}!<br>`;
+    const currentUserNameForResult = sessionStorage.getItem('userName') || userName || "Peserta";
+    let message = ""; // Initialize message string
     const totalQuestions = questions.length;
 
     if (isTryOut) {
-        score = 0;
+        score = 0; // Recalculate score for TryOut based on final states
         const categoryBreakdown = {};
 
         questions.forEach((q, index) => {
             const state = questionStates[index];
-            if (state) {
+            if (state && state.answered) { // Only count answered questions for TryOut scoring
                 if (state.selectedAnswer !== -1 && state.selectedAnswer === q.answer) {
                     score++;
                 }
-                const categoryKey = q.category || 'lainnya';
+                // Populate category breakdown
+                const categoryKey = q.category || 'lainnya'; // Use 'lainnya' if category is undefined
                 if (!categoryBreakdown[categoryKey]) {
-                    categoryBreakdown[categoryKey] = { correct: 0, total: 0 };
+                    categoryBreakdown[categoryKey] = { correct: 0, total: 0, attempted: 0 };
                 }
-                categoryBreakdown[categoryKey].total++;
+                categoryBreakdown[categoryKey].total++; // Total questions in this category
+                if(state.answered && state.selectedAnswer !== -1) { // Count as attempted if an answer was selected
+                    categoryBreakdown[categoryKey].attempted++;
+                }
                 if (state.selectedAnswer !== -1 && state.selectedAnswer === q.answer) {
                     categoryBreakdown[categoryKey].correct++;
                 }
+            } else if (state) { // Question was not answered, but still part of a category
+                 const categoryKey = q.category || 'lainnya';
+                 if (!categoryBreakdown[categoryKey]) {
+                    categoryBreakdown[categoryKey] = { correct: 0, total: 0, attempted: 0 };
+                }
+                categoryBreakdown[categoryKey].total++;
             }
         });
 
-        message += `Skor Try Out Anda: ${score} dari ${totalQuestions} soal.<br>`;
+        message += `<span class="user-name-result">Selamat ${currentUserNameForResult}!</span><br>`;
+        message += `Skor Try Out Anda: <span class="score-value">${score}</span> dari ${totalQuestions} soal.<br>`;
         const minutesLeft = Math.floor(timeLeftOverallSeconds / 60);
         const secondsLeft = timeLeftOverallSeconds % 60;
-        const timeLeftDisplay = timeLeftOverallSeconds >= 0 ?
-            `${minutesLeft} menit ${secondsLeft} detik` : "Habis";
+        const timeLeftDisplay = timeLeftOverallSeconds > 0 ?
+            `${minutesLeft} menit ${secondsLeft} detik` : (timeLeftOverallSeconds === 0 ? "Habis Tepat Waktu" : "Waktu Habis");
         message += `Sisa Waktu Pengerjaan: ${timeLeftDisplay}.<br><br>`;
-        message += `Berikut rekapan dari hasil pengerjaan Anda:<br>`;
 
-        for (const categoryKey in categoryBreakdown) {
-            const { correct, total } = categoryBreakdown[categoryKey];
-            const formattedName = formatCategoryName(categoryKey);
-            message += `- ${formattedName}: ${correct} soal benar dari ${total} soal.<br>`;
+        if (Object.keys(categoryBreakdown).length > 0) {
+            message += `<span class="category-breakdown-title">Rekapitulasi Hasil Pengerjaan Anda:</span><br>`;
+            for (const categoryKey in categoryBreakdown) {
+                const { correct, total, attempted } = categoryBreakdown[categoryKey];
+                const formattedName = formatCategoryName(categoryKey);
+                message += `<span class="category-item"><span class="category-name">${formattedName}</span>: <span class="category-score">${correct}</span> benar dari ${attempted} dijawab (Total ${total} soal).</span><br>`;
+            }
+        } else {
+            message += "Tidak ada rincian kategori yang tersedia.<br>";
         }
 
-    } else {
-        message += `Skor Latihan (${currentCategoryFileName ? formatCategoryName(currentCategoryFileName.replace('.json', '')) : 'Umum'}) Anda: ${score} dari ${totalQuestions} soal.`;
+    } else { // For Latihan Soal
+        // Score is already tallied during non-TryOut quiz
+        message += `<span class="user-name-result">Selamat ${currentUserNameForResult}!</span><br>`;
+        message += `Skor Latihan Anda (${currentCategoryFileName ? formatCategoryName(currentCategoryFileName.replace('.json', '')) : 'Umum'}): <span class="score-value">${score}</span> dari ${totalQuestions} soal.`;
     }
 
     scoreElement.innerHTML = message;
-    scoreElement.style.whiteSpace = "normal";
+    // scoreElement.style.whiteSpace = "normal"; // Ensure this is set if it was pre-wrap before
 }
 
 
@@ -759,6 +811,12 @@ quizBackButton.addEventListener('click', () => {
         questions = [];
         allCategoryQuestions = [];
         questionStates = [];
+        // Reset other relevant state variables
+        currentQuestionIndex = 0;
+        score = 0;
+        selectedOptionIndex = -1;
+        answerSubmitted = false;
+
 
         if (isTryOut) {
             showView(menuContainer, quizLayoutContainer);
@@ -772,10 +830,17 @@ restartButton.addEventListener('click', () => {
     questions = [];
     allCategoryQuestions = [];
     questionStates = [];
+    // Reset other relevant state variables
+    currentQuestionIndex = 0;
+    score = 0;
+    selectedOptionIndex = -1;
+    answerSubmitted = false;
 
     if (isTryOut) {
         showView(menuContainer, resultContainer);
     } else {
+        // For Latihan Soal, return to Kategori selection or specific Latihan start
+        // Assuming 'kategoriLatihanContainer' is the correct view to return to
         showView(kategoriLatihanContainer, resultContainer);
     }
 });
