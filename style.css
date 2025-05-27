@@ -363,13 +363,130 @@ button:active {
 }
 
 
-#result-container p {
-    font-size: 1.3em;
-    margin-bottom: 25px;
-    line-height: 1.7;
-    color: #2c3e50;
-    white-space: pre-wrap;
+/* ... CSS Anda yang sudah ada ... */
+
+/* Styling untuk Result Container yang Lebih Menarik */
+#result-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradasi ungu-biru elegan */
+    color: #ffffff; /* Teks utama putih agar kontras */
+    padding: 40px 35px; /* Padding lebih besar */
+    border-radius: 15px; /* Border radius lebih halus */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 15px rgba(118, 75, 162, 0.5); /* Bayangan lebih dramatis */
+    text-align: center;
+    animation: fadeInResult 0.8s ease-out; /* Animasi fade-in halus */
 }
+
+@keyframes fadeInResult {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#result-container h2.result-title { /* Tambahkan class jika perlu untuk judul "Hasil" */
+    font-family: "Georgia", "Times New Roman", Times, serif;
+    font-size: 2.8em;
+    color: #f0e6ff; /* Lavender terang untuk judul */
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+#result-container p#score {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Font modern dan bersih */
+    font-size: 1.5em; /* Ukuran font skor */
+    line-height: 1.8; /* Jarak baris yang nyaman */
+    margin-bottom: 30px; /* Jarak lebih besar sebelum tombol */
+    white-space: pre-wrap;
+    background-color: rgba(255, 255, 255, 0.1); /* Latar belakang semi-transparan untuk blok skor */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block; /* Agar background hanya melingkupi teks */
+    max-width: 90%; /* Batasi lebar agar tidak terlalu memanjang di layar besar */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Styling untuk menyorot bagian skor angka (jika Anda bisa memisahkannya di HTML/JS) */
+#result-container p#score .score-value {
+    font-size: 2.5em; /* Angka skor lebih besar */
+    font-weight: bold;
+    color: #ffd700; /* Emas untuk angka skor */
+    display: block; /* Jadikan blok agar bisa di tengah */
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+#result-container p#score .user-name-result {
+    font-weight: bold;
+    color: #c4e1ff; /* Biru muda untuk nama pengguna */
+}
+
+#result-container p#score .category-breakdown-title {
+    font-weight: bold;
+    margin-top: 15px;
+    display: block;
+    color: #e6e6fa; /* Lavender */
+    font-size: 1.1em;
+}
+
+#result-container p#score .category-item {
+    display: block; /* Setiap item kategori jadi baris baru */
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #f0f0f0; /* Warna lebih netral untuk detail */
+}
+#result-container p#score .category-item .category-name {
+    font-weight: 500;
+    color: #d1c4e9; /* Ungu muda untuk nama kategori */
+}
+#result-container p#score .category-item .category-score {
+    font-weight: bold;
+    color: #b2dfdb; /* Teal muda untuk skor kategori */
+}
+
+
+/* Tombol Restart yang Lebih Gaya */
+#result-container #restart-button {
+    background-color: #ffc107; /* Kuning cerah */
+    color: #333; /* Teks gelap */
+    font-size: 1.15em;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 25px; /* Tombol lebih membulat */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    letter-spacing: 0.5px;
+}
+
+#result-container #restart-button:hover {
+    background-color: #e0a800; /* Kuning lebih gelap */
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+#result-container #restart-button:active {
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Media Queries untuk responsivitas jika diperlukan */
+@media (max-width: 768px) {
+    #result-container {
+        padding: 30px 20px;
+    }
+    #result-container h2.result-title {
+        font-size: 2.2em;
+    }
+    #result-container p#score {
+        font-size: 1.2em;
+        padding: 15px;
+    }
+    #result-container p#score .score-value {
+        font-size: 2em;
+    }
+    #result-container #restart-button {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+}
+
 
 #footer {
     width: 100%;
