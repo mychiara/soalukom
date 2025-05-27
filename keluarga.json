@@ -329,7 +329,6 @@
         "answer": 1,
         "explanation": "Madu tidak direkomendasikan untuk bayi di bawah usia 1 tahun karena risiko spora Clostridium botulinum yang dapat menyebabkan botulisme infantil, suatu kondisi serius."
     },
-    // Mulai dari sini, kita akan percepat pembuatan soal dengan variasi kasus yang lebih luas
     {
         "question": "Seorang ibu membawa anaknya usia 5 tahun ke puskesmas dengan keluhan demam tinggi, nyeri otot, dan muncul ruam merah di kulit setelah digigit serangga saat bermain di kebun. Ini adalah gejala yang mungkin mengarah ke penyakit apa yang ditularkan vektor?",
         "options": [
@@ -536,10 +535,9 @@
             "Bargaining (Tawar-menawar)",
             "Depression (Depresi) atau Acceptance (Penerimaan)"
         ],
-        "answer": 3, // Bisa juga 0 atau 1, tapi grief expression seperti menangis lebih ke arah depresi atau awal dari penerimaan. Ini agak ambigu.
+        "answer": 3, 
         "explanation": "Menangis dan menunjukkan kesedihan yang mendalam adalah manifestasi dari tahap depresi dalam proses berduka. Namun, ekspresi duka bisa bervariasi dan tahap-tahap ini tidak selalu linear."
-        // Catatan: Soal ini bisa diperdebatkan karena ekspresi duka bervariasi. Jika menangis disertai penyangkalan, bisa jadi denial. Jika menangis karena marah pada situasi, bisa anger. Jika menangis karena kesedihan mendalam, bisa depression.
-    },
+        },
     {
         "question": "Perawat memberikan edukasi tentang cara pemberian obat sirup untuk anak. Hal penting yang harus diperhatikan oleh orang tua adalah...",
         "options": [
@@ -551,7 +549,6 @@
         "answer": 1,
         "explanation": "Penggunaan alat takar yang tepat sangat penting untuk memastikan dosis obat yang diberikan akurat. Sendok makan rumah tangga memiliki volume yang tidak standar. Tidak semua obat boleh dicampur susu atau disimpan di kulkas."
     },
-    // Lanjut 51-180
     {
         "question": "Seorang ibu hamil Trimester III mengeluh sering kram pada kaki terutama malam hari. Keluarga khawatir ini pertanda buruk. Penjelasan perawat yang menenangkan adalah...",
         "options": [
@@ -615,8 +612,7 @@
             "Refleks Menggenggam (Palmar Grasp)",
             "Refleks Rooting (Mencari Puting)"
         ],
-        "answer": 0, // Refleks Moro dan Rooting biasanya hilang sekitar 4-6 bulan. Palmar grasp juga. Babinski bisa sampai 1-2 tahun.
-        // Kita pilih Moro karena paling sering ditanyakan hilang di rentang ini.
+        "answer": 0, 
         "explanation": "Refleks Moro (kaget) biasanya menghilang atau sangat berkurang pada usia 4-6 bulan. Jika masih kuat, bisa mengindikasikan masalah neurologis. Refleks rooting juga biasanya hilang di rentang ini."
     },
     {
@@ -773,7 +769,6 @@
         "answer": 2,
         "explanation": "Penyimpanan obat yang benar adalah di tempat sejuk, kering, tidak terkena sinar matahari langsung, dan aman dari jangkauan anak-anak untuk mencegah kerusakan obat dan keracunan."
     },
-    // Lanjut 71-180
     {
         "question": "Seorang ibu datang ke puskesmas dengan bayi usia 2 minggu. Ibu mengeluh putingnya lecet dan nyeri saat menyusui. Kemungkinan penyebab utama masalah ini adalah...",
         "options": [
@@ -936,7 +931,7 @@
             "Campak",
             "Hepatitis B (dosis pertama jika belum saat lahir)"
         ],
-        "answer": 0, // Jika Hep B0 sudah, maka BCG dan Polio 1. Jika Hep B0 belum, maka Hep B0 dulu.
+        "answer": 0,
         "explanation": "Bayi usia 1 bulan biasanya dijadwalkan untuk imunisasi BCG dan Polio 1. Imunisasi Hepatitis B dosis pertama (HB0) idealnya diberikan <24 jam setelah lahir. Polio 0 juga saat lahir."
     },
     {
@@ -994,7 +989,6 @@
         "answer": 1,
         "explanation": "Tekanan darah sistolik 120-139 mmHg atau diastolik 80-89 mmHg dikategorikan sebagai prehipertensi (atau elevated blood pressure menurut panduan ACC/AHA 2017). Ini adalah tanda untuk waspada dan memulai modifikasi gaya hidup."
     },
-    // Lanjut 91-180
     {
         "question": "Seorang anak dibawa ke UGD karena tersedak mainan kecil. Anak tampak batuk kuat, masih bisa menangis, dan kulit tidak membiru. Tindakan pertama yang harus dilakukan adalah...",
         "options": [
@@ -1215,7 +1209,6 @@
         "answer": 1,
         "explanation": "Pursed-lip breathing membantu memperlambat ekspirasi dan mencegah kolapsnya saluran napas kecil. Pernapasan diafragma membantu penggunaan otot napas yang lebih efisien. Keduanya membantu mengurangi sesak pada pasien PPOK."
     },
-    // Lanjut 111-180
     {
         "question": "Seorang remaja putri datang ke konseling dengan keluhan merasa sedih berkepanjangan, kehilangan minat pada aktivitas yang dulu disukai, dan sulit tidur selama sebulan terakhir. Ini adalah gejala yang mengarah pada...",
         "options": [
@@ -1436,7 +1429,6 @@
         "answer": 2,
         "explanation": "Berdasarkan tanda-tanda (aktif, mau minum, mata tidak cekung, turgor baik), bayi ini diklasifikasikan sebagai 'Diare Tanpa Dehidrasi' menurut MTBS. Intervensinya adalah Rencana Terapi A (pemberian cairan oral tambahan di rumah dan ASI lebih sering)."
     },
-    // Lanjut 131-180
     {
         "question": "Seorang ibu bertanya tentang keamanan penggunaan MSG (Monosodium Glutamat) untuk makanan keluarga. Pernyataan perawat yang paling tepat adalah...",
         "options": [
@@ -1657,7 +1649,6 @@
         "answer": 2,
         "explanation": "Pada kasus keracunan bahan korosif atau hidrokarbon, merangsang muntah justru bisa berbahaya (risiko aspirasi atau kerusakan esofagus berulang). Pertolongan pertama adalah segera bawa ke UGD. Pemberian minum juga harus atas instruksi medis."
     },
-    // Lanjut 151-180
     {
         "question": "Seorang wanita usia 30 tahun, G2P1A0, usia kehamilan 30 minggu, datang dengan keluhan keluar darah segar dari jalan lahir tanpa disertai nyeri. Kemungkinan diagnosis yang paling mendekati adalah...",
         "options": [
