@@ -99,7 +99,129 @@
             </p>
         </div>
     </div>
+    <!-- Skrip Lisensi Firebase -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+      import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
 
+      const firebaseConfig = {
+        apiKey: "AIzaSyDLlxMLKa1KRG7Ubpq_Ba06Ub_2mIWbCPI", // WARNING: Exposed API Key
+        authDomain: "poster-342001.firebaseapp.com",
+        projectId: "poster-342001",
+        storageBucket: "poster-342001.appspot.com",
+        messagingSenderId: "416933069336",
+        appId: "1:416933069336:web:01b2fb1610deb815dc796d",
+        measurementId: "G-QT9FL9EZHE"
+      };
+
+      let db;
+
+      // DOM Elements for license and app control
+      const licenseFormContainer = document.getElementById("license-form-container");
+      const mainAppContent = document.getElementById("main-app-content");
+      const submitButton = document.getElementById("submit-license-button");
+      const licenseInput = document.getElementById("license");
+      const nameInputElement = document.getElementById("name-input");
+      const msgElement = document.getElementById("license-msg");
+      const welcomeUserMessageEl = document.getElementById("welcome-user-message"); // Renamed to avoid conflict
+      const menuContainerEl = document.getElementById("menu-container"); // Renamed to avoid conflict
+      const userNameDisplayQuizEl = document.getElementById("user-name-display"); // Renamed to avoid conflict
+
+      function proceedToApp(currentUserName) { // Parameter name changed
+          if (welcomeUserMessageEl) {
+              welcomeUserMessageEl.textContent = `Selamat datang, ${currentUserName}!`;
+          }
+          if (userNameDisplayQuizEl) {
+              userNameDisplayQuizEl.textContent = currentUserName;
+          }
+          if (sessionStorage) {
+            sessionStorage.setItem('licenseValidated', 'true');
+            sessionStorage.setItem('userName', currentUserName);
+          }
+
+
+          if (licenseFormContainer) licenseFormContainer.style.display = "none";
+          if (mainAppContent) mainAppContent.style.display = "block";
+          if (menuContainerEl) menuContainerEl.classList.remove("hidden");
+
+          // Load saved articles after validation (jika fungsi ini ada)
+          if (typeof loadGeneratedArticles === 'function') {
+             loadGeneratedArticles();
+          } else {
+             // console.warn('loadGeneratedArticles function not found yet.');
+          }
+      }
+
+      try {
+          const app = initializeApp(firebaseConfig);
+          db = getFirestore(app);
+
+          if (submitButton && licenseInput && msgElement && licenseFormContainer && mainAppContent && nameInputElement) {
+              submitButton.addEventListener("click", async (e) => {
+                  e.preventDefault();
+                  const licenseKey = licenseInput.value.trim();
+                  const inputUserName = nameInputElement.value.trim() || "Pengguna"; // Renamed variable
+
+                  if (!licenseKey) {
+                      msgElement.textContent = "Silakan masukkan kode lisensi.";
+                      msgElement.style.color = "red";
+                      return;
+                  }
+                   if (!inputUserName || (inputUserName === "Pengguna" && nameInputElement.value.trim() === "")) {
+                        msgElement.textContent = "Silakan masukkan nama Anda.";
+                        msgElement.style.color = "red";
+                        return;
+                    }
+
+
+                  msgElement.textContent = "Memeriksa lisensi...";
+                  msgElement.style.color = "orange";
+                  submitButton.disabled = true;
+
+                  try {
+                      const docRef = doc(db, "licenses", licenseKey);
+                      const docSnap = await getDoc(docRef);
+
+                      if (docSnap.exists() && docSnap.data().active === true) {
+                          msgElement.style.color = "green";
+                          msgElement.textContent = "Lisensi valid. Akses diberikan!";
+                          proceedToApp(inputUserName); // Pass validated user name
+                      } else {
+                          msgElement.style.color = "red";
+                          msgElement.textContent = "Mohon maaf, Lisensi tidak ditemukan atau tidak aktif.";
+                          if(sessionStorage) sessionStorage.removeItem('licenseValidated');
+                      }
+                  } catch (error) {
+                      console.error("Terjadi kesalahan saat memeriksa lisensi:", error);
+                      msgElement.style.color = "red";
+                      msgElement.textContent = "Terjadi kesalahan saat memeriksa lisensi. Cek koneksi internet Anda.";
+                      if(sessionStorage) sessionStorage.removeItem('licenseValidated');
+                  } finally {
+                      submitButton.disabled = false;
+                  }
+              });
+
+              // Check session storage on page load
+              if (sessionStorage && sessionStorage.getItem('licenseValidated') === 'true') {
+                   const savedUserName = sessionStorage.getItem('userName') || "Pengguna";
+                   proceedToApp(savedUserName);
+              }
+
+          } else {
+              console.error("Elemen form lisensi atau aplikasi utama tidak ditemukan! Periksa ID elemen.");
+              if(msgElement) {
+                msgElement.textContent = "Kesalahan konfigurasi halaman.";
+                msgElement.style.color = "red";
+              }
+          }
+      } catch (error) { // <<< PERBAIKAN DI SINI: (error)_ menjadi (error)
+          console.error("Inisialisasi Firebase gagal:", error);
+          if(msgElement) {
+             msgElement.textContent = "Gagal menginisialisasi koneksi. Silakan coba lagi nanti.";
+             msgElement.style.color = "red";
+          }
+      }
+    </script>
     <!-- Kontainer untuk Aplikasi Utama (setelah lisensi valid) -->
     <div id="main-app-content"> <!-- ID diubah menjadi main-app-content -->
         <div id="menu-container" class="container-view hidden">
