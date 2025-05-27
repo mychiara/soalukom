@@ -7,7 +7,7 @@
             "Menganjurkan pasien untuk tirah baring total",
             "Memberikan terapi oksigen sesuai program"
         ],
-        "answer": 3, // Indeks jawaban yang benar
+        "answer": 3,
         "explanation": "Sesak napas adalah manifestasi utama dari kelebihan cairan pada gagal jantung. Pemberian oksigen akan membantu mengurangi hipoksia dan meringankan sesak, ini adalah prioritas ABC (Airway, Breathing, Circulation)."
     },
     {
@@ -161,7 +161,7 @@
             "Menganjurkan pasien untuk tetap di tempat tidur",
             "Memberikan pencahayaan yang adekuat di kamar pasien"
         ],
-        "answer": 1, // Bel panggilan & orientasi lingkungan. Jawaban sebelumnya salah (3)
+        "answer": 1,
         "explanation": "Memastikan bel panggilan mudah dijangkau memungkinkan pasien meminta bantuan saat akan turun dari tempat tidur, ditambah orientasi lingkungan dan pencahayaan yang cukup, sangat penting untuk mencegah jatuh. Penghalang tempat tidur bisa meningkatkan risiko cedera jika pasien mencoba memanjat."
     },
     {
@@ -282,7 +282,7 @@
             "Bersihan jalan napas tidak efektif",
             "Risiko kekurangan volume cairan"
         ],
-        "answer": 2, // Fokus pada akumulasi sekret (ronkhi)
+        "answer": 2,
         "explanation": "Adanya ronkhi basah menunjukkan akumulasi sekret di jalan napas. Oleh karena itu, bersihan jalan napas tidak efektif menjadi masalah utama yang perlu diatasi untuk memperbaiki oksigenasi dan pola napas."
     },
     {
@@ -335,7 +335,7 @@
             "60-100x/menit",
             "80-120x/menit",
             "120-160x/menit",
-            "100-180x/menit" // Range yang lebih akurat
+            "100-180x/menit"
         ],
         "answer": 3,
         "explanation": "Frekuensi nadi normal pada neonatus (0-28 hari) adalah lebih tinggi daripada orang dewasa, berkisar antara 100-180x/menit saat istirahat, bisa lebih tinggi saat menangis atau aktif."
@@ -549,7 +549,6 @@
         "answer": 1,
         "explanation": "Sumber zat besi heme (lebih mudah diserap) terdapat pada daging merah, unggas, ikan, dan hati. Sumber non-heme terdapat pada sayuran hijau tua (bayam, kangkung), kacang-kacangan, dan sereal yang difortifikasi."
     },
-    // Mulai menambahkan lebih banyak variasi
     {
         "question": "Perawat akan melakukan suction (penghisapan lendir) pada pasien dengan trakeostomi. Sebelum melakukan tindakan, perawat harus...",
         "options": [
