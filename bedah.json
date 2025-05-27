@@ -1,5 +1,4 @@
-[ // <--- CHANGE THIS LINE (Or rename the file and variable accordingly)
-    // Kategori: Sistem Kardiovaskular
+[
     {
         "question": "Seorang pasien laki-laki 55 tahun datang ke UGD dengan keluhan nyeri dada hebat seperti ditekan, menjalar ke lengan kiri. TD 150/90 mmHg, Nadi 110x/menit, RR 24x/menit, SpO2 95%. Prioritas tindakan keperawatan adalah?",
         "options": [
@@ -110,8 +109,6 @@
         "answer": 1,
         "explanation": "Medan magnet kuat seperti pada MRI dapat mengganggu fungsi alat pacu jantung. Pasien harus selalu memberitahu petugas kesehatan tentang alat pacu jantungnya sebelum prosedur medis atau diagnostik."
     },
-
-    // Kategori: Sistem Pernapasan
     {
         "question": "Seorang pasien PPOK (Penyakit Paru Obstruktif Kronik) mengalami eksaserbasi akut dengan keluhan sesak napas, penggunaan otot bantu napas, dan SpO2 88% dengan udara ruangan. Pemberian oksigen yang paling tepat adalah?",
         "options": [
@@ -222,8 +219,6 @@
         "answer": 1,
         "explanation": "Kortikosteroid inhalasi adalah obat kontroler untuk mengurangi inflamasi jalan napas. Berkumur setelah penggunaan penting untuk menghilangkan sisa obat di mulut dan tenggorokan, mencegah efek samping lokal seperti kandidiasis oral (jamur)."
     },
-
-    // Kategori: Sistem Pencernaan (Gastrointestinal)
     {
         "question": "Seorang pasien 50 tahun mengeluh nyeri ulu hati hilang timbul sejak 3 bulan, membaik setelah makan. Riwayat konsumsi NSAID jangka panjang. Diagnosis yang paling mungkin adalah?",
         "options": [
@@ -334,8 +329,6 @@
         "answer": 1,
         "explanation": "Banyak pasien IBS mengalami perburukan gejala dengan makanan tinggi lemak, gas (minuman karbonasi), kafein, alkohol, dan beberapa jenis karbohidrat (FODMAPs) termasuk pemanis buatan seperti sorbitol."
     },
-
-    // Kategori: Sistem Endokrin
     {
         "question": "Seorang pasien Diabetes Melitus (DM) Tipe 1 datang ke UGD dengan keluhan mual, muntah, nyeri perut, napas cepat dan dalam (Kussmaul), serta bau napas seperti aseton. Gula darah sewaktu 450 mg/dL. Kondisi ini paling mungkin adalah?",
         "options": [
@@ -443,13 +436,10 @@
             "Memeriksa gula darah segera",
             "Menyuruh pasien istirahat total"
         ],
-        "answer": 1, // Seharusnya memeriksa gula darah dulu jika memungkinkan, tapi jika tidak, beri gula. Pilihan 2 adalah yang paling tepat untuk tindakan langsung jika sadar.
+        "answer": 1, 
         "explanation": "Jika pasien sadar dan mampu menelan, berikan 15-20 gram karbohidrat kerja cepat (gula). Jika alat tersedia, periksa gula darah untuk konfirmasi, tetapi jangan menunda pemberian gula jika gejala jelas."
-        // Catatan: Idealnya periksa GDS dulu, tapi jika tidak mungkin & gejala jelas, beri gula. Jika pasien tidak sadar, berikan glukagon IM/SC atau glukosa IV. Pilihan B adalah tindakan paling praktis jika sadar.
-    },
+         },
 
-
-    // Kategori: Sistem Muskuloskeletal
     {
         "question": "Seorang pasien lansia jatuh dan mengalami fraktur collum femoris (patah tulang panggul). Tanda klinis yang khas adalah?",
         "options": [
@@ -560,8 +550,6 @@
         "answer": 2,
         "explanation": "Pada kurvatura yang signifikan dan progresif, terutama pada usia pertumbuhan atau yang menyebabkan gangguan fungsi kardiopulmonal, tindakan operasi seringkali diperlukan untuk mengkoreksi deformitas dan mencegah perburukan."
     },
-
-    // Kategori: Sistem Perkemihan (Renal/Urinary)
     {
         "question": "Seorang pasien laki-laki 60 tahun mengeluh sulit memulai kencing, pancaran lemah, dan merasa tidak tuntas setelah kencing. Keluhan ini paling sering disebabkan oleh?",
         "options": [
@@ -669,11 +657,9 @@
             "Mengurangi minum air putih",
             "Meningkatkan asupan vitamin C dosis tinggi"
         ],
-        "answer": 1, // Pembatasan protein hewani dan garam membantu mengurangi ekskresi kalsium urin. Asupan kalsium diet tidak perlu dibatasi secara ketat (cukup normal), namun makanan tinggi oksalat mungkin perlu dikurangi. Hidrasi adekuat sangat penting.
+        "answer": 1, 
         "explanation": "Pembatasan natrium dan protein hewani dapat menurunkan ekskresi kalsium di urin. Hidrasi yang cukup (banyak minum air) sangat penting untuk mencegah supersaturasi urin. Pembatasan oksalat (seperti bayam, kacang, coklat) mungkin diperlukan pada beberapa kasus."
     },
-
-    // Kategori: Sistem Saraf (Neurologi)
     {
         "question": "Seorang pasien datang dengan keluhan kelemahan mendadak pada sisi tubuh kanan, bicara pelo (disartria), dan mulut mencong ke kiri. Gejala ini paling mungkin menunjukkan?",
         "options": [
@@ -784,8 +770,6 @@
         "answer": 1,
         "explanation": "Myasthenia Gravis adalah penyakit autoimun di mana antibodi menyerang reseptor asetilkolin di neuromuscular junction, mengganggu transmisi sinyal saraf ke otot dan menyebabkan kelemahan otot fluktuatif."
     },
-
-    // Kategori: Sistem Integumen
     {
         "question": "Seorang pasien tirah baring lama berisiko mengalami luka tekan (dekubitus). Area tubuh mana yang paling rentan terjadi luka tekan pada posisi telentang?",
         "options": [
@@ -838,7 +822,7 @@
             "Pemberian analgesik kuat",
             "Debridement luka bakar"
         ],
-        "answer": 1, // Resusitasi cairan sangat penting pada luka bakar luas untuk mencegah syok hipovolemik.
+        "answer": 1,
         "explanation": "Luka bakar luas menyebabkan kehilangan cairan masif melalui evaporasi dan perpindahan cairan ke ruang ketiga. Resusitasi cairan agresif (misalnya menggunakan formula Parkland) adalah prioritas untuk menjaga perfusi organ."
     },
     {
@@ -896,8 +880,6 @@
         "answer": 1,
         "explanation": "ABCDE untuk deteksi dini melanoma: Asymmetry (bentuk tidak simetris), Border (pinggiran tidak rata/berlekuk), Color (warna tidak homogen/bervariasi), Diameter (lebih besar dari 6 mm), Evolving (perubahan ukuran, bentuk, atau warna)."
     },
-
-    // Kategori: Perawatan Perioperatif
     {
         "question": "Seorang pasien dijadwalkan menjalani operasi elektif. Perawat melakukan pengkajian pre-operasi. Informasi penting yang harus didokumentasikan meliputi?",
         "options": [
@@ -1008,8 +990,6 @@
         "answer": 0,
         "explanation": "Komunikasi yang efektif dan lengkap saat serah terima (handover) sangat penting untuk kontinuitas perawatan dan keselamatan pasien, mencakup semua aspek klinis relevan selama operasi dan anestesi."
     },
-
-    // Kategori: Keseimbangan Cairan, Elektrolit, Asam-Basa
     {
         "question": "Seorang pasien lansia dengan diare berat menunjukkan tanda-tanda dehidrasi: mukosa bibir kering, turgor kulit menurun, mata cekung, TD 90/60 mmHg, Nadi 110x/menit. Jenis dehidrasi yang paling mungkin adalah?",
         "options": [
@@ -1120,8 +1100,6 @@
         "answer": 3,
         "explanation": "Muntah menyebabkan kehilangan asam lambung (HCl), sehingga terjadi peningkatan relatif bikarbonat (basa) dalam tubuh, mengarah pada alkalosis metabolik."
     },
-
-    // Kategori: Pengetahuan Medis Dasar & Farmakologi Terapan
     {
         "question": "Obat Furosemide (Lasix) termasuk dalam golongan diuretik apa dan bekerja di bagian mana dari nefron?",
         "options": [
@@ -1232,8 +1210,6 @@
         "answer": 1,
         "explanation": "Aminoglikosida dikenal memiliki potensi nefrotoksisitas (kerusakan ginjal) dan ototoksisitas (kerusakan pendengaran dan keseimbangan) yang signifikan."
     },
-
-    // Kategori: Komunikasi & Etika Keperawatan
     {
         "question": "Seorang pasien menolak untuk dilakukan transfusi darah karena keyakinan agamanya. Sikap perawat yang paling tepat adalah?",
         "options": [
@@ -1344,8 +1320,6 @@
         "answer": 2,
         "explanation": "Perawat harus jujur (veracity) dalam batas kewenangannya, memberikan dukungan, dan memfasilitasi komunikasi terbuka antara pasien dan tim medis, terutama dokter yang bertanggung jawab atas informasi prognosis."
     },
-
-    // Kategori: Kebutuhan Dasar Manusia & Tindakan Keperawatan Dasar
     {
         "question": "Pengukuran tekanan darah pada orang dewasa normal biasanya menggunakan manset dengan ukuran lebar?",
         "options": [
@@ -1398,7 +1372,7 @@
             "Meletakkan set steril di bawah pinggang perawat",
             "Menganggap area 1 cm dari tepi luar sebagai area tidak steril"
         ],
-        "answer": 3, // Area 2.5 cm (1 inci) dari tepi biasanya dianggap tidak steril. Membuka lipatan terjauh dulu mencegah kontaminasi.
+        "answer": 3,
         "explanation": "Area 1 inci (sekitar 2.5 cm) dari tepi bidang steril dianggap terkontaminasi. Membuka lipatan terjauh lebih dulu mencegah lengan perawat menyilang di atas bidang steril."
     },
     {
@@ -1418,9 +1392,9 @@
             "Cek respon -> Panggil bantuan -> Cek nadi/napas -> Kompresi dada -> Buka jalan napas -> Beri napas bantuan",
             "Beri napas bantuan -> Kompresi dada -> Cek respon -> Panggil bantuan",
             "Panggil bantuan -> Kompresi dada -> Buka jalan napas -> Beri napas bantuan",
-            "Cek respon -> Panggil bantuan -> Kompresi dada -> Buka jalan napas -> Beri napas bantuan" // Urutan C-A-B ditekankan
+            "Cek respon -> Panggil bantuan -> Kompresi dada -> Buka jalan napas -> Beri napas bantuan"
         ],
-        "answer": 3, // Cek respon & panggil bantuan dulu, lalu mulai kompresi (C-A-B).
+        "answer": 3,
         "explanation": "Panduan BHD menekankan Circulation-Airway-Breathing (C-A-B). Setelah memastikan keamanan dan mengecek respons/memanggil bantuan, segera mulai kompresi dada berkualitas tinggi."
     },
     {
@@ -1431,7 +1405,7 @@
             "35 gtt/menit",
             "42 gtt/menit"
         ],
-        "answer": 3, // (1000 mL * 20 gtt/mL) / (8 jam * 60 menit/jam) = 20000 / 480 = 41.67 gtt/menit
+        "answer": 3,
         "explanation": "Rumus: (Total Volume (mL) x Faktor Tetes (gtt/mL)) / (Total Waktu (menit)) = (1000 x 20) / (8 x 60) = 20000 / 480 ≈ 41.67 gtt/menit. Dibulatkan menjadi 42 gtt/menit."
     },
     {
@@ -1456,8 +1430,6 @@
         "answer": 2,
         "explanation": "Jaringan granulasi adalah jaringan ikat baru yang terbentuk selama penyembuhan luka. Tampilan yang sehat adalah merah terang/pink, menandakan vaskularisasi yang baik dan proses penyembuhan aktif."
     },
-
-    // Tambahan variasi soal
     {
         "question": "Pasien dengan riwayat penyakit ginjal kronik stadium 4 mengeluh mual dan tidak nafsu makan. Hasil lab menunjukkan Ureum 150 mg/dL, Kreatinin 5.0 mg/dL. Gejala ini kemungkinan besar berkaitan dengan?",
         "options": [
