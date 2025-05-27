@@ -41,14 +41,37 @@ h3 { font-size: 1.6em; }
 
 
 /* Styling untuk login container (sekarang license-form-container) */
+/* Styling untuk login container (sekarang license-form-container) */
 #license-form-container {
-    background-image: url('background.png'); /* GAMBAR LATAR BELAKANG DITAMBAHKAN */
+    /* background-image: url('background.png'); /* GAMBAR LATAR BELAKANG ASLI */
     background-size: cover;                  /* Membuat gambar menutupi seluruh area */
     background-position: center center;      /* Memposisikan gambar di tengah */
     background-repeat: no-repeat;            /* Mencegah gambar berulang */
     padding: 30px 35px;                      /* Sedikit penyesuaian padding jika perlu */
-    position: relative;                      /* Untuk potensi overlay jika dibutuhkan nanti */
+    position: relative;                      /* Untuk potensi overlay */
+    z-index: 1;                              /* Pastikan konten berada di atas pseudo-element */
 }
+
+/* Menambahkan overlay gradasi transparan */
+#license-form-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.3), /* Mulai dengan hitam transparan (lebih gelap di atas) */
+        rgba(0, 0, 0, 0.5)  /* Berakhir dengan hitam transparan yang sedikit lebih pekat (lebih gelap di bawah) */
+    ), url('background.png'); /* Gambar latar belakang sekarang ada di dalam pseudo-element */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 12px; /* Samakan dengan border-radius container */
+    z-index: -1; /* Letakkan overlay di belakang konten, tapi di atas background asli (jika ada) */
+    opacity: 0.85; /* Atur opasitas overlay keseluruhan jika diperlukan, 0.85 berarti 85% terlihat */
+}
+
 
 /* Penyesuaian warna teks di atas background image agar terbaca */
 #license-form-container h1,
@@ -57,42 +80,40 @@ h3 { font-size: 1.6em; }
 #license-form-container .login-prompt,
 #license-form-container .app-features li {
     color: #ffffff; /* Teks putih */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Bayangan teks agar lebih jelas */
+    /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Bayangan teks bisa dikurangi atau dihilangkan jika gradasi cukup */
 }
 
 #license-form-container .app-title-highlight {
-    /* color: #87CEFA; Light Sky Blue atau biarkan warna aslinya jika kontras cukup */
-    /* Jika warna asli #007BFF dirasa kurang kontras, ganti dengan warna lebih terang */
-    color: #fff; /* Atau samakan putih dan andalkan text-shadow */
-    /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); */
+    color: #f0f8ff; /* AliceBlue, contoh warna putih kebiruan yang terang */
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); */
 }
 
 #license-form-container .app-features li::before {
-    color: #90EE90; /* Hijau muda untuk checklist */
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.6); /* Bayangan untuk checklist */
+    color: #b2f2bb; /* Hijau muda yang lebih terang */
+    /* text-shadow: 1px 1px 2px rgba(0,0,0,0.5); */
 }
 
 /* Styling untuk input di license form agar kontras dengan background baru */
 #license-form-container input[type="text"] {
     padding: 12px 15px;
     margin: 8px 0 15px 0;
-    border: 1px solid #ced4da;
+    border: 1px solid #ddd; /* Border lebih terang */
     border-radius: 8px;
     width: calc(100% - 32px);
     box-sizing: border-box;
     font-size: 1em;
     font-family: "Times New Roman", Times, serif;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.92); /* Latar belakang input agak transparan */
-    color: #333; /* Warna teks di dalam input tetap gelap */
+    background-color: rgba(255, 255, 255, 0.9); /* Latar belakang input sedikit lebih terang atau solid */
+    color: #222; /* Warna teks di dalam input tetap gelap */
 }
 #license-form-container input[type="text"]::placeholder {
-    color: #555; /* Warna placeholder sedikit lebih gelap */
+    color: #666; /* Warna placeholder */
 }
 
 #license-form-container input[type="text"]:focus {
     border-color: #007BFF;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(100, 173, 255, 0.35); /* Bayangan fokus disesuaikan */
     outline: none;
     background-color: #ffffff; /* Latar belakang solid saat fokus */
 }
@@ -100,19 +121,21 @@ h3 { font-size: 1.6em; }
 /* Penyesuaian untuk developer credit jika ada di dalam license-form-container */
 #license-form-container .developer-credit p,
 #license-form-container .developer-credit a {
-    color: #f0f0f0; /* Teks terang */
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    color: #e0e0e0; /* Teks lebih terang */
+    /* text-shadow: 1px 1px 2px rgba(0,0,0,0.5); */
 }
 #license-form-container .developer-credit a {
-    color: #add8e6; /* Biru muda untuk link */
+    color: #b0e0e6; /* PowderBlue untuk link */
 }
 #license-form-container .developer-credit a:hover {
     color: #ffffff;
 }
 #license-form-container .developer-credit img {
-    border-color: #f0f0f0; /* Border terang untuk foto developer */
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    border-color: #e0e0e0;
+    /* box-shadow: 0 0 4px rgba(0,0,0,0.4); */
 }
+
+/* Sisanya sama seperti sebelumnya... */
 
 
 button {
