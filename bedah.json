@@ -1259,8 +1259,8 @@
         "options": [
             "Pertanyaan Tertutup (Closed-ended)",
             "Pertanyaan Terbuka (Open-ended)",
-            "Pertanyaan Mengarahkan (Leading "question")",
-            "Pertanyaan Ganda (Double-barreled "question")"
+            "Pertanyaan Mengarahkan (Leading question)",
+            "Pertanyaan Ganda (Double-barreled question)"
         ],
         "answer": 1,
         "explanation": "Pertanyaan terbuka mendorong pasien untuk memberikan jawaban yang lebih luas dan deskriptif, memungkinkan perawat memperoleh informasi yang lebih kaya."
