@@ -255,21 +255,37 @@
                       if (docSnap.exists() && docSnap.data().active === true) {
                           const licenseData = docSnap.data();
                           const storedSessionId = licenseData.activeSessionId;
-                          const lastSeen = licenseData.lastSeenAt ? licenseData.lastSeenAt.toDate() : null;
-                          let isStale = false;
-                          if (lastSeen && storedSessionId) { // Only stale if there was a session
-                              isStale = (new Date().getTime() - lastSeen.getTime()) > STALE_SESSION_THRESHOLD;
+                          const lastSeenTimestamp = licenseData.lastSeenAt; // Keep as Firestore Timestamp or null/undefined
+                          const lastSeenDate = lastSeenTimestamp ? lastSeenTimestamp.toDate() : null;
+                          
+                          let canTakeLicense = false;
+
+                          if (!storedSessionId) {
+                              // Case 1: No active session ID stored, license is free.
+                              canTakeLicense = true;
+                          } else {
+                              // An activeSessionId exists. Check if it's stale or orphaned.
+                              if (!lastSeenDate) {
+                                  // Case 2: activeSessionId exists, but no lastSeenAt timestamp.
+                                  // This is an orphaned session (e.g. incomplete registration, manual edit).
+                                  // Consider it immediately available/stale.
+                                  console.warn(`License ${licenseKey} has activeSessionId but no lastSeenAt. Considering it available.`);
+                                  canTakeLicense = true;
+                              } else {
+                                  // Case 3: activeSessionId and lastSeenAt both exist. Check for staleness.
+                                  if ((new Date().getTime() - lastSeenDate.getTime()) > STALE_SESSION_THRESHOLD) {
+                                      canTakeLicense = true; // Session is stale
+                                  } else {
+                                      canTakeLicense = false; // Session is active and not stale
+                                  }
+                              }
                           }
 
-                          const newClientSessionId = generateClientSessionId();
-
-                          if (!storedSessionId || isStale) {
-                              // License is free or previous session is stale
+                          if (canTakeLicense) {
+                              const newClientSessionId = generateClientSessionId();
                               await updateDoc(docRef, {
                                   activeSessionId: newClientSessionId,
                                   lastSeenAt: serverTimestamp(),
-                                  // Optional: you might want to log which user took it
-                                  // lastUserName: inputUserName 
                               });
                               msgElement.style.color = "green";
                               msgElement.textContent = "Lisensi valid. Akses diberikan!";
@@ -278,7 +294,7 @@
                               // License in use by another active session
                               msgElement.style.color = "red";
                               msgElement.textContent = "Lisensi ini sedang aktif digunakan di browser/perangkat lain.";
-                              clearLocalSessionData(); // Ensure no partial session data remains for this browser
+                              clearLocalSessionData();
                           }
                       } else {
                           msgElement.style.color = "red";
@@ -324,9 +340,7 @@
                           }
                       })();
                   } else {
-                      // Incomplete session data
-                      clearLocalSessionData(); // Clean up
-                      // msgElement.textContent = "Data sesi tidak lengkap."; msgElement.style.color = "red"; // Optional message
+                      clearLocalSessionData();
                   }
               }
 
@@ -337,7 +351,7 @@
                 msgElement.style.color = "red";
               }
           }
-      } catch (error) { // Corrected: (error) instead of (error)_
+      } catch (error) {
           console.error("Inisialisasi Firebase gagal:", error);
           if(msgElement) {
              msgElement.textContent = "Gagal menginisialisasi koneksi. Silakan coba lagi nanti.";
@@ -354,12 +368,11 @@
               if (db && licenseKey && clientSessionId) {
                   try {
                       const docRef = doc(db, "licenses", licenseKey);
-                      const docSnap = await getDoc(docRef); // Get current state
-                      // Only clear the session if it's ours
+                      const docSnap = await getDoc(docRef); 
                       if (docSnap.exists() && docSnap.data().activeSessionId === clientSessionId) {
                           await updateDoc(docRef, {
                               activeSessionId: null,
-                              lastSeenAt: serverTimestamp() // Mark when it was last used/closed
+                              lastSeenAt: serverTimestamp() 
                           });
                           console.log("License released on logout.");
                       } else {
@@ -367,39 +380,29 @@
                       }
                   } catch (error) {
                       console.error("Error releasing license on logout:", error);
-                      // Still proceed with local logout
                   }
               }
               showLoginForm("Anda telah berhasil logout.");
           });
       }
 
-      // beforeunload Handler (Best effort to release license)
       window.addEventListener('beforeunload', (event) => {
           if (sessionStorage && sessionStorage.getItem('licenseValidated') === 'true') {
               const licenseKey = sessionStorage.getItem('licenseKey');
-              const clientSessionId = sessionStorage.getItem('clientSessionId');
+              const clientSessionId = sessionStorage.getItem('clientSessionId'); // Get our session ID
 
               if (db && licenseKey && clientSessionId) {
-                  // This is a fire-and-forget attempt. It's not guaranteed to complete.
-                  // The staleness check (lastSeenAt) is the more robust fallback.
-                  // We don't check if it's our session here because we want to clear it
-                  // if the browser is closing, regardless. Another session would have its own ID.
-                  // However, to be safer, we should only clear if it *is* our session ID.
-                  // But for simplicity of 'beforeunload' where we can't reliably get a response:
-                  
-                  // A more robust `beforeunload` would use navigator.sendBeacon to a serverless function
-                  // which then updates Firestore. Direct async Firestore updates here are unreliable.
-                  // We will rely on the staleness check.
-                  // However, we can *try* to update if it's our current session.
-
-                  // Get current doc state (synchronously this is not possible with Firestore SDK)
-                  // So, we just attempt an update. The heartbeat and login staleness are main guards.
                   const docRef = doc(db, "licenses", licenseKey);
-                  // Attempt to update. No `await` as `beforeunload` won't wait.
+                  // Attempt to update lastSeenAt if the session is still ours.
+                  // This is a best-effort, fire-and-forget.
+                  // We can't reliably check activeSessionId first without making it async which beforeunload doesn't like.
+                  // The heartbeat and login staleness checks are the main guards.
+                  // A more complex solution would use navigator.sendBeacon to a cloud function.
+                  // For now, we'll just try to update lastSeenAt if OUR session was active.
+                  // The most important thing is that we DON'T set activeSessionId to null here,
+                  // as a simple page refresh could incorrectly free the license.
                   updateDoc(docRef, {
-                      // activeSessionId: null, // Better to let staleness handle this to avoid race conditions if user is just refreshing
-                      lastSeenAt: serverTimestamp() // At least update lastSeen, helps staleness check
+                      lastSeenAt: serverTimestamp() 
                   }).then(() => {
                       // console.log("beforeunload: Attempted to update lastSeenAt.");
                   }).catch(err => {
