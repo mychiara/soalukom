@@ -102,32 +102,44 @@
     <!-- Skrip Lisensi Firebase -->
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-      import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+      import { getFirestore, doc, getDoc, updateDoc, serverTimestamp, deleteField } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"; // Ditambahkan updateDoc, serverTimestamp, deleteField
 
       const firebaseConfig = {
-  apiKey: "AIzaSyDnJvECVfNJIXPh9rZTsA3QcHQaTiE4Awc",
-  authDomain: "apodaca-bessie4762.firebaseapp.com",
-  databaseURL: "https://apodaca-bessie4762.firebaseio.com",
-  projectId: "apodaca-bessie4762",
-  storageBucket: "apodaca-bessie4762.firebasestorage.app",
-  messagingSenderId: "809433417541",
-  appId: "1:809433417541:web:48632b970a90840ab1602c"
-};
+          apiKey: "AIzaSyDnJvECVfNJIXPh9rZTsA3QcHQaTiE4Awc", // Ganti dengan API Key Anda
+          authDomain: "apodaca-bessie4762.firebaseapp.com",
+          databaseURL: "https://apodaca-bessie4762.firebaseio.com",
+          projectId: "apodaca-bessie4762",
+          storageBucket: "apodaca-bessie4762.firebasestorage.app",
+          messagingSenderId: "809433417541",
+          appId: "1:809433417541:web:48632b970a90840ab1602c"
+      };
 
       let db;
 
-      // DOM Elements for license and app control
+      // DOM Elements
       const licenseFormContainer = document.getElementById("license-form-container");
       const mainAppContent = document.getElementById("main-app-content");
       const submitButton = document.getElementById("submit-license-button");
       const licenseInput = document.getElementById("license");
       const nameInputElement = document.getElementById("name-input");
       const msgElement = document.getElementById("license-msg");
-      const welcomeUserMessageEl = document.getElementById("welcome-user-message"); // Renamed to avoid conflict
-      const menuContainerEl = document.getElementById("menu-container"); // Renamed to avoid conflict
-      const userNameDisplayQuizEl = document.getElementById("user-name-display"); // Renamed to avoid conflict
+      const welcomeUserMessageEl = document.getElementById("welcome-user-message");
+      const menuContainerEl = document.getElementById("menu-container");
+      const userNameDisplayQuizEl = document.getElementById("user-name-display");
+      const logoutButton = document.getElementById("logout-button"); // Tambahkan tombol logout
 
-      function proceedToApp(currentUserName) { // Parameter name changed
+      // Fungsi untuk mendapatkan atau membuat Device ID unik
+      function getOrCreateDeviceId() {
+          let deviceId = localStorage.getItem('appDeviceId');
+          if (!deviceId) {
+              deviceId = 'device_' + Math.random().toString(36).substring(2, 15) + Date.now();
+              localStorage.setItem('appDeviceId', deviceId);
+          }
+          return deviceId;
+      }
+      const currentDeviceId = getOrCreateDeviceId();
+
+      function proceedToApp(currentUserName, currentLicenseKey) { // Tambahkan currentLicenseKey
           if (welcomeUserMessageEl) {
               welcomeUserMessageEl.textContent = `Selamat datang, ${currentUserName}!`;
           }
@@ -137,20 +149,60 @@
           if (sessionStorage) {
             sessionStorage.setItem('licenseValidated', 'true');
             sessionStorage.setItem('userName', currentUserName);
+            sessionStorage.setItem('licenseKey', currentLicenseKey); // Simpan license key untuk logout
+            sessionStorage.setItem('deviceId', currentDeviceId); // Simpan deviceId untuk logout
           }
-
 
           if (licenseFormContainer) licenseFormContainer.style.display = "none";
           if (mainAppContent) mainAppContent.style.display = "block";
           if (menuContainerEl) menuContainerEl.classList.remove("hidden");
 
-          // Load saved articles after validation (jika fungsi ini ada)
           if (typeof loadGeneratedArticles === 'function') {
              loadGeneratedArticles();
-          } else {
-             // console.warn('loadGeneratedArticles function not found yet.');
           }
       }
+
+      async function handleLogout() {
+          const validatedLicenseKey = sessionStorage.getItem('licenseKey');
+          const validatedDeviceId = sessionStorage.getItem('deviceId');
+
+          if (validatedLicenseKey && validatedDeviceId && db) {
+              try {
+                  const docRef = doc(db, "licenses", validatedLicenseKey);
+                  const docSnap = await getDoc(docRef);
+                  if (docSnap.exists() && docSnap.data().activeDeviceId === validatedDeviceId) {
+                      await updateDoc(docRef, {
+                          activeDeviceId: deleteField(), // Hapus field activeDeviceId
+                          lastSeen: deleteField() // Hapus juga lastSeen
+                      });
+                      console.log("Device ID cleared from license on logout.");
+                  }
+              } catch (error) {
+                  console.error("Error clearing device ID on logout:", error);
+                  // Tidak menghentikan proses logout di client
+              }
+          }
+
+          if(sessionStorage) {
+            sessionStorage.removeItem('licenseValidated');
+            sessionStorage.removeItem('userName');
+            sessionStorage.removeItem('licenseKey');
+            sessionStorage.removeItem('deviceId');
+          }
+          // Sembunyikan main app, tampilkan form lisensi
+          if (mainAppContent) mainAppContent.style.display = "none";
+          if (licenseFormContainer) licenseFormContainer.style.display = "block";
+          if (menuContainerEl) menuContainerEl.classList.add("hidden"); // Sembunyikan menu
+          if (licenseInput) licenseInput.value = ""; // Kosongkan field lisensi
+          if (nameInputElement) nameInputElement.value = ""; // Kosongkan field nama
+          if (msgElement) msgElement.textContent = "Anda telah logout.";
+          msgElement.style.color = "blue";
+      }
+
+      if (logoutButton) {
+          logoutButton.addEventListener('click', handleLogout);
+      }
+
 
       try {
           const app = initializeApp(firebaseConfig);
@@ -160,7 +212,7 @@
               submitButton.addEventListener("click", async (e) => {
                   e.preventDefault();
                   const licenseKey = licenseInput.value.trim();
-                  const inputUserName = nameInputElement.value.trim() || "Pengguna"; // Renamed variable
+                  const inputUserName = nameInputElement.value.trim() || "Pengguna";
 
                   if (!licenseKey) {
                       msgElement.textContent = "Silakan masukkan kode lisensi.";
@@ -173,7 +225,6 @@
                         return;
                     }
 
-
                   msgElement.textContent = "Memeriksa lisensi...";
                   msgElement.style.color = "orange";
                   submitButton.disabled = true;
@@ -183,9 +234,22 @@
                       const docSnap = await getDoc(docRef);
 
                       if (docSnap.exists() && docSnap.data().active === true) {
-                          msgElement.style.color = "green";
-                          msgElement.textContent = "Lisensi valid. Akses diberikan!";
-                          proceedToApp(inputUserName); // Pass validated user name
+                          const licenseData = docSnap.data();
+                          // Cek apakah lisensi sedang digunakan oleh device lain
+                          if (licenseData.activeDeviceId && licenseData.activeDeviceId !== currentDeviceId) {
+                              msgElement.style.color = "red";
+                              msgElement.textContent = "Lisensi ini sedang digunakan di perangkat lain. Silakan logout dari perangkat tersebut atau hubungi administrator.";
+                              if(sessionStorage) sessionStorage.removeItem('licenseValidated');
+                          } else {
+                              // Lisensi valid dan tidak sedang digunakan ATAU digunakan oleh device ini sebelumnya
+                              await updateDoc(docRef, {
+                                  activeDeviceId: currentDeviceId,
+                                  lastSeen: serverTimestamp() // Update kapan terakhir terlihat aktif
+                              });
+                              msgElement.style.color = "green";
+                              msgElement.textContent = "Lisensi valid. Akses diberikan!";
+                              proceedToApp(inputUserName, licenseKey); // Kirim juga licenseKey
+                          }
                       } else {
                           msgElement.style.color = "red";
                           msgElement.textContent = "Mohon maaf, Lisensi tidak ditemukan atau tidak aktif.";
@@ -204,7 +268,17 @@
               // Check session storage on page load
               if (sessionStorage && sessionStorage.getItem('licenseValidated') === 'true') {
                    const savedUserName = sessionStorage.getItem('userName') || "Pengguna";
-                   proceedToApp(savedUserName);
+                   const savedLicenseKey = sessionStorage.getItem('licenseKey');
+                   // Optional: Lakukan verifikasi ulang ke Firebase bahwa deviceId masih sama
+                   // Untuk saat ini, kita langsung proceedToApp jika session valid
+                   if (savedLicenseKey) {
+                       proceedToApp(savedUserName, savedLicenseKey);
+                   } else {
+                       // Jika licenseKey tidak ada di session, paksa login ulang
+                       sessionStorage.removeItem('licenseValidated');
+                       sessionStorage.removeItem('userName');
+                       // Biarkan form login ditampilkan
+                   }
               }
 
           } else {
@@ -214,7 +288,7 @@
                 msgElement.style.color = "red";
               }
           }
-      } catch (error) { // <<< PERBAIKAN DI SINI: (error)_ menjadi (error)
+      } catch (error) {
           console.error("Inisialisasi Firebase gagal:", error);
           if(msgElement) {
              msgElement.textContent = "Gagal menginisialisasi koneksi. Silakan coba lagi nanti.";
@@ -229,7 +303,7 @@
             <h3>Silakan pilih mode:</h3>
             <button id="latihan-soal-menu-button">Latihan Soal</button>
             <button id="tryout-button">Try Out</button>
-            <button id="logout-button" class="btn-home">Logout</button> <!-- INLINE STYLE REMOVED -->
+            <button id="logout-button" class="btn-home">Logout</button> <!-- Tombol Logout -->
         </div>
 
         <div id="kategori-latihan-container" class="container-view hidden">
