@@ -117,7 +117,7 @@
             "Potensial peningkatan vektor penyakit (misalnya, tikus, lalat)",
             "Ketidakefektifan manajemen kesehatan lingkungan"
         ],
-        "answer": 3, // Bisa juga 0 atau 2, tergantung fokus. Tapi manajemen paling mencakup.
+        "answer": 3,
         "explanation": "Pembuangan sampah sembarangan ke sungai menunjukkan adanya masalah dalam manajemen kesehatan lingkungan yang berdampak pada berbagai risiko kesehatan. Ini adalah masalah yang lebih luas dan mendasar."
     },
     {
@@ -326,7 +326,7 @@
             "Lingkar Lengan Atas (LILA) saja",
             "Tinggi Badan menurut Umur (TB/U) dan Berat Badan menurut Umur (BB/U)"
         ],
-        "answer": 3, // Lebih tepat BB/U, TB/U, dan BB/TB. Namun BB/U dan TB/U adalah yang paling dasar di KMS.
+        "answer": 3,
         "explanation": "Indikator BB/U, TB/U, dan BB/TB (atau Panjang Badan untuk <2 tahun) adalah standar WHO yang digunakan dalam Kartu Menuju Sehat (KMS) untuk memantau pertumbuhan dan status gizi balita."
     },
     {
@@ -439,7 +439,6 @@
         "answer": 1,
         "explanation": "Suplementasi Zinc terbukti efektif dalam mengurangi lama dan beratnya diare, serta membantu memulihkan kesehatan usus dan meningkatkan daya tahan tubuh terhadap infeksi berikutnya."
     },
-    // Lanjut ke soal berikutnya (41-180)
     {
         "question": "Perawat komunitas sedang melakukan screening Katarak pada lansia di Posyandu. Tanda awal yang sering dikeluhkan penderita katarak adalah...",
         "options": [
@@ -525,7 +524,7 @@
             "Pencegahan sekunder (early diagnosis and prompt treatment)",
             "Pencegahan tersier (rehabilitation)"
         ],
-        "answer": 1, // Bisa juga dianggap pencegahan sekunder jika sudah ada tanda infeksi ringan. Tapi umumnya pemberian obat cacing massal itu specific protection (primer).
+        "answer": 1, 
         "explanation": "Pemberian obat cacing massal pada anak sekolah bertujuan untuk mencegah terjadinya infeksi cacingan yang berat dan komplikasinya, ini termasuk dalam perlindungan spesifik (pencegahan primer)."
     },
     {
@@ -660,7 +659,6 @@
         "answer": 0,
         "explanation": "Parasetamol menghambat enzim siklooksigenase (COX) di otak, sehingga mengurangi produksi prostaglandin yang berperan dalam timbulnya nyeri dan demam."
     },
-    // Lanjut ke soal berikutnya (61-180)
     {
         "question": "Seorang pasien mengonsumsi obat antihipertensi golongan ACE inhibitor (misal: Captopril) dan mengeluh batuk kering yang mengganggu. Perawat mengetahui ini adalah efek samping yang umum dan menyarankan pasien untuk...",
         "options": [
@@ -881,7 +879,6 @@
         "answer": 2,
         "explanation": "Bayi umumnya sudah bisa duduk tanpa bantuan pada usia 6-9 bulan. Jika pada usia 10 bulan belum bisa duduk sendiri, ini mengindikasikan adanya kemungkinan keterlambatan perkembangan motorik kasar yang perlu diinvestigasi lebih lanjut."
     },
-    // Lanjut ke soal berikutnya (81-180)
     {
         "question": "Di suatu daerah endemis malaria, perawat komunitas melakukan penyuluhan tentang pencegahan. Salah satu cara pencegahan yang efektif adalah...",
         "options": [
@@ -1102,7 +1099,6 @@
         "answer": 1,
         "explanation": "Stadium prodromal campak ditandai dengan demam, malaise, dan 'tiga C': Cough (batuk), Coryza (pilek), Conjunctivitis (mata merah). Koplik's spot (bintik putih kebiruan di mukosa pipi) adalah tanda patognomonik."
     },
-    // Lanjut ke soal berikutnya (101-180)
     {
         "question": "Perawat komunitas menjelaskan cara pembuatan larutan gula garam (LGG) sebagai pertolongan pertama diare di rumah jika oralit tidak tersedia. Komposisi dasar LGG adalah...",
         "options": [
