@@ -439,7 +439,6 @@
         "answer": 1,
         "explanation": "Menyayat luka gigitan, menghisap bisa, atau memasang tourniquet ketat tidak direkomendasikan karena dapat memperburuk kerusakan jaringan lokal dan tidak efektif."
     },
-    // Soal ke-41
     {
         "question": "Seorang pasien datang dengan keluhan nyeri perut hebat, mual, muntah, dan tidak bisa BAB atau flatus selama 2 hari. Pemeriksaan fisik menunjukkan distensi abdomen dan bising usus meningkat (borborigmi). Kemungkinan diagnosisnya adalah...",
         "options": [
@@ -550,7 +549,6 @@
         "answer": 1,
         "explanation": "Pasien PPOK kronis dapat mengandalkan hipoksia sebagai stimulus utama untuk bernapas. Pemberian oksigen konsentrasi tinggi dapat menekan hypoxic drive ini, menyebabkan hipoventilasi dan retensi CO2."
     },
-    // Soal ke-51
     {
         "question": "Dalam penatalaksanaan awal syok, 'Circulation' pada survei primer ABCDE meliputi tindakan...",
         "options": [
@@ -661,7 +659,6 @@
         "answer": 2,
         "explanation": "Mata merah, gatal, dan sekret mukopurulen (kental kekuningan) adalah gejala khas konjungtivitis bakterial."
     },
-    // Soal ke-61
     {
         "question": "Manakah yang BUKAN merupakan tanda-tanda syok neurogenik?",
         "options": [
@@ -772,7 +769,6 @@
         "answer": 1,
         "explanation": "Luka bakar sirkumferensial atau trauma berat pada ekstremitas dapat menyebabkan pembengkakan jaringan di dalam kompartemen otot yang kaku, menekan pembuluh darah dan saraf, yang disebut sindrom kompartemen. Ini adalah keadaan darurat bedah."
     },
-    // Soal ke-71
     {
         "question": "Seorang pasien datang dengan keluhan demam, menggigil, nyeri pinggang kanan, dan disuria. Pemeriksaan urin menunjukkan leukosituria dan bakteriuria. Diagnosis yang paling mungkin adalah...",
         "options": [
@@ -883,7 +879,6 @@
         "answer": 1,
         "explanation": "Pembidaian bertujuan untuk imobilisasi area fraktur, yang akan mengurangi nyeri, mencegah pergerakan fragmen tulang yang dapat merusak pembuluh darah, saraf, atau jaringan lunak di sekitarnya."
     },
-    // Soal ke-81
     {
         "question": "Pasien dengan luka bakar luas memerlukan resusitasi cairan menggunakan formula Parkland. Berapa banyak cairan yang diberikan dalam 8 jam pertama?",
         "options": [
@@ -994,7 +989,6 @@
         "answer": 1,
         "explanation": "Digoxin memiliki efek inotropik positif (meningkatkan kekuatan kontraksi jantung) dan kronotropik negatif (memperlambat denyut jantung), yang bermanfaat pada gagal jantung dan beberapa jenis aritmia."
     },
-    // Soal ke-91
     {
         "question": "Pemeriksaan laboratorium yang paling spesifik untuk mendiagnosis infark miokard akut adalah peningkatan kadar...",
         "options": [
@@ -1105,7 +1099,6 @@
         "answer": 2,
         "explanation": "Alveolus adalah kantung-kantung udara kecil di ujung saluran pernapasan di paru-paru, tempat terjadinya difusi oksigen dari udara ke darah dan karbon dioksida dari darah ke udara."
     },
-    // Soal ke-101
     {
         "question": "Seorang pasien dengan gagal ginjal kronis mengalami hiperkalemia (K+ > 5.5 mEq/L). Intervensi segera untuk melindungi jantung dari efek hiperkalemia adalah pemberian...",
         "options": [
@@ -1216,7 +1209,6 @@
         "answer": 2,
         "explanation": "Active listening melibatkan perilaku nonverbal seperti kontak mata yang baik, postur tubuh terbuka dan condong ke arah pembicara, serta anggukan kepala sebagai tanda memahami."
     },
-    // Soal ke-111
     {
         "question": "Seorang pasien mengalami hipovolemia. Perawat akan memasang infus. Ukuran jarum infus (abocath/IV catheter) yang paling sesuai untuk resusitasi cairan cepat pada orang dewasa adalah...",
         "options": [
@@ -1327,7 +1319,6 @@
         "answer": 0,
         "explanation": "Syok anafilaksis adalah reaksi alergi sistemik yang parah dan cepat, sering dipicu oleh alergen seperti makanan, obat-obatan, atau bisa serangga."
     },
-    // Soal ke-121
     {
         "question": "Seorang pasien mengeluh nyeri perut kanan atas yang menjalar ke bahu kanan, terutama setelah makan makanan berlemak. Kemungkinan pasien mengalami...",
         "options": [
@@ -1438,7 +1429,6 @@
         "answer": 1,
         "explanation": "Cuci tangan adalah tindakan tunggal paling efektif untuk mencegah penyebaran infeksi di fasilitas kesehatan. Ini adalah komponen kunci dari kewaspadaan standar (standard precautions)."
     },
-    // Soal ke-131
     {
         "question": "Seorang pasien dengan riwayat penyakit ginjal datang dengan keluhan mual, muntah, kelemahan, dan pada EKG tampak gelombang T tinggi runcing (peaked T waves). Ini mengindikasikan...",
         "options": [
@@ -1549,7 +1539,6 @@
         "answer": 2,
         "explanation": "Cervical collar digunakan untuk imobilisasi sementara tulang belakang servikal pada pasien dengan dugaan cedera leher, untuk mencegah gerakan yang dapat memperburuk potensi cedera medula spinalis."
     },
-    // Soal ke-141
     {
         "question": "Seorang pasien anak dengan diare dan muntah menunjukkan tanda-tanda dehidrasi seperti mata cekung, turgor kulit menurun, dan mukosa bibir kering. Prioritas intervensi keperawatan adalah...",
         "options": [
@@ -1660,8 +1649,7 @@
         "answer": 2,
         "explanation": "Beneficence adalah prinsip untuk selalu bertindak demi kebaikan pasien, sedangkan Non-maleficence adalah prinsip untuk tidak menyebabkan cedera atau kerugian pada pasien (do no harm)."
     },
-    // Soal ke-151
-    {
+   {
         "question": "Seorang pasien mengalami serangan gout akut pada sendi metatarsophalangeal I (jempol kaki). Nyeri hebat, bengkak, kemerahan. Obat antiinflamasi nonsteroid (OAINS) atau kolkisin sering diberikan. Tujuan utama pemberian obat ini adalah...",
         "options": [
             "Menurunkan kadar asam urat dalam darah secara cepat",
@@ -1771,7 +1759,6 @@
         "answer": 2,
         "explanation": "Menurut panduan AHA, kedalaman kompresi dada pada orang dewasa adalah minimal 2 inci (sekitar 5 cm) tetapi tidak lebih dari 2.4 inci (sekitar 6 cm)."
     },
-    // Soal ke-161
     {
         "question": "Seorang pasien datang ke UGD dengan keluhan sakit kepala berdenyut hebat di satu sisi, disertai mual, fotofobia, dan fonofobia. Riwayat serangan serupa sebelumnya. Diagnosis yang paling mungkin adalah...",
         "options": [
@@ -1882,7 +1869,6 @@
         "answer": 1,
         "explanation": "Heparin bekerja dengan cara mengikat dan mengaktivasi antitrombin III. Kompleks heparin-antitrombin III ini kemudian secara cepat menginaktivasi faktor-faktor pembekuan, terutama trombin (faktor IIa) dan faktor Xa."
     },
-    // Soal ke-171
     {
         "question": "Seorang pasien datang dengan keluhan nyeri hebat pada mata kanan, penglihatan kabur mendadak, mual, muntah, dan melihat halo di sekitar lampu. Pemeriksaan menunjukkan mata merah, kornea keruh, dan pupil mid-dilatasi. Diagnosis yang paling mungkin adalah...",
         "options": [
