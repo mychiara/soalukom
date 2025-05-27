@@ -279,7 +279,7 @@
                 msgElement.style.color = "red";
               }
           }
-      } catch (error)_ {
+      } catch (error) { // <<< PERBAIKAN DI SINI: (error)_ menjadi (error)
           console.error("Inisialisasi Firebase gagal:", error);
           if(msgElement) {
              msgElement.textContent = "Gagal menginisialisasi koneksi. Silakan coba lagi nanti.";
