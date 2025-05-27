@@ -102,54 +102,125 @@
     <!-- Skrip Lisensi Firebase -->
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-      import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+      import { getFirestore, doc, getDoc, updateDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
 
       const firebaseConfig = {
-  apiKey: "AIzaSyDnJvECVfNJIXPh9rZTsA3QcHQaTiE4Awc",
-  authDomain: "apodaca-bessie4762.firebaseapp.com",
-  databaseURL: "https://apodaca-bessie4762.firebaseio.com",
-  projectId: "apodaca-bessie4762",
-  storageBucket: "apodaca-bessie4762.firebasestorage.app",
-  messagingSenderId: "809433417541",
-  appId: "1:809433417541:web:48632b970a90840ab1602c"
-};
+        apiKey: "AIzaSyDnJvECVfNJIXPh9rZTsA3QcHQaTiE4Awc",
+        authDomain: "apodaca-bessie4762.firebaseapp.com",
+        databaseURL: "https://apodaca-bessie4762.firebaseio.com",
+        projectId: "apodaca-bessie4762",
+        storageBucket: "apodaca-bessie4762.firebasestorage.app",
+        messagingSenderId: "809433417541",
+        appId: "1:809433417541:web:48632b970a90840ab1602c"
+      };
 
       let db;
 
-      // DOM Elements for license and app control
+      // DOM Elements
       const licenseFormContainer = document.getElementById("license-form-container");
       const mainAppContent = document.getElementById("main-app-content");
       const submitButton = document.getElementById("submit-license-button");
       const licenseInput = document.getElementById("license");
       const nameInputElement = document.getElementById("name-input");
       const msgElement = document.getElementById("license-msg");
-      const welcomeUserMessageEl = document.getElementById("welcome-user-message"); // Renamed to avoid conflict
-      const menuContainerEl = document.getElementById("menu-container"); // Renamed to avoid conflict
-      const userNameDisplayQuizEl = document.getElementById("user-name-display"); // Renamed to avoid conflict
+      const welcomeUserMessageEl = document.getElementById("welcome-user-message");
+      const menuContainerEl = document.getElementById("menu-container");
+      const userNameDisplayQuizEl = document.getElementById("user-name-display");
+      const logoutButton = document.getElementById("logout-button");
 
-      function proceedToApp(currentUserName) { // Parameter name changed
-          if (welcomeUserMessageEl) {
-              welcomeUserMessageEl.textContent = `Selamat datang, ${currentUserName}!`;
-          }
-          if (userNameDisplayQuizEl) {
-              userNameDisplayQuizEl.textContent = currentUserName;
-          }
+
+      // Session Management Constants & Variables
+      const STALE_SESSION_THRESHOLD = 5 * 60 * 1000; // 5 minutes
+      const HEARTBEAT_INTERVAL = 2 * 60 * 1000; // 2 minutes
+      let heartbeatIntervalId = null;
+
+      function generateClientSessionId() {
+          return Math.random().toString(36).substring(2, 15) + Date.now().toString(36);
+      }
+
+      function clearLocalSessionData() {
           if (sessionStorage) {
-            sessionStorage.setItem('licenseValidated', 'true');
-            sessionStorage.setItem('userName', currentUserName);
+              sessionStorage.removeItem('licenseValidated');
+              sessionStorage.removeItem('userName');
+              sessionStorage.removeItem('licenseKey');
+              sessionStorage.removeItem('clientSessionId');
           }
+      }
+      
+      function showLoginForm(message = "") {
+          if (heartbeatIntervalId) {
+              clearInterval(heartbeatIntervalId);
+              heartbeatIntervalId = null;
+          }
+          clearLocalSessionData();
+          if (licenseFormContainer) licenseFormContainer.style.display = "block";
+          if (mainAppContent) mainAppContent.style.display = "none";
+          if (msgElement) {
+              msgElement.textContent = message;
+              msgElement.style.color = message.toLowerCase().includes("error") || message.toLowerCase().includes("gagal") || message.toLowerCase().includes("tidak") ? "red" : "blue";
+          }
+          if (submitButton) submitButton.disabled = false;
+          if (licenseInput) licenseInput.value = "";
+          // Do not clear name input, user might want to retry
+      }
 
+      function proceedToApp(userName, licenseKey, clientSessionId) {
+          if (welcomeUserMessageEl) welcomeUserMessageEl.textContent = `Selamat datang, ${userName}!`;
+          if (userNameDisplayQuizEl) userNameDisplayQuizEl.textContent = userName;
+          
+          if (sessionStorage) {
+              sessionStorage.setItem('licenseValidated', 'true');
+              sessionStorage.setItem('userName', userName);
+              sessionStorage.setItem('licenseKey', licenseKey);
+              sessionStorage.setItem('clientSessionId', clientSessionId);
+          }
 
           if (licenseFormContainer) licenseFormContainer.style.display = "none";
           if (mainAppContent) mainAppContent.style.display = "block";
           if (menuContainerEl) menuContainerEl.classList.remove("hidden");
+          if (msgElement) msgElement.textContent = ""; // Clear any previous messages
 
-          // Load saved articles after validation (jika fungsi ini ada)
+
+          startHeartbeat(licenseKey, clientSessionId);
+
           if (typeof loadGeneratedArticles === 'function') {
-             loadGeneratedArticles();
-          } else {
-             // console.warn('loadGeneratedArticles function not found yet.');
+              loadGeneratedArticles();
           }
+      }
+
+      async function heartbeat(licenseKey, clientSessionId) {
+          if (!db || !licenseKey || !clientSessionId) return;
+          try {
+              const docRef = doc(db, "licenses", licenseKey);
+              const docSnap = await getDoc(docRef);
+
+              if (docSnap.exists()) {
+                  const data = docSnap.data();
+                  if (data.active === true && data.activeSessionId === clientSessionId) {
+                      await updateDoc(docRef, { lastSeenAt: serverTimestamp() });
+                      // console.log("Heartbeat: Session renewed.", new Date().toLocaleTimeString());
+                  } else {
+                      // License no longer active for this session (e.g., taken by another, or deactivated)
+                      console.warn("Heartbeat: Session conflict or license deactivated. Logging out.");
+                      showLoginForm("Sesi Anda telah diakhiri karena lisensi digunakan di tempat lain atau tidak aktif lagi.");
+                  }
+              } else {
+                  console.warn("Heartbeat: License document not found. Logging out.");
+                  showLoginForm("Lisensi tidak ditemukan. Sesi diakhiri.");
+              }
+          } catch (error) {
+              console.error("Heartbeat error:", error);
+              // Don't logout on transient network errors for heartbeat,
+              // but if it's persistent, the user might get logged out on next interaction or reload.
+          }
+      }
+
+      function startHeartbeat(licenseKey, clientSessionId) {
+          if (heartbeatIntervalId) clearInterval(heartbeatIntervalId);
+          heartbeat(licenseKey, clientSessionId); // Initial heartbeat
+          heartbeatIntervalId = setInterval(() => {
+              heartbeat(licenseKey, clientSessionId);
+          }, HEARTBEAT_INTERVAL);
       }
 
       try {
@@ -160,19 +231,18 @@
               submitButton.addEventListener("click", async (e) => {
                   e.preventDefault();
                   const licenseKey = licenseInput.value.trim();
-                  const inputUserName = nameInputElement.value.trim() || "Pengguna"; // Renamed variable
+                  const inputUserName = nameInputElement.value.trim();
 
+                  if (!inputUserName) {
+                      msgElement.textContent = "Silakan masukkan nama Anda.";
+                      msgElement.style.color = "red";
+                      return;
+                  }
                   if (!licenseKey) {
                       msgElement.textContent = "Silakan masukkan kode lisensi.";
                       msgElement.style.color = "red";
                       return;
                   }
-                   if (!inputUserName || (inputUserName === "Pengguna" && nameInputElement.value.trim() === "")) {
-                        msgElement.textContent = "Silakan masukkan nama Anda.";
-                        msgElement.style.color = "red";
-                        return;
-                    }
-
 
                   msgElement.textContent = "Memeriksa lisensi...";
                   msgElement.style.color = "orange";
@@ -183,28 +253,81 @@
                       const docSnap = await getDoc(docRef);
 
                       if (docSnap.exists() && docSnap.data().active === true) {
-                          msgElement.style.color = "green";
-                          msgElement.textContent = "Lisensi valid. Akses diberikan!";
-                          proceedToApp(inputUserName); // Pass validated user name
+                          const licenseData = docSnap.data();
+                          const storedSessionId = licenseData.activeSessionId;
+                          const lastSeen = licenseData.lastSeenAt ? licenseData.lastSeenAt.toDate() : null;
+                          let isStale = false;
+                          if (lastSeen && storedSessionId) { // Only stale if there was a session
+                              isStale = (new Date().getTime() - lastSeen.getTime()) > STALE_SESSION_THRESHOLD;
+                          }
+
+                          const newClientSessionId = generateClientSessionId();
+
+                          if (!storedSessionId || isStale) {
+                              // License is free or previous session is stale
+                              await updateDoc(docRef, {
+                                  activeSessionId: newClientSessionId,
+                                  lastSeenAt: serverTimestamp(),
+                                  // Optional: you might want to log which user took it
+                                  // lastUserName: inputUserName 
+                              });
+                              msgElement.style.color = "green";
+                              msgElement.textContent = "Lisensi valid. Akses diberikan!";
+                              proceedToApp(inputUserName, licenseKey, newClientSessionId);
+                          } else {
+                              // License in use by another active session
+                              msgElement.style.color = "red";
+                              msgElement.textContent = "Lisensi ini sedang aktif digunakan di browser/perangkat lain.";
+                              clearLocalSessionData(); // Ensure no partial session data remains for this browser
+                          }
                       } else {
                           msgElement.style.color = "red";
                           msgElement.textContent = "Mohon maaf, Lisensi tidak ditemukan atau tidak aktif.";
-                          if(sessionStorage) sessionStorage.removeItem('licenseValidated');
+                          clearLocalSessionData();
                       }
                   } catch (error) {
                       console.error("Terjadi kesalahan saat memeriksa lisensi:", error);
                       msgElement.style.color = "red";
-                      msgElement.textContent = "Terjadi kesalahan saat memeriksa lisensi. Cek koneksi internet Anda.";
-                      if(sessionStorage) sessionStorage.removeItem('licenseValidated');
+                      msgElement.textContent = "Terjadi kesalahan. Cek koneksi internet Anda.";
+                      clearLocalSessionData();
                   } finally {
                       submitButton.disabled = false;
                   }
               });
 
-              // Check session storage on page load
+              // Check session storage on page load for session resume
               if (sessionStorage && sessionStorage.getItem('licenseValidated') === 'true') {
-                   const savedUserName = sessionStorage.getItem('userName') || "Pengguna";
-                   proceedToApp(savedUserName);
+                  const savedUserName = sessionStorage.getItem('userName');
+                  const savedLicenseKey = sessionStorage.getItem('licenseKey');
+                  const savedClientSessionId = sessionStorage.getItem('clientSessionId');
+
+                  if (savedUserName && savedLicenseKey && savedClientSessionId) {
+                      msgElement.textContent = "Memvalidasi sesi sebelumnya...";
+                      msgElement.style.color = "orange";
+                      (async () => {
+                          try {
+                              const docRef = doc(db, "licenses", savedLicenseKey);
+                              const docSnap = await getDoc(docRef);
+                              if (docSnap.exists() && 
+                                  docSnap.data().active === true && 
+                                  docSnap.data().activeSessionId === savedClientSessionId) {
+                                  
+                                  // Session is still valid on server, renew it
+                                  await updateDoc(docRef, { lastSeenAt: serverTimestamp() });
+                                  proceedToApp(savedUserName, savedLicenseKey, savedClientSessionId);
+                              } else {
+                                  showLoginForm("Sesi sebelumnya tidak valid atau telah diambil alih. Silakan masuk kembali.");
+                              }
+                          } catch (err) {
+                              console.error("Error re-validating session:", err);
+                              showLoginForm("Gagal memvalidasi sesi. Silakan masuk kembali.");
+                          }
+                      })();
+                  } else {
+                      // Incomplete session data
+                      clearLocalSessionData(); // Clean up
+                      // msgElement.textContent = "Data sesi tidak lengkap."; msgElement.style.color = "red"; // Optional message
+                  }
               }
 
           } else {
@@ -214,13 +337,78 @@
                 msgElement.style.color = "red";
               }
           }
-      } catch (error) { // <<< PERBAIKAN DI SINI: (error)_ menjadi (error)
+      } catch (error) { // Corrected: (error) instead of (error)_
           console.error("Inisialisasi Firebase gagal:", error);
           if(msgElement) {
              msgElement.textContent = "Gagal menginisialisasi koneksi. Silakan coba lagi nanti.";
              msgElement.style.color = "red";
           }
       }
+
+      // Logout Handler
+      if (logoutButton) {
+          logoutButton.addEventListener('click', async () => {
+              const licenseKey = sessionStorage.getItem('licenseKey');
+              const clientSessionId = sessionStorage.getItem('clientSessionId');
+
+              if (db && licenseKey && clientSessionId) {
+                  try {
+                      const docRef = doc(db, "licenses", licenseKey);
+                      const docSnap = await getDoc(docRef); // Get current state
+                      // Only clear the session if it's ours
+                      if (docSnap.exists() && docSnap.data().activeSessionId === clientSessionId) {
+                          await updateDoc(docRef, {
+                              activeSessionId: null,
+                              lastSeenAt: serverTimestamp() // Mark when it was last used/closed
+                          });
+                          console.log("License released on logout.");
+                      } else {
+                          console.log("Session already released or taken by another client.");
+                      }
+                  } catch (error) {
+                      console.error("Error releasing license on logout:", error);
+                      // Still proceed with local logout
+                  }
+              }
+              showLoginForm("Anda telah berhasil logout.");
+          });
+      }
+
+      // beforeunload Handler (Best effort to release license)
+      window.addEventListener('beforeunload', (event) => {
+          if (sessionStorage && sessionStorage.getItem('licenseValidated') === 'true') {
+              const licenseKey = sessionStorage.getItem('licenseKey');
+              const clientSessionId = sessionStorage.getItem('clientSessionId');
+
+              if (db && licenseKey && clientSessionId) {
+                  // This is a fire-and-forget attempt. It's not guaranteed to complete.
+                  // The staleness check (lastSeenAt) is the more robust fallback.
+                  // We don't check if it's our session here because we want to clear it
+                  // if the browser is closing, regardless. Another session would have its own ID.
+                  // However, to be safer, we should only clear if it *is* our session ID.
+                  // But for simplicity of 'beforeunload' where we can't reliably get a response:
+                  
+                  // A more robust `beforeunload` would use navigator.sendBeacon to a serverless function
+                  // which then updates Firestore. Direct async Firestore updates here are unreliable.
+                  // We will rely on the staleness check.
+                  // However, we can *try* to update if it's our current session.
+
+                  // Get current doc state (synchronously this is not possible with Firestore SDK)
+                  // So, we just attempt an update. The heartbeat and login staleness are main guards.
+                  const docRef = doc(db, "licenses", licenseKey);
+                  // Attempt to update. No `await` as `beforeunload` won't wait.
+                  updateDoc(docRef, {
+                      // activeSessionId: null, // Better to let staleness handle this to avoid race conditions if user is just refreshing
+                      lastSeenAt: serverTimestamp() // At least update lastSeen, helps staleness check
+                  }).then(() => {
+                      // console.log("beforeunload: Attempted to update lastSeenAt.");
+                  }).catch(err => {
+                      // console.warn("beforeunload: Error updating lastSeenAt (non-critical):", err);
+                  });
+              }
+          }
+      });
+
     </script>
     <!-- Kontainer untuk Aplikasi Utama (setelah lisensi valid) -->
     <div id="main-app-content"> <!-- ID diubah menjadi main-app-content -->
@@ -229,7 +417,7 @@
             <h3>Silakan pilih mode:</h3>
             <button id="latihan-soal-menu-button">Latihan Soal</button>
             <button id="tryout-button">Try Out</button>
-            <button id="logout-button" class="btn-home">Logout</button> <!-- INLINE STYLE REMOVED -->
+            <button id="logout-button" class="btn-home">Logout</button>
         </div>
 
         <div id="kategori-latihan-container" class="container-view hidden">
