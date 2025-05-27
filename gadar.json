@@ -1,0 +1,1996 @@
+[
+    {
+        "question": "Seorang pria 35 tahun dibawa ke UGD setelah kecelakaan lalu lintas. Pasien tidak sadar, GCS E1M1V1, terdengar suara ngorok (snoring). Prioritas tindakan perawat adalah...",
+        "options": [
+            "Memasang infus dua jalur",
+            "Melakukan head tilt-chin lift dan memasang oropharyngeal airway (OPA)",
+            "Memberikan oksigen dengan non-rebreathing mask",
+            "Memeriksa adanya fraktur servikal"
+        ],
+        "answer": 1,
+        "explanation": "Suara ngorok (snoring) menandakan adanya obstruksi jalan napas parsial oleh lidah. Head tilt-chin lift (jika tidak ada curiga cedera servikal) dan pemasangan OPA adalah tindakan prioritas untuk membebaskan jalan napas (Airway)."
+    },
+    {
+        "question": "Seorang wanita 50 tahun datang dengan keluhan nyeri dada seperti ditekan, menjalar ke lengan kiri sejak 1 jam yang lalu. TD 100/60 mmHg, Nadi 110x/menit, RR 24x/menit, SpO2 93%. Tindakan pertama yang harus dilakukan adalah...",
+        "options": [
+            "Pemberian aspirin kunyah",
+            "Pemasangan EKG 12 lead",
+            "Pemberian oksigen via nasal kanul",
+            "Pemasangan akses intravena"
+        ],
+        "answer": 2,
+        "explanation": "Meskipun semua tindakan penting, pemberian oksigen (jika SpO2 <94%) adalah prioritas awal dalam manajemen nyeri dada akut untuk meningkatkan oksigenasi miokard, diikuti EKG dan aspirin."
+    },
+    {
+        "question": "Pasien anak 5 tahun dibawa ibunya dengan keluhan sesak napas, batuk menggonggong, dan suara serak. Terdapat stridor inspirasi. Kemungkinan diagnosis yang paling tepat adalah...",
+        "options": [
+            "Asma bronkial",
+            "Pneumonia",
+            "Croup (Laringotrakeobronkitis)",
+            "Bronkiolitis"
+        ],
+        "answer": 2,
+        "explanation": "Kombinasi batuk menggonggong, suara serak, dan stridor inspirasi adalah gejala klasik dari Croup, yang disebabkan oleh inflamasi pada laring dan trakea."
+    },
+    {
+        "question": "Seorang pasien datang dengan luka bakar derajat II pada seluruh lengan kanan dan dada bagian depan. Menurut Rule of Nines, berapa persentase luas luka bakar pasien tersebut?",
+        "options": [
+            "18%",
+            "27%",
+            "36%",
+            "45%"
+        ],
+        "answer": 1,
+        "explanation": "Menurut Rule of Nines pada dewasa: Lengan kanan = 9%, Dada bagian depan = 18%. Total = 9% + 18% = 27%."
+    },
+    {
+        "question": "Pasien dengan riwayat diabetes mellitus ditemukan tidak sadar. Pemeriksaan GDS menunjukkan 30 mg/dL. Tindakan segera yang paling tepat adalah...",
+        "options": [
+            "Memberikan infus NaCl 0.9%",
+            "Memberikan injeksi insulin subkutan",
+            "Memberikan larutan Dextrose 40% intravena",
+            "Memberikan minuman manis jika pasien bisa menelan"
+        ],
+        "answer": 2,
+        "explanation": "Hipoglikemia berat (GDS < 50 mg/dL) dengan penurunan kesadaran memerlukan koreksi glukosa cepat secara intravena menggunakan Dextrose 40%."
+    },
+    {
+        "question": "Seorang pria 25 tahun datang ke UGD dengan keluhan sesak napas tiba-tiba setelah bermain sepak bola. Pemeriksaan fisik menunjukkan pengembangan dada kanan tertinggal, hipersonor pada perkusi dada kanan, dan suara napas menghilang di area tersebut. Kemungkinan kondisi pasien adalah...",
+        "options": [
+            "Efusi pleura masif",
+            "Pneumotoraks tension",
+            "Asma akut berat",
+            "Emboli paru"
+        ],
+        "answer": 1,
+        "explanation": "Gejala klinis seperti pengembangan dada asimetris, hipersonor, dan suara napas menghilang pada satu sisi dada adalah tanda khas pneumotoraks. Jika disertai hipotensi dan deviasi trakea, maka menjadi tension pneumotoraks."
+    },
+    {
+        "question": "Perawat UGD menerima pasien dengan perdarahan aktif dari luka tusuk di paha. Tindakan pertama untuk mengontrol perdarahan adalah...",
+        "options": [
+            "Memasang tourniquet proksimal dari luka",
+            "Melakukan bebat tekan langsung pada luka",
+            "Meninggikan ekstremitas yang terluka",
+            "Segera mempersiapkan transfusi darah"
+        ],
+        "answer": 1,
+        "explanation": "Prioritas utama dalam mengontrol perdarahan eksternal adalah dengan melakukan penekanan langsung (direct pressure) pada sumber perdarahan."
+    },
+    {
+        "question": "Seorang pasien mengalami reaksi anafilaksis setelah disengat lebah. Pasien tampak sesak, bibir bengkak, dan TD 80/50 mmHg. Obat pilihan pertama yang harus diberikan adalah...",
+        "options": [
+            "Diphenhydramine IV",
+            "Ranitidine IV",
+            "Epinephrine IM",
+            "Hydrocortisone IV"
+        ],
+        "answer": 2,
+        "explanation": "Epinephrine intramuskular adalah obat lini pertama untuk mengatasi reaksi anafilaksis karena efek bronkodilatasi, vasokonstriksi, dan meningkatkan kontraktilitas jantung."
+    },
+    {
+        "question": "Seorang bayi usia 6 bulan dibawa ke UGD dengan demam tinggi (39.5°C) dan mengalami kejang tonik-klonik selama 2 menit. Setelah kejang berhenti, bayi sadar dan menangis. Diagnosis yang paling mungkin adalah...",
+        "options": [
+            "Epilepsi",
+            "Meningitis",
+            "Kejang Demam Sederhana",
+            "Ensefalitis"
+        ],
+        "answer": 2,
+        "explanation": "Kejang yang terjadi pada bayi/anak dengan demam, bersifat general, berlangsung singkat (<15 menit), dan tidak berulang dalam 24 jam, serta diikuti pemulihan kesadaran yang cepat, adalah karakteristik Kejang Demam Sederhana."
+    },
+    {
+        "question": "Pada pasien dengan cedera kepala berat, manakah dari tanda-tanda berikut yang menunjukkan peningkatan tekanan intrakranial (Cushing's Triad)?",
+        "options": [
+            "Hipotensi, takikardia, takipnea",
+            "Hipertensi, bradikardia, pola napas ireguler",
+            "Hipotensi, bradikardia, apnea",
+            "Hipertensi, takikardia, hiperpnea"
+        ],
+        "answer": 1,
+        "explanation": "Cushing's Triad adalah respons fisiologis terhadap peningkatan TIK, terdiri dari hipertensi (pelebaran tekanan nadi), bradikardia, dan pola napas ireguler (seperti Cheyne-Stokes)."
+    },
+    {
+        "question": "Seorang pasien dengan fraktur femur terbuka mengalami syok hipovolemik. TD 80/50 mmHg, Nadi 130x/menit lemah, akral dingin. Selain menghentikan perdarahan, intervensi cairan awal yang tepat adalah...",
+        "options": [
+            "Pemberian cairan koloid seperti albumin",
+            "Pemberian cairan kristaloid (NaCl 0.9% atau Ringer Laktat) bolus cepat",
+            "Pemberian transfusi Packed Red Cells (PRC) segera",
+            "Pemberian cairan Dextrose 5%"
+        ],
+        "answer": 1,
+        "explanation": "Pada syok hipovolemik akibat perdarahan, resusitasi cairan awal menggunakan kristaloid (NaCl 0.9% atau RL) bolus cepat adalah tindakan pertama sambil menunggu ketersediaan darah."
+    },
+    {
+        "question": "Seorang perawat UGD melakukan triage pada korban bencana massal. Pasien mana yang akan diberi label MERAH (Prioritas 1)?",
+        "options": [
+            "Pasien dengan fraktur tertutup tibia, sadar, vital stabil",
+            "Pasien dengan luka lecet multipel, menangis",
+            "Pasien dengan obstruksi jalan napas yang dapat dikoreksi, syok",
+            "Pasien yang sudah tidak bernapas dan tidak ada nadi setelah upaya pembukaan jalan napas"
+        ],
+        "answer": 2,
+        "explanation": "Label MERAH diberikan kepada korban dengan kondisi mengancam jiwa yang memerlukan intervensi segera dan memiliki prognosis baik jika ditangani cepat, contohnya obstruksi jalan napas atau syok."
+    },
+    {
+        "question": "Tindakan pemasangan Nasogastric Tube (NGT) dikontraindikasikan secara relatif pada pasien dengan...",
+        "options": [
+            "Ileus paralitik",
+            "Perdarahan saluran cerna atas",
+            "Fraktur basis kranii",
+            "Intoksikasi makanan"
+        ],
+        "answer": 2,
+        "explanation": "Fraktur basis kranii merupakan kontraindikasi relatif karena risiko NGT masuk ke rongga kranium melalui fraktur. Pemasangan Orogastric Tube (OGT) lebih aman."
+    },
+    {
+        "question": "Pemeriksaan Glasgow Coma Scale (GCS) menilai tiga komponen. Komponen 'Motor Response' dengan skor tertinggi (6) menunjukkan...",
+        "options": [
+            "Melokalisir nyeri",
+            "Menarik diri dari nyeri (withdrawal)",
+            "Mengikuti perintah",
+            "Ekstensi abnormal (dekortikasi)"
+        ],
+        "answer": 2,
+        "explanation": "Skor motorik 6 pada GCS berarti pasien dapat mengikuti perintah verbal sederhana."
+    },
+    {
+        "question": "Seorang pasien keracunan organofosfat (pestisida) dibawa ke UGD dengan gejala miosis, bradikardia, salivasi berlebih, dan kelemahan otot. Antidotum spesifik yang diberikan adalah...",
+        "options": [
+            "Nalokson",
+            "Atropin Sulfat",
+            "Flumazenil",
+            "Natrium Bikarbonat"
+        ],
+        "answer": 1,
+        "explanation": "Atropin Sulfat adalah antidotum untuk keracunan organofosfat karena bekerja sebagai antagonis muskarinik, melawan efek kolinergik berlebih yang disebabkan oleh organofosfat."
+    },
+    {
+        "question": "Pasien dengan diagnosis Diabetes Ketoasidosis (DKA) biasanya menunjukkan pola pernapasan...",
+        "options": [
+            "Bradipnea",
+            "Pernapasan Cheyne-Stokes",
+            "Pernapasan Kussmaul",
+            "Apnea periodik"
+        ],
+        "answer": 2,
+        "explanation": "Pernapasan Kussmaul (cepat dan dalam) adalah upaya tubuh untuk mengkompensasi asidosis metabolik dengan mengeluarkan CO2 lebih banyak."
+    },
+    {
+        "question": "Saat melakukan resusitasi jantung paru (RJP) pada orang dewasa, rasio kompresi dada dan ventilasi yang benar untuk penolong tunggal maupun ganda adalah...",
+        "options": [
+            "15 kompresi : 2 ventilasi",
+            "30 kompresi : 2 ventilasi",
+            "5 kompresi : 1 ventilasi",
+            "100 kompresi : 2 ventilasi"
+        ],
+        "answer": 1,
+        "explanation": "Menurut panduan AHA terbaru, rasio kompresi dada dan ventilasi untuk RJP dewasa adalah 30:2, baik untuk penolong tunggal maupun ganda."
+    },
+    {
+        "question": "Seorang pasien datang dengan keluhan utama muntah darah segar (hematemesis) dan BAB hitam (melena). Prioritas pengkajian keperawatan adalah...",
+        "options": [
+            "Mengukur lingkar perut",
+            "Memeriksa riwayat alergi obat",
+            "Menilai tanda-tanda vital dan tingkat kesadaran",
+            "Menanyakan pola makan pasien"
+        ],
+        "answer": 2,
+        "explanation": "Pada pasien dengan perdarahan saluran cerna aktif, prioritas adalah menilai stabilitas hemodinamik (tanda vital) dan tingkat kesadaran untuk mendeteksi syok."
+    },
+    {
+        "question": "Teknik komunikasi terapeutik yang digunakan perawat saat berhadapan dengan keluarga pasien yang cemas di UGD adalah...",
+        "options": [
+            "Memberikan jaminan palsu bahwa pasien akan baik-baik saja",
+            "Menggunakan istilah medis yang kompleks agar terlihat profesional",
+            "Mendengarkan aktif, memberikan informasi yang jelas dan jujur",
+            "Menghindari kontak mata untuk memberi ruang pada keluarga"
+        ],
+        "answer": 2,
+        "explanation": "Komunikasi efektif melibatkan pendengaran aktif, empati, serta pemberian informasi yang jelas, jujur, dan mudah dipahami oleh keluarga dalam situasi krisis."
+    },
+    {
+        "question": "Seorang anak usia 2 tahun tersedak kelereng dan masih sadar, batuk kuat. Tindakan yang tepat dilakukan oleh perawat adalah...",
+        "options": [
+            "Melakukan Heimlich maneuver segera",
+            "Memberikan 5 back blows dan 5 chest thrusts",
+            "Menganjurkan anak untuk terus batuk",
+            "Mencoba mengambil kelereng dengan jari"
+        ],
+        "answer": 2,
+        "explanation": "Jika korban tersedak masih sadar dan bisa batuk kuat, anjurkan untuk terus batuk. Jangan melakukan intervensi manual yang bisa mendorong benda asing lebih dalam, kecuali batuk menjadi tidak efektif atau korban tidak sadar."
+    },
+    {
+        "question": "Pemberian cairan intravena yang bersifat hipotonik seperti NaCl 0.45% bertujuan untuk...",
+        "options": [
+            "Menggantikan volume cairan intravaskular dengan cepat",
+            "Menarik cairan dari sel ke intravaskular",
+            "Memindahkan cairan dari intravaskular ke sel (menghidrasi sel)",
+            "Meningkatkan tekanan osmotik plasma"
+        ],
+        "answer": 2,
+        "explanation": "Cairan hipotonik memiliki osmolalitas lebih rendah dari plasma, sehingga air akan berpindah dari kompartemen intravaskular ke intraseluler dan interstisial, menghidrasi sel."
+    },
+    {
+        "question": "Pasien dengan gagal ginjal kronis yang menjalani hemodialisis rutin datang ke UGD dengan keluhan sesak napas dan edema anasarka. Kemungkinan besar penyebabnya adalah...",
+        "options": [
+            "Hipokalemia",
+            "Kelebihan volume cairan (fluid overload)",
+            "Dehidrasi berat",
+            "Anemia berat"
+        ],
+        "answer": 1,
+        "explanation": "Pasien gagal ginjal yang tidak menjalani dialisis sesuai jadwal atau mengalami asupan cairan berlebih rentan mengalami fluid overload, yang bermanifestasi sebagai sesak napas dan edema."
+    },
+    {
+        "question": "Seorang wanita hamil 30 minggu datang dengan perdarahan pervaginam merah segar, tanpa nyeri. Kemungkinan diagnosisnya adalah...",
+        "options": [
+            "Solusio plasenta",
+            "Plasenta previa",
+            "Abortus imminens",
+            "Kehamilan ektopik terganggu"
+        ],
+        "answer": 1,
+        "explanation": "Perdarahan pervaginam merah segar tanpa nyeri pada trimester ketiga kehamilan adalah tanda klasik dari plasenta previa."
+    },
+    {
+        "question": "Manakah intervensi keperawatan yang paling penting untuk mencegah komplikasi pada pasien imobilisasi lama di UGD atau ruang rawat?",
+        "options": [
+            "Memberikan diet tinggi kalori",
+            "Melakukan ROM pasif dan mengubah posisi secara berkala",
+            "Membatasi asupan cairan",
+            "Memberikan obat penenang agar pasien istirahat"
+        ],
+        "answer": 1,
+        "explanation": "ROM pasif dan perubahan posisi membantu mencegah kontraktur, dekubitus, dan stasis vena yang dapat menyebabkan trombosis vena dalam (DVT)."
+    },
+    {
+        "question": "Pemeriksaan fisik pada pasien dengan dugaan apendisitis akut biasanya menunjukkan nyeri tekan pada...",
+        "options": [
+            "Kuadran kiri atas abdomen",
+            "Titik McBurney (kuadran kanan bawah abdomen)",
+            "Epigastrium",
+            "Area suprapubik"
+        ],
+        "answer": 1,
+        "explanation": "Titik McBurney, yang terletak sepertiga jarak dari spina iliaka anterior superior (SIAS) kanan ke umbilikus, adalah lokasi nyeri tekan khas pada apendisitis akut."
+    },
+    {
+        "question": "Seorang pasien dibawa ke UGD setelah mencoba bunuh diri dengan meminum cairan pembersih lantai. Pasien sadar, mengeluh nyeri hebat di mulut dan tenggorokan. Tindakan yang TIDAK boleh dilakukan adalah...",
+        "options": [
+            "Memberikan susu atau air untuk dilusi",
+            "Merangsang muntah",
+            "Memasang akses IV untuk hidrasi",
+            "Memberikan analgesik untuk nyeri"
+        ],
+        "answer": 1,
+        "explanation": "Pada keracunan zat korosif, merangsang muntah dikontraindikasikan karena dapat menyebabkan kerusakan ulang pada esofagus dan risiko aspirasi."
+    },
+    {
+        "question": "Pasien dengan trauma dada multipel, tampak gelisah, sianosis, distensi vena jugularis, dan hipotensi. Terdengar suara jantung menjauh. Kondisi ini paling mungkin disebabkan oleh...",
+        "options": [
+            "Flail chest",
+            "Pneumotoraks terbuka",
+            "Tamponade jantung",
+            "Kontusio paru"
+        ],
+        "answer": 2,
+        "explanation": "Trias Beck (hipotensi, distensi vena jugularis, suara jantung menjauh) adalah tanda klasik tamponade jantung, di mana terjadi akumulasi cairan di kantung perikardial yang menekan jantung."
+    },
+    {
+        "question": "Efek samping yang paling sering dikhawatirkan dari pemberian morfin sulfat sebagai analgesik adalah...",
+        "options": [
+            "Hipertensi",
+            "Takikardia",
+            "Depresi pernapasan",
+            "Diare"
+        ],
+        "answer": 2,
+        "explanation": "Opioid seperti morfin dapat menyebabkan depresi pusat pernapasan, yang bermanifestasi sebagai penurunan laju dan kedalaman napas. Ini adalah efek samping yang paling serius."
+    },
+    {
+        "question": "Dalam penanganan pasien stroke iskemik akut, periode 'golden hour' untuk pemberian terapi trombolitik (alteplase) umumnya adalah...",
+        "options": [
+            "Dalam 1 jam pertama sejak onset gejala",
+            "Dalam 3 - 4.5 jam pertama sejak onset gejala",
+            "Dalam 6 jam pertama sejak onset gejala",
+            "Dalam 24 jam pertama sejak onset gejala"
+        ],
+        "answer": 1,
+        "explanation": "Terapi trombolitik untuk stroke iskemik akut paling efektif jika diberikan dalam 3 hingga 4.5 jam sejak onset gejala untuk memaksimalkan pemulihan neurologis."
+    },
+    {
+        "question": "Seorang pasien mengalami luka tusuk paku berkarat di kaki. Profilaksis tetanus yang mungkin diberikan meliputi...",
+        "options": [
+            "Hanya Tetanus Toxoid (TT)",
+            "Hanya Tetanus Immunoglobulin (TIG)",
+            "Kombinasi TT dan TIG, tergantung status imunisasi sebelumnya",
+            "Antibiotik spektrum luas saja"
+        ],
+        "answer": 2,
+        "explanation": "Pada luka kotor dan berisiko tetanus, pemberian TT dan TIG dipertimbangkan berdasarkan riwayat imunisasi tetanus pasien. TIG memberikan imunitas pasif segera."
+    },
+    {
+        "question": "Posisi yang paling tepat untuk pasien dengan syok anafilaksis dan hipotensi adalah...",
+        "options": [
+            "Posisi Fowler tinggi",
+            "Posisi Trendelenburg (kaki lebih tinggi dari kepala)",
+            "Posisi semi-Fowler",
+            "Posisi lateral dekubitus"
+        ],
+        "answer": 1,
+        "explanation": "Posisi Trendelenburg atau supine dengan kaki ditinggikan dapat membantu meningkatkan aliran balik vena ke jantung, memperbaiki curah jantung pada pasien hipotensi akibat anafilaksis."
+    },
+    {
+        "question": "Pasien Tn. A, 45 tahun, datang ke UGD dengan keluhan sesak napas berat. Pemeriksaan fisik: TD 90/60 mmHg, N: 120x/m, RR: 32x/m, S: 37 C, SpO2 88%. Terdengar wheezing di kedua lapang paru. Riwayat asma (+). Tindakan farmakologis awal yang paling tepat adalah...",
+        "options": [
+            "Injeksi Dexamethasone IV",
+            "Pemberian nebulisasi Salbutamol",
+            "Pemberian Aminofilin drip",
+            "Pemberian Oksigen 100% dengan NRM"
+        ],
+        "answer": 1,
+        "explanation": "Pada serangan asma akut, bronkodilator kerja cepat seperti Salbutamol (beta-2 agonis) via nebulisasi adalah terapi lini pertama untuk mengatasi bronkokonstriksi. Pemberian oksigen juga penting."
+    },
+    {
+        "question": "Pemeriksaan laboratorium pada pasien DKA akan menunjukkan hasil...",
+        "options": [
+            "Hipoglikemia, alkalosis metabolik, ketonuria (-)",
+            "Hiperglikemia, asidosis metabolik, ketonuria (+)",
+            "Normoglikemia, asidosis respiratorik, ketonuria (+)",
+            "Hiperglikemia, alkalosis respiratorik, ketonuria (-)"
+        ],
+        "answer": 1,
+        "explanation": "DKA ditandai dengan triad: hiperglikemia (gula darah tinggi), asidosis metabolik (pH darah rendah, bikarbonat rendah), dan adanya keton dalam darah atau urin."
+    },
+    {
+        "question": "Seorang pasien datang dengan fraktur terbuka pada lengan bawah. Setelah mengontrol perdarahan, langkah selanjutnya yang penting adalah...",
+        "options": [
+            "Segera melakukan reposisi tulang",
+            "Menutup luka dengan kassa steril basah dan melakukan imobilisasi",
+            "Memberikan antibiotik oral",
+            "Melakukan debridement luka di UGD"
+        ],
+        "answer": 1,
+        "explanation": "Pada fraktur terbuka, setelah perdarahan terkontrol, luka harus ditutup dengan kassa steril (lembab dengan NaCl 0.9%) untuk mencegah kontaminasi lebih lanjut, dan ekstremitas diimobilisasi."
+    },
+    {
+        "question": "Jenis syok yang disebabkan oleh respons inflamasi sistemik berat terhadap infeksi adalah...",
+        "options": [
+            "Syok Kardiogenik",
+            "Syok Hipovolemik",
+            "Syok Septik",
+            "Syok Neurogenik"
+        ],
+        "answer": 2,
+        "explanation": "Syok septik adalah kondisi mengancam jiwa yang terjadi ketika respons tubuh terhadap infeksi menyebabkan kerusakan pada jaringannya sendiri, seringkali disertai hipotensi yang tidak responsif terhadap resusitasi cairan."
+    },
+    {
+        "question": "Pendidikan kesehatan yang penting diberikan kepada pasien yang baru didiagnosis hipertensi dan akan pulang dari UGD adalah...",
+        "options": [
+            "Anjuran untuk berhenti minum obat jika tekanan darah sudah normal",
+            "Informasi tentang pentingnya kontrol rutin dan modifikasi gaya hidup",
+            "Penjelasan bahwa hipertensi bisa sembuh total dengan obat",
+            "Menyarankan untuk menghindari semua aktivitas fisik"
+        ],
+        "answer": 1,
+        "explanation": "Edukasi pasien hipertensi meliputi kepatuhan minum obat, pentingnya kontrol tekanan darah secara teratur, serta modifikasi gaya hidup (diet rendah garam, olahraga, manajemen stres)."
+    },
+    {
+        "question": "Seorang pasien lansia dibawa ke UGD dengan penurunan kesadaran. Keluarga mengatakan pasien memiliki riwayat stroke dan hipertensi. Saat pemeriksaan, perawat mencium bau amonia dari napas pasien. Kemungkinan kondisi yang mendasari adalah...",
+        "options": [
+            "Stroke berulang",
+            "Krisis Hipertensi",
+            "Ensefalopati Hepatikum",
+            "Ensefalopati Uremikum"
+        ],
+        "answer": 3,
+        "explanation": "Bau amonia (fetor uremikum) pada napas adalah tanda khas ensefalopati uremikum, suatu komplikasi dari gagal ginjal kronis di mana toksin uremik menumpuk dan mempengaruhi fungsi otak."
+    },
+    {
+        "question": "Tindakan keperawatan untuk mengurangi edema serebral pada pasien cedera kepala berat adalah...",
+        "options": [
+            "Memberikan cairan hipotonik IV",
+            "Memposisikan kepala pasien datar (supine)",
+            "Menaikkan kepala tempat tidur 30 derajat dengan posisi kepala netral",
+            "Memberikan kompres hangat pada kepala"
+        ],
+        "answer": 2,
+        "explanation": "Menaikkan kepala tempat tidur 30 derajat dan menjaga kepala dalam posisi netral (tidak fleksi atau rotasi) membantu memfasilitasi drainase vena dari otak, sehingga mengurangi TIK."
+    },
+    {
+        "question": "Seorang pasien dengan luka bakar kimia pada mata. Intervensi pertama dan terpenting adalah...",
+        "options": [
+            "Menutup mata dengan kassa steril",
+            "Memberikan tetes mata antibiotik",
+            "Melakukan irigasi mata dengan air bersih atau NaCl 0.9% selama minimal 15-20 menit",
+            "Segera merujuk ke dokter spesialis mata"
+        ],
+        "answer": 2,
+        "explanation": "Pada luka bakar kimia mata, irigasi segera dan berkelanjutan dengan air bersih atau larutan salin adalah tindakan krusial untuk menghilangkan zat kimia dan meminimalkan kerusakan."
+    },
+    {
+        "question": "Pasien yang mengalami gigitan ular berbisa dibawa ke UGD. Tindakan yang TIDAK dianjurkan dalam penanganan awal adalah...",
+        "options": [
+            "Imobilisasi area yang digigit",
+            "Membuat sayatan pada luka gigitan dan menghisap bisa",
+            "Membersihkan luka gigitan dengan antiseptik ringan",
+            "Membawa pasien ke fasilitas kesehatan sesegera mungkin"
+        ],
+        "answer": 1,
+        "explanation": "Menyayat luka gigitan, menghisap bisa, atau memasang tourniquet ketat tidak direkomendasikan karena dapat memperburuk kerusakan jaringan lokal dan tidak efektif."
+    },
+    // Soal ke-41
+    {
+        "question": "Seorang pasien datang dengan keluhan nyeri perut hebat, mual, muntah, dan tidak bisa BAB atau flatus selama 2 hari. Pemeriksaan fisik menunjukkan distensi abdomen dan bising usus meningkat (borborigmi). Kemungkinan diagnosisnya adalah...",
+        "options": [
+            "Gastritis akut",
+            "Ileus obstruktif",
+            "Apendisitis akut",
+            "Pankreatitis akut"
+        ],
+        "answer": 1,
+        "explanation": "Nyeri perut hebat, distensi, tidak bisa BAB/flatus, dan bising usus yang awalnya meningkat (kemudian bisa menghilang) adalah tanda-tanda ileus obstruktif."
+    },
+    {
+        "question": "Pada pasien trauma abdomen dengan eviserasi usus, tindakan keperawatan yang tepat sebelum dibawa ke ruang operasi adalah...",
+        "options": [
+            "Mencoba memasukkan kembali usus yang keluar ke rongga abdomen",
+            "Menutup usus yang keluar dengan kassa steril yang dilembabkan NaCl 0.9%",
+            "Memberikan makanan atau minuman untuk menjaga nutrisi",
+            "Melakukan irigasi usus yang keluar dengan larutan antiseptik"
+        ],
+        "answer": 1,
+        "explanation": "Usus yang mengalami eviserasi tidak boleh dimasukkan kembali di UGD. Tutup dengan kassa steril lembab untuk mencegah kekeringan dan kontaminasi, lalu segera rujuk untuk operasi."
+    },
+    {
+        "question": "Pasien dengan hipoglikemia yang masih sadar dan dapat menelan, penanganan awal yang bisa diberikan adalah...",
+        "options": [
+            "Injeksi Glukagon IM",
+            "Pemberian Dextrose 40% IV",
+            "Memberikan 15-20 gram karbohidrat sederhana (jus buah, permen)",
+            "Infus NaCl 0.9%"
+        ],
+        "answer": 2,
+        "explanation": "Jika pasien hipoglikemia masih sadar dan mampu menelan, berikan karbohidrat sederhana oral (seperti 15-20 gram glukosa) untuk menaikkan gula darah dengan cepat."
+    },
+    {
+        "question": "Seorang pasien mengalami henti jantung di UGD. Perawat memulai RJP. Setelah 2 menit RJP, AED (Automated External Defibrillator) terpasang dan menganalisis irama. Jika AED menyarankan 'Shock Advised', tindakan selanjutnya adalah...",
+        "options": [
+            "Melanjutkan kompresi dada selama 2 menit lagi",
+            "Memastikan semua orang tidak menyentuh pasien dan menekan tombol 'shock'",
+            "Memberikan 2 kali ventilasi sebelum menekan tombol 'shock'",
+            "Memeriksa nadi karotis pasien"
+        ],
+        "answer": 1,
+        "explanation": "Jika AED menganjurkan kejut listrik, pastikan area aman ('clear'), lalu berikan kejut. Segera setelah kejut, lanjutkan kompresi dada tanpa menunda untuk memeriksa irama atau nadi."
+    },
+    {
+        "question": "Tanda khas dari perikarditis akut yang dapat didengar saat auskultasi jantung adalah...",
+        "options": [
+            "Murmur sistolik",
+            "Gallop S3",
+            "Pericardial friction rub",
+            "Opening snap"
+        ],
+        "answer": 2,
+        "explanation": "Pericardial friction rub adalah suara gesekan kasar yang terdengar sinkron dengan denyut jantung, disebabkan oleh inflamasi pada lapisan perikardium."
+    },
+    {
+        "question": "Pemberian obat Furosemide (Lasix) IV pada pasien dengan edema paru kardiogenik bertujuan untuk...",
+        "options": [
+            "Meningkatkan kontraktilitas miokard",
+            "Menurunkan denyut jantung",
+            "Mengurangi preload dengan meningkatkan diuresis",
+            "Vasodilatasi arteri koroner"
+        ],
+        "answer": 2,
+        "explanation": "Furosemide adalah diuretik kuat yang bekerja di ansa Henle untuk meningkatkan ekskresi air dan natrium, sehingga mengurangi volume cairan sirkulasi (preload) dan mengurangi kongesti paru."
+    },
+    {
+        "question": "Seorang pasien datang ke UGD setelah tersengat listrik tegangan tinggi. Selain luka bakar pada titik masuk dan keluar arus listrik, komplikasi serius yang harus diwaspadai adalah...",
+        "options": [
+            "Hipertensi maligna",
+            "Aritmia jantung yang fatal",
+            "Hipoglikemia berat",
+            "Reaksi anafilaksis"
+        ],
+        "answer": 1,
+        "explanation": "Arus listrik dapat mengganggu sistem konduksi jantung, menyebabkan aritmia berbahaya seperti fibrilasi ventrikel, yang bisa berakibat henti jantung."
+    },
+    {
+        "question": "Pengkajian nyeri menggunakan skala PQRST. Huruf 'S' dalam PQRST merujuk pada...",
+        "options": [
+            "Severity (keparahan nyeri)",
+            "Site (lokasi nyeri)",
+            "Symptom (gejala penyerta)",
+            "Setting (situasi saat nyeri timbul)"
+        ],
+        "answer": 0,
+        "explanation": "Dalam PQRST: P (Provokes/Palliates), Q (Quality), R (Region/Radiation), S (Severity/Scale), T (Timing/Treatment)."
+    },
+    {
+        "question": "Seorang pasien anak mengalami demam tinggi, sakit kepala, dan kaku kuduk. Perawat mencurigai meningitis. Tindakan diagnostik awal yang penting adalah...",
+        "options": [
+            "CT Scan kepala",
+            "Pungsi lumbal",
+            "Pemeriksaan darah lengkap",
+            "Foto rontgen dada"
+        ],
+        "answer": 1,
+        "explanation": "Pungsi lumbal untuk analisis cairan serebrospinal (CSF) adalah baku emas untuk diagnosis meningitis. CT scan kepala mungkin diperlukan sebelumnya jika ada tanda peningkatan TIK atau defisit neurologis fokal."
+    },
+    {
+        "question": "Seorang pasien dengan riwayat penyakit paru obstruktif kronik (PPOK) mengalami eksaserbasi akut. Pemberian oksigen pada pasien ini harus hati-hati karena risiko...",
+        "options": [
+            "Menyebabkan hipertensi pulmonal",
+            "Menekan dorongan napas hipoksik (hypoxic drive)",
+            "Memicu bronkospasme",
+            "Menyebabkan alkalosis respiratorik"
+        ],
+        "answer": 1,
+        "explanation": "Pasien PPOK kronis dapat mengandalkan hipoksia sebagai stimulus utama untuk bernapas. Pemberian oksigen konsentrasi tinggi dapat menekan hypoxic drive ini, menyebabkan hipoventilasi dan retensi CO2."
+    },
+    // Soal ke-51
+    {
+        "question": "Dalam penatalaksanaan awal syok, 'Circulation' pada survei primer ABCDE meliputi tindakan...",
+        "options": [
+            "Memastikan jalan napas paten dan memberikan oksigen",
+            "Memeriksa laju dan kualitas pernapasan",
+            "Mengontrol perdarahan eksternal, memasang akses IV, dan memberikan cairan",
+            "Menilai tingkat kesadaran menggunakan GCS"
+        ],
+        "answer": 2,
+        "explanation": "Sirkulasi (C) meliputi identifikasi dan penghentian perdarahan, penilaian denyut nadi dan tekanan darah, pemasangan akses intravena, dan resusitasi cairan jika diperlukan."
+    },
+    {
+        "question": "Seorang pasien mengeluh pusing berputar (vertigo) hebat, mual, dan muntah. Nistagmus horizontal terlihat pada pemeriksaan mata. Obat yang dapat diberikan untuk mengurangi gejala vertigo adalah...",
+        "options": [
+            "Paracetamol",
+            "Dimenhydrinate atau Betahistine",
+            "Omeprazole",
+            "Aspirin"
+        ],
+        "answer": 1,
+        "explanation": "Antihistamin seperti Dimenhydrinate atau agen vestibular seperti Betahistine sering digunakan untuk meredakan gejala vertigo, mual, dan muntah."
+    },
+    {
+        "question": "Pasien dengan luka robek yang dalam dan kotor memerlukan pembersihan luka (wound toilet). Tujuan utama dari tindakan ini adalah...",
+        "options": [
+            "Menghentikan perdarahan",
+            "Mengurangi nyeri",
+            "Menghilangkan jaringan nekrotik dan kontaminan untuk mencegah infeksi",
+            "Mempercepat penyembuhan dengan membentuk jaringan parut"
+        ],
+        "answer": 2,
+        "explanation": "Pembersihan luka bertujuan untuk menghilangkan debris, bakteri, dan jaringan mati yang dapat menghambat penyembuhan dan meningkatkan risiko infeksi."
+    },
+    {
+        "question": "Seorang ibu membawa anaknya usia 1 tahun ke UGD karena menelan baterai kancing. Tindakan yang paling tepat adalah...",
+        "options": [
+            "Observasi di rumah, jika ada gejala baru dibawa kembali",
+            "Merangsang muntah segera",
+            "Segera melakukan foto rontgen untuk melihat lokasi baterai dan konsultasi untuk endoskopi segera jika di esofagus",
+            "Memberikan banyak minum air putih"
+        ],
+        "answer": 2,
+        "explanation": "Baterai kancing yang tertelan, terutama jika tersangkut di esofagus, dapat menyebabkan kerusakan jaringan yang cepat akibat kebocoran bahan kimia atau arus listrik. Perlu visualisasi (rontgen) dan kemungkinan endoskopi segera."
+    },
+    {
+        "question": "Pasien Tn. X, 60 tahun, riwayat PJK, datang dengan nyeri dada substernal. EKG menunjukkan ST elevasi di lead II, III, aVF. Area miokard yang mengalami infark adalah...",
+        "options": [
+            "Anterior",
+            "Inferior",
+            "Lateral",
+            "Septal"
+        ],
+        "answer": 1,
+        "explanation": "ST elevasi pada lead II, III, dan aVF menunjukkan infark miokard akut pada dinding inferior jantung, yang biasanya disuplai oleh arteri koroner kanan."
+    },
+    {
+        "question": "Seorang pasien tiba di UGD dalam kondisi apnea dan tidak ada nadi. Tindakan pertama yang dilakukan perawat adalah...",
+        "options": [
+            "Memasang infus dan memberikan epinefrin",
+            "Segera memulai kompresi dada berkualitas tinggi",
+            "Melakukan intubasi endotrakeal",
+            "Memberikan shock menggunakan defibrillator"
+        ],
+        "answer": 1,
+        "explanation": "Pada henti jantung, tindakan pertama sesuai pedoman BLS/ACLS adalah segera memulai kompresi dada berkualitas tinggi sambil menunggu defibrilator dan bantuan lainnya."
+    },
+    {
+        "question": "Komunikasi SBAR (Situation, Background, Assessment, Recommendation) digunakan perawat untuk...",
+        "options": [
+            "Memberikan pendidikan kesehatan kepada pasien",
+            "Melakukan serah terima pasien antar shift atau kepada dokter",
+            "Melakukan pengkajian awal pasien baru",
+            "Mendokumentasikan tindakan keperawatan"
+        ],
+        "answer": 1,
+        "explanation": "SBAR adalah alat komunikasi terstruktur yang digunakan untuk menyampaikan informasi penting tentang kondisi pasien secara jelas dan ringkas, terutama saat serah terima atau konsultasi."
+    },
+    {
+        "question": "Seorang wanita 28 tahun datang dengan nyeri perut kanan bawah yang hebat, demam, dan mual. Tes kehamilan positif. USG menunjukkan tidak ada kantung kehamilan intrauterin, namun ada massa di adneksa kanan. Diagnosis yang paling mungkin adalah...",
+        "options": [
+            "Apendisitis akut",
+            "Kista ovarium terpuntir",
+            "Kehamilan Ektopik Terganggu (KET)",
+            "Penyakit radang panggul"
+        ],
+        "answer": 2,
+        "explanation": "Kombinasi nyeri perut, tes kehamilan positif, dan temuan USG yang menunjukkan massa adneksa tanpa kehamilan intrauterin sangat sugestif untuk Kehamilan Ektopik, yang jika ruptur menjadi KET."
+    },
+    {
+        "question": "Tujuan utama pemberian cairan NaCl 0.9% pada pasien dehidrasi adalah...",
+        "options": [
+            "Menyediakan kalori",
+            "Mengoreksi asidosis metabolik",
+            "Menggantikan kehilangan cairan dan elektrolit, serta mengisi volume intravaskular",
+            "Sebagai sumber glukosa"
+        ],
+        "answer": 2,
+        "explanation": "NaCl 0.9% adalah cairan isotonik yang efektif untuk menggantikan kehilangan cairan ekstraseluler dan memulihkan volume sirkulasi pada pasien dehidrasi."
+    },
+    {
+        "question": "Seorang pasien datang dengan keluhan mata merah, gatal, dan banyak sekret kental kekuningan. Penglihatan sedikit kabur. Kemungkinan besar pasien mengalami...",
+        "options": [
+            "Glaukoma akut",
+            "Uveitis anterior",
+            "Konjungtivitis bakterial",
+            "Perdarahan subkonjungtiva"
+        ],
+        "answer": 2,
+        "explanation": "Mata merah, gatal, dan sekret mukopurulen (kental kekuningan) adalah gejala khas konjungtivitis bakterial."
+    },
+    // Soal ke-61
+    {
+        "question": "Manakah yang BUKAN merupakan tanda-tanda syok neurogenik?",
+        "options": [
+            "Hipotensi",
+            "Bradikardia",
+            "Kulit hangat dan kering di bawah level cedera",
+            "Takikardia masif"
+        ],
+        "answer": 3,
+        "explanation": "Syok neurogenik, sering akibat cedera medula spinalis, ditandai dengan hipotensi dan bradikardia (atau denyut normal) karena hilangnya tonus simpatis. Kulit di bawah level cedera bisa hangat dan kering."
+    },
+    {
+        "question": "Seorang pasien dengan cedera dada mengeluh sesak napas. Pada palpasi, teraba krepitasi subkutan di area dada dan leher. Ini menandakan adanya...",
+        "options": [
+            "Fraktur klavikula",
+            "Emfisema subkutan akibat kebocoran udara",
+            "Hematoma dinding dada",
+            "Kontusio otot interkostal"
+        ],
+        "answer": 1,
+        "explanation": "Krepitasi subkutan (terasa seperti meremas salju atau plastik gelembung) disebabkan oleh adanya udara yang masuk ke jaringan subkutan, seringkali akibat pneumotoraks atau cedera trakeobronkial."
+    },
+    {
+        "question": "Obat antihipertensi golongan ACE inhibitor (misalnya Captopril) bekerja dengan cara...",
+        "options": [
+            "Menghambat reseptor beta adrenergik di jantung",
+            "Menghambat konversi angiotensin I menjadi angiotensin II",
+            "Memblok kanal kalsium di otot polos pembuluh darah",
+            "Meningkatkan ekskresi natrium dan air melalui ginjal"
+        ],
+        "answer": 1,
+        "explanation": "ACE inhibitor menghambat Angiotensin-Converting Enzyme, sehingga mengurangi produksi Angiotensin II (vasokonstriktor kuat) dan aldosteron, yang menyebabkan vasodilatasi dan penurunan retensi natrium/air."
+    },
+    {
+        "question": "Seorang perawat sedang merawat pasien yang agresif dan agitasi di UGD. Prioritas utama perawat adalah...",
+        "options": [
+            "Memberikan obat penenang segera",
+            "Memastikan keselamatan diri sendiri, pasien, dan orang lain",
+            "Mencari tahu penyebab agresivitas pasien",
+            "Mendokumentasikan perilaku pasien secara detail"
+        ],
+        "answer": 1,
+        "explanation": "Dalam situasi pasien agresif, keselamatan adalah prioritas. Ini termasuk menjaga jarak aman, memastikan lingkungan aman, dan meminta bantuan jika diperlukan sebelum melakukan intervensi lain."
+    },
+    {
+        "question": "Apa yang dimaksud dengan 'golden period' dalam penanganan stroke?",
+        "options": [
+            "Periode 24 jam pertama setelah onset gejala stroke",
+            "Waktu optimal untuk rehabilitasi pasca stroke",
+            "Jendela waktu kritis (biasanya 3-4.5 jam) dari onset gejala untuk intervensi reperfusi (trombolitik)",
+            "Masa pemulihan total dari defisit neurologis"
+        ],
+        "answer": 2,
+        "explanation": "Golden period atau golden hour pada stroke iskemik akut merujuk pada rentang waktu terbatas setelah onset gejala di mana terapi reperfusi (seperti trombolisis) dapat memberikan hasil terbaik."
+    },
+    {
+        "question": "Pasien dengan trauma kepala dan dicurigai fraktur basis kranii menunjukkan 'Battle's sign'. Tanda ini berupa...",
+        "options": [
+            "Memar di sekitar mata (racoon eyes)",
+            "Memar di belakang telinga (area mastoid)",
+            "Keluarnya cairan serebrospinal dari hidung (rhinorrhea)",
+            "Pupil anisokor"
+        ],
+        "answer": 1,
+        "explanation": "Battle's sign adalah ekimosis (memar) di atas prosesus mastoideus di belakang telinga, yang merupakan tanda klinis dari fraktur basis kranii."
+    },
+    {
+        "question": "Tindakan pemasangan kateter urin pada pasien pria dengan kecurigaan trauma uretra (misalnya ada darah di meatus uretra) harus...",
+        "options": [
+            "Dilakukan dengan hati-hati menggunakan kateter ukuran kecil",
+            "Ditunda sampai dilakukan pemeriksaan uretrografi",
+            "Dilakukan segera untuk memantau output urin",
+            "Menggunakan kateter dengan guide wire"
+        ],
+        "answer": 1,
+        "explanation": "Jika ada kecurigaan trauma uretra (misalnya darah di meatus uretra, hematoma perineal, prostat melayang), pemasangan kateter urin harus dihindari atau dilakukan dengan sangat hati-hati setelah evaluasi urologi, karena bisa memperburuk cedera."
+    },
+    {
+        "question": "Seorang pasien tiba-tiba kolaps dan tidak responsif. Setelah memastikan keamanan lingkungan, tindakan pertama yang harus dilakukan penolong adalah...",
+        "options": [
+            "Segera memulai kompresi dada",
+            "Memeriksa respons pasien (memanggil dan menepuk bahu)",
+            "Membuka jalan napas dengan head tilt-chin lift",
+            "Memberikan 2 kali napas bantuan"
+        ],
+        "answer": 1,
+        "explanation": "Langkah pertama dalam Basic Life Support (BLS) setelah memastikan keamanan adalah memeriksa respons pasien. Jika tidak responsif, segera minta bantuan dan periksa napas/nadi."
+    },
+    {
+        "question": "Pemberian nalokson (Narcan) diindikasikan pada pasien dengan overdosis...",
+        "options": [
+            "Benzodiazepin (misalnya Diazepam)",
+            "Opioid (misalnya Morfin, Heroin)",
+            "Alkohol",
+            "Amfetamin"
+        ],
+        "answer": 1,
+        "explanation": "Nalokson adalah antagonis opioid spesifik yang digunakan untuk mengatasi depresi pernapasan dan efek SSP lainnya akibat overdosis opioid."
+    },
+    {
+        "question": "Seorang pasien dengan luka bakar listrik pada tangan menunjukkan tidak ada denyut nadi distal dan tangan tampak pucat serta dingin. Kondisi ini dicurigai sebagai...",
+        "options": [
+            "Infeksi luka bakar",
+            "Sindrom kompartemen",
+            "Syok hipovolemik",
+            "Reaksi alergi terhadap luka bakar"
+        ],
+        "answer": 1,
+        "explanation": "Luka bakar sirkumferensial atau trauma berat pada ekstremitas dapat menyebabkan pembengkakan jaringan di dalam kompartemen otot yang kaku, menekan pembuluh darah dan saraf, yang disebut sindrom kompartemen. Ini adalah keadaan darurat bedah."
+    },
+    // Soal ke-71
+    {
+        "question": "Seorang pasien datang dengan keluhan demam, menggigil, nyeri pinggang kanan, dan disuria. Pemeriksaan urin menunjukkan leukosituria dan bakteriuria. Diagnosis yang paling mungkin adalah...",
+        "options": [
+            "Batu ginjal (Nefrolitiasis)",
+            "Pielonefritis akut",
+            "Glomerulonefritis akut",
+            "Sistitis akut"
+        ],
+        "answer": 1,
+        "explanation": "Kombinasi demam, nyeri pinggang (costovertebral angle tenderness), dan gejala infeksi saluran kemih (ISK) bawah seperti disuria, serta temuan leukosituria/bakteriuria, sangat mengarah pada pielonefritis akut (infeksi ginjal)."
+    },
+    {
+        "question": "Saat melakukan pemeriksaan fisik abdomen, urutan yang benar adalah...",
+        "options": [
+            "Palpasi, Perkusi, Inspeksi, Auskultasi",
+            "Inspeksi, Palpasi, Perkusi, Auskultasi",
+            "Inspeksi, Auskultasi, Perkusi, Palpasi",
+            "Auskultasi, Inspeksi, Palpasi, Perkusi"
+        ],
+        "answer": 2,
+        "explanation": "Urutan pemeriksaan fisik abdomen yang benar adalah Inspeksi, Auskultasi (dilakukan sebelum palpasi/perkusi agar tidak mengubah bising usus), Perkusi, dan Palpasi."
+    },
+    {
+        "question": "Pasien Tn. B, 25 tahun, dibawa ke UGD setelah KLL. GCS E2M4V3. Apa interpretasi skor GCS verbal (V3)?",
+        "options": [
+            "Orientasi baik",
+            "Bingung (confused)",
+            "Kata-kata tidak jelas (inappropriate words)",
+            "Suara tidak dapat dimengerti (incomprehensible sounds)"
+        ],
+        "answer": 2,
+        "explanation": "Skor GCS verbal (V): 5=Oriented, 4=Confused, 3=Inappropriate words, 2=Incomprehensible sounds, 1=None. Jadi V3 berarti inappropriate words."
+    },
+    {
+        "question": "Seorang anak 4 tahun dibawa ke UGD dengan riwayat demam dan muncul ruam makulopapular yang dimulai dari wajah kemudian menyebar ke seluruh tubuh. Ada riwayat belum pernah diimunisasi campak. Diagnosis yang paling mungkin adalah...",
+        "options": [
+            "Varisela (cacar air)",
+            "Morbus Hansen (Kusta)",
+            "Rubella (Campak Jerman)",
+            "Morbili (Campak)"
+        ],
+        "answer": 3,
+        "explanation": "Ruam makulopapular yang bersifat desenden (dari wajah ke tubuh), disertai demam, batuk, pilek, dan konjungtivitis, pada anak yang belum diimunisasi, adalah gambaran klasik Morbili (Campak)."
+    },
+    {
+        "question": "Intervensi keperawatan untuk pasien dengan epistaksis (mimisan) anterior yang sedang aktif adalah...",
+        "options": [
+            "Menyuruh pasien berbaring telentang dengan kepala menghadap ke atas",
+            "Memberikan kompres hangat pada hidung",
+            "Menekan cuping hidung selama 10-15 menit dengan posisi duduk dan kepala sedikit menunduk",
+            "Memasukkan kapas yang dibasahi alkohol ke lubang hidung"
+        ],
+        "answer": 2,
+        "explanation": "Penanganan awal epistaksis anterior adalah dengan meminta pasien duduk, sedikit menunduk (untuk mencegah darah tertelan), dan menekan kedua cuping hidung secara kontinu selama 10-15 menit."
+    },
+    {
+        "question": "Pada pasien dengan syok kardiogenik, pemberian cairan intravena harus dilakukan dengan hati-hati karena...",
+        "options": [
+            "Dapat menyebabkan dehidrasi lebih lanjut",
+            "Dapat memperburuk edema paru karena kegagalan pompa jantung",
+            "Dapat memicu reaksi alergi",
+            "Tidak efektif dalam meningkatkan tekanan darah"
+        ],
+        "answer": 1,
+        "explanation": "Syok kardiogenik disebabkan oleh kegagalan pompa jantung. Pemberian cairan berlebih dapat membebani jantung yang sudah lemah dan memperparah kongesti paru serta edema."
+    },
+    {
+        "question": "Seorang pasien mengeluh nyeri hebat skala 8/10. Perawat akan memberikan analgesik. Prinsip pemberian analgesik yang benar adalah...",
+        "options": [
+            "Memberikan dosis terendah terlebih dahulu, meskipun nyeri hebat",
+            "Menunggu sampai pasien tidak tahan lagi baru memberikan obat",
+            "Memberikan analgesik sesuai dengan tingkat keparahan nyeri dan respons pasien",
+            "Memberikan analgesik hanya jika ada permintaan dari dokter"
+        ],
+        "answer": 2,
+        "explanation": "Manajemen nyeri yang efektif melibatkan pemberian analgesik yang adekuat sesuai skala nyeri yang dilaporkan pasien, dan disesuaikan dengan responsnya. Penundaan dapat memperburuk nyeri."
+    },
+    {
+        "question": "Seorang pasien dengan riwayat penyakit jantung koroner mengeluh nyeri dada saat istirahat, berlangsung lebih dari 20 menit, dan tidak hilang dengan nitrogliserin sublingual. Kondisi ini paling mungkin adalah...",
+        "options": [
+            "Angina pektoris stabil",
+            "Angina pektoris tidak stabil atau infark miokard akut",
+            "Perikarditis",
+            "Spasme esofagus"
+        ],
+        "answer": 1,
+        "explanation": "Nyeri dada saat istirahat, durasi lama, dan tidak responsif terhadap nitrogliserin adalah tanda-tanda sindrom koroner akut, yang bisa berupa angina tidak stabil atau infark miokard."
+    },
+    {
+        "question": "Seorang pasien terpasang infus dan mengeluh nyeri, bengkak, dan kemerahan di sekitar lokasi tusukan infus. Tidak ada pus. Kondisi ini disebut...",
+        "options": [
+            "Infiltrasi",
+            "Flebitis",
+            "Hematoma",
+            "Emboli udara"
+        ],
+        "answer": 1,
+        "explanation": "Flebitis adalah inflamasi vena yang ditandai dengan kemerahan, nyeri, bengkak, dan teraba hangat di sepanjang vena tempat infus terpasang."
+    },
+    {
+        "question": "Manakah dari berikut ini yang merupakan tujuan utama pemasangan bidai pada kasus fraktur ekstremitas?",
+        "options": [
+            "Mempercepat penyembuhan tulang",
+            "Mengurangi nyeri, mencegah gerakan, dan kerusakan jaringan lebih lanjut",
+            "Mengembalikan fragmen tulang ke posisi anatomis",
+            "Menggantikan fungsi gips definitif"
+        ],
+        "answer": 1,
+        "explanation": "Pembidaian bertujuan untuk imobilisasi area fraktur, yang akan mengurangi nyeri, mencegah pergerakan fragmen tulang yang dapat merusak pembuluh darah, saraf, atau jaringan lunak di sekitarnya."
+    },
+    // Soal ke-81
+    {
+        "question": "Pasien dengan luka bakar luas memerlukan resusitasi cairan menggunakan formula Parkland. Berapa banyak cairan yang diberikan dalam 8 jam pertama?",
+        "options": [
+            "Seluruh jumlah cairan yang dihitung dalam 24 jam",
+            "Seperempat dari total cairan 24 jam",
+            "Setengah dari total cairan 24 jam",
+            "Sepertiga dari total cairan 24 jam"
+        ],
+        "answer": 2,
+        "explanation": "Menurut formula Parkland (4 mL x BB (kg) x %Luka Bakar), setengah dari total kebutuhan cairan dalam 24 jam pertama diberikan dalam 8 jam pertama sejak kejadian luka bakar, dan setengah sisanya dalam 16 jam berikutnya."
+    },
+    {
+        "question": "Seorang pasien dewasa dengan berat badan 60 kg mengalami luka bakar derajat II seluas 30%. Menggunakan formula Parkland (4ml x kgBB x %LB), berapa total kebutuhan cairan dalam 24 jam pertama?",
+        "options": [
+            "3600 ml",
+            "7200 ml",
+            "5400 ml",
+            "10800 ml"
+        ],
+        "answer": 1,
+        "explanation": "Kebutuhan cairan = 4 ml x 60 kg x 30 = 7200 ml. Setengahnya (3600 ml) diberikan dalam 8 jam pertama."
+    },
+    {
+        "question": "Seorang pasien anak, usia 5 tahun, berat badan 20 kg, dibawa ke UGD dengan dehidrasi berat akibat diare. Kebutuhan cairan maintenance harian anak tersebut (menggunakan metode Holliday-Segar) adalah...",
+        "options": [
+            "1000 ml",
+            "1200 ml",
+            "1500 ml",
+            "1750 ml"
+        ],
+        "answer": 2,
+        "explanation": "Metode Holliday-Segar: 10 kg pertama x 100 ml/kg = 1000 ml. 10 kg kedua x 50 ml/kg = 500 ml. Total = 1000 + 500 = 1500 ml/hari. Ini belum termasuk defisit cairan akibat dehidrasi."
+    },
+    {
+        "question": "Tekanan darah normal pada orang dewasa umumnya berkisar...",
+        "options": [
+            "Sistolik <120 mmHg DAN Diastolik <80 mmHg",
+            "Sistolik 130-139 mmHg ATAU Diastolik 80-89 mmHg",
+            "Sistolik 140-159 mmHg ATAU Diastolik 90-99 mmHg",
+            "Sistolik >160 mmHg ATAU Diastolik >100 mmHg"
+        ],
+        "answer": 0,
+        "explanation": "Tekanan darah normal didefinisikan sebagai sistolik kurang dari 120 mmHg dan diastolik kurang dari 80 mmHg."
+    },
+    {
+        "question": "Frekuensi nadi normal pada orang dewasa saat istirahat adalah...",
+        "options": [
+            "40-60 kali/menit",
+            "60-100 kali/menit",
+            "100-120 kali/menit",
+            "120-140 kali/menit"
+        ],
+        "answer": 1,
+        "explanation": "Frekuensi nadi normal pada orang dewasa saat istirahat berkisar antara 60 hingga 100 denyut per menit."
+    },
+    {
+        "question": "Frekuensi pernapasan normal pada orang dewasa saat istirahat adalah...",
+        "options": [
+            "8-10 kali/menit",
+            "12-20 kali/menit",
+            "22-30 kali/menit",
+            "30-40 kali/menit"
+        ],
+        "answer": 1,
+        "explanation": "Frekuensi pernapasan normal pada orang dewasa saat istirahat berkisar antara 12 hingga 20 kali per menit."
+    },
+    {
+        "question": "Suhu tubuh normal aksila pada orang dewasa umumnya adalah...",
+        "options": [
+            "34.5 - 35.5 °C",
+            "35.6 - 36.0 °C",
+            "36.1 - 37.2 °C",
+            "37.5 - 38.0 °C"
+        ],
+        "answer": 2,
+        "explanation": "Suhu tubuh normal yang diukur di aksila (ketiak) pada orang dewasa umumnya berkisar antara 36.1°C hingga 37.2°C."
+    },
+    {
+        "question": "Seorang pasien dengan GCS E4M6V5 memiliki total skor GCS...",
+        "options": [
+            "13",
+            "14",
+            "15",
+            "Tidak dapat dihitung"
+        ],
+        "answer": 2,
+        "explanation": "Total skor GCS adalah penjumlahan dari skor Eye (E), Motor (M), dan Verbal (V). Jadi, E4 + M6 + V5 = 15. Ini adalah skor GCS maksimal, menunjukkan kesadaran penuh."
+    },
+    {
+        "question": "Seorang pasien datang ke UGD dengan keluhan sesak napas. Saturasi oksigen (SpO2) 85% dengan udara ruangan. Tindakan awal yang paling tepat adalah...",
+        "options": [
+            "Memberikan obat diuretik",
+            "Memberikan oksigen suplemental",
+            "Melakukan intubasi segera",
+            "Memasang infus cairan cepat"
+        ],
+        "answer": 1,
+        "explanation": "SpO2 85% menunjukkan hipoksemia. Pemberian oksigen suplemental (misalnya via nasal kanul atau masker) adalah tindakan prioritas untuk meningkatkan saturasi oksigen."
+    },
+    {
+        "question": "Obat Digoxin digunakan pada pasien gagal jantung karena efek utamanya adalah...",
+        "options": [
+            "Menurunkan tekanan darah (antihipertensi)",
+            "Meningkatkan kekuatan kontraksi miokard (inotropik positif) dan menurunkan laju denyut jantung (kronotropik negatif)",
+            "Mengencerkan darah (antikoagulan)",
+            "Mengurangi edema (diuretik)"
+        ],
+        "answer": 1,
+        "explanation": "Digoxin memiliki efek inotropik positif (meningkatkan kekuatan kontraksi jantung) dan kronotropik negatif (memperlambat denyut jantung), yang bermanfaat pada gagal jantung dan beberapa jenis aritmia."
+    },
+    // Soal ke-91
+    {
+        "question": "Pemeriksaan laboratorium yang paling spesifik untuk mendiagnosis infark miokard akut adalah peningkatan kadar...",
+        "options": [
+            "Kreatinin Kinase (CK)",
+            "CK-MB",
+            "Troponin I atau Troponin T",
+            "Lactate Dehydrogenase (LDH)"
+        ],
+        "answer": 2,
+        "explanation": "Troponin I dan Troponin T adalah biomarker jantung yang paling sensitif dan spesifik untuk kerusakan miokard, sehingga menjadi standar emas dalam diagnosis infark miokard."
+    },
+    {
+        "question": "Penyakit Kawasaki pada anak ditandai dengan demam lama dan beberapa kriteria klinis. Komplikasi jantung yang paling dikhawatirkan dari penyakit Kawasaki adalah...",
+        "options": [
+            "Endokarditis",
+            "Aneurisma arteri koroner",
+            "Stenosis katup aorta",
+            "Kardiomiopati hipertropik"
+        ],
+        "answer": 1,
+        "explanation": "Penyakit Kawasaki dapat menyebabkan inflamasi pada pembuluh darah, termasuk arteri koroner, yang bisa berakibat pada pembentukan aneurisma (pelebaran abnormal) arteri koroner."
+    },
+    {
+        "question": "Seorang pasien mengalami syok anafilaksis. Selain epinefrin, obat antihistamin seperti difenhidramin diberikan untuk...",
+        "options": [
+            "Meningkatkan tekanan darah",
+            "Mengatasi bronkospasme",
+            "Memblokir efek histamin pada reseptor H1 (mengurangi gatal, urtikaria, angioedema)",
+            "Menstabilkan sel mast"
+        ],
+        "answer": 2,
+        "explanation": "Difenhidramin adalah antagonis reseptor H1 yang membantu mengurangi gejala alergi yang dimediasi histamin seperti gatal-gatal (urtikaria), pembengkakan (angioedema), dan kemerahan kulit."
+    },
+    {
+        "question": "Pada pasien dengan trauma tumpul abdomen dan dicurigai adanya perdarahan internal, pemeriksaan diagnostik awal yang cepat dan non-invasif di UGD adalah...",
+        "options": [
+            "CT scan abdomen dengan kontras",
+            "Laparotomi eksplorasi",
+            "FAST (Focused Assessment with Sonography for Trauma)",
+            "Foto polos abdomen"
+        ],
+        "answer": 2,
+        "explanation": "FAST adalah pemeriksaan USG cepat yang dilakukan di samping tempat tidur pasien untuk mendeteksi adanya cairan bebas (biasanya darah) di rongga peritoneum atau perikardium pada pasien trauma."
+    },
+    {
+        "question": "Seorang pasien datang dengan keluhan nyeri saat berkemih (disuria), sering berkemih (frekuensi), dan urgensi. Tidak ada demam atau nyeri pinggang. Kemungkinan diagnosisnya adalah...",
+        "options": [
+            "Pielonefritis akut",
+            "Sistitis akut (Infeksi Saluran Kemih bawah)",
+            "Batu ureter",
+            "Uretritis"
+        ],
+        "answer": 1,
+        "explanation": "Gejala disuria, frekuensi, dan urgensi tanpa demam atau nyeri pinggang merupakan ciri khas dari sistitis akut atau infeksi kandung kemih."
+    },
+    {
+        "question": "Proses inflamasi pada apendiks vermiformis disebut...",
+        "options": [
+            "Kolesistitis",
+            "Pankreatitis",
+            "Apendisitis",
+            "Divertikulitis"
+        ],
+        "answer": 2,
+        "explanation": "Apendisitis adalah peradangan pada apendiks (umbai cacing)."
+    },
+    {
+        "question": "Bagian dari otak yang bertanggung jawab untuk koordinasi gerakan, keseimbangan, dan postur tubuh adalah...",
+        "options": [
+            "Serebrum (otak besar)",
+            "Serebelum (otak kecil)",
+            "Batang otak",
+            "Hipotalamus"
+        ],
+        "answer": 1,
+        "explanation": "Serebelum atau otak kecil memainkan peran krusial dalam mengkoordinasikan aktivitas motorik volunter, menjaga keseimbangan, dan memelihara postur tubuh."
+    },
+    {
+        "question": "Hormon insulin diproduksi oleh sel beta di kelenjar...",
+        "options": [
+            "Tiroid",
+            "Adrenal",
+            "Pankreas",
+            "Hipofisis"
+        ],
+        "answer": 2,
+        "explanation": "Insulin adalah hormon yang diproduksi oleh sel-sel beta di pulau Langerhans kelenjar pankreas, yang berfungsi untuk menurunkan kadar glukosa darah."
+    },
+    {
+        "question": "Fungsi utama trombosit dalam darah adalah...",
+        "options": [
+            "Mengangkut oksigen",
+            "Melawan infeksi",
+            "Membantu dalam proses pembekuan darah (hemostasis)",
+            "Menghasilkan antibodi"
+        ],
+        "answer": 2,
+        "explanation": "Trombosit (keping darah) berperan penting dalam hemostasis primer, yaitu membentuk sumbat trombosit pada lokasi cedera pembuluh darah untuk menghentikan perdarahan."
+    },
+    {
+        "question": "Pertukaran gas oksigen dan karbon dioksida di paru-paru terjadi di...",
+        "options": [
+            "Bronkus",
+            "Bronkiolus",
+            "Alveolus",
+            "Trakea"
+        ],
+        "answer": 2,
+        "explanation": "Alveolus adalah kantung-kantung udara kecil di ujung saluran pernapasan di paru-paru, tempat terjadinya difusi oksigen dari udara ke darah dan karbon dioksida dari darah ke udara."
+    },
+    // Soal ke-101
+    {
+        "question": "Seorang pasien dengan gagal ginjal kronis mengalami hiperkalemia (K+ > 5.5 mEq/L). Intervensi segera untuk melindungi jantung dari efek hiperkalemia adalah pemberian...",
+        "options": [
+            "Insulin dan glukosa IV",
+            "Kalsium glukonas IV",
+            "Natrium bikarbonat IV",
+            "Furosemide IV"
+        ],
+        "answer": 1,
+        "explanation": "Kalsium glukonas diberikan untuk menstabilkan membran sel miokard dan melindungi jantung dari aritmia akibat hiperkalemia. Ini tidak menurunkan kadar kalium, tetapi mengurangi toksisitas jantungnya."
+    },
+    {
+        "question": "Teknik 'log roll' digunakan pada pasien trauma untuk...",
+        "options": [
+            "Memeriksa refleks patella",
+            "Memindahkan pasien sambil menjaga stabilitas tulang belakang",
+            "Mengukur lingkar perut",
+            "Melakukan pemeriksaan rektal"
+        ],
+        "answer": 1,
+        "explanation": "Log roll adalah teknik memutar tubuh pasien sebagai satu kesatuan (seperti batang kayu) untuk memeriksa punggung atau memindahkan pasien, sambil meminimalkan gerakan pada tulang belakang, terutama jika ada dugaan cedera servikal atau spinal."
+    },
+    {
+        "question": "Seorang perawat akan memberikan injeksi intramuskular pada orang dewasa di area ventrogluteal. Landmark yang benar adalah...",
+        "options": [
+            "Sepertiga tengah aspek lateral paha",
+            "Otot deltoid, 2-3 jari di bawah akromion",
+            "Antara krista iliaka, spina iliaka anterior superior, dan trokanter mayor femur",
+            "Kuadran luar atas bokong"
+        ],
+        "answer": 2,
+        "explanation": "Area ventrogluteal diidentifikasi dengan menempatkan telapak tangan pada trokanter mayor, jari telunjuk pada spina iliaka anterior superior, dan jari tengah merentang sepanjang krista iliaka, membentuk segitiga sebagai area injeksi."
+    },
+    {
+        "question": "Seorang pasien mengalami syok septik. TD 70/40 mmHg meskipun sudah mendapat resusitasi cairan adekuat. Obat vasopresor pilihan pertama yang sering digunakan adalah...",
+        "options": [
+            "Dopamin",
+            "Dobutamin",
+            "Norepinefrin (Levophed)",
+            "Epinefrin"
+        ],
+        "answer": 2,
+        "explanation": "Norepinefrin adalah vasopresor lini pertama yang direkomendasikan pada syok septik untuk meningkatkan tekanan darah arteri rata-rata (MAP) setelah resusitasi cairan."
+    },
+    {
+        "question": "Pemeriksaan fisik 'Murphy's sign' positif menunjukkan kemungkinan adanya...",
+        "options": [
+            "Apendisitis akut",
+            "Pankreatitis akut",
+            "Kolesistitis akut",
+            "Divertikulitis"
+        ],
+        "answer": 2,
+        "explanation": "Murphy's sign positif (pasien menghentikan inspirasi saat palpasi dalam di bawah batas kosta kanan karena nyeri) adalah tanda khas kolesistitis akut (inflamasi kandung empedu)."
+    },
+    {
+        "question": "Dalam pemberian obat melalui NGT pada pasien yang juga mendapat nutrisi enteral berkelanjutan, tindakan yang benar adalah...",
+        "options": [
+            "Mencampur obat langsung dengan formula nutrisi enteral",
+            "Menghentikan sementara pemberian nutrisi, membilas NGT, memberikan obat, membilas lagi, lalu melanjutkan nutrisi",
+            "Memberikan obat tanpa membilas NGT",
+            "Menghancurkan semua jenis tablet sebelum dimasukkan melalui NGT"
+        ],
+        "answer": 1,
+        "explanation": "Pemberian nutrisi enteral harus dihentikan sementara. Bilas NGT dengan air sebelum dan sesudah pemberian obat untuk memastikan obat terkirim dan mencegah sumbatan. Tidak semua tablet boleh dihancurkan."
+    },
+    {
+        "question": "Seorang pasien dengan asma akut berat tidak merespon terhadap nebulisasi bronkodilator berulang. Napas semakin dangkal dan wheezing menghilang. Ini menandakan...",
+        "options": [
+            "Perbaikan kondisi pasien yang signifikan",
+            "Pasien kelelahan dan risiko gagal napas (silent chest)",
+            "Efek samping dari obat nebulisasi",
+            "Adanya pneumotoraks sebagai komplikasi"
+        ],
+        "answer": 1,
+        "explanation": "'Silent chest' (wheezing menghilang) pada pasien asma berat adalah tanda bahaya yang menunjukkan obstruksi jalan napas sangat parah dan/atau kelelahan otot pernapasan, mengarah ke gagal napas."
+    },
+    {
+        "question": "Jenis pemeriksaan radiologi yang paling umum dan cepat untuk mendeteksi fraktur tulang adalah...",
+        "options": [
+            "MRI (Magnetic Resonance Imaging)",
+            "CT Scan (Computed Tomography Scan)",
+            "Foto Rontgen (X-ray)",
+            "USG (Ultrasonography)"
+        ],
+        "answer": 2,
+        "explanation": "Foto Rontgen (X-ray) konvensional adalah pemeriksaan lini pertama yang cepat, mudah diakses, dan relatif murah untuk mendeteksi adanya fraktur pada tulang."
+    },
+    {
+        "question": "Seorang pasien mengeluh nyeri perut kiri bawah, demam, dan perubahan pola BAB. Riwayat konstipasi kronis. Pemeriksaan fisik menunjukkan nyeri tekan lokal di kuadran kiri bawah. Kemungkinan diagnosis pada pasien usia lanjut adalah...",
+        "options": [
+            "Apendisitis",
+            "Kolesistitis",
+            "Divertikulitis",
+            "Hernia inguinalis"
+        ],
+        "answer": 2,
+        "explanation": "Divertikulitis (inflamasi pada divertikula, kantung kecil di dinding usus besar) sering terjadi pada usia lanjut dan umumnya bermanifestasi sebagai nyeri perut kiri bawah, demam, dan perubahan BAB."
+    },
+    {
+        "question": "Komunikasi nonverbal yang menunjukkan perawat mendengarkan dengan penuh perhatian (active listening) adalah...",
+        "options": [
+            "Menyilangkan tangan di dada dan menghindari kontak mata",
+            "Sering melihat jam tangan atau ponsel",
+            "Mempertahankan kontak mata yang sesuai, mengangguk, dan condong tubuh ke arah pasien",
+            "Menyela pembicaraan pasien untuk memberikan solusi cepat"
+        ],
+        "answer": 2,
+        "explanation": "Active listening melibatkan perilaku nonverbal seperti kontak mata yang baik, postur tubuh terbuka dan condong ke arah pembicara, serta anggukan kepala sebagai tanda memahami."
+    },
+    // Soal ke-111
+    {
+        "question": "Seorang pasien mengalami hipovolemia. Perawat akan memasang infus. Ukuran jarum infus (abocath/IV catheter) yang paling sesuai untuk resusitasi cairan cepat pada orang dewasa adalah...",
+        "options": [
+            "24G (kuning) atau 22G (biru)",
+            "20G (pink)",
+            "18G (hijau) atau 16G (abu-abu)",
+            "26G (ungu)"
+        ],
+        "answer": 2,
+        "explanation": "Untuk resusitasi cairan cepat pada orang dewasa, dibutuhkan kateter IV berdiameter besar, seperti ukuran 18G (hijau), 16G (abu-abu), atau bahkan 14G (oranye), untuk memungkinkan aliran cairan yang tinggi."
+    },
+    {
+        "question": "Pasien Tn. C, 70 tahun, datang dengan kelemahan separuh badan sisi kanan dan bicara pelo secara tiba-tiba 1 jam yang lalu. Riwayat hipertensi tidak terkontrol. Diagnosis kerja yang paling mungkin adalah...",
+        "options": [
+            "Serangan Jantung",
+            "Stroke (Cerebrovascular Accident)",
+            "Transient Ischemic Attack (TIA)",
+            "Tumor Otak"
+        ],
+        "answer": 1,
+        "explanation": "Onset akut defisit neurologis fokal (kelemahan hemiparesis, disartria) pada pasien dengan faktor risiko (hipertensi) sangat mengarah pada stroke."
+    },
+    {
+        "question": "Pemberian terapi oksigen dengan nasal kanul pada aliran 2 liter/menit akan menghasilkan fraksi oksigen inspirasi (FiO2) sekitar...",
+        "options": [
+            "21%",
+            "28%",
+            "40%",
+            "60%"
+        ],
+        "answer": 1,
+        "explanation": "Setiap peningkatan aliran 1 liter/menit melalui nasal kanul akan meningkatkan FiO2 sekitar 4% di atas FiO2 udara ruangan (21%). Jadi, 2 L/menit = 21% + (2x4%) = 29% (dibulatkan menjadi 28-30%)."
+    },
+    {
+        "question": "Seorang pasien dengan riwayat atrial fibrilasi kronis datang ke UGD dengan keluhan palpitasi. Obat yang sering digunakan untuk mengontrol laju ventrikel (rate control) pada atrial fibrilasi adalah...",
+        "options": [
+            "Aspirin",
+            "Beta-blocker (misalnya Metoprolol) atau Calcium Channel Blocker (misalnya Diltiazem)",
+            "Statin (misalnya Simvastatin)",
+            "ACE Inhibitor (misalnya Ramipril)"
+        ],
+        "answer": 1,
+        "explanation": "Beta-blocker, calcium channel blocker non-dihydropyridine (seperti Diltiazem atau Verapamil), dan Digoxin adalah obat-obat utama untuk mengontrol laju respons ventrikel pada pasien atrial fibrilasi."
+    },
+    {
+        "question": "Seorang pasien yang dicurigai mengalami emboli paru akan menunjukkan gejala klasik berupa...",
+        "options": [
+            "Nyeri dada pleuritik, sesak napas tiba-tiba, dan mungkin hemoptisis",
+            "Nyeri ulu hati, mual, dan muntah",
+            "Demam tinggi, batuk produktif, dan ronki",
+            "Sakit kepala hebat, kaku kuduk, dan fotofobia"
+        ],
+        "answer": 0,
+        "explanation": "Trias klasik emboli paru (meskipun tidak selalu semua ada) adalah dispnea (sesak napas) onset akut, nyeri dada pleuritik (tajam saat inspirasi), dan hemoptisis (batuk darah)."
+    },
+    {
+        "question": "Pasien dengan diagnosis gastroenteritis akut dan mengalami muntah hebat berisiko mengalami gangguan keseimbangan asam-basa berupa...",
+        "options": [
+            "Asidosis metabolik",
+            "Alkalosis metabolik",
+            "Asidosis respiratorik",
+            "Alkalosis respiratorik"
+        ],
+        "answer": 1,
+        "explanation": "Muntah yang hebat menyebabkan kehilangan asam lambung (HCl), sehingga dapat menyebabkan alkalosis metabolik karena hilangnya ion hidrogen."
+    },
+    {
+        "question": "Posisi semi-Fowler adalah posisi tempat tidur dengan kepala dinaikkan...",
+        "options": [
+            "15-30 derajat",
+            "30-45 derajat",
+            "45-60 derajat",
+            "60-90 derajat"
+        ],
+        "answer": 1,
+        "explanation": "Posisi semi-Fowler adalah kepala tempat tidur dinaikkan sekitar 30-45 derajat. Posisi Fowler rendah (Low Fowler) sekitar 15-30 derajat, dan Fowler tinggi (High Fowler) 60-90 derajat."
+    },
+    {
+        "question": "Seorang pasien mengonsumsi obat warfarin (Coumadin) secara rutin. Pemeriksaan laboratorium yang digunakan untuk memantau efek terapeutik warfarin adalah...",
+        "options": [
+            "Activated Partial Thromboplastin Time (aPTT)",
+            "Prothrombin Time (PT) dan International Normalized Ratio (INR)",
+            "Jumlah trombosit",
+            "Waktu perdarahan (Bleeding Time)"
+        ],
+        "answer": 1,
+        "explanation": "Efek antikoagulan warfarin dipantau dengan mengukur PT dan INR. Target INR bervariasi tergantung indikasi klinis (umumnya 2.0-3.0)."
+    },
+    {
+        "question": "Seorang anak datang dengan demam, nyeri telan, dan pemeriksaan fisik menunjukkan tonsil bengkak kemerahan dengan detritus (bercak putih). Kemungkinan diagnosisnya adalah...",
+        "options": [
+            "Laringitis",
+            "Faringitis",
+            "Tonsilitis akut",
+            "Bronkitis"
+        ],
+        "answer": 2,
+        "explanation": "Demam, nyeri telan, dan tonsil yang hiperemis, bengkak, serta terdapat detritus atau eksudat adalah tanda-tanda klasik tonsilitis akut."
+    },
+    {
+        "question": "Penyebab paling umum dari syok anafilaksis adalah reaksi alergi berat terhadap...",
+        "options": [
+            "Makanan (misalnya kacang, seafood), obat-obatan (misalnya penisilin), atau sengatan serangga",
+            "Infeksi bakteri berat",
+            "Trauma tumpul abdomen",
+            "Kehilangan banyak darah"
+        ],
+        "answer": 0,
+        "explanation": "Syok anafilaksis adalah reaksi alergi sistemik yang parah dan cepat, sering dipicu oleh alergen seperti makanan, obat-obatan, atau bisa serangga."
+    },
+    // Soal ke-121
+    {
+        "question": "Seorang pasien mengeluh nyeri perut kanan atas yang menjalar ke bahu kanan, terutama setelah makan makanan berlemak. Kemungkinan pasien mengalami...",
+        "options": [
+            "Gastritis",
+            "Kolelitiasis (batu empedu) atau kolesistitis",
+            "Pankreatitis",
+            "Ulkus peptikum"
+        ],
+        "answer": 1,
+        "explanation": "Nyeri kolik bilier (khas pada batu empedu) sering terjadi di kuadran kanan atas atau epigastrium, dapat menjalar ke punggung atau bahu kanan, dan dipicu oleh makanan berlemak."
+    },
+    {
+        "question": "Pada pemeriksaan fisik pasien asma, suara napas tambahan yang khas terdengar saat ekspirasi adalah...",
+        "options": [
+            "Ronki basah (crackles)",
+            "Wheezing (mengi)",
+            "Stridor",
+            "Vesikuler normal"
+        ],
+        "answer": 1,
+        "explanation": "Wheezing adalah suara siulan bernada tinggi yang dihasilkan oleh aliran udara melalui jalan napas yang menyempit, khas pada asma dan PPOK, terutama saat ekspirasi."
+    },
+    {
+        "question": "Seorang pasien mengalami luka tusuk di dada kiri. Pada pemeriksaan ditemukan adanya 'sucking chest wound' (luka dada mengisap). Intervensi awal yang tepat adalah...",
+        "options": [
+            "Menutup luka dengan kassa steril biasa",
+            "Melakukan intubasi endotrakeal segera",
+            "Menutup luka dengan kassa tiga sisi (three-sided dressing)",
+            "Memasukkan chest tube langsung melalui luka"
+        ],
+        "answer": 2,
+        "explanation": "Sucking chest wound dapat menyebabkan pneumotoraks terbuka. Penutupan dengan kassa tiga sisi memungkinkan udara keluar dari rongga pleura saat ekspirasi tetapi mencegah udara masuk saat inspirasi, berfungsi sebagai katup satu arah sementara."
+    },
+    {
+        "question": "Seorang pasien dengan riwayat DM tipe 1 ditemukan tidak sadar, napas cepat dan dalam (Kussmaul), dan bau napas seperti buah (aseton). GDS sangat tinggi. Kondisi ini adalah...",
+        "options": [
+            "Hipoglikemia berat",
+            "Hyperosmolar Hyperglycemic State (HHS)",
+            "Diabetes Ketoasidosis (DKA)",
+            "Syok septik"
+        ],
+        "answer": 2,
+        "explanation": "Kombinasi penurunan kesadaran, napas Kussmaul, bau aseton, hiperglikemia, dan riwayat DM tipe 1 adalah gambaran klasik dari Diabetes Ketoasidosis (DKA)."
+    },
+    {
+        "question": "Pemberian Metformin pada pasien Diabetes Mellitus tipe 2 bertujuan untuk...",
+        "options": [
+            "Meningkatkan sekresi insulin dari pankreas",
+            "Menurunkan produksi glukosa hepatik dan meningkatkan sensitivitas insulin di jaringan perifer",
+            "Menghambat penyerapan glukosa di usus",
+            "Menggantikan fungsi insulin"
+        ],
+        "answer": 1,
+        "explanation": "Metformin (golongan biguanid) bekerja primer dengan mengurangi produksi glukosa oleh hati dan meningkatkan ambilan serta penggunaan glukosa di jaringan perifer (otot)."
+    },
+    {
+        "question": "Dalam penanganan pasien dengan gigitan binatang (misalnya anjing), selain perawatan luka, penting untuk menilai risiko...",
+        "options": [
+            "Tetanus dan Rabies",
+            "Hepatitis B",
+            "HIV",
+            "Malaria"
+        ],
+        "answer": 0,
+        "explanation": "Gigitan binatang membawa risiko infeksi bakteri lokal, tetanus, dan rabies (terutama dari anjing, kucing, kelelawar, atau hewan liar lainnya). Profilaksis mungkin diperlukan."
+    },
+    {
+        "question": "Seorang pasien mengalami henti napas namun nadi masih teraba. Tindakan yang dilakukan adalah...",
+        "options": [
+            "Memulai kompresi dada",
+            "Memberikan napas bantuan (rescue breathing) 1 napas setiap 5-6 detik",
+            "Memasang defibrilator",
+            "Memberikan epinefrin IV"
+        ],
+        "answer": 1,
+        "explanation": "Jika pasien henti napas (respiratory arrest) tetapi nadi masih teraba, berikan napas bantuan (rescue breathing) dengan laju 1 napas setiap 5-6 detik (atau 10-12 napas per menit) untuk dewasa."
+    },
+    {
+        "question": "Penggunaan manset tekanan darah yang terlalu kecil pada lengan pasien akan menghasilkan pembacaan tekanan darah yang...",
+        "options": [
+            "Lebih rendah dari sebenarnya",
+            "Lebih tinggi dari sebenarnya",
+            "Akurat",
+            "Tidak dapat diprediksi"
+        ],
+        "answer": 1,
+        "explanation": "Manset yang terlalu kecil akan memberikan pembacaan tekanan darah yang salah tinggi. Sebaliknya, manset yang terlalu besar akan memberikan pembacaan yang salah rendah."
+    },
+    {
+        "question": "Seorang pasien mengeluh nyeri dada yang digambarkan sebagai 'rasa terbakar' di ulu hati, memburuk saat berbaring atau setelah makan, dan membaik dengan antasida. Kemungkinan besar ini adalah gejala dari...",
+        "options": [
+            "Infark miokard akut",
+            "Gastroesophageal Reflux Disease (GERD)",
+            "Pneumonia",
+            "Angina pektoris"
+        ],
+        "answer": 1,
+        "explanation": "Nyeri ulu hati seperti terbakar (heartburn) yang dipengaruhi posisi dan makanan, serta membaik dengan antasida, adalah gejala khas GERD."
+    },
+    {
+        "question": "Untuk mencegah transmisi infeksi saat melakukan tindakan keperawatan, prinsip universal precaution yang paling mendasar adalah...",
+        "options": [
+            "Menggunakan antibiotik profilaksis",
+            "Mencuci tangan sebelum dan sesudah kontak dengan pasien atau lingkungan pasien",
+            "Mengisolasi semua pasien",
+            "Melakukan skrining penyakit pada semua pasien"
+        ],
+        "answer": 1,
+        "explanation": "Cuci tangan adalah tindakan tunggal paling efektif untuk mencegah penyebaran infeksi di fasilitas kesehatan. Ini adalah komponen kunci dari kewaspadaan standar (standard precautions)."
+    },
+    // Soal ke-131
+    {
+        "question": "Seorang pasien dengan riwayat penyakit ginjal datang dengan keluhan mual, muntah, kelemahan, dan pada EKG tampak gelombang T tinggi runcing (peaked T waves). Ini mengindikasikan...",
+        "options": [
+            "Hipokalemia",
+            "Hiperkalemia",
+            "Hipokalsemia",
+            "Hiperkalsemia"
+        ],
+        "answer": 1,
+        "explanation": "Gelombang T yang tinggi dan runcing (peaked T waves) adalah salah satu gambaran EKG awal yang khas pada hiperkalemia (kadar kalium darah tinggi)."
+    },
+    {
+        "question": "Pendidikan kesehatan yang diberikan kepada pasien dengan fraktur yang baru dipasang gips adalah...",
+        "options": [
+            "Anjuran untuk melepas gips jika terasa tidak nyaman",
+            "Cara menjaga gips tetap kering dan bersih, mengenali tanda-tanda komplikasi (misalnya sindrom kompartemen)",
+            "Boleh beraktivitas berat seperti biasa setelah 1 minggu",
+            "Tidak perlu kontrol ulang jika tidak ada keluhan"
+        ],
+        "answer": 1,
+        "explanation": "Edukasi meliputi perawatan gips (jaga agar tidak basah, jangan memasukkan benda ke dalam gips), latihan gerakan jari-jari, dan mengenali tanda bahaya seperti nyeri hebat, bengkak, kesemutan, atau pucat pada ekstremitas."
+    },
+    {
+        "question": "Seorang pasien mengalami keracunan makanan setelah mengonsumsi makanan kaleng yang rusak. Gejala meliputi penglihatan kabur, kesulitan menelan, dan kelemahan otot progresif. Kemungkinan keracunan oleh toksin...",
+        "options": [
+            "Salmonella",
+            "Clostridium botulinum (Botulism)",
+            "Staphylococcus aureus",
+            "Escherichia coli"
+        ],
+        "answer": 1,
+        "explanation": "Botulisme adalah keracunan serius yang disebabkan oleh toksin dari Clostridium botulinum, sering dari makanan kaleng yang tidak diproses dengan benar. Gejalanya meliputi gangguan neurologis seperti diplopia, disfagia, disartria, dan kelemahan otot desenden."
+    },
+    {
+        "question": "Seorang perawat UGD menerima telepon dari seseorang yang melaporkan temannya baru saja menelan banyak tablet obat tidur dan mulai mengantuk. Instruksi pertama yang paling penting diberikan perawat melalui telepon adalah...",
+        "options": [
+            "Segera berikan minum air garam untuk merangsang muntah",
+            "Bawa korban ke UGD terdekat sesegera mungkin atau hubungi ambulans",
+            "Biarkan korban tidur agar efek obatnya hilang",
+            "Tanyakan jenis obat dan berapa banyak yang ditelan"
+        ],
+        "answer": 1,
+        "explanation": "Pada dugaan overdosis atau keracunan, prioritas adalah memastikan korban mendapatkan pertolongan medis profesional secepatnya. Merangsang muntah tidak selalu aman dan bisa berisiko."
+    },
+    {
+        "question": "Tekanan nadi (pulse pressure) adalah...",
+        "options": [
+            "Jumlah tekanan sistolik dan diastolik dibagi dua",
+            "Selisih antara tekanan sistolik dan diastolik",
+            "Tekanan rata-rata di arteri selama satu siklus jantung",
+            "Tekanan darah saat ventrikel relaksasi"
+        ],
+        "answer": 1,
+        "explanation": "Tekanan nadi adalah perbedaan antara tekanan darah sistolik dan tekanan darah diastolik. Contoh: TD 120/80 mmHg, tekanan nadi = 120 - 80 = 40 mmHg."
+    },
+    {
+        "question": "Seorang pasien mengalami trauma kimia pada kulit akibat tumpahan asam kuat. Tindakan pertama yang harus dilakukan adalah...",
+        "options": [
+            "Menetralkan asam dengan basa lemah",
+            "Mengoleskan salep antibiotik",
+            "Melakukan irigasi area yang terkena dengan air mengalir dalam jumlah banyak selama minimal 20-30 menit",
+            "Menutup area dengan perban kering steril"
+        ],
+        "answer": 2,
+        "explanation": "Pada paparan zat kimia korosif pada kulit, tindakan pertama adalah segera membilas area tersebut dengan air mengalir yang banyak untuk menghilangkan zat kimia dan mengurangi kerusakan jaringan. Upaya netralisasi bisa menghasilkan panas dan memperburuk cedera."
+    },
+    {
+        "question": "Pasien dengan riwayat epilepsi mengalami kejang tonik-klonik di UGD. Setelah memastikan keamanan pasien, tindakan selanjutnya yang penting adalah...",
+        "options": [
+            "Mencoba memasukkan sendok atau benda keras di antara gigi pasien",
+            "Memberikan diazepam rektal atau IV jika kejang berlangsung lama (>5 menit) atau berulang",
+            "Menahan gerakan ekstremitas pasien dengan kuat",
+            "Memberikan minum kepada pasien segera setelah kejang berhenti"
+        ],
+        "answer": 1,
+        "explanation": "Selama kejang, lindungi pasien dari cedera, longgarkan pakaian ketat, dan miringkan jika mungkin untuk menjaga jalan napas. Jika kejang lama (status epileptikus), pemberian antikonvulsan seperti diazepam atau lorazepam diperlukan."
+    },
+    {
+        "question": "Manakah yang merupakan tanda objektif dari nyeri akut?",
+        "options": [
+            "Pasien melaporkan skala nyeri 8/10",
+            "Pasien tampak meringis, gelisah, dan terjadi peningkatan denyut jantung serta tekanan darah",
+            "Pasien mengatakan sulit tidur karena nyeri",
+            "Pasien meminta obat penghilang nyeri"
+        ],
+        "answer": 1,
+        "explanation": "Tanda objektif nyeri adalah perubahan fisiologis atau perilaku yang dapat diamati, seperti ekspresi wajah (meringis), kegelisahan, guarding, serta perubahan tanda vital (takikardia, hipertensi, takipnea)."
+    },
+    {
+        "question": "Seorang pasien dengan riwayat alkoholisme kronis dibawa ke UGD dengan kebingungan, ataksia (gangguan koordinasi), dan nistagmus. Kondisi ini paling mungkin disebabkan oleh defisiensi...",
+        "options": [
+            "Vitamin B12 (Kobalamin)",
+            "Vitamin B1 (Tiamin) - menyebabkan Ensefalopati Wernicke",
+            "Vitamin C (Asam Askorbat)",
+            "Vitamin D"
+        ],
+        "answer": 1,
+        "explanation": "Trias klasik ensefalopati Wernicke (sering pada alkoholisme kronis) adalah kebingungan, ataksia, dan oftalmoplegia (termasuk nistagmus), yang disebabkan oleh defisiensi tiamin (Vitamin B1)."
+    },
+    {
+        "question": "Pemasangan 'cervical collar' pada pasien trauma bertujuan untuk...",
+        "options": [
+            "Mengurangi nyeri leher",
+            "Mengobati fraktur servikal",
+            "Membatasi gerakan tulang belakang servikal dan mencegah cedera sekunder pada medula spinalis",
+            "Membantu pernapasan pasien"
+        ],
+        "answer": 2,
+        "explanation": "Cervical collar digunakan untuk imobilisasi sementara tulang belakang servikal pada pasien dengan dugaan cedera leher, untuk mencegah gerakan yang dapat memperburuk potensi cedera medula spinalis."
+    },
+    // Soal ke-141
+    {
+        "question": "Seorang pasien anak dengan diare dan muntah menunjukkan tanda-tanda dehidrasi seperti mata cekung, turgor kulit menurun, dan mukosa bibir kering. Prioritas intervensi keperawatan adalah...",
+        "options": [
+            "Memberikan makanan padat segera",
+            "Melakukan rehidrasi oral atau intravena sesuai derajat dehidrasi",
+            "Memberikan obat antidiare",
+            "Mengukur berat badan setiap jam"
+        ],
+        "answer": 1,
+        "explanation": "Prioritas utama pada dehidrasi adalah menggantikan kehilangan cairan dan elektrolit. Rehidrasi bisa dilakukan secara oral dengan oralit jika dehidrasi ringan-sedang dan anak bisa minum, atau intravena jika dehidrasi berat atau ada kontraindikasi oral."
+    },
+    {
+        "question": "Obat golongan Beta-blocker (misalnya Propranolol, Metoprolol) dikontraindikasikan atau harus digunakan dengan hati-hati pada pasien dengan...",
+        "options": [
+            "Hipertensi",
+            "Angina pektoris",
+            "Asma bronkial atau PPOK berat",
+            "Takikardia supraventrikular"
+        ],
+        "answer": 2,
+        "explanation": "Beta-blocker non-selektif dapat menyebabkan bronkokonstriksi dengan memblokir reseptor beta-2 di saluran napas, sehingga dapat memperburuk asma atau PPOK."
+    },
+    {
+        "question": "Saat melakukan pemeriksaan fisik pada pasien dengan dugaan trombosis vena dalam (DVT) pada tungkai, tanda Homans positif adalah...",
+        "options": [
+            "Nyeri pada betis saat kaki dorsofleksi dengan lutut ekstensi",
+            "Kemerahan dan bengkak pada seluruh tungkai",
+            "Teraba denyut arteri femoralis yang lemah",
+            "Perbedaan lingkar betis lebih dari 3 cm"
+        ],
+        "answer": 0,
+        "explanation": "Tanda Homans (nyeri betis saat dorsofleksi pasif kaki) adalah salah satu tanda klinis yang mungkin ditemukan pada DVT, meskipun sensitivitas dan spesifisitasnya rendah."
+    },
+    {
+        "question": "Pasien Tn. D, 55 tahun, mengeluh nyeri perut kiri atas tembus ke punggung, mual, muntah. Ada riwayat konsumsi alkohol berlebih. Kadar amilase dan lipase serum meningkat. Diagnosis yang paling mungkin adalah...",
+        "options": [
+            "Kolesistitis akut",
+            "Pankreatitis akut",
+            "Ulkus peptikum perforasi",
+            "Apendisitis akut"
+        ],
+        "answer": 1,
+        "explanation": "Nyeri epigastrium atau perut kiri atas yang menjalar ke punggung, disertai mual/muntah, dan peningkatan enzim pankreas (amilase, lipase), terutama pada pasien dengan riwayat alkoholisme atau batu empedu, sangat sugestif untuk pankreatitis akut."
+    },
+    {
+        "question": "Seorang perawat melakukan perawatan luka pada pasien diabetes dengan ulkus di kaki. Aspek penting dalam perawatan luka diabetes adalah...",
+        "options": [
+            "Menjaga luka tetap sangat kering sepanjang waktu",
+            "Melakukan debridement jaringan nekrotik, kontrol infeksi, menjaga kelembaban luka (moist wound healing), dan off-loading (mengurangi tekanan)",
+            "Menggunakan larutan antiseptik kuat seperti hidrogen peroksida setiap hari",
+            "Menutup luka dengan plester kedap udara"
+        ],
+        "answer": 1,
+        "explanation": "Prinsip perawatan ulkus diabetik meliputi debridement, manajemen infeksi, penciptaan lingkungan luka lembab yang optimal untuk penyembuhan, dan pengurangan tekanan pada area ulkus (off-loading)."
+    },
+    {
+        "question": "Seorang pasien dewasa dibawa ke UGD karena heat stroke. Suhu rektal 41°C, kulit panas, kering, kemerahan, dan penurunan kesadaran. Tindakan pendinginan eksternal yang paling cepat dan efektif adalah...",
+        "options": [
+            "Memberikan minum air es",
+            "Kompres es pada aksila, leher, dan selangkangan, serta menyemprotkan air hangat sambil dikipasi",
+            "Menyelimuti pasien dengan selimut tebal",
+            "Memberikan paracetamol dosis tinggi"
+        ],
+        "answer": 1,
+        "explanation": "Pada heat stroke, pendinginan agresif dan cepat sangat penting. Metode pendinginan evaporatif (semprot air hangat dan kipas) dan kompres dingin di area pembuluh darah besar (leher, aksila, lipat paha) efektif menurunkan suhu tubuh. Antipiretik seperti paracetamol tidak efektif."
+    },
+    {
+        "question": "Pada pasien tenggelam yang berhasil diresusitasi, komplikasi paru yang paling sering terjadi dan perlu diwaspadai adalah...",
+        "options": [
+            "Pneumotoraks",
+            "Acute Respiratory Distress Syndrome (ARDS) atau edema paru non-kardiogenik",
+            "Emboli paru",
+            "Efusi pleura masif"
+        ],
+        "answer": 1,
+        "explanation": "Aspirasi air (tawar atau asin) dapat merusak surfaktan, menyebabkan inflamasi, dan edema paru, yang dapat berkembang menjadi ARDS."
+    },
+    {
+        "question": "Seorang pasien dengan cedera kepala menunjukkan rinorea cairan jernih dari hidung. Untuk membedakan apakah cairan tersebut adalah CSF (Cairan Serebrospinal) atau ingus biasa, perawat dapat melakukan tes sederhana yaitu...",
+        "options": [
+            "Mencium bau cairan tersebut",
+            "Memeriksa pH cairan dengan kertas lakmus",
+            "Meneteskan cairan pada kertas saring atau tisu (Halo Sign/Ring Sign) atau memeriksa kandungan glukosa",
+            "Meminta pasien untuk bersin"
+        ],
+        "answer": 2,
+        "explanation": "CSF mengandung glukosa, sedangkan mukus hidung tidak atau sangat sedikit. Tes 'halo sign' (cairan diteteskan ke kertas saring, darah akan terkumpul di tengah dan CSF membentuk cincin jernih di sekitarnya) juga bisa digunakan jika ada campuran darah."
+    },
+    {
+        "question": "Skala nyeri 'Wong-Baker FACES Pain Rating Scale' paling sesuai digunakan untuk menilai nyeri pada...",
+        "options": [
+            "Pasien dewasa yang tidak sadar",
+            "Pasien anak usia 3 tahun ke atas atau pasien dewasa dengan gangguan kognitif",
+            "Pasien lansia dengan demensia berat",
+            "Bayi baru lahir"
+        ],
+        "answer": 1,
+        "explanation": "Skala Wajah Wong-Baker menggunakan gambar ekspresi wajah untuk membantu anak-anak (biasanya usia >3 tahun) atau orang dewasa yang kesulitan mengungkapkan nyeri secara verbal untuk menunjukkan tingkat keparahan nyerinya."
+    },
+    {
+        "question": "Hukum atau prinsip etik keperawatan yang mengharuskan perawat untuk melakukan yang baik dan tidak merugikan pasien adalah...",
+        "options": [
+            "Otonomi (Autonomy)",
+            "Keadilan (Justice)",
+            "Beneficence (berbuat baik) dan Non-maleficence (tidak merugikan)",
+            "Kerahasiaan (Confidentiality)"
+        ],
+        "answer": 2,
+        "explanation": "Beneficence adalah prinsip untuk selalu bertindak demi kebaikan pasien, sedangkan Non-maleficence adalah prinsip untuk tidak menyebabkan cedera atau kerugian pada pasien (do no harm)."
+    },
+    // Soal ke-151
+    {
+        "question": "Seorang pasien mengalami serangan gout akut pada sendi metatarsophalangeal I (jempol kaki). Nyeri hebat, bengkak, kemerahan. Obat antiinflamasi nonsteroid (OAINS) atau kolkisin sering diberikan. Tujuan utama pemberian obat ini adalah...",
+        "options": [
+            "Menurunkan kadar asam urat dalam darah secara cepat",
+            "Mengurangi inflamasi dan nyeri akut pada sendi",
+            "Melarutkan kristal urat yang sudah terbentuk di sendi",
+            "Mencegah kerusakan ginjal akibat asam urat"
+        ],
+        "answer": 1,
+        "explanation": "Pada serangan gout akut, OAINS, kolkisin, atau kortikosteroid digunakan untuk meredakan inflamasi dan nyeri. Obat penurun asam urat (seperti allopurinol) biasanya tidak dimulai saat serangan akut, tapi untuk pencegahan jangka panjang."
+    },
+    {
+        "question": "Seorang perawat akan melakukan suction (penghisapan lendir) pada pasien yang terpasang ETT (Endotracheal Tube). Berapa lama durasi maksimal sekali tindakan suction yang direkomendasikan?",
+        "options": [
+            "Kurang dari 5 detik",
+            "10-15 detik",
+            "20-30 detik",
+            "Selama mungkin sampai lendir bersih"
+        ],
+        "answer": 1,
+        "explanation": "Durasi sekali tindakan suction pada pasien dewasa sebaiknya tidak melebihi 10-15 detik untuk meminimalkan risiko hipoksia, trauma mukosa, dan aritmia."
+    },
+    {
+        "question": "Pasien Tn. E, 30 tahun, datang dengan keluhan demam tinggi mendadak, sakit kepala hebat, nyeri otot dan sendi, serta nyeri di belakang mata. Terdapat riwayat digigit nyamuk beberapa hari sebelumnya. Kemungkinan diagnosis adalah...",
+        "options": [
+            "Malaria",
+            "Demam Berdarah Dengue (DBD)",
+            "Tifoid",
+            "Leptospirosis"
+        ],
+        "answer": 1,
+        "explanation": "Gejala demam akut, sakit kepala retro-orbital, mialgia, dan artralgia, terutama di daerah endemis, sangat mengarah pada Demam Dengue atau DBD (jika disertai tanda perdarahan atau kebocoran plasma)."
+    },
+    {
+        "question": "Pemeriksaan 'Rumple Leede Test' atau uji torniket positif pada pasien demam dengue menunjukkan adanya...",
+        "options": [
+            "Peningkatan hematokrit",
+            "Penurunan jumlah trombosit (trombositopenia)",
+            "Kerapuhan kapiler dan kecenderungan perdarahan",
+            "Adanya virus dengue dalam darah"
+        ],
+        "answer": 2,
+        "explanation": "Uji torniket positif (munculnya petekie >10 pada area 1 inci persegi setelah manset dipompa pada tekanan tertentu selama 5 menit) menunjukkan peningkatan permeabilitas dan fragilitas kapiler, salah satu tanda kebocoran plasma pada DBD."
+    },
+    {
+        "question": "Manakah pernyataan yang BENAR mengenai pemberian kalium (K+) intravena?",
+        "options": [
+            "Boleh diberikan secara bolus cepat (IV push) untuk koreksi hipokalemia berat",
+            "Harus selalu diencerkan dan diberikan secara perlahan melalui infus",
+            "Tidak memiliki efek samping jika diberikan terlalu cepat",
+            "Dapat dicampur dengan transfusi darah"
+        ],
+        "answer": 1,
+        "explanation": "Pemberian kalium intravena tidak boleh secara bolus cepat karena berisiko menyebabkan hiperkalemia akut yang dapat memicu aritmia jantung fatal. Harus diencerkan dalam larutan infus dan diberikan dengan kecepatan terkontrol."
+    },
+    {
+        "question": "Seorang pasien dengan penyakit Addison (insufisiensi adrenal primer) mengalami krisis Addison. Gejala yang mungkin timbul adalah...",
+        "options": [
+            "Hipertensi, hiperglikemia, hipokalemia",
+            "Hipotensi, hipoglikemia, hiperkalemia, hiponatremia",
+            "Moon face, buffalo hump, striae",
+            "Demam tinggi, takikardia, tremor"
+        ],
+        "answer": 1,
+        "explanation": "Krisis Addison adalah kondisi darurat akibat defisiensi kortisol dan aldosteron akut, ditandai dengan hipotensi berat, hipoglikemia, hiponatremia, hiperkalemia, mual, muntah, dan kelemahan."
+    },
+    {
+        "question": "Seorang pasien dengan riwayat sirosis hepatis datang dengan asites masif dan sesak napas. Intervensi untuk mengurangi asites dan sesak adalah...",
+        "options": [
+            "Pemberian cairan IV loading",
+            "Parasentesis terapeutik (pengeluaran cairan asites)",
+            "Pemberian laksatif osmotik",
+            "Diet tinggi protein dan garam"
+        ],
+        "answer": 1,
+        "explanation": "Parasentesis terapeutik adalah prosedur mengeluarkan cairan asites dari rongga peritoneum untuk mengurangi tekanan intraabdomen, memperbaiki sesak napas, dan mengurangi ketidaknyamanan."
+    },
+    {
+        "question": "Pemeriksaan fisik untuk menilai adanya cairan bebas di rongga abdomen (asites) yang dapat dilakukan perawat adalah tes...",
+        "options": [
+            "Rovsing sign dan Psoas sign",
+            "Shifting dullness dan fluid wave (undulasi)",
+            "Murphy's sign dan Courvoisier's sign",
+            "Kernig's sign dan Brudzinski's sign"
+        ],
+        "answer": 1,
+        "explanation": "Tes shifting dullness (perubahan area pekak saat pasien miring) dan tes fluid wave/undulasi (gelombang cairan terasa di sisi lain abdomen saat diketuk) digunakan untuk mendeteksi adanya asites."
+    },
+    {
+        "question": "Tindakan 'jaw thrust maneuver' dilakukan untuk membuka jalan napas pada pasien...",
+        "options": [
+            "Yang dipastikan tidak mengalami cedera servikal",
+            "Yang dicurigai mengalami cedera tulang belakang servikal",
+            "Anak-anak di bawah usia 1 tahun",
+            "Pasien yang masih sadar dan dapat berbicara"
+        ],
+        "answer": 1,
+        "explanation": "Jaw thrust maneuver adalah teknik membuka jalan napas dengan mendorong angulus mandibula ke depan tanpa melakukan ekstensi kepala, sehingga aman digunakan pada pasien dengan dugaan cedera servikal."
+    },
+    {
+        "question": "Seorang perawat menemukan pasien tidak sadar, tidak bernapas, dan tidak ada nadi. Perawat segera memulai RJP. Kedalaman kompresi dada yang benar untuk orang dewasa adalah...",
+        "options": [
+            "1-2 cm",
+            "3-4 cm",
+            "Minimal 5 cm, tidak lebih dari 6 cm",
+            "Minimal 7 cm"
+        ],
+        "answer": 2,
+        "explanation": "Menurut panduan AHA, kedalaman kompresi dada pada orang dewasa adalah minimal 2 inci (sekitar 5 cm) tetapi tidak lebih dari 2.4 inci (sekitar 6 cm)."
+    },
+    // Soal ke-161
+    {
+        "question": "Seorang pasien datang ke UGD dengan keluhan sakit kepala berdenyut hebat di satu sisi, disertai mual, fotofobia, dan fonofobia. Riwayat serangan serupa sebelumnya. Diagnosis yang paling mungkin adalah...",
+        "options": [
+            "Tension-type headache",
+            "Migrain",
+            "Cluster headache",
+            "Sinusitis"
+        ],
+        "answer": 1,
+        "explanation": "Kombinasi sakit kepala unilateral, berdenyut, intensitas sedang-berat, diperburuk aktivitas, disertai mual/muntah, fotofobia, dan fonofobia adalah karakteristik klasik migrain."
+    },
+    {
+        "question": "Obat golongan Statin (misalnya Simvastatin, Atorvastatin) diresepkan untuk pasien dengan dislipidemia karena mekanisme kerjanya adalah...",
+        "options": [
+            "Menghambat penyerapan kolesterol di usus",
+            "Menghambat enzim HMG-CoA reduktase, sehingga mengurangi sintesis kolesterol di hati",
+            "Meningkatkan ekskresi asam empedu",
+            "Mengikat asam empedu di usus"
+        ],
+        "answer": 1,
+        "explanation": "Statin bekerja dengan menghambat enzim HMG-CoA reduktase, yang merupakan enzim kunci dalam jalur sintesis kolesterol di hati, sehingga menurunkan kadar kolesterol LDL."
+    },
+    {
+        "question": "Seorang wanita hamil 38 minggu datang dengan keluhan kontraksi uterus yang kuat dan teratur, serta keluar lendir bercampur darah dari vagina. Ini adalah tanda-tanda...",
+        "options": [
+            "Abortus imminens",
+            "Solusio plasenta",
+            "Persalinan kala I",
+            "Plasenta previa"
+        ],
+        "answer": 2,
+        "explanation": "Kontraksi uterus yang teratur, progresif, disertai pendataran dan pembukaan serviks, serta 'bloody show' (lendir campur darah) adalah tanda-tanda dimulainya persalinan (kala I)."
+    },
+    {
+        "question": "Pada pasien dengan syok hipovolemik akibat perdarahan, selain resusitasi cairan, persiapan untuk transfusi darah seringkali diperlukan. Golongan darah yang dianggap sebagai 'donor universal' untuk sel darah merah (PRC) adalah...",
+        "options": [
+            "Golongan A, Rh positif",
+            "Golongan B, Rh negatif",
+            "Golongan O, Rh negatif",
+            "Golongan AB, Rh positif"
+        ],
+        "answer": 2,
+        "explanation": "Golongan darah O Rh negatif dianggap donor universal untuk PRC karena sel darah merahnya tidak memiliki antigen A, B, atau RhD, sehingga meminimalkan risiko reaksi transfusi pada resipien dari golongan darah lain dalam situasi darurat."
+    },
+    {
+        "question": "Seorang pasien dengan riwayat gangguan bipolar sedang dalam fase mania. Perilaku yang mungkin ditunjukkan pasien adalah...",
+        "options": [
+            "Merasa sedih, kehilangan minat, sulit tidur, dan energi menurun",
+            "Euforia berlebihan, banyak bicara (logorrhea), penurunan kebutuhan tidur, ide-ide melompat (flight of ideas), dan perilaku impulsif",
+            "Halusinasi pendengaran dan waham kejar",
+            "Cemas berlebihan, panik, dan perilaku menghindar"
+        ],
+        "answer": 1,
+        "explanation": "Episode manik pada gangguan bipolar ditandai dengan mood yang meningkat secara abnormal (euforia atau iritabel), peningkatan aktivitas atau energi, banyak bicara, penurunan kebutuhan tidur, flight of ideas, dan perilaku berisiko."
+    },
+    {
+        "question": "Pemeriksaan laboratorium untuk menilai fungsi ginjal yang paling umum adalah...",
+        "options": [
+            "Kadar SGOT dan SGPT",
+            "Kadar ureum dan kreatinin serum",
+            "Kadar bilirubin total dan direk",
+            "Kadar hemoglobin dan hematokrit"
+        ],
+        "answer": 1,
+        "explanation": "Ureum (Blood Urea Nitrogen/BUN) dan kreatinin serum adalah produk sisa metabolisme yang diekskresikan oleh ginjal. Peningkatan kadarnya dalam darah menunjukkan penurunan fungsi ginjal."
+    },
+    {
+        "question": "Seorang pasien mengalami cedera akibat menghirup asap tebal saat kebakaran rumah. Pasien batuk-batuk, suara serak, dan ada jelaga di hidung/mulut. Komplikasi pernapasan yang paling dikhawatirkan adalah...",
+        "options": [
+            "Pneumonia aspirasi",
+            "Edema laring dan obstruksi jalan napas atas",
+            "Bronkiektasis",
+            "Fibrosis paru"
+        ],
+        "answer": 1,
+        "explanation": "Inhalasi asap panas dan toksik dapat menyebabkan inflamasi dan edema pada jalan napas atas (laring, trakea), yang berisiko menyebabkan obstruksi jalan napas akut. Keracunan karbon monoksida juga merupakan risiko."
+    },
+    {
+        "question": "Pendidikan kesehatan yang penting bagi pasien yang baru dipasang alat pacu jantung permanen (pacemaker) meliputi...",
+        "options": [
+            "Menghindari semua perangkat elektronik",
+            "Cara merawat luka insisi, mengenali tanda infeksi, batasan aktivitas awal, dan pentingnya follow-up rutin",
+            "Tidak boleh mendekati microwave",
+            "Mengganti baterai pacemaker sendiri di rumah"
+        ],
+        "answer": 1,
+        "explanation": "Edukasi meliputi perawatan luka, tanda infeksi, pembatasan aktivitas lengan sisi pemasangan untuk sementara, menghindari medan elektromagnetik kuat, dan jadwal kontrol untuk pemeriksaan fungsi pacemaker."
+    },
+    {
+        "question": "Seorang pasien mengalami dislokasi sendi bahu anterior. Tanda klinis yang khas adalah...",
+        "options": [
+            "Lengan dalam posisi adduksi dan rotasi internal",
+            "Lengan dalam posisi abduksi dan rotasi eksternal, kontur bahu rata (hilang lengkung deltoid)",
+            "Pasien dapat menyentuh bahu sisi kontralateral dengan tangan sisi yang cedera",
+            "Tidak ada nyeri saat lengan digerakkan"
+        ],
+        "answer": 1,
+        "explanation": "Pada dislokasi bahu anterior (paling umum), kepala humerus bergeser ke depan dan bawah. Pasien akan menahan lengan dalam posisi sedikit abduksi dan rotasi eksternal, dan terdapat deformitas bahu (hilangnya kontur bulat)."
+    },
+    {
+        "question": "Obat antikoagulan Heparin bekerja dengan cara...",
+        "options": [
+            "Menghambat sintesis vitamin K di hati",
+            "Mengaktivasi antitrombin III, yang kemudian menginaktivasi trombin dan faktor Xa",
+            "Menghambat agregasi trombosit",
+            "Melarutkan bekuan darah yang sudah terbentuk (fibrinolitik)"
+        ],
+        "answer": 1,
+        "explanation": "Heparin bekerja dengan cara mengikat dan mengaktivasi antitrombin III. Kompleks heparin-antitrombin III ini kemudian secara cepat menginaktivasi faktor-faktor pembekuan, terutama trombin (faktor IIa) dan faktor Xa."
+    },
+    // Soal ke-171
+    {
+        "question": "Seorang pasien datang dengan keluhan nyeri hebat pada mata kanan, penglihatan kabur mendadak, mual, muntah, dan melihat halo di sekitar lampu. Pemeriksaan menunjukkan mata merah, kornea keruh, dan pupil mid-dilatasi. Diagnosis yang paling mungkin adalah...",
+        "options": [
+            "Konjungtivitis akut",
+            "Uveitis anterior",
+            "Glaukoma sudut tertutup akut",
+            "Ablasio retina"
+        ],
+        "answer": 2,
+        "explanation": "Kombinasi nyeri mata hebat, penurunan visus akut, mual/muntah, halo, mata merah, kornea edema, dan pupil mid-dilatasi non-reaktif adalah tanda klasik serangan glaukoma sudut tertutup akut, suatu kegawatdaruratan oftalmologi."
+    },
+    {
+        "question": "Seorang pasien mengalami perdarahan pasca persalinan (PPH) masif. Selain tindakan resusitasi cairan dan transfusi, tindakan untuk menghentikan perdarahan dari atonia uteri adalah...",
+        "options": [
+            "Pemberian antibiotik spektrum luas",
+            "Masase uterus dan pemberian obat uterotonika (misalnya Oksitosin, Misoprostol)",
+            "Segera melakukan histerektomi",
+            "Memasang tampon vagina"
+        ],
+        "answer": 1,
+        "explanation": "Atonia uteri (kegagalan uterus berkontraksi setelah persalinan) adalah penyebab PPH tersering. Manajemen meliputi masase fundus uteri dan pemberian obat uterotonika untuk merangsang kontraksi uterus."
+    },
+    {
+        "question": "Penyakit Menier ditandai dengan trias gejala klasik yaitu...",
+        "options": [
+            "Demam, sakit kepala, kaku kuduk",
+            "Vertigo episodik, tinitus (telinga berdenging), dan gangguan pendengaran sensorineural fluktuatif",
+            "Nyeri dada, sesak napas, palpitasi",
+            "Poliuria, polidipsia, polifagia"
+        ],
+        "answer": 1,
+        "explanation": "Penyakit Meniere adalah gangguan telinga dalam yang ditandai dengan episode vertigo berulang, tinitus, rasa penuh di telinga, dan gangguan pendengaran yang berfluktuasi."
+    },
+    {
+        "question": "Perawat sedang menjelaskan tentang diet rendah garam kepada pasien hipertensi. Contoh makanan yang tinggi natrium dan sebaiknya dihindari atau dibatasi adalah...",
+        "options": [
+            "Buah-buahan dan sayuran segar",
+            "Daging tanpa lemak dan ikan segar",
+            "Makanan olahan (sosis, kornet), makanan kaleng, makanan cepat saji, dan camilan asin",
+            "Beras merah dan gandum utuh"
+        ],
+        "answer": 2,
+        "explanation": "Makanan olahan, makanan kaleng, makanan cepat saji, dan bumbu instan seringkali mengandung natrium (garam) yang tinggi dan perlu dibatasi oleh penderita hipertensi."
+    },
+    {
+        "question": "Seorang pasien dengan diabetes mellitus mengeluh kesemutan, rasa terbakar, atau mati rasa pada kaki. Ini adalah gejala dari komplikasi kronis diabetes yang disebut...",
+        "options": [
+            "Nefropati diabetik",
+            "Retinopati diabetik",
+            "Neuropati perifer diabetik",
+            "Penyakit arteri perifer"
+        ],
+        "answer": 2,
+        "explanation": "Neuropati perifer adalah kerusakan saraf yang umum terjadi pada pasien diabetes, seringkali mempengaruhi saraf-saraf di kaki dan tangan, menyebabkan gejala sensorik seperti kesemutan, nyeri, atau mati rasa."
+    },
+    {
+        "question": "Dalam kondisi syok, tubuh berusaha melakukan kompensasi. Salah satu mekanisme kompensasi awal adalah...",
+        "options": [
+            "Vasodilatasi perifer dan bradikardia",
+            "Peningkatan curah jantung, vasokonstriksi perifer, dan takikardia",
+            "Penurunan produksi urin dan hipotensi",
+            "Pernapasan lambat dan dalam"
+        ],
+        "answer": 1,
+        "explanation": "Sebagai respons terhadap penurunan perfusi jaringan, sistem saraf simpatis teraktivasi, menyebabkan vasokonstriksi perifer (untuk mengalihkan darah ke organ vital), peningkatan denyut jantung (takikardia), dan peningkatan kontraktilitas jantung untuk mempertahankan curah jantung dan tekanan darah."
+    },
+    {
+        "question": "Pemeriksaan laboratorium yang menunjukkan peningkatan kadar bilirubin total dan direk, serta peningkatan SGOT/SGPT, mengarah pada gangguan fungsi...",
+        "options": [
+            "Ginjal",
+            "Jantung",
+            "Hati (Hepar)",
+            "Paru-paru"
+        ],
+        "answer": 2,
+        "explanation": "Bilirubin adalah pigmen empedu yang diproses di hati. SGOT (AST) dan SGPT (ALT) adalah enzim hati. Peningkatan kadar ketiganya menunjukkan adanya kerusakan atau disfungsi sel-sel hati."
+    },
+    {
+        "question": "Seorang pasien terpasang kateter Foley. Untuk mencegah infeksi saluran kemih terkait kateter (CAUTI), tindakan keperawatan yang penting adalah...",
+        "options": [
+            "Mengganti kateter setiap hari",
+            "Mempertahankan sistem drainase urin tertutup (closed system) dan menjaga kantung urin di bawah level kandung kemih",
+            "Memberikan antibiotik profilaksis rutin",
+            "Membatasi asupan cairan pasien"
+        ],
+        "answer": 1,
+        "explanation": "Menjaga sistem drainase tertutup, memastikan aliran urin lancar ke kantung penampung yang selalu berada di bawah level kandung kemih, dan kebersihan area perineal adalah kunci pencegahan CAUTI."
+    },
+    {
+        "question": "Seorang pasien yang mengalami henti jantung di luar rumah sakit dan telah dilakukan RJP oleh bystander, kemudian dibawa ke UGD. Menurut rantai kelangsungan hidup (Chain of Survival) AHA, mata rantai apa yang telah dilakukan oleh bystander tersebut?",
+        "options": [
+            "Aktivasi sistem tanggap darurat segera",
+            "RJP dini berkualitas tinggi",
+            "Defibrilasi cepat",
+            "Perawatan pasca henti jantung"
+        ],
+        "answer": 1,
+        "explanation": "RJP dini berkualitas tinggi yang dilakukan oleh penolong awam (bystander) adalah mata rantai kedua dalam Chain of Survival setelah aktivasi sistem tanggap darurat (misalnya menelepon ambulans)."
+    },
+    {
+        "question": "Seorang perawat sedang memberikan edukasi kepada keluarga pasien tentang cara perawatan luka sederhana di rumah. Hal yang ditekankan adalah pentingnya...",
+        "options": [
+            "Menggunakan salep antibiotik pada semua jenis luka",
+            "Menjaga kebersihan tangan dan teknik aseptik minimal saat mengganti balutan",
+            "Membiarkan luka terbuka tanpa balutan agar cepat kering",
+            "Membersihkan luka dengan alkohol setiap hari"
+        ],
+        "answer": 1,
+        "explanation": "Edukasi perawatan luka di rumah meliputi kebersihan tangan, cara membersihkan luka dengan lembut (misalnya dengan NaCl 0.9% atau air bersih), cara mengganti balutan, dan mengenali tanda-tanda infeksi."
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "question": "Seorang pasien skizofrenia mengatakan bahwa ia mendengar suara-suara yang menyuruhnya melukai diri. Intervensi keperawatan prioritas adalah...",
+        "options": [
+            "Memberikan obat antipsikotik sesuai jadwal",
+            "Menjauhkan benda-benda berbahaya dari pasien",
+            "Mengajak pasien berdiskusi tentang halusinasinya",
+            "Melaporkan kepada dokter segera"
+        ],
+        "answer": 1,
+        "explanation": "Keselamatan pasien adalah prioritas utama. Menjauhkan benda berbahaya mencegah pasien melukai diri akibat halusinasi pendengaran."
+    },
+    // ... soal lainnya
+]

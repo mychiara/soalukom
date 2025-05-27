@@ -1,0 +1,1985 @@
+// jiwa.js
+[
+    {
+        "question": "Seorang pasien skizofrenia mengatakan bahwa ia mendengar suara-suara yang menyuruhnya melukai diri. Intervensi keperawatan prioritas adalah...",
+        "options": [
+            "Memberikan obat antipsikotik sesuai jadwal",
+            "Menjauhkan benda-benda berbahaya dari pasien",
+            "Mengajak pasien berdiskusi tentang halusinasinya",
+            "Melaporkan kepada dokter segera"
+        ],
+        "answer": 1, // Indeks jawaban yang benar
+        "explanation": "Keselamatan pasien adalah prioritas utama. Menjauhkan benda berbahaya mencegah pasien melukai diri akibat halusinasi pendengaran."
+    },
+    {
+        "question": "Apa tujuan utama terapi aktivitas kelompok (TAK) pada pasien dengan isolasi sosial?",
+        "options": [
+            "Meningkatkan dosis obat pasien",
+            "Mengajarkan keterampilan baru",
+            "Meningkatkan interaksi sosial pasien",
+            "Mengurangi gejala waham"
+        ],
+        "answer": 2,
+        "explanation": "TAK bertujuan untuk meningkatkan kemampuan pasien dalam berinteraksi dengan orang lain dan lingkungan sosialnya."
+    },
+    {
+        "question": "Seorang pasien laki-laki usia 30 tahun dibawa ke IGD RSJ karena mengamuk dan merusak barang di rumah. Pasien tampak gelisah, bicara kacau, dan pandangan tajam. Tindakan keperawatan pertama yang harus dilakukan adalah...",
+        "options": [
+            "Memberikan obat penenang",
+            "Melakukan fiksasi fisik (restrain)",
+            "Menciptakan lingkungan yang tenang dan aman",
+            "Mengajak pasien berbicara tentang masalahnya"
+        ],
+        "answer": 2,
+        "explanation": "Prioritas utama pada pasien amuk adalah keamanan. Menciptakan lingkungan yang tenang dan aman adalah langkah awal sebelum intervensi lain. Jika pasien membahayakan diri atau orang lain, fiksasi mungkin diperlukan setelah upaya de-eskalasi verbal gagal atau tidak memungkinkan."
+    },
+    {
+        "question": "Pasien dengan diagnosis depresi berat menyatakan, 'Hidup saya tidak berguna lagi, lebih baik saya mati saja.' Respon terapeutik perawat yang paling tepat adalah...",
+        "options": [
+            "Anda tidak boleh berpikir seperti itu, banyak yang menyayangi Anda.",
+            "Apakah Anda memiliki rencana untuk mengakhiri hidup Anda?",
+            "Saya mengerti perasaan Anda, tapi cobalah untuk lebih positif.",
+            "Mari kita bicara tentang hal lain yang lebih menyenangkan."
+        ],
+        "answer": 1,
+        "explanation": "Ketika pasien mengungkapkan ide bunuh diri, perawat harus mengkaji lebih lanjut adanya rencana spesifik. Ini adalah langkah krusial dalam penilaian risiko bunuh diri."
+    },
+    {
+        "question": "Seorang pasien dengan skizofrenia paranoid menolak makan karena yakin makanannya telah diracuni. Intervensi keperawatan yang tepat adalah...",
+        "options": [
+            "Memaksa pasien untuk makan",
+            "Menawarkan makanan dalam kemasan tertutup atau yang bisa dibuka sendiri oleh pasien",
+            "Mengatakan bahwa makanannya aman dan tidak ada racun",
+            "Membiarkan pasien tidak makan sampai ia lapar"
+        ],
+        "answer": 1,
+        "explanation": "Menawarkan makanan dalam kemasan yang belum dibuka atau yang bisa dibuka sendiri oleh pasien dapat mengurangi kecurigaan dan meningkatkan kemungkinan pasien mau makan, sambil tetap menghargai keyakinannya (waham curiga)."
+    },
+    {
+        "question": "Perawat sedang melakukan pengkajian pada pasien baru di unit psikiatri. Pasien menjawab pertanyaan dengan sangat lambat dan sering terdiam lama. Teknik komunikasi yang sebaiknya digunakan perawat adalah...",
+        "options": [
+            "Mengajukan pertanyaan dengan cepat agar tidak membuang waktu",
+            "Menyelesaikan kalimat pasien untuk mempercepat jawaban",
+            "Memberikan waktu yang cukup bagi pasien untuk merespon dan menggunakan keheningan terapeutik",
+            "Mengalihkan topik pembicaraan jika pasien terlalu lama diam"
+        ],
+        "answer": 2,
+        "explanation": "Memberikan waktu yang cukup dan menggunakan keheningan terapeutik menunjukkan kesabaran dan penghargaan terhadap kondisi pasien, serta mendorong pasien untuk berbicara tanpa merasa terburu-buru."
+    },
+    {
+        "question": "Pasien yang menerima terapi Haloperidol mengeluh kaku pada otot leher dan wajah, serta kesulitan menelan. Perawat mencurigai pasien mengalami...",
+        "options": [
+            "Sindrom Neuroleptik Maligna",
+            "Reaksi Distonia Akut",
+            "Akatisia",
+            "Tardive Dyskinesia"
+        ],
+        "answer": 1,
+        "explanation": "Kaku otot leher (tortikolis), krisis okulogirik, dan kesulitan menelan adalah gejala khas Reaksi Distonia Akut, salah satu efek samping ekstrapiramidal dari antipsikotik generasi pertama seperti Haloperidol."
+    },
+    {
+        "question": "Tujuan utama pemberian terapi elektrokonvulsif (ECT) pada pasien depresi berat yang tidak merespon terhadap obat adalah...",
+        "options": [
+            "Meningkatkan nafsu makan pasien",
+            "Mengurangi efek samping obat antidepresan",
+            "Menciptakan amnesia terhadap peristiwa traumatis",
+            "Menginduksi kejang grand mal untuk memperbaiki mood secara cepat"
+        ],
+        "answer": 3,
+        "explanation": "ECT bekerja dengan menginduksi kejang grand mal terkontrol yang diyakini dapat menyebabkan perubahan neurokimia di otak, sehingga memberikan perbaikan mood yang cepat, terutama pada depresi berat yang resisten terhadap terapi lain atau dengan risiko bunuh diri tinggi."
+    },
+    {
+        "question": "Seorang pasien dengan gangguan bipolar fase manik sangat aktif, berbicara cepat dan melompat-lompat dari satu topik ke topik lain (flight of ideas). Prioritas diagnosa keperawatan adalah...",
+        "options": [
+            "Risiko cedera",
+            "Gangguan pola tidur",
+            "Perubahan proses pikir",
+            "Defisit perawatan diri"
+        ],
+        "answer": 0,
+        "explanation": "Pasien manik dengan aktivitas motorik berlebih dan flight of ideas berisiko tinggi mengalami cedera akibat kelelahan, dehidrasi, atau kecelakaan. Keselamatan adalah prioritas."
+    },
+    {
+        "question": "Keluarga pasien skizofrenia bertanya tentang pentingnya minum obat secara teratur meskipun pasien sudah merasa lebih baik. Pendidikan kesehatan yang tepat disampaikan perawat adalah...",
+        "options": [
+            "Obat boleh dihentikan jika sudah merasa baikan selama 1 bulan.",
+            "Pengobatan antipsikotik bersifat jangka panjang untuk mencegah kekambuhan.",
+            "Dosis obat dapat dikurangi sendiri jika gejala sudah hilang.",
+            "Obat hanya perlu diminum saat gejala muncul kembali."
+        ],
+        "answer": 1,
+        "explanation": "Obat antipsikotik untuk skizofrenia biasanya bersifat jangka panjang, bahkan seumur hidup, untuk mengontrol gejala dan mencegah kekambuhan. Menghentikan obat tanpa konsultasi dokter berisiko tinggi menyebabkan relapse."
+    },
+    {
+        "question": "Seorang pasien wanita usia 25 tahun, baru saja kehilangan pekerjaannya. Ia datang ke klinik dengan keluhan sering menangis, sulit tidur, dan kehilangan minat pada aktivitas yang biasa ia nikmati selama 3 minggu terakhir. Pengkajian yang paling penting dilakukan perawat adalah...",
+        "options": [
+            "Pemeriksaan tekanan darah dan nadi",
+            "Pengkajian risiko bunuh diri",
+            "Pengkajian riwayat penyakit keluarga",
+            "Pemeriksaan kadar gula darah"
+        ],
+        "answer": 1,
+        "explanation": "Gejala yang dialami pasien (menangis, sulit tidur, anhedonia) merupakan indikasi depresi. Kehilangan pekerjaan adalah stresor. Pengkajian risiko bunuh diri adalah prioritas pada pasien dengan gejala depresi."
+    },
+    {
+        "question": "Manakah intervensi keperawatan yang paling tepat untuk pasien dengan halusinasi pendengaran yang bersifat mengancam?",
+        "options": [
+            "Mengatakan bahwa suara itu tidak nyata",
+            "Mendengarkan apa yang dikatakan suara tersebut kepada pasien",
+            "Menganjurkan pasien untuk tidak menghiraukan suara tersebut",
+            "Memvalidasi perasaan pasien dan menawarkan distraksi atau realitas"
+        ],
+        "answer": 3,
+        "explanation": "Memvalidasi perasaan pasien (misalnya, 'Saya percaya Anda mendengar suara itu dan itu pasti menakutkan') lalu menawarkan orientasi realitas ('Saya tidak mendengar suara itu') atau distraksi (mengajak bicara topik lain, melakukan aktivitas) adalah pendekatan terapeutik."
+    },
+    {
+        "question": "Seorang pasien dengan waham kebesaran menyatakan bahwa ia adalah utusan Tuhan yang akan menyelamatkan dunia. Respon perawat yang paling terapeutik adalah...",
+        "options": [
+            "Meyakinkan pasien bahwa ia bukan utusan Tuhan",
+            "Mengabaikan pernyataan pasien dan mengganti topik",
+            "Mendengarkan tanpa memperdebatkan dan fokus pada realitas saat ini",
+            "Menyetujui pernyataan pasien untuk membangun rapport"
+        ],
+        "answer": 2,
+        "explanation": "Memperdebatkan waham tidak efektif dan dapat merusak hubungan terapeutik. Mengabaikan juga tidak. Mendengarkan dengan empati tanpa menyetujui atau menentang waham, dan kemudian mengalihkan fokus ke realitas (misalnya, 'Saya mengerti Anda merasa demikian, sekarang waktunya makan siang') adalah pendekatan yang baik."
+    },
+    {
+        "question": "Efek samping umum dari obat antidepresan golongan SSRI (Selective Serotonin Reuptake Inhibitor) yang perlu diinformasikan kepada pasien adalah...",
+        "options": [
+            "Hipotensi ortostatik dan mulut kering",
+            "Gangguan pencernaan (mual, diare) dan disfungsi seksual",
+            "Tremor kasar dan rigiditas otot",
+            "Peningkatan berat badan signifikan dan sedasi"
+        ],
+        "answer": 1,
+        "explanation": "SSRI sering menyebabkan efek samping gastrointestinal (mual, muntah, diare) terutama pada awal terapi, dan disfungsi seksual (penurunan libido, anorgasmia) yang bisa menetap."
+    },
+    {
+        "question": "Seorang pasien lansia dengan demensia tampak bingung, gelisah, dan berusaha mencabut infus pada malam hari. Tindakan keperawatan prioritas adalah...",
+        "options": [
+            "Memberikan obat tidur dosis tinggi",
+            "Melakukan restrain pada tangan pasien",
+            "Melakukan reorientasi, menciptakan lingkungan yang tenang, dan memastikan keamanan",
+            "Memanggil keluarga untuk menemani pasien sepanjang malam"
+        ],
+        "answer": 2,
+        "explanation": "Pasien demensia sering mengalami 'sundowning syndrome'. Prioritasnya adalah reorientasi (mengingatkan waktu, tempat), menciptakan lingkungan minim stimulus, memastikan pencahayaan cukup, dan keamanan (misalnya, pagar tempat tidur dinaikkan, alarm tempat tidur). Restrain adalah pilihan terakhir."
+    },
+    {
+        "question": "Teknik 'thought stopping' diajarkan kepada pasien untuk mengatasi...",
+        "options": [
+            "Halusinasi visual",
+            "Waham curiga",
+            "Pikiran obsesif atau ruminasi negatif",
+            "Perilaku kompulsif"
+        ],
+        "answer": 2,
+        "explanation": "Thought stopping adalah teknik perilaku kognitif yang bertujuan untuk menghentikan atau menginterupsi aliran pikiran negatif, obsesif, atau ruminatif yang tidak diinginkan."
+    },
+    {
+        "question": "Pasien dengan gangguan cemas umum (Generalized Anxiety Disorder) sering mengeluhkan gejala fisik seperti jantung berdebar, sesak napas ringan, dan ketegangan otot. Intervensi non-farmakologis yang dapat diajarkan perawat adalah...",
+        "options": [
+            "Teknik relaksasi napas dalam dan progresif",
+            "Terapi kejang listrik (ECT)",
+            "Pemberian kopi untuk meningkatkan konsentrasi",
+            "Menghindari semua situasi yang memicu cemas"
+        ],
+        "answer": 0,
+        "explanation": "Teknik relaksasi napas dalam dan relaksasi otot progresif dapat membantu pasien mengurangi ketegangan fisik dan meredakan gejala cemas."
+    },
+    {
+        "question": "Seorang remaja putri dibawa ke klinik karena penurunan berat badan drastis, amenorea, dan ketakutan berlebih akan gemuk meskipun BB sudah sangat kurang. Diagnosa keperawatan yang paling mungkin adalah...",
+        "options": [
+            "Gangguan citra tubuh",
+            "Ketidakseimbangan nutrisi: kurang dari kebutuhan tubuh",
+            "Harga diri rendah kronis",
+            "Koping tidak efektif"
+        ],
+        "answer": 1, // Walaupun gangguan citra tubuh juga ada, kebutuhan fisiologis nutrisi lebih prioritas.
+        "explanation": "Gejala klinis mengarah pada Anoreksia Nervosa. Penurunan BB drastis dan status nutrisi yang buruk menjadi prioritas karena mengancam kondisi fisiologis pasien. Gangguan citra tubuh adalah inti masalah psikologisnya."
+    },
+    {
+        "question": "Prinsip utama dalam melakukan komunikasi terapeutik dengan pasien yang mengalami gangguan jiwa adalah...",
+        "options": [
+            "Memberikan banyak nasihat agar pasien cepat sembuh",
+            "Menunjukkan sikap empati, tulus, dan menghargai",
+            "Selalu menyetujui semua perkataan pasien",
+            "Menjaga jarak emosional yang kaku dengan pasien"
+        ],
+        "answer": 1,
+        "explanation": "Empati (memahami perasaan pasien), ketulusan (genuine), dan penghargaan (respect/unconditional positive regard) adalah pilar komunikasi terapeutik yang efektif."
+    },
+    {
+        "question": "Perawat melakukan pemeriksaan tekanan darah pada pasien yang sedang dalam fase manik. Pasien sangat gelisah dan tidak mau diam. Tindakan perawat yang tepat adalah...",
+        "options": [
+            "Meminta bantuan 2 orang lain untuk memegangi pasien",
+            "Menunda pemeriksaan sampai pasien lebih tenang",
+            "Menjelaskan pentingnya pemeriksaan dengan suara keras agar didengar",
+            "Mencoba mengukur dengan cepat meskipun pasien bergerak-gerak"
+        ],
+        "answer": 1,
+        "explanation": "Jika kondisi pasien tidak memungkinkan untuk pemeriksaan akurat dan dapat meningkatkan agitasi, menunda sementara sampai pasien sedikit lebih tenang atau setelah intervensi penenangan lain adalah pilihan bijak, kecuali ada indikasi vital sign darurat."
+    },
+    {
+        "question": "Seorang pasien yang baru didiagnosis skizofrenia diberikan edukasi tentang obat Risperidone. Informasi penting terkait efek samping yang perlu disampaikan adalah...",
+        "options": [
+            "Risiko agranulositosis yang memerlukan pemantauan sel darah putih rutin",
+            "Kemungkinan peningkatan berat badan dan risiko diabetes",
+            "Sering menyebabkan insomnia berat",
+            "Perlu menghindari makanan yang mengandung tiramin"
+        ],
+        "answer": 1,
+        "explanation": "Risperidone adalah antipsikotik atipikal yang sering dikaitkan dengan peningkatan berat badan, perubahan metabolik (risiko diabetes, dislipidemia). Agranulositosis lebih khas untuk Clozapine. Insomnia bukan efek samping utama. Diet tiramin untuk MAOI."
+    },
+    {
+        "question": "Pasien dengan Gangguan Obsesif-Kompulsif (OCD) berulang kali mencuci tangan hingga kulitnya iritasi. Intervensi perilaku yang dapat membantu adalah...",
+        "options": [
+            "Melarang pasien mencuci tangan sama sekali",
+            "Mengizinkan pasien mencuci tangan sepuasnya untuk mengurangi cemas",
+            "Terapi pemaparan dan pencegahan respons (Exposure and Response Prevention - ERP)",
+            "Memberikan hukuman jika pasien mencuci tangan berlebihan"
+        ],
+        "answer": 2,
+        "explanation": "ERP adalah terapi pilihan untuk OCD. Pasien secara bertahap dipaparkan pada pemicu obsesi (misalnya, kotoran) dan dicegah melakukan respons kompulsif (mencuci tangan), sehingga belajar bahwa kecemasan akan menurun dengan sendirinya tanpa ritual."
+    },
+    {
+        "question": "Seorang ibu membawa anaknya usia 7 tahun ke klinik karena anak tersebut sering mengompol pada malam hari padahal sebelumnya sudah bisa toilet training. Pengkajian awal yang penting dilakukan perawat adalah...",
+        "options": [
+            "Menanyakan apakah ada riwayat trauma pada anak",
+            "Memeriksa apakah ada infeksi saluran kemih atau kondisi medis lain",
+            "Menasihati ibu untuk tidak memarahi anak",
+            "Menyarankan untuk membatasi minum anak sebelum tidur"
+        ],
+        "answer": 1,
+        "explanation": "Enuresis sekunder (mengompol setelah periode kering) pada anak bisa disebabkan oleh stres, faktor emosional, atau kondisi medis. Penting untuk menyingkirkan penyebab organik seperti ISK atau diabetes sebelum mengeksplorasi faktor psikologis."
+    },
+    {
+        "question": "Pasien dengan riwayat penyalahgunaan alkohol sedang menjalani detoksifikasi. Perawat harus waspada terhadap gejala putus alkohol seperti...",
+        "options": [
+            "Bradikardia, hipotensi, dan letargi",
+            "Tremor, agitasi, takikardia, dan halusinasi",
+            "Pupil miosis, depresi pernapasan, dan euforia",
+            "Mulut kering, konstipasi, dan retensi urin"
+        ],
+        "answer": 1,
+        "explanation": "Gejala putus alkohol (alcohol withdrawal syndrome) meliputi tremor tangan, agitasi, insomnia, mual/muntah, takikardia, hipertensi, berkeringat, dan pada kasus berat bisa terjadi kejang serta halusinasi (delirium tremens)."
+    },
+    {
+        "question": "Seorang pasien skizofrenia mengeluh, 'Saya tidak bisa tidur karena ada serangga merayap di kulit saya sepanjang malam.' Jenis halusinasi yang dialami pasien adalah...",
+        "options": [
+            "Halusinasi auditorik",
+            "Halusinasi visual",
+            "Halusinasi taktil",
+            "Halusinasi olfaktorius"
+        ],
+        "answer": 2,
+        "explanation": "Halusinasi taktil adalah persepsi sensori perabaan tanpa adanya stimulus eksternal yang nyata, seperti merasa ada serangga merayap di kulit (formikasi)."
+    },
+    {
+        "question": "Dalam Terapi Aktivitas Kelompok (TAK) Sosialisasi, perawat meminta setiap anggota kelompok untuk memperkenalkan diri dan menyebutkan satu hobi. Tujuan dari sesi ini adalah...",
+        "options": [
+            "Mengidentifikasi pemimpin dalam kelompok",
+            "Melatih kemampuan anggota untuk memulai interaksi dan mengenal orang lain",
+            "Mengevaluasi tingkat kecemasan masing-masing anggota",
+            "Mengajarkan keterampilan baru secara langsung"
+        ],
+        "answer": 1,
+        "explanation": "Sesi perkenalan dalam TAK Sosialisasi bertujuan untuk melatih anggota memulai percakapan, mengungkapkan diri secara sederhana, dan mengenal anggota lain, yang merupakan dasar dari interaksi sosial."
+    },
+    {
+        "question": "Pasien yang mengonsumsi Lithium Carbonate untuk gangguan bipolar perlu diedukasi untuk...",
+        "options": [
+            "Mengurangi asupan garam dan cairan",
+            "Mempertahankan asupan garam dan cairan yang stabil dan adekuat",
+            "Mengonsumsi makanan tinggi kalium",
+            "Menghindari sinar matahari langsung"
+        ],
+        "answer": 1,
+        "explanation": "Kadar lithium dalam darah sangat dipengaruhi oleh keseimbangan natrium dan cairan. Dehidrasi atau penurunan asupan natrium dapat meningkatkan kadar lithium hingga toksik. Sebaliknya, asupan natrium berlebih dapat menurunkan kadar lithium."
+    },
+    {
+        "question": "Seorang pasien pasca trauma bencana alam sering terbangun malam hari karena mimpi buruk tentang kejadian tersebut dan menghindari tempat yang mengingatkannya pada trauma. Kemungkinan diagnosis yang dialami pasien adalah...",
+        "options": [
+            "Gangguan Stres Akut",
+            "Gangguan Penyesuaian",
+            "Gangguan Stres Pasca Trauma (PTSD)",
+            "Gangguan Cemas Menyeluruh"
+        ],
+        "answer": 2,
+        "explanation": "Gejala re-experiencing (mimpi buruk), avoidance (menghindari pemicu), dan hyperarousal (gangguan tidur) yang berlangsung lebih dari satu bulan setelah kejadian traumatis adalah karakteristik PTSD."
+    },
+    {
+        "question": "Perawat melakukan pengkajian pada pasien yang tampak murung, tidak mau kontak mata, dan mengatakan 'Saya orang yang gagal dan tidak berguna'. Diagnosa keperawatan yang paling sesuai adalah...",
+        "options": [
+            "Isolasi sosial",
+            "Harga diri rendah kronis",
+            "Koping individu tidak efektif",
+            "Risiko perilaku kekerasan"
+        ],
+        "answer": 1,
+        "explanation": "Pernyataan negatif tentang diri sendiri ('gagal', 'tidak berguna') serta perilaku non-verbal (murung, tidak mau kontak mata) adalah indikator kuat dari harga diri rendah."
+    },
+    {
+        "question": "Intervensi keperawatan untuk pasien dengan harga diri rendah kronis berfokus pada...",
+        "options": [
+            "Membantu pasien mengidentifikasi dan mengembangkan aspek positif diri",
+            "Mengisolasi pasien dari kritik orang lain",
+            "Memberikan banyak pujian meskipun tidak sesuai kenyataan",
+            "Mengambil alih semua tugas pasien untuk mengurangi beban"
+        ],
+        "answer": 0,
+        "explanation": "Membantu pasien mengenali kekuatan dan aspek positif yang dimiliki, serta melatih kemampuan tersebut adalah cara efektif untuk membangun kembali harga diri secara realistis."
+    },
+    // Mulai dari sini, soal akan lebih bervariasi dan mencoba mencakup semua aspek materi
+    {
+        "question": "Seorang pasien laki-laki berusia 45 tahun dengan riwayat skizofrenia dibawa ke RSJ karena menolak minum obat selama 2 minggu dan mulai berbicara sendiri serta tertawa tanpa sebab. Pengkajian awal yang paling penting adalah...",
+        "options": [
+            "Status nutrisi pasien",
+            "Adanya ide atau perilaku bunuh diri/membahayakan orang lain",
+            "Pola tidur pasien",
+            "Riwayat alergi obat"
+        ],
+        "answer": 1,
+        "explanation": "Pada pasien skizofrenia yang relapse karena putus obat, pengkajian risiko keselamatan (bunuh diri, melukai orang lain, atau perilaku membahayakan akibat halusinasi/waham) adalah prioritas utama."
+    },
+    {
+        "question": "Pasien dengan gangguan cemas panik mengalami serangan panik di ruang tunggu. Ia merasa sesak napas, jantung berdebar kencang, dan takut mati. Tindakan pertama perawat adalah...",
+        "options": [
+            "Segera memanggil dokter",
+            "Memberikan kantong kertas untuk dihirup",
+            "Menemani pasien, berbicara dengan tenang, dan membantu mengatur napas",
+            "Mengajak pasien berjalan-jalan untuk mengalihkan perhatian"
+        ],
+        "answer": 2,
+        "explanation": "Saat serangan panik, penting untuk tetap bersama pasien, memberikan rasa aman, berbicara dengan tenang, dan memandu teknik pernapasan (misalnya, napas dalam perlahan) untuk membantu mengurangi hiperventilasi dan gejala fisik."
+    },
+    {
+        "question": "Seorang pasien yang sedang dalam terapi Clozapine mengeluh demam tinggi, sakit tenggorokan, dan lemas. Perawat harus segera mencurigai adanya...",
+        "options": [
+            "Sindrom Neuroleptik Maligna",
+            "Agranulositosis",
+            "Efek samping antikolinergik",
+            "Hipotensi ortostatik"
+        ],
+        "answer": 1,
+        "explanation": "Demam, sakit tenggorokan, dan lemas adalah gejala klasik infeksi yang bisa menjadi tanda agranulositosis (penurunan drastis sel darah putih), efek samping serius dan potensial fatal dari Clozapine. Perlu pemeriksaan darah segera."
+    },
+    {
+        "question": "Manakah yang merupakan contoh komunikasi nonverbal yang menunjukkan sikap mendengar aktif dari perawat?",
+        "options": [
+            "Menyilangkan tangan di dada sambil mendengarkan",
+            "Mempertahankan kontak mata yang wajar dan mengangguk sesekali",
+            "Melihat ke arah lain saat pasien berbicara",
+            "Sering menyela pembicaraan pasien dengan pertanyaan"
+        ],
+        "answer": 1,
+        "explanation": "Kontak mata yang sesuai, postur tubuh terbuka (tidak menyilangkan tangan), dan anggukan menunjukkan bahwa perawat memperhatikan dan tertarik pada apa yang disampaikan pasien."
+    },
+    {
+        "question": "Seorang pasien dengan demensia mengalami disorientasi waktu dan tempat. Intervensi untuk membantu orientasi pasien adalah...",
+        "options": [
+            "Memasang jam dinding besar dan kalender di kamar pasien",
+            "Membiarkan pasien tidur sepanjang hari agar tidak gelisah",
+            "Sering bertanya kepada pasien, 'Anda tahu hari ini hari apa?'",
+            "Mengunci pintu kamar pasien agar tidak keluar"
+        ],
+        "answer": 0,
+        "explanation": "Alat bantu visual seperti jam besar dan kalender yang mudah terlihat, serta rutinitas harian yang terstruktur, dapat membantu pasien demensia mempertahankan orientasi terhadap waktu dan lingkungan."
+    },
+    {
+        "question": "Seorang pasien dengan waham paranoid menuduh perawat mencoba meracuninya melalui obat yang diberikan. Respons perawat yang paling tepat adalah...",
+        "options": [
+            "'Saya tidak akan meracuni Anda, obat ini untuk membantu Anda.'",
+            "'Jika Anda tidak mau minum obat, saya akan memanggil dokter.'",
+            "'Saya mengerti Anda merasa curiga, tapi obat ini penting untuk kesehatan Anda. Apakah Anda mau memeriksanya bersama saya?'",
+            "'Tuduhan Anda tidak berdasar, saya hanya menjalankan tugas.'"
+        ],
+        "answer": 2,
+        "explanation": "Memvalidasi perasaan pasien ('Saya mengerti Anda merasa curiga') tanpa menyetujui wahamnya, lalu menawarkan cara untuk mengurangi kecurigaan (misalnya, memeriksa obat bersama, memberikan obat dalam kemasan utuh) adalah pendekatan terapeutik."
+    },
+    {
+        "question": "Pasien mengeluh mulut kering, pandangan kabur, dan konstipasi setelah memulai terapi Amitriptyline (antidepresan trisiklik). Perawat menjelaskan bahwa ini adalah efek samping...",
+        "options": [
+            "Serotonergik",
+            "Antikolinergik",
+            "Ekstrapiramidal",
+            "Histaminergik"
+        ],
+        "answer": 1,
+        "explanation": "Mulut kering, pandangan kabur, konstipasi, dan retensi urin adalah efek samping antikolinergik yang umum dari antidepresan trisiklik dan beberapa antipsikotik."
+    },
+    {
+        "question": "Seorang anak usia 10 tahun menunjukkan perilaku menentang, sering marah, berdebat dengan orang dewasa, dan sengaja mengganggu orang lain. Perilaku ini konsisten dengan...",
+        "options": [
+            "Attention Deficit Hyperactivity Disorder (ADHD)",
+            "Gangguan Tingkah Laku (Conduct Disorder)",
+            "Gangguan Oposisional Menentang (Oppositional Defiant Disorder - ODD)",
+            "Gangguan Spektrum Autisme"
+        ],
+        "answer": 2,
+        "explanation": "ODD ditandai dengan pola perilaku negativistik, menentang, tidak patuh, dan permusuhan terhadap figur otoritas, yang berlangsung minimal 6 bulan."
+    },
+    {
+        "question": "Tujuan utama dari fase terminasi dalam hubungan terapeutik perawat-pasien adalah...",
+        "options": [
+            "Membangun kepercayaan dan rapport dengan pasien",
+            "Mengidentifikasi masalah utama pasien",
+            "Mengevaluasi pencapaian tujuan dan mempersiapkan perpisahan",
+            "Merencanakan intervensi keperawatan"
+        ],
+        "answer": 2,
+        "explanation": "Fase terminasi melibatkan review pencapaian tujuan terapi, membahas perasaan terkait perpisahan, dan merencanakan tindak lanjut jika diperlukan. Ini adalah tahap akhir dari hubungan terapeutik."
+    },
+    {
+        "question": "Seorang pasien dengan skizofrenia mengalami 'alogia'. Hal ini merujuk pada...",
+        "options": [
+            "Kehilangan kemampuan untuk merasakan kesenangan",
+            "Kurangnya motivasi atau inisiatif",
+            "Kemiskinan pembicaraan atau isi pembicaraan",
+            "Ekspresi emosi yang datar atau terbatas"
+        ],
+        "answer": 2,
+        "explanation": "Alogia adalah salah satu gejala negatif skizofrenia, ditandai dengan miskinnya kuantitas atau isi pembicaraan. Pasien mungkin menjawab dengan singkat atau tidak elaboratif."
+    },
+    {
+        "question": "Seorang pasien perempuan mengeluh nyeri dada, palpitasi, dan perasaan akan pingsan. Pemeriksaan fisik dan EKG menunjukkan hasil normal. Pasien memiliki riwayat serangan serupa yang muncul tiba-tiba. Kemungkinan besar pasien mengalami...",
+        "options": [
+            "Serangan jantung",
+            "Hipoglikemia",
+            "Serangan panik",
+            "Reaksi alergi"
+        ],
+        "answer": 2,
+        "explanation": "Gejala fisik intens yang muncul mendadak tanpa penyebab medis yang jelas, disertai rasa takut, adalah karakteristik serangan panik. Penting untuk menyingkirkan kondisi medis terlebih dahulu."
+    },
+    {
+        "question": "Perawat sedang memberikan pendidikan kesehatan tentang pencegahan kekambuhan pada pasien skizofrenia yang akan pulang. Aspek yang paling penting ditekankan adalah...",
+        "options": [
+            "Menghindari semua bentuk stres",
+            "Pentingnya kepatuhan minum obat sesuai anjuran",
+            "Mencari pekerjaan sesegera mungkin",
+            "Mengikuti semua kegiatan sosial di masyarakat"
+        ],
+        "answer": 1,
+        "explanation": "Kepatuhan terhadap pengobatan adalah faktor krusial dalam mencegah kekambuhan pada skizofrenia. Mengenali gejala awal relapse dan manajemen stres juga penting, tapi adherence obat adalah fondasi."
+    },
+    {
+        "question": "Seorang pasien dengan gangguan kepribadian borderline (Borderline Personality Disorder - BPD) menunjukkan perilaku 'splitting', yaitu...",
+        "options": [
+            "Melukai diri sendiri untuk mengurangi tekanan emosional",
+            "Mengidealisasi seseorang lalu tiba-tiba mendevaluasinya secara ekstrem",
+            "Mengalami episode disosiasi saat stres",
+            "Memiliki ketakutan yang intens akan ditinggalkan"
+        ],
+        "answer": 1,
+        "explanation": "Splitting adalah mekanisme pertahanan di mana individu dengan BPD melihat orang lain atau situasi sebagai 'semua baik' atau 'semua buruk', tanpa nuansa abu-abu. Ini menyebabkan ketidakstabilan dalam hubungan interpersonal."
+    },
+    {
+        "question": "Seorang pasien mengatakan, 'Saya yakin ada konspirasi besar yang ingin mencelakai saya, mereka memasang alat penyadap di mana-mana.' Jenis waham yang dialami pasien adalah...",
+        "options": [
+            "Waham kebesaran (grandiose)",
+            "Waham curiga/persekutorik (persecutory)",
+            "Waham nihilistik",
+            "Waham somatik"
+        ],
+        "answer": 1,
+        "explanation": "Waham curiga atau persekutorik adalah keyakinan salah bahwa seseorang atau sekelompok orang berniat jahat atau ingin mencelakai dirinya."
+    },
+    {
+        "question": "Perawat sedang melakukan pemeriksaan tanda vital pada pasien yang baru masuk. Nadi pasien teraba 110x/menit, tekanan darah 140/90 mmHg, suhu 37.0°C, respirasi 22x/menit. Pasien tampak cemas. Interpretasi yang paling mungkin adalah...",
+        "options": [
+            "Pasien mengalami krisis hipertensi",
+            "Pasien mengalami infeksi berat",
+            "Tanda vital meningkat kemungkinan akibat kecemasan",
+            "Pasien mengalami dehidrasi"
+        ],
+        "answer": 2,
+        "explanation": "Peningkatan nadi, tekanan darah, dan respirasi bisa menjadi respons fisiologis terhadap kecemasan. Meskipun perlu diobservasi, ini sering terlihat pada pasien yang baru masuk lingkungan asing atau merasa terancam."
+    },
+    {
+        "question": "Seorang pasien dengan depresi mayor menolak untuk mandi dan mengganti pakaian selama beberapa hari. Diagnosa keperawatan yang relevan adalah...",
+        "options": [
+            "Defisit perawatan diri: Mandi/Higiene",
+            "Gangguan citra tubuh",
+            "Isolasi sosial",
+            "Risiko infeksi"
+        ],
+        "answer": 0,
+        "explanation": "Ketidakmampuan atau penolakan untuk melakukan aktivitas perawatan diri dasar seperti mandi dan menjaga kebersihan diri adalah manifestasi dari defisit perawatan diri, sering terlihat pada depresi berat."
+    },
+    {
+        "question": "Intervensi keperawatan untuk membantu pasien mengatasi defisit perawatan diri akibat depresi adalah...",
+        "options": [
+            "Memandikan pasien setiap hari tanpa melibatkan pasien",
+            "Memberikan pujian jika pasien berhasil melakukan perawatan diri meskipun sedikit",
+            "Membiarkan pasien sampai ia mau merawat diri sendiri",
+            "Mengkritik pasien agar termotivasi merawat diri"
+        ],
+        "answer": 1,
+        "explanation": "Memberikan dukungan, bantuan sesuai kebutuhan, dan penguatan positif (pujian) untuk setiap upaya kecil perawatan diri dapat membantu meningkatkan motivasi dan kemampuan pasien secara bertahap."
+    },
+    {
+        "question": "Seorang pasien mengungkapkan kepada perawat, 'Saya merasa sangat sedih dan putus asa, tapi saya tidak ingin orang lain tahu karena saya malu.' Respon perawat yang menunjukkan empati adalah...",
+        "options": [
+            "'Tidak apa-apa, semua orang kadang merasa sedih.'",
+            "'Anda tidak perlu malu, perasaan itu wajar.'",
+            "'Saya bisa melihat ini sangat berat bagi Anda, dan butuh keberanian untuk membicarakannya.'",
+            "'Mungkin sebaiknya Anda mencoba lebih ceria.'"
+        ],
+        "answer": 2,
+        "explanation": "Respon ini memvalidasi perasaan pasien ('berat bagi Anda'), mengakui usahanya ('butuh keberanian'), dan menunjukkan pemahaman tanpa meremehkan atau memberikan solusi instan."
+    },
+    {
+        "question": "Seorang pasien lansia dengan riwayat stroke menunjukkan kesulitan berbicara, hanya mampu mengucapkan beberapa kata yang tidak jelas. Ini disebut...",
+        "options": [
+            "Afasia motorik (Broca)",
+            "Afasia sensorik (Wernicke)",
+            "Disartria",
+            "Apraksia bicara"
+        ],
+        "answer": 0, // Atau bisa juga disartria, tergantung detailnya. Tapi afasia motorik lebih ke kesulitan membentuk kata.
+        "explanation": "Afasia motorik (Broca) ditandai dengan kesulitan dalam memproduksi ucapan (berbicara terbata-bata, tidak lancar) meskipun pemahaman bahasa relatif baik. Disartria adalah kesulitan artikulasi karena kelemahan otot bicara."
+    },
+    {
+        "question": "Efek samping ekstrapiramidal (EPS) yang ditandai dengan kegelisahan motorik, perasaan tidak bisa diam, dan kebutuhan untuk terus bergerak adalah...",
+        "options": [
+            "Distonia",
+            "Akatisia",
+            "Parkinsonisme",
+            "Tardive Dyskinesia"
+        ],
+        "answer": 1,
+        "explanation": "Akatisia adalah perasaan subjektif kegelisahan dan dorongan objektif untuk terus bergerak, seperti berjalan mondar-mandir, menggerakkan kaki, yang sangat mengganggu pasien."
+    },
+    {
+        "question": "Pasien yang akan menjalani Terapi Aktivitas Kelompok (TAK) Stimulasi Persepsi: Halusinasi, sesi 1, bertujuan untuk...",
+        "options": [
+            "Melatih pasien mengontrol halusinasi dengan cara menghardik",
+            "Mengenal halusinasi (isi, frekuensi, waktu, situasi, perasaan)",
+            "Melatih pasien bercakap-cakap dengan orang lain saat halusinasi muncul",
+            "Melatih pasien melakukan aktivitas terjadwal untuk mencegah halusinasi"
+        ],
+        "answer": 1,
+        "explanation": "Sesi pertama TAK Stimulasi Persepsi: Halusinasi biasanya berfokus pada membantu pasien mengidentifikasi dan mengenal karakteristik halusinasinya sebagai langkah awal untuk mengelolanya."
+    },
+    {
+        "question": "Seorang pasien dengan gangguan bipolar dalam fase depresi mengeluh tidak memiliki energi untuk melakukan apapun. Aktivitas yang paling sesuai untuk dianjurkan perawat pada tahap awal adalah...",
+        "options": [
+            "Mengikuti kegiatan kelompok yang ramai dan energik",
+            "Melakukan aktivitas sederhana dan terstruktur dengan durasi singkat",
+            "Berolahraga berat untuk meningkatkan mood",
+            "Menyelesaikan proyek besar yang tertunda"
+        ],
+        "answer": 1,
+        "explanation": "Pada depresi berat dengan anergia, aktivitas yang dianjurkan harus sederhana, mudah dicapai, terstruktur, dan tidak menuntut banyak energi. Keberhasilan kecil dapat meningkatkan motivasi."
+    },
+    {
+        "question": "Saat melakukan pengkajian kebutuhan tidur pada pasien jiwa, informasi apa yang paling penting digali selain durasi tidur?",
+        "options": [
+            "Merk kasur yang digunakan pasien",
+            "Kualitas tidur (misalnya, sering terbangun, mimpi buruk, merasa segar saat bangun)",
+            "Posisi tidur favorit pasien",
+            "Apakah pasien mendengkur atau tidak"
+        ],
+        "answer": 1,
+        "explanation": "Kualitas tidur, termasuk kontinuitas tidur, adanya gangguan seperti mimpi buruk, dan perasaan segar saat bangun, lebih penting daripada hanya durasi. Ini mencerminkan restoratif atau tidaknya tidur tersebut."
+    },
+    {
+        "question": "Seorang pasien dengan skizofrenia menolak minum obat tablet karena merasa sulit menelan. Opsi yang dapat dipertimbangkan perawat setelah berkonsultasi dengan dokter adalah...",
+        "options": [
+            "Menghancurkan tablet dan mencampurnya dengan makanan tanpa sepengetahuan pasien",
+            "Meminta pasien untuk mencoba menelan lagi dengan paksa",
+            "Mengganti dengan formulasi obat cair atau injeksi jika tersedia",
+            "Menghentikan pemberian obat untuk sementara waktu"
+        ],
+        "answer": 2,
+        "explanation": "Jika pasien kesulitan menelan tablet, alternatif formulasi seperti sirup, tablet larut, atau injeksi (terutama long-acting injectable) bisa menjadi solusi. Menghancurkan obat tanpa izin atau mencampur tanpa sepengetahuan tidak etis dan bisa mengubah farmakokinetik obat."
+    },
+    {
+        "question": "Pasien dengan gangguan makan bulimia nervosa seringkali melakukan 'purging'. Contoh perilaku purging adalah...",
+        "options": [
+            "Berolahraga secara berlebihan setiap hari",
+            "Muntah yang diinduksi sendiri setelah makan banyak",
+            "Menghindari makanan berkalori tinggi",
+            "Menggunakan suplemen penambah berat badan"
+        ],
+        "answer": 1,
+        "explanation": "Perilaku purging pada bulimia nervosa adalah upaya untuk menghilangkan kalori yang telah dikonsumsi selama episode binge eating. Ini bisa berupa muntah yang diinduksi sendiri, penyalahgunaan laksatif, diuretik, atau enema."
+    },
+    {
+        "question": "Pendidikan kesehatan pada keluarga dengan anggota yang mengalami gangguan jiwa perlu mencakup informasi tentang...",
+        "options": [
+            "Menjauhkan pasien dari lingkungan sosial untuk mencegah stigma",
+            "Pentingnya dukungan keluarga dan mengenali tanda-tanda kekambuhan",
+            "Mengambil alih semua keputusan pasien karena dianggap tidak mampu",
+            "Memberikan kritik terus-menerus agar pasien termotivasi berubah"
+        ],
+        "answer": 1,
+        "explanation": "Dukungan keluarga, pemahaman tentang penyakit, kemampuan mengenali gejala awal kekambuhan, dan cara merespon secara suportif sangat penting dalam proses pemulihan pasien gangguan jiwa."
+    },
+    {
+        "question": "Seorang pasien dengan PTSD sering mengalami kilas balik (flashback) traumatis. Saat pasien mengalami flashback, tindakan perawat yang utama adalah...",
+        "options": [
+            "Meminta pasien menceritakan detail kejadian traumatis saat itu juga",
+            "Memberikan obat penenang dosis tinggi segera",
+            "Membantu pasien kembali ke realitas saat ini (grounding) dan memberikan rasa aman",
+            "Meninggalkan pasien sendirian agar bisa menenangkan diri"
+        ],
+        "answer": 2,
+        "explanation": "Saat flashback, pasien merasa seolah-olah mengalami kembali trauma. Perawat harus membantu pasien melakukan grounding (misalnya, fokus pada sensasi saat ini, suara perawat, benda di sekitar) untuk kembali ke orientasi realitas dan memberikan reassurance."
+    },
+    {
+        "question": "Obat golongan Benzodiazepine (misalnya Diazepam, Lorazepam) sering diresepkan untuk mengatasi cemas atau insomnia. Efek samping yang perlu diwaspadai terutama pada lansia adalah...",
+        "options": [
+            "Peningkatan tekanan darah",
+            "Risiko agitasi dan insomnia paradoksikal",
+            "Sedasi berlebihan, ataksia, dan risiko jatuh",
+            "Mual dan muntah hebat"
+        ],
+        "answer": 2,
+        "explanation": "Lansia lebih sensitif terhadap efek sedatif benzodiazepine, yang dapat menyebabkan kantuk berlebihan, gangguan koordinasi (ataksia), kebingungan, dan peningkatan risiko jatuh."
+    },
+    {
+        "question": "Seorang pasien tampak menarik diri, lebih banyak diam, dan menghindari kontak mata serta interaksi dengan orang lain. Diagnosa keperawatan yang paling mungkin adalah...",
+        "options": [
+            "Risiko perilaku kekerasan",
+            "Isolasi sosial",
+            "Ansietas",
+            "Defisit perawatan diri"
+        ],
+        "answer": 1,
+        "explanation": "Perilaku menarik diri, kurangnya interaksi, dan penghindaran kontak sosial adalah manifestasi utama dari isolasi sosial."
+    },
+    {
+        "question": "Intervensi untuk pasien isolasi sosial dalam Terapi Aktivitas Kelompok (TAK) dapat dimulai dengan...",
+        "options": [
+            "Meminta pasien memimpin diskusi kelompok",
+            "Melatih pasien berkenalan dengan satu anggota kelompok lain",
+            "Meminta pasien menceritakan masalah pribadinya di depan kelompok",
+            "Mendorong pasien untuk langsung berdebat tentang suatu topik"
+        ],
+        "answer": 1,
+        "explanation": "Untuk pasien isolasi sosial, intervensi dimulai dari yang paling sederhana, seperti berkenalan satu lawan satu, sebelum beranjak ke interaksi yang lebih kompleks dalam kelompok."
+    },
+    {
+        "question": "Seorang pasien skizofrenia yang sedang dirawat mengatakan kepada perawat, 'Perawat X tadi malam memasukkan chip ke otak saya waktu saya tidur.' Bagaimana respons perawat yang paling tepat?",
+        "options": [
+            "Itu tidak mungkin, Perawat X tidak akan melakukan itu.",
+            "Ceritakan lebih lanjut tentang chip itu, bagaimana rasanya?",
+            "Saya mengerti Anda merasa ada sesuatu yang dimasukkan ke otak Anda, tapi saya tidak melihat ada chip. Mari kita bicarakan kegiatan hari ini.",
+            "Anda hanya berhalusinasi, tidak ada chip di otak Anda."
+        ],
+        "answer": 2,
+        "explanation": "Menyangkal waham secara langsung ('Itu tidak mungkin') bisa membuat pasien defensif. Mengakui persepsi pasien ('Saya mengerti Anda merasa...') tanpa mengkonfirmasi waham, lalu mengarahkan ke realitas adalah strategi yang baik. 'Voice doubt' (menyatakan keraguan secara halus) juga bisa digunakan."
+    },
+    {
+        "question": "Mekanisme kerja utama obat antipsikotik tipikal (generasi pertama) seperti Haloperidol adalah...",
+        "options": [
+            "Menghambat reuptake serotonin",
+            "Memblokade reseptor dopamin D2 di otak",
+            "Meningkatkan aktivitas GABA",
+            "Menghambat enzim monoamine oxidase"
+        ],
+        "answer": 1,
+        "explanation": "Antipsikotik tipikal bekerja primarily dengan memblokade reseptor dopamin D2, terutama di jalur mesolimbik, yang efektif mengurangi gejala positif skizofrenia."
+    },
+    {
+        "question": "Seorang pasien datang ke UGD dengan keluhan gelisah berat, tremor, berkeringat banyak, dan mengatakan 'Saya melihat laba-laba besar di dinding!' padahal tidak ada. Pasien memiliki riwayat konsumsi alkohol berat dan berhenti mendadak 2 hari lalu. Kondisi ini disebut...",
+        "options": [
+            "Intoksikasi alkohol akut",
+            "Delirium Tremens (DTs)",
+            "Skizofrenia onset akut",
+            "Gangguan panik dengan halusinasi"
+        ],
+        "answer": 1,
+        "explanation": "Delirium Tremens adalah manifestasi berat dari sindrom putus alkohol, ditandai dengan delirium (kebingungan, disorientasi), agitasi, tremor, halusinasi (biasanya visual atau taktil), dan instabilitas otonom. Ini adalah kondisi darurat medis."
+    },
+    {
+        "question": "Dalam pengkajian status mental, 'insight' atau tilikan pasien merujuk pada...",
+        "options": [
+            "Kemampuan pasien untuk berkonsentrasi",
+            "Pemahaman pasien tentang kondisi atau penyakitnya",
+            "Stabilitas mood pasien",
+            "Ada atau tidaknya waham pada pasien"
+        ],
+        "answer": 1,
+        "explanation": "Tilikan (insight) adalah tingkat kesadaran dan pemahaman pasien mengenai fakta bahwa ia memiliki masalah atau penyakit psikiatri, serta memahami implikasi dan kebutuhan akan terapi."
+    },
+    {
+        "question": "Seorang pasien dengan skizofrenia menunjukkan 'affect inappropriate' (afek tidak serasi). Contohnya adalah...",
+        "options": [
+            "Pasien menangis saat menceritakan pengalaman sedih",
+            "Pasien tertawa saat menceritakan kematian anggota keluarganya",
+            "Pasien tidak menunjukkan ekspresi emosi apapun (datar)",
+            "Pasien menunjukkan ekspresi marah saat merasa frustrasi"
+        ],
+        "answer": 1,
+        "explanation": "Afek tidak serasi adalah kondisi di mana ekspresi emosi pasien tidak sesuai atau bertentangan dengan isi pikiran atau situasi yang sedang dibicarakan/dialami."
+    },
+    {
+        "question": "Tujuan pemeriksaan fisik rutin (tekanan darah, nadi, suhu, respirasi) pada pasien gangguan jiwa yang dirawat inap adalah, KECUALI...",
+        "options": [
+            "Memantau efek samping obat psikotropika",
+            "Mendeteksi adanya kondisi medis komorbid",
+            "Menilai status hidrasi dan nutrisi secara tidak langsung",
+            "Mengukur tingkat kecerdasan pasien"
+        ],
+        "answer": 3,
+        "explanation": "Pemeriksaan fisik dan tanda vital penting untuk memantau efek obat (misalnya hipotensi ortostatik, takikardia), mendeteksi penyakit fisik yang mungkin menyertai atau memperburuk kondisi jiwa, dan memantau kondisi umum. Tingkat kecerdasan diukur dengan tes psikometri, bukan pemeriksaan fisik."
+    },
+    {
+        "question": "Seorang pasien mengatakan, 'Saya adalah agen rahasia yang sedang diawasi oleh pemerintah.' Perawat menjawab, 'Saya adalah perawat di sini, dan ini adalah rumah sakit. Sekarang waktunya Anda minum obat.' Teknik komunikasi yang digunakan perawat adalah...",
+        "options": [
+            "Menyajikan realitas (Presenting reality)",
+            "Memberikan pujian (Giving recognition)",
+            "Menawarkan diri (Offering self)",
+            "Refleksi (Reflecting)"
+        ],
+        "answer": 0,
+        "explanation": "Menyajikan realitas adalah teknik di mana perawat menjelaskan persepsinya tentang situasi kepada pasien tanpa berdebat tentang delusi pasien. Perawat mengklarifikasi siapa dirinya, di mana mereka berada, dan apa yang diharapkan dari pasien saat itu."
+    },
+    {
+        "question": "Pasien dengan depresi berat dan ide bunuh diri yang kuat baru saja memulai terapi antidepresan Fluoxetine. Perawat perlu waspada karena pada minggu-minggu awal terapi...",
+        "options": [
+            "Efek antidepresan akan langsung maksimal sehingga risiko bunuh diri hilang",
+            "Energi pasien bisa meningkat sebelum mood membaik, meningkatkan risiko tindakan bunuh diri",
+            "Pasien akan mengalami sedasi berat sehingga tidak mampu melakukan apapun",
+            "Obat akan menyebabkan ketergantungan fisik yang cepat"
+        ],
+        "answer": 1,
+        "explanation": "Antidepresan, terutama SSRI, membutuhkan beberapa minggu untuk efek terapeutik penuh pada mood. Namun, peningkatan energi bisa terjadi lebih cepat. Jika ide bunuh diri masih ada, peningkatan energi ini bisa memberi pasien 'kekuatan' untuk melakukan tindakan bunuh diri. Pengawasan ketat diperlukan."
+    },
+    {
+        "question": "Seorang pasien dengan perilaku kekerasan telah difiksasi (restrain) karena membahayakan diri dan orang lain. Hal penting yang harus dilakukan perawat selama pasien difiksasi adalah...",
+        "options": [
+            "Membiarkan pasien sendirian agar tenang",
+            "Melepaskan ikatan setiap 4 jam sekali",
+            "Melakukan observasi ketat tanda vital, sirkulasi, dan kebutuhan dasar pasien secara berkala",
+            "Memberikan makanan dan minuman hanya jika pasien meminta"
+        ],
+        "answer": 2,
+        "explanation": "Pasien yang direstrain memerlukan observasi sangat ketat (biasanya setiap 15-30 menit) untuk keamanan, kenyamanan, sirkulasi pada ekstremitas yang diikat, status hidrasi, eliminasi, dan tanda-tanda vital. Ikatan harus dilonggarkan secara bertahap atau dilepas satu per satu untuk ROM jika kondisi memungkinkan, sesuai protokol."
+    },
+    {
+        "question": "Tujuan jangka panjang utama dari rehabilitasi psikososial untuk pasien skizofrenia adalah...",
+        "options": [
+            "Menyembuhkan skizofrenia secara total",
+            "Memastikan pasien minum obat seumur hidup",
+            "Meningkatkan fungsi sosial dan okupasional pasien agar dapat hidup mandiri dan produktif di masyarakat",
+            "Mengurangi frekuensi rawat inap di rumah sakit jiwa"
+        ],
+        "answer": 2,
+        "explanation": "Rehabilitasi psikososial bertujuan untuk membantu individu dengan gangguan jiwa kronis mencapai tingkat fungsi setinggi mungkin dalam kehidupan sehari-hari, pekerjaan, dan interaksi sosial, sehingga kualitas hidup meningkat."
+    },
+    {
+        "question": "Seorang pasien di ruang perawatan jiwa tiba-tiba berteriak, 'Api! Api! Kita semua akan terbakar!' padahal tidak ada tanda-tanda kebakaran. Respons awal perawat yang paling tepat adalah...",
+        "options": [
+            "Segera mengevakuasi seluruh pasien dari ruangan",
+            "Meyakinkan pasien bahwa tidak ada api dan dia hanya berhalusinasi",
+            "Menilai situasi dengan cepat untuk memastikan ada atau tidaknya bahaya nyata, sambil menenangkan pasien",
+            "Memberikan obat penenang kepada pasien tersebut"
+        ],
+        "answer": 2,
+        "explanation": "Meskipun kemungkinan besar ini adalah manifestasi gejala psikotik, perawat harus tetap memastikan tidak ada bahaya nyata (misalnya, dengan cepat melihat sekitar) sambil mendekati pasien dengan tenang untuk menenangkan dan mengklarifikasi situasinya."
+    },
+    {
+        "question": "Keluarga pasien bertanya apa yang dimaksud dengan 'gejala negatif' skizofrenia. Penjelasan perawat yang paling mudah dipahami adalah...",
+        "options": [
+            "Gejala yang membuat pasien bersikap negatif dan menentang",
+            "Gejala berupa kehilangan atau berkurangnya fungsi normal, seperti kurang motivasi atau menarik diri",
+            "Gejala yang muncul setelah pasien minum obat antipsikotik",
+            "Gejala yang tidak berbahaya bagi pasien maupun orang lain"
+        ],
+        "answer": 1,
+        "explanation": "Gejala negatif skizofrenia mencakup defisit fungsi, seperti alogia (miskin bicara), avolition (kurang motivasi), anhedonia (tidak bisa merasakan senang), afek datar, dan penarikan sosial. Ini berbeda dari gejala positif (halusinasi, waham)."
+    },
+    {
+        "question": "Seorang pasien dengan gangguan cemas sosial (fobia sosial) akan menghadiri acara keluarga besar. Strategi koping yang dapat diajarkan perawat adalah...",
+        "options": [
+            "Membatalkan kehadiran di acara tersebut untuk menghindari cemas",
+            "Minum alkohol sedikit sebelum acara agar lebih rileks",
+            "Melatih teknik relaksasi dan afirmasi positif sebelum dan selama acara",
+            "Fokus pada kemungkinan hal buruk yang akan terjadi agar siap mental"
+        ],
+        "answer": 2,
+        "explanation": "Teknik relaksasi (napas dalam, relaksasi otot) dapat membantu mengurangi respons fisiologis cemas. Afirmasi positif dan restrukturisasi kognitif (menantang pikiran negatif) juga membantu mengelola kecemasan sosial."
+    },
+    {
+        "question": "Pasien yang baru didiagnosis dengan gangguan bipolar tipe I fase manik diberikan Lithium. Pemeriksaan laboratorium yang wajib dipantau secara berkala selain kadar Lithium serum adalah...",
+        "options": [
+            "Kadar gula darah puasa",
+            "Fungsi tiroid dan fungsi ginjal",
+            "Kadar asam urat",
+            "Enzim hati (SGOT/SGPT)"
+        ],
+        "answer": 1,
+        "explanation": "Lithium dapat mempengaruhi fungsi tiroid (menyebabkan hipotiroidisme) dan fungsi ginjal (diekskresikan melalui ginjal). Oleh karena itu, pemantauan TSH, T4, ureum, dan kreatinin penting selama terapi Lithium."
+    },
+    {
+        "question": "Seorang perawat sedang melakukan sesi konseling individual dengan pasien yang mengalami kesedihan mendalam karena perceraian. Perawat berkata, 'Saya bisa merasakan betapa beratnya situasi ini untuk Anda.' Teknik komunikasi ini adalah contoh dari...",
+        "options": [
+            "Memberikan nasihat (Giving advice)",
+            "Menunjukkan empati (Emphatizing)",
+            "Menginterpretasi (Interpreting)",
+            "Konfrontasi (Confronting)"
+        ],
+        "answer": 1,
+        "explanation": "Empati adalah kemampuan untuk memahami dan merasakan apa yang dirasakan orang lain dari sudut pandang mereka, dan mengkomunikasikan pemahaman tersebut. Pernyataan perawat menunjukkan ia mencoba memahami pengalaman emosional pasien."
+    },
+    {
+        "question": "Perawat mengajarkan pasien cara menghardik halusinasi. Langkah pertama yang diajarkan adalah...",
+        "options": [
+            "Mengatakan pada diri sendiri, 'Saya tidak mau dengar/lihat kamu, kamu suara/gambaran palsu!'",
+            "Segera mencari teman untuk diajak bicara",
+            "Melakukan aktivitas yang membutuhkan konsentrasi",
+            "Minum obat sesuai jadwal"
+        ],
+        "answer": 0,
+        "explanation": "Menghardik halusinasi dimulai dengan pasien secara sadar dan tegas menolak atau mengusir halusinasi tersebut dengan mengatakan pada dirinya sendiri (bisa dalam hati atau dengan suara pelan) bahwa halusinasi itu tidak nyata dan tidak diinginkan."
+    },
+    {
+        "question": "Sindrom Neuroleptik Maligna (SNM) adalah efek samping serius dari obat antipsikotik. Gejala utama SNM meliputi...",
+        "options": [
+            "Hipotensi, bradikardia, dan pupil miosis",
+            "Demam tinggi, rigiditas otot berat, perubahan status mental, dan disfungsi otonom",
+            "Tremor halus, agitasi, dan insomnia",
+            "Ruam kulit, gatal-gatal, dan pembengkakan wajah"
+        ],
+        "answer": 1,
+        "explanation": "SNM adalah kondisi darurat yang ditandai dengan hipertermia (demam sangat tinggi), 'lead-pipe' rigidity (kekakuan otot seperti pipa timah), perubahan kesadaran/status mental, dan instabilitas otonom (takikardia, tekanan darah labil, takipnea, diaphoresis)."
+    },
+    {
+        "question": "Seorang pasien dengan riwayat percobaan bunuh diri kembali menyatakan keinginan untuk mati dan telah menulis surat wasiat. Tindakan keperawatan prioritas adalah...",
+        "options": [
+            "Menganjurkan pasien untuk beristirahat dan tidur",
+            "Mengajak pasien berdiskusi tentang perasaannya secara mendalam",
+            "Memastikan pengawasan ketat dan keamanan lingkungan pasien (misalnya, observasi 1:1)",
+            "Melaporkan kepada keluarga pasien tentang niat bunuh diri tersebut"
+        ],
+        "answer": 2,
+        "explanation": "Adanya ide bunuh diri yang aktif, rencana (surat wasiat menunjukkan perencanaan), dan riwayat percobaan sebelumnya menempatkan pasien pada risiko sangat tinggi. Pengawasan ketat (misalnya, one-to-one observation) dan memastikan lingkungan aman dari benda berbahaya adalah prioritas absolut untuk mencegah tindakan bunuh diri."
+    },
+    {
+        "question": "Seorang pasien dengan waham nihilistik mungkin akan mengatakan...",
+        "options": [
+            "'Saya adalah seorang nabi yang diutus untuk menyelamatkan dunia.'",
+            "'Organ tubuh saya sudah hancur dan saya sebenarnya sudah mati.'",
+            "'Semua orang di sekitar saya berkomplot untuk mencelakai saya.'",
+            "'Saya memiliki kekuatan super untuk membaca pikiran orang lain.'"
+        ],
+        "answer": 1,
+        "explanation": "Waham nihilistik adalah keyakinan salah bahwa diri sendiri, bagian tubuh, atau dunia sudah tidak ada, hancur, atau akan segera berakhir. Pasien mungkin merasa dirinya sudah mati atau organ dalamnya membusuk."
+    },
+    {
+        "question": "Perawat melakukan pengkajian nutrisi pada pasien skizofrenia yang mengalami penurunan berat badan. Selain menanyakan pola makan, hal penting yang perlu dikaji adalah...",
+        "options": [
+            "Apakah pasien memiliki waham terkait makanan (misalnya, makanan diracuni)?",
+            "Merk suplemen makanan yang disukai pasien",
+            "Apakah pasien bisa memasak makanannya sendiri?",
+            "Warna makanan favorit pasien"
+        ],
+        "answer": 0,
+        "explanation": "Pada pasien skizofrenia, penurunan asupan nutrisi bisa disebabkan oleh waham (makanan diracuni), halusinasi (suara menyuruh tidak makan), gejala negatif (kurang motivasi, anergi), atau efek samping obat. Mengkaji adanya waham terkait makanan sangat penting."
+    },
+    {
+        "question": "Seorang pasien menolak untuk berinteraksi dengan pasien lain dan lebih suka menyendiri di kamarnya. Tujuan Terapi Aktivitas Kelompok (TAK) yang paling sesuai untuk pasien ini adalah...",
+        "options": [
+            "TAK Stimulasi Persepsi: Halusinasi",
+            "TAK Sosialisasi",
+            "TAK Stimulasi Sensoris",
+            "TAK Orientasi Realitas"
+        ],
+        "answer": 1,
+        "explanation": "TAK Sosialisasi dirancang khusus untuk membantu pasien yang mengalami kesulitan dalam interaksi sosial, menarik diri, atau isolasi sosial, dengan cara melatih kemampuan bersosialisasi secara bertahap."
+    },
+    {
+        "question": "Manakah pernyataan berikut yang paling akurat mengenai farmakologi antidepresan golongan MAOI (Monoamine Oxidase Inhibitor)?",
+        "options": [
+            "Aman dikombinasikan dengan semua jenis makanan dan obat-obatan",
+            "Memerlukan diet rendah tiramin untuk mencegah krisis hipertensi",
+            "Efek samping utamanya adalah peningkatan berat badan yang signifikan",
+            "Merupakan pilihan pertama untuk terapi depresi ringan"
+        ],
+        "answer": 1,
+        "explanation": "MAOI menghambat enzim monoamine oxidase yang juga memetabolisme tiramin. Jika pasien mengonsumsi makanan kaya tiramin (keju tua, anggur merah, daging olahan), tiramin tidak terurai, menyebabkan pelepasan norepinefrin berlebih dan krisis hipertensi yang berbahaya."
+    },
+    {
+        "question": "Seorang pasien dengan gangguan konversi (dulu disebut histeria konversi) tiba-tiba mengalami kelumpuhan pada kedua kakinya setelah bertengkar hebat dengan suaminya. Pemeriksaan neurologis tidak menemukan adanya kelainan fisik. Prinsip penanganan awal adalah...",
+        "options": [
+            "Segera memberitahu pasien bahwa kelumpuhannya tidak nyata",
+            "Fokus pada pengelolaan stres dan emosi yang mendasari, bukan pada gejala fisik",
+            "Merekomendasikan operasi untuk memperbaiki 'kelumpuhan'",
+            "Memberikan obat pelumpuh otot agar pasien tidak cemas"
+        ],
+        "answer": 1,
+        "explanation": "Gangguan konversi melibatkan gejala neurologis (seperti kelumpuhan, kebutaan) yang tidak dapat dijelaskan secara medis dan terkait dengan konflik atau stres psikologis. Terapi berfokus pada identifikasi dan pengelolaan stresor psikologis, bukan pada gejala fisiknya secara langsung. Gejala dianggap nyata bagi pasien."
+    },
+    {
+        "question": "Perawat sedang mempersiapkan pasien untuk ECT (Electroconvulsive Therapy). Persiapan fisik yang penting meliputi...",
+        "options": [
+            "Pasien harus makan makanan berat sebelum prosedur agar memiliki energi",
+            "Pasien harus puasa minimal 6-8 jam sebelum prosedur",
+            "Pasien boleh minum obat paginya seperti biasa",
+            "Pasien tidak perlu didampingi keluarga"
+        ],
+        "answer": 1,
+        "explanation": "ECT dilakukan di bawah anestesi umum singkat. Pasien harus puasa (NPO) untuk mencegah risiko aspirasi selama anestesi. Obat-obatan tertentu mungkin perlu dihentikan atau disesuaikan."
+    },
+    {
+        "question": "Seorang anak usia 5 tahun yang baru memiliki adik bayi mulai menunjukkan perilaku regresif seperti mengompol lagi dan minta digendong. Respons orang tua yang paling tepat adalah...",
+        "options": [
+            "Memarahi anak karena bertingkah seperti bayi",
+            "Mengabaikan perilaku tersebut karena akan hilang sendiri",
+            "Memberikan perhatian ekstra dan afirmasi positif pada anak, sambil tetap konsisten dengan batasan",
+            "Menghukum anak jika ia mengompol"
+        ],
+        "answer": 2,
+        "explanation": "Perilaku regresif pada anak seringkali merupakan respons terhadap stres atau perubahan besar (seperti kelahiran adik) dan merupakan cara mencari perhatian. Memberikan perhatian positif, validasi perasaan, dan meyakinkan anak akan kasih sayang orang tua, sambil tetap mempertahankan batasan yang wajar, adalah pendekatan terbaik."
+    },
+    {
+        "question": "Pasien dengan skizofrenia paranoid seringkali menunjukkan sikap...",
+        "options": [
+            "Sangat ramah dan mudah percaya pada orang baru",
+            "Menarik diri, apatis, dan tidak termotivasi",
+            "Curiga, bermusuhan, dan menjaga jarak dengan orang lain",
+            "Ceria berlebihan dan banyak bicara"
+        ],
+        "answer": 2,
+        "explanation": "Karakteristik utama skizofrenia paranoid adalah adanya waham curiga atau persekutorik yang dominan. Hal ini membuat pasien cenderung waspada berlebihan, sulit percaya, dan menjaga jarak karena merasa terancam."
+    },
+    {
+        "question": "Saat melakukan Terapi Aktivitas Kelompok (TAK) untuk pasien dengan harga diri rendah, aktivitas yang dapat meningkatkan harga diri adalah...",
+        "options": [
+            "Meminta setiap anggota mengkritik kekurangan anggota lain",
+            "Memberikan tugas yang sangat sulit dan kompleks untuk diselesaikan",
+            "Memfasilitasi anggota untuk mengidentifikasi dan berbagi aspek positif atau keberhasilan kecil mereka",
+            "Membandingkan pencapaian antar anggota kelompok"
+        ],
+        "answer": 2,
+        "explanation": "Fokus pada identifikasi kekuatan, aspek positif diri, dan pencapaian (sekecil apapun) serta mendapatkan umpan balik positif dari kelompok dapat membantu membangun kembali harga diri pasien."
+    },
+    {
+        "question": "Seorang pasien dengan riwayat trauma kekerasan seksual merasa sangat cemas dan terpicu saat perawat laki-laki mendekatinya untuk melakukan pemeriksaan fisik. Tindakan perawat yang paling tepat adalah...",
+        "options": [
+            "Tetap melanjutkan pemeriksaan karena itu adalah prosedur standar",
+            "Meminta pasien untuk tidak berlebihan karena ini demi kebaikannya",
+            "Menghentikan sementara pendekatan, menjelaskan apa yang akan dilakukan, dan jika memungkinkan, menawarkan perawat perempuan atau menunda jika tidak darurat",
+            "Melaporkan pasien sebagai tidak kooperatif"
+        ],
+        "answer": 2,
+        "explanation": "Menghargai trauma pasien adalah kunci. Memberikan pilihan, kontrol, dan penjelasan dapat mengurangi kecemasan. Jika memungkinkan, kehadiran perawat perempuan atau penundaan pemeriksaan non-esensial bisa dipertimbangkan. Validasi perasaan pasien juga penting."
+    },
+    {
+        "question": "Salah satu tujuan penting dari program psikoedukasi keluarga adalah...",
+        "options": [
+            "Mengajarkan keluarga cara memberikan obat suntik kepada pasien",
+            "Meningkatkan pemahaman keluarga tentang penyakit jiwa, pengobatan, dan cara mendukung pasien",
+            "Melatih keluarga untuk mengambil alih semua tanggung jawab pasien",
+            "Meyakinkan keluarga bahwa pasien akan sembuh total dalam waktu singkat"
+        ],
+        "answer": 1,
+        "explanation": "Psikoedukasi bertujuan memberdayakan keluarga dengan pengetahuan tentang kondisi pasien, manajemen gejala, pentingnya pengobatan, strategi koping, dan cara memberikan dukungan yang efektif, serta mengurangi stigma."
+    },
+    {
+        "question": "Seorang pasien yang dirawat karena depresi mengatakan, 'Saya tidak punya nafsu makan sama sekali, makanan terasa hambar.' Pengkajian keperawatan yang perlu dilanjutkan adalah...",
+        "options": [
+            "Menanyakan jenis makanan kesukaan pasien sebelum sakit",
+            "Mencatat adanya penurunan berat badan dan frekuensi makan",
+            "Menawarkan suplemen makanan segera",
+            "Mengabaikan keluhan karena itu gejala umum depresi"
+        ],
+        "answer": 1,
+        "explanation": "Selain keluhan subjektif, penting untuk mengumpulkan data objektif seperti perubahan berat badan, frekuensi dan porsi makan, serta asupan nutrisi secara keseluruhan untuk menilai status gizi pasien secara akurat."
+    },
+    {
+        "question": "Teknik 'modeling' dalam terapi perilaku adalah...",
+        "options": [
+            "Pasien diminta membayangkan situasi yang ditakuti",
+            "Perawat memberikan contoh perilaku yang diinginkan untuk ditiru oleh pasien",
+            "Pasien diberikan hadiah setiap kali menunjukkan perilaku positif",
+            "Pasien diajarkan untuk menghentikan pikiran negatif"
+        ],
+        "answer": 1,
+        "explanation": "Modeling (peniruan) adalah proses belajar di mana individu mempelajari perilaku baru dengan mengamati orang lain (model) melakukan perilaku tersebut. Perawat bisa menjadi model peran untuk keterampilan sosial atau koping."
+    },
+    {
+        "question": "Seorang pasien dengan gangguan obsesif-kompulsif (OCD) merasa harus memeriksa kunci pintu 10 kali sebelum bisa tidur. Jika tidak, ia merasa sangat cemas. Perilaku memeriksa kunci berulang kali disebut...",
+        "options": [
+            "Obsesi",
+            "Kompulsi",
+            "Waham",
+            "Fobia"
+        ],
+        "answer": 1,
+        "explanation": "Kompulsi adalah perilaku repetitif (seperti memeriksa, mencuci, menghitung) atau tindakan mental (seperti berdoa, mengulang kata) yang dilakukan individu sebagai respons terhadap obsesi atau menurut aturan yang kaku, bertujuan untuk mengurangi cemas atau mencegah kejadian yang ditakuti."
+    },
+    {
+        "question": "Fase kerja dalam hubungan terapeutik perawat-pasien ditandai dengan...",
+        "options": [
+            "Perawat dan pasien pertama kali bertemu dan membuat kontrak",
+            "Perawat dan pasien mengeksplorasi masalah, menetapkan tujuan, dan bekerja mencapai tujuan tersebut",
+            "Perawat dan pasien mempersiapkan perpisahan dan mengevaluasi hasil",
+            "Pasien menunjukkan resistensi terhadap intervensi perawat"
+        ],
+        "answer": 1,
+        "explanation": "Fase kerja adalah inti dari hubungan terapeutik, di mana perawat dan pasien aktif bekerja sama untuk mengidentifikasi masalah, menetapkan tujuan yang realistis, dan mengimplementasikan intervensi untuk mencapai perubahan positif."
+    },
+    {
+        "question": "Seorang pasien baru saja didiagnosis menderita penyakit kronis yang serius. Pasien berkata, 'Ini tidak mungkin terjadi pada saya, pasti ada kesalahan diagnosis.' Tahap berduka menurut Kubler-Ross yang dialami pasien adalah...",
+        "options": [
+            "Marah (Anger)",
+            "Tawar-menawar (Bargaining)",
+            "Depresi (Depression)",
+            "Penyangkalan (Denial)"
+        ],
+        "answer": 3,
+        "explanation": "Penyangkalan adalah tahap awal dalam model duka Kubler-Ross, di mana individu menolak untuk menerima kenyataan situasi yang sulit atau menyakitkan sebagai mekanisme pertahanan."
+    },
+    {
+        "question": "Perawat melakukan pemeriksaan fisik dan menemukan tekanan darah pasien 90/60 mmHg, nadi 100x/menit dan lemah, pasien mengeluh pusing saat berubah posisi dari duduk ke berdiri. Kemungkinan pasien mengalami...",
+        "options": [
+            "Krisis Hipertensi",
+            "Hipotensi Ortostatik",
+            "Syok Kardiogenik",
+            "Dehidrasi berat"
+        ],
+        "answer": 1,
+        "explanation": "Hipotensi ortostatik adalah penurunan tekanan darah yang signifikan saat berubah posisi ke posisi yang lebih tegak (misalnya dari duduk ke berdiri), sering disertai pusing atau pingsan. Ini bisa efek samping obat psikotropika atau kondisi medis lain."
+    },
+    {
+        "question": "Seorang pasien dengan skizofrenia berbicara dengan kalimat yang tidak saling berhubungan dan sulit dimengerti maknanya (inkoherensi atau 'word salad'). Gangguan proses pikir ini disebut...",
+        "options": [
+            "Flight of ideas",
+            "Loose associations (Asosiasi longgar)",
+            "Tangentiality",
+            "Neologisme"
+        ],
+        "answer": 1, // Word salad adalah bentuk ekstrem dari asosiasi longgar/inkoherensi.
+        "explanation": "Asosiasi longgar adalah gangguan arus pikiran di mana ide-ide bergeser dari satu subjek ke subjek lain yang tidak berhubungan atau hanya berhubungan secara samar. 'Word salad' adalah bentuk yang paling parah, di mana kata-kata tercampur aduk tanpa makna logis."
+    },
+    {
+        "question": "Seorang pasien mengalami kesulitan tidur (insomnia). Pendidikan kesehatan yang dapat diberikan untuk meningkatkan higiene tidur adalah, KECUALI...",
+        "options": [
+            "Hindari kafein dan alkohol beberapa jam sebelum tidur",
+            "Ciptakan lingkungan tidur yang nyaman, gelap, dan tenang",
+            "Gunakan tempat tidur hanya untuk tidur dan aktivitas seksual",
+            "Minum segelas besar air putih tepat sebelum tidur agar tidak haus di malam hari"
+        ],
+        "answer": 3,
+        "explanation": "Minum banyak cairan tepat sebelum tidur dapat meningkatkan kemungkinan terbangun di malam hari untuk buang air kecil, sehingga mengganggu kontinuitas tidur. Aspek lain adalah praktik higiene tidur yang baik."
+    },
+    {
+        "question": "Seorang pasien lanjut usia sering lupa nama benda dan kesulitan menemukan kata yang tepat saat berbicara. Ia juga tampak bingung dengan tanggal dan hari. Pengkajian kognitif awal yang sederhana dapat dilakukan dengan...",
+        "options": [
+            "Tes Rorschach",
+            "Mini-Mental State Examination (MMSE)",
+            "Skala Depresi Hamilton",
+            "Tes IQ Wechsler"
+        ],
+        "answer": 1,
+        "explanation": "MMSE adalah instrumen skrining kognitif yang singkat dan banyak digunakan untuk menilai berbagai domain fungsi kognitif seperti orientasi, registrasi, atensi, kalkulasi, memori recall, dan bahasa. Sangat berguna untuk deteksi awal gangguan kognitif seperti demensia."
+    },
+    {
+        "question": "Seorang pasien dengan waham paranoid merasa bahwa makanan yang disajikan di rumah sakit telah diracuni. Cara perawat membangun kepercayaan sambil memastikan asupan nutrisi adalah...",
+        "options": [
+            "Mencicipi makanan di depan pasien untuk membuktikan tidak beracun",
+            "Menawarkan makanan dalam kemasan utuh atau makanan yang dipilih sendiri oleh pasien dari pilihan yang ada",
+            "Mengatakan bahwa jika tidak makan, pasien akan dipasang NGT",
+            "Mencampurkan obat penenang ke dalam makanan pasien secara diam-diam"
+        ],
+        "answer": 1,
+        "explanation": "Memberikan pasien kontrol atas makanannya (misalnya memilih sendiri, membuka kemasan sendiri) dapat mengurangi kecurigaan tanpa harus berkonfrontasi langsung dengan wahamnya. Mencicipi makanan bisa berisiko jika pasien tetap tidak percaya dan menuduh perawat terlibat."
+    },
+    {
+        "question": "Seorang pasien yang baru saja kehilangan pasangan hidupnya tampak sangat sedih, sering menangis, dan menarik diri. Perawat menyadari bahwa ini adalah reaksi berduka yang normal. Tindakan keperawatan yang paling suportif adalah...",
+        "options": [
+            "Menganjurkan pasien untuk segera mencari pengganti pasangan",
+            "Memberikan ruang bagi pasien untuk mengekspresikan kesedihannya dan mendengarkan dengan empati",
+            "Menghibur pasien dengan mengatakan 'semua akan baik-baik saja'",
+            "Menjauhkan pasien dari semua hal yang mengingatkan pada almarhum/almarhumah"
+        ],
+        "answer": 1,
+        "explanation": "Dalam proses berduka normal, penting bagi individu untuk dapat mengekspresikan perasaannya. Peran perawat adalah mendengarkan secara aktif, memberikan dukungan emosional, dan memvalidasi perasaan duka pasien tanpa menghakimi atau terburu-buru memberikan solusi."
+    },
+    {
+        "question": "Seorang pasien skizofrenia mengalami 'avolition'. Perilaku yang mungkin ditunjukkan pasien adalah...",
+        "options": [
+            "Berbicara sangat sedikit atau tidak berbicara sama sekali",
+            "Tertawa atau menangis tidak sesuai dengan situasi",
+            "Kurang inisiatif dan motivasi untuk melakukan aktivitas sehari-hari",
+            "Keyakinan kuat bahwa dirinya adalah orang penting atau berkuasa"
+        ],
+        "answer": 2,
+        "explanation": "Avolition adalah salah satu gejala negatif skizofrenia yang ditandai dengan penurunan atau hilangnya motivasi, inisiatif, dan kemampuan untuk memulai serta mempertahankan aktivitas yang bertujuan (misalnya, perawatan diri, pekerjaan, hobi)."
+    },
+    {
+        "question": "Pasien dengan gangguan cemas mengeluh jantung berdebar dan napas terasa pendek saat memikirkan ujian yang akan datang. Perawat mengajarkan teknik relaksasi napas dalam. Langkah pertama dalam teknik ini adalah...",
+        "options": [
+            "Menahan napas selama mungkin",
+            "Menghembuskan napas dengan cepat melalui mulut",
+            "Menarik napas perlahan dan dalam melalui hidung, rasakan perut mengembang",
+            "Fokus pada pikiran-pikiran yang mencemaskan"
+        ],
+        "answer": 2,
+        "explanation": "Teknik relaksasi napas dalam dimulai dengan menarik napas secara perlahan dan dalam melalui hidung, membiarkan diafragma turun sehingga perut mengembang (pernapasan diafragmatik), kemudian menghembuskan napas perlahan melalui mulut."
+    },
+    {
+        "question": "Perawat menemukan pasien sedang duduk termenung dengan tatapan kosong. Saat disapa, pasien tidak merespon. Perawat mencoba menyentuh lengan pasien dengan lembut dan memanggil namanya. Tindakan ini bertujuan untuk...",
+        "options": [
+            "Menguji refleks pasien",
+            "Mengembalikan perhatian pasien dan mengorientasikannya pada realitas",
+            "Membuat pasien kaget agar sadar",
+            "Menunjukkan dominasi perawat"
+        ],
+        "answer": 1,
+        "explanation": "Pada pasien yang mungkin mengalami disosiasi, menarik diri, atau sangat preokupasi dengan pikiran internal, sentuhan lembut (jika sesuai dan diizinkan) dan panggilan nama dapat membantu mengembalikan perhatian pasien ke lingkungan sekitar dan memulai interaksi."
+    },
+    {
+        "question": "Salah satu prinsip penting dalam memberikan pendidikan kesehatan kepada pasien dan keluarga adalah...",
+        "options": [
+            "Menggunakan istilah medis yang kompleks agar terlihat profesional",
+            "Memberikan informasi sebanyak mungkin dalam satu sesi",
+            "Menyesuaikan bahasa dan materi dengan tingkat pemahaman pasien/keluarga serta melibatkan mereka secara aktif",
+            "Fokus hanya pada aspek pengobatan dan efek samping obat"
+        ],
+        "answer": 2,
+        "explanation": "Pendidikan kesehatan yang efektif harus disampaikan dengan bahasa yang mudah dimengerti, disesuaikan dengan latar belakang pendidikan dan budaya pasien/keluarga, serta mendorong partisipasi aktif (misalnya, bertanya, diskusi) untuk memastikan pemahaman."
+    },
+    {
+        "question": "Pasien dengan riwayat penyalahgunaan opioid (misalnya heroin) datang ke UGD dengan penurunan kesadaran, pernapasan sangat lambat dan dangkal, serta pupil pinpoint (miosis). Intervensi farmakologis darurat yang paling tepat adalah pemberian...",
+        "options": [
+            "Diazepam IV",
+            "Naloxone IV",
+            "Haloperidol IM",
+            "Adrenalin IV"
+        ],
+        "answer": 1,
+        "explanation": "Gejala tersebut adalah tanda klasik overdosis opioid. Naloxone adalah antagonis opioid yang bekerja cepat untuk membalikkan efek depresi pernapasan dan sedasi akibat opioid. Ini adalah tindakan penyelamatan jiwa."
+    },
+    {
+        "question": "Seorang pasien dengan gangguan kepribadian antisosial seringkali menunjukkan perilaku...",
+        "options": [
+            "Sangat cemas dan khawatir tentang penilaian orang lain",
+            "Manipulatif, tidak memiliki rasa bersalah, dan melanggar hak orang lain",
+            "Bergantung secara emosional pada orang lain dan takut ditinggalkan",
+            "Perfeksionis, kaku, dan sangat terobsesi dengan aturan"
+        ],
+        "answer": 1,
+        "explanation": "Gangguan kepribadian antisosial ditandai dengan pola perilaku yang mengabaikan dan melanggar hak-hak orang lain, tipu daya, impulsivitas, iritabilitas dan agresivitas, serta kurangnya penyesalan."
+    },
+    {
+        "question": "Perawat menjelaskan kepada keluarga bahwa salah satu neurotransmitter yang berperan penting dalam patofisiologi skizofrenia, terutama terkait gejala positif, adalah...",
+        "options": [
+            "Serotonin",
+            "Dopamin",
+            "GABA (Gamma-Aminobutyric Acid)",
+            "Asetilkolin"
+        ],
+        "answer": 1,
+        "explanation": "Hipotesis dopamin menyatakan bahwa kelebihan aktivitas dopamin di jalur mesolimbik otak berkontribusi terhadap timbulnya gejala positif skizofrenia (halusinasi, waham). Antipsikotik bekerja dengan memblokade reseptor dopamin."
+    },
+    {
+        "question": "Seorang pasien dengan agorafobia kemungkinan besar akan merasa sangat cemas atau panik ketika berada di...",
+        "options": [
+            "Ruangan yang gelap dan sempit",
+            "Ketinggian, seperti gedung pencakar langit",
+            "Tempat ramai atau terbuka di mana sulit untuk melarikan diri, seperti pasar atau bus",
+            "Situasi sosial di mana ia harus berbicara di depan umum"
+        ],
+        "answer": 2,
+        "explanation": "Agorafobia adalah ketakutan atau kecemasan yang intens terhadap situasi di mana melarikan diri mungkin sulit atau bantuan mungkin tidak tersedia jika terjadi serangan panik atau gejala melumpuhkan lainnya. Contohnya tempat ramai, transportasi umum, ruang terbuka, atau berada di luar rumah sendirian."
+    },
+    {
+        "question": "Seorang pasien lansia yang dirawat karena pneumonia mengalami delirium. Ia tampak bingung, gelisah, dan berteriak memanggil nama orang yang sudah meninggal. Intervensi keperawatan yang utama adalah...",
+        "options": [
+            "Mengidentifikasi dan mengatasi penyebab delirium (misalnya, infeksi, dehidrasi, hipoksia)",
+            "Memberikan obat antipsikotik dosis tinggi untuk menenangkan pasien",
+            "Membiarkan pasien sendirian di ruangan gelap agar bisa istirahat",
+            "Meyakinkan pasien bahwa orang yang dipanggilnya masih hidup"
+        ],
+        "answer": 0,
+        "explanation": "Delirium adalah sindrom neuropsikiatrik akut yang disebabkan oleh kondisi medis lain, intoksikasi, atau putus zat. Prioritas utama adalah mengidentifikasi dan mengobati penyebab yang mendasarinya. Intervensi suportif seperti reorientasi dan keamanan juga penting."
+    },
+    {
+        "question": "Perawat bertanya kepada pasien, 'Bagaimana perasaan Anda hari ini?' Pasien menjawab, 'Hari ini cuaca cerah, burung berkicau, saya suka warna biru.' Jawaban pasien menunjukkan jenis gangguan proses pikir...",
+        "options": [
+            "Sirkumstansial",
+            "Tangensial",
+            "Asosiasi longgar",
+            "Perseverasi"
+        ],
+        "answer": 1,
+        "explanation": "Tangensial adalah pola bicara di mana pasien menyimpang dari topik utama dan tidak pernah kembali ke pokok pembicaraan awal. Jawaban pasien tidak relevan dengan pertanyaan yang diajukan."
+    },
+    {
+        "question": "Seorang pasien dengan gangguan bipolar dalam fase manik tidur hanya 2-3 jam semalam namun merasa sangat berenergi. Diagnosa keperawatan yang paling tepat terkait kebutuhan tidur adalah...",
+        "options": [
+            "Kelebihan volume tidur",
+            "Gangguan pola tidur",
+            "Insomnia primer",
+            "Kesiapan meningkatkan kualitas tidur"
+        ],
+        "answer": 1,
+        "explanation": "Pada fase manik, kebutuhan tidur menurun drastis (pasien merasa tidak perlu tidur) namun tetap memiliki energi tinggi. Ini merupakan gangguan pola tidur yang khas, bukan insomnia di mana pasien ingin tidur tapi tidak bisa."
+    },
+    {
+        "question": "Perawat mengajarkan pasien skizofrenia tentang pentingnya aktivitas terjadwal untuk mencegah halusinasi. Prinsip yang mendasari intervensi ini adalah...",
+        "options": [
+            "Aktivitas fisik melelahkan pasien sehingga tidak sempat berhalusinasi",
+            "Aktivitas mengalihkan perhatian dan memfokuskan energi pasien pada hal-hal nyata",
+            "Aktivitas meningkatkan kadar dopamin sehingga mengurangi halusinasi",
+            "Aktivitas membuat pasien merasa lebih superior dari halusinasinya"
+        ],
+        "answer": 1,
+        "explanation": "Melakukan aktivitas yang bermakna dan membutuhkan konsentrasi dapat membantu pasien mengalihkan perhatian dari stimulus internal (halusinasi) ke stimulus eksternal yang nyata, sehingga frekuensi dan intensitas halusinasi dapat berkurang."
+    },
+    {
+        "question": "Seorang pasien yang baru memulai terapi dengan obat golongan antipsikotik mengeluh pandangannya menjadi kabur dan sulit buang air kecil. Perawat menjelaskan bahwa ini adalah efek samping yang bersifat...",
+        "options": [
+            "Adrenergik",
+            "Dopaminergik",
+            "Antikolinergik",
+            "Serotonergik"
+        ],
+        "answer": 2,
+        "explanation": "Pandangan kabur (akibat midriasis dan gangguan akomodasi) serta retensi urin adalah efek samping umum dari blokade reseptor muskarinik (antikolinergik) oleh beberapa obat antipsikotik, terutama generasi pertama dan beberapa generasi kedua."
+    },
+    {
+        "question": "Seorang ibu mengeluh bahwa anaknya yang berusia 4 tahun seringkali sangat aktif, sulit fokus, dan impulsif. Sebelum menyimpulkan ADHD, penting untuk mempertimbangkan bahwa...",
+        "options": [
+            "Semua anak usia 4 tahun memang demikian",
+            "Perilaku tersebut harus persisten, pervasif (terjadi di berbagai situasi), dan menyebabkan gangguan fungsi yang signifikan",
+            "Anak tersebut hanya kurang disiplin dari orang tuanya",
+            "Gejala tersebut pasti disebabkan oleh terlalu banyak nonton TV"
+        ],
+        "answer": 1,
+        "explanation": "Diagnosis ADHD memerlukan gejala hiperaktivitas, inatensi, dan impulsivitas yang tidak sesuai dengan tingkat perkembangan, muncul sebelum usia tertentu (biasanya 12 tahun), terjadi di dua atau lebih setting (misalnya, rumah dan sekolah), dan menyebabkan gangguan signifikan dalam fungsi sosial, akademik, atau okupasional."
+    },
+    {
+        "question": "Tujuan dari 'milieu therapy' (terapi lingkungan) di unit perawatan psikiatri adalah...",
+        "options": [
+            "Mengisolasi pasien dari dunia luar untuk melindunginya",
+            "Menciptakan lingkungan terapeutik yang aman, terstruktur, dan suportif untuk memfasilitasi perubahan positif pada pasien",
+            "Memberikan kebebasan penuh kepada pasien untuk melakukan apapun yang mereka inginkan",
+            "Fokus utama pada pemberian obat-obatan dan ECT"
+        ],
+        "answer": 1,
+        "explanation": "Terapi lingkungan memanfaatkan seluruh aspek lingkungan fisik dan sosial unit perawatan (staf, pasien lain, rutinitas, aktivitas) sebagai agen terapeutik untuk mendukung pemulihan dan pembelajaran keterampilan adaptif."
+    },
+    {
+        "question": "Seorang pasien dengan gangguan panik mengatakan, 'Saya takut keluar rumah sendirian karena khawatir akan terkena serangan panik dan tidak ada yang menolong.' Ketakutan ini adalah inti dari...",
+        "options": [
+            "Fobia spesifik",
+            "Gangguan cemas sosial",
+            "Agorafobia",
+            "Gangguan obsesif-kompulsif"
+        ],
+        "answer": 2,
+        "explanation": "Agorafobia seringkali berkembang sebagai komplikasi dari gangguan panik. Individu menjadi takut pada situasi di mana serangan panik mungkin terjadi dan sulit mendapatkan bantuan atau melarikan diri, sehingga mereka mulai menghindari situasi tersebut, termasuk keluar rumah sendirian."
+    },
+    {
+        "question": "Manakah yang BUKAN merupakan bagian dari pemeriksaan status mental (Mental State Examination - MSE)?",
+        "options": [
+            "Penampilan dan perilaku umum",
+            "Proses pikir dan isi pikir",
+            "Mood dan afek",
+            "Riwayat penyakit keluarga"
+        ],
+        "answer": 3,
+        "explanation": "Riwayat penyakit keluarga adalah bagian dari anamnesis atau pengkajian riwayat kesehatan secara umum, bukan komponen langsung dari MSE. MSE fokus pada observasi dan penilaian kondisi mental pasien saat pemeriksaan (here and now)."
+    },
+    {
+        "question": "Seorang pasien skizofrenia mengatakan, 'Saya adalah Raja Semesta Alam yang dikirim untuk membawa kedamaian.' Waham ini tergolong jenis...",
+        "options": [
+            "Waham somatik",
+            "Waham persekutorik (curiga)",
+            "Waham kebesaran (grandiose)",
+            "Waham nihilistik"
+        ],
+        "answer": 2,
+        "explanation": "Waham kebesaran (grandiose delusion) adalah keyakinan yang salah dan tidak sesuai realitas bahwa individu memiliki kekuatan, status, kekayaan, atau identitas yang luar biasa atau istimewa."
+    },
+    {
+        "question": "Perawat sedang memberikan edukasi tentang obat Haloperidol. Efek samping yang paling sering muncul dan perlu diwaspadai terkait sistem motorik adalah...",
+        "options": [
+            "Sedasi dan pusing",
+            "Gejala ekstrapiramidal (EPS) seperti distonia, akatisia, parkinsonisme",
+            "Hipotensi ortostatik",
+            "Mulut kering dan konstipasi"
+        ],
+        "answer": 1,
+        "explanation": "Haloperidol adalah antipsikotik tipikal potensi tinggi yang kuat memblokade reseptor D2, sehingga memiliki risiko tinggi menyebabkan efek samping ekstrapiramidal (EPS) yang mengganggu fungsi motorik."
+    },
+    {
+        "question": "Seorang pasien dengan depresi berat menolak makan dan minum selama 2 hari. Prioritas tindakan keperawatan adalah...",
+        "options": [
+            "Mengkaji lebih lanjut alasan pasien menolak makan dan minum",
+            "Melaporkan kepada dokter dan mempersiapkan kemungkinan intervensi nutrisi/hidrasi (misalnya, infus)",
+            "Memberikan pendidikan kesehatan tentang pentingnya nutrisi",
+            "Mencoba membujuk pasien dengan makanan kesukaannya"
+        ],
+        "answer": 1, // Ini adalah prioritas karena mengancam jiwa.
+        "explanation": "Penolakan makan dan minum selama 2 hari pada pasien depresi berat dapat mengancam jiwa karena risiko dehidrasi dan ketidakseimbangan elektrolit. Ini memerlukan perhatian medis segera. Pengkajian dan bujukan tetap penting, tetapi keselamatan fisiologis adalah yang utama."
+    },
+    {
+        "question": "Dalam komunikasi dengan pasien yang mengalami waham, sikap perawat yang paling terapeutik adalah...",
+        "options": [
+            "Menyetujui isi waham pasien untuk membangun rapport",
+            "Secara aktif membantah dan mencoba meyakinkan pasien bahwa wahamnya salah",
+            "Mengakui bahwa pasien memiliki keyakinan tersebut tanpa menyetujui atau membantahnya, dan fokus pada realitas",
+            "Mengabaikan pernyataan waham pasien dan segera mengganti topik"
+        ],
+        "answer": 2,
+        "explanation": "Pendekatan 'voicing doubt' atau 'presenting reality' secara halus lebih baik. Akui bahwa pasien mempercayai itu ('Saya mengerti Anda percaya bahwa...'), tetapi nyatakan bahwa Anda tidak memiliki persepsi yang sama ('Saya tidak melihatnya seperti itu'), lalu alihkan ke topik yang nyata dan konkret."
+    },
+    {
+        "question": "Seorang pasien dengan anoreksia nervosa memiliki indeks massa tubuh (IMT) 15 kg/m². Fokus utama dalam rencana asuhan keperawatan adalah...",
+        "options": [
+            "Meningkatkan harga diri pasien",
+            "Memperbaiki interaksi sosial pasien",
+            "Restorasi nutrisi dan peningkatan berat badan secara aman",
+            "Mengajarkan keterampilan koping yang adaptif"
+        ],
+        "answer": 2,
+        "explanation": "Pada anoreksia nervosa dengan IMT sangat rendah, restorasi nutrisi dan berat badan menjadi prioritas medis karena kondisi malnutrisi berat mengancam jiwa. Aspek psikologis lain ditangani secara paralel atau setelah stabilisasi fisik."
+    },
+    {
+        "question": "Seorang pasien yang baru dirawat di unit psikiatri terlihat cemas dan sering bertanya tentang rutinitas harian. Tindakan perawat yang paling membantu adalah...",
+        "options": [
+            "Mengatakan bahwa pasien akan tahu sendiri seiring waktu",
+            "Memberikan jadwal kegiatan harian dan menjelaskan aturan unit secara singkat dan jelas",
+            "Meminta pasien untuk tidak terlalu banyak bertanya",
+            "Menyarankan pasien untuk tidur agar tidak cemas"
+        ],
+        "answer": 1,
+        "explanation": "Orientasi terhadap lingkungan baru, rutinitas, dan aturan dapat mengurangi kecemasan dan ketidakpastian pada pasien baru. Informasi yang jelas dan terstruktur membantu pasien merasa lebih aman dan terkontrol."
+    },
+    {
+        "question": "Keluarga seorang pasien skizofrenia mengeluhkan bahwa pasien sering berbicara sendiri dan tertawa tanpa sebab di rumah. Perawat menjelaskan bahwa ini kemungkinan adalah manifestasi dari...",
+        "options": [
+            "Waham kebesaran",
+            "Halusinasi (kemungkinan auditorik)",
+            "Perilaku agresif",
+            "Isolasi sosial"
+        ],
+        "answer": 1,
+        "explanation": "Berbicara sendiri (verbalisasi sebagai respons terhadap suara) dan tertawa atau tersenyum tanpa stimulus yang jelas seringkali merupakan indikasi bahwa pasien sedang mengalami halusinasi pendengaran."
+    },
+    {
+        "question": "Obat antiansietas golongan benzodiazepine, seperti diazepam, bekerja dengan meningkatkan efek neurotransmitter...",
+        "options": [
+            "Dopamin",
+            "Serotonin",
+            "Norepinefrin",
+            "GABA (Gamma-Aminobutyric Acid)"
+        ],
+        "answer": 3,
+        "explanation": "Benzodiazepine adalah modulator alosterik positif pada reseptor GABA-A. Dengan meningkatkan aksi inhibisi GABA, mereka menghasilkan efek sedatif, ansiolitik, antikonvulsan, dan relaksan otot."
+    },
+    {
+        "question": "Seorang pasien dengan gangguan kepribadian narsistik cenderung menunjukkan ciri-ciri berikut, KECUALI...",
+        "options": [
+            "Kebutuhan yang besar akan pujian dan kekaguman",
+            "Kurang empati terhadap perasaan orang lain",
+            "Perasaan superioritas dan keistimewaan diri",
+            "Keraguan diri yang mendalam dan rasa tidak aman yang diekspresikan secara terbuka"
+        ],
+        "answer": 3,
+        "explanation": "Meskipun secara teoretis narsisme bisa jadi menutupi rasa tidak aman yang dalam, manifestasi luarnya adalah grandiositas, arogansi, dan eksploitasi orang lain. Mereka jarang menunjukkan keraguan diri secara terbuka; sebaliknya, mereka memproyeksikan citra superior."
+    },
+    {
+        "question": "Seorang pasien menolak minum obat antipsikotik karena takut efek samping 'kaku-kaku'. Respon edukatif perawat yang tepat adalah...",
+        "options": [
+            "Memaksa pasien minum obat karena itu perintah dokter",
+            "Mengatakan bahwa efek samping itu hanya mitos belaka",
+            "Menjelaskan bahwa memang ada risiko efek samping tersebut, namun dokter akan memantau dan bisa memberikan obat untuk mengatasinya jika muncul",
+            "Menawarkan untuk menghentikan obat tersebut jika pasien sangat khawatir"
+        ],
+        "answer": 2,
+        "explanation": "Memberikan informasi yang jujur tentang kemungkinan efek samping (seperti EPS), cara pemantauannya, dan penanganannya dapat meningkatkan kepercayaan dan kepatuhan pasien. Menyangkal atau memaksa tidak terapeutik."
+    },
+    {
+        "question": "Seorang pasien lansia dengan demensia menunjukkan perilaku agitasi dan mondar-mandir di sore hari ('sundowning'). Intervensi non-farmakologis yang dapat dicoba adalah...",
+        "options": [
+            "Membiarkan pasien di ruangan yang gelap dan sunyi",
+            "Meningkatkan pencahayaan di ruangan dan menawarkan aktivitas ringan yang menenangkan",
+            "Memberikan minuman berkafein untuk meningkatkan kewaspadaan",
+            "Mengikat pasien di kursi agar tidak jatuh"
+        ],
+        "answer": 1,
+        "explanation": "Sundowning dapat diperburuk oleh pencahayaan redup dan kurangnya stimulus. Meningkatkan pencahayaan, menjaga rutinitas, dan menawarkan aktivitas yang familiar dan menenangkan dapat membantu mengurangi agitasi."
+    },
+    {
+        "question": "Dalam Terapi Aktivitas Kelompok (TAK) Stimulasi Persepsi untuk halusinasi, setelah pasien mampu mengenali halusinasinya, langkah selanjutnya yang diajarkan adalah...",
+        "options": [
+            "Langsung melaporkan kepada dokter setiap kali halusinasi muncul",
+            "Melatih cara mengontrol halusinasi (misalnya menghardik, bercakap-cakap, melakukan aktivitas, minum obat)",
+            "Mengabaikan halusinasi sepenuhnya",
+            "Meyakini bahwa halusinasi itu nyata dan harus diikuti"
+        ],
+        "answer": 1,
+        "explanation": "Setelah identifikasi, pasien diajarkan berbagai strategi untuk mengelola atau mengontrol halusinasinya, seperti menghardik, mengalihkan perhatian dengan bercakap-cakap atau aktivitas, dan pentingnya kepatuhan obat."
+    },
+    {
+        "question": "Seorang pasien mengungkapkan, 'Saya merasa seperti robot, tidak ada emosi sama sekali.' Keluhan ini menggambarkan...",
+        "options": [
+            "Anhedonia (kehilangan minat/kesenangan)",
+            "Afek datar atau tumpul (blunted/flat affect)",
+            "Depersonalisasi",
+            "Alogia (miskin bicara)"
+        ],
+        "answer": 2, // atau bisa juga afek datar, tapi depersonalisasi lebih ke perasaan 'tidak nyata' atau 'terpisah dari diri'.
+        "explanation": "Depersonalisasi adalah perasaan terpisah atau asing dari diri sendiri, seolah-olah menjadi pengamat luar bagi pikiran, perasaan, atau tubuh sendiri. Perasaan seperti robot atau tidak nyata adalah deskripsi yang umum."
+    },
+    {
+        "question": "Manakah intervensi keperawatan yang paling tepat untuk pasien yang mengalami 'flight of ideas'?",
+        "options": [
+            "Meminta pasien untuk berbicara lebih lambat dan fokus pada satu topik",
+            "Mencatat semua yang dikatakan pasien tanpa interupsi",
+            "Memberikan umpan balik singkat dan jelas, serta mencoba mengarahkan pembicaraan jika memungkinkan",
+            "Mengabaikan pasien karena pembicaraannya tidak bermakna"
+        ],
+        "answer": 2,
+        "explanation": "Pasien dengan flight of ideas sulit mempertahankan fokus. Perawat dapat mencoba memberikan respons singkat terhadap sebagian kecil dari apa yang dikatakan, menggunakan kata kunci untuk mencoba mengarahkan kembali, dan menjaga komunikasi tetap sederhana dan konkret."
+    },
+    {
+        "question": "Seorang pasien dengan ketergantungan alkohol sedang dalam program rehabilitasi. Tujuan utama terapi perilaku kognitif (CBT) untuk pasien ini adalah...",
+        "options": [
+            "Mengidentifikasi dan mengubah pola pikir serta perilaku maladaptif terkait penggunaan alkohol",
+            "Memberikan obat untuk mengurangi keinginan minum alkohol",
+            "Memastikan pasien tidak pernah terpapar alkohol lagi seumur hidupnya",
+            "Menghukum pasien setiap kali ia teringat alkohol"
+        ],
+        "answer": 0,
+        "explanation": "CBT membantu pasien mengidentifikasi pemicu (triggers), pikiran otomatis negatif, dan keyakinan yang salah terkait penggunaan alkohol, serta mengembangkan strategi koping yang lebih sehat dan keterampilan mencegah kekambuhan."
+    },
+    {
+        "question": "Seorang pasien wanita mengeluh nyeri perut hebat setiap kali menjelang menstruasi, disertai mood swing yang parah dan iritabilitas. Kondisi ini kemungkinan adalah...",
+        "options": [
+            "Gangguan bipolar",
+            "Premenstrual Dysphoric Disorder (PMDD)",
+            "Gangguan cemas umum",
+            "Endometriosis"
+        ],
+        "answer": 1,
+        "explanation": "PMDD adalah bentuk parah dari PMS, ditandai dengan gejala emosional (iritabilitas, depresi, cemas) dan fisik yang signifikan yang terjadi pada minggu sebelum menstruasi dan membaik setelah menstruasi dimulai, serta mengganggu fungsi sehari-hari."
+    },
+    {
+        "question": "Perawat melakukan pengkajian risiko bunuh diri. Faktor yang meningkatkan risiko bunuh diri meliputi, KECUALI...",
+        "options": [
+            "Riwayat percobaan bunuh diri sebelumnya",
+            "Adanya rencana bunuh diri yang spesifik dan akses ke sarana",
+            "Dukungan sosial yang kuat dari keluarga dan teman",
+            "Gangguan jiwa berat seperti depresi mayor atau skizofrenia"
+        ],
+        "answer": 2,
+        "explanation": "Dukungan sosial yang kuat merupakan faktor protektif terhadap bunuh diri. Faktor risiko lainnya (riwayat percobaan, rencana spesifik, gangguan jiwa, isolasi sosial, penyalahgunaan zat) justru meningkatkan kemungkinan."
+    },
+    {
+        "question": "Seorang pasien skizofrenia yang telah stabil dengan obat menolak melanjutkan pengobatan karena merasa 'sudah sembuh' dan 'tidak butuh obat lagi'. Pendidikan kesehatan yang perlu ditekankan perawat adalah...",
+        "options": [
+            "Obat antipsikotik hanya perlu diminum saat gejala muncul",
+            "Menghentikan obat secara tiba-tiba dapat memicu kekambuhan gejala yang lebih berat",
+            "Pasien boleh mengurangi dosis sendiri jika merasa lebih baik",
+            "Efek samping obat lebih berbahaya daripada penyakitnya sendiri"
+        ],
+        "answer": 1,
+        "explanation": "Menghentikan pengobatan antipsikotik secara mendadak pada pasien skizofrenia, terutama yang telah stabil, memiliki risiko tinggi menyebabkan relapse (kekambuhan). Penting untuk menekankan bahwa obat berfungsi mengontrol gejala dan mencegah kambuh, bukan menyembuhkan total."
+    },
+    {
+        "question": "Seorang pasien dengan demensia seringkali mengulang pertanyaan yang sama berkali-kali meskipun sudah dijawab. Respon perawat yang paling tepat adalah...",
+        "options": [
+            "Mengatakan pada pasien, 'Anda sudah bertanya itu tadi, saya sudah jawab.'",
+            "Menjawab pertanyaan dengan sabar setiap kali ditanyakan, atau mencoba mengalihkan perhatian dengan lembut",
+            "Mengabaikan pertanyaan pasien karena ia akan lupa lagi",
+            "Meminta pasien untuk mencatat jawabannya agar tidak bertanya lagi"
+        ],
+        "answer": 1,
+        "explanation": "Pasien demensia mengalami gangguan memori jangka pendek. Menjawab dengan sabar dan konsisten, atau menggunakan teknik distraksi/pengalihan, lebih terapeutik daripada menunjukkan frustrasi atau mengkonfrontasi defisit memorinya."
+    },
+    {
+        "question": "Prinsip 'confidentiality' (kerahasiaan) dalam keperawatan jiwa berarti...",
+        "options": [
+            "Perawat tidak boleh memberitahu siapapun tentang kondisi pasien, termasuk tim kesehatan lain",
+            "Informasi pasien hanya boleh dibagikan dengan anggota tim kesehatan yang terlibat langsung dalam perawatannya, dan dengan izin pasien jika ke pihak ketiga",
+            "Semua informasi pasien harus dilaporkan kepada keluarga tanpa terkecuali",
+            "Perawat boleh mendiskusikan kasus pasien dengan temannya jika tidak menyebutkan nama"
+        ],
+        "answer": 1,
+        "explanation": "Kerahasiaan adalah prinsip etis dan legal yang fundamental. Informasi pasien dilindungi dan hanya dibagikan untuk kepentingan perawatan pasien di antara tim, atau dengan izin pasien. Ada pengecualian tertentu (misalnya, risiko bahaya pada diri sendiri/orang lain, perintah pengadilan)."
+    },
+    {
+        "question": "Seorang pasien baru saja mengalami kehilangan orang yang dicintai. Ia tampak sedih, menangis, dan sulit tidur, namun masih mampu melakukan aktivitas dasar sehari-hari. Reaksi ini kemungkinan besar adalah...",
+        "options": [
+            "Gangguan depresi mayor",
+            "Reaksi berduka normal (normal grief)",
+            "Gangguan penyesuaian dengan mood depresi",
+            "Gangguan stres pasca trauma"
+        ],
+        "answer": 1,
+        "explanation": "Kesedihan, tangisan, dan gangguan tidur adalah respons yang umum dan normal setelah kehilangan. Selama gejala tidak berlebihan, berkepanjangan secara patologis, atau sangat mengganggu fungsi hingga memenuhi kriteria gangguan depresi mayor, ini dianggap sebagai bagian dari proses berduka normal."
+    },
+    {
+        "question": "Pasien yang menerima terapi Clozapine perlu melakukan pemantauan hitung jenis leukosit secara rutin karena risiko efek samping...",
+        "options": [
+            "Trombositopenia",
+            "Anemia aplastik",
+            "Agranulositosis",
+            "Leukemia"
+        ],
+        "answer": 2,
+        "explanation": "Clozapine memiliki risiko menyebabkan agranulositosis, yaitu penurunan drastis neutrofil (jenis sel darah putih) yang membuat pasien sangat rentan terhadap infeksi. Pemantauan rutin sel darah putih adalah wajib."
+    },
+    {
+        "question": "Seorang remaja menunjukkan perubahan perilaku drastis, prestasi sekolah menurun, sering menyendiri, dan tampak tidak peduli dengan penampilan. Orang tua khawatir anaknya menggunakan narkoba. Langkah pertama yang sebaiknya dilakukan perawat/konselor adalah...",
+        "options": [
+            "Segera melakukan tes urin narkoba tanpa persetujuan remaja",
+            "Menuduh remaja menggunakan narkoba dan mengancam akan melaporkan ke polisi",
+            "Membangun hubungan kepercayaan dengan remaja dan melakukan anamnesis/wawancara mendalam mengenai perubahan perilakunya",
+            "Menyarankan orang tua untuk langsung mengirim remaja ke panti rehabilitasi"
+        ],
+        "answer": 2,
+        "explanation": "Membangun rapport dan melakukan pengkajian komprehensif adalah langkah awal yang krusial. Perubahan perilaku bisa disebabkan banyak faktor. Pendekatan yang suportif dan tidak menghakimi akan lebih efektif untuk mendapatkan informasi dan merencanakan intervensi yang tepat."
+    },
+    {
+        "question": "Manakah yang merupakan contoh perilaku 'acting out' pada remaja dengan masalah emosional?",
+        "options": [
+            "Mendiskusikan perasaannya secara terbuka dengan konselor",
+            "Menulis jurnal harian tentang pengalamannya",
+            "Membolos sekolah, berkelahi, atau menggunakan zat terlarang",
+            "Berpartisipasi aktif dalam kegiatan olahraga"
+        ],
+        "answer": 2,
+        "explanation": "Acting out adalah ekspresi konflik emosional atau stres melalui tindakan atau perilaku maladaptif, bukan melalui kata-kata atau refleksi. Perilaku seperti agresi, kenakalan, atau penyalahgunaan zat seringkali merupakan bentuk acting out."
+    },
+    {
+        "question": "Seorang pasien dengan gangguan cemas mengeluh sulit berkonsentrasi dan pikirannya sering kosong saat menghadapi situasi yang menegangkan. Ini adalah manifestasi cemas pada aspek...",
+        "options": [
+            "Fisiologis",
+            "Kognitif",
+            "Perilaku",
+            "Emosional"
+        ],
+        "answer": 1,
+        "explanation": "Kesulitan berkonsentrasi, pikiran kosong (mind blank), kekhawatiran berlebihan, dan pikiran negatif adalah contoh manifestasi kognitif dari kecemasan. Fisiologis melibatkan gejala fisik (jantung berdebar), perilaku melibatkan penghindaran, emosional melibatkan perasaan takut/panik."
+    },
+    {
+        "question": "Seorang pasien skizofrenia mengatakan, 'Radio di kepala saya terus memberitahu saya bahwa saya tidak berguna.' Bagaimana perawat sebaiknya merespon halusinasi ini?",
+        "options": [
+            "Meyakinkan pasien bahwa tidak ada radio di kepalanya.",
+            "Mengatakan, 'Saya tidak mendengar radio itu, tapi saya percaya Anda mendengarnya. Bagaimana perasaan Anda tentang apa yang dikatakannya?'",
+            "Mengajak pasien untuk berdebat tentang keberadaan radio tersebut.",
+            "Menyarankan pasien untuk mematikan radio di kepalanya."
+        ],
+        "answer": 1,
+        "explanation": "Respon ini memvalidasi pengalaman subjektif pasien ('Saya percaya Anda mendengarnya') tanpa mengkonfirmasi realitas halusinasi ('Saya tidak mendengar radio itu'), kemudian mengarahkan pada eksplorasi perasaan terkait isi halusinasi, yang lebih terapeutik."
+    },
+    {
+        "question": "Tujuan utama dari pemberian obat antikolinergik (misalnya Trihexyphenidyl) bersamaan dengan antipsikotik tipikal adalah untuk...",
+        "options": [
+            "Meningkatkan efektivitas antipsikotik",
+            "Mengurangi gejala negatif skizofrenia",
+            "Mencegah atau mengatasi efek samping ekstrapiramidal (EPS)",
+            "Mengurangi risiko sindrom neuroleptik maligna"
+        ],
+        "answer": 2,
+        "explanation": "Obat antikolinergik seperti Trihexyphenidyl (Artane) atau Benztropine (Cogentin) sering digunakan untuk profilaksis atau terapi efek samping ekstrapiramidal (khususnya distonia dan parkinsonisme) yang disebabkan oleh antipsikotik, terutama generasi pertama."
+    },
+    {
+        "question": "Seorang pasien mengatakan, 'Saya merasa ada yang aneh dengan tubuh saya, seperti ada organ yang hilang.' Ini adalah contoh dari waham...",
+        "options": [
+            "Waham kebesaran",
+            "Waham curiga",
+            "Waham somatik",
+            "Waham nihilistik"
+        ],
+        "answer": 2,
+        "explanation": "Waham somatik adalah keyakinan salah yang menetap mengenai fungsi atau struktur tubuh seseorang, misalnya merasa ada penyakit berat padahal tidak terbukti medis, atau merasa ada perubahan aneh pada organ tubuh."
+    },
+    {
+        "question": "Seorang pasien dengan depresi tidak mau keluar kamar dan menolak semua aktivitas. Perawat mengatakan, 'Saya akan duduk di sini bersama Anda selama 10 menit, kita tidak perlu bicara jika Anda tidak mau.' Teknik komunikasi ini adalah...",
+        "options": [
+            "Menawarkan diri (Offering self) / Memberikan kehadiran (Offering presence)",
+            "Memberikan pujian (Giving recognition)",
+            "Mengajukan pertanyaan terbuka (Broad opening)",
+            "Menyatakan keraguan (Voicing doubt)"
+        ],
+        "answer": 0,
+        "explanation": "Menawarkan diri atau kehadiran tanpa menuntut interaksi verbal menunjukkan penerimaan dan dukungan, yang bisa sangat berarti bagi pasien yang menarik diri atau merasa tidak berharga."
+    },
+    {
+        "question": "Seorang pasien dengan gangguan bipolar fase manik berbicara sangat cepat, melompat dari satu ide ke ide lain, dan sulit diinterupsi. Prioritas intervensi keperawatan adalah...",
+        "options": [
+            "Mendorong pasien untuk mengekspresikan semua idenya selengkap mungkin",
+            "Menciptakan lingkungan yang tenang dan minim stimulus, serta berbicara dengan kalimat pendek dan jelas",
+            "Mengajak pasien berdebat tentang topik yang sedang dibicarakan",
+            "Memberikan aktivitas kelompok yang membutuhkan banyak energi"
+        ],
+        "answer": 1,
+        "explanation": "Pada pasien manik dengan flight of ideas dan agitasi, mengurangi stimulus lingkungan sangat penting. Komunikasi perawat harus singkat, jelas, dan konkret. Aktivitas yang dianjurkan adalah yang bersifat individual dan menenangkan, bukan yang merangsang."
+    },
+    {
+        "question": "Seorang pasien yang dirawat karena percobaan bunuh diri mengatakan, 'Saya sudah tidak punya keinginan bunuh diri lagi, saya mau pulang.' Sebelum merekomendasikan pemulangan, hal terpenting yang harus dievaluasi perawat adalah...",
+        "options": [
+            "Apakah pasien sudah meminta maaf kepada keluarganya",
+            "Keaslian pernyataan pasien, adanya rencana keamanan pasca-pulang, dan sistem pendukung yang tersedia",
+            "Apakah pasien sudah bisa tidur nyenyak tanpa obat",
+            "Seberapa cepat pasien bisa kembali bekerja atau sekolah"
+        ],
+        "answer": 1,
+        "explanation": "Pernyataan pasien saja tidak cukup. Perlu pengkajian mendalam tentang faktor risiko yang masih ada, faktor protektif, rencana keamanan (coping strategies, siapa yang dihubungi jika krisis), dan ketersediaan dukungan sosial yang adekuat di rumah."
+    },
+    {
+        "question": "Manakah yang merupakan contoh strategi koping berfokus emosi (emotion-focused coping)?",
+        "options": [
+            "Membuat rencana langkah demi langkah untuk menyelesaikan masalah",
+            "Mencari informasi lebih lanjut tentang sumber stres",
+            "Melakukan meditasi atau curhat kepada teman untuk meredakan ketegangan",
+            "Menghadapi orang yang menyebabkan masalah secara langsung"
+        ],
+        "answer": 2,
+        "explanation": "Emotion-focused coping bertujuan untuk mengurangi respons emosional negatif terhadap stresor, tanpa mengubah situasi stresor itu sendiri. Contohnya termasuk relaksasi, meditasi, mencari dukungan emosional, atau mengekspresikan perasaan."
+    },
+    {
+        "question": "Pasien dengan skizofrenia mengeluh bahwa pikirannya disiarkan sehingga orang lain bisa mendengarnya (thought broadcasting). Ini merupakan gangguan pada...",
+        "options": [
+            "Arus pikir (stream of thought)",
+            "Isi pikir (content of thought) - yaitu waham",
+            "Persepsi (perception)",
+            "Mood"
+        ],
+        "answer": 1,
+        "explanation": "Thought broadcasting adalah salah satu jenis waham (gangguan isi pikir), yaitu keyakinan bahwa pikiran seseorang dapat didengar atau diketahui oleh orang lain seolah-olah disiarkan."
+    },
+    {
+        "question": "Seorang pasien dengan fobia spesifik terhadap laba-laba diterapi dengan 'systematic desensitization'. Tahap awal dari terapi ini adalah...",
+        "options": [
+            "Langsung menghadapkan pasien dengan laba-laba besar",
+            "Mengajarkan teknik relaksasi kepada pasien",
+            "Meminta pasien untuk memegang laba-laba mainan",
+            "Menceramahi pasien bahwa laba-laba tidak berbahaya"
+        ],
+        "answer": 1,
+        "explanation": "Desensitisasi sistematis melibatkan tiga tahap utama: 1) Mengajarkan teknik relaksasi mendalam, 2) Membuat hierarki kecemasan (daftar situasi terkait fobia dari yang paling tidak hingga paling mencemaskan), 3) Secara bertahap memaparkan pasien pada item dalam hierarki sambil menerapkan teknik relaksasi."
+    },
+    {
+        "question": "Perawat sedang melakukan pengkajian nutrisi pada pasien lansia. Selain berat badan dan IMT, data laboratorium yang dapat menunjukkan status nutrisi protein jangka panjang adalah...",
+        "options": [
+            "Kadar glukosa darah",
+            "Kadar albumin serum",
+            "Kadar kolesterol total",
+            "Jumlah leukosit"
+        ],
+        "answer": 1,
+        "explanation": "Albumin serum memiliki waktu paruh yang relatif panjang (sekitar 20 hari) dan kadarnya dapat mencerminkan status protein-kalori tubuh dalam beberapa minggu terakhir. Kadar albumin rendah bisa mengindikasikan malnutrisi kronis."
+    },
+    {
+        "question": "Seorang pasien yang mengalami serangan panik menunjukkan hiperventilasi. Tindakan keperawatan untuk membantu mengatasi hiperventilasi adalah...",
+        "options": [
+            "Meminta pasien untuk bernapas secepat mungkin",
+            "Memberikan oksigen dengan masker non-rebreathing",
+            "Membimbing pasien untuk bernapas perlahan dan dangkal, atau menggunakan kantong kertas (jika diindikasikan dan tidak ada kontraindikasi)",
+            "Menyuruh pasien menahan napas selama satu menit"
+        ],
+        "answer": 2,
+        "explanation": "Hiperventilasi menyebabkan penurunan CO2 darah (alkalosis respiratorik) yang memperburuk gejala panik (pusing, kesemutan). Memperlambat laju napas atau bernapas kembali ke kantong kertas (rebreathing CO2) dapat membantu menormalkan kadar CO2."
+    },
+    {
+        "question": "Pasien dengan perilaku kekerasan yang tidak terkontrol dan membahayakan mungkin memerlukan tindakan seklusi. Tujuan utama seklusi adalah...",
+        "options": [
+            "Menghukum pasien atas perilakunya",
+            "Memberikan waktu bagi staf untuk beristirahat",
+            "Melindungi pasien dan orang lain dari cedera dengan menyediakan lingkungan yang aman dan minim stimulus",
+            "Mengisolasi pasien agar tidak menularkan perilakunya kepada pasien lain"
+        ],
+        "answer": 2,
+        "explanation": "Seklusi adalah intervensi terakhir yang digunakan untuk manajemen krisis perilaku kekerasan. Tujuannya adalah keamanan, yaitu mencegah pasien melukai diri sendiri atau orang lain, dengan menempatkannya di ruangan khusus yang aman dan minim rangsangan untuk membantu de-eskalasi."
+    },
+    {
+        "question": "Perawat jiwa di komunitas melakukan kunjungan rumah ke pasien skizofrenia yang baru pulang dari RSJ. Fokus utama kunjungan rumah awal adalah...",
+        "options": [
+            "Segera mencari pekerjaan untuk pasien",
+            "Mengkaji kepatuhan minum obat, dukungan keluarga, dan adaptasi pasien di rumah",
+            "Mengkritik kebersihan rumah pasien",
+            "Mengajak pasien mengikuti semua kegiatan sosial di lingkungannya"
+        ],
+        "answer": 1,
+        "explanation": "Kunjungan rumah awal pasca-hospitalisasi bertujuan untuk memastikan transisi yang aman, memantau kepatuhan pengobatan, menilai sistem pendukung keluarga, mengidentifikasi potensi masalah adaptasi, dan memberikan edukasi serta dukungan berkelanjutan."
+    },
+    {
+        "question": "Seorang pasien dengan gangguan identitas disosiatif (dulu kepribadian ganda) menunjukkan perubahan tiba-tiba dalam cara berbicara, bersikap, dan mengaku sebagai 'orang lain'. Respons perawat yang paling tepat adalah...",
+        "options": [
+            "Memanggil pasien dengan nama alter yang muncul untuk membangun rapport",
+            "Mencoba 'mengusir' alter tersebut dan meminta kepribadian utama kembali",
+            "Tetap tenang, berorientasi pada keamanan, dan mendokumentasikan perubahan perilaku tanpa menghakimi",
+            "Meyakinkan alter bahwa ia tidak nyata dan hanya bagian dari imajinasi pasien"
+        ],
+        "answer": 2,
+        "explanation": "Saat terjadi 'switching' alter, prioritasnya adalah menjaga keamanan pasien dan lingkungan. Perawat harus tetap tenang, menggunakan pendekatan yang konsisten, dan mencatat perilaku yang diamati. Tujuannya adalah integrasi, bukan memperkuat atau menolak alter."
+    },
+    {
+        "question": "Perawat menjelaskan kepada pasien bahwa 'Sindrom Serotonin' adalah efek samping serius yang bisa terjadi jika mengkombinasikan SSRI dengan obat lain seperti...",
+        "options": [
+            "Obat antasida",
+            "Vitamin C dosis tinggi",
+            "MAOI (Monoamine Oxidase Inhibitor) atau obat serotonergik lainnya",
+            "Obat pereda nyeri golongan NSAID"
+        ],
+        "answer": 2,
+        "explanation": "Sindrom Serotonin disebabkan oleh aktivitas serotonin yang berlebihan di SSP. Risiko meningkat jika SSRI dikombinasikan dengan MAOI, antidepresan lain (TCA, SNRI), triptan, tramadol, St. John's Wort, atau zat lain yang meningkatkan serotonin. Gejalanya meliputi perubahan status mental, agitasi, hiperrefleksia, demam, diaforesis."
+    },
+    {
+        "question": "Seorang pasien dengan gangguan cemas mengeluh, 'Saya selalu khawatir tentang segala hal, bahkan hal-hal kecil. Saya sulit tidur dan otot saya tegang terus.' Gejala ini paling konsisten dengan...",
+        "options": [
+            "Gangguan panik",
+            "Fobia sosial",
+            "Gangguan cemas umum (Generalized Anxiety Disorder - GAD)",
+            "Gangguan stres pasca trauma (PTSD)"
+        ],
+        "answer": 2,
+        "explanation": "GAD ditandai dengan kekhawatiran yang berlebihan, tidak terkontrol, dan kronis (minimal 6 bulan) tentang berbagai hal, disertai gejala fisik seperti ketegangan otot, gangguan tidur, dan mudah lelah."
+    },
+    {
+        "question": "Pasien yang mengalami halusinasi pendengaran diajarkan untuk 'bercakap-cakap dengan orang lain' sebagai cara mengontrol halusinasi. Logika di balik intervensi ini adalah...",
+        "options": [
+            "Orang lain dapat mengkonfirmasi apakah suara itu nyata atau tidak",
+            "Fokus pada percakapan dengan orang lain dapat mengalihkan perhatian dari suara halusinasi",
+            "Suara orang lain akan menakuti suara halusinasi sehingga hilang",
+            "Dengan bercakap-cakap, pasien dapat meminta bantuan orang lain untuk melawan suara halusinasi"
+        ],
+        "answer": 1,
+        "explanation": "Terlibat dalam percakapan yang bermakna dengan orang lain memerlukan konsentrasi dan fokus pada stimulus eksternal (lawan bicara), sehingga dapat mengurangi intensitas atau mengalihkan perhatian dari stimulus internal (halusinasi)."
+    },
+    {
+        "question": "Seorang pasien skizofrenia menunjukkan perilaku 'echolalia'. Ini berarti pasien...",
+        "options": [
+            "Mengulang gerakan orang lain secara persis",
+            "Mengulang kata-kata atau frasa yang diucapkan orang lain secara persis",
+            "Membuat kata-kata baru yang hanya dimengerti oleh dirinya sendiri",
+            "Berbicara dengan sangat cepat dan sulit dihentikan"
+        ],
+        "answer": 1,
+        "explanation": "Echolalia adalah pengulangan patologis dari kata-kata atau frasa yang baru saja didengar dari orang lain. Ini adalah salah satu bentuk gangguan bicara yang dapat terlihat pada skizofrenia atau gangguan spektrum autisme."
+    },
+    {
+        "question": "Seorang perawat melakukan pemeriksaan fisik pada pasien jiwa yang kooperatif. Urutan pemeriksaan fisik yang umum dilakukan adalah...",
+        "options": [
+            "Auskultasi, palpasi, perkusi, inspeksi",
+            "Inspeksi, palpasi, perkusi, auskultasi",
+            "Palpasi, inspeksi, auskultasi, perkusi",
+            "Perkusi, auskultasi, inspeksi, palpasi"
+        ],
+        "answer": 1,
+        "explanation": "Urutan standar pemeriksaan fisik (kecuali untuk abdomen) adalah Inspeksi (melihat), Palpasi (meraba), Perkusi (mengetuk), dan Auskultasi (mendengar dengan stetoskop). Untuk abdomen, auskultasi dilakukan sebelum palpasi dan perkusi untuk menghindari perubahan bunyi usus."
+    },
+    {
+        "question": "Saat mengukur tekanan darah pasien, perawat memastikan manset tidak terlalu longgar atau terlalu ketat. Lebar manset yang ideal adalah...",
+        "options": [
+            "20% dari lingkar lengan atas pasien",
+            "40% dari lingkar lengan atas pasien, dan panjangnya mencakup 80% lingkar lengan",
+            "60% dari lingkar lengan atas pasien",
+            "Sama untuk semua ukuran lengan dewasa"
+        ],
+        "answer": 1,
+        "explanation": "Penggunaan manset yang ukurannya tepat sangat penting untuk akurasi pengukuran tekanan darah. Lebar kantung karet manset sebaiknya sekitar 40% dari lingkar lengan atas, dan panjangnya cukup untuk melingkari setidaknya 80% lengan."
+    },
+    {
+        "question": "Seorang pasien dengan riwayat hipertensi datang dengan keluhan sakit kepala hebat. Perawat mengukur tekanan darahnya 190/110 mmHg. Tindakan pertama perawat adalah...",
+        "options": [
+            "Memberikan obat antihipertensi yang biasa diminum pasien",
+            "Meminta pasien untuk istirahat dan mengukur ulang 30 menit kemudian",
+            "Segera melaporkan kepada dokter dan mempersiapkan intervensi darurat jika ada tanda kerusakan organ target",
+            "Menganjurkan pasien untuk mengurangi konsumsi garam"
+        ],
+        "answer": 2,
+        "explanation": "Tekanan darah 190/110 mmHg dengan gejala (sakit kepala hebat) menunjukkan kemungkinan krisis hipertensi (urgensi atau emergensi). Ini memerlukan evaluasi dan penanganan medis segera untuk mencegah kerusakan organ target (otak, jantung, ginjal)."
+    },
+    {
+        "question": "Seorang pasien diabetes mellitus tipe 2 datang untuk kontrol rutin. Perawat memberikan pendidikan kesehatan tentang perawatan kaki. Hal yang TIDAK dianjurkan adalah...",
+        "options": [
+            "Memeriksa kaki setiap hari apakah ada luka atau lecet",
+            "Menggunakan sepatu yang pas dan nyaman",
+            "Merendam kaki dengan air hangat setiap hari untuk melancarkan sirkulasi",
+            "Memotong kuku kaki lurus dan tidak terlalu pendek"
+        ],
+        "answer": 2,
+        "explanation": "Pasien diabetes sering mengalami neuropati perifer (penurunan sensasi) sehingga mungkin tidak merasakan jika air terlalu panas, berisiko luka bakar. Merendam kaki juga dapat membuat kulit kering dan pecah-pecah. Kaki sebaiknya dicuci dengan sabun lembut dan air hangat (suam-suam kuku, diuji dengan siku) lalu segera dikeringkan, terutama sela jari."
+    },
+    {
+        "question": "Seorang pasien mengeluh sesak napas dan batuk berdahak warna kehijauan selama 3 hari, disertai demam. Saat auskultasi paru, perawat mungkin akan mendengar suara napas tambahan berupa...",
+        "options": [
+            "Vesikuler normal di semua lapang paru",
+            "Wheezing (mengi) terutama saat ekspirasi",
+            "Ronkhi basah (crackles) di area paru yang terinfeksi",
+            "Suara gesekan pleura (pleural friction rub)"
+        ],
+        "answer": 2,
+        "explanation": "Gejala tersebut mengarah pada infeksi saluran napas bawah seperti pneumonia atau bronkitis. Adanya sekret/dahak di saluran napas kecil atau alveoli akan menghasilkan suara ronki basah (crackles/rales) saat udara melewatinya."
+    },
+    {
+        "question": "Dalam melakukan anamnesis kebutuhan eliminasi (BAB), pertanyaan yang relevan diajukan perawat adalah, KECUALI...",
+        "options": [
+            "Berapa kali frekuensi BAB Anda dalam sehari atau seminggu?",
+            "Apakah ada kesulitan atau nyeri saat BAB?",
+            "Bagaimana konsistensi dan warna feses Anda?",
+            "Berapa banyak porsi makan Anda setiap hari?"
+        ],
+        "answer": 3,
+        "explanation": "Porsi makan lebih terkait dengan pengkajian nutrisi. Untuk eliminasi BAB, fokusnya pada frekuensi, konsistensi, warna, adanya darah atau lendir, nyeri, penggunaan laksatif, dan pola kebiasaan."
+    },
+    {
+        "question": "Perawat memberikan obat parasetamol kepada pasien yang demam. Mekanisme kerja utama parasetamol sebagai antipiretik adalah...",
+        "options": [
+            "Menghambat agregasi trombosit",
+            "Menghambat enzim siklooksigenase (COX) di sistem saraf pusat",
+            "Memblokade reseptor opioid di otak",
+            "Meningkatkan produksi prostaglandin"
+        ],
+        "answer": 1,
+        "explanation": "Parasetamol (acetaminophen) bekerja terutama di sistem saraf pusat untuk menghambat sintesis prostaglandin melalui inhibisi enzim COX, sehingga menurunkan titik setel suhu di hipotalamus dan mengurangi demam. Efek anti-inflamasinya di perifer lemah."
+    },
+    {
+        "question": "Seorang pasien akan menjalani pemeriksaan laboratorium darah lengkap. Instruksi yang biasanya diberikan terkait persiapan adalah...",
+        "options": [
+            "Harus makan makanan berlemak tinggi malam sebelumnya",
+            "Tidak ada persiapan khusus yang diperlukan",
+            "Puasa makan dan minum (kecuali air putih) selama 8-12 jam sebelum pengambilan darah, tergantung jenis tes",
+            "Minum banyak air manis sebelum tes agar tidak lemas"
+        ],
+        "answer": 2,
+        "explanation": "Banyak parameter dalam darah lengkap atau kimia darah (seperti glukosa, profil lipid) dipengaruhi oleh asupan makanan terakhir. Puasa umumnya diperlukan untuk mendapatkan hasil yang akurat untuk tes-tes tersebut. Namun, untuk beberapa tes, puasa tidak selalu wajib; tergantung instruksi spesifik."
+    },
+    {
+        "question": "Seorang pasien dengan skizofrenia tidak mau beranjak dari tempat tidurnya sepanjang hari, menolak mandi, dan hanya menatap langit-langit. Perilaku ini merupakan contoh dari gejala...",
+        "options": [
+            "Halusinasi komando",
+            "Waham kebesaran",
+            "Negativisme atau avolition (gejala negatif)",
+            "Katatonia stupor"
+        ],
+        "answer": 2, // Avolition atau negativisme lebih pas. Katatonia stupor adalah kondisi lebih ekstrem.
+        "explanation": "Avolition (kurang motivasi dan inisiatif) dan negativisme (resistensi terhadap instruksi atau stimulus eksternal) adalah gejala negatif skizofrenia yang menyebabkan pasien menarik diri, tidak aktif, dan mengalami defisit perawatan diri."
+    },
+    {
+        "question": "Seorang ibu membawa anaknya yang berusia 2 tahun ke puskesmas dengan keluhan diare cair lebih dari 5 kali sehari sejak kemarin. Anak tampak lemas dan matanya cekung. Tindakan pertama yang paling penting dilakukan perawat adalah...",
+        "options": [
+            "Memberikan obat antidiare segera",
+            "Mengkaji status hidrasi anak (turgor kulit, mata cekung, ubun-ubun, mukosa bibir) dan tanda-tanda dehidrasi",
+            "Menanyakan riwayat imunisasi anak",
+            "Memberikan penyuluhan tentang cara membuat larutan oralit"
+        ],
+        "answer": 1,
+        "explanation": "Pada anak dengan diare, prioritas utama adalah menilai tingkat dehidrasi. Mata cekung dan lemas adalah tanda dehidrasi. Pengkajian status hidrasi akan menentukan intervensi selanjutnya, termasuk kebutuhan rehidrasi oral atau intravena."
+    },
+    {
+        "question": "Saat memberikan pendidikan kesehatan tentang cara pemberian insulin suntik pada pasien diabetes, hal penting yang harus ditekankan adalah...",
+        "options": [
+            "Menyuntikkan insulin selalu di lokasi yang sama agar mudah diingat",
+            "Menggunakan jarum suntik yang sama berulang kali sampai tumpul",
+            "Melakukan rotasi lokasi suntikan untuk mencegah lipohipertrofi atau lipoatrofi",
+            "Menyimpan insulin di freezer agar lebih awet"
+        ],
+        "answer": 2,
+        "explanation": "Rotasi lokasi suntikan insulin (misalnya, berpindah-pindah di area perut, paha, lengan atas) penting untuk mencegah komplikasi kulit seperti lipohipertrofi (penebalan jaringan lemak) atau lipoatrofi (penyusutan jaringan lemak) yang dapat mengganggu penyerapan insulin. Insulin tidak boleh dibekukan."
+    },
+    {
+        "question": "Seorang pasien pasca operasi mengeluh nyeri pada area luka jahitan dengan skala nyeri 7 dari 10. Perawat telah memberikan analgesik sesuai order dokter. Intervensi non-farmakologis yang dapat dilakukan perawat untuk membantu mengurangi nyeri adalah...",
+        "options": [
+            "Meminta pasien untuk banyak bergerak agar lupa nyerinya",
+            "Mengajarkan teknik relaksasi napas dalam atau distraksi (misalnya, mendengarkan musik, menonton TV)",
+            "Memberikan kompres dingin langsung pada luka jahitan tanpa alas",
+            "Meyakinkan pasien bahwa nyeri itu normal dan akan hilang sendiri"
+        ],
+        "answer": 1,
+        "explanation": "Teknik relaksasi dan distraksi dapat membantu mengurangi persepsi nyeri dan meningkatkan kenyamanan pasien, sebagai pelengkap terapi farmakologis. Kompres dingin bisa membantu, tetapi harus dengan cara yang benar (tidak langsung ke kulit, perhatikan kondisi luka)."
+    },
+    // Soal Tambahan untuk mencapai 180
+    {
+        "question": "Seorang pasien baru saja didiagnosis HIV. Ia tampak sangat terpukul dan cemas tentang masa depannya. Pendekatan komunikasi perawat yang paling tepat adalah...",
+        "options": [
+            "Menghindari topik HIV sama sekali agar pasien tidak sedih",
+            "Memberikan informasi statistik tentang harapan hidup pasien HIV",
+            "Mendengarkan dengan empati, memvalidasi perasaannya, dan menawarkan dukungan serta informasi yang akurat secara bertahap",
+            "Menyarankan pasien untuk segera memberitahu semua anggota keluarganya"
+        ],
+        "answer": 2,
+        "explanation": "Menerima diagnosis HIV bisa sangat berat. Perawat perlu memberikan dukungan emosional, mendengarkan aktif, memvalidasi perasaan, dan memberikan informasi yang relevan dan akurat tentang HIV, pengobatan, dan sumber daya yang tersedia, sesuai kesiapan pasien."
+    },
+    {
+        "question": "Pemeriksaan 'Glasgow Coma Scale' (GCS) pada pasien cedera kepala bertujuan untuk menilai...",
+        "options": [
+            "Tingkat nyeri pasien",
+            "Status nutrisi pasien",
+            "Tingkat kesadaran pasien berdasarkan respons mata, verbal, dan motorik",
+            "Risiko infeksi pada luka kepala"
+        ],
+        "answer": 2,
+        "explanation": "GCS adalah skala neurologis yang digunakan untuk menilai tingkat kesadaran seseorang secara objektif setelah cedera kepala atau pada kondisi medis lain yang mempengaruhi kesadaran. Ini mengukur respons membuka mata, respons verbal, dan respons motorik."
+    },
+    {
+        "question": "Seorang pasien mengeluh mual dan muntah setelah kemoterapi. Intervensi keperawatan untuk membantu mengurangi mual meliputi, KECUALI...",
+        "options": [
+            "Memberikan makanan dalam porsi kecil tapi sering",
+            "Menghindari makanan yang berbau tajam atau berminyak",
+            "Menganjurkan pasien untuk berbaring datar segera setelah makan",
+            "Memberikan antiemetik sesuai jadwal yang diresepkan dokter"
+        ],
+        "answer": 2,
+        "explanation": "Berbaring datar segera setelah makan dapat memperburuk mual dan meningkatkan risiko refluks. Sebaiknya pasien tetap dalam posisi duduk atau setengah duduk selama beberapa waktu setelah makan. Poin lainnya adalah intervensi yang tepat."
+    },
+    {
+        "question": "Perawat di unit perawatan intensif (ICU) memantau tekanan vena sentral (Central Venous Pressure - CVP) pasien. Nilai CVP yang rendah (misalnya, <2 mmHg) dapat mengindikasikan...",
+        "options": [
+            "Kelebihan volume cairan (fluid overload)",
+            "Gagal jantung kanan",
+            "Hipovolemia atau kekurangan volume cairan",
+            "Tamponade jantung"
+        ],
+        "answer": 2,
+        "explanation": "CVP mencerminkan tekanan di vena kava superior atau atrium kanan, yang merupakan indikator status volume intravaskular dan fungsi jantung kanan. CVP rendah biasanya menunjukkan hipovolemia (dehidrasi, perdarahan) atau vasodilatasi."
+    },
+    {
+        "question": "Seorang pasien dengan penyakit paru obstruktif kronik (PPOK) mengalami sesak napas. Posisi yang paling membantu untuk mengurangi sesak adalah...",
+        "options": [
+            "Tidur telentang tanpa bantal",
+            "Posisi Fowler atau Semi-Fowler (duduk atau setengah duduk)",
+            "Posisi Trendelenburg (kepala lebih rendah dari kaki)",
+            "Tidur miring ke sisi paru yang sakit"
+        ],
+        "answer": 1,
+        "explanation": "Posisi Fowler (duduk tegak) atau Semi-Fowler (setengah duduk) membantu ekspansi paru maksimal dan memudahkan kerja otot-otot pernapasan, sehingga dapat mengurangi sensasi sesak napas pada pasien dengan gangguan pernapasan seperti PPOK atau gagal jantung."
+    },
+        {
+        "question": "Seorang pasien dengan gangguan cemas mengeluh, 'Saya selalu khawatir tentang segala hal, bahkan hal-hal kecil. Saya sulit tidur dan otot saya tegang terus.' Gejala ini paling konsisten dengan...",
+        "options": [
+            "Gangguan panik",
+            "Fobia sosial",
+            "Gangguan cemas umum (Generalized Anxiety Disorder - GAD)",
+            "Gangguan stres pasca trauma (PTSD)"
+        ],
+        "answer": 2,
+        "explanation": "GAD ditandai dengan kekhawatiran yang berlebihan, tidak terkontrol, dan kronis (minimal 6 bulan) tentang berbagai hal, disertai gejala fisik seperti ketegangan otot, gangguan tidur, dan mudah lelah."
+    },
+    {
+        "question": "Pasien yang mengalami halusinasi pendengaran diajarkan untuk 'bercakap-cakap dengan orang lain' sebagai cara mengontrol halusinasi. Logika di balik intervensi ini adalah...",
+        "options": [
+            "Orang lain dapat mengkonfirmasi apakah suara itu nyata atau tidak",
+            "Fokus pada percakapan dengan orang lain dapat mengalihkan perhatian dari suara halusinasi",
+            "Suara orang lain akan menakuti suara halusinasi sehingga hilang",
+            "Dengan bercakap-cakap, pasien dapat meminta bantuan orang lain untuk melawan suara halusinasi"
+        ],
+        "answer": 1,
+        "explanation": "Terlibat dalam percakapan yang bermakna dengan orang lain memerlukan konsentrasi dan fokus pada stimulus eksternal (lawan bicara), sehingga dapat mengurangi intensitas atau mengalihkan perhatian dari stimulus internal (halusinasi)."
+    },
+    {
+        "question": "Seorang pasien skizofrenia menunjukkan perilaku 'echolalia'. Ini berarti pasien...",
+        "options": [
+            "Mengulang gerakan orang lain secara persis",
+            "Mengulang kata-kata atau frasa yang diucapkan orang lain secara persis",
+            "Membuat kata-kata baru yang hanya dimengerti oleh dirinya sendiri",
+            "Berbicara dengan sangat cepat dan sulit dihentikan"
+        ],
+        "answer": 1,
+        "explanation": "Echolalia adalah pengulangan patologis dari kata-kata atau frasa yang baru saja didengar dari orang lain. Ini adalah salah satu bentuk gangguan bicara yang dapat terlihat pada skizofrenia atau gangguan spektrum autisme."
+    }
+]
