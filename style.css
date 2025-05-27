@@ -42,71 +42,71 @@ h3 { font-size: 1.6em; }
 
 /* Styling untuk login container (sekarang license-form-container) */
 #license-form-container h1 {
-    margin-bottom: 12px; 
-    font-size: 2.5em; 
+    margin-bottom: 12px;
+    font-size: 2.5em;
 }
 
 .app-title-highlight {
-    color: #007BFF; 
+    color: #007BFF;
     font-weight: bold;
 }
 
 .app-description, .app-features-intro, .login-prompt {
-    font-size: 1.1em; 
-    color: #4a5568; 
-    margin-bottom: 12px; 
-    line-height: 1.6; 
+    font-size: 1.1em;
+    color: #4a5568;
+    margin-bottom: 12px;
+    line-height: 1.6;
 }
 
 .app-description {
-    margin-bottom: 18px; 
+    margin-bottom: 18px;
 }
 
 .app-features {
-    list-style-type: none; 
+    list-style-type: none;
     padding-left: 0;
-    margin: 0 auto 18px auto; 
-    max-width: 85%; 
-    text-align: left; 
+    margin: 0 auto 18px auto;
+    max-width: 85%;
+    text-align: left;
 }
 
 .app-features li {
-    padding-left: 1.5em; 
+    padding-left: 1.5em;
     position: relative;
-    margin-bottom: 8px; 
+    margin-bottom: 8px;
     font-size: 1.05em;
     color: #333;
 }
 
 .app-features li::before {
-    content: "\2713"; 
-    color: #28a745; 
+    content: "\2713";
+    color: #28a745;
     font-weight: bold;
     position: absolute;
     left: 0;
-    top: 1px; 
+    top: 1px;
 }
 
 .login-prompt {
-    margin-top: 20px; 
-    margin-bottom: 10px; 
-    font-weight: 500; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
     color: #2c3e50;
 }
 
 #license-form-container input[type="text"] { /* Target specific container */
     padding: 12px 15px;
-    margin: 8px 0 15px 0; 
-    border: 1px solid #ced4da; 
+    margin: 8px 0 15px 0;
+    border: 1px solid #ced4da;
     border-radius: 8px;
-    width: calc(100% - 32px); 
+    width: calc(100% - 32px);
     box-sizing: border-box;
     font-size: 1em;
     font-family: "Times New Roman", Times, serif;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 #license-form-container input[type="text"]:focus { /* Target specific container */
-    border-color: #007BFF; 
+    border-color: #007BFF;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
     outline: none;
 }
@@ -116,22 +116,22 @@ button {
     margin-bottom: 10px;
     margin-left: 5px;
     margin-right: 5px;
-    padding: 12px 22px; 
-    background-color: #007BFF; 
+    padding: 12px 22px;
+    background-color: #007BFF;
     color: white;
     border: none;
-    border-radius: 8px; 
+    border-radius: 8px;
     cursor: pointer;
     font-family: "Times New Roman", Times, serif;
-    font-weight: 500; 
-    font-size: 1em; 
-    letter-spacing: 0.5px; 
+    font-weight: 500;
+    font-size: 1em;
+    letter-spacing: 0.5px;
     transition: background-color 0.2s ease-in-out, transform 0.15s ease-out, box-shadow 0.15s ease-out;
 }
 
 button:hover {
-    background-color: #0056b3; 
-    transform: translateY(-2px); 
+    background-color: #0056b3;
+    transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 button:active {
@@ -141,10 +141,10 @@ button:active {
 
 /* Tombol Previous - Hijau */
 .btn-prev {
-    background-color: #28a745; 
+    background-color: #28a745;
 }
 .btn-prev:hover {
-    background-color: #1f7a34; 
+    background-color: #1f7a34;
 }
 
 /* Tombol Next - Biru (sudah diatur di button umum) */
@@ -158,10 +158,10 @@ button:active {
 
 /* Tombol Home/Kembali ke Menu - Merah */
 .btn-home {
-    background-color: #dc3545; 
+    background-color: #dc3545;
 }
 .btn-home:hover {
-    background-color: #b02a37; 
+    background-color: #b02a37;
 }
 
 /* Tombol Ragu-ragu - Kuning */
@@ -177,87 +177,95 @@ button:active {
 #options-container {
     display: flex;
     flex-direction: column;
-    gap: 12px; 
+    gap: 12px;
     margin-top: 20px;
 }
 
 .option-button {
-    padding: 14px 18px; 
-    border: 1px solid #d1d8e0; 
+    padding: 14px 18px;
+    border: 1px solid #d1d8e0;
     border-radius: 8px;
     cursor: pointer;
-    background-color: #f8f9fa; 
+    background-color: #f8f9fa;
     text-align: left;
     font-family: "Times New Roman", Times, serif;
     font-weight: normal;
     width: 100%;
     box-sizing: border-box;
     transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
-    color: black !important; 
+    color: black !important;
 }
 .option-button:hover {
-    background-color: #e9ecef; 
+    background-color: #e9ecef;
     border-color: #adb5bd;
-    transform: translateY(-1px); 
+    transform: translateY(-1px);
 }
 .option-button:disabled {
     cursor: not-allowed;
     opacity: 0.75;
     transform: none;
-    background-color: #f8f9fa; 
+    background-color: #f8f9fa;
 }
 
 
 .option-button.correct {
-    background-color: #4CAF50 !important; 
-    color: white !important; 
-    border-color: #388E3C !important; 
+    background-color: #4CAF50 !important;
+    color: white !important;
+    border-color: #388E3C !important;
     font-weight: bold;
 }
 
 .option-button.incorrect {
-    background-color: #f44336 !important; 
-    color: white !important; 
-    border-color: #D32F2F !important; 
+    background-color: #f44336 !important;
+    color: white !important;
+    border-color: #D32F2F !important;
     font-weight: bold;
 }
 
 .option-button.selected-tryout {
-    background-color: #cce5ff !important; 
+    background-color: #cce5ff !important;
     border-color: #b8daff !important;
-    color: black !important; 
+    color: black !important;
 }
 
 
 #question {
     font-family: "Times New Roman", Times, serif;
     font-weight: normal;
-    font-size: 1.3em; 
+    font-size: 1.3em;
     margin-bottom: 25px;
     text-align: left;
-    color: #34495e; 
+    color: #34495e;
     line-height: 1.5;
 }
 
 #welcome-user-message {
     margin-bottom: 25px;
-    font-size: 1.4em; 
+    font-size: 1.4em;
     color: #34495e;
 }
 
 #menu-container button {
     display: block;
-    width: 70%; 
+    width: 70%;
     margin: 15px auto;
-    padding: 14px 20px; 
+    padding: 14px 20px;
     font-size: 1.1em;
+}
+
+/* Tombol Try Out - Hijau */
+#menu-container #tryout-button {
+    background-color: #28a745; /* Green */
+}
+#menu-container #tryout-button:hover {
+    background-color: #1f7a34; /* Darker Green */
 }
 
 
 #navigation-buttons {
     margin-top: 25px;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; /* Memungkinkan tombol untuk wrap jika tidak cukup ruang */
     gap: 10px; /* Jarak antar tombol */
@@ -269,11 +277,11 @@ button:active {
 
 
 #result-container p {
-    font-size: 1.3em; 
+    font-size: 1.3em;
     margin-bottom: 25px;
     line-height: 1.7;
     color: #2c3e50;
-    white-space: pre-wrap; 
+    white-space: pre-wrap;
 }
 
 #footer {
@@ -292,40 +300,85 @@ button:active {
     width: 70%;
     margin: 10px auto;
     padding: 12px 15px;
-    background-color: #007BFF; 
+    background-color: #007BFF; /* Default - akan di-override oleh nth-of-type */
     font-size: 1.05em;
+    color: white; /* Default text color */
 }
 
-#kategori-latihan-container .kategori-button:hover {
-    background-color: #0056b3;
+/* Warna berbeda untuk setiap tombol kategori */
+#kategori-latihan-container .kategori-button:nth-of-type(1) { /* Keperawatan Jiwa */
+    background-color: #17a2b8; /* Teal */
+}
+#kategori-latihan-container .kategori-button:nth-of-type(1):hover {
+    background-color: #117a8b; /* Darker Teal */
+}
+#kategori-latihan-container .kategori-button:nth-of-type(2) { /* Keperawatan Anak */
+    background-color: #ffc107; /* Yellow */
+    color: #212529; /* Dark text for yellow */
+}
+#kategori-latihan-container .kategori-button:nth-of-type(2):hover {
+    background-color: #e0a800; /* Darker Yellow */
+    color: #212529;
+}
+#kategori-latihan-container .kategori-button:nth-of-type(3) { /* Keperawatan Keluarga */
+    background-color: #fd7e14; /* Orange */
+}
+#kategori-latihan-container .kategori-button:nth-of-type(3):hover {
+    background-color: #d36307; /* Darker Orange */
+}
+#kategori-latihan-container .kategori-button:nth-of-type(4) { /* Keperawatan Komunitas */
+    background-color: #6610f2; /* Indigo */
+}
+#kategori-latihan-container .kategori-button:nth-of-type(4):hover {
+    background-color: #520dc2; /* Darker Indigo */
+}
+#kategori-latihan-container .kategori-button:nth-of-type(5) { /* Keperawatan Medikal Bedah */
+    background-color: #20c997; /* Turquoise */
+}
+#kategori-latihan-container .kategori-button:nth-of-type(5):hover {
+    background-color: #1baa80; /* Darker Turquoise */
+}
+#kategori-latihan-container .kategori-button:nth-of-type(6) { /* Keperawatan Gawat Darurat */
+    background-color: #e83e8c; /* Pink */
+}
+#kategori-latihan-container .kategori-button:nth-of-type(6):hover {
+    background-color: #c22670; /* Darker Pink */
+}
+#kategori-latihan-container .kategori-button:nth-of-type(7) { /* Manajemen Keperawatan */
+    background-color: #795548; /* Brown */
+}
+#kategori-latihan-container .kategori-button:nth-of-type(7):hover {
+    background-color: #5d4037; /* Darker Brown */
 }
 
-#kategori-latihan-container .btn-home { /* Specific styling for back button in category view */
-    margin-top: 25px;
-    background-color: #6c757d; 
+/* Tombol Kembali ke Menu Utama di Kategori View - Ungu */
+#kategori-latihan-container #kembali-ke-menu-utama-button {
+    background-color: #6f42c1; /* Purple */
+    margin-top: 25px; /* Keep existing margin if needed */
 }
-#kategori-latihan-container .btn-home:hover {
-    background-color: #545b62;
+#kategori-latihan-container #kembali-ke-menu-utama-button:hover {
+    background-color: #5a32a3; /* Darker Purple */
 }
+
 
 #explanation {
     margin-top: 20px;
     padding: 15px;
-    border: 1px solid #e0e0e0; 
-    background-color: #f9fafc; 
+    border: 1px solid #e0e0e0;
+    background-color: #f9fafc;
     border-radius: 8px;
     text-align: left;
-    font-size: 1em; 
+    font-size: 1em;
     line-height: 1.7;
-    color: #495057; 
+    color: #495057;
 }
 
 #explanation strong {
     font-weight: bold;
-    color: #2c3e50; 
+    color: #2c3e50;
 }
 
-#quiz-header { 
+#quiz-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -338,70 +391,70 @@ button:active {
     font-size: 1em;
     color: #555e68;
     font-weight: 500;
-    margin-bottom: 15px; 
-    text-align: left; 
+    margin-bottom: 15px;
+    text-align: left;
 }
 
 #timer-display-sidebar {
     font-size: 1.1em;
     font-weight: bold;
-    color: #c0392b; 
-    background-color: #fdecea; 
+    color: #c0392b;
+    background-color: #fdecea;
     padding: 8px 12px;
     border-radius: 6px;
     border: 1px solid #f7c6c7;
-    text-align: center; 
+    text-align: center;
 }
 
 
 #quiz-layout-container {
     display: flex;
     flex-direction: row;
-    gap: 25px; 
-    max-width: 1100px; 
+    gap: 25px;
+    max-width: 1100px;
     width: 95%;
-    padding: 0; 
-    background: transparent; 
-    box-shadow: none; 
-    margin: 25px auto; 
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    margin: 25px auto;
 }
 
 #quiz-main-content {
-    flex: 2.5; 
+    flex: 2.5;
     padding: 25px 30px;
     background: white;
     border-radius: 12px;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    text-align: left; 
+    text-align: left;
 }
 
 #quiz-sidebar {
     flex: 1;
     padding: 25px;
-    background: #fdfdff; 
+    background: #fdfdff;
     border-radius: 12px;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
-    gap: 20px; 
-    align-self: flex-start; 
+    gap: 20px;
+    align-self: flex-start;
 }
 
 #user-biodata {
     text-align: center;
     border-bottom: 1px solid #e7e9ec;
     padding-bottom: 20px;
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 
 #user-photo-icon {
-    font-size: 64px; 
-    color: #007BFF; 
+    font-size: 64px;
+    color: #007BFF;
     margin-bottom: 12px;
 }
-#user-photo-icon .fa-user-circle { 
+#user-photo-icon .fa-user-circle {
     transition: transform 0.3s ease;
 }
 #user-photo-icon:hover .fa-user-circle {
@@ -411,7 +464,7 @@ button:active {
 
 #user-name-display {
     font-weight: bold;
-    font-size: 1.25em; 
+    font-size: 1.25em;
     color: #34495e;
 }
 
@@ -431,11 +484,11 @@ button:active {
 
 #question-navigation-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); 
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
     gap: 8px;
-    max-height: 280px; 
+    max-height: 280px;
     overflow-y: auto;
-    padding: 5px; 
+    padding: 5px;
     border-radius: 6px;
 }
 
@@ -471,9 +524,9 @@ button:active {
 }
 
 .nav-question-box.answered {
-    background-color: #d4edda; 
+    background-color: #d4edda;
     border-color: #b2dfc8;
-    color: #155724; 
+    color: #155724;
 }
 .nav-question-box.answered:hover {
     background-color: #c3e6cb;
@@ -481,7 +534,7 @@ button:active {
 }
 
 
-.nav-question-box.doubtful { 
+.nav-question-box.doubtful {
     background-color: #fff3cd; /* Kuning muda */
     border-color: #ffeeba;
     color: #664d03; /* Teks kuning tua */
@@ -491,10 +544,10 @@ button:active {
     border-color: #ffd891;
 }
 
-@media (max-width: 992px) { 
+@media (max-width: 992px) {
     #quiz-layout-container {
         flex-direction: column;
-        max-width: 700px; 
+        max-width: 700px;
     }
     #quiz-main-content, #quiz-sidebar {
         flex: none;
@@ -511,17 +564,17 @@ button:active {
 
 @media (max-width: 768px) {
     body {
-        padding: 10px; 
+        padding: 10px;
     }
     .container-view {
-        padding: 20px 15px; 
+        padding: 20px 15px;
         margin: 15px auto;
     }
     #quiz-main-content, #quiz-sidebar {
         padding: 20px;
     }
     h1 { font-size: 2em; }
-    #license-form-container h1 { font-size: 2.2em; } 
+    #license-form-container h1 { font-size: 2.2em; }
     .app-description, .app-features-intro, .login-prompt { font-size: 1em; }
     .app-features li { font-size: 0.95em; }
 
@@ -539,16 +592,30 @@ button:active {
     #question-navigation-grid { grid-template-columns: repeat(auto-fill, minmax(36px, 1fr)); }
 }
 
-#menu-container button#logout-button { /* More specific selector */
-    background-color: #6c757d; /* Abu-abu standar */
-    /* Atau warna lain, misal: #dc3545; (merah seperti btn-home default) */
-    /* Atau: #ffc107; color: #212529; (kuning seperti btn-doubtful) */
-    margin-top: 15px; /* Beri sedikit jarak dari tombol lain jika perlu */
+/* Tombol Logout - Merah */
+#menu-container button#logout-button {
+    background-color: #dc3545; /* Red */
+    margin-top: 15px;
 }
 
 #menu-container button#logout-button:hover {
-    background-color: #545b62; /* Versi hover yang lebih gelap */
-    /* Atau: #b02a37; untuk merah */
-    /* Atau: #e0a800; untuk kuning */
+    background-color: #b02a37; /* Darker Red */
 }
 
+/* Fallback for .btn-home in kategori-latihan-container if not the #kembali-ke-menu-utama-button */
+/* This rule was previously making #kembali-ke-menu-utama-button grey, it's now overridden by ID */
+#kategori-latihan-container .btn-home {
+    margin-top: 25px;
+    background-color: #6c757d; /* Default grey for other .btn-home in this container if any */
+}
+#kategori-latihan-container .btn-home:hover {
+    background-color: #545b62;
+}
+
+/* Ensure the purple button rule for #kembali-ke-menu-utama-button overrides the above .btn-home rule */
+#kategori-latihan-container #kembali-ke-menu-utama-button.btn-home { /* More specific if needed */
+    background-color: #6f42c1; /* Purple */
+}
+#kategori-latihan-container #kembali-ke-menu-utama-button.btn-home:hover {
+    background-color: #5a32a3; /* Darker Purple */
+}
