@@ -1,4 +1,3 @@
-// jiwa.js
 [
     {
         "question": "Seorang pasien skizofrenia mengatakan bahwa ia mendengar suara-suara yang menyuruhnya melukai diri. Intervensi keperawatan prioritas adalah...",
@@ -8,7 +7,7 @@
             "Mengajak pasien berdiskusi tentang halusinasinya",
             "Melaporkan kepada dokter segera"
         ],
-        "answer": 1, // Indeks jawaban yang benar
+        "answer": 1,
         "explanation": "Keselamatan pasien adalah prioritas utama. Menjauhkan benda berbahaya mencegah pasien melukai diri akibat halusinasi pendengaran."
     },
     {
@@ -195,7 +194,7 @@
             "Harga diri rendah kronis",
             "Koping tidak efektif"
         ],
-        "answer": 1, // Walaupun gangguan citra tubuh juga ada, kebutuhan fisiologis nutrisi lebih prioritas.
+        "answer": 1,
         "explanation": "Gejala klinis mengarah pada Anoreksia Nervosa. Penurunan BB drastis dan status nutrisi yang buruk menjadi prioritas karena mengancam kondisi fisiologis pasien. Gangguan citra tubuh adalah inti masalah psikologisnya."
     },
     {
@@ -330,7 +329,6 @@
         "answer": 0,
         "explanation": "Membantu pasien mengenali kekuatan dan aspek positif yang dimiliki, serta melatih kemampuan tersebut adalah cara efektif untuk membangun kembali harga diri secara realistis."
     },
-    // Mulai dari sini, soal akan lebih bervariasi dan mencoba mencakup semua aspek materi
     {
         "question": "Seorang pasien laki-laki berusia 45 tahun dengan riwayat skizofrenia dibawa ke RSJ karena menolak minum obat selama 2 minggu dan mulai berbicara sendiri serta tertawa tanpa sebab. Pengkajian awal yang paling penting adalah...",
         "options": [
@@ -537,7 +535,7 @@
             "Disartria",
             "Apraksia bicara"
         ],
-        "answer": 0, // Atau bisa juga disartria, tergantung detailnya. Tapi afasia motorik lebih ke kesulitan membentuk kata.
+        "answer": 0,
         "explanation": "Afasia motorik (Broca) ditandai dengan kesulitan dalam memproduksi ucapan (berbicara terbata-bata, tidak lancar) meskipun pemahaman bahasa relatif baik. Disartria adalah kesulitan artikulasi karena kelemahan otot bicara."
     },
     {
@@ -1054,7 +1052,7 @@
             "Tangentiality",
             "Neologisme"
         ],
-        "answer": 1, // Word salad adalah bentuk ekstrem dari asosiasi longgar/inkoherensi.
+        "answer": 1,
         "explanation": "Asosiasi longgar adalah gangguan arus pikiran di mana ide-ide bergeser dari satu subjek ke subjek lain yang tidak berhubungan atau hanya berhubungan secara samar. 'Word salad' adalah bentuk yang paling parah, di mana kata-kata tercampur aduk tanpa makna logis."
     },
     {
@@ -1318,7 +1316,7 @@
             "Memberikan pendidikan kesehatan tentang pentingnya nutrisi",
             "Mencoba membujuk pasien dengan makanan kesukaannya"
         ],
-        "answer": 1, // Ini adalah prioritas karena mengancam jiwa.
+        "answer": 1,
         "explanation": "Penolakan makan dan minum selama 2 hari pada pasien depresi berat dapat mengancam jiwa karena risiko dehidrasi dan ketidakseimbangan elektrolit. Ini memerlukan perhatian medis segera. Pengkajian dan bujukan tetap penting, tetapi keselamatan fisiologis adalah yang utama."
     },
     {
@@ -1428,7 +1426,7 @@
             "Depersonalisasi",
             "Alogia (miskin bicara)"
         ],
-        "answer": 2, // atau bisa juga afek datar, tapi depersonalisasi lebih ke perasaan 'tidak nyata' atau 'terpisah dari diri'.
+        "answer": 2,
         "explanation": "Depersonalisasi adalah perasaan terpisah atau asing dari diri sendiri, seolah-olah menjadi pengamat luar bagi pikiran, perasaan, atau tubuh sendiri. Perasaan seperti robot atau tidak nyata adalah deskripsi yang umum."
     },
     {
@@ -1857,7 +1855,7 @@
             "Negativisme atau avolition (gejala negatif)",
             "Katatonia stupor"
         ],
-        "answer": 2, // Avolition atau negativisme lebih pas. Katatonia stupor adalah kondisi lebih ekstrem.
+        "answer": 2,
         "explanation": "Avolition (kurang motivasi dan inisiatif) dan negativisme (resistensi terhadap instruksi atau stimulus eksternal) adalah gejala negatif skizofrenia yang menyebabkan pasien menarik diri, tidak aktif, dan mengalami defisit perawatan diri."
     },
     {
@@ -1893,7 +1891,6 @@
         "answer": 1,
         "explanation": "Teknik relaksasi dan distraksi dapat membantu mengurangi persepsi nyeri dan meningkatkan kenyamanan pasien, sebagai pelengkap terapi farmakologis. Kompres dingin bisa membantu, tetapi harus dengan cara yang benar (tidak langsung ke kulit, perhatikan kondisi luka)."
     },
-    // Soal Tambahan untuk mencapai 180
     {
         "question": "Seorang pasien baru saja didiagnosis HIV. Ia tampak sangat terpukul dan cemas tentang masa depannya. Pendekatan komunikasi perawat yang paling tepat adalah...",
         "options": [
