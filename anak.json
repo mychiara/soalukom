@@ -51,7 +51,7 @@
             "Skala Numerik (Numeric Rating Scale)",
             "Observasi perilaku saja"
         ],
-        "answer": 1, // Bisa juga C, tapi Wong-Baker lebih visual untuk usia ini
+        "answer": 1,
         "explanation": "Skala Wong-Baker FACES menggunakan gambar wajah untuk membantu anak usia 3 tahun ke atas mengekspresikan tingkat nyerinya. Skala Numerik juga bisa digunakan untuk anak yang lebih besar (biasanya >7-8 tahun)."
     },
     {
@@ -106,10 +106,9 @@
             "Memasang infus sesuai program terapi",
             "Mengajarkan ibu cara membuat larutan gula garam"
         ],
-        "answer": 1, // Jika masih bisa oral, jika tidak C
+        "answer": 1,
         "explanation": "Rehidrasi oral dengan oralit adalah pilihan pertama pada diare akut tanpa dehidrasi berat. Pemberian sedikit-sedikit tapi sering lebih mudah ditoleransi anak."
     },
-    // --- BATCH 2: Pelaksanaan Tindakan Keperawatan ---
     {
         "question": "Perawat akan memberikan obat sirup paracetamol kepada anak usia 5 tahun dengan dosis 10 mg/kgBB. Berat badan anak 20 kg. Sediaan sirup paracetamol adalah 120 mg/5 mL. Berapa mL sirup yang diberikan?",
         "options": [
@@ -220,7 +219,6 @@
         "answer": 2,
         "explanation": "Mengalihkan perhatian dengan mainan, cerita, atau tiupan gelembung, serta memberikan penjelasan sederhana dan jujur sesuai usia dapat membantu mengurangi kecemasan. Teknik distraksi efektif pada anak."
     },
-    // --- BATCH 3: Pendidikan Kesehatan & Komunikasi ---
     {
         "question": "Ibu dari anak usia 3 tahun yang baru didiagnosis asma bertanya tentang cara mencegah serangan asma. Pendidikan kesehatan yang paling penting diberikan adalah...",
         "options": [
@@ -273,7 +271,7 @@
             "Menjaga tali pusat tetap kering dan bersih, tidak perlu dibubuhi apapun",
             "Memberikan bedak atau ramuan tradisional agar cepat puput"
         ],
-        "answer": 2, // Sesuai rekomendasi terbaru WHO dan IDAI
+        "answer": 2,
         "explanation": "Perawatan tali pusat terkini merekomendasikan menjaga area tali pusat tetap kering dan bersih, terbuka (tidak ditutup rapat), dan tidak mengaplikasikan antiseptik atau bahan lain kecuali atas indikasi medis. Cukup dibersihkan dengan air bersih jika kotor."
     },
     {
@@ -321,17 +319,16 @@
         "explanation": "Edukasi tentang pemanfaatan bahan makanan lokal yang mudah didapat, murah, dan bergizi, serta cara pengolahan yang benar untuk PMT adalah intervensi yang praktis dan berkelanjutan."
     },
     {
-        "question": "Anak usia sekolah (7 tahun) bertanya kepada perawat, \"Kenapa saya harus dirawat di rumah sakit?\" Respons perawat yang paling sesuai adalah...",
+        "question": "Anak usia sekolah (7 tahun) bertanya kepada perawat, "Kenapa saya harus dirawat di rumah sakit?" Respons perawat yang paling sesuai adalah...",
         "options": [
-            "\"Karena kamu nakal tidak mau minum obat di rumah.\"",
-            "\"Supaya kamu cepat sembuh dan bisa main lagi. Di sini ada dokter dan perawat yang akan bantu kamu.\"",
-            "\"Tanya saja sama mama papa kamu, mereka yang bawa kamu ke sini.\"",
-            "\"Ini tempat orang sakit, jadi kamu harus di sini sampai sembuh.\""
+            "Karena kamu nakal tidak mau minum obat di rumah.",
+            "Supaya kamu cepat sembuh dan bisa main lagi. Di sini ada dokter dan perawat yang akan bantu kamu.",
+            "Tanya saja sama mama papa kamu, mereka yang bawa kamu ke sini.",
+            "Ini tempat orang sakit, jadi kamu harus di sini sampai sembuh."
         ],
         "answer": 1,
         "explanation": "Berikan penjelasan yang jujur, sederhana, positif, dan sesuai dengan tingkat pemahaman anak usia sekolah, dengan menekankan tujuan perawatan (sembuh) dan dukungan yang tersedia."
     },
-    // --- BATCH 4: Pengetahuan Medis Dasar & Penyakit Umum Anak ---
     {
         "question": "Anak perempuan usia 8 tahun dibawa ke klinik dengan keluhan sering buang air kecil, nyeri saat BAK, dan demam. Pemeriksaan urin menunjukkan leukosituria dan bakteriuria. Diagnosis yang paling mungkin adalah...",
         "options": [
@@ -442,7 +439,6 @@
         "answer": 1,
         "explanation": "Ikterus fisiologis muncul setelah 24 jam pertama, puncaknya hari ke 3-5, kadar bilirubin indirek biasanya <12 mg/dL pada bayi cukup bulan, dan bayi dalam kondisi baik. Jika muncul <24 jam atau bilirubin sangat tinggi/direct meningkat, itu patologis."
     },
-    // --- BATCH 5: Pertumbuhan & Perkembangan, Imunisasi ---
     {
         "question": "Menurut teori Erik Erikson, tugas perkembangan psikososial utama pada anak usia toddler (1-3 tahun) adalah...",
         "options": [
@@ -553,7 +549,6 @@
         "answer": 1,
         "explanation": "Stimulasi bahasa yang efektif melibatkan interaksi verbal yang kaya, seperti sering berbicara dengan anak, merespons ocehannya, membacakan buku, bernyanyi, dan menyebutkan nama-nama benda di sekitar."
     },
-    // --- BATCH 6: Kasus Campuran (Asuhan Keperawatan Lanjutan) ---
     {
         "question": "Anak laki-laki usia 6 tahun dirawat dengan diagnosis leukemia limfoblastik akut (LLA) dan sedang menjalani kemoterapi. Hasil lab menunjukkan leukosit 1.500/mm3. Intervensi keperawatan prioritas adalah...",
         "options": [
@@ -664,7 +659,6 @@
         "answer": 1,
         "explanation": "Metode pengukuran NGT yang umum (NEX: Nose-Earlobe-Xiphoid) adalah dari ujung hidung ke lobulus telinga, kemudian dari lobulus telinga ke ujung prosesus xifoideus sternum."
     },
-    // --- BATCH 7: Kebutuhan Dasar & Cairan ---
     {
         "question": "Seorang anak usia 5 tahun dirawat dengan demam tifoid. Ibu mengatakan anaknya tidak nafsu makan dan hanya mau minum sedikit. Kebutuhan cairan harian anak (maintenance) dengan berat badan 18 kg menurut rumus Holliday-Segar adalah...",
         "options": [
@@ -673,7 +667,7 @@
             "1400 mL",
             "1500 mL"
         ],
-        "answer": 2, // 10 kg pertama: 1000 mL. 8 kg berikutnya: 8 x 50 mL = 400 mL. Total = 1400 mL.
+        "answer": 2,
         "explanation": "Rumus Holliday-Segar: 100 mL/kg untuk 10 kg pertama BB, 50 mL/kg untuk 10 kg kedua BB, dan 20 mL/kg untuk sisa BB. Untuk 18 kg: (10kg x 100mL) + (8kg x 50mL) = 1000mL + 400mL = 1400 mL/24 jam."
     },
     {
@@ -695,7 +689,7 @@
             "27%",
             "36%"
         ],
-        "answer": 1, // Lengan anak 9%, dada depan 9% (setengah dari 18% untuk seluruh torso depan). Total 9% + 9% = 18%. Jika kepala anak 18%, maka torso depan juga 18%. Lund-Browder lebih akurat untuk anak. Asumsi lengan 9%, dada depan seluruhnya 18%, jadi setengahnya 9%. Maka 9+9 = 18%.
+        "answer": 1,
         "explanation": "Untuk anak, 'Rule of Nines' sedikit berbeda. Lengan biasanya tetap 9%. Seluruh dada dan perut depan adalah 18%. Jadi setengah dada depan adalah 9%. Maka 9% (lengan) + 9% (setengah dada depan) = 18%. Diagram Lund-Browder lebih akurat untuk anak."
     },
     {
@@ -761,7 +755,7 @@
             "100-160x/menit",
             "120-180x/menit"
         ],
-        "answer": 1, // Toddler (1-3 thn): 80-130 bpm. Ada variasi sumber, tapi ini rentang umum.
+        "answer": 1,
         "explanation": "Frekuensi nadi normal pada anak bervariasi menurut usia. Untuk toddler (1-3 tahun), rentang normalnya sekitar 80-130 denyut per menit saat istirahat."
     },
     {
@@ -775,7 +769,6 @@
         "answer": 2,
         "explanation": "Melibatkan anak dalam memilih dan menyiapkan makanan, menyajikan sayur dalam bentuk yang menarik (misalnya dipotong lucu, dicampur dalam nugget), dan memberikan contoh dengan orang tua juga makan sayur dapat membantu meningkatkan penerimaan anak terhadap sayur."
     },
-     // --- BATCH 8: Penyakit Infeksi & Farmakologi Dasar ---
     {
         "question": "Anak usia 3 tahun didiagnosis menderita impetigo krustosa. Lesi khas impetigo adalah...",
         "options": [
@@ -886,7 +879,6 @@
         "answer": 1,
         "explanation": "Salbutamol (Albuterol) adalah bronkodilator golongan beta-2 adrenergik agonis kerja singkat (Short-Acting Beta Agonist/SABA) yang bekerja merelaksasi otot polos bronkus, sehingga melebarkan jalan napas."
     },
-    // --- BATCH 9: Pemeriksaan Diagnostik & Kondisi Spesifik ---
     {
         "question": "Seorang bayi usia 3 bulan dibawa dengan keluhan muntah proyektil segera setelah menyusu, tampak selalu lapar, dan berat badan tidak naik. Pada perabaan abdomen, mungkin teraba massa seperti buah zaitun di kuadran kanan atas. Kondisi ini mengarah pada...",
         "options": [
@@ -928,7 +920,7 @@
             "Biopsi kelenjar getah bening",
             "Pemeriksaan IGRA (Interferon-Gamma Release Assay)"
         ],
-        "answer": 0, // Atau IGRA, tergantung ketersediaan dan usia
+        "answer": 0,
         "explanation": "Tes Mantoux (uji tuberkulin) adalah tes skrining untuk mendeteksi adanya infeksi M. tuberculosis (laten atau aktif). Bersama dengan riwayat kontak, gejala klinis, dan foto toraks, tes ini membantu dalam diagnosis TB anak. IGRA juga merupakan alternatif, terutama pada anak yang sudah diimunisasi BCG."
     },
     {
@@ -997,7 +989,6 @@
         "answer": 1,
         "explanation": "Skor APGAR 7-10 menunjukkan kondisi baik. Skor 4-6 menunjukkan depresi/asfiksia sedang, mungkin memerlukan bantuan napas. Skor 0-3 menunjukkan depresi/asfiksia berat, memerlukan resusitasi aktif. Peningkatan skor dari menit 1 ke menit 5 menunjukkan respons positif terhadap tindakan atau adaptasi."
     },
-     // --- BATCH 10: Komunikasi, Etika, dan Aspek Psikososial ---
     {
         "question": "Seorang remaja putri (15 tahun) yang dirawat karena penyakit kronis menolak untuk minum obat dan tampak murung. Pendekatan komunikasi yang paling efektif oleh perawat adalah...",
         "options": [
@@ -1108,7 +1099,6 @@
         "answer": 1,
         "explanation": "Kecelakaan yang paling sering terjadi pada balita di rumah adalah tersedak, jatuh, keracunan (obat, bahan kimia), luka bakar, dan tenggelam. Edukasi pencegahan harus difokuskan pada risiko-risiko ini."
     },
-    // --- BATCH 11: Neonatus dan Bayi Muda ---
     {
         "question": "Bayi baru lahir cukup bulan menunjukkan takipnea transien (Transient Tachypnea of the Newborn/TTN). Kondisi ini disebabkan oleh...",
         "options": [
@@ -1194,7 +1184,7 @@
             "Ikterus fisiologis yang memanjang",
             "Inkompatibilitas ABO"
         ],
-        "answer": 1, // Atau 2. Breast milk jaundice lebih pas untuk onset >7 hari.
+        "answer": 1,
         "explanation": "Breast milk jaundice adalah ikterus indirek yang memanjang pada bayi sehat penerima ASI, biasanya muncul setelah hari ke-5 hingga ke-7, puncaknya minggu ke-2 hingga ke-3, dan bisa berlangsung beberapa minggu. Bayi aktif, BB naik baik. Ikterus fisiologis biasanya sudah menurun signifikan setelah 1-2 minggu."
     },
     {
@@ -1219,7 +1209,6 @@
         "answer": 2,
         "explanation": "Tanda bahaya meliputi kesulitan menyusu/tidak mau menyusu, demam (>37.5°C) atau hipotermia (<36.5°C), sesak napas/napas cepat, tarikan dinding dada, merintih, kejang, letargi/kurang aktif, muntah terus-menerus, diare, atau tali pusat kemerahan/berbau/bernanah."
     },
-    // --- BATCH 12: Gangguan Sistem Tubuh Spesifik ---
     {
         "question": "Anak laki-laki usia 5 tahun datang dengan keluhan pembengkakan di area skrotum kanan yang hilang timbul, terutama saat menangis atau mengedan, dan hilang saat tidur. Tidak ada nyeri. Diagnosis yang paling mungkin adalah...",
         "options": [
@@ -1330,7 +1319,6 @@
         "answer": 1,
         "explanation": "VSD besar menyebabkan pirau kiri-ke-kanan yang signifikan, menimbulkan bising pansistolik yang khas. Volume darah yang berlebihan ke paru dapat menyebabkan gagal jantung kongestif dengan gejala takipnea, dispnea saat menyusu, mudah lelah, dan gagal tumbuh."
     },
-    // --- BATCH 13: Keselamatan Pasien & Prosedur Lanjutan ---
     {
         "question": "Perawat akan memberikan obat melalui intravena bolus kepada anak. Sebelum memberikan obat, langkah paling krusial untuk memastikan keamanan pasien adalah...",
         "options": [
@@ -1441,7 +1429,6 @@
         "answer": 2,
         "explanation": "Untuk pengukuran suhu aksila yang akurat, ujung termometer harus kontak langsung dengan kulit di puncak ketiak, dan lengan anak harus merapat ke sisi tubuh untuk menciptakan ruang tertutup selama waktu pengukuran yang cukup (biasanya sampai ada sinyal bunyi)."
     },
-    // --- BATCH 14: Tumbuh Kembang Lanjutan & Nutrisi ---
     {
         "question": "Seorang bayi usia 8 bulan sudah bisa duduk tanpa bantuan, merangkak, dan memindahkan mainan dari satu tangan ke tangan lainnya. Menurut tahapan perkembangan motorik, kemampuan berikutnya yang diharapkan akan muncul adalah...",
         "options": [
@@ -1527,7 +1514,7 @@
             "1800-2200 kkal/hari",
             "2500-3000 kkal/hari"
         ],
-        "answer": 1, // Rentang bisa bervariasi, 1200-1600 cukup umum.
+        "answer": 1,
         "explanation": "Kebutuhan kalori anak prasekolah bervariasi tergantung aktivitas fisik, jenis kelamin, dan metabolisme. Secara umum berkisar antara 1200-1600 kkal per hari. Anak yang sangat aktif mungkin butuh lebih."
     },
     {
@@ -1552,7 +1539,6 @@
         "answer": 1,
         "explanation": "Seng adalah mikronutrien esensial yang berperan penting dalam pertumbuhan sel, fungsi sistem kekebalan tubuh, penyembuhan luka, dan metabolisme. Defisiensi seng dapat menyebabkan gangguan pertumbuhan dan peningkatan kerentanan terhadap infeksi."
     },
-    // --- BATCH 15: Penyakit Kronis & Paliatif Anak ---
     {
         "question": "Seorang anak usia 7 tahun dengan fibrosis kistik memerlukan fisioterapi dada (chest physiotherapy) secara rutin. Tujuan utama dari tindakan ini adalah...",
         "options": [
@@ -1663,7 +1649,6 @@
         "answer": 1,
         "explanation": "Conditioning regimen bertujuan untuk menghancurkan sel-sel sumsum tulang pasien (dan sel kanker jika ada) serta menekan sistem imun untuk mencegah penolakan graft. Ini melibatkan kemoterapi dosis tinggi dan/atau radiasi, yang menyebabkan imunosupresi berat dan efek samping signifikan. Perawat berperan penting dalam pemantauan, manajemen efek samping, dan pencegahan infeksi."
     },
-    // --- BATCH 16: Kegawatdaruratan Anak ---
     {
         "question": "Seorang anak usia 3 tahun dibawa ke UGD dengan penurunan kesadaran, napas cepat dan dalam (Kussmaul), serta bau napas seperti buah (aseton). Gula darah acak 450 mg/dL. Diagnosis yang paling mungkin adalah...",
         "options": [
@@ -1705,7 +1690,7 @@
             "100 kompresi : 1 ventilasi",
             "Kompresi saja tanpa ventilasi"
         ],
-        "answer": 1, // Untuk 2 penolong 15:2, untuk 1 penolong 30:2 (AHA guidelines)
+        "answer": 1,
         "explanation": "Menurut panduan AHA terbaru, untuk resusitasi jantung paru (RJP) pada anak oleh satu penolong, rasio kompresi:ventilasi adalah 30:2. Jika ada dua penolong, rasio menjadi 15:2."
     },
     {
@@ -1716,7 +1701,7 @@
             "27%",
             "36%"
         ],
-        "answer": 1, // Torso depan (dada + perut) pada anak adalah 18%
+        "answer": 1,
         "explanation": "Dalam 'Rule of Nines' yang disesuaikan untuk anak, seluruh torso bagian depan (dada dan perut) dihitung sebagai 18% dari total luas permukaan tubuh (Total Body Surface Area/TBSA)."
     },
     {
@@ -1774,7 +1759,6 @@
         "answer": 2,
         "explanation": "Klasifikasi cedera kepala berdasarkan GCS adalah: Ringan (GCS 13-15), Sedang (GCS 9-12), dan Berat (GCS ≤ 8). GCS 7 termasuk dalam kategori cedera kepala berat, yang memerlukan penanganan intensif."
     },
-    // --- BATCH 17: Aspek Legal Etik & Profesionalisme ---
     {
         "question": "Perawat A tidak setuju dengan instruksi dokter B mengenai dosis obat untuk pasien anak karena dianggap terlalu tinggi. Langkah etis dan profesional yang pertama harus dilakukan Perawat A adalah...",
         "options": [
@@ -1885,7 +1869,6 @@
         "answer": 1,
         "explanation": "Menerima hadiah mahal, meminjam/memberi uang, atau mengembangkan hubungan romantis/sosial yang tidak pantas dengan pasien atau keluarga dapat mengaburkan batas profesional dan berpotensi merugikan hubungan terapeutik serta objektivitas perawat."
     },
-    // --- BATCH 18: Skrining & Pencegahan Penyakit ---
     {
         "question": "Skrining pendengaran pada bayi baru lahir idealnya dilakukan sebelum bayi pulang dari rumah sakit atau paling lambat usia 1 bulan. Tujuan utama skrining ini adalah...",
         "options": [
