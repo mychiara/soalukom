@@ -105,13 +105,13 @@
       import { getFirestore, doc, getDoc, updateDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
 
       const firebaseConfig = {
-        apiKey: "AIzaSyDnJvECVfNJIXPh9rZTsA3QcHQaTiE4Awc",
-        authDomain: "apodaca-bessie4762.firebaseapp.com",
-        databaseURL: "https://apodaca-bessie4762.firebaseio.com",
-        projectId: "apodaca-bessie4762",
-        storageBucket: "apodaca-bessie4762.firebasestorage.app",
-        messagingSenderId: "809433417541",
-        appId: "1:809433417541:web:48632b970a90840ab1602c"
+        apiKey: "AIzaSyDnJvECVfNJIXPh9rZTsA3QcHQaTiE4Awc", // GANTI DENGAN API KEY ANDA
+        authDomain: "apodaca-bessie4762.firebaseapp.com", // GANTI DENGAN AUTH DOMAIN ANDA
+        databaseURL: "https://apodaca-bessie4762.firebaseio.com", // GANTI DENGAN DATABASE URL ANDA (jika menggunakan Realtime DB)
+        projectId: "apodaca-bessie4762", // GANTI DENGAN PROJECT ID ANDA
+        storageBucket: "apodaca-bessie4762.firebasestorage.app", // GANTI DENGAN STORAGE BUCKET ANDA
+        messagingSenderId: "809433417541", // GANTI DENGAN MESSAGING SENDER ID ANDA
+        appId: "1:809433417541:web:48632b970a90840ab1602c" // GANTI DENGAN APP ID ANDA
       };
 
       let db;
@@ -157,7 +157,7 @@
           if (mainAppContent) mainAppContent.style.display = "none";
           if (msgElement) {
               msgElement.textContent = message;
-              msgElement.style.color = message.toLowerCase().includes("error") || message.toLowerCase().includes("gagal") || message.toLowerCase().includes("tidak") ? "red" : "blue";
+              msgElement.style.color = message.toLowerCase().includes("error") || message.toLowerCase().includes("gagal") || message.toLowerCase().includes("tidak") || message.toLowerCase().includes("kesalahan") ? "red" : "blue";
           }
           if (submitButton) submitButton.disabled = false;
           if (licenseInput) licenseInput.value = "";
@@ -200,7 +200,6 @@
                       await updateDoc(docRef, { lastSeenAt: serverTimestamp() });
                       // console.log("Heartbeat: Session renewed.", new Date().toLocaleTimeString());
                   } else {
-                      // License no longer active for this session (e.g., taken by another, or deactivated)
                       console.warn("Heartbeat: Session conflict or license deactivated. Logging out.");
                       showLoginForm("Sesi Anda telah diakhiri karena lisensi digunakan di tempat lain atau tidak aktif lagi.");
                   }
@@ -210,8 +209,12 @@
               }
           } catch (error) {
               console.error("Heartbeat error:", error);
-              // Don't logout on transient network errors for heartbeat,
-              // but if it's persistent, the user might get logged out on next interaction or reload.
+              // Don't logout on transient network errors for heartbeat
+              // Check if it's a permission error, which is more serious
+              if (error.code === 'permission-denied' || error.code === 'unauthenticated') {
+                  showLoginForm(`Kesalahan izin pada heartbeat (${error.code}). Sesi diakhiri.`);
+              }
+              // Other errors might be transient, user might get logged out on next interaction or reload.
           }
       }
 
@@ -243,6 +246,11 @@
                       msgElement.style.color = "red";
                       return;
                   }
+                  if (licenseKey.includes('/')) {
+                      msgElement.textContent = "Kode lisensi mengandung karakter tidak valid ('/').";
+                      msgElement.style.color = "red";
+                      return;
+                  }
 
                   msgElement.textContent = "Memeriksa lisensi...";
                   msgElement.style.color = "orange";
@@ -255,28 +263,24 @@
                       if (docSnap.exists() && docSnap.data().active === true) {
                           const licenseData = docSnap.data();
                           const storedSessionId = licenseData.activeSessionId;
-                          const lastSeenTimestamp = licenseData.lastSeenAt; // Keep as Firestore Timestamp or null/undefined
+                          const lastSeenTimestamp = licenseData.lastSeenAt; 
                           const lastSeenDate = lastSeenTimestamp ? lastSeenTimestamp.toDate() : null;
                           
                           let canTakeLicense = false;
 
                           if (!storedSessionId) {
-                              // Case 1: No active session ID stored, license is free.
                               canTakeLicense = true;
                           } else {
-                              // An activeSessionId exists. Check if it's stale or orphaned.
                               if (!lastSeenDate) {
-                                  // Case 2: activeSessionId exists, but no lastSeenAt timestamp.
-                                  // This is an orphaned session (e.g. incomplete registration, manual edit).
-                                  // Consider it immediately available/stale.
-                                  console.warn(`License ${licenseKey} has activeSessionId but no lastSeenAt. Considering it available.`);
+                                  console.warn(`License ${licenseKey} has activeSessionId (${storedSessionId}) but no valid lastSeenAt timestamp. Considering it available.`);
                                   canTakeLicense = true;
                               } else {
-                                  // Case 3: activeSessionId and lastSeenAt both exist. Check for staleness.
                                   if ((new Date().getTime() - lastSeenDate.getTime()) > STALE_SESSION_THRESHOLD) {
-                                      canTakeLicense = true; // Session is stale
+                                      console.log(`License ${licenseKey} session ${storedSessionId} is stale. Last seen: ${lastSeenDate}. Current time: ${new Date()}`);
+                                      canTakeLicense = true; 
                                   } else {
-                                      canTakeLicense = false; // Session is active and not stale
+                                      console.log(`License ${licenseKey} session ${storedSessionId} is active and not stale. Last seen: ${lastSeenDate}`);
+                                      canTakeLicense = false; 
                                   }
                               }
                           }
@@ -291,20 +295,28 @@
                               msgElement.textContent = "Lisensi valid. Akses diberikan!";
                               proceedToApp(inputUserName, licenseKey, newClientSessionId);
                           } else {
-                              // License in use by another active session
                               msgElement.style.color = "red";
                               msgElement.textContent = "Lisensi ini sedang aktif digunakan di browser/perangkat lain.";
                               clearLocalSessionData();
                           }
                       } else {
                           msgElement.style.color = "red";
-                          msgElement.textContent = "Mohon maaf, Lisensi tidak ditemukan atau tidak aktif.";
+                          if (!docSnap.exists()) {
+                             msgElement.textContent = "Mohon maaf, Lisensi tidak ditemukan.";
+                          } else if (docSnap.data().active === false) {
+                             msgElement.textContent = "Mohon maaf, Lisensi ini tidak aktif.";
+                          } else {
+                             msgElement.textContent = "Mohon maaf, Lisensi tidak valid atau tidak aktif.";
+                          }
                           clearLocalSessionData();
                       }
                   } catch (error) {
-                      console.error("Terjadi kesalahan saat memeriksa lisensi:", error);
+                      console.error("Firestore GAGAL saat memeriksa lisensi:", error);
+                      if (error.code) {
+                          console.error("Kode Error Firebase:", error.code); 
+                      }
                       msgElement.style.color = "red";
-                      msgElement.textContent = "Terjadi kesalahan. Cek koneksi internet Anda.";
+                      msgElement.textContent = `Terjadi kesalahan (${error.code || 'Tidak Diketahui'}). Cek koneksi & lihat konsol browser (F12) untuk detail.`;
                       clearLocalSessionData();
                   } finally {
                       submitButton.disabled = false;
@@ -328,7 +340,6 @@
                                   docSnap.data().active === true && 
                                   docSnap.data().activeSessionId === savedClientSessionId) {
                                   
-                                  // Session is still valid on server, renew it
                                   await updateDoc(docRef, { lastSeenAt: serverTimestamp() });
                                   proceedToApp(savedUserName, savedLicenseKey, savedClientSessionId);
                               } else {
@@ -336,7 +347,7 @@
                               }
                           } catch (err) {
                               console.error("Error re-validating session:", err);
-                              showLoginForm("Gagal memvalidasi sesi. Silakan masuk kembali.");
+                              showLoginForm(`Gagal memvalidasi sesi (${err.code || 'Tidak Diketahui'}). Silakan masuk kembali.`);
                           }
                       })();
                   } else {
@@ -351,10 +362,10 @@
                 msgElement.style.color = "red";
               }
           }
-      } catch (error) {
+      } catch (error) { 
           console.error("Inisialisasi Firebase gagal:", error);
           if(msgElement) {
-             msgElement.textContent = "Gagal menginisialisasi koneksi. Silakan coba lagi nanti.";
+             msgElement.textContent = `Gagal menginisialisasi koneksi ke server (${error.code || 'Tidak Diketahui'}). Silakan coba lagi nanti.`;
              msgElement.style.color = "red";
           }
       }
@@ -380,6 +391,7 @@
                       }
                   } catch (error) {
                       console.error("Error releasing license on logout:", error);
+                      // Masih lanjutkan logout lokal meskipun gagal update server
                   }
               }
               showLoginForm("Anda telah berhasil logout.");
@@ -389,18 +401,13 @@
       window.addEventListener('beforeunload', (event) => {
           if (sessionStorage && sessionStorage.getItem('licenseValidated') === 'true') {
               const licenseKey = sessionStorage.getItem('licenseKey');
-              const clientSessionId = sessionStorage.getItem('clientSessionId'); // Get our session ID
+              // const clientSessionId = sessionStorage.getItem('clientSessionId'); // Tidak digunakan di sini
 
-              if (db && licenseKey && clientSessionId) {
+              if (db && licenseKey) { // clientSessionId tidak esensial untuk hanya update lastSeenAt
                   const docRef = doc(db, "licenses", licenseKey);
-                  // Attempt to update lastSeenAt if the session is still ours.
-                  // This is a best-effort, fire-and-forget.
-                  // We can't reliably check activeSessionId first without making it async which beforeunload doesn't like.
-                  // The heartbeat and login staleness checks are the main guards.
-                  // A more complex solution would use navigator.sendBeacon to a cloud function.
-                  // For now, we'll just try to update lastSeenAt if OUR session was active.
-                  // The most important thing is that we DON'T set activeSessionId to null here,
-                  // as a simple page refresh could incorrectly free the license.
+                  // Ini adalah fire-and-forget. Tidak ada jaminan akan selesai.
+                  // Stabilitas check (lastSeenAt) saat login adalah fallback yang lebih kuat.
+                  // Hanya update lastSeenAt. Jangan set activeSessionId jadi null karena refresh biasa bisa membebaskan lisensi.
                   updateDoc(docRef, {
                       lastSeenAt: serverTimestamp() 
                   }).then(() => {
