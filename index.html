@@ -30,8 +30,8 @@
         .developer-credit a:hover {
             text-decoration: underline;
         }
-        #license-input { /* ID diubah ke license untuk script baru */
-            margin-top: 10px;
+        #license { /* ID diubah ke license untuk script baru */
+            /* margin-top: 10px; -> Dihapus, akan diatur spesifik di bawah */
         }
         #license-msg {
             margin-top: 10px;
@@ -72,30 +72,146 @@
             font-size: 1.1em; /* Slightly larger font for the name */
         }
 
+        /* --- PENYESUAIAN DARI PERMINTAAN SEBELUMNYA --- */
+        #license-form-container h1 .app-title-highlight {
+            color: gold; /* Warna kuning menyala untuk Selamat Datang! */
+        }
+
+        #license-form-container p,
+        #license-form-container ul li {
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        #license-form-container ul {
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        #license-form-container .app-features-intro {
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        #license-form-container .login-prompt {
+            margin-top: 15px;
+        }
+        /* --- AKHIR PENYESUAIAN DARI PERMINTAAN SEBELUMNYA --- */
+
+        /* --- PENYESUAIAN BARU UNTUK PROMPT BELI LISENSI --- */
+        .buy-license-prompt {
+            font-weight: bold;     /* Teks tebal */
+            color: #E67E22;        /* Warna oranye terang/menyala (misal: Carrot Orange) */
+            margin-top: 15px;      /* Sesuaikan spasi jika perlu */
+        }
+        .buy-license-prompt a {
+            color: inherit;        /* Mewarisi warna dari parent (.buy-license-prompt) */
+            text-decoration: underline; /* Pastikan tetap ada garis bawah untuk menandakan link */
+        }
+        .buy-license-prompt a:hover {
+            /* Opsional: efek hover, misal sedikit lebih terang atau warna lain */
+            color: #F39C12; /* Warna oranye yang sedikit lebih terang saat hover */
+        }
+        /* --- AKHIR PENYESUAIAN BARU UNTUK PROMPT BELI LISENSI --- */
+
+        /* --- PENYESUAIAN TAMBAHAN UNTUK KERAPATAN DAN HIGHLIGHT --- */
+        /* 1. Jarak rapat antara Selamat Datang dan Aplikasi Bimbel UKOM */
+        #license-form-container h1 {
+            margin-bottom: 0px; /* Rapatkan ke elemen di bawahnya */
+        }
+        #license-form-container h3 {
+            margin-top: 0px;    /* Rapatkan ke elemen di atasnya */
+            margin-bottom: 15px; /* Jarak sebelum deskripsi aplikasi */
+        }
+
+        /* 2. Styling dan jarak untuk "BELI LISENSI BIMBEL" */
+        /* Mengurangi jarak bawah dari prompt "Anda belum memiliki Lisensi..." */
+        #license-form-container .buy-license-prompt {
+            /* font-weight and color sudah didefinisikan sebelumnya */
+            margin-bottom: 5px; /* Kurangi jarak ke link di bawahnya */
+        }
+        /* Mengatur jarak paragraf yang berisi link "BELI LISENSI BIMBEL" */
+        /* p:has() is a modern CSS feature, ensure browser compatibility if needed widely */
+        #license-form-container p:has(> .buy-license-link-action) {
+            margin-top: 0px;    /* Rapatkan ke elemen di atasnya (buy-license-prompt) */
+            margin-bottom: 15px; /* Jarak sebelum input nama */
+        }
+        .buy-license-link-action { /* Kelas baru untuk link BELI LISENSI BIMBEL */
+            font-weight: bold;
+            color: gold; /* Warna kuning menyala, konsisten dengan .app-title-highlight */
+            text-decoration: underline; /* Standar untuk link */
+        }
+        .buy-license-link-action:hover {
+            color: #FFC107; /* Warna gold sedikit berbeda saat hover */
+        }
+
+        /* Spasi untuk input fields agar konsisten */
+        #name-input {
+            margin-bottom: 10px; /* Jarak antara input nama dan input lisensi */
+        }
+        #license {
+            margin-bottom: 10px; /* Jarak antara input lisensi dan tombol */
+        }
+
+        /* 3. Jarak rapat untuk tombol "MASUK MULAI BELAJAR", pesan lisensi, dan developer credit */
+        #submit-license-button {
+            margin-top: 0px;     /* Rapat ke input lisensi (karena #license sudah punya margin-bottom) */
+            margin-bottom: 5px;  /* Rapat ke pesan lisensi */
+        }
+        /* Menyesuaikan #license-msg yang sudah ada */
+        #license-msg {
+            margin-top: 5px;     /* Kurangi jarak dari tombol, sebelumnya 10px */
+            margin-bottom: 5px;  /* Tambah margin bawah untuk jarak ke developer credit */
+            /* font-weight: bold; sudah ada dari definisi sebelumnya */
+        }
+        .developer-credit {
+            margin-top: 5px;     /* Kurangi jarak dari pesan lisensi, sebelumnya 20px */
+            /* text-align: center; sudah ada */
+        }
+        .developer-credit img {
+            /* width, height, etc. sudah ada */
+            margin-bottom: 5px; /* Kurangi jarak dari foto ke teks di bawahnya, sebelumnya 10px */
+            /* border: 2px solid #ddd; sudah ada */
+        }
+        .developer-credit p {
+            /* font-size, color sudah ada */
+            margin-top: 0;      /* Rapatkan teks ke foto di atasnya */
+            margin-bottom: 0;   /* Tidak ada jarak di bawah teks developer */
+        }
+        /* --- AKHIR PENYESUAIAN TAMBAHAN --- */
+
+        /* Styling untuk tombol menu baru */
+        .menu-button-style {
+            display: block;
+            width: 70%;
+            margin: 15px auto;
+            padding: 14px 20px;
+            font-size: 1.1em;
+        }
     </style>
 </head>
 <body>
 
     <!-- Container untuk Form Lisensi dan Login Awal -->
-    <div id="license-form-container" class="container-view"> <!-- ID diubah menjadi license-form-container -->
+    <div id="license-form-container" class="container-view">
         <h1><span class="app-title-highlight">Selamat Datang!</span></h1>
+        <h3><span class="app-title-highlight">di Aplikasi Bimbel UKOM</span></h3>
         <p class="app-description">
             Platform ini dirancang untuk membantu Anda, para calon perawat dalam mengasah pengetahuan dan mempersiapkan diri menghadapi berbagai ujian kompetensi keperawatan.
         </p>
         <p class="app-features-intro">Apa yang bisa Anda lakukan di sini?</p>
         <ul class="app-features">
             <li>Berlatih soal-soal sesuai kategori keperawatan.</li>
-            <li>Menguji kemampuan secara menyeluruh dengan mode Try Out.</li>
             <li>Melihat pembahasan untuk memahami jawaban yang benar.</li>
+            <li>Menguji kemampuan secara menyeluruh dengan mode Try Out.</li>
         </ul>
         <p class="login-prompt">Siap untuk memulai? Silakan masukkan nama dan kode lisensi Anda:</p>
+        <p class="buy-license-prompt">Anda belum memiliki Lisensi? Silakan beli Lisensinya disini </p>
+        <p><a href="http://lynk.id/mascleine/8ed8kdpk0qrx" target="_blank" rel="noopener noreferrer" class="buy-license-link-action">BELI LISENSI BIMBEL</a></p>
         <input type="text" id="name-input" placeholder="Nama Lengkap Anda">
-        <input type="text" id="license" placeholder="Masukkan Kode Lisensi"> <!-- ID diubah ke 'license' -->
-        <button id="submit-license-button">Masuk & Mulai Belajar</button> <!-- ID diubah ke 'submit-license-button' -->
-        <div id="license-msg"></div> <!-- Elemen untuk pesan status lisensi -->
+        <input type="text" id="license" placeholder="Masukkan Kode Lisensi Anda">
+        <button id="submit-license-button">Masuk & Mulai Belajar</button>
+        <div id="license-msg"></div>
         <div class="developer-credit">
             <img src="https://masandigital.com/assets/images/author-photo.jpeg" alt="Developer Photo">
-            <p>Dikembangkan oleh: Mas Andy -- Kunjungi: <a href="https://masandigital.com" target="_blank">masandigital.com </a>
+            <p>Dikembangkan oleh: Mas Andy --> Kunjungi: <a href="https://masandigital.com" target="_blank">masandigital.com </a>
             </p>
         </div>
     </div>
@@ -123,8 +239,8 @@
       const licenseInput = document.getElementById("license");
       const nameInputElement = document.getElementById("name-input");
       const msgElement = document.getElementById("license-msg");
-      const welcomeUserMessageEl = document.getElementById("welcome-user-message");
-      const menuContainerEl = document.getElementById("menu-container");
+      const welcomeUserMessageEl = document.getElementById("main-menu-welcome-user"); // Updated ID
+      const mainMenuViewContainerEl = document.getElementById("main-menu-container"); // New Main Menu
       const userNameDisplayQuizEl = document.getElementById("user-name-display");
       const logoutButton = document.getElementById("logout-button");
 
@@ -153,8 +269,11 @@
               heartbeatIntervalId = null;
           }
           clearLocalSessionData();
+          if (typeof window.resetAppState === 'function') { // Call reset from script.js
+              window.resetAppState();
+          }
           if (licenseFormContainer) licenseFormContainer.style.display = "block";
-          if (mainAppContent) mainAppContent.style.display = "none";
+          if (mainAppContent) mainAppContent.style.display = "none"; // Hide entire app content area
           if (msgElement) {
               msgElement.textContent = message;
               msgElement.style.color = message.toLowerCase().includes("error") || message.toLowerCase().includes("gagal") || message.toLowerCase().includes("tidak") || message.toLowerCase().includes("kesalahan") ? "red" : "blue";
@@ -165,7 +284,7 @@
       }
 
       function proceedToApp(userName, licenseKey, clientSessionId) {
-          if (welcomeUserMessageEl) welcomeUserMessageEl.textContent = `Selamat datang, ${userName}!`;
+          if (welcomeUserMessageEl) welcomeUserMessageEl.textContent = `SELAMAT DATANG, ${userName}!`;
           if (userNameDisplayQuizEl) userNameDisplayQuizEl.textContent = userName;
           
           if (sessionStorage) {
@@ -176,28 +295,17 @@
           }
 
           if (licenseFormContainer) licenseFormContainer.style.display = "none";
-          if (mainAppContent) mainAppContent.style.display = "block";
-          if (menuContainerEl) menuContainerEl.classList.remove("hidden"); // Show menu first
-          else { // Fallback if menuContainerEl is not ready, directly show main app if nothing else shown
-              const isAnyAppViewVisible = document.querySelector('#main-app-content .container-view:not(.hidden)');
-              if (!isAnyAppViewVisible) {
-                // This case should ideally not happen if menuContainerEl is primary entry point
-                console.warn("menuContainerEl not found, but proceeding to app. Defaulting to show menu if possible, else main app.");
-                // Attempt to show menu if it becomes available later or handle error
-              }
-          }
+          if (mainAppContent) mainAppContent.style.display = "block"; // Show main app content area
 
           if (msgElement) msgElement.textContent = ""; // Clear any previous messages
 
-
           startHeartbeat(licenseKey, clientSessionId);
 
-          // Call loadGeneratedArticles from script.js if it exists
-          if (typeof loadGeneratedArticles === 'function') {
-              loadGeneratedArticles(); // Assuming this is defined in your script.js for main app init
-          } else if (typeof showView === 'function' && menuContainerEl) {
-              // If loadGeneratedArticles is not used, ensure the initial view (menu) is shown
-              showView(menuContainerEl);
+          // Show the new main menu first using the global showView function from script.js
+          if (typeof window.showView === 'function' && mainMenuViewContainerEl) {
+              window.showView(mainMenuViewContainerEl); 
+          } else {
+              console.warn("window.showView or mainMenuViewContainerEl not found. Cannot show initial app view.");
           }
       }
 
@@ -240,7 +348,7 @@
           const app = initializeApp(firebaseConfig);
           db = getFirestore(app);
 
-          if (submitButton && licenseInput && msgElement && licenseFormContainer && mainAppContent && nameInputElement) {
+          if (submitButton && licenseInput && msgElement && licenseFormContainer && mainAppContent && nameInputElement && mainMenuViewContainerEl) {
               submitButton.addEventListener("click", async (e) => {
                   e.preventDefault();
                   const licenseKey = licenseInput.value.trim();
@@ -431,18 +539,48 @@
       });
 
     </script>
+
     <!-- Kontainer untuk Aplikasi Utama (setelah lisensi valid) -->
     <div id="main-app-content">
-        <div id="menu-container" class="container-view hidden">
-            <h2 id="welcome-user-message"></h2>
-            <h3>Silakan pilih mode:</h3>
-            <button id="latihan-soal-menu-button">Latihan Soal</button>
-            <button id="tryout-button">Try Out (Gabungan)</button>
-            <button id="tryout-serius-menu-button">Try Out Mode Serius</button> <!-- TOMBOL BARU -->
-            <button id="logout-button" class="btn-home">Logout</button>
+        <!-- NEW MAIN MENU -->
+        <div id="main-menu-container" class="container-view hidden">
+            <h2 id="main-menu-welcome-user"></h2> <!-- Welcome message will appear here -->
+            <h3>Menu Utama</h3>
+            <button id="main-menu-latihan-soal" class="menu-button-style">Latihan Pembahasan Soal</button>
+            <button id="main-menu-tryout" class="menu-button-style">Try Out</button>
+            <button id="logout-button" class="menu-button-style btn-home">Logout</button>
         </div>
 
-        <!-- KONTENER BARU UNTUK TRYOUT SERIUS -->
+        <!-- NEW Latihan Pembahasan Soal SUBMENU -->
+        <div id="latihan-soal-submenu-container" class="container-view hidden">
+            <h3>Pilih Jenis Latihan Pembahasan Soal</h3>
+            <button id="latihan-departemen-button" class="menu-button-style">Latihan Pembahasan Soal per Departemen</button>
+            <button id="latihan-gabungan-button" class="menu-button-style" data-file="gabungan.json">Latihan Pembahasan Soal Gabungan</button>
+            <button id="kembali-ke-main-menu-from-latihan-submenu" class="menu-button-style btn-home">Kembali ke Menu Utama</button>
+        </div>
+        
+        <!-- NEW TRY OUT SUBMENU -->
+        <div id="tryout-submenu-container" class="container-view hidden">
+            <h3>Pilih Jenis Try Out</h3>
+            <button id="tryout-gabungan-semua-button" class="menu-button-style">Try Out Soal Gabungan (Semua Kategori)</button>
+            <button id="tryout-mode-serius-button" class="menu-button-style">Try Out Mode Serius (TO Type 1-10)</button>
+            <button id="kembali-ke-main-menu-from-tryout-submenu" class="menu-button-style btn-home">Kembali ke Menu Utama</button>
+        </div>
+
+        <!-- KATEGORI LATIHAN (Existing, but back button ID changed) -->
+        <div id="kategori-latihan-container" class="container-view hidden">
+            <h3>Pilih Kategori Latihan Pembahasan Soal</h3>
+            <button class="kategori-button" data-script="jiwa.js">Keperawatan Jiwa</button>
+            <button class="kategori-button" data-script="anak.js">Keperawatan Anak</button>
+            <button class="kategori-button" data-script="keluarga.js">Keperawatan Keluarga</button>
+            <button class="kategori-button" data-script="komunitas.js">Keperawatan Komunitas</button>
+            <button class="kategori-button" data-script="bedah.js">Keperawatan Medikal Bedah</button>
+            <button class="kategori-button" data-script="gadar.js">Keperawatan Gawat Darurat</button>
+            <button class="kategori-button" data-script="manajemen.js">Manajemen Keperawatan</button>
+            <button id="kembali-ke-latihan-submenu-from-kategori" class="btn-home">Kembali ke Pilihan Latihan</button>
+        </div>
+        
+        <!-- TRYOUT SERIUS (Existing, but back button ID changed) -->
         <div id="tryout-serius-container" class="container-view hidden">
             <h3>Pilih Tipe Try Out Serius</h3>
             <button class="tryout-serius-button" data-file="TO1.json" data-type="TO Tipe 1">TO Tipe 1</button>
@@ -455,19 +593,7 @@
             <button class="tryout-serius-button" data-file="TO8.json" data-type="TO Tipe 8">TO Tipe 8</button>
             <button class="tryout-serius-button" data-file="TO9.json" data-type="TO Tipe 9">TO Tipe 9</button>
             <button class="tryout-serius-button" data-file="TO10.json" data-type="TO Tipe 10">TO Tipe 10</button>
-            <button id="kembali-ke-menu-utama-from-serius-button" class="btn-home">Kembali ke Menu Utama</button>
-        </div>
-
-        <div id="kategori-latihan-container" class="container-view hidden">
-            <h3>Pilih Kategori Latihan Soal</h3>
-            <button class="kategori-button" data-script="jiwa.js">Keperawatan Jiwa</button>
-            <button class="kategori-button" data-script="anak.js">Keperawatan Anak</button>
-            <button class="kategori-button" data-script="keluarga.js">Keperawatan Keluarga</button>
-            <button class="kategori-button" data-script="komunitas.js">Keperawatan Komunitas</button>
-            <button class="kategori-button" data-script="bedah.js">Keperawatan Medikal Bedah</button>
-            <button class="kategori-button" data-script="gadar.js">Keperawatan Gawat Darurat</button>
-            <button class="kategori-button" data-script="manajemen.js">Manajemen Keperawatan</button>
-            <button id="kembali-ke-menu-utama-button" class="btn-home">Kembali ke Menu Utama</button>
+            <button id="kembali-ke-tryout-submenu-from-serius" class="btn-home">Kembali ke Pilihan Try Out</button>
         </div>
 
         <div id="quiz-layout-container" class="container-view hidden">
