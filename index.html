@@ -177,14 +177,27 @@
 
           if (licenseFormContainer) licenseFormContainer.style.display = "none";
           if (mainAppContent) mainAppContent.style.display = "block";
-          if (menuContainerEl) menuContainerEl.classList.remove("hidden");
+          if (menuContainerEl) menuContainerEl.classList.remove("hidden"); // Show menu first
+          else { // Fallback if menuContainerEl is not ready, directly show main app if nothing else shown
+              const isAnyAppViewVisible = document.querySelector('#main-app-content .container-view:not(.hidden)');
+              if (!isAnyAppViewVisible) {
+                // This case should ideally not happen if menuContainerEl is primary entry point
+                console.warn("menuContainerEl not found, but proceeding to app. Defaulting to show menu if possible, else main app.");
+                // Attempt to show menu if it becomes available later or handle error
+              }
+          }
+
           if (msgElement) msgElement.textContent = ""; // Clear any previous messages
 
 
           startHeartbeat(licenseKey, clientSessionId);
 
+          // Call loadGeneratedArticles from script.js if it exists
           if (typeof loadGeneratedArticles === 'function') {
-              loadGeneratedArticles();
+              loadGeneratedArticles(); // Assuming this is defined in your script.js for main app init
+          } else if (typeof showView === 'function' && menuContainerEl) {
+              // If loadGeneratedArticles is not used, ensure the initial view (menu) is shown
+              showView(menuContainerEl);
           }
       }
 
@@ -209,12 +222,9 @@
               }
           } catch (error) {
               console.error("Heartbeat error:", error);
-              // Don't logout on transient network errors for heartbeat
-              // Check if it's a permission error, which is more serious
               if (error.code === 'permission-denied' || error.code === 'unauthenticated') {
                   showLoginForm(`Kesalahan izin pada heartbeat (${error.code}). Sesi diakhiri.`);
               }
-              // Other errors might be transient, user might get logged out on next interaction or reload.
           }
       }
 
@@ -290,6 +300,7 @@
                               await updateDoc(docRef, {
                                   activeSessionId: newClientSessionId,
                                   lastSeenAt: serverTimestamp(),
+                                  userName: inputUserName // Optionally store user name with license
                               });
                               msgElement.style.color = "green";
                               msgElement.textContent = "Lisensi valid. Akses diberikan!";
@@ -323,7 +334,6 @@
                   }
               });
 
-              // Check session storage on page load for session resume
               if (sessionStorage && sessionStorage.getItem('licenseValidated') === 'true') {
                   const savedUserName = sessionStorage.getItem('userName');
                   const savedLicenseKey = sessionStorage.getItem('licenseKey');
@@ -370,7 +380,6 @@
           }
       }
 
-      // Logout Handler
       if (logoutButton) {
           logoutButton.addEventListener('click', async () => {
               const licenseKey = sessionStorage.getItem('licenseKey');
@@ -382,7 +391,7 @@
                       const docSnap = await getDoc(docRef); 
                       if (docSnap.exists() && docSnap.data().activeSessionId === clientSessionId) {
                           await updateDoc(docRef, {
-                              activeSessionId: null,
+                              activeSessionId: null, // Release the session
                               lastSeenAt: serverTimestamp() 
                           });
                           console.log("License released on logout.");
@@ -391,7 +400,6 @@
                       }
                   } catch (error) {
                       console.error("Error releasing license on logout:", error);
-                      // Masih lanjutkan logout lokal meskipun gagal update server
                   }
               }
               showLoginForm("Anda telah berhasil logout.");
@@ -399,21 +407,24 @@
       }
 
       window.addEventListener('beforeunload', (event) => {
+          // Only update lastSeenAt, do not release activeSessionId on page close/refresh
+          // Stale session check during login is the primary mechanism for license takeover
           if (sessionStorage && sessionStorage.getItem('licenseValidated') === 'true') {
               const licenseKey = sessionStorage.getItem('licenseKey');
-              // const clientSessionId = sessionStorage.getItem('clientSessionId'); // Tidak digunakan di sini
+              const clientSessionId = sessionStorage.getItem('clientSessionId'); // Get current session ID
 
-              if (db && licenseKey) { // clientSessionId tidak esensial untuk hanya update lastSeenAt
+              if (db && licenseKey && clientSessionId) {
                   const docRef = doc(db, "licenses", licenseKey);
-                  // Ini adalah fire-and-forget. Tidak ada jaminan akan selesai.
-                  // Stabilitas check (lastSeenAt) saat login adalah fallback yang lebih kuat.
-                  // Hanya update lastSeenAt. Jangan set activeSessionId jadi null karena refresh biasa bisa membebaskan lisensi.
-                  updateDoc(docRef, {
-                      lastSeenAt: serverTimestamp() 
-                  }).then(() => {
-                      // console.log("beforeunload: Attempted to update lastSeenAt.");
+                  getDoc(docRef).then(docSnap => { // Check if current session is still owner
+                      if (docSnap.exists() && docSnap.data().activeSessionId === clientSessionId) {
+                          updateDoc(docRef, {
+                              lastSeenAt: serverTimestamp() 
+                          }).catch(err => {
+                              // console.warn("beforeunload: Error updating lastSeenAt (non-critical):", err);
+                          });
+                      }
                   }).catch(err => {
-                      // console.warn("beforeunload: Error updating lastSeenAt (non-critical):", err);
+                      // console.warn("beforeunload: Error checking document before updating lastSeenAt (non-critical):", err);
                   });
               }
           }
@@ -421,13 +432,30 @@
 
     </script>
     <!-- Kontainer untuk Aplikasi Utama (setelah lisensi valid) -->
-    <div id="main-app-content"> <!-- ID diubah menjadi main-app-content -->
+    <div id="main-app-content">
         <div id="menu-container" class="container-view hidden">
             <h2 id="welcome-user-message"></h2>
             <h3>Silakan pilih mode:</h3>
             <button id="latihan-soal-menu-button">Latihan Soal</button>
-            <button id="tryout-button">Try Out</button>
+            <button id="tryout-button">Try Out (Gabungan)</button>
+            <button id="tryout-serius-menu-button">Try Out Mode Serius</button> <!-- TOMBOL BARU -->
             <button id="logout-button" class="btn-home">Logout</button>
+        </div>
+
+        <!-- KONTENER BARU UNTUK TRYOUT SERIUS -->
+        <div id="tryout-serius-container" class="container-view hidden">
+            <h3>Pilih Tipe Try Out Serius</h3>
+            <button class="tryout-serius-button" data-file="TO1.json" data-type="TO Tipe 1">TO Tipe 1</button>
+            <button class="tryout-serius-button" data-file="TO2.json" data-type="TO Tipe 2">TO Tipe 2</button>
+            <button class="tryout-serius-button" data-file="TO3.json" data-type="TO Tipe 3">TO Tipe 3</button>
+            <button class="tryout-serius-button" data-file="TO4.json" data-type="TO Tipe 4">TO Tipe 4</button>
+            <button class="tryout-serius-button" data-file="TO5.json" data-type="TO Tipe 5">TO Tipe 5</button>
+            <button class="tryout-serius-button" data-file="TO6.json" data-type="TO Tipe 6">TO Tipe 6</button>
+            <button class="tryout-serius-button" data-file="TO7.json" data-type="TO Tipe 7">TO Tipe 7</button>
+            <button class="tryout-serius-button" data-file="TO8.json" data-type="TO Tipe 8">TO Tipe 8</button>
+            <button class="tryout-serius-button" data-file="TO9.json" data-type="TO Tipe 9">TO Tipe 9</button>
+            <button class="tryout-serius-button" data-file="TO10.json" data-type="TO Tipe 10">TO Tipe 10</button>
+            <button id="kembali-ke-menu-utama-from-serius-button" class="btn-home">Kembali ke Menu Utama</button>
         </div>
 
         <div id="kategori-latihan-container" class="container-view hidden">
