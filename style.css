@@ -300,6 +300,8 @@ button:active {
 }
 #menu-container #tryout-button { background-color: #28a745; }
 #menu-container #tryout-button:hover { background-color: #1f7a34; }
+#menu-container #tryout-serius-menu-button { background-color: #fd7e14; } /* Oranye untuk Tryout Serius */
+#menu-container #tryout-serius-menu-button:hover { background-color: #d36307; }
 #menu-container button#logout-button { background-color: #dc3545; margin-top: 15px; }
 #menu-container button#logout-button:hover { background-color: #b02a37; }
 
@@ -352,6 +354,51 @@ button:active {
 #kategori-latihan-container .btn-home:hover {
     background-color: #545b62;
 }
+
+/* ... (CSS yang sudah ada) ... */
+
+/* Tryout Serius Container */
+#tryout-serius-container .tryout-serius-button {
+    display: block;
+    width: 70%; /* Anda bisa sesuaikan ini */
+    margin: 8px auto; /* Kurangi margin jika terlalu banyak tombol */
+    padding: 10px 15px; /* Sesuaikan padding jika perlu */
+    font-size: 1em; /* Sesuaikan font size jika perlu */
+    color: white;
+}
+
+/* Berikan warna berbeda untuk beberapa tombol TO jika diinginkan, atau gunakan satu warna default */
+#tryout-serius-container .tryout-serius-button:nth-of-type(1) { background-color: #007bff; }
+#tryout-serius-container .tryout-serius-button:nth-of-type(1):hover { background-color: #0056b3; }
+#tryout-serius-container .tryout-serius-button:nth-of-type(2) { background-color: #17a2b8; }
+#tryout-serius-container .tryout-serius-button:nth-of-type(2):hover { background-color: #117a8b; }
+#tryout-serius-container .tryout-serius-button:nth-of-type(3) { background-color: #28a745; }
+#tryout-serius-container .tryout-serius-button:nth-of-type(3):hover { background-color: #1e7e34; }
+#tryout-serius-container .tryout-serius-button:nth-of-type(4) { background-color: #ffc107; color: #212529; }
+#tryout-serius-container .tryout-serius-button:nth-of-type(4):hover { background-color: #e0a800; }
+#tryout-serius-container .tryout-serius-button:nth-of-type(5) { background-color: #fd7e14; } /* Orange */
+#tryout-serius-container .tryout-serius-button:nth-of-type(5):hover { background-color: #d36307; }
+#tryout-serius-container .tryout-serius-button:nth-of-type(6) { background-color: #6f42c1; } /* Purple */
+#tryout-serius-container .tryout-serius-button:nth-of-type(6):hover { background-color: #5a32a3; }
+#tryout-serius-container .tryout-serius-button:nth-of-type(7) { background-color: #e83e8c; } /* Pink */
+#tryout-serius-container .tryout-serius-button:nth-of-type(7):hover { background-color: #c22670; }
+#tryout-serius-container .tryout-serius-button:nth-of-type(8) { background-color: #20c997; } /* Teal */
+#tryout-serius-container .tryout-serius-button:nth-of-type(8):hover { background-color: #1baa80; }
+#tryout-serius-container .tryout-serius-button:nth-of-type(9) { background-color: #6610f2; } /* Indigo */
+#tryout-serius-container .tryout-serius-button:nth-of-type(9):hover { background-color: #520dc2; }
+#tryout-serius-container .tryout-serius-button:nth-of-type(10) { background-color: #6c757d; } /* Gray */
+#tryout-serius-container .tryout-serius-button:nth-of-type(10):hover { background-color: #545b62; }
+
+
+#tryout-serius-container #kembali-ke-menu-utama-from-serius-button.btn-home {
+    background-color: #dc3545; /* Merah untuk tombol kembali */
+    margin-top: 25px;
+}
+#tryout-serius-container #kembali-ke-menu-utama-from-serius-button.btn-home:hover {
+    background-color: #b02a37;
+}
+
+/* ... (CSS lainnya yang sudah ada) ... */
 
 
 /* Penjelasan Jawaban */
@@ -435,7 +482,7 @@ button:active {
     padding-bottom: 20px;
     margin-bottom: 0;
 }
-#user-photo-icon { /* Ini untuk ikon FontAwesome, jika Anda pakai <img>, style di HTML */
+#user-photo-icon { 
     font-size: 64px;
     color: #007BFF;
     margin-bottom: 12px;
@@ -521,13 +568,13 @@ button:active {
 
 /* Result Container - Tampilan Skor yang Dipercantik */
 #result-container {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradasi ungu-biru elegan */
-    color: #ffffff; /* Teks utama putih agar kontras */
-    padding: 35px 30px; /* Padding disesuaikan */
-    border-radius: 15px; /* Border radius lebih halus */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 15px rgba(118, 75, 162, 0.5); /* Bayangan lebih dramatis */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+    color: #ffffff; 
+    padding: 35px 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 15px rgba(118, 75, 162, 0.5); 
     text-align: center;
-    animation: fadeInResult 0.8s ease-out; /* Animasi fade-in halus */
+    animation: fadeInResult 0.8s ease-out; 
 }
 
 @keyframes fadeInResult {
@@ -535,79 +582,70 @@ button:active {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Bisa ditambahkan jika ada judul "Hasil" di HTML */
-/* #result-container h2.result-title {
-    font-family: "Georgia", "Times New Roman", Times, serif;
-    font-size: 2.6em;
-    color: #f0e6ff;
-    margin-bottom: 12px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-} */
-
 #result-container p#score {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1.3em; /* Ukuran font dasar untuk teks skor */
-    line-height: 1.5; /* KERAPATAN BARIS UTAMA */
+    font-size: 1.3em; 
+    line-height: 1.5; 
     margin-bottom: 25px;
-    white-space: pre-wrap; /* Biarkan pre-wrap untuk menghormati <br> dari JS */
+    white-space: pre-wrap; 
     background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
-    max-width: 95%; /* Sedikit lebih lebar */
+    max-width: 95%; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-align: left; /* Teks di dalam blok skor rata kiri */
+    text-align: left; 
 }
 
-#result-container p#score span { /* Aturan umum untuk span di dalam skor */
-    display: block; /* Membuat setiap span (baris) memulai baris baru */
-    margin-bottom: 4px; /* Jarak antar baris yang dibentuk oleh span */
+#result-container p#score span { 
+    display: block; 
+    margin-bottom: 4px; 
 }
 #result-container p#score span:last-child {
-    margin-bottom: 0; /* Tidak ada margin bawah untuk elemen terakhir */
+    margin-bottom: 0; 
 }
 
 
 #result-container p#score .user-name-result {
     font-weight: bold;
-    color: #c4e1ff; /* Biru muda untuk nama pengguna */
-    font-size: 1.2em; /* Sedikit lebih besar */
-    margin-bottom: 8px !important; /* Jarak setelah nama pengguna */
+    color: #c4e1ff; 
+    font-size: 1.2em; 
+    margin-bottom: 8px !important; 
 }
 
 #result-container p#score .score-value {
-    font-size: 2.8em; /* Angka skor sangat besar */
+    font-size: 2.8em; 
     font-weight: bold;
-    color: #ffd700; /* Emas untuk angka skor */
+    color: #ffd700; 
     display: block;
-    margin: 5px 0 10px 0 !important; /* Jarak vertikal untuk skor utama */
-    text-align: center; /* Skor utama di tengah blok */
-    line-height: 1.1; /* Line height khusus untuk angka besar */
+    margin: 5px 0 10px 0 !important; 
+    text-align: center; 
+    line-height: 1.1; 
 }
 
 #result-container p#score .category-breakdown-title {
     font-weight: bold;
-    margin-top: 12px !important; /* Jarak sebelum judul breakdown */
-    margin-bottom: 6px !important; /* Jarak setelah judul breakdown */
+    margin-top: 12px !important; 
+    margin-bottom: 6px !important; 
     display: block;
-    color: #e6e6fa; /* Lavender */
+    color: #e6e6fa; 
     font-size: 1.15em;
 }
 
 #result-container p#score .category-item {
     display: block;
-    margin-bottom: 3px !important; /* Jarak antar item kategori lebih rapat */
+    margin-bottom: 3px !important; 
     font-size: 0.95em;
     color: #f0f0f0;
-    line-height: 1.4; /* Line height untuk item kategori */
+    line-height: 1.4; 
 }
 #result-container p#score .category-item .category-name {
     font-weight: 500;
-    color: #d1c4e9; /* Ungu muda */
+    color: #d1c4e9; 
 }
 #result-container p#score .category-item .category-score {
     font-weight: bold;
-    color: #b2dfdb; /* Teal muda */
+    color: #b2dfdb; 
 }
 
 #result-container #restart-button {
@@ -621,7 +659,7 @@ button:active {
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
     border: none;
     letter-spacing: 0.5px;
-    margin-top: 10px; /* Jarak dari blok skor */
+    margin-top: 10px; 
 }
 #result-container #restart-button:hover {
     background-color: #e0a800;
@@ -664,11 +702,11 @@ button:active {
 @media (max-width: 768px) {
     body { padding: 10px; }
     .container-view { padding: 20px 15px; margin: 15px auto; }
-    #license-form-container { padding: 25px 20px; } /* Padding mobile untuk form lisensi */
+    #license-form-container { padding: 25px 20px; } 
     #quiz-main-content, #quiz-sidebar { padding: 20px; }
 
     h1 { font-size: 2em; }
-    #license-form-container h1 { font-size: 2.1em; } /* Disesuaikan agar tidak terlalu besar di mobile */
+    #license-form-container h1 { font-size: 2.1em; } 
     .app-description, .app-features-intro, .login-prompt { font-size: 1em; }
     .app-features li { font-size: 0.95em; }
 
@@ -676,7 +714,9 @@ button:active {
     h3 { font-size: 1.4em; }
     #question { font-size: 1.15em; }
     button { padding: 10px 18px; font-size: 0.95em; }
-    #menu-container button, #kategori-latihan-container .kategori-button {
+    #menu-container button, 
+    #kategori-latihan-container .kategori-button,
+    #tryout-serius-container .tryout-serius-button { /* Tambahkan selector untuk tombol tryout serius */
         width: 85%;
         padding: 12px 18px;
         font-size: 1em;
@@ -685,18 +725,16 @@ button:active {
     .nav-question-box { width: 36px; height: 36px; font-size: 0.85em; }
     #question-navigation-grid { grid-template-columns: repeat(auto-fill, minmax(36px, 1fr)); }
 
-    /* Penyesuaian tampilan skor untuk mobile */
     #result-container {
         padding: 25px 15px;
     }
-    /* #result-container h2.result-title { font-size: 2em; } */
     #result-container p#score {
-        font-size: 1.1em; /* Font lebih kecil di mobile */
+        font-size: 1.1em; 
         padding: 15px;
-        line-height: 1.45; /* Line height disesuaikan lagi untuk mobile */
+        line-height: 1.45; 
     }
     #result-container p#score .score-value {
-        font-size: 2.2em; /* Skor utama tetap menonjol tapi disesuaikan */
+        font-size: 2.2em; 
     }
     #result-container p#score .category-breakdown-title {
         font-size: 1.05em;
