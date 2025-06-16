@@ -1,4 +1,364 @@
 [
+{
+"question": "Seorang perempuan berusia 16 tahun datang ke Rumah Sakit dengan keluhan batuk . Keluhan yang menyertai demam, dan penurunan nafsu akan. Hasil pemeriksaan fisik ditemukan: batuk produktif terutama pada pagi hari, hipersonor dan wheezing. Masalah keperawatan yang diangkat adalah bersihan jalan napas tidak efektif. Intervensi yang diberikan adalah ajarkan cara batuk efektif. Apakah rasional dari intervensi tersebut?",
+"options": [
+"Karakteristik sputum menunjukkan berat ringannya obstruksi",
+"Ventilasi membuka lumen saluran pernapasan.",
+"Memudahkan pengeluaran sekret yang melekat.",
+"Pengeluaran akan sulit bila dahak sangat lengket.",
+"Bronkodilator meningkatkan diameter bronkus."
+],
+"answer": 2,
+"explanation": "Batuk efektif adalah teknik yang diajarkan kepada pasien untuk membantu mengeluarkan sekret (dahak/sputum) yang terakumulasi di saluran napas. Dengan mengeluarkan sekret yang melekat, jalan napas menjadi lebih bersih dan pertukaran gas lebih optimal."
+},
+{
+"question": "Seorang perempuan usia 18 tahun datang ke RS dengan keluhan batuk sejak 4 bulan yang lalu. Disertai mual dan mudah lelah. Hasil pemeriksaan fisik penggunaan otot bantu pernapas, suara napas wheezing. TD 120/80 mmHg, frekwensi napas 30 x/mnt. Diberikan terapi oksigen 4 ltr/mnt. Apakah respon pasien yang dinilai pada kasus tersebut?",
+"options": [
+"Mampu batuk efektif",
+"Tidak ada bunyi napas tambahan",
+"Terjadi peningkatan tekanan darah",
+"Pasien merasa lebih lega saat bernapas",
+"Frekwensi pernapasan dalam batas normal"
+],
+"answer": 4,
+"explanation": "Pasien datang dengan keluhan batuk, penggunaan otot bantu napas, wheezing, dan takipnea (frekuensi napas 30x/menit), yang menunjukkan distres pernapasan. Pemberian oksigen bertujuan untuk mengatasi hipoksia dan mengurangi kerja pernapasan. Respon positif yang diharapkan adalah penurunan frekuensi pernapasan ke batas normal (dewasa: 12-20x/menit) dan hilangnya tanda-tanda distres."
+},
+{
+"question": "Seorang laki-laki berusia 18 tahun dirawat di RS dengan keluhan sakit kepala. Setelah dirawat selama 2 minggu, pasien tiba-tiba mengalami sakit kepala berdenyut, muntah >5 kali berisi makanan kemudian mengalami penurunan kesadaran. Pasien buka mata saat diberi stimulus nyeri disertai gerakan menghindar. Pasien mengeluarkan kata-kata yang tidak dimengerti. Berapakah nilai GCS pasien tersebut",
+"options": [
+"8",
+"9",
+"10",
+"11",
+"12"
+],
+"answer": 1,
+"explanation": "Penilaian GCS:\n- Respon Membuka Mata (E): Buka mata saat diberi stimulus nyeri = E2\n- Respon Verbal (V): Mengeluarkan kata-kata yang tidak dimengerti (incomprehensible sounds/words) = V3\n- Respon Motorik (M): Gerakan menghindar terhadap stimulus nyeri (withdrawal) = M4\nTotal GCS = E2 + V3 + M4 = 9."
+},
+{
+"question": "Seorang laki-laki usia 16 tahun mengalami fraktur tibia dekstra akibat kecelakaan lalu lintas dan telah menjalani perawatan di RS selama 3 minggu. Untuk dapat berjalan, pasien dianjurkan menggunakan alat bantu berupa tongkat dan hari ini merupakan hari pertama pasien melihat dan memegang tongkat tersebut. Apakah pendidikan kesehatan yang pertama kali perlu disampaikan oleh perawatan pada kasus tersebut?",
+"options": [
+"Pengenalan tentang anatomi tongkat",
+"Cara memegang tongkat",
+"Teknik berjalan",
+"Berdiri dan duduk dengan menggunakan tongkat",
+"Penyimpanan tongkat bila sedang tidak digunakan"
+],
+"answer": 1,
+"explanation": "Sebelum mengajarkan teknik berjalan atau berdiri, pasien perlu mengetahui cara memegang tongkat dengan benar. Ini meliputi penyesuaian tinggi tongkat yang sesuai dan cara menggenggamnya agar memberikan dukungan yang optimal dan aman."
+},
+{
+"question": "Seorang perempuan usia 15 tahun mengalami kesulitan berjalan akibat terpasangnya gips tungkai pendek di kaki kanannya sehingga pasien menggunakan alat bantu tongkat untuk bejalan. Pasca pelepasan gips, pasien merasa senang sekali karena merasa terlepas dari beban berat dan merasa bisa langsung berjalan dengan normal. Apa pendidikan kesehatan yang perlu disampaikan oleh perawat pada pasien tersebut?",
+"options": [
+"“Untuk sementara Adik tetap pakai tongkatnya ya!”",
+"“Selamat ya, sudah bisa berjalan normal. Lain kali lebih hati-hati ya!”",
+"“Sekarang gipsnya sudah dilepas tapi bukan berarti langsung bisa jalan. Hati-hati ya!”",
+"“Karena gipsnya baru saja dibuka, Adik harus adaptasi dulu dengan tetap pakai tongkat”",
+"“Adik pakai tongkat sampai benar-benar bisa berjalan normal ya!”"
+],
+"answer": 3,
+"explanation": "Edukasi yang baik memberikan alasan (rasional) di balik anjuran. Kalimat ini menjelaskan bahwa meskipun gips sudah dilepas, otot dan sendi memerlukan adaptasi kembali, sehingga penggunaan tongkat masih diperlukan untuk sementara waktu untuk mencegah cedera ulang dan membantu pemulihan."
+},
+{
+"question": "Seorang laki-laki usia 17 tahun dibawa keluarganya ke UGD dengan keluhan kesakitan dengan skala 8, dari hasil pemeriksaan fisik ditemukan terdapat luka bakar pada area ekstremitas atas dan bawah, hidung dan mulut grade 1, pasien sulit menelan dan suara parau. Apakah prioritas masalah dari kasus di atas?",
+"options": [
+"Nyeri",
+"Ketidak seimbangan nutrisi",
+"Kerusakan integritas kulit",
+"Gangguan pertukaran gas",
+"Resiko terjadi infeksi"
+],
+"answer": 3,
+"explanation": "Luka bakar pada hidung dan mulut, sulit menelan, dan suara parau menunjukkan kemungkinan adanya trauma inhalasi dan edema jalan napas atas. Ini berisiko tinggi menyebabkan obstruksi jalan napas dan gangguan pertukaran gas. Menurut prinsip ABC (Airway, Breathing, Circulation), masalah jalan napas dan pernapasan adalah prioritas utama."
+},
+{
+"question": "Di bawah ini, manakah yang BUKAN merupakan komponen Apgar Score.",
+"options": [
+"Berat badan",
+"Warna",
+"Usaha Bernafas",
+"Tonus Otot",
+"Denyut Nadi"
+],
+"answer": 0,
+"explanation": "Komponen Apgar Score adalah: Appearance (warna kulit), Pulse (denyut nadi), Grimace (refleks/iritabilitas), Activity (tonus otot), dan Respiration (usaha bernapas). Berat badan bukan merupakan komponen Apgar Score."
+},
+{
+"question": "Refleks tonik pada leher bayi dimanifestasikan dengan",
+"options": [
+"Posisi menegang (fencing)",
+"Refleks koordinatif menghisap dan menalan",
+"Refleks startle",
+"Kekakuan pada leher ketika di pegang/angkat",
+"Refleks kaku kuduk"
+],
+"answer": 0,
+"explanation": "Refleks tonik leher asimetris (ATNR) atau 'fencing posture' adalah refleks primitif pada bayi. Ketika kepala bayi ditolehkan ke satu sisi, lengan dan kaki pada sisi tersebut akan ekstensi (lurus), sementara lengan dan kaki pada sisi yang berlawanan akan fleksi (menekuk)."
+},
+{
+"question": "An. V, 7 tahun dibawa ke UGD rumah sakit karena mengalami asthma bronchial dengan pernafasan cepat dan terdengar wheezing. Kemudian diprogramkan untuk pemberian epinephrine dengan tujuan?",
+"options": [
+"Pencegahan produksi histamin",
+"Relaksasi otot bronkus",
+"Mengencerkan sekresi bronkus",
+"Menurunkan inflamasi bronchial",
+"Relaksasi otot Jantung"
+],
+"answer": 1,
+"explanation": "Epinefrin (adrenalin) adalah bronkodilator poten yang bekerja dengan merelaksasi otot polos bronkus melalui stimulasi reseptor beta-2 adrenergik. Ini membantu mengatasi bronkospasme akut pada serangan asma."
+},
+{
+"question": "Perawat akan menjelaskan cara pemberian insulin suntik kepada orang tua klien. Manakah hal yang harus pertama kali didiskusikan dengan orang tua klien?",
+"options": [
+"Cara memegang spuit insulin",
+"Prinsip aseptik dalam penyuntikan",
+"Menghitung dosis yang tepat",
+"Cara rotasi penyuntikan",
+"Cara memasukkan jarum"
+],
+"answer": 2,
+"explanation": "Sebelum mengajarkan teknik penyuntikan, hal yang paling fundamental dan harus dipahami pertama kali adalah cara menghitung dosis insulin yang tepat sesuai anjuran dokter dan jenis insulin yang digunakan. Kesalahan dosis dapat berakibat fatal (hipoglikemia atau hiperglikemia)."
+},
+{
+"question": "An. C, mengalami diare sejak 2 hari yang lalu, dibawa ke rumah sakit dalam kondisi dehidrasi dengan penurunan kesadaran. Penurunan kesadaran An. C disebabkan oleh?",
+"options": [
+"Hipoperfusi jaringan serebral karena penurunan volume vaskuler",
+"Penekanan pada pusat vital dan kesadaran di otak",
+"Penurunan fungsi hemodinamik dan kelelahan jantung",
+"Adanya mekanisme diuresis pada kerusakan jaringan ginjal",
+"Banyak cairan yang keluar sehingga sel-sel mengalami collapse"
+],
+"answer": 0,
+"explanation": "Diare berat menyebabkan kehilangan cairan dan elektrolit, yang berujung pada dehidrasi dan penurunan volume vaskular (hipovolemia). Hipovolemia menyebabkan penurunan aliran darah ke otak (hipoperfusi serebral), yang dapat mengakibatkan penurunan kesadaran."
+},
+{
+"question": "Seorang laki-laki, 65 tahun, dirawat dengan diagnosis Gagal Jantung Kongestif. Pasien mengeluh sesak napas berat saat berbaring dan terdapat edema pada kedua tungkai. Posisi manakah yang paling tepat untuk mengurangi keluhan sesak pada pasien?",
+"options": [
+"Supinasi",
+"Trendelenburg",
+"Sims lateral",
+"Fowler atau Semi-Fowler",
+"Prone"
+],
+"answer": 3,
+"explanation": "Posisi Fowler (duduk) atau Semi-Fowler (setengah duduk) menggunakan gravitasi untuk menurunkan diafragma dan meningkatkan ekspansi rongga dada, sehingga mengurangi kerja pernapasan dan venous return ke jantung. Ini sangat membantu mengurangi sesak pada pasien gagal jantung."
+},
+{
+"question": "Seorang pasien laki-laki usia 50 tahun datang ke UGD dengan keluhan nyeri dada seperti ditekan yang menjalar ke lengan kiri sejak 1 jam yang lalu. Pasien tampak pucat dan berkeringat dingin. Apakah tindakan prioritas pertama yang harus dilakukan perawat?",
+"options": [
+"Memberikan obat pereda nyeri",
+"Memasang akses intravena (IV line)",
+"Memberikan oksigen",
+"Merekam Elektrokardiogram (EKG) 12 sadapan",
+"Mengukur tanda-tanda vital"
+],
+"answer": 3,
+"explanation": "Pada kasus suspek sindrom koroner akut, merekam EKG 12 sadapan sesegera mungkin (idealnya dalam 10 menit pertama) adalah prioritas untuk mendiagnosis infark miokard (terutama STEMI) yang memerlukan reperfusi segera. Tindakan lain juga penting tetapi EKG memberikan informasi diagnostik kritis."
+},
+{
+"question": "Perawat sedang melakukan pemasangan Nasogastric Tube (NGT) pada pasien. Setelah selang dimasukkan sesuai ukuran, metode manakah yang dianggap sebagai 'gold standard' untuk memastikan posisi ujung selang NGT berada tepat di lambung?",
+"options": [
+"Memasukkan udara 10-20 cc dan mendengarkan suara 'blub' dengan stetoskop",
+"Merasakan hembusan udara dari ujung selang",
+"Melakukan aspirasi cairan lambung dan memeriksa pH-nya",
+"Melakukan pemeriksaan X-ray (foto rontgen) abdomen",
+"Menanyakan apakah pasien merasa mual"
+],
+"answer": 3,
+"explanation": "Meskipun aspirasi cairan lambung dan auskultasi sering dilakukan di samping tempat tidur, pemeriksaan X-ray adalah metode yang paling akurat dan dianggap sebagai 'gold standard' untuk mengkonfirmasi penempatan NGT yang benar dan mencegah komplikasi serius seperti aspirasi pneumonia."
+},
+{
+"question": "Seorang perempuan usia 70 tahun dibawa ke RS dengan keluhan kelemahan mendadak pada sisi tubuh kanan dan bicara pelo (disartria). Diagnosa medis adalah stroke iskemik. Apakah masalah keperawatan prioritas yang paling mengancam keselamatan pasien?",
+"options": [
+"Gangguan mobilitas fisik",
+"Risiko jatuh",
+"Gangguan komunikasi verbal",
+"Defisit perawatan diri",
+"Risiko aspirasi"
+],
+"answer": 4,
+"explanation": "Kelemahan pada otot wajah dan faring akibat stroke dapat mengganggu kemampuan pasien untuk menelan dengan aman. Hal ini menempatkan pasien pada risiko tinggi aspirasi (makanan, cairan, atau saliva masuk ke paru-paru), yang bisa menyebabkan pneumonia dan mengancam jalan napas. Ini adalah masalah prioritas terkait ABC."
+},
+{
+"question": "Seorang pasien diabetes melitus tipe 1 ditemukan dalam keadaan lemas, gemetar, dan berkeringat dingin. Pemeriksaan Gula Darah Sewaktu (GDS) menunjukkan hasil 45 mg/dL. Pasien masih dalam keadaan sadar. Apakah intervensi pertama yang harus diberikan?",
+"options": [
+"Memberikan suntikan insulin",
+"Memberikan minuman teh manis atau jus buah",
+"Memberikan makanan porsi lengkap (nasi dan lauk)",
+"Memasang infus Dextrose 40%",
+"Menghubungi dokter segera"
+],
+"answer": 1,
+"explanation": "Pasien mengalami hipoglikemia. Karena pasien masih sadar dan mampu menelan, intervensi pertama dan tercepat adalah memberikan sumber glukosa sederhana oral (seperti teh manis atau jus buah) untuk menaikkan kadar gula darah dengan cepat. Makanan lengkap diberikan setelahnya untuk menjaga kestabilan gula darah."
+},
+{
+"question": "Seorang pasien laki-laki usia 25 tahun mengalami fraktur tibia dan dipasang gips. Beberapa jam kemudian, pasien mengeluh nyeri yang sangat hebat dan tidak berkurang dengan obat analgesik. Jari-jari kaki tampak bengkak, pucat, dan dingin. Kondisi ini paling mungkin menandakan komplikasi apa?",
+"options": [
+"Infeksi tulang (osteomielitis)",
+"Sindrom kompartemen",
+"Emboli lemak",
+"Trombosis vena dalam (DVT)",
+"Syok hipovolemik"
+],
+"answer": 1,
+"explanation": "Tanda-tanda klasik seperti nyeri yang tidak proporsional (pain out of proportion), pucat (pallor), bengkak, dan parestesia (kesemutan) pada ekstremitas yang digips sangat mengarah pada sindrom kompartemen. Ini adalah kondisi darurat medis yang memerlukan tindakan segera untuk mencegah kerusakan permanen."
+},
+{
+"question": "Seorang pasien didiagnosis menderita Tuberkulosis (TBC) dan akan memulai terapi Obat Anti Tuberkulosis (OAT). Perawat memberikan edukasi mengenai efek samping obat. Efek samping berupa urine berwarna kemerahan adalah normal jika pasien mengonsumsi obat apa?",
+"options": [
+"Isoniazid (INH)",
+"Rifampicin",
+"Pyrazinamide",
+"Ethambutol",
+"Streptomycin"
+],
+"answer": 1,
+"explanation": "Rifampicin adalah salah satu OAT lini pertama yang menyebabkan perubahan warna cairan tubuh (seperti urine, keringat, dan air mata) menjadi oranye-kemerahan. Ini adalah efek samping yang tidak berbahaya namun perlu diinformasikan kepada pasien agar tidak cemas."
+},
+{
+"question": "Menurut panduan resusitasi jantung paru (RJP) terbaru dari AHA, berapa rasio kompresi dada dan bantuan napas yang benar untuk korban dewasa oleh satu penolong?",
+"options": [
+"15 kompresi : 2 napas",
+"30 kompresi : 2 napas",
+"15 kompresi : 1 napas",
+"30 kompresi : 1 napas",
+"Kompresi terus menerus tanpa henti"
+],
+"answer": 1,
+"explanation": "Standar RJP untuk korban dewasa, baik oleh satu maupun dua penolong, adalah siklus 30 kompresi dada yang diikuti oleh 2 kali bantuan napas (rasio 30:2). Ini bertujuan untuk memaksimalkan sirkulasi darah."
+},
+{
+"question": "Seorang ibu hamil 30 minggu datang untuk kontrol kehamilan. Hasil pemeriksaan menunjukkan tekanan darah 165/110 mmHg, proteinuria +2, dan edema pada wajah serta tangan. Kondisi ini mengarah pada diagnosis apa?",
+"options": [
+"Hipertensi gestasional",
+"Preeklamsia berat",
+"Eklampsia",
+"Hipertensi kronis",
+"Sindrom HELLP"
+],
+"answer": 1,
+"explanation": "Kombinasi hipertensi (TD >160/110 mmHg) dan proteinuria (+2 atau lebih) setelah usia kehamilan 20 minggu merupakan kriteria diagnostik untuk preeklamsia berat. Ini adalah kondisi serius yang memerlukan pemantauan ketat untuk mencegah komplikasi seperti eklampsia (kejang)."
+},
+{
+"question": "Seorang pasien skizofrenia di ruang rawat jiwa mengatakan pada perawat, “Saya mendengar suara-suara yang menyuruh saya untuk melukai diri sendiri.” Apakah respon terapeutik pertama yang paling tepat dari perawat?",
+"options": [
+"“Itu tidak nyata, Anda hanya berhalusinasi.”",
+"“Jangan dengarkan suara itu, coba alihkan perhatian Anda.”",
+"“Ini adalah lingkungan yang aman, tidak ada yang akan menyakiti Anda.”",
+"“Suara itu terdengar menakutkan. Saya akan bersama Anda untuk memastikan Anda aman.”",
+"“Mengapa Anda berpikir suara itu nyata?”"
+],
+"answer": 3,
+"explanation": "Respon ini memvalidasi perasaan takut pasien tanpa memvalidasi halusinasinya. Fokus utama adalah pada keselamatan pasien (safety). Dengan menyatakan akan tetap bersama pasien, perawat memberikan rasa aman dan memulai intervensi untuk mencegah perilaku mencederai diri."
+},
+{
+"question": "Seorang laki-laki usia 30 tahun dibawa ke UGD setelah kecelakaan lalu lintas. Saat diperiksa, pasien membuka mata ketika namanya dipanggil, saat ditanya di mana dia berada, jawabannya “di pasar”, dan ia dapat menunjuk lokasi nyeri saat diberi rangsang nyeri di dada. Berapakah nilai GCS pasien?",
+"options": [
+"11",
+"12",
+"13",
+"14",
+"15"
+],
+"answer": 1,
+"explanation": "Penilaian GCS:\n- Respon Membuka Mata (E): Buka mata dengan perintah suara (dipanggil namanya) = E3\n- Respon Verbal (V): Bicara bingung (disorientasi tempat) = V4\n- Respon Motorik (M): Melokalisir nyeri = M5\nTotal GCS = E3 + V4 + M5 = 12."
+},
+{
+"question": "Seorang pasien lansia dirawat dengan tirah baring lama. Perawat menemukan adanya area kemerahan yang tidak hilang dengan penekanan pada area sakrum. Ini merupakan tanda dari luka dekubitus stadium berapa?",
+"options": [
+"Stadium 1",
+"Stadium 2",
+"Stadium 3",
+"Stadium 4",
+"Tidak dapat ditentukan (unstageable)"
+],
+"answer": 0,
+"explanation": "Luka dekubitus stadium 1 ditandai dengan kulit yang masih utuh dengan kemerahan yang tidak pucat (non-blanchable erythema) di atas tonjolan tulang. Ini adalah tanda awal kerusakan jaringan akibat tekanan."
+},
+{
+"question": "Perawat akan memberikan obat melalui rute intramuskular (IM) pada pasien dewasa. Manakah lokasi penyuntikan yang paling aman dan direkomendasikan untuk menghindari cedera saraf skiatik?",
+"options": [
+"Deltoid",
+"Dorsogluteal",
+"Ventrogluteal",
+"Vastus lateralis",
+"Rectus femoris"
+],
+"answer": 2,
+"explanation": "Lokasi ventrogluteal dianggap paling aman untuk injeksi IM pada orang dewasa karena tidak memiliki pembuluh darah atau saraf besar. Lokasi dorsogluteal sudah banyak ditinggalkan karena berisiko tinggi mencederai saraf skiatik."
+},
+{
+"question": "Anak usia 4 tahun dibawa ke UGD dengan keluhan sesak napas, air liur terus menetes (drooling), dan lebih nyaman dalam posisi duduk tripod. Suara napas stridor. Anak tidak mau batuk. Dugaan yang paling mungkin adalah:",
+"options": [
+"Asma",
+"Bronkiolitis",
+"Epiglotitis akut",
+"Croup (Laringotrakeobronkitis)",
+"Pneumonia"
+],
+"answer": 2,
+"explanation": "Gejala klasik epiglotitis akut adalah onset cepat, demam tinggi, drooling (karena sakit saat menelan), distress pernapasan, dan posisi tripod. Ini adalah keadaan darurat medis karena risiko obstruksi jalan napas total. Pemeriksaan tenggorokan harus dihindari karena dapat memicu spasme laring."
+},
+{
+"question": "Prinsip etik keperawatan yang mengharuskan perawat untuk melakukan hal yang baik dan tidak merugikan pasien dikenal sebagai:",
+"options": [
+"Justice (Keadilan)",
+"Autonomy (Otonomi)",
+"Fidelity (Ketaatan)",
+"Beneficence (Berbuat baik)",
+"Veracity (Kejujuran)"
+],
+"answer": 3,
+"explanation": "Beneficence adalah prinsip etis yang mewajibkan penyedia layanan kesehatan untuk bertindak demi kepentingan dan kebaikan pasien. Ini mencakup tindakan untuk meningkatkan kesejahteraan dan mencegah bahaya."
+},
+{
+"question": "Seorang pasien dengan Gagal Ginjal Kronis akan menjalani hemodialisis. Edukasi diet yang paling penting untuk disampaikan adalah pembatasan asupan apa?",
+"options": [
+"Karbohidrat",
+"Lemak",
+"Kalium dan Fosfor",
+"Vitamin C",
+"Zat Besi"
+],
+"answer": 2,
+"explanation": "Pada gagal ginjal, ginjal tidak dapat membuang kalium dan fosfor secara efektif. Tingkat kalium yang tinggi (hiperkalemia) dapat menyebabkan aritmia jantung yang fatal, dan tingkat fosfor yang tinggi dapat menyebabkan penyakit tulang. Oleh karena itu, pembatasan keduanya sangat krusial."
+},
+{
+"question": "Di unit gawat darurat, terjadi insiden dengan banyak korban (mass casualty). Menurut sistem triase START (Simple Triage And Rapid Treatment), korban yang dapat berjalan sendiri akan diberi label warna apa?",
+"options": [
+"Merah (Prioritas 1)",
+"Kuning (Prioritas 2)",
+"Hijau (Prioritas 3)",
+"Hitam (Meninggal/Expectant)",
+"Putih (Tanpa label)"
+],
+"answer": 2,
+"explanation": "Dalam triase START, langkah pertama adalah meminta semua korban yang bisa berjalan untuk pindah ke area tertentu. Mereka yang mampu berjalan (walking wounded) secara otomatis diklasifikasikan sebagai prioritas 3 atau label Hijau, karena cedera mereka dianggap ringan."
+},
+{
+"question": "Seorang pasien pasca operasi mengeluh nyeri pada luka operasinya dengan skala 7 dari 10. Pasien telah mendapatkan obat analgesik sesuai jadwal. Apakah intervensi keperawatan non-farmakologis yang dapat dilakukan untuk membantu mengurangi nyeri?",
+"options": [
+"Memberikan makanan kesukaan pasien",
+"Mengajarkan teknik relaksasi napas dalam",
+"Mengajak pasien menonton televisi",
+"Menambah dosis obat analgesik tanpa order dokter",
+"Membiarkan pasien tidur"
+],
+"answer": 1,
+"explanation": "Teknik relaksasi napas dalam adalah intervensi non-farmakologis yang terbukti efektif untuk mengurangi persepsi nyeri. Teknik ini membantu mengalihkan perhatian, mengurangi ketegangan otot, dan memberikan pasien rasa kontrol atas nyerinya, melengkapi efek dari obat analgesik."
+},
+{
+"question": "Perawat akan melakukan tindakan pemasangan infus pada pasien. Sebelum melakukan tindakan, perawat menjelaskan prosedur, tujuan, manfaat, dan risiko kepada pasien, lalu meminta persetujuan pasien. Tindakan perawat ini menerapkan prinsip etik apa?",
+"options": [
+"Beneficence",
+"Non-maleficence",
+"Justice",
+"Fidelity",
+"Autonomy (Informed Consent)"
+],
+"answer": 4,
+"explanation": "Tindakan memberikan informasi yang lengkap dan meminta persetujuan pasien sebelum tindakan (Informed Consent) adalah penerapan dari prinsip Autonomy. Prinsip ini menghormati hak pasien untuk membuat keputusan sendiri mengenai perawatan kesehatannya."
+},  
     {
         "question": "Seorang bayi usia 6 bulan dibawa ke poli tumbuh kembang. Perawat akan melakukan pemeriksaan lingkar kepala. Titik pengukuran yang benar adalah...",
         "options": [
