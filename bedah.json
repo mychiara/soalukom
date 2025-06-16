@@ -1,5 +1,555 @@
 [
     {
+        "question": "Seorang pasien dengan diagnosis Divertikulitis akut dirawat di rumah sakit. Manakah intervensi diet yang paling tepat pada fase akut?",
+        "options": [
+            "Diet tinggi serat untuk melancarkan BAB",
+            "Diet cair bening atau NPO (puasa) untuk mengistirahatkan usus",
+            "Diet tinggi protein untuk mempercepat penyembuhan",
+            "Diet rendah lemak dan rendah garam"
+        ],
+        "answer": 1,
+        "explanation": "Pada fase akut divertikulitis, tujuan utamanya adalah mengistirahatkan usus yang meradang. Oleh karena itu, pasien seringkali dipuasakan (NPO) atau hanya diberikan diet cair bening. Diet tinggi serat baru diperkenalkan setelah inflamasi mereda untuk pencegahan jangka panjang."
+    },
+    {
+        "question": "Perawat merawat pasien dengan fistula arteriovenosa (AV fistula) di lengan kiri untuk hemodialisis. Saat melakukan pengkajian, temuan manakah yang menunjukkan fistula berfungsi dengan baik?",
+        "options": [
+            "Nadi teraba lemah dan tidak ada getaran",
+            "Lengan kiri tampak bengkak dan merah",
+            "Teraba adanya getaran (thrill) dan terdengar suara desiran (bruit) di atas fistula",
+            "Tidak ada suara yang terdengar saat auskultasi"
+        ],
+        "answer": 2,
+        "explanation": "Fistula AV yang paten dan berfungsi baik ditandai dengan adanya 'thrill' (getaran yang terasa saat palpasi) dan 'bruit' (suara desiran atau 'whoosh' yang terdengar saat auskultasi). Ini menunjukkan adanya aliran darah yang deras melalui fistula."
+    },
+    {
+        "question": "Seorang pasien dengan riwayat Penyakit Crohn mengalami eksaserbasi dengan diare berat, nyeri kram abdomen, dan penurunan berat badan. Manakah komplikasi yang paling sering dikaitkan dengan Penyakit Crohn?",
+        "options": [
+            "Perdarahan masif dari rektum",
+            "Fistula, fisura, dan abses perianal",
+            "Kanker kolon yang berkembang cepat",
+            "Konstipasi kronis"
+        ],
+        "answer": 1,
+        "explanation": "Penyakit Crohn ditandai oleh inflamasi transmural (seluruh lapisan dinding usus), yang dapat menyebabkan komplikasi seperti fistula (saluran abnormal antar organ), fisura (robekan), dan abses. Perdarahan masif lebih khas untuk Kolitis Ulserativa."
+    },
+    {
+        "question": "Pasien yang menerima Total Parenteral Nutrition (TPN) melalui CVC (Central Venous Catheter) berisiko mengalami komplikasi. Intervensi keperawatan yang paling penting untuk mencegah infeksi aliran darah adalah?",
+        "options": [
+            "Mengukur kadar gula darah setiap 6 jam",
+            "Mengganti balutan CVC setiap hari dengan teknik non-steril",
+            "Melakukan perawatan port CVC dengan teknik aseptik yang ketat sesuai protokol",
+            "Memberikan TPN dalam suhu ruangan"
+        ],
+        "answer": 2,
+        "explanation": "CVC adalah jalur langsung ke sirkulasi sentral, dan TPN adalah media yang kaya glukosa, sangat baik untuk pertumbuhan bakteri. Oleh karena itu, kepatuhan yang ketat terhadap teknik aseptik saat mengakses atau merawat port CVC adalah krusial untuk mencegah CLABSI (Central Line-Associated Bloodstream Infection)."
+    },
+    {
+        "question": "Seorang pasien 20 tahun dengan riwayat Sickle Cell Anemia datang ke UGD dengan keluhan nyeri hebat pada tulang-tulang panjang dan sendi. Ini adalah gambaran dari krisis apa?",
+        "options": [
+            "Krisis Aplastik",
+            "Krisis Vaso-oklusif (VOC)",
+            "Krisis Sequestrasi",
+            "Krisis Hemolitik"
+        ],
+        "answer": 1,
+        "explanation": "Krisis Vaso-oklusif adalah manifestasi paling umum dari Sickle Cell Anemia, disebabkan oleh sel-sel sabit yang menyumbat pembuluh darah kecil, menyebabkan iskemia jaringan dan nyeri hebat."
+    },
+    {
+        "question": "Perawat memonitor EKG pasien dan melihat irama Ventricular Tachycardia (VT) pada monitor, dan pasien tidak sadarkan diri serta tidak ada nadi. Tindakan pertama yang harus dilakukan adalah?",
+        "options": [
+            "Memberikan suntikan Amiodarone IV",
+            "Memulai kompresi dada (CPR) dan melakukan defibrilasi sesegera mungkin",
+            "Memberikan suntikan Epinefrin IV",
+            "Melakukan kardioversi tersinkronisasi"
+        ],
+        "answer": 1,
+        "explanation": "VT tanpa nadi (pulseless VT) adalah irama yang mengancam jiwa dan diperlakukan sama seperti Fibrilasi Ventrikel. Protokol ACLS menyerukan untuk segera memulai CPR berkualitas tinggi dan melakukan defibrilasi sesegera mungkin. Kardioversi digunakan untuk VT yang masih ada nadi (stabil/tidak stabil)."
+    },
+    {
+        "question": "Pasien dengan cedera tulang belakang setinggi T4 tiba-tiba mengalami sakit kepala hebat, wajah memerah, berkeringat banyak di atas level cedera, dan tekanan darah melonjak hingga 200/110 mmHg. Perawat mencurigai adanya Autonomic Dysreflexia. Tindakan pertama yang harus dilakukan adalah?",
+        "options": [
+            "Memberikan obat pereda nyeri",
+            "Membaringkan pasien dalam posisi datar",
+            "Menaikkan kepala tempat tidur ke posisi 90 derajat (duduk tegak)",
+            "Menunggu dan mengobservasi lebih lanjut"
+        ],
+        "answer": 2,
+        "explanation": "Autonomic Dysreflexia adalah kegawatan medis. Menaikkan kepala tempat tidur ke posisi duduk adalah tindakan pertama untuk membantu menurunkan tekanan darah secara ortostatik. Langkah selanjutnya adalah mencari dan menghilangkan pemicunya (biasanya kandung kemih penuh atau usus yang teriritasi)."
+    },
+    {
+        "question": "Pasien didiagnosis Glaukoma sudut terbuka kronis. Edukasi utama mengenai penggunaan obat tetes mata (misalnya Timolol) bertujuan untuk?",
+        "options": [
+            "Menyembuhkan glaukoma secara permanen",
+            "Mengurangi produksi cairan aqueous humor atau meningkatkan alirannya keluar untuk menurunkan tekanan intraokular",
+            "Menggantikan lensa mata yang keruh",
+            "Mencegah infeksi pada mata"
+        ],
+        "answer": 1,
+        "explanation": "Glaukoma ditandai oleh peningkatan tekanan intraokular (TIO) yang merusak saraf optik. Terapi medis bertujuan untuk mengontrol TIO seumur hidup dengan cara menurunkan produksi cairan mata atau meningkatkan drainasenya, bukan menyembuhkan penyakitnya."
+    },
+    {
+        "question": "Seorang pasien dengan kemoterapi memiliki hasil lab: neutrofil absolut (ANC) 450/mm³. Kondisi ini disebut neutropenia berat. Intervensi keperawatan yang paling penting adalah?",
+        "options": [
+            "Mendorong pasien untuk bersosialisasi di ruang rekreasi",
+            "Memberikan buah dan sayuran segar",
+            "Menerapkan kewaspadaan neutropenik (proteksi terbalik) untuk mencegah infeksi",
+            "Membatasi asupan cairan"
+        ],
+        "answer": 2,
+        "explanation": "Neutropenia berat menempatkan pasien pada risiko infeksi yang sangat tinggi. Kewaspadaan neutropenik meliputi kebersihan tangan yang ketat, membatasi pengunjung yang sakit, menghindari bunga segar dan buah/sayuran mentah, serta memantau tanda-tanda infeksi sekecil apapun."
+    },
+    {
+        "question": "Pasien dengan Myxedema Coma (komplikasi hipotiroidisme berat) akan menunjukkan tanda dan gejala klinis berupa?",
+        "options": [
+            "Demam tinggi, takikardia, agitasi",
+            "Hipotermia berat, bradikardia, hipoventilasi, dan penurunan kesadaran",
+            "Hipertensi, hiperglikemia, tremor",
+            "Diare, muntah, dan dehidrasi"
+        ],
+        "answer": 1,
+        "explanation": "Myxedema Coma adalah manifestasi ekstrem dari hipometabolisme. Tanda-tandanya adalah kebalikan dari krisis tiroid, meliputi hipotermia, hipoventilasi (yang menyebabkan asidosis respiratorik), hipotensi, bradikardia, dan penurunan status mental yang signifikan."
+    },
+    {
+        "question": "Perawat mengajarkan pasien cara menggunakan spirometer insentif pasca operasi. Instruksi yang benar adalah?",
+        "options": [
+            "“Hembuskan napas sekuat mungkin ke dalam alat.”",
+            "“Tarik napas secara perlahan dan dalam melalui mouthpiece untuk menaikkan bola setinggi mungkin.”",
+            "“Gunakan alat ini hanya jika Anda merasa sesak napas.”",
+            "“Tahan napas selama 1 detik setelah inspirasi maksimal.”"
+        ],
+        "answer": 1,
+        "explanation": "Spirometer insentif dirancang untuk mendorong inspirasi maksimal yang dalam dan berkelanjutan (Sustained Maximal Inspiration/SMI) untuk membuka kembali alveoli, mencegah atelektasis, dan memobilisasi sekret. Pasien harus menarik napas (inhalasi), bukan menghembuskan (ekshalasi)."
+    },
+    {
+        "question": "Seorang pasien dengan Systemic Lupus Erythematosus (SLE) menunjukkan adanya ruam khas berbentuk kupu-kupu di wajah. Ruam ini disebut?",
+        "options": [
+            "Ruam diskoid",
+            "Urtikaria",
+            "Ruam malar",
+            "Eritema nodosum"
+        ],
+        "answer": 2,
+        "explanation": "Ruam malar adalah eritema berbentuk kupu-kupu yang melintasi pipi dan pangkal hidung, dengan menghindari lipatan nasolabial. Ini adalah salah satu manifestasi kulit yang paling khas dari SLE."
+    },
+    {
+        "question": "Pasien yang baru didiagnosis HIV dengan CD4 count 150 sel/mm³ diberikan edukasi tentang pencegahan infeksi oportunistik. Manakah pernyataan pasien yang menunjukkan pemahaman yang benar?",
+        "options": [
+            "“Saya tidak perlu lagi mencuci tangan sesering dulu.”",
+            "“Saya harus memasak daging dan telur sampai benar-benar matang.”",
+            "“Aman bagi saya untuk membersihkan kotoran kucing peliharaan saya.”",
+            "“Saya tidak perlu vaksinasi apapun karena sistem imun saya lemah.”"
+        ],
+        "answer": 1,
+        "explanation": "Dengan CD4 count < 200, pasien berada pada risiko tinggi infeksi oportunistik. Makanan yang dimasak matang mengurangi risiko infeksi dari bakteri (seperti Salmonella). Pasien harus menghindari kotoran kucing (risiko Toksoplasmosis) dan mendapatkan vaksinasi tertentu yang dianjurkan (non-hidup)."
+    },
+    {
+        "question": "Seorang pasien lanjut usia dengan osteoporosis diresepkan Alendronate (Fosamax). Instruksi penting yang harus diberikan perawat saat meminum obat ini adalah?",
+        "options": [
+            "Minum obat bersama dengan susu untuk meningkatkan penyerapan kalsium.",
+            "Minum obat saat perut kosong di pagi hari dengan segelas penuh air dan tetap dalam posisi tegak selama 30 menit.",
+            "Minum obat sebelum tidur agar bekerja semalaman.",
+            "Boleh berbaring segera setelah minum obat."
+        ],
+        "answer": 1,
+        "explanation": "Obat golongan bifosfonat seperti Alendronate dapat menyebabkan iritasi hingga ulserasi esofagus. Untuk mencegahnya, obat harus diminum dengan banyak air dan pasien harus tetap tegak (duduk atau berdiri) setidaknya selama 30 menit untuk memastikan obat cepat masuk ke lambung."
+    },
+    {
+        "question": "Pasien dengan sirosis hepatis dan asites masif akan menjalani prosedur parasentesis. Intervensi keperawatan penting yang dilakukan SEBELUM prosedur adalah?",
+        "options": [
+            "Memastikan pasien minum banyak cairan",
+            "Memberikan obat pencahar",
+            "Meminta pasien untuk mengosongkan kandung kemihnya",
+            "Memberikan diet tinggi lemak"
+        ],
+        "answer": 2,
+        "explanation": "Mengosongkan kandung kemih sebelum prosedur parasentesis sangat penting untuk mengurangi risiko kandung kemih tertusuk secara tidak sengaja oleh jarum yang digunakan untuk mengaspirasi cairan asites."
+    },
+    {
+        "question": "Seorang pasien dengan riwayat penyakit katup jantung akan menjalani prosedur cabut gigi. Dokter gigi meresepkan antibiotik profilaksis. Tujuan utama pemberian antibiotik ini adalah untuk mencegah?",
+        "options": [
+            "Abses gusi",
+            "Demam Rematik",
+            "Endokarditis Infektif",
+            "Sepsis"
+        ],
+        "answer": 2,
+        "explanation": "Prosedur dental dapat menyebabkan bakteremia transien (bakteri masuk ke aliran darah). Pada pasien dengan kelainan katup jantung, bakteri ini dapat menempel pada katup yang rusak dan menyebabkan endokarditis infektif, suatu infeksi serius pada lapisan dalam jantung."
+    },
+    {
+        "question": "Pasien pasca operasi perbaikan aneurisma aorta abdominal (AAA) mengeluh nyeri perut yang meningkat, tekanan darah turun, dan output urin menurun. Perawat harus waspada terhadap komplikasi apa?",
+        "options": [
+            "Ileus paralitik",
+            "Infeksi luka operasi",
+            "Kebocoran atau ruptur graft aneurisma",
+            "Gagal jantung kongestif"
+        ],
+        "answer": 2,
+        "explanation": "Tanda-tanda syok hipovolemik (hipotensi, penurunan output urin) disertai nyeri hebat pada pasien pasca-op AAA sangat mengkhawatirkan dan bisa menandakan adanya kebocoran atau ruptur pada graft yang dipasang, yang merupakan kegawatan bedah vaskular."
+    },
+    {
+        "question": "Perawat sedang merawat pasien dengan trakeostomi. Saat akan melakukan suctioning (penghisapan lendir), tindakan yang benar adalah?",
+        "options": [
+            "Melakukan suction saat memasukkan kateter ke dalam trakea",
+            "Memberikan tekanan hisap terus menerus selama 30 detik",
+            "Menerapkan hisapan secara intermiten sambil memutar dan menarik kateter keluar, tidak lebih dari 10-15 detik",
+            "Menggunakan kateter suction yang sama berulang kali tanpa membersihkannya"
+        ],
+        "answer": 2,
+        "explanation": "Suction hanya boleh dilakukan saat kateter ditarik keluar untuk meminimalkan hipoksia dan trauma pada mukosa trakea. Durasi yang terlalu lama juga dapat menyebabkan hipoksia dan aritmia."
+    },
+    {
+        "question": "Seorang pasien dengan Meniere's disease mengalami serangan vertigo akut. Intervensi keperawatan yang paling tepat selama serangan adalah?",
+        "options": [
+            "Mendorong pasien untuk berjalan-jalan agar pusingnya hilang",
+            "Menyalakan lampu terang dan televisi untuk distraksi",
+            "Menempatkan pasien pada posisi berbaring dengan nyaman, meminimalkan gerakan kepala, dan memastikan lingkungan aman",
+            "Memberikan minuman manis untuk meningkatkan energi"
+        ],
+        "answer": 2,
+        "explanation": "Selama serangan vertigo akut, pasien mengalami pusing berputar yang hebat, mual, dan muntah. Prioritasnya adalah keselamatan pasien (mencegah jatuh) dan kenyamanan. Lingkungan yang tenang, gelap, dan meminimalkan gerakan kepala dapat membantu mengurangi gejala."
+    },
+    {
+        "question": "Pasien didiagnosis Anemia Pernisiosa. Perawat menjelaskan bahwa kondisi ini disebabkan oleh kekurangan faktor intrinsik, yang menyebabkan malabsorpsi vitamin apa?",
+        "options": [
+            "Vitamin C",
+            "Vitamin B12 (Kobalamin)",
+            "Asam Folat",
+            "Zat Besi"
+        ],
+        "answer": 1,
+        "explanation": "Faktor intrinsik diproduksi oleh sel parietal di lambung dan diperlukan untuk penyerapan Vitamin B12 di ileum terminal. Tanpa faktor intrinsik, Vitamin B12 tidak dapat diserap, menyebabkan anemia megaloblastik dan gejala neurologis."
+    },
+    {
+        "question": "Seorang pasien dengan Kolitis Ulserativa menunjukkan gejala utama berupa?",
+        "options": [
+            "Nyeri kuadran kanan bawah dan fistula perianal",
+            "Diare berdarah yang sering, nyeri kram abdomen, dan tenesmus",
+            "Malabsorpsi lemak dan steatorrhea",
+            "Konstipasi dengan feses seperti pita"
+        ],
+        "answer": 1,
+        "explanation": "Kolitis Ulserativa adalah peradangan yang terbatas pada mukosa kolon dan rektum. Gejala khasnya adalah diare berdarah, nyeri perut, dan tenesmus (rasa ingin BAB terus-menerus), yang mencerminkan adanya peradangan hebat di rektum."
+    },
+    {
+        "question": "Perawat menemukan pasien yang terpasang selang dada (chest tube) terlepas dari sistem drainasenya. Tindakan segera yang harus dilakukan perawat adalah?",
+        "options": [
+            "Menyambungkan kembali selang ke sistem drainase yang sama",
+            "Mencari sistem drainase yang baru",
+            "Memasukkan ujung selang ke dalam botol berisi air steril",
+            "Mengklem selang dada sedekat mungkin dengan tubuh pasien"
+        ],
+        "answer": 2,
+        "explanation": "Jika selang dada terlepas dari sistem, segera masukkan ujungnya ke dalam 2-3 cm air steril. Ini akan menciptakan segel air darurat (emergency water seal) yang mencegah udara masuk ke rongga pleura (menyebabkan pneumotoraks) tetapi tetap memungkinkan udara keluar dari dada pasien."
+    },
+    {
+        "question": "Pasien dengan Guillain-Barré Syndrome (GBS) dirawat di ICU. Komplikasi paling serius yang harus diantisipasi dan dipantau ketat oleh perawat adalah?",
+        "options": [
+            "Nyeri neuropatik kronis",
+            "Gagal napas akibat kelumpuhan otot-otot pernapasan",
+            "Kontraktur sendi",
+            "Inkontinensia urin"
+        ],
+        "answer": 1,
+        "explanation": "GBS ditandai oleh kelumpuhan asenden (naik dari bawah ke atas) yang progresif. Jika kelumpuhan mencapai otot-otot interkostal dan diafragma, pasien dapat mengalami gagal napas akut yang memerlukan intubasi dan ventilasi mekanis. Pemantauan fungsi pernapasan (misalnya, kapasitas vital) adalah prioritas."
+    },
+    {
+        "question": "Perawat memberikan edukasi pada pasien yang akan menjalani transplantasi ginjal tentang obat imunosupresan (misal, Tacrolimus, Cyclosporine). Tujuan utama dari terapi ini adalah?",
+        "options": [
+            "Mencegah infeksi pasca operasi",
+            "Mencegah penolakan (rejection) organ cangkok oleh sistem imun resipien",
+            "Menurunkan tekanan darah",
+            "Meningkatkan produksi urin pada ginjal baru"
+        ],
+        "answer": 1,
+        "explanation": "Sistem imun tubuh akan mengenali organ cangkok sebagai benda asing dan berusaha menyerangnya. Obat imunosupresan menekan respon imun ini untuk mencegah reaksi penolakan dan menjaga fungsi organ cangkok. Terapi ini biasanya diperlukan seumur hidup."
+    },
+    {
+        "question": "Seorang pasien dengan sepsis menunjukkan tanda-tanda: TD 85/45 mmHg, Nadi 130x/menit, RR 28x/menit, suhu 38.9°C, dan perubahan status mental. Kondisi ini disebut?",
+        "options": [
+            "Syok Kardiogenik",
+            "Syok Hipovolemik",
+            "Syok Septik",
+            "Syok Anafilaktik"
+        ],
+        "answer": 2,
+        "explanation": "Syok septik didefinisikan sebagai sepsis yang disertai hipotensi persisten yang memerlukan vasopresor untuk mempertahankan MAP ≥ 65 mmHg dan kadar laktat serum > 2 mmol/L meskipun telah dilakukan resusitasi cairan yang adekuat. Tanda-tanda di atas menunjukkan progresi dari sepsis ke syok septik."
+    },
+    {
+        "question": "Pasien pasca tiroidektomi mengeluh suara serak dan kesulitan berbicara dengan nada tinggi. Perawat mencurigai adanya cedera pada struktur apa?",
+        "options": [
+            "Kelenjar paratiroid",
+            "Otot sternokleidomastoideus",
+            "Saraf laringeus rekuren",
+            "Esofagus"
+        ],
+        "answer": 2,
+        "explanation": "Saraf laringeus rekuren berjalan sangat dekat dengan kelenjar tiroid dan mempersarafi sebagian besar otot laring (pita suara). Cedera pada saraf ini saat operasi tiroid adalah komplikasi yang diketahui dan dapat menyebabkan suara serak hingga kelumpuhan pita suara."
+    },
+    {
+        "question": "Manakah yang merupakan manifestasi klinis klasik dari herniasi diskus lumbalis (HNP) yang menekan akar saraf?",
+        "options": [
+            "Nyeri punggung bawah yang menjalar ke salah satu kaki (skiatika)",
+            "Kekakuan sendi panggul di pagi hari",
+            "Nyeri perut kuadran kanan bawah",
+            "Sakit kepala dan kaku kuduk"
+        ],
+        "answer": 0,
+        "explanation": "Ketika diskus intervertebralis di area lumbal menonjol (herniasi) dan menekan akar saraf skiatik, hal itu menyebabkan nyeri radikuler yang khas, yaitu nyeri tajam seperti tersetrum yang menjalar dari punggung bawah, ke bokong, dan turun ke sepanjang bagian belakang kaki."
+    },
+    {
+        "question": "Seorang pasien lansia dirawat dengan dehidrasi berat. Hasil lab menunjukkan Na+ 155 mEq/L, osmolalitas serum 320 mOsm/kg. Jenis cairan intravena yang paling tepat untuk diberikan pada awalnya adalah?",
+        "options": [
+            "NaCl 3%",
+            "NaCl 0.9%",
+            "Dextrose 5% dalam NaCl 0.9% (D5NS)",
+            "NaCl 0.45% atau Dextrose 5% dalam air (D5W)"
+        ],
+        "answer": 3,
+        "explanation": "Pasien mengalami dehidrasi hipertonik (hipernatremia), di mana kehilangan air lebih banyak daripada natrium, menyebabkan sel-sel dehidrasi. Tujuannya adalah memberikan cairan yang lebih 'encer' daripada plasma (cairan hipotonik seperti NaCl 0.45% atau isotonik bebas elektrolit seperti D5W) untuk merehidrasi sel secara perlahan."
+    },
+    {
+        "question": "Perawat sedang merawat pasien dengan edema paru kardiogenik akut. Selain memberikan oksigen dan diuretik, posisi mana yang paling membantu mengurangi preload dan kongesti paru?",
+        "options": [
+            "Trendelenburg",
+            "Supinasi datar",
+            "Duduk tegak dengan kaki menggantung ke bawah (High Fowler's with dependent legs)",
+            "Posisi Sims"
+        ],
+        "answer": 2,
+        "explanation": "Posisi duduk tegak dengan kaki menggantung memaksimalkan efek gravitasi untuk 'menjebak' darah di ekstremitas bawah (venous pooling). Ini secara efektif mengurangi volume darah yang kembali ke jantung (preload), sehingga mengurangi tekanan di sirkulasi paru dan meringankan edema paru."
+    },
+    {
+        "question": "Pasien dengan gagal ginjal kronik (GGK) mengalami pruritus (gatal) yang parah. Perawat memahami bahwa ini kemungkinan besar disebabkan oleh?",
+        "options": [
+            "Kulit kering akibat dehidrasi",
+            "Reaksi alergi terhadap obat dialisis",
+            "Akumulasi toksin uremik dan deposit kristal kalsium-fosfat di kulit",
+            "Kadar kalium yang tinggi"
+        ],
+        "answer": 2,
+        "explanation": "Pruritus uremik adalah gejala yang menyusahkan pada pasien GGK. Mekanismenya kompleks, namun salah satu faktor utamanya adalah penumpukan produk sisa metabolisme (toksin uremik) dan deposit kalsium fosfat di kulit akibat hiperfosfatemia sekunder."
+    },
+    {
+        "question": "Manakah pernyataan yang paling akurat menggambarkan perbedaan antara angina stabil dan angina tidak stabil?",
+        "options": [
+            "Angina stabil terjadi saat istirahat, sedangkan angina tidak stabil terjadi saat beraktivitas.",
+            "Nyeri pada angina stabil dapat diprediksi, dipicu oleh aktivitas, dan mereda dengan istirahat/nitrogliserin. Angina tidak stabil terjadi dengan pemicu minimal atau saat istirahat dan lebih parah/lama.",
+            "Angina tidak stabil selalu menyebabkan kerusakan miokard, sedangkan angina stabil tidak.",
+            "Tidak ada perbedaan signifikan antara keduanya."
+        ],
+        "answer": 1,
+        "explanation": "Perbedaan kuncinya adalah pola. Angina stabil memiliki pola yang dapat diprediksi (misalnya, nyeri setelah naik 2 lantai tangga). Angina tidak stabil (bagian dari Sindrom Koroner Akut) menunjukkan perubahan pola: nyeri menjadi lebih sering, lebih berat, lebih lama, atau terjadi saat istirahat, menandakan plak aterosklerotik yang tidak stabil."
+    },
+    {
+        "question": "Seorang pasien dengan luka bakar listrik pada lengan kanan dibawa ke UGD. Meskipun luka bakar di kulit tampak kecil, perawat harus memantau komplikasi serius apa?",
+        "options": [
+            "Infeksi kulit superfisial",
+            "Hipotermia",
+            "Aritmia jantung dan kerusakan otot dalam (rabdomiolisis)",
+            "Reaksi alergi"
+        ],
+        "answer": 2,
+        "explanation": "Arus listrik berjalan melalui tubuh sepanjang jalur dengan resistansi terendah (saraf, pembuluh darah, otot). Hal ini dapat menyebabkan kerusakan jaringan internal yang luas, termasuk rabdomiolisis (yang dapat menyebabkan gagal ginjal) dan gangguan konduksi jantung yang mematikan (aritmia). Penampakan kulit luar seringkali tidak mencerminkan tingkat kerusakan internal."
+    },
+    {
+        "question": "Pasien dengan Multiple Sclerosis (MS) sering mengalami kelelahan (fatigue) yang signifikan. Intervensi keperawatan yang dapat membantu pasien mengelola kelelahan ini adalah?",
+        "options": [
+            "Menganjurkan untuk tidur sepanjang hari",
+            "Mendorong latihan fisik intensitas tinggi setiap hari",
+            "Mengajarkan strategi konservasi energi, seperti merencanakan aktivitas penting di pagi hari dan mengambil periode istirahat terjadwal",
+            "Menghindari semua aktivitas fisik"
+        ],
+        "answer": 2,
+        "explanation": "Kelelahan pada MS adalah gejala yang sangat umum dan melemahkan. Strategi konservasi energi, menyeimbangkan antara istirahat dan aktivitas, serta latihan fisik ringan-sedang secara teratur dapat membantu pasien mengelola tingkat energinya dengan lebih baik."
+    },
+    {
+        "question": "Seorang pasien dijadwalkan untuk tes Mantoux (PPD) untuk skrining TB. Perawat akan menyuntikkan tuberkulin dengan cara?",
+        "options": [
+            "Intramuskular (IM) di otot deltoid",
+            "Subkutan (SC) di area perut",
+            "Intradermal (ID) di permukaan volar lengan bawah",
+            "Intravena (IV) di vena mediana cubiti"
+        ],
+        "answer": 2,
+        "explanation": "Tes Mantoux memerlukan penyuntikan sejumlah kecil PPD (Purified Protein Derivative) ke dalam lapisan dermal kulit. Penyuntikan intradermal yang benar akan menghasilkan 'benjolan' atau 'bleb' kecil di bawah kulit."
+    },
+    {
+        "question": "Perawat mengkaji pasien pasca-stroke dengan hemiplegia kanan. Ditemukan bahwa pasien tidak menyadari atau mengabaikan sisi kanan tubuh dan ruang di sekitarnya. Fenomena ini disebut?",
+        "options": [
+            "Afasia",
+            "Apraksia",
+            "Agnosia",
+            "Unilateral Neglect (Hemi-inattention)"
+        ],
+        "answer": 3,
+        "explanation": "Unilateral neglect adalah kelainan perhatian di mana pasien gagal untuk merespons atau menyadari stimulus di sisi yang berlawanan dengan lesi otak (kontralateral). Ini lebih sering terjadi pada stroke yang mengenai hemisfer kanan, menyebabkan pengabaian sisi kiri."
+    },
+    {
+        "question": "Pasien dengan perdarahan saluran cerna atas menunjukkan hasil lab Hb 7.0 g/dL. Dokter memerintahkan transfusi 2 unit PRC. Sebelum memulai transfusi, langkah verifikasi paling penting yang harus dilakukan oleh perawat adalah?",
+        "options": [
+            "Memeriksa suhu kantong darah",
+            "Memastikan golongan darah pasien sesuai dengan label kantong darah dan mencocokkan identitas pasien dengan dua perawat",
+            "Menanyakan apakah pasien pernah menerima transfusi sebelumnya",
+            "Menghangatkan darah hingga suhu tubuh"
+        ],
+        "answer": 1,
+        "explanation": "Keselamatan transfusi bergantung pada verifikasi yang cermat. Prosedur standar (seringkali oleh dua perawat) melibatkan pencocokan nama pasien, nomor rekam medis, golongan darah ABO dan Rhesus pada formulir permintaan, label kantong darah, dan identitas pasien di samping tempat tidur. Kesalahan identifikasi dapat berakibat fatal."
+    },
+    {
+        "question": "Seorang pasien mengeluh nyeri sendi, demam, dan lemas. Hasil pemeriksaan menunjukkan adanya pancytopenia (penurunan semua jenis sel darah) dan adanya sel blast yang abnormal di sumsum tulang. Kondisi ini paling mungkin adalah?",
+        "options": [
+            "Anemia Aplastik",
+            "Leukemia Akut",
+            "Limfoma Hodgkin",
+            "Multiple Myeloma"
+        ],
+        "answer": 1,
+        "explanation": "Leukemia akut ditandai oleh proliferasi sel-sel darah putih imatur (blast) yang tidak terkendali di sumsum tulang. Sel-sel ini mendesak produksi sel darah normal, menyebabkan pansitopenia (anemia dari kekurangan eritrosit, risiko infeksi dari kekurangan neutrofil, dan risiko perdarahan dari kekurangan trombosit)."
+    },
+    {
+        "question": "Seorang pasien dengan Addisonian Crisis (insufisiensi adrenal akut) dibawa ke UGD. Tanda-tanda vital yang paling mungkin ditemukan adalah?",
+        "options": [
+            "Hipertensi berat, bradikardia, hipernatremia",
+            "Hipotensi berat, takikardia, hipoglikemia, hiperkalemia",
+            "Demam, ruam kulit, tekanan darah normal",
+            "Edema perifer, hipertensi, hipokalemia"
+        ],
+        "answer": 1,
+        "explanation": "Krisis Addisonian adalah kegawatan endokrin yang disebabkan oleh kekurangan kortisol dan aldosteron akut. Ini menyebabkan kehilangan natrium dan air masif (hipotensi, takikardia), retensi kalium (hiperkalemia), dan gangguan metabolisme glukosa (hipoglikemia)."
+    },
+    {
+        "question": "Pasien dengan cedera kepala mengalami kebocoran cairan jernih dari hidung. Perawat melakukan tes untuk memeriksa adanya glukosa pada cairan tersebut. Hasil positif menandakan cairan tersebut adalah?",
+        "options": [
+            "Ingus biasa",
+            "Cairan Serebrospinal (CSF)",
+            "Plasma darah",
+            "Limfe"
+        ],
+        "answer": 1,
+        "explanation": "Kebocoran cairan serebrospinal (CSF) adalah komplikasi serius dari fraktur dasar tengkorak. CSF mengandung glukosa, sedangkan mukus hidung (ingus) tidak. Tes glukosa strip atau tes 'halo sign' (cincin ganda pada kain kasa) dapat mengindikasikan kebocoran CSF."
+    },
+    {
+        "question": "Prinsip utama penatalaksanaan diet untuk pasien penyakit celiac adalah?",
+        "options": [
+            "Menghindari produk susu dan laktosa",
+            "Menghindari makanan yang mengandung gluten (gandum, barley, rye) seumur hidup",
+            "Membatasi asupan lemak dan makanan yang digoreng",
+            "Meningkatkan asupan serat tidak larut"
+        ],
+        "answer": 1,
+        "explanation": "Penyakit Celiac adalah gangguan autoimun di mana konsumsi gluten memicu kerusakan pada vili usus halus. Satu-satunya pengobatan yang efektif adalah kepatuhan yang ketat terhadap diet bebas gluten seumur hidup."
+    },
+    {
+        "question": "Seorang pasien mengeluh penglihatan kabur seperti melihat melalui 'air terjun' atau 'kaca berasap', dan silau saat melihat cahaya terang. Keluhan ini progresif dan tidak nyeri. Diagnosis yang paling mungkin adalah?",
+        "options": [
+            "Glaukoma",
+            "Ablasio Retina",
+            "Katarak",
+            "Konjungtivitis"
+        ],
+        "answer": 2,
+        "explanation": "Katarak adalah kekeruhan pada lensa mata yang terjadi secara bertahap, biasanya terkait penuaan. Gejala khasnya adalah penurunan tajam penglihatan yang progresif dan tidak nyeri, pandangan kabur atau seperti berkabut, serta silau (glare)."
+    },
+    {
+        "question": "Manakah temuan auskultasi paru yang paling khas pada pasien Asma Bronkial?",
+        "options": [
+            "Ronki basah kasar di basal paru",
+            "Gesekan pleura (pleural friction rub)",
+            "Wheezing (mengi) terutama saat ekspirasi",
+            "Suara napas menurun atau menghilang"
+        ],
+        "answer": 2,
+        "explanation": "Wheezing adalah suara siulan bernada tinggi yang dihasilkan oleh aliran udara yang melalui jalan napas yang menyempit. Ini adalah tanda patognomonik dari bronkokonstriksi yang terjadi pada asma."
+    },
+    {
+        "question": "Pasien dengan luka tekan derajat III pada sakrum. Deskripsi yang paling akurat untuk luka ini adalah?",
+        "options": [
+            "Kemerahan pada kulit utuh yang tidak pucat saat ditekan.",
+            "Luka terbuka dangkal dengan dasar luka berwarna merah muda.",
+            "Kehilangan jaringan seluruh ketebalan kulit, lemak subkutan mungkin terlihat, tetapi tulang, tendon, atau otot tidak terekspos.",
+            "Kehilangan jaringan seluruh ketebalan dengan paparan tulang, tendon, atau otot."
+        ],
+        "answer": 2,
+        "explanation": "Klasifikasi luka tekan (NPUAP/EPUAP) mendefinisikan Derajat/Stadium III sebagai 'full-thickness skin loss'. Lemak subkutan bisa terlihat, dan mungkin ada undermining atau tunneling, tetapi belum sampai memperlihatkan struktur di bawah fasia seperti tulang atau otot (itu adalah Derajat/Stadium IV)."
+    },
+    {
+        "question": "Seorang pasien dengan penyakit ginjal polikistik (PKD) bertanya tentang sifat penyakitnya. Edukasi yang tepat dari perawat adalah bahwa PKD merupakan?",
+        "options": [
+            "Infeksi bakteri pada ginjal",
+            "Kondisi bawaan yang disebabkan oleh trauma lahir",
+            "Penyakit genetik yang diturunkan, ditandai dengan pertumbuhan banyak kista di ginjal",
+            "Keganasan pada ginjal yang memerlukan kemoterapi"
+        ],
+        "answer": 2,
+        "explanation": "Penyakit ginjal polikistik autosom dominan (ADPKD) adalah salah satu penyakit genetik yang paling umum. Ditandai dengan perkembangan dan pembesaran kista multipel di kedua ginjal, yang secara bertahap menghancurkan parenkim ginjal dan menyebabkan gagal ginjal."
+    },
+    {
+        "question": "Pasien yang menjalani peritoneal dialisis (PD) mengeluh nyeri perut, cairan dialisat yang keluar tampak keruh, dan demam. Perawat harus segera mencurigai komplikasi apa?",
+        "options": [
+            "Kelebihan cairan",
+            "Hernia",
+            "Peritonitis",
+            "Kebocoran kateter"
+        ],
+        "answer": 2,
+        "explanation": "Nyeri abdomen, demam, dan cairan dialisat yang keruh adalah tanda-tanda klasik peritonitis, infeksi pada membran peritoneum. Ini adalah komplikasi serius dari PD dan memerlukan penanganan antibiotik segera."
+    },
+    {
+        "question": "Tujuan utama dari terapi radiasi pada pasien kanker adalah?",
+        "options": [
+            "Meningkatkan sistem kekebalan tubuh untuk melawan kanker",
+            "Menghancurkan sel-sel kanker dengan merusak DNA mereka sambil meminimalkan kerusakan pada jaringan sehat di sekitarnya",
+            "Membuat pasien merasa lebih baik secara umum",
+            "Mencegah mual dan muntah akibat kemoterapi"
+        ],
+        "answer": 1,
+        "explanation": "Terapi radiasi menggunakan radiasi pengion berenergi tinggi untuk membunuh sel kanker dan mengecilkan tumor. Kerusakan pada DNA sel mencegah sel kanker untuk tumbuh dan membelah diri."
+    },
+    {
+        "question": "Pasien wanita 50 tahun mengeluh nyeri hebat, bengkak, dan kemerahan pada sendi pangkal ibu jari kaki. Riwayat sering makan jeroan dan minum alkohol. Kadar asam urat serum tinggi. Diagnosis yang paling mungkin adalah?",
+        "options": [
+            "Osteoarthritis",
+            "Rheumatoid Arthritis",
+            "Artritis Gout Akut (Podagra)",
+            "Artritis Septik"
+        ],
+        "answer": 2,
+        "explanation": "Serangan gout akut klasik (podagra) melibatkan peradangan hebat pada sendi metatarsophalangeal pertama (pangkal ibu jari kaki). Ini dipicu oleh penumpukan kristal monosodium urat, seringkali setelah konsumsi makanan tinggi purin (seperti jeroan) atau alkohol."
+    },
+    {
+        "question": "Seorang pasien terdiagnosa sindrom syok toksik (TSS). Perawat memahami bahwa kondisi ini paling sering dikaitkan dengan infeksi bakteri apa?",
+        "options": [
+            "Escherichia coli",
+            "Clostridium difficile",
+            "Staphylococcus aureus atau Streptococcus pyogenes",
+            "Helicobacter pylori"
+        ],
+        "answer": 2,
+        "explanation": "TSS adalah penyakit sistemik akut yang disebabkan oleh toksin yang dilepaskan oleh bakteri, paling sering Staphylococcus aureus atau Streptococcus Grup A. Secara historis, ini sering dikaitkan dengan penggunaan tampon superabsorben, tetapi juga dapat terjadi dari infeksi kulit atau luka."
+    },
+    {
+        "question": "Seorang pasien pasca operasi mengeluh mual dan muntah. Obat manakah yang termasuk dalam golongan antiemetik yang sering digunakan untuk kondisi ini?",
+        "options": [
+            "Furosemide",
+            "Ondansetron",
+            "Metformin",
+            "Aspirin"
+        ],
+        "answer": 1,
+        "explanation": "Ondansetron adalah antagonis reseptor serotonin 5-HT3 yang sangat efektif dalam mencegah dan mengobati mual dan muntah, terutama yang berkaitan dengan kemoterapi, radiasi, dan pasca operasi (PONV - Postoperative Nausea and Vomiting)."
+    },
+    {
+        "question": "Pasien dengan sirosis berat menunjukkan telapak tangan yang kemerahan (eritema palmaris) dan adanya pembuluh darah kecil seperti laba-laba di kulit dada (spider nevi). Tanda-tanda ini disebabkan oleh?",
+        "options": [
+            "Peningkatan kadar bilirubin",
+            "Peningkatan kadar amonia",
+            "Peningkatan kadar estrogen dalam sirkulasi",
+            "Penurunan kadar albumin"
+        ],
+        "answer": 2,
+        "explanation": "Hati yang rusak tidak dapat memetabolisme estrogen secara efektif. Peningkatan kadar estrogen dalam sirkulasi menyebabkan vasodilatasi, yang bermanifestasi sebagai eritema palmaris dan spider nevi (angioma)."
+    },
+    {
         "question": "Seorang laki-laki 55 tahun datang ke UGD dengan keluhan nyeri dada hebat seperti ditekan yang menjalar ke lengan kiri dan rahang sejak 1 jam yang lalu. TD 150/90 mmHg, Nadi 110x/menit, RR 24x/menit. Tindakan diagnostik prioritas yang harus segera dilakukan adalah?",
         "options": [
             "Memberikan oksigen 4 L/menit via nasal kanul",
