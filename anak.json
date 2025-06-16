@@ -1,4 +1,1324 @@
 [
+        {
+        "question": "Seorang bayi, berumur 1 hari mempunyai berat badan 1500 gr, hipotermi dan pergerakan kurang. Tindakan yang harus diberikan kepada bayi tersebut adalah ?",
+        "options": [
+            "Pemberian NGT",
+            "Pemberian Infus",
+            "Pemberian sinar X",
+            "Pemberian Incubator",
+            "Pemberian Foto terapi"
+        ],
+        "answer": 3,
+        "explanation": "Bayi dengan berat badan lahir rendah (1500 gr) dan hipotermia membutuhkan lingkungan yang hangat dan stabil untuk mencegah kehilangan panas lebih lanjut dan komplikasi. Inkubator menyediakan kontrol suhu yang tepat dan mengurangi risiko infeksi."
+    },
+    {
+        "question": "Seorang bayi laki-laki berusia 11 bulan dirawat di RS dengan keluhan luka bakar grade II pada tangan kanan. Hasil pemeriksaan fisik didapatkan ekspresi wajah meringis, pucat, CRT < 3 detik, kesemutan, sulit menggerakkan tangan, nampak rewel dan menangis. Apa tindakan prioritas yang tepat dilakukan untuk kasus tersebut?",
+        "options": [
+            "Manajemen nyeri",
+            "Terapi latihan fisik",
+            "Perawatan sirkulasi",
+            "Manajemen sensasi perifer",
+            "Manajemen perawatan luka"
+        ],
+        "answer": 0,
+        "explanation": "Ekspresi wajah meringis, rewel, dan menangis adalah indikator kuat nyeri pada bayi yang belum bisa verbal. Luka bakar grade II sangat nyeri. Manajemen nyeri adalah prioritas untuk kenyamanan bayi dan mencegah respons fisiologis negatif terhadap nyeri."
+    },
+    {
+        "question": "Seorang anak berusia 5 tahun dibawa ke rumah sakit oleh ibunya dengan keluhan utama sesak napas, pada pemeriksaan fisik terdengar bunyi wheezing, frekuensi nafas 34x/menit dan Saturasi Oksigen 88%. Apakah prioritas masalah pada kasus diatas?",
+        "options": [
+            "Pola napas tidak efektif",
+            "Efektif perfusi jaringan perifer",
+            "Inefektif perfusi jaringan perifer",
+            "Bersihan jalan nafas tidak efektif",
+            "Risiko inefektif perfusi jaringan perifer"
+        ],
+        "answer": 0,
+        "explanation": "Wheezing, sesak napas, takipnea (34x/menit), dan saturasi oksigen rendah (88%) adalah tanda-tanda pola napas tidak efektif. Wheezing menunjukkan penyempitan jalan napas bagian bawah, yang mengganggu ventilasi dan oksigenasi."
+    },
+    {
+        "question": "Seorang bayi perempuan berusia 7 bulan dirawat di RS dengan keluhan demam disertai mual dan muntah, saat ini bayi tersebut sudah diperbolehkan pulang oleh dokter. Apa tindakan keperawatan yang dapat disampaikan perawat untuk perawatan di rumah?",
+        "options": [
+            "Posisikan bayi berbaring miring",
+            "Ajarkan orang tua untuk tidak menopang botol",
+            "Tegak dan sendawakan bayi setelah pemberian makanan",
+            "Ajarkan bagaimana menggunakan mesin pengisap sekret",
+            "Pilih mainan yang sesuai dengan usia tanpa bagian-bagian mainan yang kecil"
+        ],
+        "answer": 2,
+        "explanation": "Setelah pemberian makan (ASI atau susu formula), bayi perlu ditegakkan dan disendawakan untuk mengeluarkan udara yang mungkin tertelan selama menyusu. Ini membantu mencegah gumoh, muntah, atau ketidaknyamanan perut. Opsi lain kurang relevan untuk perawatan umum bayi pasca-sakit dengan riwayat mual muntah."
+    },
+    {
+        "question": "Seorang anak laki-laki umur 3 tahun dirawat di RS dengan keluhan demam . Hasil pemeriksaan Suhu 39,1°C, frekuensi nadi 120 x/menit, frekuensi napas 32 x/menit, tampak menangis dan gelisah. Apakah tindakan keperawatan untuk menurunkan suhu anak tersebut?",
+        "options": [
+            "Berikan kompres hangat pada dahi dan aksilla",
+            "Berikan aspirin untuk menurunkan demam pada anak",
+            "Matikan kipas angin untuk mencegah timbulnya kejang",
+            "Gunakan waslap dingin di aksilla, kening, tengkuk dan lipat paha",
+            "Lepaskan pakaian yang berlebihan dan tutupi pasien dengan selimut tebal"
+        ],
+        "answer": 0,
+        "explanation": "Kompres hangat (tepid sponge) pada area lipatan besar seperti dahi, aksila, dan lipat paha membantu menurunkan suhu tubuh melalui evaporasi dan konduksi. Aspirin tidak dianjurkan untuk anak karena risiko Sindrom Reye. Pakaian tipis lebih dianjurkan daripada selimut tebal."
+    },
+    {
+        "question": "Seorang laki-laki berusia 10 tahun dibawa ke RS dengan keluhan buang air besar sejak 3 hari yang lalu dengan konsistensi encer, frekuensi lebih dari 5 kali sehari, hasil pemeriksaan fisik diperoleh keadaan umum lemah, turgor kulit kembali sangat lambat, kesadaran apatis, suhu 38,7°C. Apa yang menjadi presipitasi utama peningkatan suhu tubuh pada anak tersebut?",
+        "options": [
+            "Proses infeksi penyakit",
+            "Kondisi dehidrasi anak",
+            "Peningkatan output cairan",
+            "Intake cairan yang kurang",
+            "Diare yang berlangsung lama"
+        ],
+        "answer": 0,
+        "explanation": "Diare encer lebih dari 5 kali sehari kemungkinan besar disebabkan oleh infeksi gastrointestinal (virus, bakteri, atau parasit). Proses infeksi ini memicu respons inflamasi tubuh yang menyebabkan demam (peningkatan suhu tubuh)."
+    },
+    {
+        "question": "Seorang laki-laki berusia 7 tahun dibawa oleh ibunya ke Poli Anak dengan keluhan sesak. Dari hasil pemeriksaan: anak tampak sesak, gelisah, bunyi nafas mengi/ wheezing, frekuensi nadi: 90 x/menit, suhu 36°C, frekuensi nafas 32x/menit. Apakah prioritas intervensi keperawatan pada pasien diatas?",
+        "options": [
+            "Berikan oksigen",
+            "Monitor bunyi nafas",
+            "Berikan posisi semi fowler",
+            "Pantau frekuensi pernafasan",
+            "Ajarkan napas dalam yang efektif"
+        ],
+        "answer": 0,
+        "explanation": "Anak tampak sesak, gelisah, dengan wheezing dan takipnea (32x/menit) menandakan gangguan oksigenasi. Pemberian oksigen adalah intervensi prioritas untuk mengatasi hipoksia dan mengurangi distres pernapasan. Posisi semi-Fowler (C) juga penting untuk membantu ekspansi paru."
+    },
+    {
+        "question": "Seorang anak laki-laki berusia 15 tahun dibawah kerumah sakit dengan keluhan sesak. Setelah dilakukan pemeriksaan oleh perawat didapatkan bunyi wheezing dengan pernafasan 28x/menit. Apakah tindakan prioritas yang dapat diberikan oleh perawat?",
+        "options": [
+            "Pasang spatel",
+            "Pemberian oksigen",
+            "Bersihan jalan nafas",
+            "Lakukan resusitasi neonatus",
+            "Atur posisi bayi dengan kepala ekstensi"
+        ],
+        "answer": 1,
+        "explanation": "Bunyi wheezing dan sesak napas (takipnea 28x/menit) menunjukkan adanya obstruksi jalan napas bawah dan gangguan oksigenasi. Pemberian oksigen adalah tindakan prioritas untuk mengatasi hipoksia. Memastikan bersihan jalan napas (C) juga penting, mungkin dengan posisi yang nyaman atau pemberian bronkodilator jika diresepkan."
+    },
+    {
+        "question": "Seorang laki- laki berusia 13 tahun dibawa ibunya ke IGD karena demam tinggi sejak dua hari yang lalu. Anak merasa mual, sakit kepala. Dari hasil pemeriksaan frekuensi nadi: 88 x/ menit, suhu 39°C, frekuensi nafas: 24 x/ menit. Pemeriksaan rumple leed test didapatkan ptechiae ada, gusi tidak berdarah, mucosa tampak kering, turgor kulit jelek. Apakah prioritas masalah keperawatan pada kasus diatas?",
+        "options": [
+            "Peningkatan suhu tubuh",
+            "Gangguan integritas kulit",
+            "Gangguan rasa nyaman: nyeri kepala",
+            "Gangguan pemenuhan kebutuhan nutrisi",
+            "Kekurangan volume cairan dan elektrolit"
+        ],
+        "answer": 4,
+        "explanation": "Demam tinggi (39°C), ptechiae (tanda perdarahan), mukosa kering, dan turgor kulit jelek adalah tanda-tanda khas Demam Berdarah Dengue (DBD) yang disertai dehidrasi dan risiko syok. Kekurangan volume cairan dan elektrolit adalah masalah prioritas karena dapat mengancam jiwa."
+    },
+    {
+        "question": "Seorang anak laki-laki berusia 10 tahun dirawat diruang perawatan setelah dilakukan operasi appendisitis. Nyeri tekan pada bagian abdomen kuadran kanan bawah sejak 2 hari setelah operasi. Hasil pemeriksaan yang dilakukan oleh perawat terdapat nanah bercampur darah dalam luka. Lalu perawat mengambil alat-alat yang diperlukan untuk melakukan tindakan keperawatan pada pasien. Apakah tindakan selanjutnya yang harus dilakukan oleh perawat?",
+        "options": [
+            "Mencuci tangan",
+            "Memasang sarung tangan",
+            "Mengatur posisi pasien senyaman mungkin",
+            "Mengangkat balutan dengan menggunakan pinset",
+            "Olesi luka dengan menggunakan larutan desinfektan"
+        ],
+        "answer": 0,
+        "explanation": "Sebelum melakukan tindakan keperawatan yang melibatkan kontak dengan pasien atau luka (seperti perawatan luka), mencuci tangan adalah langkah pertama dan fundamental dalam prinsip asepsis untuk mencegah infeksi."
+    },
+    {
+        "question": "Seorang bayi perempuan berusia 2 bulan dibawa ibunya ke RS yang diketahui menderita lesi aktif cacar air yang terjadi sejak 3 hari yang lalu. Hasil pemeriksaan oleh perawat ditemukan bercak-bercak berair pada kulit . Apa tindakan yang harus dilakukan oleh perawat ?",
+        "options": [
+            "Bayi diobati dengan asiklovir",
+            "Perawatan bayi sampai 3 hari",
+            "Ibu dan bayinya harus ditindak lanjuti",
+            "Pmberian antibiotik selama masa perawatan",
+            "Pmberian Varicella Zoster immune globulin"
+        ],
+        "answer": 0,
+        "explanation": "Cacar air (varicella) disebabkan oleh virus. Asiklovir adalah obat antivirus yang dapat digunakan untuk mengurangi keparahan dan durasi penyakit, terutama jika diberikan pada awal infeksi. Pemberiannya harus atas instruksi dokter. VZIG (E) diberikan untuk profilaksis pasca pajanan pada individu rentan, bukan pengobatan lesi aktif."
+    },
+    {
+        "question": "Seorang laki-laki usia 17 tahun dibawa keluarganya ke UGD dengan keluhan kesakitan dengan skala 8, dari hasil pemeriksaan fisik ditemukan terdapat luka bakar pada area ekstremitas atas dan bawah, hidung dan mulut grade 1, pasien sulit menelan dan suara parau. Apakah prioritas masalah dari kasus diatas?",
+        "options": [
+            "Nyeri",
+            "Ketidak seimbangan nutrisi",
+            "Kerusakan integritas kulit",
+            "Gangguan pertukaran gas",
+            "Resiko terjadi infeksi"
+        ],
+        "answer": 3,
+        "explanation": "Luka bakar pada hidung dan mulut, kesulitan menelan, dan suara parau adalah tanda-tanda adanya trauma inhalasi atau edema jalan napas atas. Ini berisiko tinggi menyebabkan obstruksi jalan napas dan gangguan pertukaran gas. Prioritasnya adalah Airway dan Breathing."
+    },
+    {
+        "question": "Seorang Bayi Perempuan lahir 1 jam yang lalu di Rumah Bersalin, Saat lahir seluruh badan berwarna merah tungkai biru, frekuensi nadi 110x/menit, lambat menangis gerakan aktif fleksi tungkai baik, pernapasan lambat tidak teratur. Berapakah nilai APGAR skornya?",
+        "options": [
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+        ],
+        "answer": 2,
+        "explanation": "Penilaian APGAR: Appearance (warna kulit): badan merah tungkai biru = 1. Pulse (nadi): >100x/menit (110) = 2. Grimace (refleks): lambat menangis (respons lemah terhadap stimulus) = 1. Activity (tonus otot): fleksi tungkai baik = 2. Respiration (pernapasan): lambat tidak teratur = 1. Total skor = 1+2+1+2+1 = 7."
+    },
+    {
+        "question": "Seorang laki- laki berusia 15 tahun, dirawat dengan bronchitis kronik. Perawat telah mengajarkan cara pernafasan dengan pursed lip breathing. Bagaimana seorang perawat mengevaluasi bahwa anak tersebut sudah mengerti tentang tehnik diatas?",
+        "options": [
+            "Anak menarik napas melalui mulut",
+            "Anak berlatih bernafas dengan menggunakan hidung",
+            "Anak menggunakan pursed lip breathing saat naik tangga",
+            "Anak berlatih pernafasan tersebut lebih dari dua kali sehari",
+            "Anak mengeluarkan napas melalui mulut dengan bibir mengerucut"
+        ],
+        "answer": 4,
+        "explanation": "Teknik pursed-lip breathing (PLB) yang benar adalah inhalasi melalui hidung dan ekshalasi perlahan melalui mulut dengan bibir mengerucut (seperti meniup lilin). Evaluasi yang benar adalah melihat pasien melakukan ekshalasi melalui mulut dengan bibir mengerucut."
+    },
+    {
+        "question": "Seorang anak laki-laki berusia 10 tahun, menyukai permainan sepak bola, saat pengkajian ditemukan data : Kuku tangan dan kaki tampak panjang dan hitam, anak mengeluh nyeri pada abdomen kuadran 2 atas. Anak terdiagnosis menderita cacingan. Apakah tindakan yang tepat yang dilakukan oleh perawat ?",
+        "options": [
+            "Memandikan anak",
+            "Menyalahkan anak",
+            "Melakukan toilet training pada anak",
+            "Memberikan terapi obat cacing dan memotong kuku",
+            "Memberi pengertian pada anak agar tidak memasukkan jari pada mulut"
+        ],
+        "answer": 3,
+        "explanation": "Anak didiagnosis cacingan. Tindakan yang tepat meliputi pemberian obat cacing (tindakan kolaboratif dengan dokter) dan intervensi kebersihan diri seperti memotong kuku untuk mengurangi risiko re-infeksi (karena telur cacing bisa ada di bawah kuku)."
+    },
+    {
+        "question": "Seorang bayi perempuan berusia 2 bulan dibawa ibunya ke Puskesmas untuk mendapatkan imunisasi DPT pertama kali. Kemudian perawat memberikan pendidikan kesehatan tentang imunisasi DPT. Apakah isi pendidikan kesehatan yang paling penting diberikan oleh perawat ?",
+        "options": [
+            "Definisi Imunisasi",
+            "Jadwal imunisasi berikutnya",
+            "Kandungan vaksin DPT",
+            "Efek samping yang umum dan cara penanganannya",
+            "Kegunaan dari imunisasi"
+        ],
+        "answer": 3,
+        "explanation": "Setelah imunisasi DPT, efek samping yang umum terjadi adalah demam, nyeri, dan bengkak di tempat suntikan. Memberikan pendidikan kesehatan tentang efek samping yang mungkin timbul dan cara penanganannya (misalnya, kompres, pemberian parasetamol jika demam) adalah hal penting yang harus disampaikan kepada ibu untuk mengurangi kecemasan dan menangani gejala."
+    },
+    {
+        "question": "Seorang anak laki-laki berusia 16 tahun dibawa orang tuanya ke RS dengan tanda dan gejala sesak nafas, batuk, anoreksia, nyeri dada dengan skala 5 (0-10),hasil pemeriksaan ditemukan bunyi ronchi, Frekuensi nafas 28 x/menit, pembesaran kelenjar pada leher, uji tuberkulin (+).diagnosa keperawatan adalah gangguan pertukaran gas berhubungan dengan secret yang kental. Apakah intervensi keperawatan yang tepat pada kasus diatas ?",
+        "options": [
+            "Memberikan oksigen",
+            "Observasi tanda-tanda vital",
+            "Anjurkan dan ajarkan tehnik relaksasi",
+            "Kaji dispnoe, takhipnoe, bunyi pernafasan abnormal",
+            "Anjurkan klien untuk menampung dahak setiap kali batuk"
+        ],
+        "answer": 0,
+        "explanation": "Dengan diagnosa gangguan pertukaran gas, pemberian oksigen adalah intervensi prioritas untuk meningkatkan saturasi oksigen dan mengurangi hipoksia. Uji tuberkulin positif dan gejala lain mengarah ke TB paru. Menganjurkan klien menampung dahak (E) juga penting untuk pemeriksaan BTA dan mencegah penularan."
+    },
+    {
+        "question": "Seorang laki-laki berusia 12 tahun dibawa orang tuanya keRS dengan gejala kejang disertai penurunan kesadaran, peningkatan tekanan intra cranial, suhu 39°C, nafsu makan menurun, nyeri kepala, nyeri tenggorokan, pucat dan gelisah. Apakah prioritas masalah keperawatan yang tepat pada kasus diatas??",
+        "options": [
+            "Nyeri",
+            "Hipertemi",
+            "Gangguan mobilitas fisik",
+            "Gangguan perfusi jaringan serebral",
+            "Ganguan pemenuhan kebutuhan nutrisi"
+        ],
+        "answer": 3,
+        "explanation": "Kejang, penurunan kesadaran, dan tanda-tanda peningkatan tekanan intrakranial (TIK) menunjukkan adanya gangguan perfusi jaringan otak. Ini adalah kondisi yang mengancam jiwa dan menjadi prioritas utama. Hipertermi (B) juga perlu ditangani karena dapat memperburuk kondisi neurologis."
+    },
+    {
+        "question": "Seorang laki-laki berusia 16 tahun dibawa orang tuanya ke RS dengan keluhan demam, lemah, sakit kepala, nyeri ulu hati, mual, nafsu makan menurun. Hasil pemeriksaan yang dilakukan. Suhu 39.5°C, epistaksis. Apakah prioritas intervensi keperawatan pada kasus diatas?",
+        "options": [
+            "Observasi tanda-tanda vital",
+            "Observasi intake dan ouput pasien",
+            "Berikan kompres dingin atau panas",
+            "Anjurkan pasien untuk banyak minum air",
+            "Menganjurkan untuk menggunakan pakaian yang tipis"
+        ],
+        "answer": 0,
+        "explanation": "Demam tinggi (39.5°C) dan epistaksis (mimisan) pada remaja dengan gejala prodromal (lemah, sakit kepala, mual, anoreksia) bisa jadi tanda awal Demam Berdarah Dengue (DBD). Observasi tanda-tanda vital secara ketat sangat penting untuk mendeteksi tanda-tanda syok dini. Kompres (C), hidrasi (D), dan pakaian tipis (E) juga merupakan intervensi penting."
+    },
+    {
+        "question": "Seorang laki-laki berusia 16 tahun dibawa orang tuanya ke RS dengan keluhan sesak, pernapasan cepat dan dangkal, diserai pernapasan cuping hidung, hasil pemeriksaan ditemukan sianosis sekitar hidung dan mulut. Kadang disertai muntah dan diare, tinja berdarah, anoreksia Suhu tubuh 39°C dan kadang disertai kejang. Apakah tindakan mandiri perawat untuk kasus diatas ?",
+        "options": [
+            "Monitor jumlah WBC",
+            "Auskultasi bunyi nafas",
+            "Lakukan nebulizer dan fisioterapi nafas",
+            "Berikan posisi untuk pernafasan yang optimal",
+            "Berikan agen anti infeksi sesuai yang diprogramkan"
+        ],
+        "answer": 3,
+        "explanation": "Pasien mengalami distres pernapasan berat (sesak, cepat, dangkal, cuping hidung, sianosis). Memberikan posisi yang optimal untuk pernapasan (misalnya, semi-Fowler atau Fowler) adalah tindakan mandiri perawat yang dapat segera dilakukan untuk membantu ekspansi paru dan mengurangi kerja napas."
+    },
+    {
+        "question": "Seorang anak perempuan berusia 9 tahun dibawa ibunya ke RS dengan keluhan demam disertai dengan nyeri kepala, wajah pucat,lesu dan anoreksia. Dari hasil pemeriksaan darah yang dilakukan oleh perawat terdapat penurunan kadar Hb 9 gr%, eritrosit dan albumin. Apa prioritas diagnosa keperawatan yang tepat pada kasus diatas ?",
+        "options": [
+            "Ketidakseimbangan nutrisi kurang dari kebutuhan tubuh",
+            "Gangguan rasa nyaman: nyeri",
+            "Resiko terjadi efek samping pengobatan",
+            "Hipertermia",
+            "Kurang pengetahuan orang tua mengenai penyakit"
+        ],
+        "answer": 0,
+        "explanation": "Hb 9 gr% menunjukkan anemia. Anoreksia (tidak mau makan), lesu, pucat, dan penurunan albumin juga mendukung masalah nutrisi. Gangguan pemenuhan kebutuhan nutrisi kurang dari kebutuhan tubuh adalah prioritas karena berdampak pada energi, pertumbuhan, dan pemulihan."
+    },
+    {
+        "question": "Seorang ibu melahirkan bayi laki-laki berusia 7 hari dirawat diruang perinatologi dengan gejala demam. Hasil pemeriksaan didapatkan suhu 39°C, terdapat perdarahan (bintik-bintik merah pada ekstremitas atas, dada,perdarahan gusi). Apa intervensi keperawatan yang tepat pada kasus diatas ?",
+        "options": [
+            "Observasi tanda-tanda vital",
+            "Lakukan asuhan dasar bayi muda",
+            "Anjurkan untuk kompres dingin/panas",
+            "Mengukur berat badan bayi setiap hari",
+            "Menganjurkan untuk memakai pakaian yang tebal"
+        ],
+        "answer": 0,
+        "explanation": "Bayi demam tinggi dengan tanda-tanda perdarahan (petechiae, perdarahan gusi) memerlukan observasi ketat terhadap tanda-tanda vital untuk mendeteksi perburukan kondisi, seperti tanda-tanda syok atau sepsis. Kompres hangat/dingin (C) dapat membantu menurunkan demam, dan pakaian tipis (bukan tebal) lebih dianjurkan."
+    },
+    {
+        "question": "Seorang balita perempuan berusia 5 tahun dirawat di RS dengan keluhan batuk yang dirasakan sejak 8 hari yang lalu disetai dengan muntah. Dari hasil pengkajian oleh perawat keluarga pasien mengatakan sering batuk pada malam hari dengan kondisi yang hebat dan lama. Apakah prioritas diagnosa keperawatan yang tepat pada kasus diatas?",
+        "options": [
+            "Resiko terjadi komplikasi",
+            "Gangguan istirahat dan tidur",
+            "Bersihan jalan nafas tidak efektif",
+            "Gangguan rasa aman dan nyaman",
+            "Ketidakseimbangan nutrisi kurang dari kebutuhan tubuh"
+        ],
+        "answer": 2,
+        "explanation": "Batuk hebat dan lama, terutama malam hari, disertai muntah menunjukkan adanya masalah pada bersihan jalan napas. Akumulasi sekret atau iritasi jalan napas menyebabkan batuk yang tidak efektif dalam membersihkan jalan napas. Muntah setelah batuk juga mengindikasikan ketidakseimbangan nutrisi."
+    },
+    {
+        "question": "Seorang bayi laki-laki berusia 6 hari lahir normal dibawa ibunya ke RS dengan tanda dan gejala berwarna kuning di bagian kepala, badan, ekstremitas atas dan bawah, hasil pemeriksaan laboratorium yang dilakukan ditemukan bilirubin 15,3 mg/dl. Apakah prioritas tindakan yang harus dilakukan pada kasus diatas ?",
+        "options": [
+            "Fototerapi",
+            "Infus albumin",
+            "Transfusi tukar",
+            "Penyinaran sinar matahari pagi",
+            "Pemberian ASI lebih sering"
+        ],
+        "answer": 0,
+        "explanation": "Kadar bilirubin 15,3 mg/dL pada bayi usia 6 hari menunjukkan hiperbilirubinemia yang signifikan dan memerlukan intervensi. Fototerapi adalah tindakan prioritas untuk mengubah bilirubin indirek menjadi bentuk yang larut dalam air sehingga dapat diekskresikan tubuh, dan mencegah kernikterus. Penyinaran matahari tidak cukup untuk kadar setinggi ini."
+    },
+    {
+        "question": "Seorang bayi laki-laki berusia 4 bulan dibawa ibunya ke RS dengan kondisi kejang, mulut mencucut seperti mulut ikan sehingga tidak dapat menyusu. Hasil pemeriksaan ditemukan suhu 39°C, terdengar bunyi ronchi, perutnya seperti papan. Apakah tindakan prioritas untuk menjaga jalan nafas pasien?",
+        "options": [
+            "Pemberian oksigen",
+            "Pasangkan sudip lidah pada saat kejang",
+            "Isap lendir dengan menggunakan suction",
+            "Lakukan resusitasi neonatus apabila terjadi apnea",
+            "Observasi tanda vital secara kontinyu setiap ½ jam"
+        ],
+        "answer": 2,
+        "explanation": "Mulut mencucut (trismus), perut papan, dan kejang pada bayi dengan demam tinggi dan ronki sangat sugestif tetanus neonatorum atau infeksi berat. Suction lendir (C) penting untuk mempertahankan jalan napas yang paten, terutama jika ada ronki dan bayi tidak bisa menyusu. Memasukkan sudip lidah saat kejang (B) tidak dianjurkan karena risiko cedera."
+    },
+    {
+        "question": "Seorang anak laki – laki berusia 7 tahun dibawa ibunya masuk ke RS karena mengalami asma bronkhial. Setelah dilakukan pemeriksaan didapatkan hasil pernapasan cepat dan terdengar wheezing, ronkhi kering musikal.Kemudian diprogramkan untuk pemberian aminofilin. Apakah tujuan pengobatan yang dilakukan kasus diatas ?",
+        "options": [
+            "Relaksasi bronkhus",
+            "Mengencerkan dahak",
+            "Mengurangi Bronkhospasme",
+            "Pencegahan produksi histamin",
+            "Menurunkan inflamasi bronkhial"
+        ],
+        "answer": 0,
+        "explanation": "Aminofilin adalah obat golongan bronkodilator. Tujuannya adalah untuk merelaksasi otot-otot polos bronkus yang mengalami spasme (bronkospasme), sehingga melebarkan jalan napas dan mengurangi wheezing serta sesak napas pada pasien asma."
+    },
+    {
+        "question": "Seorang anak laki-laki berusia 13 tahun dibawa ibunya ke RS dengan keluhan demam yang dirasakan sejak 3 hari yang lalu disertai dengan mual muntah, anoreksia. Dari hasil pemeriksaan yang dilakukan oleh perawat didapatkan: Uji turniket (+), melena,suhu 39°C dengan diagnosis keperawatan adalah Hipertermia. Apa tindakan mandiri yang dilakukan oleh perawat pada kasus diatas ?",
+        "options": [
+            "Observasi intake dan output",
+            "Mengobservasi tanda-tanda vital",
+            "Menganjurkan untuk banyak minum",
+            "Anjurkan pasien untuk kompres hangat",
+            "Anjurkan untuk menggunakan pakaian yg tipis"
+        ],
+        "answer": 2,
+        "explanation": "Dengan demam tinggi (39°C), mual muntah, anoreksia, dan tanda-tanda DBD (turniket +, melena), pasien berisiko tinggi dehidrasi. Menganjurkan banyak minum adalah tindakan mandiri penting untuk membantu rehidrasi oral dan membantu menurunkan suhu. Ini adalah intervensi langsung yang bisa dilakukan perawat untuk mengatasi penyebab potensial hipertermia (dehidrasi)."
+    },
+    {
+        "question": "Seorang perempuan berusia 15 tahun dirawat diRS dengan kondisi Lesu, lemah, terasa payah, merasa tidak kuat untuk melakukan aktivitas sehari-hari. Setelah dilakukan pemeriksaan didapatkan Kontraksi otot lemah, Klien ingin tidur terus dan tampak bingung, hasil laboratorium WBC > 50.000/cm³ (Shift to left) tampak blast sel leukemia. Apakah diagnosis keperawatan yang tepat pada kasus diatas ?",
+        "options": [
+            "Intoleransi aktivitas berhubungan dengan kelemahan",
+            "Nyeri berhubungan dengan pembesaran organ intraabdomen",
+            "Risiko infeksi berhubungan dengan penurunan daya tahan tubuh",
+            "Kurang pengetahuan tentang perjalanan penyakit, prognosis",
+            "Risiko defisit volume cairan berhubungan dengan kurang intake cairan"
+        ],
+        "answer": 2,
+        "explanation": "Dengan WBC > 50.000 dan adanya sel blast, pasien didiagnosis leukemia. Sel darah putih yang imatur dan non-fungsional dalam jumlah besar, serta kemungkinan efek samping dari pengobatan, menyebabkan penurunan daya tahan tubuh yang signifikan (imunosupresi). Oleh karena itu, risiko infeksi adalah diagnosis keperawatan prioritas."
+    },
+    {
+        "question": "Seorang laki-laki berusia 12 tahun dibawa orang tuanya keRS dengan tanda dan gejala pembengkakan pada wajah sekitar mata,diare, nafsu makan menurun,pucat,asites. Dari Hasil pemeriksaan laboratorium ditemukan Serum kolesterol naik 450 –1500 mg / dl,Konsentrasi total serum protein menurun : albumin menurun (± 2 g/dl) plasma lipid meningkat. Apakah diagnosis keperawatan yang tepat pada kasus diatas ?",
+        "options": [
+            "Hipertermia",
+            "Gangguan rasa nyaman dan nyaman",
+            "Ketidakseimbangan nutrisi kurang dari kebutuhan tubuh",
+            "Kelebihan volume cairan",
+            "Gangguan pemenuhan kebutuhan istirahat dan tidur"
+        ],
+        "answer": 3,
+        "explanation": "Gejala edema (pembengkakan wajah, asites), hipoalbuminemia, dan hiperlipidemia adalah ciri khas Sindrom Nefrotik. Pada sindrom nefrotik terjadi kehilangan protein masif melalui urin, menyebabkan hipoalbuminemia, yang menurunkan tekanan onkotik plasma dan menyebabkan cairan berpindah ke ruang interstisial (edema, asites). Ini mengakibatkan kelebihan volume cairan secara keseluruhan."
+    },
+    {
+        "question": "Seorang laki-laki berusia 16 tahun mengalami fraktur tibia dekstra akibat kecelakaan lalu lintas dan telah menjalani perawatan di RS selama 3 minggu. Untuk dapat berjalan, pasien dianjurkan menggunakan alat bantu berupa tongkat dan hari ini merupakan hari pertama pasien melihat dan memegang tongkat tersebut. Apakah pendidikan kesehatan yang pertama kali perlu disampaikan oleh perawatan pada kasus tersebut?",
+        "options": [
+            "Pengenalan tentang anatomi tongkat",
+            "Cara memegang dan menyesuaikan tinggi tongkat",
+            "Teknik berjalan dengan 3 titik tumpu",
+            "Cara berdiri dan duduk dengan menggunakan tongkat",
+            "Cara menaiki dan menuruni tangga"
+        ],
+        "answer": 1,
+        "explanation": "Sebelum pasien mulai menggunakan tongkat, langkah fundamental pertama adalah memastikan alat tersebut aman dan sesuai untuknya. Ini meliputi mengajarkan cara memegang tongkat dengan benar dan, yang terpenting, menyesuaikan tinggi tongkat agar sesuai dengan postur pasien untuk memberikan dukungan yang optimal dan mencegah cedera lebih lanjut."
+    },
+    {
+        "question": "Seorang bayi laki-laki usia 9 bulan dibawa ke UGD dengan keluhan batuk pilek selama 2 hari, yang kini disertai sesak napas. Pemeriksaan menunjukkan frekuensi napas 55x/menit, adanya tarikan dinding dada, dan suara napas wheezing ekspirasi. Saturasi oksigen 91%. Diagnosis medis adalah Bronkiolitis. Apa intervensi keperawatan prioritas?",
+        "options": [
+            "Pemberian antibiotik sesuai program",
+            "Pemberian posisi semi-Fowler dan oksigenasi",
+            "Menganjurkan ibu untuk memberikan banyak minum",
+            "Melakukan fisioterapi dada untuk mengeluarkan sekret",
+            "Memberikan obat penurun panas"
+        ],
+        "answer": 1,
+        "explanation": "Bronkiolitis ditandai dengan inflamasi dan penyempitan bronkiolus. Gejala sesak napas, takipnea, retraksi, dan hipoksia (saturasi 91%) menunjukkan gangguan pernapasan. Prioritas utama adalah memperbaiki oksigenasi dengan memberikan oksigen dan mengatur posisi semi-Fowler untuk memaksimalkan ekspansi paru. Fisioterapi dada seringkali kontraindikasi pada fase akut."
+    },
+    {
+        "question": "Seorang anak perempuan usia 4 tahun dibawa ke klinik dengan keluhan batuk menggonggong (barking cough) terutama pada malam hari, suara serak, dan stridor inspirasi ringan. Suhu 37.8°C. Perawat menduga anak mengalami Croup (Laringotrakeobronkitis). Apa edukasi yang paling tepat untuk diberikan kepada orang tua untuk penanganan di rumah?",
+        "options": [
+            "Berikan obat batuk yang dijual bebas",
+            "Jaga anak tetap hangat dengan selimut tebal",
+            "Bawa anak ke kamar mandi dan nyalakan shower air panas untuk menciptakan uap",
+            "Berikan makanan padat untuk meredakan iritasi tenggorokan",
+            "Segera bawa ke UGD jika anak mulai demam"
+        ],
+        "answer": 2,
+        "explanation": "Untuk croup ringan, menghirup udara lembab dan sejuk dapat membantu mengurangi edema laring. Membawa anak ke kamar mandi beruap atau ke luar menghirup udara malam yang sejuk adalah intervensi rumahan yang efektif. Obat batuk bebas tidak dianjurkan. Menjaga anak tetap hangat berlebihan tidak membantu."
+    },
+    {
+        "question": "Perawat di ruang anak akan memberikan suntikan antibiotik pada bayi usia 10 bulan. Manakah lokasi penyuntikan intramuskular (IM) yang paling aman dan direkomendasikan untuk usia ini?",
+        "options": [
+            "Otot Deltoid",
+            "Otot Dorsogluteal",
+            "Otot Ventrogluteal",
+            "Otot Vastus Lateralis",
+            "Subkutan di area abdomen"
+        ],
+        "answer": 3,
+        "explanation": "Otot Vastus Lateralis (bagian anterolateral paha) adalah lokasi yang paling direkomendasikan untuk suntikan IM pada bayi dan balita di bawah usia 3 tahun. Otot ini berkembang dengan baik dan jauh dari saraf besar dan pembuluh darah. Otot deltoid belum cukup berkembang, dan dorsogluteal berisiko mencederai saraf skiatik."
+    },
+    {
+        "question": "Seorang anak laki-laki usia 8 tahun dengan diagnosis Diabetes Melitus Tipe 1 dibawa ke UGD dengan keluhan lemas, napas cepat dan dalam (Kussmaul), dan napas berbau buah. Gula darah acak 450 mg/dL. Apa kondisi yang paling mungkin dialami anak tersebut?",
+        "options": [
+            "Reaksi hipoglikemia",
+            "Ketoasidosis Diabetik (KAD)",
+            "Somogyi effect",
+            "Syok anafilaktik",
+            "Gagal ginjal akut"
+        ],
+        "answer": 1,
+        "explanation": "Kombinasi hiperglikemia berat (450 mg/dL), pernapasan Kussmaul (sebagai kompensasi asidosis metabolik), dan napas berbau buah (aseton) adalah tanda-tanda klasik dari Ketoasidosis Diabetik (KAD), suatu komplikasi akut yang mengancam jiwa pada DM Tipe 1."
+    },
+    {
+        "question": "Seorang bayi usia 2 bulan dibawa ibunya ke puskesmas karena sering gumoh dalam jumlah banyak setelah menyusu. Ibu mengatakan bayi tampak sangat lapar setelah gumoh. Pada pemeriksaan fisik, perawat meraba adanya massa berbentuk seperti zaitun di kuadran kanan atas abdomen. Kondisi ini paling sesuai dengan:",
+        "options": [
+            "Penyakit Hirschsprung",
+            "Intususepsi",
+            "Stenosis Pilorus Hipertrofik",
+            "Refluks Gastroesofageal (GERD)",
+            "Atresia esofagus"
+        ],
+        "answer": 2,
+        "explanation": "Gejala muntah proyektil (bukan gumoh biasa), bayi tampak lapar setelah muntah, dan terabanya massa berbentuk zaitun (olive-shaped mass) di epigastrium adalah tanda patognomonik dari Stenosis Pilorus Hipertrofik, yaitu penyempitan otot pilorus lambung."
+    },
+    {
+        "question": "Seorang perawat sedang mengkaji refleks pada neonatus berusia 2 hari. Ketika perawat menempatkan jarinya di telapak tangan bayi, bayi tersebut menggenggam jari perawat dengan erat. Refleks apakah yang sedang ditunjukkan oleh bayi?",
+        "options": [
+            "Refleks Moro",
+            "Refleks Babinski",
+            "Refleks Menggenggam Palmar (Palmar Grasp)",
+            "Refleks Rooting",
+            "Refleks Tonik Leher Asimetris (Tonic Neck)"
+        ],
+        "answer": 2,
+        "explanation": "Refleks Menggenggam Palmar adalah refleks primitif di mana bayi akan secara otomatis menggenggam objek yang ditempatkan di telapak tangannya. Refleks ini normal dan biasanya menghilang sekitar usia 5-6 bulan."
+    },
+    {
+        "question": "Orang tua dari seorang anak usia 6 tahun dengan Hemofilia A bertanya kepada perawat tentang aktivitas apa yang aman untuk anaknya. Manakah anjuran aktivitas yang paling tepat?",
+        "options": [
+            "Sepak bola dan basket",
+            "Gulat dan tinju",
+            "Berenang dan bersepeda dengan pelindung",
+            "Skateboarding dan panjat tebing",
+            "Membiarkan anak tidak beraktivitas sama sekali"
+        ],
+        "answer": 2,
+        "explanation": "Anak dengan hemofilia harus menghindari olahraga kontak yang berisiko tinggi cedera dan perdarahan. Aktivitas non-kontak seperti berenang dan bersepeda (dengan menggunakan helm dan pelindung lutut/siku) sangat dianjurkan untuk menjaga kebugaran dan kekuatan sendi tanpa risiko cedera yang signifikan."
+    },
+    {
+        "question": "Seorang balita usia 3 tahun dibawa ke UGD setelah tidak sengaja menelan beberapa tablet zat besi milik ibunya. Anak tersebut tampak pucat, muntah, dan mengeluh sakit perut. Apa tindakan prioritas yang harus diantisipasi oleh perawat?",
+        "options": [
+            "Pemberian sirup ipecac untuk merangsang muntah",
+            "Pemberian susu untuk menetralkan racun",
+            "Persiapan untuk kumbah lambung dan pemberian agen kelasi (chelating agent)",
+            "Observasi saja karena biasanya tidak berbahaya",
+            "Pemberian arang aktif segera"
+        ],
+        "answer": 2,
+        "explanation": "Keracunan zat besi bisa sangat toksik dan menyebabkan kerusakan hati. Tindakan prioritas meliputi pengosongan lambung (jika masih dalam waktu 1 jam) dan pemberian agen kelasi seperti Deferoxamine untuk mengikat zat besi dan mengeluarkannya dari tubuh. Arang aktif tidak efektif mengikat zat besi. Ipecac sudah tidak direkomendasikan."
+    },
+    {
+        "question": "Perawat sedang merawat anak usia 7 tahun dengan krisis vaso-oklusif karena penyakit Sel Sabit (Sickle Cell Disease). Anak tersebut mengeluh nyeri hebat pada kaki dengan skala 8/10. Apa intervensi keperawatan yang menjadi prioritas utama?",
+        "options": [
+            "Pemberian diet tinggi kalori",
+            "Membatasi asupan cairan untuk mencegah edema",
+            "Manajemen nyeri dengan analgesik dan hidrasi adekuat",
+            "Mendorong anak untuk berjalan-jalan untuk melancarkan sirkulasi",
+            "Memberikan kompres dingin pada area yang nyeri"
+        ],
+        "answer": 2,
+        "explanation": "Prioritas utama dalam krisis vaso-oklusif adalah mengatasi nyeri hebat dan memperbaiki sirkulasi. Ini dicapai melalui pemberian analgesik (seringkali opioid), hidrasi agresif (oral atau IV) untuk mengurangi kekentalan darah, dan pemberian oksigen jika ada hipoksia. Kompres hangat (bukan dingin) dapat membantu vasodilatasi."
+    },
+    {
+        "question": "Seorang anak perempuan usia 5 tahun didiagnosis menderita Infeksi Saluran Kemih (ISK). Edukasi pencegahan apa yang paling penting untuk disampaikan kepada orang tuanya?",
+        "options": [
+            "Membatasi konsumsi jus cranberry",
+            "Mengajarkan anak untuk menahan kencing selama mungkin",
+            "Mengajarkan cara menyeka dari belakang ke depan setelah buang air",
+            "Mengajarkan cara menyeka dari depan ke belakang dan memastikan hidrasi yang cukup",
+            "Menggunakan sabun antiseptik yang kuat untuk membersihkan area perineal"
+        ],
+        "answer": 3,
+        "explanation": "Pencegahan ISK pada anak perempuan berfokus pada kebersihan. Mengajarkan untuk menyeka dari depan ke belakang (uretra ke anus) mencegah transfer bakteri dari area rektal ke uretra. Menjaga hidrasi yang cukup juga penting untuk membilas bakteri. Sabun yang kuat dapat menyebabkan iritasi."
+    },
+    {
+        "question": "Perawat sedang melakukan skrining skoliosis pada seorang anak perempuan berusia 12 tahun. Manakah temuan yang paling menunjukkan kemungkinan adanya skoliosis?",
+        "options": [
+            "Anak mengeluh nyeri punggung yang konstan",
+            "Tinggi bahu dan panggul yang simetris",
+            "Adanya punuk pada salah satu sisi punggung saat anak membungkuk (Adam's Forward Bend Test)",
+            "Kelengkungan tulang belakang yang tampak lurus",
+            "Panjang kedua kaki yang sama persis"
+        ],
+        "answer": 2,
+        "explanation": "Tanda klasik skoliosis adalah asimetri pada bahu, skapula, atau panggul. Adam's Forward Bend Test adalah tes skrining standar, di mana adanya tonjolan atau punuk (rib hump) pada satu sisi punggung saat membungkuk adalah temuan positif yang memerlukan rujukan lebih lanjut."
+    },
+    {
+        "question": "Seorang bayi usia 4 bulan datang ke poli tumbuh kembang. Menurut ibunya, bayi sudah bisa tengkurap sendiri dan mengangkat kepala 90 derajat, tetapi belum bisa duduk tanpa bantuan. Berdasarkan tahapan perkembangan, manakah kesimpulan perawat yang paling tepat?",
+        "options": [
+            "Perkembangan motorik kasar bayi terlambat",
+            "Perkembangan motorik kasar bayi sesuai dengan usianya",
+            "Bayi menunjukkan tanda-tanda cerebral palsy",
+            "Perkembangan motorik halus bayi lebih dominan",
+            "Bayi memerlukan stimulasi fisioterapi segera"
+        ],
+        "answer": 1,
+        "explanation": "Pada usia 4 bulan, tonggak perkembangan motorik kasar yang normal meliputi kemampuan mengangkat kepala 90 derajat saat tengkurap dan berguling dari tengkurap ke telentang. Kemampuan duduk tanpa bantuan biasanya baru tercapai sekitar usia 6-7 bulan. Oleh karena itu, perkembangan bayi ini sesuai dengan usianya."
+    },
+    {
+        "question": "Perawat akan memberikan obat digoxin oral kepada seorang bayi berusia 8 bulan dengan gagal jantung kongestif. Frekuensi nadi apikal bayi adalah 85 kali/menit. Apa tindakan perawat yang paling tepat?",
+        "options": [
+            "Segera berikan obat sesuai dosis",
+            "Berikan setengah dosis dari yang diresepkan",
+            "Tahan pemberian obat dan laporkan kepada dokter",
+            "Ukur kembali nadi radial selama satu menit penuh",
+            "Campurkan obat dengan susu formula untuk memudahkan pemberian"
+        ],
+        "answer": 2,
+        "explanation": "Digoxin dapat menyebabkan bradikardia. Aturan keamanan standar sebelum memberikan digoxin pada bayi adalah menahan dosis dan memberitahu dokter jika denyut nadi apikal kurang dari 90-110 kali/menit (tergantung kebijakan institusi, namun 85 jelas di bawah batas aman). Mencampur obat dengan susu tidak dianjurkan karena jika bayi tidak menghabiskan susunya, dosis obat menjadi tidak akurat."
+    },
+    {
+        "question": "Seorang anak usia 6 tahun baru saja selesai menjalani operasi tonsilektomi. Manakah intervensi keperawatan yang paling penting pada periode pasca operasi?",
+        "options": [
+            "Menganjurkan anak untuk batuk dan membersihkan tenggorokan",
+            "Memberikan minuman berwarna merah seperti jus ceri",
+            "Mengobservasi adanya tanda-tanda perdarahan seperti menelan berulang kali",
+            "Memberikan es krim coklat sebagai hadiah",
+            "Memposisikan anak telentang datar tanpa bantal"
+        ],
+        "answer": 2,
+        "explanation": "Komplikasi paling serius setelah tonsilektomi adalah perdarahan. Tanda awal perdarahan seringkali tidak terlihat jelas, namun dapat dideteksi dengan mengobservasi jika anak sering menelan, membersihkan tenggorokan, atau gelisah. Batuk dilarang karena dapat melepas jahitan. Minuman/makanan merah/coklat dihindari karena dapat disalahartikan sebagai darah."
+    },
+    {
+        "question": "Ibu dari seorang bayi berusia 3 bulan menelepon klinik dan mengatakan bayinya menangis terus menerus selama 3 jam setiap malam, perutnya kembung, dan kakinya sering ditarik ke perut. Pola ini sudah terjadi selama 2 minggu. Bayi tetap menyusu dengan baik dan berat badannya naik normal. Perawat mencurigai bayi mengalami kolik infantil. Apa saran terbaik yang bisa diberikan?",
+        "options": [
+            "Sarankan ibu untuk mengganti susu formula dengan susu sapi",
+            "Jelaskan bahwa ini normal dan anjurkan teknik menenangkan seperti menggendong atau membedong",
+            "Minta ibu segera membawa bayi ke UGD",
+            "Sarankan ibu untuk memberikan obat pereda nyeri",
+            "Instruksikan ibu untuk membatasi waktu menyusui"
+        ],
+        "answer": 1,
+        "explanation": "Kolik infantil ditandai dengan tangisan paroksismal tanpa sebab yang jelas pada bayi sehat. Kondisi ini biasanya akan membaik dengan sendirinya. Peran perawat adalah memberikan dukungan dan edukasi kepada orang tua tentang teknik-teknik menenangkan seperti menggendong, membedong, suara 'white noise', atau ayunan lembut. Merujuk ke UGD tidak perlu jika tidak ada tanda bahaya lain."
+    },
+    {
+        "question": "Seorang anak perempuan usia 10 tahun dengan Cystic Fibrosis (CF) dijadwalkan untuk menerima terapi penggantian enzim pankreas. Kapan waktu yang paling tepat untuk memberikan kapsul enzim tersebut?",
+        "options": [
+            "Satu jam sebelum makan",
+            "Segera sebelum atau bersamaan dengan setiap kali makan dan ngemil",
+            "Hanya saat sarapan pagi",
+            "Saat perut kosong di antara waktu makan",
+            "Diberikan bersamaan dengan vitamin larut lemak"
+        ],
+        "answer": 1,
+        "explanation": "Pasien CF mengalami insufisiensi pankreas sehingga tidak dapat mencerna lemak dan protein. Enzim pengganti harus diberikan setiap kali makan atau ngemil agar dapat bercampur dengan makanan di usus dan membantu proses pencernaan. Memberikannya saat perut kosong atau jauh sebelum makan tidak akan efektif."
+    },
+    {
+        "question": "Seorang anak prasekolah usia 4 tahun dirawat di rumah sakit karena pneumonia. Anak tersebut menangis dan menolak ditinggal ibunya. Menurut teori Erikson, perilaku ini mencerminkan konflik psikososial apa?",
+        "options": [
+            "Trust vs. Mistrust (Percaya vs. Curiga)",
+            "Autonomy vs. Shame and Doubt (Otonomi vs. Ragu-ragu)",
+            "Initiative vs. Guilt (Inisiatif vs. Rasa Bersalah)",
+            "Industry vs. Inferiority (Industri vs. Inferioritas)",
+            "Identity vs. Role Confusion (Identitas vs. Kebingungan Peran)"
+        ],
+        "answer": 2,
+        "explanation": "Anak usia prasekolah (3-6 tahun) berada dalam tahap Inisiatif vs. Rasa Bersalah menurut Erikson. Selama dirawat, penyakit dan prosedur medis dapat membuat anak merasa bahwa penyakitnya adalah hukuman atas perbuatannya, sehingga menimbulkan rasa bersalah. Kecemasan perpisahan juga umum terjadi, namun inisiatif yang terhambat karena sakit adalah konflik sentral pada usia ini."
+    },
+    {
+        "question": "Perawat sedang memberikan edukasi kepada orang tua baru tentang cara mencegah Sindrom Kematian Bayi Mendadak (SIDS). Manakah pernyataan yang paling penting untuk ditekankan?",
+        "options": [
+            "\"Bayi harus tidur tengkurap untuk mencegah tersedak.\"",
+            "\"Gunakan bantal yang empuk dan selimut tebal agar bayi nyaman.\"",
+            "\"Tempatkan bayi untuk tidur dalam posisi telentang di atas permukaan yang rata dan kokoh.\"",
+            "\"Tidak apa-apa untuk tidur bersama bayi di sofa atau kursi.\"",
+            "\"Suhu kamar bayi harus dijaga sangat hangat.\""
+        ],
+        "answer": 2,
+        "explanation": "Rekomendasi utama dari kampanye \"Back to Sleep\" untuk pencegahan SIDS adalah menidurkan bayi dalam posisi telentang (supine). Tempat tidur harus bebas dari benda-benda lunak seperti bantal, selimut tebal, dan boneka. Tidur tengkurap, permukaan lunak, dan overheating merupakan faktor risiko SIDS."
+    },
+    {
+        "question": "Seorang balita usia 18 bulan dibawa ke UGD dengan riwayat demam, muntah, dan diare. Pemeriksaan fisik menunjukkan ubun-ubun besar cekung, mata cekung, dan turgor kulit kembali sangat lambat. Apa diagnosis keperawatan prioritas untuk anak ini?",
+        "options": [
+            "Hipertermia berhubungan dengan proses infeksi",
+            "Defisit volume cairan berhubungan dengan kehilangan cairan aktif",
+            "Risiko kerusakan integritas kulit berhubungan dengan diare",
+            "Ketidakseimbangan nutrisi kurang dari kebutuhan tubuh",
+            "Kecemasan berhubungan dengan hospitalisasi"
+        ],
+        "answer": 1,
+        "explanation": "Tanda-tanda seperti ubun-ubun dan mata cekung serta turgor kulit yang buruk adalah indikator klasik dari dehidrasi berat. Defisit volume cairan adalah masalah yang mengancam jiwa pada anak-anak dan menjadi prioritas utama untuk dikoreksi, biasanya dengan rehidrasi intravena."
+    },
+    {
+        "question": "Seorang bayi laki-laki usia 6 bulan dibawa ke klinik untuk imunisasi. Riwayat imunisasi sebelumnya lengkap. Sesuai dengan jadwal IDAI, imunisasi apa yang seharusnya diterima bayi pada kunjungan ini?",
+        "options": [
+            "BCG dan Polio 1",
+            "DTP 1, Hib 1, Polio 2, Hepatitis B 2",
+            "Campak/MR",
+            "DTP 3, Hib 3, Polio 4, Hepatitis B 4",
+            "Hepatitis B 1"
+        ],
+        "answer": 3,
+        "explanation": "Menurut jadwal imunisasi IDAI, pada usia 6 bulan, bayi dijadwalkan untuk menerima dosis ketiga dari seri primer, yaitu DTP (Dosis 3), Hib (Dosis 3), Polio (Dosis 4 - bisa IPV atau bOPV), dan Hepatitis B (Dosis 4). Imunisasi campak/MR diberikan pada usia 9 bulan."
+    },
+    {
+        "question": "Seorang anak usia 5 tahun didiagnosis Acute Glomerulonephritis (AGN) pasca infeksi streptokokus. Manakah temuan klinis yang paling khas pada kondisi ini?",
+        "options": [
+            "Edema masif, proteinuria berat, dan hipoalbuminemia",
+            "Demam tinggi, ruam, dan nyeri sendi",
+            "Poliuria, polidipsia, dan penurunan berat badan",
+            "Edema periorbital, hipertensi, dan hematuria (urine berwarna seperti teh/kola)",
+            "Nyeri perut kuadran kanan bawah dan demam"
+        ],
+        "answer": 3,
+        "explanation": "Trias klasik dari AGN adalah edema (terutama di sekitar mata pada pagi hari), hipertensi (akibat retensi cairan dan natrium), dan hematuria (yang menyebabkan urine berwarna gelap seperti teh atau kola). Ini berbeda dengan sindrom nefrotik yang ditandai edema masif dan proteinuria berat."
+    },
+    {
+        "question": "Perawat sedang merawat anak usia 7 tahun dengan gips pada lengan kanannya karena fraktur. Anak mengeluh rasa kebas dan kesemutan pada jari-jarinya. Perawat memeriksa dan menemukan jari-jari tampak pucat dan dingin. Apa tindakan segera yang harus dilakukan perawat?",
+        "options": [
+            "Memberikan obat pereda nyeri sesuai resep",
+            "Meninggikan lengan yang digips di atas bantal",
+            "Mendokumentasikan temuan dan mengobservasi kembali dalam 1 jam",
+            "Segera memberitahu dokter karena ini adalah tanda sindrom kompartemen",
+            "Menganjurkan anak untuk menggerak-gerakkan jarinya"
+        ],
+        "answer": 3,
+        "explanation": "Keluhan nyeri yang tidak reda, kebas/kesemutan (parestesia), pucat, dingin, dan hilangnya denyut nadi adalah tanda-tanda 5P dari sindrom kompartemen. Ini adalah keadaan darurat bedah yang dapat menyebabkan kerusakan saraf dan otot permanen. Perawat harus segera melaporkan temuan ini kepada dokter untuk intervensi segera (kemungkinan pembukaan gips/fasciotomy)."
+    },
+    {
+        "question": "Seorang bayi perempuan usia 9 bulan didiagnosis mengalami Developmental Dysplasia of the Hip (DDH) dan akan dipasang Pavlik harness. Apa poin edukasi kunci yang harus diberikan kepada orang tua?",
+        "options": [
+            "Harness hanya boleh dilepas saat mandi",
+            "Harness harus dipakai secara terus-menerus (23-24 jam sehari) dan tidak boleh dilepas kecuali oleh petugas kesehatan",
+            "Orang tua harus mengatur kekencangan harness setiap hari",
+            "Bayi harus diposisikan tidur tengkurap saat memakai harness",
+            "Kaos kaki dan pakaian harus dikenakan di luar harness"
+        ],
+        "answer": 1,
+        "explanation": "Keberhasilan terapi Pavlik harness bergantung pada pemakaian yang konsisten untuk menjaga posisi panggul yang benar. Orang tua harus diedukasi bahwa harness tidak boleh dilepas sama sekali, bahkan untuk mengganti popok atau mandi, kecuali ada instruksi spesifik dari dokter. Pakaian dikenakan di bawah harness untuk melindungi kulit."
+    },
+    {
+        "question": "Seorang anak usia 3 tahun dibawa ke UGD dengan gejala demam tinggi (40°C), air liur menetes (drooling), tampak cemas, dan lebih memilih posisi duduk tripod (condong ke depan). Suara anak terdengar teredam. Perawat harus curiga anak mengalami kondisi darurat apa?",
+        "options": [
+            "Croup (Laringotrakeobronkitis)",
+            "Asma akut",
+            "Epiglotitis akut",
+            "Tonsilitis",
+            "Bronkiolitis"
+        ],
+        "answer": 2,
+        "explanation": "Empat tanda klasik epiglotitis adalah Dysphonia (suara teredam), Dysphagia (sulit menelan), Drooling (air liur menetes), dan Distress (cemas, posisi tripod). Ini adalah keadaan darurat medis karena epiglotis yang membengkak dapat menyebabkan obstruksi jalan napas total secara tiba-tiba. Pemeriksaan tenggorokan dengan tongue depressor adalah kontraindikasi mutlak."
+    },
+    {
+        "question": "Perawat sedang mengkaji nyeri pada anak usia 4 tahun yang belum bisa mendeskripsikan nyerinya dengan angka. Skala nyeri manakah yang paling sesuai untuk digunakan?",
+        "options": [
+            "Numeric Rating Scale (0-10)",
+            "Visual Analog Scale (VAS)",
+            "Wong-Baker FACES Pain Rating Scale",
+            "FLACC Scale (Face, Legs, Activity, Cry, Consolability)",
+            "CRIES Scale"
+        ],
+        "answer": 2,
+        "explanation": "Skala Wajah Wong-Baker (Wong-Baker FACES Pain Rating Scale) dirancang untuk anak-anak usia 3 tahun ke atas. Skala ini menggunakan ekspresi wajah dari senyum hingga menangis untuk membantu anak mengkomunikasikan tingkat nyerinya. Skala FLACC lebih bersifat observasional dan cocok untuk anak non-verbal atau pre-verbal."
+    },
+    {
+        "question": "Dokter meresepkan Amoksisilin 125 mg per oral untuk anak dengan otitis media. Sediaan yang tersedia adalah sirup dengan kekuatan 250 mg/5 mL. Berapa mL obat yang harus diberikan oleh perawat?",
+        "options": [
+            "1.5 mL",
+            "2.0 mL",
+            "2.5 mL",
+            "5.0 mL",
+            "10.0 mL"
+        ],
+        "answer": 2,
+        "explanation": "Rumus perhitungan dosis: (Dosis yang diminta / Dosis yang tersedia) x Volume sediaan. Dalam kasus ini: (125 mg / 250 mg) x 5 mL = 0.5 x 5 mL = 2.5 mL. Perawat harus memberikan 2.5 mL sirup Amoksisilin."
+    },
+    {
+        "question": "Seorang remaja laki-laki usia 14 tahun didiagnosis menderita mononukleosis infeksiosa. Selain kelelahan, demam, dan sakit tenggorokan, komplikasi apa yang harus diwaspadai dan memerlukan edukasi untuk menghindari aktivitas berat?",
+        "options": [
+            "Gagal ginjal",
+            "Pneumonia",
+            "Splenomegali (pembesaran limpa)",
+            "Gagal jantung",
+            "Meningitis"
+        ],
+        "answer": 2,
+        "explanation": "Mononukleosis dapat menyebabkan pembesaran limpa (splenomegali). Limpa yang membesar sangat rentan pecah (ruptur), yang merupakan keadaan darurat medis. Oleh karena itu, pasien harus diinstruksikan untuk menghindari olahraga kontak atau aktivitas berat selama beberapa minggu hingga bulan sampai limpa kembali ke ukuran normal."
+    },
+    {
+        "question": "Seorang bayi usia 7 bulan mengalami intususepsi. Manakah tanda atau gejala yang paling klasik untuk kondisi ini?",
+        "options": [
+            "Muntah proyektil berwarna hijau",
+            "Diare cair yang masif",
+            "Feses seperti selai kismis (currant jelly stool)",
+            "Ubun-ubun yang menonjol",
+            "Demam tinggi dan ruam"
+        ],
+        "answer": 2,
+        "explanation": "Intususepsi adalah kondisi di mana sebagian usus masuk ke bagian usus lainnya. Ini menyebabkan obstruksi dan iskemia. Trias klasik gejalanya adalah nyeri perut kolik mendadak (anak menarik lutut ke dada), massa berbentuk sosis di perut, dan feses yang bercampur darah dan lendir, yang khas digambarkan seperti selai kismis (currant jelly stool)."
+    },
+    {
+        "question": "Seorang anak perempuan usia 8 tahun dibawa ke klinik dengan keluhan gatal hebat di kulit kepala, terutama di belakang telinga dan tengkuk. Pada pemeriksaan, ditemukan adanya telur-telur kecil berwarna putih keabu-abuan yang melekat erat pada batang rambut. Kondisi ini paling mungkin adalah:",
+        "options": [
+            "Kurap (Tinea capitis)",
+            "Dermatitis seboroik (ketombe)",
+            "Kutu rambut (Pediculosis capitis)",
+            "Impetigo",
+            "Scabies"
+        ],
+        "answer": 2,
+        "explanation": "Gatal hebat di kulit kepala dan adanya nits (telur kutu) yang melekat kuat pada batang rambut adalah tanda khas dari infestasi kutu rambut (Pediculosis capitis). Perawat harus memberikan edukasi tentang penggunaan sampo pedikulisida dan cara membersihkan lingkungan untuk mencegah penularan kembali."
+    },
+    {
+        "question": "Perawat sedang merawat seorang anak laki-laki usia 5 tahun dengan riwayat kejang. Apa tindakan pencegahan keamanan yang paling penting untuk diimplementasikan di ruang rawat?",
+        "options": [
+            "Memastikan tempat tidur selalu dalam posisi tertinggi",
+            "Menyiapkan spatula lidah di samping tempat tidur",
+            "Memasang penghalang tempat tidur (side rails) dan memberinya bantalan (padding)",
+            "Membatasi kunjungan keluarga untuk menjaga ketenangan",
+            "Selalu mengikat tangan anak ke tempat tidur"
+        ],
+        "answer": 2,
+        "explanation": "Pencegahan kejang (seizure precautions) bertujuan untuk melindungi pasien dari cedera jika kejang terjadi. Ini termasuk memastikan penghalang tempat tidur terpasang dan diberi bantalan untuk mencegah trauma kepala atau ekstremitas. Spatula lidah tidak boleh dimasukkan ke mulut saat kejang. Lingkungan harus dijaga bebas dari benda tajam."
+    },
+    {
+        "question": "Seorang anak usia 10 tahun dengan penyakit Kawasaki dirawat dan mendapatkan terapi Imunoglobulin Intravena (IVIG). Apa tujuan utama pemberian IVIG pada pasien ini?",
+        "options": [
+            "Untuk menurunkan demam",
+            "Untuk mencegah pembentukan aneurisma arteri koroner",
+            "Untuk mengobati infeksi bakteri sekunder",
+            "Untuk mengurangi nyeri sendi",
+            "Untuk meningkatkan nafsu makan"
+        ],
+        "answer": 1,
+        "explanation": "Penyakit Kawasaki adalah vaskulitis sistemik yang dapat menyebabkan komplikasi jantung serius, terutama aneurisma arteri koroner. Terapi utama dengan IVIG dosis tinggi dan aspirin bertujuan untuk mengurangi inflamasi pada pembuluh darah dan secara signifikan menurunkan risiko terjadinya aneurisma koroner."
+    },
+    {
+        "question": "Seorang anak usia 2 tahun dibawa ke UGD karena kesulitan bernapas. Anak tersebut ditemukan sedang bermain dengan kelereng sebelum kejadian. Anak tampak sianosis, tidak dapat berbicara atau batuk. Apa tindakan pertama yang harus dilakukan oleh perawat?",
+        "options": [
+            "Melakukan sapuan jari buta (blind finger sweep)",
+            "Memberikan 5 kali pukulan punggung (back blows) diikuti 5 kali hentakan dada (chest thrusts)",
+            "Segera melakukan intubasi",
+            "Memberikan oksigen dengan masker",
+            "Menunggu dokter datang"
+        ],
+        "answer": 1,
+        "explanation": "Anak menunjukkan tanda-tanda obstruksi jalan napas berat (tersedak). Sesuai panduan Bantuan Hidup Dasar (BHD) untuk anak, jika anak sadar tetapi tidak dapat batuk atau berbicara, intervensi yang tepat adalah memberikan kombinasi 5 kali pukulan punggung dan 5 kali hentakan dada (untuk anak di bawah 1 tahun) atau hentakan perut/manuver Heimlich (untuk anak di atas 1 tahun). Sapuan jari buta tidak dianjurkan karena dapat mendorong benda lebih jauh."
+    },
+    {
+        "question": "Seorang anak usia 7 tahun didiagnosis menderita penyakit Celiac. Perawat memberikan edukasi diet kepada orang tua. Manakah makanan yang harus dihindari secara total?",
+        "options": [
+            "Nasi dan kentang",
+            "Daging ayam dan ikan",
+            "Buah-buahan dan sayuran",
+            "Roti gandum, sereal, dan pasta",
+            "Susu dan produk olahannya"
+        ],
+        "answer": 3,
+        "explanation": "Penyakit Celiac adalah gangguan autoimun yang dipicu oleh gluten. Gluten adalah protein yang ditemukan dalam gandum (wheat), jelai (barley), dan gandum hitam (rye). Oleh karena itu, semua produk yang mengandung bahan-bahan ini, seperti roti, sereal, kue, dan pasta, harus dihindari seumur hidup."
+    },
+    {
+        "question": "Perawat di unit pediatri sedang mempersiapkan seorang anak usia 5 tahun untuk operasi. Untuk mengurangi kecemasan anak, metode komunikasi terapeutik apa yang paling efektif?",
+        "options": [
+            "Menjelaskan prosedur secara detail menggunakan istilah medis",
+            "Menggunakan boneka atau mainan untuk mendemonstrasikan apa yang akan terjadi",
+            "Mengatakan pada anak untuk tidak takut karena tidak akan sakit",
+            "Menghindari pembicaraan tentang operasi sama sekali",
+            "Hanya berbicara dengan orang tua dan mengabaikan anak"
+        ],
+        "answer": 1,
+        "explanation": "Anak usia prasekolah berpikir secara konkret. Menggunakan permainan terapeutik, seperti boneka atau mainan alat medis, adalah cara yang sangat efektif untuk menjelaskan prosedur dengan cara yang tidak mengancam dan mudah dipahami oleh anak. Ini memungkinkan anak untuk mengekspresikan ketakutannya dan merasa lebih memegang kendali."
+    },
+    {
+        "question": "Seorang bayi usia 1 bulan dibawa ke UGD karena letargi. Gula darah acak menunjukkan hasil 35 mg/dL. Bayi tersebut didiagnosis mengalami hipoglikemia neonatal. Apa tindakan intervensi segera yang paling tepat?",
+        "options": [
+            "Memberikan ASI atau susu formula",
+            "Memberikan bolus dekstrosa 10% intravena",
+            "Memberikan suntikan glukagon intramuskular",
+            "Mengobservasi selama 30 menit dan memeriksa ulang gula darah",
+            "Memasang infus NaCl 0.9%"
+        ],
+        "answer": 1,
+        "explanation": "Hipoglikemia simtomatik (disertai letargi) pada neonatus adalah keadaan darurat. Intervensi segera adalah memberikan bolus cepat dekstrosa 10% (D10W) secara intravena untuk menaikkan kadar glukosa darah dengan cepat, diikuti dengan infus D10W kontinu untuk menjaga stabilitas."
+    },
+    {
+        "question": "Seorang anak perempuan usia 6 tahun dengan riwayat alergi kacang tidak sengaja memakan kue yang mengandung selai kacang. Beberapa menit kemudian, anak mengeluh gatal, bibirnya bengkak, dan sulit bernapas. Perawat harus siap untuk memberikan obat apa sebagai pertolongan pertama?",
+        "options": [
+            "Parasetamol",
+            "Ibuprofen",
+            "Antibiotik",
+            "Epinefrin (Adrenalin) intramuskular",
+            "Diphenhydramine (antihistamin) oral"
+        ],
+        "answer": 3,
+        "explanation": "Gejala yang dialami anak (angioedema, kesulitan bernapas) menunjukkan reaksi anafilaksis, suatu reaksi alergi yang parah dan mengancam jiwa. Obat pilihan pertama dan utama untuk anafilaksis adalah Epinefrin (Adrenalin) yang diberikan melalui suntikan intramuskular untuk mengatasi bronkospasme, vasodilatasi, dan edema."
+    },
+    {
+        "question": "Seorang anak laki-laki usia 4 tahun didiagnosis menderita Atrial Septal Defect (ASD) yang besar. Saat auskultasi, bunyi jantung apa yang paling mungkin didengar oleh perawat?",
+        "options": [
+            "Bunyi jantung normal tanpa murmur",
+            "Murmur sistolik yang keras dan kasar di batas kiri sternum",
+            "Bunyi gesekan perikardial (pericardial friction rub)",
+            "Bunyi S2 yang terpisah dan menetap (fixed splitting of S2)",
+            "Murmur diastolik di apeks"
+        ],
+        "answer": 3,
+        "explanation": "ASD yang besar menyebabkan aliran darah dari atrium kiri ke kanan (left-to-right shunt), meningkatkan volume darah di sisi kanan jantung. Tanda auskultasi klasik dari ASD adalah bunyi jantung kedua (S2) yang terpisah secara menetap (fixed splitting), yang tidak berubah dengan siklus pernapasan. Murmur ejeksi sistolik juga bisa terdengar akibat peningkatan aliran melalui katup pulmonal."
+    },
+    {
+        "question": "Ibu dari seorang anak usia 5 tahun bertanya kepada perawat, berapa lama anaknya harus menggunakan kursi mobil khusus (car seat). Apa jawaban perawat yang paling akurat berdasarkan pedoman keselamatan?",
+        "options": [
+            "Anak boleh duduk di kursi depan setelah berusia 7 tahun.",
+            "Kursi mobil tidak diperlukan lagi setelah anak bisa duduk tegak.",
+            "Anak harus menggunakan booster seat sampai tingginya mencapai sekitar 145 cm dan sabuk pengaman pas dengan benar.",
+            "Setelah usia 4 tahun, anak bisa menggunakan sabuk pengaman biasa.",
+            "Semua anak harus menghadap ke belakang sampai berusia 4 tahun."
+        ],
+        "answer": 2,
+        "explanation": "Pedoman keselamatan anak di kendaraan merekomendasikan penggunaan car seat atau booster seat sampai anak cukup tinggi (biasanya 145-150 cm, atau usia 8-12 tahun) agar sabuk pengaman mobil standar pas dengan benar (melintasi bahu dan paha, bukan leher dan perut). Anak harus duduk di kursi belakang sampai usia 13 tahun."
+    },
+    {
+        "question": "Seorang bayi usia 10 hari dibawa ke klinik karena kulitnya tampak kuning. Bayi lahir cukup bulan, menyusu ASI eksklusif, dan tampak aktif. Bilirubin total 12 mg/dL, dengan dominan bilirubin indirek. Kondisi ini paling mungkin disebabkan oleh:",
+        "options": [
+            "Inkompatibilitas ABO",
+            "Atresia bilier",
+            "Jaundice Fisiologis atau Breastfeeding Jaundice",
+            "Hepatitis Neonatal",
+            "Sepsis"
+        ],
+        "answer": 2,
+        "explanation": "Jaundice yang muncul setelah hari ke-3 hingga ke-5, puncaknya di minggu kedua, pada bayi sehat yang menyusu ASI, seringkali merupakan jaundice fisiologis yang memanjang atau breastfeeding jaundice (berkaitan dengan komponen dalam ASI). Ini bersifat jinak dan biasanya akan membaik dengan sendirinya selama bayi menyusu dengan baik dan berat badannya naik."
+    },
+    {
+        "question": "Perawat sedang merawat anak usia 9 tahun dengan diagnosis Nefritis Lupus. Pengobatan yang diberikan adalah kortikosteroid dosis tinggi. Apa efek samping utama dari penggunaan kortikosteroid jangka panjang yang harus dipantau oleh perawat?",
+        "options": [
+            "Hipotensi dan bradikardia",
+            "Penurunan berat badan dan anoreksia",
+            "Risiko infeksi, hiperglikemia, dan hipertensi",
+            "Rambut rontok dan mual",
+            "Peningkatan kadar kalsium darah"
+        ],
+        "answer": 2,
+        "explanation": "Kortikosteroid memiliki efek imunosupresif, sehingga meningkatkan risiko infeksi. Efek samping metabolik lainnya termasuk hiperglikemia (steroid-induced diabetes), retensi natrium dan air yang menyebabkan hipertensi dan edema, serta penipisan tulang (osteoporosis) dan penekanan pertumbuhan pada anak."
+    },
+    {
+        "question": "Seorang anak usia 2 tahun akan menjalani prosedur pemasangan infus. Anak tersebut tampak sangat takut dan menangis. Apa intervensi yang paling tepat untuk meminimalkan trauma psikologis pada anak?",
+        "options": [
+            "Meminta beberapa perawat untuk memegangi anak dengan paksa.",
+            "Melakukan prosedur di ruang perawatan agar anak tidak takut.",
+            "Mengizinkan orang tua untuk menggendong dan menenangkan anak selama prosedur.",
+            "Menunda prosedur sampai anak berhenti menangis.",
+            "Mengatakan bahwa suntikan tidak akan terasa sakit sama sekali."
+        ],
+        "answer": 2,
+        "explanation": "Prinsip perawatan atraumatik dan berpusat pada keluarga sangat penting. Mengizinkan orang tua untuk hadir dan memberikan kenyamanan (misalnya dengan menggendong) dapat secara signifikan mengurangi kecemasan anak. Melakukan prosedur di ruang treatment khusus (bukan di tempat tidur anak) juga membantu menjaga tempat tidur sebagai 'safe zone'."
+    },
+    {
+        "question": "Seorang bayi laki-laki didiagnosis menderita Tetralogi Fallot (TOF). Saat sedang menangis hebat, kulit bayi tiba-tiba menjadi sangat biru (sianosis), napasnya cepat, dan menjadi lemas. Episode ini dikenal sebagai 'Tet Spell'. Apa tindakan pertama yang harus dilakukan perawat?",
+        "options": [
+            "Memberikan makanan untuk menenangkannya",
+            "Memposisikan bayi telentang datar",
+            "Menempatkan bayi dalam posisi lutut-dada (knee-chest position)",
+            "Meninggalkan bayi agar tenang dengan sendirinya",
+            "Memberikan suntikan diuretik"
+        ],
+        "answer": 2,
+        "explanation": "Tet spell adalah episode hipoksia akut pada pasien TOF. Posisi lutut-dada (knee-chest position) adalah intervensi pertama dan utama. Posisi ini meningkatkan resistensi vaskular sistemik, yang akan mengurangi aliran darah dari kanan-ke-kiri (right-to-left shunt) melalui VSD, sehingga lebih banyak darah yang teroksigenasi di paru-paru."
+    },
+    {
+        "question": "Seorang anak laki-laki usia 6 tahun dirawat dengan luka bakar 30% pada tubuhnya. Menurut formula Parkland, berapa banyak cairan yang harus diberikan dalam 8 jam pertama jika berat badan anak adalah 20 kg? (Formula Parkland: 4 mL x kgBB x %TBSA)",
+        "options": [
+            "1200 mL",
+            "2400 mL",
+            "600 mL",
+            "800 mL",
+            "1000 mL"
+        ],
+        "answer": 0,
+        "explanation": "Total cairan dalam 24 jam = 4 mL x 20 kg x 30% = 2400 mL. Setengah dari total cairan ini (1200 mL) harus diberikan dalam 8 jam pertama. Sisa setengahnya (1200 mL) diberikan dalam 16 jam berikutnya. Jadi, jawabannya adalah 1200 mL."
+    },
+    {
+        "question": "Seorang anak usia 3 tahun didiagnosis menderita Cerebral Palsy tipe spastik. Manakah karakteristik yang paling mungkin ditemukan pada anak ini?",
+        "options": [
+            "Gerakan involunter seperti cacing (athetosis)",
+            "Tonus otot yang sangat rendah (hipotonia)",
+            "Kekakuan otot dan refleks tendon yang berlebihan (hipertonia)",
+            "Gangguan keseimbangan dan koordinasi (ataksia)",
+            "Tidak ada kelainan motorik yang terlihat"
+        ],
+        "answer": 2,
+        "explanation": "Cerebral Palsy (CP) spastik adalah tipe yang paling umum. Ini disebabkan oleh kerusakan pada korteks motorik dan ditandai dengan hipertonia atau peningkatan tonus otot, yang menyebabkan kekakuan, gerakan yang kaku, dan refleks yang berlebihan (hiperrefleksia)."
+    },
+    {
+        "question": "Seorang anak perempuan usia 11 tahun dirawat karena demam rematik akut. Perawat mengetahui bahwa kondisi ini merupakan komplikasi dari infeksi apa?",
+        "options": [
+            "Infeksi virus Varicella-zoster",
+            "Infeksi jamur Candida albicans",
+            "Infeksi bakteri Grup A Streptococcus (GAS)",
+            "Infeksi virus Epstein-Barr",
+            "Infeksi bakteri Escherichia coli"
+        ],
+        "answer": 2,
+        "explanation": "Demam rematik adalah reaksi peradangan autoimun yang terjadi sebagai sekuelae (komplikasi lanjutan) dari infeksi Grup A Streptococcus yang tidak diobati atau tidak tuntas diobati, seperti radang tenggorokan (faringitis) atau demam skarlet."
+    },
+    {
+        "question": "Seorang bayi usia 5 bulan menunjukkan tanda 'head lag' atau kepala yang terkulai saat ditarik dari posisi berbaring ke posisi duduk. Apa interpretasi perawat terhadap temuan ini?",
+        "options": [
+            "Ini adalah temuan yang normal untuk bayi usia 5 bulan.",
+            "Bayi menunjukkan perkembangan motorik yang lebih cepat dari usianya.",
+            "Ini adalah tanda kemungkinan keterlambatan perkembangan motorik (kelemahan kontrol kepala).",
+            "Ini merupakan tanda awal dari penyakit meningitis.",
+            "Refleks moro bayi masih persisten."
+        ],
+        "answer": 2,
+        "explanation": "Pada usia 4 bulan, sebagian besar bayi sudah memiliki kontrol kepala yang baik dan tidak menunjukkan 'head lag'. Adanya 'head lag' yang signifikan pada usia 5 bulan menunjukkan adanya kelemahan tonus otot atau keterlambatan perkembangan motorik yang memerlukan evaluasi lebih lanjut."
+    },
+    {
+        "question": "Perawat sedang merawat anak laki-laki usia 8 tahun yang baru didiagnosis menderita Attention-Deficit/Hyperactivity Disorder (ADHD) dan akan memulai terapi dengan methylphenidate (stimulan). Apa edukasi penting yang harus diberikan kepada orang tua mengenai obat ini?",
+        "options": [
+            "Obat ini harus diminum sebelum tidur untuk membantu anak rileks.",
+            "Efek samping yang umum adalah peningkatan nafsu makan dan berat badan.",
+            "Berikan obat pada pagi hari untuk menghindari gangguan tidur.",
+            "Obat ini akan langsung menyembuhkan ADHD secara permanen.",
+            "Obat ini tidak memiliki efek samping sama sekali."
+        ],
+        "answer": 2,
+        "explanation": "Obat stimulan seperti methylphenidate dapat menyebabkan insomnia jika diminum terlalu sore atau malam. Oleh karena itu, dosis biasanya diberikan pada pagi hari (dan siang hari jika diperlukan). Efek samping umum lainnya yang harus dipantau adalah penurunan nafsu makan dan penurunan berat badan, bukan peningkatan."
+    },
+    {
+        "question": "Seorang anak usia 6 tahun dibawa ke UGD dengan keluhan nyeri perut hebat yang datang tiba-tiba, demam, dan muntah. Pada pemeriksaan fisik, abdomen tampak tegang (rigid) dan nyeri tekan lepas positif di titik McBurney. Tanda-tanda ini sangat sugestif untuk kondisi apa?",
+        "options": [
+            "Gastroenteritis",
+            "Konstipasi",
+            "Apendisitis dengan kemungkinan perforasi",
+            "Infeksi saluran kemih",
+            "Kolik ginjal"
+        ],
+        "answer": 2,
+        "explanation": "Nyeri yang bermigrasi ke kuadran kanan bawah (titik McBurney), demam, mual/muntah adalah gejala klasik apendisitis. Adanya perut yang tegang (rigid) dan nyeri lepas (rebound tenderness) merupakan tanda iritasi peritoneum, yang menunjukkan bahwa apendiks kemungkinan sudah pecah atau meradang hebat (peritonitis)."
+    },
+    {
+        "question": "Seorang ibu bertanya mengapa bayinya yang baru lahir mendapatkan suntikan vitamin K. Apa penjelasan terbaik yang dapat diberikan oleh perawat?",
+        "options": [
+            "\"Ini untuk mencegah bayi terkena penyakit kuning.\"",
+            "\"Ini adalah vaksin pertama untuk melindungi dari infeksi.\"",
+            "\"Bayi baru lahir belum dapat memproduksi vitamin K sendiri, yang penting untuk pembekuan darah.\"",
+            "\"Ini untuk membantu perkembangan tulang bayi agar kuat.\"",
+            "\"Ini adalah prosedur standar yang tidak terlalu penting.\""
+        ],
+        "answer": 2,
+        "explanation": "Bayi baru lahir memiliki kadar vitamin K yang rendah karena vitamin ini tidak banyak melewati plasenta dan usus bayi belum memiliki bakteri normal untuk memproduksinya. Suntikan vitamin K diberikan secara rutin untuk mencegah Perdarahan Akibat Defisiensi Vitamin K (PDVK), suatu kondisi serius yang dapat menyebabkan perdarahan internal, termasuk di otak."
+    },
+    {
+        "question": "Seorang anak usia 7 tahun dengan riwayat asma menggunakan inhaler albuterol (bronkodilator kerja cepat) untuk serangan akut. Ibu bertanya bagaimana cara mengetahui apakah inhaler masih berisi obat atau sudah kosong. Apa metode yang paling akurat?",
+        "options": [
+            "Menggoyangkan inhaler dan mendengarkan suaranya.",
+            "Merendam inhaler di dalam air untuk melihat apakah mengapung.",
+            "Mencatat setiap kali pemakaian dan membaginya dengan jumlah dosis total.",
+            "Menyemprotkan ke udara untuk melihat apakah ada kabut yang keluar.",
+            "Menimbangnya dengan timbangan dapur."
+        ],
+        "answer": 2,
+        "explanation": "Metode mengapungkan di air atau menggoyangkan tidak akurat karena propelan bisa masih ada meskipun obat sudah habis. Cara yang paling dapat diandalkan adalah dengan melacak jumlah dosis yang telah digunakan. Banyak inhaler modern sekarang dilengkapi dengan penghitung dosis (dose counter) bawaan. Jika tidak ada, orang tua harus mencatat setiap pemakaian."
+    },
+    {
+        "question": "Seorang balita usia 2,5 tahun dirawat di rumah sakit. Anak tersebut terus-menerus mengatakan \"tidak\" terhadap semua tawaran (makan, minum, main), dan ingin melakukan semuanya sendiri. Perilaku ini normal dan mencerminkan kebutuhan perkembangan anak untuk mencapai apa?",
+        "options": [
+            "Kepercayaan (Trust)",
+            "Otonomi (Autonomy)",
+            "Inisiatif (Initiative)",
+            "Industri (Industry)",
+            "Identitas (Identity)"
+        ],
+        "answer": 1,
+        "explanation": "Anak usia balita (1-3 tahun) berada dalam tahap perkembangan Otonomi vs. Ragu-ragu (Autonomy vs. Shame and Doubt) menurut Erikson. Perilaku negativisme (mengatakan \"tidak\") dan keinginan untuk mandiri adalah cara anak untuk menegaskan otonomi dan kontrol atas dirinya dan lingkungannya. Ini adalah bagian yang normal dari perkembangan."
+    },
+    {
+        "question": "Seorang anak laki-laki usia 9 tahun didiagnosis menderita Hemofilia B. Perawat menjelaskan kepada orang tuanya bahwa kondisi ini disebabkan oleh kekurangan faktor pembekuan darah yang mana?",
+        "options": [
+            "Faktor VIII",
+            "Faktor IX",
+            "Faktor XI",
+            "Faktor von Willebrand",
+            "Faktor V"
+        ],
+        "answer": 1,
+        "explanation": "Hemofilia adalah kelainan perdarahan genetik. Hemofilia A disebabkan oleh defisiensi Faktor VIII, sedangkan Hemofilia B (juga dikenal sebagai penyakit Christmas) disebabkan oleh defisiensi Faktor IX. Keduanya diturunkan secara X-linked resesif."
+    },
+    {
+        "question": "Seorang anak usia 4 tahun akan menjalani miringotomi dengan pemasangan tuba timpanostomi karena otitis media efusi kronis. Apa tujuan utama dari prosedur ini?",
+        "options": [
+            "Untuk menghilangkan rasa sakit secara permanen.",
+            "Untuk memperbaiki bentuk daun telinga.",
+            "Untuk mengangkat gendang telinga yang rusak.",
+            "Untuk memungkinkan drainase cairan dari telinga tengah dan menyamakan tekanan.",
+            "Untuk membersihkan kotoran telinga yang menumpuk."
+        ],
+        "answer": 3,
+        "explanation": "Miringotomi adalah sayatan kecil pada gendang telinga (membran timpani). Pemasangan tuba (grommet) bertujuan untuk menjaga sayatan tetap terbuka, memungkinkan cairan yang terperangkap di telinga tengah untuk mengalir keluar dan menyamakan tekanan udara antara telinga tengah dan dunia luar. Ini membantu mencegah infeksi berulang dan memperbaiki pendengaran."
+    },
+    {
+        "question": "Seorang anak usia 6 tahun dirawat dengan diagnosis Sindrom Nefrotik. Anak tersebut mengalami edema anasarka. Intervensi keperawatan apa yang paling penting untuk integritas kulit?",
+        "options": [
+            "Memberikan kompres hangat pada area yang bengkak.",
+            "Menganjurkan anak untuk banyak bergerak.",
+            "Mengubah posisi secara teratur dan menjaga kulit tetap kering dan bersih.",
+            "Membatasi asupan protein dalam diet.",
+            "Menggunakan plester yang kuat untuk menahan infus."
+        ],
+        "answer": 2,
+        "explanation": "Kulit yang edema sangat rapuh dan rentan terhadap kerusakan dan infeksi. Intervensi penting meliputi mengubah posisi setiap 2 jam untuk mengurangi tekanan, menjaga kebersihan dan kekeringan kulit, serta mengangkat ekstremitas yang bengkak untuk membantu mengurangi edema. Diet pada sindrom nefrotik biasanya rendah garam, dan pembatasan protein tidak selalu dilakukan."
+    },
+    {
+        "question": "Seorang remaja putri usia 15 tahun mengeluh kepada perawat sekolah bahwa ia merasa sangat lelah, berat badannya naik, kulitnya kering, dan ia merasa kedinginan sepanjang waktu, padahal teman-temannya tidak. Gejala-gejala ini paling konsisten dengan kondisi endokrin apa?",
+        "options": [
+            "Hipertiroidisme",
+            "Hipotiroidisme",
+            "Diabetes Melitus Tipe 1",
+            "Sindrom Cushing",
+            "Penyakit Addison"
+        ],
+        "answer": 1,
+        "explanation": "Kelelahan, kenaikan berat badan, intoleransi dingin, dan kulit kering adalah gejala klasik dari hipotiroidisme, yaitu kondisi di mana kelenjar tiroid tidak menghasilkan cukup hormon tiroid. Hal ini menyebabkan metabolisme tubuh melambat."
+    },
+    {
+        "question": "Seorang bayi usia 3 hari yang lahir prematur pada usia kehamilan 32 minggu mengalami kesulitan bernapas, dengan takipnea, grunting (merintih), dan retraksi dinding dada. Rontgen dada menunjukkan gambaran 'ground-glass appearance'. Kondisi ini paling khas untuk:",
+        "options": [
+            "Pneumonia aspirasi mekonium",
+            "Respiratory Distress Syndrome (RDS)",
+            "Transient Tachypnea of the Newborn (TTN)",
+            "Pneumotoraks",
+            "Hernia diafragmatika"
+        ],
+        "answer": 1,
+        "explanation": "Respiratory Distress Syndrome (RDS), atau penyakit membran hialin, disebabkan oleh defisiensi surfaktan pada paru-paru bayi prematur. Hal ini menyebabkan atelektasis (kolaps alveoli), yang menimbulkan gejala distres pernapasan berat dan gambaran rontgen 'ground-glass' yang khas."
+    },
+    {
+        "question": "Seorang anak usia 5 tahun mengalami luka bakar pada seluruh lengan kanannya dan bagian depan dadanya. Menggunakan 'Rule of Nines' yang dimodifikasi untuk anak-anak, berapa perkiraan persentase luas permukaan tubuh (TBSA) yang terbakar?",
+        "options": [
+            "9%",
+            "18%",
+            "27%",
+            "36%",
+            "45%"
+        ],
+        "answer": 2,
+        "explanation": "Pada 'Rule of Nines' untuk anak, seluruh lengan dihitung 9%. Bagian depan dada (anterior trunk) dihitung 18%. Jadi, total luas permukaan tubuh yang terbakar adalah 9% (lengan) + 18% (dada) = 27%. Penting diingat bahwa pada anak, kepala dihitung lebih besar (sekitar 18%) dan kaki lebih kecil daripada dewasa."
+    },
+    {
+        "question": "Seorang perawat sedang mengobservasi interaksi antara ibu dan bayinya yang berusia 2 bulan. Perawat melihat ibu tersenyum dan berbicara kepada bayinya, dan bayi merespon dengan tersenyum kembali dan mengeluarkan suara 'cooing'. Interaksi ini disebut sebagai:",
+        "options": [
+            "Keterikatan (Attachment)",
+            "Temperamen",
+            "Refleks Moro",
+            "Regulasi diri",
+            "Perkembangan kognitif"
+        ],
+        "answer": 0,
+        "explanation": "Keterikatan atau 'attachment' adalah ikatan emosional dua arah yang kuat antara bayi dan pengasuhnya. Proses ini dibangun melalui interaksi yang responsif dan timbal balik, seperti kontak mata, senyuman, dan vokalisasi. Ini adalah dasar untuk perkembangan emosional dan sosial yang sehat."
+    },
+    {
+        "question": "Seorang anak usia 4 tahun menolak untuk makan sayuran. Strategi apa yang paling tepat yang dapat disarankan perawat kepada orang tua?",
+        "options": [
+            "Memaksa anak untuk menghabiskan semua sayuran di piringnya.",
+            "Menghukum anak jika tidak mau makan sayur.",
+            "Menawarkan sayuran berulang kali dengan cara yang menarik, misalnya dibentuk lucu atau disajikan dengan saus celup favorit.",
+            "Menghilangkan sayuran dari menu makanan anak sama sekali.",
+            "Memberikan suplemen vitamin sebagai pengganti sayuran."
+        ],
+        "answer": 2,
+        "explanation": "Neofobia makanan (ketakutan pada makanan baru) adalah hal yang umum pada anak usia prasekolah. Strategi terbaik adalah dengan pendekatan yang positif dan tanpa paksaan. Menawarkan makanan baru atau yang tidak disukai berulang kali (bisa sampai 10-15 kali) dengan cara yang menyenangkan dapat meningkatkan penerimaan anak. Melibatkan anak dalam persiapan makanan juga bisa membantu."
+    },
+    {
+        "question": "Seorang anak usia 8 tahun dibawa ke UGD setelah jatuh dari sepeda. Anak tidak memakai helm dan kepalanya terbentur aspal. Awalnya anak sadar, namun 30 menit kemudian ia menjadi mengantuk dan muntah. Perawat harus waspada terhadap kemungkinan cedera apa?",
+        "options": [
+            "Gegar otak ringan (mild concussion)",
+            "Fraktur klavikula",
+            "Perdarahan epidural",
+            "Luka lecet pada lutut",
+            "Keseleo pergelangan tangan"
+        ],
+        "answer": 2,
+        "explanation": "Pola klasik dari perdarahan epidural adalah adanya periode sadar (lucid interval) setelah trauma kepala awal, yang kemudian diikuti oleh penurunan kesadaran yang cepat, sakit kepala, dan muntah. Ini adalah keadaan darurat bedah saraf yang memerlukan intervensi segera."
+    },
+    {
+        "question": "Seorang anak usia 12 tahun dengan obesitas didiagnosis menderita Slipped Capital Femoral Epiphysis (SCFE). Anak tersebut mengeluh nyeri di area mana yang paling khas?",
+        "options": [
+            "Punggung bawah",
+            "Pergelangan kaki",
+            "Bahu",
+            "Pangkal paha, paha, atau lutut",
+            "Leher"
+        ],
+        "answer": 3,
+        "explanation": "SCFE adalah kondisi di mana kepala femur (tulang paha) tergelincir dari lempeng pertumbuhannya. Ini sering terjadi pada remaja yang mengalami obesitas selama masa percepatan pertumbuhan. Gejala yang paling umum adalah nyeri yang tumpul dan pegal di area pangkal paha, yang bisa menjalar ke paha bagian depan hingga ke lutut."
+    },
+    {
+        "question": "Seorang anak usia 3 tahun dengan penyakit Hirschsprung akan menjalani operasi pull-through. Perawat menjelaskan kepada orang tua bahwa penyakit ini disebabkan oleh masalah apa?",
+        "options": [
+            "Adanya penyumbatan usus oleh cacing",
+            "Alergi terhadap protein susu",
+            "Tidak adanya sel-sel saraf (ganglion) di bagian usus besar",
+            "Infeksi virus pada saluran pencernaan",
+            "Kelainan pada katup lambung"
+        ],
+        "answer": 2,
+        "explanation": "Penyakit Hirschsprung (megakolon kongenital) adalah kelainan bawaan yang ditandai dengan tidak adanya sel-sel ganglion saraf di segmen distal usus besar. Tanpa sel-sel saraf ini, usus tidak dapat melakukan gerakan peristaltik, yang menyebabkan obstruksi fungsional dan penumpukan feses."
+    },
+    {
+        "question": "Seorang anak usia 10 tahun akan menerima transfusi darah Packed Red Cells (PRC). Perawat telah melakukan verifikasi produk darah dengan perawat lain dan memeriksa tanda-tanda vital awal. Apa tindakan selanjutnya yang paling penting sebelum memulai transfusi?",
+        "options": [
+            "Memanaskan kantong darah di microwave",
+            "Memberikan obat demam untuk pencegahan",
+            "Memastikan akses intravena paten dengan memberikan infus Normal Saline (NaCl 0.9%)",
+            "Memberikan transfusi secepat mungkin dalam 15 menit",
+            "Mencampur produk darah dengan larutan Dextrose 5%"
+        ],
+        "answer": 2,
+        "explanation": "Sebelum memulai transfusi, sangat penting untuk memastikan jalur IV berfungsi dengan baik. Darah hanya kompatibel dengan Normal Saline (NaCl 0.9%). Larutan lain, terutama yang mengandung dekstrosa atau kalsium, dapat menyebabkan hemolisis atau penggumpalan. Transfusi harus dimulai perlahan selama 15 menit pertama untuk memantau reaksi."
+    },
+    {
+        "question": "Perawat sedang melakukan pemeriksaan fisik pada bayi baru lahir. Saat paha bayi diabduksikan (dibuka ke samping), perawat merasakan atau mendengar bunyi 'klik'. Tanda ini dikenal sebagai:",
+        "options": [
+            "Tanda Kernig",
+            "Tanda Chadwick",
+            "Tanda Ortolani",
+            "Refleks Babinski",
+            "Tanda Chvostek"
+        ],
+        "answer": 2,
+        "explanation": "Tanda Ortolani adalah manuver yang digunakan untuk memeriksa adanya Developmental Dysplasia of the Hip (DDH) pada bayi. Bunyi atau sensasi 'klik' atau 'clunk' yang dirasakan saat paha diabduksikan menunjukkan bahwa kepala femur yang terdislokasi berhasil masuk kembali ke dalam asetabulum. Ini adalah tanda positif untuk DDH."
+    },
+    {
+        "question": "Seorang anak usia 9 tahun dirawat karena demam dan nyeri perut. Hasil laboratorium menunjukkan peningkatan kadar amilase dan lipase serum. Anak tersebut kemungkinan besar menderita:",
+        "options": [
+            "Hepatitis",
+            "Apendisitis",
+            "Pankreatitis akut",
+            "Gastroenteritis",
+            "Kolesistitis"
+        ],
+        "answer": 2,
+        "explanation": "Amilase dan lipase adalah enzim yang diproduksi oleh pankreas. Peningkatan kadar kedua enzim ini secara signifikan di dalam darah merupakan penanda biokimia utama untuk pankreatitis akut, yaitu peradangan pada pankreas."
+    },
+    {
+        "question": "Seorang anak perempuan usia 7 tahun dirawat karena luka bakar. Perawat perlu menilai status hidrasi anak. Indikator apa yang paling dapat diandalkan untuk menilai kecukupan perfusi organ dan resusitasi cairan pada anak?",
+        "options": [
+            "Rasa haus",
+            "Turgor kulit",
+            "Frekuensi denyut jantung",
+            "Produksi urin per jam",
+            "Warna membran mukosa"
+        ],
+        "answer": 3,
+        "explanation": "Meskipun semua pilihan adalah bagian dari penilaian hidrasi, produksi urin (urine output) adalah indikator yang paling objektif dan dapat diandalkan untuk menilai perfusi ginjal dan kecukupan volume sirkulasi. Pada anak, target produksi urin yang adekuat adalah 1-2 mL/kg/jam."
+    },
+    {
+        "question": "Seorang bayi usia 2 minggu dibawa ke klinik karena menangis terus menerus dan pada mulutnya terdapat bercak-bercak putih seperti sisa susu yang sulit dihilangkan. Kondisi ini kemungkinan besar adalah:",
+        "options": [
+            "Sisa susu formula biasa",
+            "Herpes simpleks",
+            "Kandidiasis oral (Thrush)",
+            "Leukoplakia",
+            "Gigi yang akan tumbuh"
+        ],
+        "answer": 2,
+        "explanation": "Bercak putih krem yang menyerupai dadih susu, melekat pada lidah dan mukosa mulut, dan dapat berdarah jika dihilangkan adalah gambaran klasik dari kandidiasis oral (thrush), yaitu infeksi jamur oleh Candida albicans. Ini umum terjadi pada bayi dan seringkali diobati dengan antijamur topikal seperti nistatin."
+    },
+    {
+        "question": "Seorang anak usia 6 tahun akan menjalani pungsi lumbal untuk menyingkirkan kemungkinan meningitis. Posisi apa yang paling tepat untuk anak selama prosedur?",
+        "options": [
+            "Telentang dengan kepala diekstensikan",
+            "Tengkurap dengan bantal di bawah perut",
+            "Berbaring miring ke samping dengan lutut ditarik ke arah dada (posisi fetal)",
+            "Duduk tegak dengan kaki menjuntai",
+            "Posisi Trendelenburg"
+        ],
+        "answer": 2,
+        "explanation": "Untuk pungsi lumbal, pasien diposisikan berbaring miring dengan punggung melengkung (seperti huruf C) dan lutut ditarik ke dada. Posisi ini memaksimalkan pembukaan ruang di antara vertebra lumbal, sehingga memudahkan jarum untuk masuk ke ruang subaraknoid."
+    },
+    {
+        "question": "Seorang anak laki-laki usia 5 tahun didiagnosis menderita Duchenne Muscular Dystrophy (DMD). Tanda awal apa yang sering digunakan untuk skrining kondisi ini?",
+        "options": [
+            "Tanda Ortolani",
+            "Tanda Gowers",
+            "Tanda Brudzinski",
+            "Tanda Cullen",
+            "Tanda Trousseau"
+        ],
+        "answer": 1,
+        "explanation": "Tanda Gowers adalah manuver khas yang dilakukan oleh anak-anak dengan kelemahan otot panggul dan proksimal, seperti pada DMD. Anak akan menggunakan tangan dan lengannya untuk 'memanjat' tubuhnya sendiri dari posisi jongkok ke posisi berdiri. Ini adalah tanda kompensasi untuk kelemahan otot."
+    },
+    {
+        "question": "Seorang anak usia 4 tahun dirawat dengan diare berat. Hasil analisis gas darah menunjukkan pH 7.28, PaCO2 30 mmHg, dan HCO3 14 mEq/L. Bagaimana interpretasi hasil AGD ini?",
+        "options": [
+            "Asidosis respiratorik terkompensasi",
+            "Alkalosis metabolik tidak terkompensasi",
+            "Asidosis metabolik dengan kompensasi respiratorik parsial",
+            "Alkalosis respiratorik",
+            "Hasil gas darah normal"
+        ],
+        "answer": 2,
+        "explanation": "pH 7.28 menunjukkan asidosis. HCO3 14 mEq/L (rendah) menunjukkan penyebabnya adalah metabolik. PaCO2 30 mmHg (rendah) menunjukkan adanya upaya kompensasi dari sistem pernapasan (dengan bernapas lebih cepat untuk membuang CO2). Karena pH belum kembali normal, ini adalah asidosis metabolik terkompensasi sebagian."
+    },
+    {
+        "question": "Seorang bayi laki-laki lahir dengan hipospadia, di mana meatus uretra terletak di sisi ventral (bawah) penis. Apa intervensi penting yang harus dihindari pada bayi ini?",
+        "options": [
+            "Pemberian imunisasi Hepatitis B",
+            "Sirkumsisi (sunat)",
+            "Pemasangan popok",
+            "Pemberian ASI",
+            "Pengukuran lingkar kepala"
+        ],
+        "answer": 1,
+        "explanation": "Sirkumsisi atau sunat merupakan kontraindikasi pada bayi dengan hipospadia. Kulup (prepusium) yang biasanya dihilangkan saat sirkumsisi akan dibutuhkan oleh ahli bedah urologi untuk digunakan dalam prosedur rekonstruksi (uretroplasti) untuk memperbaiki hipospadia di kemudian hari."
+    },
+    {
+        "question": "Seorang anak usia 7 tahun dibawa ke klinik karena sering mengompol pada malam hari (enuresis nokturnal primer). Setelah menyingkirkan penyebab organik, apa saran awal yang dapat diberikan perawat kepada keluarga?",
+        "options": [
+            "Menghukum anak setiap kali mengompol",
+            "Membangunkan anak setiap jam sepanjang malam untuk buang air kecil",
+            "Membatasi asupan cairan setelah makan malam dan memastikan anak BAK sebelum tidur",
+            "Segera memulai terapi obat dengan desmopressin",
+            "Menyarankan penggunaan popok sampai remaja"
+        ],
+        "answer": 2,
+        "explanation": "Pendekatan awal untuk enuresis primer adalah intervensi perilaku. Ini termasuk membatasi cairan di malam hari, menghindari minuman berkafein, dan yang terpenting, memastikan anak mengosongkan kandung kemihnya tepat sebelum tidur. Pendekatan yang positif dan mendukung sangat penting; menghukum anak akan kontraproduktif."
+    },
+    {
+        "question": "Seorang anak usia 11 tahun dirawat dengan gagal ginjal kronis dan menjalani hemodialisis. Diet apa yang paling sesuai untuk anak ini?",
+        "options": [
+            "Diet tinggi kalium, tinggi natrium, dan tinggi fosfor",
+            "Diet rendah protein, rendah kalium, dan pembatasan cairan",
+            "Diet bebas gluten dan bebas kasein",
+            "Diet tinggi cairan untuk membilas ginjal",
+            "Diet tanpa batasan apa pun"
+        ],
+        "answer": 1,
+        "explanation": "Pada gagal ginjal kronis, ginjal tidak dapat secara efektif membuang produk sisa dan elektrolit. Oleh karena itu, diet biasanya mencakup pembatasan protein (untuk mengurangi beban urea), pembatasan natrium (untuk mengontrol tekanan darah dan edema), pembatasan kalium dan fosfor (untuk mencegah hiperkalemia dan penyakit tulang), serta pembatasan asupan cairan."
+    },
+    {
+        "question": "Seorang bayi perempuan lahir dengan spina bifida jenis meningomielokel. Apa prioritas keperawatan segera setelah lahir?",
+        "options": [
+            "Memberikan bayi mandi pertama",
+            "Menutup kantung defek dengan kassa steril yang dibasahi larutan salin normal",
+            "Memposisikan bayi telentang untuk kenyamanan",
+            "Memakaikan popok dengan rapat",
+            "Mendorong orang tua untuk segera menggendong bayi"
+        ],
+        "answer": 1,
+        "explanation": "Prioritas utama adalah melindungi kantung meningomielokel yang terpapar dari cedera, infeksi, dan kekeringan. Kantung harus segera ditutup dengan kasa steril yang lembab (dibasahi NaCl 0.9%) dan bayi diposisikan tengkurap (prone) untuk menghindari tekanan pada defek. Popok tidak dipasang untuk mencegah kontaminasi feses."
+    },
+    {
+        "question": "Seorang anak usia 5 tahun tidak sengaja menyentuh panci panas dan mengalami luka bakar derajat dua pada telapak tangannya. Apa tindakan pertolongan pertama yang paling tepat?",
+        "options": [
+            "Mengoleskan mentega atau pasta gigi pada luka",
+            "Memecahkan lepuhan yang terbentuk",
+            "Mendinginkan area luka dengan mengalirkannya di bawah air sejuk selama 10-20 menit",
+            "Merendam tangan dalam air es",
+            "Menutup luka dengan kapas"
+        ],
+        "answer": 2,
+        "explanation": "Pertolongan pertama pada luka bakar termal adalah segera menghentikan proses pembakaran dengan mendinginkan area tersebut. Cara terbaik adalah dengan mengalirkan air sejuk (bukan air es, karena dapat menyebabkan kerusakan jaringan lebih lanjut) selama 10-20 menit. Setelah itu, tutup dengan kain bersih atau kassa steril. Lepuhan tidak boleh dipecahkan."
+    },
+    {
+        "question": "Perawat sedang menilai tanda-tanda dehidrasi pada seorang bayi berusia 6 bulan. Manakah tanda yang paling spesifik dan dapat diandalkan untuk dehidrasi sedang hingga berat?",
+        "options": [
+            "Bayi tampak rewel",
+            "Penurunan berat badan akut",
+            "Mulut sedikit kering",
+            "Jumlah popok basah berkurang sedikit",
+            "Tangan dan kaki yang dingin"
+        ],
+        "answer": 1,
+        "explanation": "Penurunan berat badan akut adalah indikator paling objektif dan kuantitatif untuk menentukan derajat dehidrasi. Penurunan 5-9% dari berat badan awal menunjukkan dehidrasi sedang, dan penurunan ≥10% menunjukkan dehidrasi berat. Tanda-tanda lain bersifat lebih subjektif."
+    },
+    {
+        "question": "Seorang anak perempuan usia 8 tahun didiagnosis menderita Skabies. Selain memberikan obat topikal, edukasi apa yang penting diberikan kepada keluarga untuk mencegah penularan dan reinfestasi?",
+        "options": [
+            "Hanya anak yang terinfeksi yang perlu diobati",
+            "Tidak perlu membersihkan rumah karena tungau tidak hidup di luar tubuh",
+            "Semua anggota keluarga dan kontak dekat harus diobati secara bersamaan",
+            "Pakaian dan sprei cukup dijemur di bawah sinar matahari",
+            "Anak harus diisolasi total selama 1 bulan"
+        ],
+        "answer": 2,
+        "explanation": "Skabies sangat menular. Untuk memutus rantai penularan, semua anggota keluarga dan orang yang memiliki kontak kulit-ke-kulit yang erat harus diobati pada saat yang sama, bahkan jika mereka belum menunjukkan gejala. Pakaian, sprei, dan handuk yang digunakan dalam 3 hari terakhir harus dicuci dengan air panas dan dikeringkan dengan suhu tinggi."
+    },
+    {
+        "question": "Seorang anak usia 3 tahun dengan riwayat penyakit jantung bawaan sianotik menunjukkan clubbing (jari tabuh) pada kuku jari tangan dan kakinya. Perawat memahami bahwa clubbing ini disebabkan oleh:",
+        "options": [
+            "Kelebihan kalsium dalam darah",
+            "Infeksi jamur pada kuku",
+            "Hipoksia kronis",
+            "Efek samping dari obat jantung",
+            "Kekurangan zat besi"
+        ],
+        "answer": 2,
+        "explanation": "Clubbing adalah penebalan jaringan lunak di bawah dasar kuku, yang menyebabkan kuku tampak lebih cembung. Ini adalah tanda klasik dari hipoksia kronis (kekurangan oksigen dalam darah dalam jangka waktu lama), yang sering ditemukan pada pasien dengan penyakit jantung bawaan sianotik atau penyakit paru kronis."
+    },
+    {
+        "question": "Seorang anak laki-laki usia 10 tahun dengan riwayat alergi berat terhadap sengatan lebah, secara tidak sengaja tersengat saat bermain di taman. Anak tersebut memiliki resep EpiPen (auto-injector epinefrin). Di manakah lokasi penyuntikan EpiPen yang benar?",
+        "options": [
+            "Otot deltoid (lengan atas)",
+            "Secara intravena",
+            "Otot gluteus (bokong)",
+            "Bagian anterolateral paha (otot vastus lateralis)",
+            "Di bawah lidah (sublingual)"
+        ],
+        "answer": 3,
+        "explanation": "EpiPen dirancang untuk disuntikkan secara intramuskular ke bagian tengah luar paha (otot vastus lateralis). Suntikan dapat diberikan bahkan melalui pakaian jika dalam keadaan darurat. Lokasi ini memungkinkan penyerapan obat yang cepat dan efektif."
+    },
+    {
+        "question": "Seorang anak usia 2 tahun ditemukan oleh ibunya sedang memegang botol pembersih lantai yang terbuka. Mulut anak berbau bahan kimia. Apa tindakan pertama yang harus dilakukan oleh ibu?",
+        "options": [
+            "Memberikan anak segelas susu untuk menetralkan racun",
+            "Mencoba membuat anak muntah dengan memasukkan jari ke tenggorokannya",
+            "Segera menelepon pusat informasi keracunan atau membawa anak ke UGD",
+            "Memberikan arang aktif yang dibeli di apotek",
+            "Menunggu dan melihat apakah ada gejala yang muncul"
+        ],
+        "answer": 2,
+        "explanation": "Jika terjadi keracunan, tindakan pertama adalah mencari bantuan medis profesional sesegera mungkin dengan menelepon pusat informasi keracunan atau UGD. Jangan pernah mencoba membuat anak muntah, terutama jika menelan zat korosif (seperti pembersih lantai), karena dapat menyebabkan kerusakan ulang pada esofagus. Jangan memberikan apa pun melalui mulut kecuali diinstruksikan oleh petugas medis."
+    },
 {
 "question": "Seorang perempuan berusia 16 tahun datang ke Rumah Sakit dengan keluhan batuk . Keluhan yang menyertai demam, dan penurunan nafsu akan. Hasil pemeriksaan fisik ditemukan: batuk produktif terutama pada pagi hari, hipersonor dan wheezing. Masalah keperawatan yang diangkat adalah bersihan jalan napas tidak efektif. Intervensi yang diberikan adalah ajarkan cara batuk efektif. Apakah rasional dari intervensi tersebut?",
 "options": [
