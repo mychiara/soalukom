@@ -4,15 +4,15 @@ import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from
 import { getDatabase, ref, onValue, set, get, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
 // Konfigurasi Firebase Anda (SAMA SEPERTI SEBELUMNYA)
-const firebaseConfig = {
-    apiKey: "GANTI_DENGAN_API_KEY_ANDA",
-    authDomain: "GANTI_DENGAN_AUTH_DOMAIN_ANDA",
-    databaseURL: "GANTI_DENGAN_DATABASE_URL_ANDA",
-    projectId: "GANTI_DENGAN_PROJECT_ID_ANDA",
-    storageBucket: "GANTI_DENGAN_STORAGE_BUCKET_ANDA",
-    messagingSenderId: "GANTI_DENGAN_MESSAGING_SENDER_ID_ANDA",
-    appId: "GANTI_DENGAN_APP_ID_ANDA"
-};
+      const firebaseConfig = {
+        apiKey: "AIzaSyDnJvECVfNJIXPh9rZTsA3QcHQaTiE4Awc", // GANTI DENGAN API KEY ANDA
+        authDomain: "apodaca-bessie4762.firebaseapp.com", // GANTI DENGAN AUTH DOMAIN ANDA
+        databaseURL: "https://apodaca-bessie4762.firebaseio.com", // GANTI DENGAN DATABASE URL ANDA (jika menggunakan Realtime DB)
+        projectId: "apodaca-bessie4762", // GANTI DENGAN PROJECT ID ANDA
+        storageBucket: "apodaca-bessie4762.firebasestorage.app", // GANTI DENGAN STORAGE BUCKET ANDA
+        messagingSenderId: "809433417541", // GANTI DENGAN MESSAGING SENDER ID ANDA
+        appId: "1:809433417541:web:48632b970a90840ab1602c" // GANTI DENGAN APP ID ANDA
+      };
 
 // Inisialisasi Firebase
 const app = initializeApp(firebaseConfig);
