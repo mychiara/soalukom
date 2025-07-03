@@ -78,6 +78,7 @@ function listenToLicenses() {
         loadingIndicator.classList.add('hidden');
         if (snapshot.empty) {
             licensesTbody.innerHTML = '<tr><td colspan="5">Belum ada data lisensi.</td></tr>';
+            updateStats([]); // Update stats to zero
             return;
         }
 
@@ -94,9 +95,43 @@ function listenToLicenses() {
             return timeB - timeA; // Newest first
         });
 
+        updateStats(licensesData); // [BARU] Panggil fungsi untuk update statistik
         renderTable(licensesData);
     });
 }
+
+// --- [BARU] Stats Calculation Logic ---
+function updateStats(licenses) {
+    let online = 0;
+    let idle = 0;
+    let offline = 0;
+    let disabled = 0;
+
+    licenses.forEach(license => {
+        const status = getLicenseStatus(license);
+        switch (status.text) {
+            case 'Online':
+                online++;
+                break;
+            case 'Idle':
+                idle++;
+                break;
+            case 'Offline':
+                offline++;
+                break;
+            case 'Disabled':
+                disabled++;
+                break;
+        }
+    });
+
+    document.getElementById('stats-online-count').textContent = online;
+    document.getElementById('stats-idle-count').textContent = idle;
+    document.getElementById('stats-offline-count').textContent = offline;
+    document.getElementById('stats-disabled-count').textContent = disabled;
+    document.getElementById('stats-total-count').textContent = licenses.length;
+}
+
 
 // --- UI Rendering ---
 function renderTable(licenses) {
@@ -107,19 +142,25 @@ function renderTable(licenses) {
         const status = getLicenseStatus(license);
         const lastSeen = license.lastSeenAt ? license.lastSeenAt.toDate().toLocaleString('id-ID') : 'Belum Pernah';
 
+        // [DIPERBARUI] Mengganti tombol teks dengan tombol ikon yang lebih modern
         row.innerHTML = `
             <td><span class="status-badge ${status.className}">${status.text}</span></td>
             <td>${license.id}</td>
             <td>${license.userName || '<i>Belum diatur</i>'}</td>
             <td>${lastSeen}</td>
             <td class="action-buttons">
-                <button class="btn-${license.active ? 'warning' : 'success'} toggle-active-btn" data-id="${license.id}" data-active="${license.active}">
-                    ${license.active ? 'Deactivate' : 'Reactivate'}
+                 <button class="btn btn-warning toggle-active-btn" data-id="${license.id}" data-active="${license.active}" title="${license.active ? 'Nonaktifkan Lisensi' : 'Aktifkan Kembali'}">
+                    ${license.active 
+                        ? `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" /></svg>` 
+                        : `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>`
+                    }
                 </button>
-                <button class="btn-primary reset-session-btn" data-id="${license.id}" ${!license.activeSessionId ? 'disabled' : ''}>
-                    Reset Sesi
+                <button class="btn btn-warning reset-session-btn" data-id="${license.id}" title="Reset Sesi" ${!license.activeSessionId ? 'disabled' : ''}>
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.664 0M2.985 19.644A8.25 8.25 0 0114.65 8.006m0 0L11.468 4.823M14.65 8.006V13.5" /></svg>
                 </button>
-                <button class="btn-danger delete-btn" data-id="${license.id}">Hapus</button>
+                <button class="btn btn-danger delete-btn" data-id="${license.id}" title="Hapus Lisensi">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" /></svg>
+                </button>
             </td>
         `;
 
@@ -147,8 +188,9 @@ function getLicenseStatus(license) {
 function addTableEventListeners() {
     licensesTbody.querySelectorAll('.toggle-active-btn').forEach(button => {
         button.addEventListener('click', async (e) => {
-            const id = e.target.dataset.id;
-            const currentStatus = e.target.dataset.active === 'true';
+            const btn = e.currentTarget;
+            const id = btn.dataset.id;
+            const currentStatus = btn.dataset.active === 'true';
             const docRef = doc(db, "licenses", id);
             try {
                 await updateDoc(docRef, { active: !currentStatus });
@@ -161,7 +203,8 @@ function addTableEventListeners() {
 
     licensesTbody.querySelectorAll('.reset-session-btn').forEach(button => {
         button.addEventListener('click', async (e) => {
-            const id = e.target.dataset.id;
+            const btn = e.currentTarget;
+            const id = btn.dataset.id;
             if (!confirm(`Anda yakin ingin mereset sesi untuk lisensi ${id}? Ini akan memaksa pengguna untuk logout.`)) return;
             
             const docRef = doc(db, "licenses", id);
@@ -179,7 +222,8 @@ function addTableEventListeners() {
 
     licensesTbody.querySelectorAll('.delete-btn').forEach(button => {
         button.addEventListener('click', async (e) => {
-            const id = e.target.dataset.id;
+            const btn = e.currentTarget;
+            const id = btn.dataset.id;
             if (!confirm(`PERINGATAN: Anda yakin ingin menghapus lisensi ${id} secara permanen? Aksi ini tidak bisa dibatalkan.`)) return;
 
             const docRef = doc(db, "licenses", id);
