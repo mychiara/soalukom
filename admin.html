@@ -286,61 +286,77 @@
         .status-disabled { background-color: #fee2e2; color: #991b1b; border-color: #fecaca; }
         .status-disabled::before { background-color: var(--status-disabled); }
 
-        /* --- Tombol Aksi Baru yang Lebih Cantik --- */
+
+        /* --- Gaya Tombol Aksi Modern & Elegan (UPDATED) --- */
         .action-buttons {
             display: flex;
-            gap: 8px; /* Memberi jarak antar tombol */
+            gap: 10px; /* Sedikit lebih banyak ruang */
             align-items: center;
         }
         .action-buttons .btn {
-            /* Override style .btn umum */
+            /* Reset & override style .btn umum */
             padding: 0;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%; /* Membuat tombol menjadi lingkaran */
-            background: transparent; /* Latar belakang transparan */
-            border: 1px solid;
-            box-shadow: none;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%; 
+            background-color: var(--bg-white); /* Latar belakang dasar putih */
+            border: 1px solid var(--border-color); /* Border netral awal */
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04); /* Shadow dasar yang sangat halus */
             text-shadow: none;
-            transition: all 0.25s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            /* Transisi yang lebih halus dan terkontrol */
+            transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out;
         }
         .action-buttons .btn svg {
-            width: 16px;
-            height: 16px;
-            transition: transform 0.3s ease;
+            width: 18px; /* Ikon sedikit lebih besar */
+            height: 18px;
+            transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         .action-buttons .btn:hover {
-            color: var(--text-white);
-            transform: translateY(-3px) scale(1.1);
-            box-shadow: 0 5px 12px -2px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px); /* Efek mengangkat */
+            /* Shadow yang lebih tegas saat hover untuk efek kedalaman */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            color: var(--text-white); /* Warna ikon menjadi putih */
         }
-        
+        .action-buttons .btn:active {
+            transform: translateY(-1px) scale(0.98); /* Efek ditekan */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+        }
+
         /* Tombol Reset (Warning) */
         .action-buttons .btn-warning {
-            border-color: var(--warning-color);
-            color: var(--warning-color);
+            color: var(--warning-hover); /* Warna ikon awal */
+            border-color: #fde68a; /* Warna border awal yang lebih lembut */
         }
         .action-buttons .btn-warning:hover {
-            background-color: var(--warning-color);
-            border-color: var(--warning-color);
+            background-color: var(--warning-color); /* Latar belakang berubah warna */
+            border-color: var(--warning-hover);   /* Border menjadi lebih gelap */
         }
         .action-buttons .btn-warning:hover svg {
-            transform: rotate(360deg); /* Animasi putar untuk reset */
+            transform: rotate(270deg) scale(1.1); /* Animasi putar yang keren */
         }
 
         /* Tombol Hapus (Danger) */
         .action-buttons .btn-danger {
-            border-color: var(--danger-color);
-            color: var(--danger-color);
+            color: var(--danger-hover); /* Warna ikon awal */
+            border-color: #fecaca; /* Warna border awal yang lebih lembut */
         }
         .action-buttons .btn-danger:hover {
-            background-color: var(--danger-color);
-            border-color: var(--danger-color);
+            background-color: var(--danger-color); /* Latar belakang berubah warna */
+            border-color: var(--danger-hover);   /* Border menjadi lebih gelap */
         }
         .action-buttons .btn-danger:hover svg {
-            transform: scale(1.1) rotate(5deg); /* Animasi getar untuk hapus */
+            /* Memicu animasi getar */
+            animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
         }
-        /* --- Akhir dari style Tombol Aksi Baru --- */
+        
+        /* Animasi getar untuk tombol hapus */
+        @keyframes shake {
+            10%, 90% { transform: translate3d(-1px, 0, 0) scale(1.1); }
+            20%, 80% { transform: translate3d(2px, 0, 0) scale(1.1); }
+            30%, 50%, 70% { transform: translate3d(-2px, 0, 0) scale(1.1); }
+            40%, 60% { transform: translate3d(2px, 0, 0) scale(1.1); }
+        }
+        /* --- Akhir dari Gaya Tombol Aksi --- */
 
 
         /* Responsive Styles */
@@ -420,8 +436,8 @@
                             </tr>
                         </thead>
                         <tbody id="licenses-tbody">
-                            <!-- Data akan diisi oleh JavaScript. PENTING: Struktur tombol aksi berubah! -->
-                            <!-- Contoh baris baru dengan tombol ikon:
+                            <!-- Data akan diisi oleh JavaScript. Struktur tombol aksi sekarang menggunakan gaya baru. -->
+                            <!-- Contoh baris baru dengan tombol ikon yang sudah diperbarui:
                             <tr>
                                 <td><span class="status-badge status-online">Aktif</span></td>
                                 <td>CONTOH-KODE-LISENSI-123</td>
