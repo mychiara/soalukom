@@ -77,7 +77,8 @@ function listenToLicenses() {
     onSnapshot(licensesCol, (snapshot) => {
         loadingIndicator.classList.add('hidden');
         if (snapshot.empty) {
-            licensesTbody.innerHTML = '<tr><td colspan="5">Belum ada data lisensi.</td></tr>';
+            // MODIFIED: Update colspan to match the new number of columns (7)
+            licensesTbody.innerHTML = '<tr><td colspan="7">Belum ada data lisensi.</td></tr>';
             return;
         }
 
@@ -107,11 +108,20 @@ function renderTable(licenses) {
         const status = getLicenseStatus(license);
         const lastSeen = license.lastSeenAt ? license.lastSeenAt.toDate().toLocaleString('id-ID') : 'Belum Pernah';
 
+        // NEW: Prepare data for the new columns, with fallback values
+        const registeredUrlDisplay = license.registeredUrl 
+            ? `<a href="${license.registeredUrl}" target="_blank" rel="noopener noreferrer">${license.registeredUrl}</a>` 
+            : '<i>-</i>';
+        const loginCount = license.loginCount || 0;
+
+        // MODIFIED: Updated row HTML to include the new columns
         row.innerHTML = `
             <td><span class="status-badge ${status.className}">${status.text}</span></td>
             <td>${license.id}</td>
             <td>${license.userName || '<i>Belum diatur</i>'}</td>
             <td>${lastSeen}</td>
+            <td>${registeredUrlDisplay}</td>
+            <td>${loginCount}</td>
             <td class="action-buttons">
                 <button class="btn-${license.active ? 'warning' : 'success'} toggle-active-btn" data-id="${license.id}" data-active="${license.active}">
                     ${license.active ? 'Deactivate' : 'Reactivate'}
@@ -209,13 +219,15 @@ addLicenseButton.addEventListener('click', async () => {
     addLicenseButton.disabled = true;
     const docRef = doc(db, "licenses", newKey);
     try {
-        // Gunakan setDoc untuk membuat dokumen baru.
+        // MODIFIED: Add new fields when creating a license
         await setDoc(docRef, {
             active: true,
             activeSessionId: null,
             lastSeenAt: null,
             userName: null,
-            createdAt: serverTimestamp() // Opsional: tambahkan kapan lisensi dibuat
+            createdAt: serverTimestamp(),
+            registeredUrl: null, // NEW: Initialize URL as null
+            loginCount: 0        // NEW: Initialize login count as 0
         });
         showMessage(addLicenseMessage, `Lisensi "${newKey}" berhasil ditambahkan.`, 'success', 3000);
         newLicenseKeyInput.value = '';
