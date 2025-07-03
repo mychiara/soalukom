@@ -1,11 +1,7 @@
 // File: admin.js
 
-// 1. Impor variabel (auth, db) dan fungsi serverTimestamp dari file konfigurasi lokal kita
+// 1. Impor dari file konfigurasi dan SDK Firebase
 import { auth, db } from './firebase-config.js';
-// serverTimestamp tidak digunakan di file ini, jadi bisa dihapus jika tidak ada di firebase-config.js
-// Jika ada, biarkan saja.
-
-// 2. Impor semua fungsi yang dibutuhkan langsung dari SDK Firebase
 import { signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
 import { collection, onSnapshot, doc, getDoc, updateDoc, setDoc, deleteDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
 
@@ -20,8 +16,6 @@ const logoutButton = document.getElementById('logout-button');
 const adminEmailDisplay = document.getElementById('admin-email-display');
 const licensesTbody = document.getElementById('licenses-tbody');
 const loadingIndicator = document.getElementById('loading-indicator');
-
-// Add License Elements
 const newLicenseKeyInput = document.getElementById('new-license-key');
 const addLicenseButton = document.getElementById('add-license-button');
 const addLicenseMessage = document.getElementById('add-license-message');
@@ -33,16 +27,18 @@ const OFFLINE_THRESHOLD = 30 * 60 * 1000; // 30 menit
 // --- Authentication Logic ---
 onAuthStateChanged(auth, user => {
     if (user) {
+        console.log("Admin terautentikasi:", user.email);
         loginView.classList.add('hidden');
         dashboardView.classList.remove('hidden');
         adminEmailDisplay.textContent = user.email;
-        listenToLicenses(); // Mulai mendengarkan data setelah login
-        setupEventListeners(); // Atur event listener utama sekali saja
+        listenToLicenses();
+        setupEventListeners();
     } else {
+        console.log("Admin tidak terautentikasi.");
         loginView.classList.remove('hidden');
         dashboardView.classList.add('hidden');
-        licensesTbody.innerHTML = ''; // Kosongkan tabel saat logout
-        updateStats(0, 0, 0, 0, 0); // Reset statistik
+        licensesTbody.innerHTML = '';
+        updateStats(0, 0, 0, 0, 0); // Reset statistik saat logout
     }
 });
 
@@ -70,53 +66,54 @@ logoutButton.addEventListener('click', () => {
 
 // --- Firestore Real-time Listener ---
 function listenToLicenses() {
+    console.log("Mulai mendengarkan perubahan pada koleksi 'licenses'...");
     const licensesCol = collection(db, "licenses");
     onSnapshot(licensesCol, (snapshot) => {
-        loadingIndicator.classList.add('hidden');
+        // [DEBUG] Log ini akan muncul jika security rules BENAR
+        console.log(`Snapshot diterima dengan ${snapshot.size} dokumen.`);
+        loadingIndicator.classList.add('hidden'); // Sembunyikan loading setelah data diterima
         
         const licensesData = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-
-        // [DIPERBAIKI] Proses data untuk rendering dan perhitungan statistik
         processAndRenderData(licensesData);
         
     }, (error) => {
+        // [DEBUG] Log ini akan muncul jika ada error selain security rules
         console.error("Firestore snapshot error:", error);
-        loadingIndicator.textContent = "Gagal memuat data. Lihat konsol untuk detail.";
+        loadingIndicator.textContent = "Gagal memuat data. Periksa konsol untuk detail.";
     });
 }
 
-// --- [BARU] Fungsi terpusat untuk memproses data, menghitung statistik, dan me-render tabel ---
+// --- Data Processing & Rendering ---
 function processAndRenderData(licenses) {
-    // Inisialisasi penghitung statistik
     let onlineCount = 0, idleCount = 0, offlineCount = 0, disabledCount = 0;
 
     if (licenses.length === 0) {
         licensesTbody.innerHTML = '<tr><td colspan="7" style="text-align:center;">Belum ada data lisensi.</td></tr>';
-        updateStats(0, 0, 0, 0, 0); // Reset stats jika tidak ada data
+        updateStats(0, 0, 0, 0, 0);
         return;
     }
 
-    // Urutkan data: Online dulu, lalu idle, offline, dan disabled. Di dalam tiap grup, urutkan berdasarkan lastSeen terbaru.
-    licenses.sort((a, b) => {
-        const statusA = getLicenseStatus(a);
-        const statusB = getLicenseStatus(b);
-        if (statusA.order !== statusB.order) {
-            return statusA.order - statusB.order;
+    // Gabungkan data dengan statusnya untuk sorting
+    const licensesWithStatus = licenses.map(license => ({
+        ...license,
+        status: getLicenseStatus(license)
+    }));
+    
+    // Urutkan data
+    licensesWithStatus.sort((a, b) => {
+        if (a.status.order !== b.status.order) {
+            return a.status.order - b.status.order;
         }
         const timeA = a.lastSeenAt?.toMillis() || 0;
         const timeB = b.lastSeenAt?.toMillis() || 0;
-        return timeB - timeA; // Terbaru di atas
+        return timeB - timeA;
     });
     
-    // Kosongkan tabel sebelum render
     licensesTbody.innerHTML = '';
 
-    // Loop untuk render baris dan menghitung statistik
-    licenses.forEach(license => {
-        const status = getLicenseStatus(license);
-
-        // Hitung statistik berdasarkan status
-        switch(status.className) {
+    licensesWithStatus.forEach(license => {
+        // Hitung statistik
+        switch(license.status.className) {
             case 'status-online': onlineCount++; break;
             case 'status-idle': idleCount++; break;
             case 'status-offline': offlineCount++; break;
@@ -125,18 +122,17 @@ function processAndRenderData(licenses) {
 
         const lastSeen = license.lastSeenAt ? license.lastSeenAt.toDate().toLocaleString('id-ID', { dateStyle: 'medium', timeStyle: 'short' }) : '-';
         const registeredUrlDisplay = license.registeredUrl ? `<a href="${license.registeredUrl}" target="_blank" rel="noopener noreferrer" title="${license.registeredUrl}">${license.registeredUrl.replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0]}</a>` : '-';
-
-        // [DIPERBAIKI] Render baris dengan tombol ikon yang baru
+        
         const row = `
             <tr>
-                <td><span class="status-badge ${status.className}">${status.text}</span></td>
+                <td><span class="status-badge ${license.status.className}">${license.status.text}</span></td>
                 <td>${license.id}</td>
-                <td>${license.userName || '<i>-</i>'}</td>
+                <td>${license.userName || '-'}</td>
                 <td>${lastSeen}</td>
                 <td>${registeredUrlDisplay}</td>
                 <td>${license.loginCount || 0}</td>
                 <td class="action-buttons">
-                    <button class="btn btn-warning reset-btn" title="Reset Lisensi (hapus pengguna & URL)" data-id="${license.id}">
+                    <button class="btn btn-warning reset-btn" title="Reset Lisensi (hapus pengguna & URL, aktifkan kembali)" data-id="${license.id}">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.664 0M2.985 19.644A8.25 8.25 0 0114.65 8.006m0 0L11.468 4.823M14.65 8.006V13.5" /></svg>
                     </button>
                     <button class="btn btn-danger delete-btn" title="Hapus Lisensi Permanen" data-id="${license.id}">
@@ -148,36 +144,26 @@ function processAndRenderData(licenses) {
         licensesTbody.innerHTML += row;
     });
 
-    // Perbarui kartu statistik dengan data yang sudah dihitung
     updateStats(onlineCount, idleCount, offlineCount, disabledCount, licenses.length);
 }
 
-// [DIPERBAIKI] Fungsi untuk mendapatkan status lisensi dengan definisi yang lebih jelas
 function getLicenseStatus(license) {
-    // Nonaktif (Disabled) adalah prioritas tertinggi
     if (license.isActive === false) {
         return { text: 'Nonaktif', className: 'status-disabled', order: 4 };
     }
-    
-    // Jika tidak ada lastSeen, berarti belum pernah dipakai
     if (!license.lastSeenAt) {
         return { text: 'Offline', className: 'status-offline', order: 3 };
     }
-
-    const lastSeenMs = license.lastSeenAt.toMillis();
-    const now = Date.now();
-    const timeDiff = now - lastSeenMs;
-
-    if (timeDiff < IDLE_THRESHOLD) { // Kurang dari 5 menit
+    const timeDiff = Date.now() - license.lastSeenAt.toMillis();
+    if (timeDiff < IDLE_THRESHOLD) {
         return { text: 'Online', className: 'status-online', order: 1 };
-    } else if (timeDiff < OFFLINE_THRESHOLD) { // Antara 5 dan 30 menit
+    } else if (timeDiff < OFFLINE_THRESHOLD) {
         return { text: 'Idle', className: 'status-idle', order: 2 };
-    } else { // Lebih dari 30 menit
+    } else {
         return { text: 'Offline', className: 'status-offline', order: 3 };
     }
 }
 
-// [BARU] Fungsi untuk memperbarui DOM kartu statistik
 function updateStats(online, idle, offline, disabled, total) {
     document.getElementById('stats-online-count').textContent = online;
     document.getElementById('stats-idle-count').textContent = idle;
@@ -186,20 +172,16 @@ function updateStats(online, idle, offline, disabled, total) {
     document.getElementById('stats-total-count').textContent = total;
 }
 
-
-// [DIPERBAIKI & LEBIH EFISIEN] Event Listener Terpusat untuk semua aksi
+// --- Event Listeners Setup ---
 function setupEventListeners() {
-    // Event listener untuk tombol di tabel (Reset, Hapus)
     licensesTbody.addEventListener('click', async (e) => {
         const button = e.target.closest('button');
-        if (!button) return; // Keluar jika yang diklik bukan tombol
-
+        if (!button) return;
         const id = button.dataset.id;
         if (!id) return;
 
-        // Aksi Hapus Lisensi
         if (button.classList.contains('delete-btn')) {
-            if (!confirm(`PERINGATAN: Anda yakin ingin menghapus lisensi "${id}" secara PERMANEN? Aksi ini tidak bisa dibatalkan.`)) return;
+            if (!confirm(`PERINGATAN: Anda yakin ingin menghapus lisensi "${id}" secara PERMANEN?`)) return;
             try {
                 await deleteDoc(doc(db, "licenses", id));
                 alert(`Lisensi "${id}" berhasil dihapus.`);
@@ -209,24 +191,16 @@ function setupEventListeners() {
             }
         }
 
-        // Aksi Reset Lisensi
         if (button.classList.contains('reset-btn')) {
-            if (!confirm(`Anda yakin ingin MERESET lisensi "${id}"? Ini akan menghapus Nama Pengguna dan URL Terdaftar, mengaktifkan kembali lisensinya jika nonaktif.`)) return;
-            const docRef = doc(db, "licenses", id);
+            if (!confirm(`Anda yakin ingin MERESET lisensi "${id}"? Ini akan menghapus Nama Pengguna dan URL, lalu mengaktifkan lisensinya.`)) return;
             try {
-                // Ambil data `createdAt` dan `loginCount` agar tidak hilang saat reset
-                const docSnap = await getDoc(docRef);
-                const existingData = docSnap.data();
-
+                const docRef = doc(db, "licenses", id);
                 await updateDoc(docRef, {
-                    isActive: true, // Selalu aktifkan saat reset
+                    isActive: true,
                     userName: null,
                     registeredUrl: null,
-                    activeSessionId: null, // Reset sesi aktif
-                    lastSeenAt: null, // Reset last seen
-                    // Pertahankan:
-                    // createdAt: existingData.createdAt || serverTimestamp(), // Firestore V9 tidak bisa update serverTimestamp, lebih baik biarkan
-                    loginCount: existingData.loginCount || 0,
+                    activeSessionId: null,
+                    lastSeenAt: null,
                 });
                 alert(`Lisensi "${id}" berhasil direset.`);
             } catch (error) {
@@ -236,31 +210,23 @@ function setupEventListeners() {
         }
     });
 
-    // Event listener untuk form tambah lisensi
     addLicenseButton.addEventListener('click', handleAddLicense);
 }
 
 async function handleAddLicense() {
-    const newKey = newLicenseKeyInput.value.trim().toUpperCase(); // Konsisten huruf besar
+    const newKey = newLicenseKeyInput.value.trim().toUpperCase();
     if (!newKey) {
         showMessage(addLicenseMessage, 'Kode lisensi tidak boleh kosong.', 'error');
         return;
     }
-    if (newKey.includes('/')) {
-        showMessage(addLicenseMessage, "Kode lisensi tidak boleh mengandung karakter '/'.", 'error');
-        return;
-    }
-
     addLicenseButton.disabled = true;
-    const docRef = doc(db, "licenses", newKey);
-
     try {
+        const docRef = doc(db, "licenses", newKey);
         const docSnap = await getDoc(docRef);
         if(docSnap.exists()) {
             showMessage(addLicenseMessage, `Lisensi dengan kode "${newKey}" sudah ada.`, 'error');
             return;
         }
-
         await setDoc(docRef, {
             isActive: true,
             createdAt: serverTimestamp(),
@@ -270,18 +236,15 @@ async function handleAddLicense() {
             activeSessionId: null,
             lastSeenAt: null,
         });
-        showMessage(addLicenseMessage, `Lisensi "${newKey}" berhasil ditambahkan.`, 'success', 3000);
+        showMessage(addLicenseMessage, `Lisensi "${newKey}" berhasil ditambahkan.`, 'success');
         newLicenseKeyInput.value = '';
     } catch (error) {
         showMessage(addLicenseMessage, `Gagal menambahkan lisensi: ${error.message}`, 'error');
-        console.error("Add License Error:", error);
     } finally {
         addLicenseButton.disabled = false;
     }
 }
 
-
-// --- Helper Functions ---
 function showMessage(element, text, type = 'success', duration = 4000) {
     element.textContent = text;
     element.className = `message ${type}`;
