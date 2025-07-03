@@ -172,33 +172,7 @@
         </div>
     </div>
 
-    <!-- Firebase SDKs -->
-    <script type="module">
-        // Import fungsi yang Anda butuhkan
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
-        import { getFirestore, collection, onSnapshot, doc, updateDoc, setDoc, deleteDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
-        
-        // Konfigurasi Firebase Anda (SAMA DENGAN DI index.html)
-        const firebaseConfig = {
-            apiKey: "AIzaSyDnJvECVfNJIXPh9rZTsA3QcHQaTiE4Awc",
-            authDomain: "apodaca-bessie4762.firebaseapp.com",
-            projectId: "apodaca-bessie4762",
-            storageBucket: "apodaca-bessie4762.firebasestorage.app",
-            messagingSenderId: "809433417541",
-            appId: "1:809433417541:web:48632b970a90840ab1602c"
-        };
-
-        // Inisialisasi Firebase
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-        const db = getFirestore(app);
-
-        // Ekspor module agar bisa diakses oleh admin.js
-        export { auth, db, signInWithEmailAndPassword, onAuthStateChanged, signOut, collection, onSnapshot, doc, updateDoc, setDoc, deleteDoc, serverTimestamp };
-    </script>
-    
-    <!-- Skrip Logika Admin -->
+    <!-- Skrip Logika Admin akan memuat semua yang dibutuhkan -->
     <script type="module" src="admin.js"></script>
 
 </body>
