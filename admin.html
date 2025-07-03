@@ -119,7 +119,7 @@
             box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
         }
 
-        /* --- New, Cooler Button Styles --- */
+        /* --- Main Button Styles --- */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -224,7 +224,6 @@
             border-left: 4px solid var(--primary-color);
         }
 
-        /* Add License Form */
         .add-license-form {
             display: flex;
             gap: 12px;
@@ -237,7 +236,6 @@
         .add-license-form .btn { flex-shrink: 0; }
         .add-license-form .btn svg { width: 20px; height: 20px; }
 
-        /* Messages */
         .message {
             padding: 12px 16px;
             margin-top: 16px;
@@ -248,10 +246,8 @@
         .error { background-color: #fee2e2; color: #b91c1c; border: 1px solid #fecaca;}
         .success { background-color: #dcfce7; color: #14532d; border: 1px solid #bbf7d0;}
 
-        /* Table Styles */
-        .table-wrapper {
-            overflow-x: auto;
-        }
+        /* --- Table Styles --- */
+        .table-wrapper { overflow-x: auto; }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -272,46 +268,15 @@
             letter-spacing: 0.05em;
             text-transform: uppercase;
         }
-        tbody tr {
-            transition: background-color 0.15s ease-in-out;
-        }
-        tbody tr:last-child td {
-            border-bottom: none;
-        }
-        tbody tr:hover {
-            background-color: #f1f5f9;
-        }
+        tbody tr { transition: background-color 0.15s ease-in-out; }
+        tbody tr:last-child td { border-bottom: none; }
+        tbody tr:hover { background-color: #f1f5f9; }
 
-        .action-buttons button { 
-            margin: 2px; 
-            padding: 8px 12px; 
-            font-size: 0.9rem; 
-            opacity: 0.85;
-            transform: scale(0.95);
-        }
-        .action-buttons button:hover {
-            opacity: 1;
-            transform: scale(1) translateY(-2px);
-        }
-        
         .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 4px 10px;
-            border-radius: 9999px;
-            font-weight: 600;
-            font-size: 0.8rem;
-            background-color: #e2e8f0;
-            color: var(--text-dark);
-            border: 1px solid transparent;
+            display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px;
+            border-radius: 9999px; font-weight: 600; font-size: 0.8rem; border: 1px solid transparent;
         }
-        .status-badge::before {
-            content: '';
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-        }
+        .status-badge::before { content: ''; width: 8px; height: 8px; border-radius: 50%; }
         .status-online { background-color: #dcfce7; color: #166534; border-color: #bbf7d0; }
         .status-online::before { background-color: var(--status-online); }
         .status-idle { background-color: #fef3c7; color: #92400e; border-color: #fde68a; }
@@ -320,6 +285,63 @@
         .status-offline::before { background-color: var(--status-offline); }
         .status-disabled { background-color: #fee2e2; color: #991b1b; border-color: #fecaca; }
         .status-disabled::before { background-color: var(--status-disabled); }
+
+        /* --- Tombol Aksi Baru yang Lebih Cantik --- */
+        .action-buttons {
+            display: flex;
+            gap: 8px; /* Memberi jarak antar tombol */
+            align-items: center;
+        }
+        .action-buttons .btn {
+            /* Override style .btn umum */
+            padding: 0;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%; /* Membuat tombol menjadi lingkaran */
+            background: transparent; /* Latar belakang transparan */
+            border: 1px solid;
+            box-shadow: none;
+            text-shadow: none;
+            transition: all 0.25s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+        .action-buttons .btn svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s ease;
+        }
+        .action-buttons .btn:hover {
+            color: var(--text-white);
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 5px 12px -2px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Tombol Reset (Warning) */
+        .action-buttons .btn-warning {
+            border-color: var(--warning-color);
+            color: var(--warning-color);
+        }
+        .action-buttons .btn-warning:hover {
+            background-color: var(--warning-color);
+            border-color: var(--warning-color);
+        }
+        .action-buttons .btn-warning:hover svg {
+            transform: rotate(360deg); /* Animasi putar untuk reset */
+        }
+
+        /* Tombol Hapus (Danger) */
+        .action-buttons .btn-danger {
+            border-color: var(--danger-color);
+            color: var(--danger-color);
+        }
+        .action-buttons .btn-danger:hover {
+            background-color: var(--danger-color);
+            border-color: var(--danger-color);
+        }
+        .action-buttons .btn-danger:hover svg {
+            transform: scale(1.1) rotate(5deg); /* Animasi getar untuk hapus */
+        }
+        /* --- Akhir dari style Tombol Aksi Baru --- */
+
 
         /* Responsive Styles */
         @media (max-width: 768px) {
@@ -353,7 +375,7 @@
     <!-- Admin Dashboard View -->
     <div id="dashboard-view" class="hidden">
         <header class="dashboard-header">
-            <div class="brand">Bimbel UKOM</div>
+            <div class="brand">Manajemen Lisensi Bimbel UKOM</div>
             <button id="logout-button" class="btn btn-danger">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:18px; height:18px;">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
@@ -392,13 +414,14 @@
                                 <th>Kode Lisensi</th>
                                 <th>Nama Pengguna</th>
                                 <th>Terakhir Dilihat</th>
-                                <th>URL Terdaftar</th> <!-- Kolom Baru -->
-                                <th>Jumlah Login</th> <!-- Kolom Baru -->
+                                <th>URL Terdaftar</th>
+                                <th>Jumlah Login</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody id="licenses-tbody">
-                            <!-- Data akan diisi oleh JavaScript. Contoh baris:
+                            <!-- Data akan diisi oleh JavaScript. PENTING: Struktur tombol aksi berubah! -->
+                            <!-- Contoh baris baru dengan tombol ikon:
                             <tr>
                                 <td><span class="status-badge status-online">Aktif</span></td>
                                 <td>CONTOH-KODE-LISENSI-123</td>
@@ -407,8 +430,16 @@
                                 <td>https://bimbel-ukom.com</td>
                                 <td>15</td>
                                 <td class="action-buttons">
-                                    <button class="btn btn-warning">Reset</button>
-                                    <button class="btn btn-danger">Hapus</button>
+                                    <button class="btn btn-warning" title="Reset Lisensi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.664 0M2.985 19.644A8.25 8.25 0 0114.65 8.006m0 0L11.468 4.823M14.65 8.006V13.5" />
+                                        </svg>
+                                    </button>
+                                    <button class="btn btn-danger" title="Hapus Lisensi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                                        </svg>
+                                    </button>
                                 </td>
                             </tr>
                             -->
