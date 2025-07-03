@@ -245,6 +245,51 @@
         }
         .error { background-color: #fee2e2; color: #b91c1c; border: 1px solid #fecaca;}
         .success { background-color: #dcfce7; color: #14532d; border: 1px solid #bbf7d0;}
+        
+        /* --- [BARU] Summary Stats Card --- */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+        }
+        .stat-item {
+            background-color: var(--bg-light);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .stat-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .stat-icon svg { width: 24px; height: 24px; color: var(--text-white); }
+
+        .stat-icon-online { background-color: var(--status-online); }
+        .stat-icon-idle { background-color: var(--status-idle); }
+        .stat-icon-offline { background-color: var(--status-offline); }
+        .stat-icon-disabled { background-color: var(--status-disabled); }
+        .stat-icon-total { background-color: var(--primary-color); }
+
+        .stat-info .count {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-dark);
+        }
+        .stat-info .label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        /* --- Akhir dari Summary Stats Card --- */
 
         /* --- Table Styles --- */
         .table-wrapper { overflow-x: auto; }
@@ -287,7 +332,7 @@
         .status-disabled::before { background-color: var(--status-disabled); }
 
 
-        /* --- Gaya Tombol Aksi Modern & Elegan (UPDATED) --- */
+        /* --- [DIPERBARUI] Gaya Tombol Aksi Modern & Elegan --- */
         .action-buttons {
             display: flex;
             gap: 10px; /* Sedikit lebih banyak ruang */
@@ -299,7 +344,7 @@
             width: 38px;
             height: 38px;
             border-radius: 50%; 
-            background-color: var(--bg-white); /* Latar belakang dasar putih */
+            background: var(--bg-white); /* Latar belakang dasar putih */
             border: 1px solid var(--border-color); /* Border netral awal */
             box-shadow: 0 1px 2px rgba(0,0,0,0.04); /* Shadow dasar yang sangat halus */
             text-shadow: none;
@@ -366,6 +411,8 @@
             .card { padding: 20px; }
             h2 { font-size: 1.25rem; }
             .add-license-form { flex-direction: column; align-items: stretch; }
+            .stats-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+            .stat-item { flex-direction: column; text-align: center; gap: 8px;}
         }
     </style>
 </head>
@@ -403,6 +450,63 @@
         <main class="dashboard-main">
             <div class="user-info">
                 Admin ter-login sebagai: <strong id="admin-email-display"></strong>
+            </div>
+
+            <!-- [BARU] Kartu Rekapan Status -->
+            <div class="card">
+                <h2>Ringkasan Status</h2>
+                <div class="stats-grid">
+                    <!-- Stat Online -->
+                    <div class="stat-item">
+                        <div class="stat-icon stat-icon-online">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1012.728 0M12 3v9" /></svg>
+                        </div>
+                        <div class="stat-info">
+                            <div id="stats-online-count" class="count">0</div>
+                            <div class="label">Online</div>
+                        </div>
+                    </div>
+                    <!-- Stat Idle -->
+                    <div class="stat-item">
+                        <div class="stat-icon stat-icon-idle">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <div class="stat-info">
+                            <div id="stats-idle-count" class="count">0</div>
+                            <div class="label">Idle</div>
+                        </div>
+                    </div>
+                    <!-- Stat Offline -->
+                    <div class="stat-item">
+                        <div class="stat-icon stat-icon-offline">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" /></svg>
+                        </div>
+                        <div class="stat-info">
+                            <div id="stats-offline-count" class="count">0</div>
+                            <div class="label">Offline</div>
+                        </div>
+                    </div>
+                    <!-- Stat Disabled -->
+                    <div class="stat-item">
+                        <div class="stat-icon stat-icon-disabled">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" /></svg>
+                        </div>
+                        <div class="stat-info">
+                            <div id="stats-disabled-count" class="count">0</div>
+                            <div class="label">Nonaktif</div>
+                        </div>
+                    </div>
+                    <!-- Stat Total -->
+                    <div class="stat-item">
+                        <div class="stat-icon stat-icon-total">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" /></svg>
+                        </div>
+                        <div class="stat-info">
+                            <div id="stats-total-count" class="count">0</div>
+                            <div class="label">Total Lisensi</div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="card">
