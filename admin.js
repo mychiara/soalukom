@@ -1,4 +1,11 @@
-import { auth, db, signInWithEmailAndPassword, onAuthStateChanged, signOut, collection, onSnapshot, doc, updateDoc, setDoc, deleteDoc, serverTimestamp } from './admin.html';
+// File: admin.js
+
+// 1. Impor variabel (auth, db) dari file konfigurasi lokal kita
+import { auth, db, serverTimestamp } from './firebase-config.js';
+
+// 2. Impor semua fungsi yang dibutuhkan langsung dari SDK Firebase
+import { signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+import { collection, onSnapshot, doc, updateDoc, setDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
 
 // DOM Elements
 const loginView = document.getElementById('login-view');
@@ -202,12 +209,14 @@ addLicenseButton.addEventListener('click', async () => {
     addLicenseButton.disabled = true;
     const docRef = doc(db, "licenses", newKey);
     try {
+        // Gunakan setDoc untuk membuat dokumen baru.
         await setDoc(docRef, {
             active: true,
             activeSessionId: null,
             lastSeenAt: null,
-            userName: null
-        }, { merge: false }); // merge: false to overwrite if it exists
+            userName: null,
+            createdAt: serverTimestamp() // Opsional: tambahkan kapan lisensi dibuat
+        });
         showMessage(addLicenseMessage, `Lisensi "${newKey}" berhasil ditambahkan.`, 'success', 3000);
         newLicenseKeyInput.value = '';
     } catch (error) {
