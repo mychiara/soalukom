@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Bimbel UKOM</title>
+    <style>
+        :root {
+            --bg-color: #f0f2f5;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+            --primary-color: #007BFF;
+            --primary-hover: #0056b3;
+            --danger-color: #dc3545;
+            --danger-hover: #b02a37;
+            --warning-color: #ffc107;
+            --warning-hover: #e0a800;
+            --success-color: #28a745;
+            --success-hover: #1e7e34;
+            --status-online: #28a745;
+            --status-idle: #ffc107;
+            --status-offline: #6c757d;
+            --status-disabled: #dc3545;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        .hidden { display: none !important; }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: var(--primary-color);
+        }
+        input[type="email"], input[type="password"], input[type="text"] {
+            width: calc(100% - 24px);
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.2s;
+        }
+        .btn-primary { background-color: var(--primary-color); }
+        .btn-primary:hover { background-color: var(--primary-hover); }
+        .btn-danger { background-color: var(--danger-color); }
+        .btn-danger:hover { background-color: var(--danger-hover); }
+        .btn-warning { background-color: var(--warning-color); color: #212529;}
+        .btn-warning:hover { background-color: var(--warning-hover); }
+        .btn-success { background-color: var(--success-color); }
+        .btn-success:hover { background-color: var(--success-hover); }
+        #logout-button { float: right; }
+        .message {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;}
+        .success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            text-align: left;
+            vertical-align: middle;
+        }
+        th { background-color: var(--bg-color); }
+        .action-buttons button { margin-right: 5px; margin-bottom: 5px; }
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 12px;
+            color: white;
+            font-weight: bold;
+            font-size: 0.85em;
+            text-align: center;
+        }
+        .status-online { background-color: var(--status-online); }
+        .status-idle { background-color: var(--status-idle); color: #212529;}
+        .status-offline { background-color: var(--status-offline); }
+        .status-disabled { background-color: var(--status-disabled); }
+        .add-license-form {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .add-license-form input {
+            flex-grow: 1;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .card { padding: 15px; }
+            th, td { padding: 8px; font-size: 0.9em;}
+            .action-buttons button { padding: 8px 10px; font-size: 0.8em;}
+            .add-license-form { flex-direction: column; align-items: stretch; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Login View -->
+        <div id="login-view" class="card">
+            <h1>Admin Panel Login</h1>
+            <p>Silakan masuk menggunakan akun admin Anda.</p>
+            <input type="email" id="login-email" placeholder="Email Admin">
+            <input type="password" id="login-password" placeholder="Password">
+            <button id="login-button" class="btn-primary">Login</button>
+            <div id="login-message" class="message hidden"></div>
+        </div>
+
+        <!-- Admin Dashboard View -->
+        <div id="dashboard-view" class="card hidden">
+            <button id="logout-button" class="btn-danger">Logout</button>
+            <h1>Dashboard Lisensi</h1>
+            <p>Admin ter-login sebagai: <strong id="admin-email-display"></strong></p>
+
+            <div class="card">
+                <h2>Tambah Lisensi Baru</h2>
+                <div class="add-license-form">
+                    <input type="text" id="new-license-key" placeholder="Masukkan Kode Lisensi Baru">
+                    <button id="add-license-button" class="btn-success">Tambah</button>
+                </div>
+                <div id="add-license-message" class="message hidden"></div>
+            </div>
+
+            <h2>Daftar Lisensi Pengguna</h2>
+            <div id="loading-indicator">Memuat data lisensi...</div>
+            <div style="overflow-x:auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Kode Lisensi</th>
+                            <th>Nama Pengguna</th>
+                            <th>Terakhir Dilihat</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="licenses-tbody">
+                        <!-- Data akan diisi oleh JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script type="module">
+        // Import fungsi yang Anda butuhkan
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+        import { getFirestore, collection, onSnapshot, doc, updateDoc, setDoc, deleteDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+        
+        // Konfigurasi Firebase Anda (SAMA DENGAN DI index.html)
+        const firebaseConfig = {
+            apiKey: "AIzaSyDnJvECVfNJIXPh9rZTsA3QcHQaTiE4Awc",
+            authDomain: "apodaca-bessie4762.firebaseapp.com",
+            projectId: "apodaca-bessie4762",
+            storageBucket: "apodaca-bessie4762.firebasestorage.app",
+            messagingSenderId: "809433417541",
+            appId: "1:809433417541:web:48632b970a90840ab1602c"
+        };
+
+        // Inisialisasi Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        // Ekspor module agar bisa diakses oleh admin.js
+        export { auth, db, signInWithEmailAndPassword, onAuthStateChanged, signOut, collection, onSnapshot, doc, updateDoc, setDoc, deleteDoc, serverTimestamp };
+    </script>
+    
+    <!-- Skrip Logika Admin -->
+    <script type="module" src="admin.js"></script>
+
+</body>
+</html>
