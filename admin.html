@@ -144,13 +144,19 @@
             transform: translateY(0px) scale(0.98);
             box-shadow: 0 1px 2px rgba(0,0,0,0.1);
         }
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
         .btn-full { width: 100%; }
 
         .btn-primary { background: linear-gradient(135deg, var(--primary-light), var(--primary-color)); }
         .btn-primary:hover { background: linear-gradient(135deg, #7173f5, var(--primary-hover)); }
         .btn-danger { background: linear-gradient(135deg, var(--danger-light), var(--danger-color)); }
         .btn-danger:hover { background: linear-gradient(135deg, #f88181, var(--danger-hover)); }
-        .btn-warning { background: linear-gradient(135deg, #fbbf24, var(--warning-color)); color: var(--text-dark); }
+        .btn-warning { background: linear-gradient(135deg, #fbbf24, var(--warning-color)); color: #525252; }
         .btn-warning:hover { background: linear-gradient(135deg, #fccb4a, var(--warning-hover)); }
         .btn-success { background: linear-gradient(135deg, var(--success-light), var(--success-color)); }
         .btn-success:hover { background: linear-gradient(135deg, #5ee48d, var(--success-hover)); }
@@ -335,62 +341,66 @@
         /* --- [DIPERBARUI] Gaya Tombol Aksi Modern & Elegan --- */
         .action-buttons {
             display: flex;
-            gap: 10px; /* Sedikit lebih banyak ruang */
+            gap: 10px;
             align-items: center;
         }
         .action-buttons .btn {
-            /* Reset & override style .btn umum */
             padding: 0;
             width: 38px;
             height: 38px;
             border-radius: 50%; 
-            background: var(--bg-white); /* Latar belakang dasar putih */
-            border: 1px solid var(--border-color); /* Border netral awal */
-            box-shadow: 0 1px 2px rgba(0,0,0,0.04); /* Shadow dasar yang sangat halus */
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
             text-shadow: none;
-            /* Transisi yang lebih halus dan terkontrol */
-            transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out;
+            transition: all 0.2s ease-out;
         }
         .action-buttons .btn svg {
-            width: 18px; /* Ikon sedikit lebih besar */
+            width: 18px;
             height: 18px;
             transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        .action-buttons .btn:hover {
-            transform: translateY(-3px); /* Efek mengangkat */
-            /* Shadow yang lebih tegas saat hover untuk efek kedalaman */
+        .action-buttons .btn:hover:not(:disabled) {
+            transform: translateY(-3px);
             box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            color: var(--text-white); /* Warna ikon menjadi putih */
+            color: var(--text-white);
         }
-        .action-buttons .btn:active {
-            transform: translateY(-1px) scale(0.98); /* Efek ditekan */
+        .action-buttons .btn:active:not(:disabled) {
+            transform: translateY(-1px) scale(0.98);
             box-shadow: 0 2px 4px rgba(0,0,0,0.06);
         }
 
-        /* Tombol Reset (Warning) */
+        /* Tombol Toggle (Success/Warning) & Reset (Warning) */
         .action-buttons .btn-warning {
-            color: var(--warning-hover); /* Warna ikon awal */
-            border-color: #fde68a; /* Warna border awal yang lebih lembut */
+            color: var(--warning-hover); 
+            border-color: #fde68a; 
         }
-        .action-buttons .btn-warning:hover {
-            background-color: var(--warning-color); /* Latar belakang berubah warna */
-            border-color: var(--warning-hover);   /* Border menjadi lebih gelap */
+        .action-buttons .btn-warning:hover:not(:disabled) {
+            background-color: var(--warning-color);
+            border-color: var(--warning-hover);
         }
-        .action-buttons .btn-warning:hover svg {
-            transform: rotate(270deg) scale(1.1); /* Animasi putar yang keren */
+        .action-buttons .btn.toggle-active-btn[data-active="false"] {
+             color: var(--success-hover); 
+             border-color: #bbf7d0;
         }
-
+        .action-buttons .btn.toggle-active-btn[data-active="false"]:hover {
+             background-color: var(--success-color);
+             border-color: var(--success-hover);
+        }
+        .action-buttons .reset-session-btn:hover:not(:disabled) svg {
+            transform: rotate(270deg) scale(1.1);
+        }
+        
         /* Tombol Hapus (Danger) */
         .action-buttons .btn-danger {
-            color: var(--danger-hover); /* Warna ikon awal */
-            border-color: #fecaca; /* Warna border awal yang lebih lembut */
+            color: var(--danger-hover);
+            border-color: #fecaca;
         }
-        .action-buttons .btn-danger:hover {
-            background-color: var(--danger-color); /* Latar belakang berubah warna */
-            border-color: var(--danger-hover);   /* Border menjadi lebih gelap */
+        .action-buttons .btn-danger:hover:not(:disabled) {
+            background-color: var(--danger-color);
+            border-color: var(--danger-hover);
         }
-        .action-buttons .btn-danger:hover svg {
-            /* Memicu animasi getar */
+        .action-buttons .btn-danger:hover:not(:disabled) svg {
             animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
         }
         
@@ -452,7 +462,7 @@
                 Admin ter-login sebagai: <strong id="admin-email-display"></strong>
             </div>
 
-            <!-- [BARU] Kartu Rekapan Status -->
+            <!-- [BARU] Kartu Ringkasan Status -->
             <div class="card">
                 <h2>Ringkasan Status</h2>
                 <div class="stats-grid">
@@ -479,7 +489,7 @@
                     <!-- Stat Offline -->
                     <div class="stat-item">
                         <div class="stat-icon stat-icon-offline">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg>
                         </div>
                         <div class="stat-info">
                             <div id="stats-offline-count" class="count">0</div>
@@ -499,7 +509,7 @@
                     <!-- Stat Total -->
                     <div class="stat-item">
                         <div class="stat-icon stat-icon-total">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
                         </div>
                         <div class="stat-info">
                             <div id="stats-total-count" class="count">0</div>
@@ -534,35 +544,11 @@
                                 <th>Kode Lisensi</th>
                                 <th>Nama Pengguna</th>
                                 <th>Terakhir Dilihat</th>
-                                <th>URL Terdaftar</th>
-                                <th>Jumlah Login</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody id="licenses-tbody">
-                            <!-- Data akan diisi oleh JavaScript. Struktur tombol aksi sekarang menggunakan gaya baru. -->
-                            <!-- Contoh baris baru dengan tombol ikon yang sudah diperbarui:
-                            <tr>
-                                <td><span class="status-badge status-online">Aktif</span></td>
-                                <td>CONTOH-KODE-LISENSI-123</td>
-                                <td>Budi Sanjaya</td>
-                                <td>2023-10-27 10:30:00</td>
-                                <td>https://bimbel-ukom.com</td>
-                                <td>15</td>
-                                <td class="action-buttons">
-                                    <button class="btn btn-warning" title="Reset Lisensi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.664 0M2.985 19.644A8.25 8.25 0 0114.65 8.006m0 0L11.468 4.823M14.65 8.006V13.5" />
-                                        </svg>
-                                    </button>
-                                    <button class="btn btn-danger" title="Hapus Lisensi">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                                        </svg>
-                                    </button>
-                                </td>
-                            </tr>
-                            -->
+                            <!-- Data akan diisi oleh JavaScript -->
                         </tbody>
                     </table>
                 </div>
