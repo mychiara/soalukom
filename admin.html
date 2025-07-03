@@ -4,172 +4,366 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel - Bimbel UKOM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* CSS Variables & Base Styles */
         :root {
-            --bg-color: #f0f2f5;
-            --text-color: #333;
-            --card-bg: #ffffff;
-            --border-color: #e0e0e0;
-            --primary-color: #007BFF;
-            --primary-hover: #0056b3;
-            --danger-color: #dc3545;
-            --danger-hover: #b02a37;
-            --warning-color: #ffc107;
-            --warning-hover: #e0a800;
-            --success-color: #28a745;
-            --success-hover: #1e7e34;
-            --status-online: #28a745;
-            --status-idle: #ffc107;
-            --status-offline: #6c757d;
-            --status-disabled: #dc3545;
+            --primary-color: #4f46e5;
+            --primary-hover: #4338ca;
+            --danger-color: #ef4444;
+            --danger-hover: #dc2626;
+            --warning-color: #f59e0b;
+            --warning-hover: #d97706;
+            --success-color: #22c55e;
+            --success-hover: #16a34a;
+
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --border-color: #e2e8f0;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --text-white: #ffffff;
+            
+            --status-online: #22c55e;
+            --status-idle: #f59e0b;
+            --status-offline: #64748b;
+            --status-disabled: #ef4444;
         }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             margin: 0;
-            padding: 20px;
+            font-size: 16px;
+            line-height: 1.5;
         }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-        }
+
         .hidden { display: none !important; }
-        .card {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 25px;
+
+        /* --- Login Page Styles --- */
+        #login-view {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+        }
+
+        .login-card {
+            background-color: var(--bg-white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-card .logo {
+            background-color: var(--primary-color);
+            color: var(--text-white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             margin-bottom: 20px;
         }
-        h1, h2 {
-            color: var(--primary-color);
+
+        .login-card .logo svg {
+            width: 32px;
+            height: 32px;
         }
+
+        .login-card h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+            color: var(--text-dark);
+        }
+
+        .login-card p {
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
         input[type="email"], input[type="password"], input[type="text"] {
-            width: calc(100% - 24px);
-            padding: 12px;
-            margin-bottom: 15px;
+            width: 100%;
+            padding: 14px 16px;
+            margin-bottom: 16px;
             border: 1px solid var(--border-color);
-            border-radius: 5px;
-            font-size: 1em;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
         }
-        button {
-            padding: 10px 20px;
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+        }
+
+        /* --- Button Styles --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 5px;
-            color: white;
+            border-radius: 8px;
+            color: var(--text-white);
             cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.2s;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
         }
+        .btn:active {
+            transform: scale(0.98);
+        }
+        .btn-full { width: 100%; }
+
         .btn-primary { background-color: var(--primary-color); }
         .btn-primary:hover { background-color: var(--primary-hover); }
         .btn-danger { background-color: var(--danger-color); }
         .btn-danger:hover { background-color: var(--danger-hover); }
-        .btn-warning { background-color: var(--warning-color); color: #212529;}
+        .btn-warning { background-color: var(--warning-color); color: var(--text-dark); }
         .btn-warning:hover { background-color: var(--warning-hover); }
         .btn-success { background-color: var(--success-color); }
         .btn-success:hover { background-color: var(--success-hover); }
-        #logout-button { float: right; }
-        .message {
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 5px;
-            text-align: center;
+
+        /* --- Dashboard Styles --- */
+        #dashboard-view {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
-        .error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;}
-        .success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;}
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
+        
+        .dashboard-header {
+            background-color: var(--bg-white);
+            padding: 16px 32px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        th, td {
-            padding: 12px;
-            border: 1px solid var(--border-color);
-            text-align: left;
-            vertical-align: middle;
+
+        .dashboard-header .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
         }
-        th { background-color: var(--bg-color); }
-        .action-buttons button { margin-right: 5px; margin-bottom: 5px; }
-        .status-badge {
-            padding: 5px 10px;
+
+        .dashboard-main {
+            padding: 32px;
+            flex-grow: 1;
+        }
+
+        .card {
+            background-color: var(--bg-white);
             border-radius: 12px;
-            color: white;
-            font-weight: bold;
-            font-size: 0.85em;
-            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 32px;
         }
-        .status-online { background-color: var(--status-online); }
-        .status-idle { background-color: var(--status-idle); color: #212529;}
-        .status-offline { background-color: var(--status-offline); }
-        .status-disabled { background-color: var(--status-disabled); }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .user-info {
+            color: var(--text-light);
+            margin-bottom: 24px;
+        }
+
+        /* Add License Form */
         .add-license-form {
             display: flex;
-            gap: 10px;
-            align-items: center;
+            gap: 12px;
         }
         .add-license-form input {
             flex-grow: 1;
             margin-bottom: 0;
         }
 
+        /* Messages */
+        .message {
+            padding: 12px;
+            margin-top: 16px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .error { background-color: #fee2e2; color: #b91c1c; border: 1px solid #fecaca;}
+        .success { background-color: #dcfce7; color: #14532d; border: 1px solid #bbf7d0;}
+
+        /* Table Styles */
+        .table-wrapper {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+            text-align: left;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+        th {
+            background-color: var(--bg-light);
+            font-weight: 600;
+            color: var(--text-light);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+        tbody tr {
+            transition: background-color 0.15s ease-in-out;
+        }
+        tbody tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        .action-buttons button { margin: 2px; padding: 8px 12px; font-size: 0.9rem; }
+        
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 9999px;
+            color: var(--text-white);
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        .status-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: currentColor;
+        }
+        .status-online { background-color: var(--status-online); }
+        .status-idle { background-color: var(--status-idle); color: var(--text-dark); }
+        .status-offline { background-color: var(--status-offline); }
+        .status-disabled { background-color: var(--status-disabled); }
+
+        /* Responsive Styles */
         @media (max-width: 768px) {
-            body { padding: 10px; }
-            .card { padding: 15px; }
-            th, td { padding: 8px; font-size: 0.9em;}
-            .action-buttons button { padding: 8px 10px; font-size: 0.8em;}
+            .dashboard-header { padding: 16px; flex-direction: column; gap: 10px; }
+            .dashboard-main { padding: 16px; }
+            .card { padding: 20px; }
+            h2 { font-size: 1.25rem; }
             .add-license-form { flex-direction: column; align-items: stretch; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Login View -->
-        <div id="login-view" class="card">
-            <h1>Admin Panel Login</h1>
+    <!-- Login View -->
+    <div id="login-view">
+        <div class="login-card">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
+                </svg>
+            </div>
+            <h1>Admin Panel</h1>
             <p>Silakan masuk menggunakan akun admin Anda.</p>
             <input type="email" id="login-email" placeholder="Email Admin">
             <input type="password" id="login-password" placeholder="Password">
-            <button id="login-button" class="btn-primary">Login</button>
+            <button id="login-button" class="btn btn-primary btn-full">Login</button>
             <div id="login-message" class="message hidden"></div>
         </div>
+    </div>
 
-        <!-- Admin Dashboard View -->
-        <div id="dashboard-view" class="card hidden">
-            <button id="logout-button" class="btn-danger">Logout</button>
-            <h1>Dashboard Lisensi</h1>
-            <p>Admin ter-login sebagai: <strong id="admin-email-display"></strong></p>
+    <!-- Admin Dashboard View -->
+    <div id="dashboard-view" class="hidden">
+        <header class="dashboard-header">
+            <div class="brand">Bimbel UKOM</div>
+            <button id="logout-button" class="btn btn-danger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8.5 10c0 .535-.465.935-1.036.935H3.536C2.965 10.935 2.5 10.535 2.5 10V3c0-.535.465-.935 1.036-.935h3.928c.57 0 1.036.4 1.036.935v2.5h-1V3.036c0-.202-.164-.366-.366-.366H3.866c-.202 0-.366.164-.366.366v6.928c0 .202.164.366.366.366h3.268c.202 0 .366-.164.366-.366V7.5h1v2.5z"/>
+                    <path fill-rule="evenodd" d="M12.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8l-1.647-1.646a.5.5 0 0 1 0-.708z"/>
+                    <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+                <span>Logout</span>
+            </button>
+        </header>
+        
+        <main class="dashboard-main">
+            <div class="user-info">
+                Admin ter-login sebagai: <strong id="admin-email-display"></strong>
+            </div>
 
             <div class="card">
                 <h2>Tambah Lisensi Baru</h2>
                 <div class="add-license-form">
-                    <input type="text" id="new-license-key" placeholder="Masukkan Kode Lisensi Baru">
-                    <button id="add-license-button" class="btn-success">Tambah</button>
+                    <input type="text" id="new-license-key" placeholder="Masukkan Kode Lisensi Baru (atau biarkan kosong untuk generate otomatis)">
+                    <button id="add-license-button" class="btn btn-success">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2z"/>
+                        </svg>
+                        <span>Tambah Lisensi</span>
+                    </button>
                 </div>
                 <div id="add-license-message" class="message hidden"></div>
             </div>
 
-            <h2>Daftar Lisensi Pengguna</h2>
-            <div id="loading-indicator">Memuat data lisensi...</div>
-            <div style="overflow-x:auto;">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Status</th>
-                            <th>Kode Lisensi</th>
-                            <th>Nama Pengguna</th>
-                            <th>Terakhir Dilihat</th>
-                            <th>Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody id="licenses-tbody">
-                        <!-- Data akan diisi oleh JavaScript -->
-                    </tbody>
-                </table>
+            <div class="card">
+                <h2>Daftar Lisensi Pengguna</h2>
+                <div id="loading-indicator">Memuat data lisensi...</div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Status</th>
+                                <th>Kode Lisensi</th>
+                                <th>Nama Pengguna</th>
+                                <th>Terakhir Dilihat</th>
+                                <th>URL Terdaftar</th> <!-- Kolom Baru -->
+                                <th>Jumlah Login</th> <!-- Kolom Baru -->
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="licenses-tbody">
+                            <!-- Data akan diisi oleh JavaScript. Contoh baris:
+                            <tr>
+                                <td><span class="status-badge status-online">Aktif</span></td>
+                                <td>CONTOH-KODE-LISENSI-123</td>
+                                <td>Budi Sanjaya</td>
+                                <td>2023-10-27 10:30:00</td>
+                                <td>https://bimbel-ukom.com</td>
+                                <td>15</td>
+                                <td class="action-buttons">
+                                    <button class="btn btn-warning">Reset</button>
+                                    <button class="btn btn-danger">Hapus</button>
+                                </td>
+                            </tr>
+                            -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
+        </main>
     </div>
 
     <!-- Skrip Logika Admin akan memuat semua yang dibutuhkan -->
