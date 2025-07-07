@@ -125,20 +125,22 @@
             margin: 0;
         }
 
-        /* --- Stats Cards --- */
+        /* --- Stats Cards (REVISED) --- */
         .stats-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
             margin-bottom: 30px;
         }
         .stat-card {
             background-color: var(--card-bg);
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 12px;
             border-left: 5px solid;
             display: flex;
             flex-direction: column;
+            justify-content: space-between; /* This pushes title up and number down */
+            min-height: 150px; /* Ensures card has height for space-between to work */
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             transition: transform 0.2s, box-shadow 0.2s;
         }
@@ -152,14 +154,15 @@
             margin-bottom: 10px;
         }
         .stat-title {
-            font-size: 0.95rem;
+            font-size: 1rem;
+            font-weight: 500;
             color: #64748b;
-            margin-bottom: 5px;
         }
         .stat-number {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: #1e293b;
+            line-height: 1; /* Prevents extra vertical space */
         }
         .stat-card.total { border-color: var(--stat-total); } .stat-card.total .icon { color: var(--stat-total); }
         .stat-card.online { border-color: var(--status-online); } .stat-card.online .icon { color: var(--status-online); }
@@ -297,26 +300,34 @@
             </div>
             <p>Admin ter-login sebagai: <strong id="admin-email-display"></strong></p>
 
-            <!-- Stats Overview -->
+            <!-- Stats Overview (REVISED HTML STRUCTURE) -->
             <div class="stats-container">
                 <div class="stat-card total">
-                    <svg class="icon"><use xlink:href="#icon-users"></use></svg>
-                    <div class="stat-title">Total Lisensi</div>
+                    <div>
+                        <svg class="icon"><use xlink:href="#icon-users"></use></svg>
+                        <div class="stat-title">Total Lisensi</div>
+                    </div>
                     <div class="stat-number" id="total-licenses-count">-</div>
                 </div>
                 <div class="stat-card online">
-                    <svg class="icon"><use xlink:href="#icon-check-circle"></use></svg>
-                    <div class="stat-title">Pengguna Online</div>
+                    <div>
+                        <svg class="icon"><use xlink:href="#icon-check-circle"></use></svg>
+                        <div class="stat-title">Pengguna Online</div>
+                    </div>
                     <div class="stat-number" id="online-users-count">-</div>
                 </div>
                 <div class="stat-card idle">
-                    <svg class="icon"><use xlink:href="#icon-clock"></use></svg>
-                    <div class="stat-title">Pengguna Idle</div>
+                    <div>
+                        <svg class="icon"><use xlink:href="#icon-clock"></use></svg>
+                        <div class="stat-title">Pengguna Idle</div>
+                    </div>
                     <div class="stat-number" id="idle-users-count">-</div>
                 </div>
                 <div class="stat-card offline">
-                    <svg class="icon"><use xlink:href="#icon-power"></use></svg>
-                    <div class="stat-title">Pengguna Offline</div>
+                    <div>
+                        <svg class="icon"><use xlink:href="#icon-power"></use></svg>
+                        <div class="stat-title">Pengguna Offline</div>
+                    </div>
                     <div class="stat-number" id="offline-users-count">-</div>
                 </div>
             </div>
@@ -348,29 +359,6 @@
                             </tr>
                         </thead>
                         <tbody id="licenses-tbody">
-                        <!-- Contoh baris yang akan digenerate oleh JavaScript -->
-                        <!--
-                        <tr>
-                            <td><span class="status-badge status-online"><span class="dot"></span> Online</span></td>
-                            <td>ABCDE-FGHIJ-KLMNO</td>
-                            <td>Budi Santoso</td>
-                            <td>Baru saja</td>
-                            <td class="action-buttons">
-                                <button class="btn-info" title="Lihat Riwayat"><svg class="icon"><use xlink:href="#icon-history"></use></svg></button>
-                                <button class="btn-danger" title="Nonaktifkan Lisensi"><svg class="icon"><use xlink:href="#icon-disable"></use></svg></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><span class="status-badge status-disabled"><span class="dot"></span> Disabled</span></td>
-                            <td>PQRST-UVWXY-Z1234</td>
-                            <td>- (Belum diklaim)</td>
-                            <td>-</td>
-                            <td class="action-buttons">
-                                 <button class="btn-success" title="Aktifkan Kembali">...</button>
-                                 <button class="btn-danger" title="Hapus Lisensi"><svg class="icon"><use xlink:href="#icon-trash"></use></svg></button>
-                            </td>
-                        </tr>
-                        -->
                         </tbody>
                     </table>
                 </div>
