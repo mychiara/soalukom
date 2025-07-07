@@ -38,9 +38,23 @@
         .status-offline { background-color: var(--status-offline); } .status-disabled { background-color: var(--status-disabled); }
         .add-license-form { display: flex; gap: 10px; align-items: center; }
         .add-license-form input { flex-grow: 1; margin-bottom: 0; }
+        /* --- Gaya Kartu Ringkasan (BARU) --- */
+        .summary-container { display: flex; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }
+        .summary-card { flex: 1; background-color: var(--card-bg); border-radius: 8px; padding: 20px; text-align: center; border-left: 5px solid var(--primary-color); box-shadow: 0 1px 4px rgba(0,0,0,0.07); min-width: 150px; }
+        .summary-card h4 { margin: 0 0 10px 0; font-size: 0.95em; color: #6c757d; font-weight: 600; text-transform: uppercase; }
+        .summary-value { font-size: 2.2em; font-weight: bold; color: var(--primary-color); }
+        .summary-card.status-online-card { border-left-color: var(--status-online); }
+        .summary-card.status-online-card .summary-value { color: var(--status-online); }
+        .summary-card.status-idle-card { border-left-color: var(--status-idle); }
+        .summary-card.status-idle-card .summary-value { color: var(--status-idle); }
+        .summary-card.status-offline-card { border-left-color: var(--status-offline); }
+        .summary-card.status-offline-card .summary-value { color: var(--status-offline); }
+        .summary-card.status-disabled-card { border-left-color: var(--status-disabled); }
+        .summary-card.status-disabled-card .summary-value { color: var(--status-disabled); }
         @media (max-width: 768px) {
             body { padding: 10px; } .card { padding: 15px; } th, td { padding: 8px; font-size: 0.9em;}
             .action-buttons button { padding: 8px 10px; font-size: 0.8em;} .add-license-form { flex-direction: column; align-items: stretch; }
+            .summary-card { min-width: 120px; padding: 15px; } .summary-value { font-size: 1.8em;}
         }
     </style>
 </head>
@@ -62,6 +76,30 @@
             <button id="logout-button" class="btn-danger">Logout</button>
             <h1>Dashboard Lisensi</h1>
             <p>Admin ter-login sebagai: <strong id="admin-email-display"></strong></p>
+            
+            <!-- Kartu Ringkasan Status Lisensi (BARU) -->
+            <div class="summary-container">
+                <div class="summary-card">
+                    <h4>Total Lisensi</h4>
+                    <div class="summary-value" id="total-count">0</div>
+                </div>
+                <div class="summary-card status-online-card">
+                    <h4>Online</h4>
+                    <div class="summary-value" id="online-count">0</div>
+                </div>
+                <div class="summary-card status-idle-card">
+                    <h4>Idle</h4>
+                    <div class="summary-value" id="idle-count">0</div>
+                </div>
+                <div class="summary-card status-offline-card">
+                    <h4>Aktif (Offline)</h4>
+                    <div class="summary-value" id="offline-count">0</div>
+                </div>
+                <div class="summary-card status-disabled-card">
+                    <h4>Tidak Aktif</h4>
+                    <div class="summary-value" id="disabled-count">0</div>
+                </div>
+            </div>
 
             <div class="card">
                 <h2>Tambah Lisensi Baru</h2>
