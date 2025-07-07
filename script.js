@@ -1,34 +1,50 @@
+// --- GLOBAL STATE VARIABLES ---
 let allCategoryQuestions = [];
-const TRYOUT_QUESTION_LIMIT = 180; // Batas jumlah soal untuk setiap TO
+const TRYOUT_QUESTION_LIMIT = 180;
 const TRYOUT_TIME_LIMIT_MINUTES = 180;
 
-let questions = [];
+let questions = []; // Soal untuk kuis/latihan saat ini
+let questionStates = []; // Status setiap soal (jawaban, ragu-ragu, dll)
+let quizHistory = []; // Riwayat semua kuis yang telah selesai
+
 let currentQuestionIndex = 0;
 let score = 0;
-let isTryOut = false; // True for any timed/graded mode (Try Out Gabungan, Try Out Serius)
 let userName = "";
-let currentCategoryFileName = null; // For latihan per departemen
-let currentQuizMode = null; // e.g., 'latihan-departemen', 'latihan-gabungan', 'tryout-gabungan-semua', 'tryout-serius'
-let previousViewForQuiz = null; // To know where to return from quiz
-let previousViewForResult = null; // To know where to return from results
+
+// --- Mode and State Flags ---
+let isTryOut = false;
+let isReviewMode = false;
+let currentQuizMode = null; // 'latihan-departemen', 'tryout-serius', 'latihan-salah', dll.
+let currentQuizTitle = ""; // Judul kuis saat ini untuk riwayat, cth: "TO Tipe 1"
+let currentCategoryFileName = null;
+let previousViewForQuiz = null;
+let previousViewForResult = null;
 
 let selectedOptionIndex = -1;
-let answerSubmitted = false; // Primarily for Latihan mode to prevent re-answering
+let answerSubmitted = false; // Flag untuk mode latihan
 
 let overallTimerInterval = null;
 let timeLeftOverallSeconds = TRYOUT_TIME_LIMIT_MINUTES * 60;
 
-let currentTryoutSeriusType = null; // e.g., "TO Tipe 1"
-// isTryoutSeriusMode is implicitly handled by currentQuizMode === 'tryout-serius'
+// Variabel untuk menyimpan data kuis yang sedang direview atau akan diulang
+let completedQuizData = {
+    questions: [],
+    questionStates: []
+};
+
 
 console.log("script.js: Initializing DOM Elements...");
 
-// Main Menu & Submenus
+// --- DOM ELEMENT SELECTORS ---
+// Main Menu & Submenus & History
 const mainMenuViewContainer = document.getElementById('main-menu-container');
-const mainMenuWelcomeUser = document.getElementById('main-menu-welcome-user'); // For Firebase
 const mainMenuLatihanSoalButton = document.getElementById('main-menu-latihan-soal');
 const mainMenuTryoutButton = document.getElementById('main-menu-tryout');
-// Logout button is handled by Firebase script
+const mainMenuHistoryButton = document.getElementById('main-menu-history');
+const historyContainer = document.getElementById('history-container');
+const historyListContainer = document.getElementById('history-list-container');
+const noHistoryMessage = document.getElementById('no-history-message');
+const kembaliKeMainMenuFromHistory = document.getElementById('kembali-ke-main-menu-from-history');
 
 const latihanSoalSubmenuContainer = document.getElementById('latihan-soal-submenu-container');
 const latihanDepartemenButton = document.getElementById('latihan-departemen-button');
@@ -62,209 +78,341 @@ const timerDisplaySidebar = document.getElementById('timer-display-sidebar');
 const timeLeftSidebarElement = document.getElementById('time-left-sidebar');
 const questionNavigationGrid = document.getElementById('question-navigation-grid');
 const questionCounterElement = document.getElementById('question-counter');
+const questionNavTitle = document.getElementById('question-nav-title');
 
 // Result Elements
 const resultContainer = document.getElementById('result-container');
+const resultTitleElement = document.getElementById('result-title');
 const scoreElement = document.getElementById('score');
 const restartButton = document.getElementById('restart-button');
+const reviewAnswersButton = document.getElementById('review-answers-button');
+const retryIncorrectButton = document.getElementById('retry-incorrect-button');
 
-let questionStates = []; // { answered: bool, doubtful: bool, selectedAnswer: int, answeredForScore: bool }
 
-// --- View Management ---
-function showView(viewToShow, prevView = null) {
+// --- VIEW MANAGEMENT ---
+function showView(viewToShow) {
     const allViews = [
         mainMenuViewContainer, latihanSoalSubmenuContainer, tryoutSubmenuContainer,
-        kategoriLatihanContainer, tryoutSeriusContainer,
+        kategoriLatihanContainer, tryoutSeriusContainer, historyContainer,
         quizLayoutContainer, resultContainer
     ];
     allViews.forEach(view => {
-        if (view) {
-            view.classList.toggle('hidden', view !== viewToShow);
-        }
+        if (view) view.classList.toggle('hidden', view !== viewToShow);
     });
-    // Hide license form if showing any app view
     const licenseForm = document.getElementById("license-form-container");
     if (licenseForm && viewToShow !== licenseForm && licenseForm.style.display !== 'none') {
         licenseForm.style.display = 'none';
     }
-    // if (prevView) previousViewForQuiz = prevView; // This was old logic, now handled more specifically
 }
-window.showView = showView; // Expose to global for Firebase script
+window.showView = showView;
 
-// --- Loading Indicator ---
-function showLoadingIndicator(message = "Memuat...", container = mainMenuViewContainer) {
-    hideLoadingIndicator();
-    const loadingIndicator = document.createElement('p');
-    loadingIndicator.id = 'loading-indicator';
-    loadingIndicator.textContent = message;
-    loadingIndicator.style.marginTop = "20px";
-    loadingIndicator.style.fontStyle = "italic";
-    if (container && !container.classList.contains('hidden')) { // Only append if container is visible
-         container.appendChild(loadingIndicator);
-    } else if (mainMenuViewContainer) { // Fallback to main menu
-         mainMenuViewContainer.appendChild(loadingIndicator);
-    }
-}
-function hideLoadingIndicator() {
-    const indicatorToRemove = document.getElementById('loading-indicator');
-    if (indicatorToRemove) indicatorToRemove.remove();
-}
-
-// --- App State Reset for Logout (Called by Firebase script) ---
+// --- APP STATE RESET & INITIALIZATION ---
 function resetAppStateForLogout() {
     console.log("script.js: resetAppStateForLogout called.");
     userName = "";
-    questions = []; allCategoryQuestions = []; questionStates = [];
+    questions = []; allCategoryQuestions = []; questionStates = []; quizHistory = [];
     currentQuestionIndex = 0; score = 0;
-    isTryOut = false; currentQuizMode = null;
-    currentCategoryFileName = null; currentTryoutSeriusType = null;
+    isTryOut = false; isReviewMode = false; currentQuizMode = null;
     previousViewForQuiz = null; previousViewForResult = null;
-    selectedOptionIndex = -1; answerSubmitted = false;
     stopOverallTimer();
-
-    const allAppViews = [
-        mainMenuViewContainer, latihanSoalSubmenuContainer, tryoutSubmenuContainer,
-        kategoriLatihanContainer, tryoutSeriusContainer,
-        quizLayoutContainer, resultContainer
-    ];
-    allAppViews.forEach(view => {
-        if (view) view.classList.add('hidden');
-    });
-
-    if (mainMenuWelcomeUser) mainMenuWelcomeUser.textContent = '';
-    if (userNameDisplaySidebar) userNameDisplaySidebar.textContent = 'Nama Pengguna';
-    if (questionNavigationGrid) questionNavigationGrid.innerHTML = '';
-    if (questionElement) questionElement.textContent = '';
-    if (optionsContainer) optionsContainer.innerHTML = '';
-    if (explanationElement) { explanationElement.innerHTML = ''; explanationElement.classList.add('hidden'); }
-    if (scoreElement) scoreElement.innerHTML = '';
-    if (timeLeftSidebarElement) timeLeftSidebarElement.innerText = `${TRYOUT_TIME_LIMIT_MINUTES}:00`;
-    if (timerDisplaySidebar) timerDisplaySidebar.classList.add('hidden');
-    if (questionCounterElement) questionCounterElement.classList.add('hidden');
-}
-window.resetAppState = resetAppStateForLogout; // Expose for Firebase script
-
-// --- Event Listeners for New Menu Structure ---
-
-// Main Menu Navigation
-if (mainMenuLatihanSoalButton) {
-    mainMenuLatihanSoalButton.addEventListener('click', () => {
-        showView(latihanSoalSubmenuContainer, mainMenuViewContainer);
-    });
-}
-if (mainMenuTryoutButton) {
-    mainMenuTryoutButton.addEventListener('click', () => {
-        showView(tryoutSubmenuContainer, mainMenuViewContainer);
-    });
-}
-
-// Latihan Pembahasan Soal Submenu Navigation
-if (latihanDepartemenButton) {
-    latihanDepartemenButton.addEventListener('click', () => {
-        showView(kategoriLatihanContainer, latihanSoalSubmenuContainer);
-    });
-}
-if (latihanGabunganButton) {
-    latihanGabunganButton.addEventListener('click', () => {
-        currentQuizMode = 'latihan-gabungan';
-        isTryOut = false; // Latihan mode
-        currentCategoryFileName = "gabungan.json"; // Specific file for this mode
-        currentTryoutSeriusType = null;
-        loadQuestionData(currentCategoryFileName, () => startGame(currentQuizMode, latihanSoalSubmenuContainer));
-    });
-}
-if (kembaliKeMainMenuFromLatihanSubmenu) {
-    kembaliKeMainMenuFromLatihanSubmenu.addEventListener('click', () => {
-        showView(mainMenuViewContainer, latihanSoalSubmenuContainer);
-    });
-}
-
-// Try Out Submenu Navigation
-if (tryoutGabunganSemuaButton) {
-    tryoutGabunganSemuaButton.addEventListener('click', () => {
-        currentQuizMode = 'tryout-gabungan-semua';
-        isTryOut = true; // Try Out mode
-        currentCategoryFileName = null; currentTryoutSeriusType = null;
-        const categoryDataFiles = [
-            "anak.json", "bedah.json", "gadar.json", "jiwa.json",
-            "keluarga.json", "komunitas.json", "manajemen.json"
-        ];
-        loadMultipleQuestionData(categoryDataFiles, () => {
-            if (allCategoryQuestions.length === 0) {
-                alert("Tidak ada soal untuk Try Out Gabungan (Semua Kategori).");
-                showView(tryoutSubmenuContainer); return;
+    
+    // Clear relevant localStorage
+    if (localStorage) {
+       Object.keys(localStorage).forEach(key => {
+            if (key.startsWith('quizProgress_')) {
+                localStorage.removeItem(key);
             }
-            shuffleArray(allCategoryQuestions);
-            questions = allCategoryQuestions.slice(0, TRYOUT_QUESTION_LIMIT);
-            if (questions.length === 0) {
-                alert("Tidak ada soal tersedia setelah pemrosesan untuk Try Out Gabungan.");
-                showView(tryoutSubmenuContainer); return;
-            }
-            startGame(currentQuizMode, tryoutSubmenuContainer);
+       });
+    }
+
+    // Reset UI elements...
+    showView(document.getElementById('license-form-container')); // Fallback to license form
+    document.getElementById('main-app-content').style.display = 'none';
+}
+window.resetAppState = resetAppStateForLogout;
+
+// --- LOCAL STORAGE & HISTORY MANAGEMENT ---
+function getLocalStorageKey(type) {
+    const sessionUserName = sessionStorage.getItem('userName') || 'defaultUser';
+    if (type === 'history') {
+        return `quizHistory_${sessionUserName}`;
+    }
+    if (type === 'progress') {
+        return `quizProgress_${sessionUserName}_${currentQuizMode}_${currentQuizTitle}`;
+    }
+    return null;
+}
+
+function saveProgress() {
+    if (!isTryOut || isReviewMode) return;
+    try {
+        const progress = {
+            questions,
+            questionStates,
+            currentQuestionIndex,
+            timeLeftOverallSeconds,
+            currentQuizMode,
+            currentQuizTitle,
+            timestamp: Date.now()
+        };
+        localStorage.setItem(getLocalStorageKey('progress'), JSON.stringify(progress));
+    } catch (e) {
+        console.error("Failed to save progress to localStorage:", e);
+    }
+}
+
+function loadProgress() {
+    try {
+        const savedProgress = localStorage.getItem(getLocalStorageKey('progress'));
+        if (savedProgress) {
+            return JSON.parse(savedProgress);
+        }
+        return null;
+    } catch (e) {
+        console.error("Failed to load progress from localStorage:", e);
+        return null;
+    }
+}
+
+function clearProgress() {
+    try {
+        localStorage.removeItem(getLocalStorageKey('progress'));
+    } catch (e) {
+        console.error("Failed to clear progress from localStorage:", e);
+    }
+}
+
+function loadHistory() {
+    try {
+        const savedHistory = localStorage.getItem(getLocalStorageKey('history'));
+        quizHistory = savedHistory ? JSON.parse(savedHistory) : [];
+    } catch (e) {
+        console.error("Failed to load history:", e);
+        quizHistory = [];
+    }
+}
+
+function saveHistory() {
+    try {
+        localStorage.setItem(getLocalStorageKey('history'), JSON.stringify(quizHistory));
+    } catch (e) {
+        console.error("Failed to save history:", e);
+    }
+}
+
+function renderHistory() {
+    loadHistory();
+    historyListContainer.innerHTML = '';
+    if (quizHistory.length === 0) {
+        noHistoryMessage.classList.remove('hidden');
+        return;
+    }
+
+    noHistoryMessage.classList.add('hidden');
+    // Show newest first
+    quizHistory.slice().reverse().forEach(item => {
+        const date = new Date(item.date).toLocaleString('id-ID', {
+            day: '2-digit', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'
         });
-    });
-}
-if (tryoutModeSeriusButton) {
-    tryoutModeSeriusButton.addEventListener('click', () => {
-        showView(tryoutSeriusContainer, tryoutSubmenuContainer);
-    });
-}
-if (kembaliKeMainMenuFromTryoutSubmenu) {
-    kembaliKeMainMenuFromTryoutSubmenu.addEventListener('click', () => {
-        showView(mainMenuViewContainer, tryoutSubmenuContainer);
+        const card = document.createElement('div');
+        card.className = 'history-item-card';
+        card.innerHTML = `
+            <h4>${item.quizName}</h4>
+            <p><strong>Tanggal:</strong> ${date}</p>
+            <p><strong>Skor:</strong> ${item.score} / ${item.totalQuestions}</p>
+        `;
+        historyListContainer.appendChild(card);
     });
 }
 
-// Kategori Latihan Pembahasan Soal (Departemen)
-if (kategoriButtons.length > 0) {
-    kategoriButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            currentQuizMode = 'latihan-departemen';
-            isTryOut = false; // Latihan mode
-            currentCategoryFileName = button.dataset.script.replace('.js', '.json');
-            currentTryoutSeriusType = null;
-            loadQuestionData(currentCategoryFileName, () => startGame(currentQuizMode, kategoriLatihanContainer));
-        });
-    });
-}
-if (kembaliKeLatihanSubmenuFromKategori) {
-    kembaliKeLatihanSubmenuFromKategori.addEventListener('click', () => {
-        showView(latihanSoalSubmenuContainer, kategoriLatihanContainer);
-    });
-}
 
-// Try Out Serius (Per Tipe)
-if (tryoutSeriusButtons.length > 0) {
-    tryoutSeriusButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            currentQuizMode = 'tryout-serius';
-            isTryOut = true; // Try Out mode
-            currentTryoutSeriusType = button.dataset.type;
-            const dataFile = button.dataset.file;
+// --- EVENT LISTENERS FOR MENU & NAVIGATION ---
+document.addEventListener('DOMContentLoaded', () => {
+    // Main Menu
+    if (mainMenuLatihanSoalButton) mainMenuLatihanSoalButton.addEventListener('click', () => showView(latihanSoalSubmenuContainer));
+    if (mainMenuTryoutButton) mainMenuTryoutButton.addEventListener('click', () => showView(tryoutSubmenuContainer));
+    if (mainMenuHistoryButton) {
+        mainMenuHistoryButton.addEventListener('click', () => {
+            renderHistory();
+            showView(historyContainer);
+        });
+    }
+    if (kembaliKeMainMenuFromHistory) kembaliKeMainMenuFromHistory.addEventListener('click', () => showView(mainMenuViewContainer));
+
+    // Submenus
+    if (latihanDepartemenButton) latihanDepartemenButton.addEventListener('click', () => showView(kategoriLatihanContainer));
+    if (kembaliKeMainMenuFromLatihanSubmenu) kembaliKeMainMenuFromLatihanSubmenu.addEventListener('click', () => showView(mainMenuViewContainer));
+    if (tryoutModeSeriusButton) tryoutModeSeriusButton.addEventListener('click', () => showView(tryoutSeriusContainer));
+    if (kembaliKeMainMenuFromTryoutSubmenu) kembaliKeMainMenuFromTryoutSubmenu.addEventListener('click', () => showView(mainMenuViewContainer));
+    if (kembaliKeLatihanSubmenuFromKategori) kembaliKeLatihanSubmenuFromKategori.addEventListener('click', () => showView(latihanSoalSubmenuContainer));
+    if (kembaliKeTryoutSubmenuFromSerius) kembaliKeTryoutSubmenuFromSerius.addEventListener('click', () => showView(tryoutSubmenuContainer));
+
+    // Quiz Launchers
+    if (latihanGabunganButton) {
+        latihanGabunganButton.addEventListener('click', () => {
+            currentQuizMode = 'latihan-gabungan';
+            currentQuizTitle = 'Latihan Soal Gabungan';
+            isTryOut = false;
+            currentCategoryFileName = "gabungan.json";
+            loadQuestionData(currentCategoryFileName, () => startGame(latihanSoalSubmenuContainer));
+        });
+    }
+
+    if (tryoutGabunganSemuaButton) {
+        tryoutGabunganSemuaButton.addEventListener('click', () => {
+            currentQuizMode = 'tryout-gabungan-semua';
+            currentQuizTitle = 'Try Out Gabungan';
+            isTryOut = true;
             currentCategoryFileName = null;
-            loadQuestionData(dataFile, () => {
-                if (questions.length === 0) {
-                    alert(`Tidak ada soal untuk ${currentTryoutSeriusType}. Periksa file ${dataFile}.`);
-                    showView(tryoutSeriusContainer); return;
+            const categoryDataFiles = ["anak.json", "bedah.json", "gadar.json", "jiwa.json", "keluarga.json", "komunitas.json", "manajemen.json"];
+            const savedProgress = loadProgress();
+            if (savedProgress) {
+                if (confirm("Anda memiliki sesi Try Out Gabungan yang belum selesai. Lanjutkan?")) {
+                    restoreGame(savedProgress, tryoutSubmenuContainer);
+                    return;
+                } else {
+                    clearProgress();
                 }
-                questions = questions.slice(0, TRYOUT_QUESTION_LIMIT);
-                if (questions.length === 0) {
-                    alert(`Tidak ada soal tersedia setelah pemrosesan untuk ${currentTryoutSeriusType}.`);
-                    showView(tryoutSeriusContainer); return;
-                }
-                startGame(currentQuizMode, tryoutSeriusContainer);
+            }
+            loadMultipleQuestionData(categoryDataFiles, () => {
+                shuffleArray(allCategoryQuestions);
+                questions = allCategoryQuestions.slice(0, TRYOUT_QUESTION_LIMIT);
+                startGame(tryoutSubmenuContainer);
             });
         });
+    }
+
+    if (kategoriButtons.length > 0) {
+        kategoriButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                currentQuizMode = 'latihan-departemen';
+                isTryOut = false;
+                currentCategoryFileName = button.dataset.script.replace('.js', '.json');
+                currentQuizTitle = formatCategoryName(currentCategoryFileName.replace('.json', ''));
+                loadQuestionData(currentCategoryFileName, () => startGame(kategoriLatihanContainer));
+            });
+        });
+    }
+    
+    if (tryoutSeriusButtons.length > 0) {
+        tryoutSeriusButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                currentQuizMode = 'tryout-serius';
+                currentQuizTitle = button.dataset.type; // e.g. "TO Tipe 1"
+                isTryOut = true;
+                const dataFile = button.dataset.file;
+                const savedProgress = loadProgress();
+                if (savedProgress) {
+                    if (confirm(`Anda memiliki sesi ${currentQuizTitle} yang belum selesai. Lanjutkan?`)) {
+                        restoreGame(savedProgress, tryoutSeriusContainer);
+                        return;
+                    } else {
+                        clearProgress();
+                    }
+                }
+                loadQuestionData(dataFile, () => {
+                    questions = questions.slice(0, TRYOUT_QUESTION_LIMIT);
+                    startGame(tryoutSeriusContainer);
+                });
+            });
+        });
+    }
+
+    // Result Buttons
+    restartButton.addEventListener('click', () => {
+        isReviewMode = false;
+        showView(mainMenuViewContainer);
     });
-}
-if (kembaliKeTryoutSubmenuFromSerius) {
-    kembaliKeTryoutSubmenuFromSerius.addEventListener('click', () => {
-        showView(tryoutSubmenuContainer, tryoutSeriusContainer);
+
+    reviewAnswersButton.addEventListener('click', () => {
+        isReviewMode = true;
+        currentQuestionIndex = 0;
+        questions = [...completedQuizData.questions];
+        questionStates = [...completedQuizData.questionStates];
+        showView(quizLayoutContainer);
+        renderQuestionNavigation();
+        showQuestion(questions[currentQuestionIndex]);
     });
-}
+    
+    retryIncorrectButton.addEventListener('click', () => {
+        const incorrectQuestions = completedQuizData.questions.filter((q, index) => {
+            const state = completedQuizData.questionStates[index];
+            return state.selectedAnswer !== -1 && state.selectedAnswer !== q.answer;
+        });
+        
+        if (incorrectQuestions.length > 0) {
+            questions = incorrectQuestions;
+            currentQuizMode = 'latihan-salah';
+            currentQuizTitle = `Latihan Ulang Soal Salah (${completedQuizData.quizName})`;
+            isTryOut = false;
+            isReviewMode = false;
+            startGame(resultContainer);
+        }
+    });
+
+    // Quiz Navigation
+    if (doubtfulButton) {
+        doubtfulButton.addEventListener('click', () => {
+            if (!isTryOut || isReviewMode || !questionStates[currentQuestionIndex]) return;
+            const currentQState = questionStates[currentQuestionIndex];
+            currentQState.doubtful = !currentQState.doubtful;
+            doubtfulButton.textContent = currentQState.doubtful ? "Hapus Tanda Ragu" : "Tandai Ragu-ragu";
+            renderQuestionNavigation();
+            saveProgress();
+        });
+    }
+
+    if (nextQuestionButton) {
+        nextQuestionButton.addEventListener('click', () => {
+            if (isTryOut && !isReviewMode) {
+                questionStates[currentQuestionIndex].selectedAnswer = selectedOptionIndex;
+                if (!questionStates[currentQuestionIndex].answered && selectedOptionIndex !== -1) {
+                    questionStates[currentQuestionIndex].answered = true;
+                }
+                saveProgress();
+            }
+
+            const isLastQuestion = currentQuestionIndex >= questions.length - 1;
+
+            if (!isLastQuestion) {
+                currentQuestionIndex++;
+                if (!isReviewMode) {
+                    selectedOptionIndex = questionStates[currentQuestionIndex]?.selectedAnswer ?? -1;
+                    answerSubmitted = questionStates[currentQuestionIndex]?.answered ?? false;
+                }
+                showQuestion(questions[currentQuestionIndex]);
+            } else { // Last question
+                if (isReviewMode) {
+                    showView(resultContainer);
+                } else if (isTryOut) {
+                    finalizeTryOut();
+                } else {
+                    showResult();
+                }
+            }
+        });
+    }
+    
+    if (quizBackButton) {
+        quizBackButton.addEventListener('click', () => {
+            if (isReviewMode) {
+                isReviewMode = false;
+                showView(resultContainer);
+                return;
+            }
+
+            if (confirm("Anda yakin ingin kembali? Progress kuis ini akan hilang.")) {
+                stopOverallTimer();
+                if (isTryOut) clearProgress();
+                isTryOut = false; currentQuizMode = null;
+                showView(previousViewForQuiz || mainMenuViewContainer);
+            }
+        });
+    }
+});
 
 
-// --- Core Quiz Logic ---
+// --- CORE QUIZ LOGIC ---
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -273,447 +421,334 @@ function shuffleArray(array) {
 }
 
 function loadQuestionData(fileName, callback) {
-    let loadingContainer = mainMenuViewContainer; // Default
-    if (currentQuizMode === 'latihan-departemen') loadingContainer = kategoriLatihanContainer;
-    else if (currentQuizMode === 'latihan-gabungan') loadingContainer = latihanSoalSubmenuContainer;
-    else if (currentQuizMode === 'tryout-serius') loadingContainer = tryoutSeriusContainer;
-
-    showLoadingIndicator(`Memuat soal dari ${fileName}...`, loadingContainer);
     fetch(fileName)
-        .then(response => {
-            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status} for ${fileName}`);
-            return response.json();
-        })
+        .then(response => response.ok ? response.json() : Promise.reject(`HTTP error! Status: ${response.status}`))
         .then(data => {
-            hideLoadingIndicator();
             if (Array.isArray(data) && data.length > 0) {
                 shuffleArray(data);
                 questions = [...data];
                 callback();
             } else {
-                alert(`Gagal memuat atau tidak ada soal di ${fileName}. Pastikan file "${fileName}" ada dan berisi soal.`);
-                showView(loadingContainer || mainMenuViewContainer);
+                alert(`Gagal memuat atau tidak ada soal di ${fileName}.`);
             }
-        })
-        .catch(error => {
-            hideLoadingIndicator();
-            alert(`Error memuat ${fileName}: ${error.message}. Pastikan file "${fileName}" ada di server dan dapat diakses.`);
-            console.error(`Error memuat ${fileName}:`, error);
-            showView(loadingContainer || mainMenuViewContainer);
-        });
+        }).catch(error => alert(`Error memuat ${fileName}: ${error.message}.`));
 }
 
 async function loadMultipleQuestionData(fileNames, allLoadedCallback) {
-    showLoadingIndicator("Menyiapkan soal Try Out Gabungan...", tryoutSubmenuContainer);
     allCategoryQuestions = [];
     const fetchPromises = fileNames.map(fileName =>
         fetch(fileName)
-        .then(response => {
-            if (!response.ok) { console.warn(`Gagal memuat ${fileName}`); return { fileName, data: [] }; }
-            return response.json().then(data => ({ fileName, data })).catch(e => { console.error(`JSON error di ${fileName}`, e); return { fileName, data: []}; });
-        })
-        .catch(error => { console.error(`Fetch error ${fileName}`, error); return { fileName, data: [] }; })
+        .then(response => response.ok ? response.json() : [])
+        .then(data => ({ fileName, data }))
+        .catch(() => ({ fileName, data: [] }))
     );
-    try {
-        const results = await Promise.all(fetchPromises);
-        hideLoadingIndicator();
-        results.forEach(result => {
-            if (Array.isArray(result.data) && result.data.length > 0) {
-                allCategoryQuestions.push(...result.data.map(q => ({ ...q, category: result.fileName.replace('.json', '') })));
-            }
-        });
-        allLoadedCallback();
-    } catch (error) {
-        hideLoadingIndicator();
-        alert("Error memuat data soal Try Out Gabungan.");
-        showView(tryoutSubmenuContainer);
-    }
+    const results = await Promise.all(fetchPromises);
+    results.forEach(result => {
+        if (Array.isArray(result.data) && result.data.length > 0) {
+            allCategoryQuestions.push(...result.data.map(q => ({ ...q, category: result.fileName.replace('.json', '') })));
+        }
+    });
+    allLoadedCallback();
 }
 
 function formatCategoryName(shortName) {
-    if (!shortName) return "Lainnya";
     const nameMap = { "jiwa": "Keperawatan Jiwa", "anak": "Keperawatan Anak", "keluarga": "Keperawatan Keluarga", "komunitas": "Keperawatan Komunitas", "bedah": "Keperawatan Medikal Bedah", "gadar": "Keperawatan Gawat Darurat", "manajemen": "Manajemen Keperawatan", "gabungan": "Soal Gabungan" };
     return nameMap[shortName.toLowerCase()] || shortName.charAt(0).toUpperCase() + shortName.slice(1);
 }
 
-function startGame(mode, sourceViewElement) {
-    currentQuizMode = mode; // Set the global quiz mode
-    previousViewForQuiz = sourceViewElement; // For quizBackButton and restartButton after results
+function startGame(sourceViewElement) {
+    previousViewForQuiz = sourceViewElement;
+    currentQuestionIndex = 0; score = 0; selectedOptionIndex = -1;
+    answerSubmitted = false; isReviewMode = false;
 
-    currentQuestionIndex = 0; score = 0;
-    selectedOptionIndex = -1; answerSubmitted = false;
-
-    const sessionUserName = sessionStorage.getItem('userName');
-    userName = sessionUserName || "Pengguna";
-    if (userNameDisplaySidebar) userNameDisplaySidebar.innerText = userName;
-    // Welcome message is handled by Firebase on login (mainMenuWelcomeUser)
+    userName = sessionStorage.getItem('userName') || "Pengguna";
+    userNameDisplaySidebar.innerText = userName;
 
     if (!questions || questions.length === 0) {
-        alert("Tidak ada soal dimuat. Kuis tidak bisa dimulai.");
-        showView(sourceViewElement || mainMenuViewContainer); return;
+        alert("Tidak ada soal, kuis tidak dapat dimulai.");
+        showView(sourceViewElement); return;
     }
-    questionStates = questions.map(() => ({ answered: false, doubtful: false, selectedAnswer: -1, answeredForScore: false }));
+    questionStates = questions.map(() => ({ answered: false, doubtful: false, selectedAnswer: -1 }));
 
-    if(explanationElement) { explanationElement.classList.add('hidden'); explanationElement.innerHTML = ''; }
-
-    if (isTryOut) { // isTryOut is true for 'tryout-gabungan-semua' and 'tryout-serius'
-        if(timerDisplaySidebar) timerDisplaySidebar.classList.remove('hidden');
+    if (isTryOut) {
+        timerDisplaySidebar.classList.remove('hidden');
+        doubtfulButton.classList.remove('hidden');
         startOverallTimer();
-        if (doubtfulButton) doubtfulButton.classList.remove('hidden');
-    } else { // Latihan modes
-        if(timerDisplaySidebar) timerDisplaySidebar.classList.add('hidden');
+    } else {
+        timerDisplaySidebar.classList.add('hidden');
+        doubtfulButton.classList.add('hidden');
         stopOverallTimer();
-        if (doubtfulButton) doubtfulButton.classList.add('hidden'); // Typically hidden for Latihan, but can be enabled if desired
     }
-    showView(quizLayoutContainer, sourceViewElement);
+    
+    showView(quizLayoutContainer);
+    renderQuestionNavigation();
+    showQuestion(questions[currentQuestionIndex]);
+}
+
+function restoreGame(progress, sourceViewElement) {
+    previousViewForQuiz = sourceViewElement;
+    questions = progress.questions;
+    questionStates = progress.questionStates;
+    currentQuestionIndex = progress.currentQuestionIndex;
+    timeLeftOverallSeconds = progress.timeLeftOverallSeconds;
+    currentQuizMode = progress.currentQuizMode;
+    currentQuizTitle = progress.currentQuizTitle;
+    isTryOut = true;
+    isReviewMode = false;
+    score = 0; // Will be recalculated on finish
+
+    userName = sessionStorage.getItem('userName') || "Pengguna";
+    userNameDisplaySidebar.innerText = userName;
+
+    timerDisplaySidebar.classList.remove('hidden');
+    doubtfulButton.classList.remove('hidden');
+    startOverallTimer();
+
+    showView(quizLayoutContainer);
     renderQuestionNavigation();
     showQuestion(questions[currentQuestionIndex]);
 }
 
 function startOverallTimer() {
-    timeLeftOverallSeconds = TRYOUT_TIME_LIMIT_MINUTES * 60;
+    stopOverallTimer();
     updateOverallTimerDisplaySidebar();
-    clearInterval(overallTimerInterval);
     overallTimerInterval = setInterval(() => {
         timeLeftOverallSeconds--;
         updateOverallTimerDisplaySidebar();
+        if (timeLeftOverallSeconds % 10 === 0) saveProgress(); // Save progress every 10 seconds
         if (timeLeftOverallSeconds <= 0) {
-            clearInterval(overallTimerInterval);
-            alert("Waktu Habis!");
-            finalizeTryOut();
+            finalizeTryOut("Waktu Habis!");
         }
     }, 1000);
 }
+
 function stopOverallTimer() { clearInterval(overallTimerInterval); }
+
 function updateOverallTimerDisplaySidebar() {
     const minutes = Math.floor(timeLeftOverallSeconds / 60);
     const seconds = timeLeftOverallSeconds % 60;
-    if (timeLeftSidebarElement) timeLeftSidebarElement.innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    timeLeftSidebarElement.innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 }
 
-function finalizeTryOut() { // Called when timer ends or user finishes Try Out
-    if (currentQuestionIndex < questions.length && questionStates[currentQuestionIndex]) {
-        const currentQState = questionStates[currentQuestionIndex];
-        if (selectedOptionIndex !== -1 && currentQState.selectedAnswer === -1) currentQState.selectedAnswer = selectedOptionIndex;
-        if (!currentQState.answered && selectedOptionIndex !== -1) currentQState.answered = true;
-    }
-    previousViewForResult = previousViewForQuiz; // Save where user came from before quiz
+function finalizeTryOut(message = "Try Out Selesai!") {
+    alert(message);
+    stopOverallTimer();
     showResult();
+    clearProgress();
 }
 
 function renderQuestionNavigation() {
     if (!questionNavigationGrid) return;
     questionNavigationGrid.innerHTML = '';
-    questions.forEach((_, index) => {
+    const items = isReviewMode ? completedQuizData.questions : questions;
+    const states = isReviewMode ? completedQuizData.questionStates : questionStates;
+
+    items.forEach((_, index) => {
         const navBox = document.createElement('div');
-        navBox.classList.add('nav-question-box');
+        navBox.className = 'nav-question-box';
         navBox.innerText = index + 1;
         navBox.dataset.index = index;
-        if (questionStates[index]) {
-            if (index === currentQuestionIndex) navBox.classList.add('current');
-            if (questionStates[index].answered) navBox.classList.add('answered');
-            if (questionStates[index].doubtful) navBox.classList.add('doubtful');
-        }
-        navBox.addEventListener('click', () => {
-            if (isTryOut && questionStates[currentQuestionIndex]) { // Save current answer before navigating in TryOut
-                questionStates[currentQuestionIndex].selectedAnswer = selectedOptionIndex;
-                if (!questionStates[currentQuestionIndex].answered && selectedOptionIndex !== -1) {
-                    questionStates[currentQuestionIndex].answered = true;
-                    const currentNavBoxEl = questionNavigationGrid.querySelector(`.nav-question-box[data-index="${currentQuestionIndex}"]`);
-                    if (currentNavBoxEl) currentNavBoxEl.classList.add('answered');
+        const state = states[index];
+
+        if (state) {
+            if (isReviewMode) {
+                if(state.selectedAnswer === items[index].answer) {
+                    navBox.classList.add('review-correct');
+                } else {
+                    navBox.classList.add('review-incorrect');
                 }
+            } else {
+                if (state.answered) navBox.classList.add('answered');
+                if (state.doubtful) navBox.classList.add('doubtful');
+            }
+        }
+        if (index === currentQuestionIndex) navBox.classList.add('current');
+        
+        navBox.addEventListener('click', () => {
+            if (isTryOut && !isReviewMode) {
+                questionStates[currentQuestionIndex].selectedAnswer = selectedOptionIndex;
             }
             currentQuestionIndex = parseInt(navBox.dataset.index);
-            selectedOptionIndex = questionStates[currentQuestionIndex]?.selectedAnswer ?? -1;
-            answerSubmitted = questionStates[currentQuestionIndex]?.answered ?? false; // For Latihan mode
-            showQuestion(questions[currentQuestionIndex]);
+            if (!isReviewMode) {
+                selectedOptionIndex = states[currentQuestionIndex]?.selectedAnswer ?? -1;
+            }
+            showQuestion(items[currentQuestionIndex]);
         });
         questionNavigationGrid.appendChild(navBox);
     });
 }
 
-function submitAnswerForLatihan() { // Only for Latihan modes
-    const currentQState = questionStates[currentQuestionIndex];
-    if (!currentQState || currentQState.answered) return; // Prevent re-submission
-    const currentQ = questions[currentQuestionIndex];
-    if (!currentQ) return;
-
-    currentQState.answered = true;
-    currentQState.selectedAnswer = selectedOptionIndex;
-    answerSubmitted = true; // Local flag for Latihan UI update
-
-    const correctIndex = currentQ.answer;
-    const explanationText = currentQ.explanation;
-    const optionButtons = optionsContainer.querySelectorAll('.option-button');
-
-    optionButtons.forEach(button => button.disabled = true);
-    if (selectedOptionIndex === correctIndex && !currentQState.answeredForScore) {
-        score++; currentQState.answeredForScore = true;
-    }
-
-    const navBox = questionNavigationGrid.querySelector(`.nav-question-box[data-index="${currentQuestionIndex}"]`);
-    if (navBox) {
-        navBox.classList.add('answered');
-        // No doubtful logic for Latihan here, can be added if needed
-    }
-
-    optionButtons.forEach((btn, i) => {
-        btn.classList.remove('selected-tryout'); // Latihan doesn't use selected-tryout class after answer
-        if (i === correctIndex) btn.classList.add('correct');
-        if (i === selectedOptionIndex && i !== correctIndex) btn.classList.add('incorrect');
-    });
-
-    let explText = `<strong>Penjelasan:</strong> ${explanationText || 'Tidak ada penjelasan.'}`;
-    if (selectedOptionIndex === -1) explanationElement.innerHTML = `<strong>Anda tidak memilih jawaban.</strong> Jawaban yang benar adalah opsi ke-${correctIndex + 1}.<br>${explText}`;
-    else if (selectedOptionIndex === correctIndex) explanationElement.innerHTML = `<strong>Jawaban Benar!</strong><br>${explText}`;
-    else explanationElement.innerHTML = `<strong>Jawaban Salah.</strong> Jawaban yang benar adalah opsi ke-${correctIndex + 1}.<br>${explText}`;
-    explanationElement.classList.remove('hidden');
-
-    if (nextQuestionButton) {
-        nextQuestionButton.innerText = (currentQuestionIndex < questions.length - 1) ? "Soal Berikutnya" : "Lihat Hasil";
-        nextQuestionButton.classList.remove('hidden');
-    }
-}
-
-
 function showQuestion(questionData) {
-    if (!questionData) {
-        alert("Error: Soal tidak dapat dimuat.");
-        showView(previousViewForQuiz || mainMenuViewContainer, quizLayoutContainer); return;
-    }
-    const currentQState = questionStates[currentQuestionIndex] || { answered: false, doubtful: false, selectedAnswer: -1 };
+    if (!questionData) return;
+    const currentQState = (isReviewMode ? completedQuizData.questionStates : questionStates)[currentQuestionIndex];
+    
+    questionNavTitle.textContent = isReviewMode ? "Navigasi Tinjauan" : "Navigasi Soal";
+    questionCounterElement.innerText = `Soal ${currentQuestionIndex + 1} dari ${isReviewMode ? completedQuizData.questions.length : questions.length}`;
+    renderQuestionNavigation();
 
-    if (questionCounterElement) {
-        questionCounterElement.innerText = `Soal ${currentQuestionIndex + 1} dari ${questions.length}`;
-        questionCounterElement.classList.remove('hidden');
+    questionElement.textContent = questionData.question;
+    optionsContainer.innerHTML = '';
+    explanationElement.classList.add('hidden');
+    
+    doubtfulButton.classList.toggle('hidden', isReviewMode || !isTryOut);
+    if (!isReviewMode && isTryOut) {
+        doubtfulButton.textContent = currentQState.doubtful ? "Hapus Tanda Ragu" : "Tandai Ragu-ragu";
     }
-    if (questionNavigationGrid) {
-        questionNavigationGrid.querySelectorAll('.nav-question-box').forEach(box => {
-            box.classList.remove('current');
-            if (parseInt(box.dataset.index) === currentQuestionIndex) box.classList.add('current');
-        });
-    }
-
-    if (questionElement) questionElement.textContent = questionData.question;
-    if (optionsContainer) optionsContainer.innerHTML = '';
-    if (explanationElement) { explanationElement.classList.add('hidden'); explanationElement.innerHTML = ''; }
 
     questionData.options.forEach((option, index) => {
         const button = document.createElement('button');
         button.textContent = option;
-        button.classList.add('option-button');
-        button.style.color = "black"; // Ensure default color
-        button.addEventListener('click', () => selectOption(index));
-        if (optionsContainer) optionsContainer.appendChild(button);
+        button.className = 'option-button';
+        if (!isReviewMode) {
+            button.addEventListener('click', () => selectOption(index));
+        } else {
+            button.disabled = true;
+        }
+        optionsContainer.appendChild(button);
     });
-
+    
     const optionButtons = optionsContainer.querySelectorAll('.option-button');
-    if (!isTryOut && currentQState.answered) { // Latihan mode, already answered
-        optionButtons.forEach((btn, index) => {
-            btn.disabled = true;
-            btn.classList.remove('correct', 'incorrect', 'selected-tryout');
-            if (index === questionData.answer) btn.classList.add('correct');
-            if (index === currentQState.selectedAnswer && index !== questionData.answer) btn.classList.add('incorrect');
-        });
-        let explText = `<strong>Penjelasan:</strong> ${questionData.explanation || 'Tidak ada penjelasan.'}`;
-        if (currentQState.selectedAnswer === -1) explanationElement.innerHTML = `<strong>Anda tidak memilih jawaban.</strong> Jawaban yang benar adalah opsi ke-${questionData.answer + 1}.<br>${explText}`;
-        else if (currentQState.selectedAnswer === questionData.answer) explanationElement.innerHTML = `<strong>Jawaban Benar!</strong><br>${explText}`;
-        else explanationElement.innerHTML = `<strong>Jawaban Salah.</strong> Jawaban yang benar adalah opsi ke-${questionData.answer + 1}.<br>${explText}`;
+    if (isReviewMode) {
+        explanationElement.innerHTML = `<strong>Penjelasan:</strong> ${questionData.explanation || 'Tidak ada penjelasan.'}`;
         explanationElement.classList.remove('hidden');
-    } else if (isTryOut && currentQState.selectedAnswer !== -1) { // TryOut mode, previously selected
-        if (optionButtons[currentQState.selectedAnswer]) {
-            optionButtons[currentQState.selectedAnswer].classList.add('selected-tryout');
+        if (currentQState.selectedAnswer === questionData.answer) {
+            optionButtons[questionData.answer].classList.add('correct');
+        } else {
+            if(currentQState.selectedAnswer !== -1) {
+                optionButtons[currentQState.selectedAnswer].classList.add('incorrect');
+            }
+            optionButtons[questionData.answer].classList.add('correct');
+        }
+    } else { // Mode Latihan atau Tryout
+        if (isTryOut) {
+            if (currentQState.selectedAnswer !== -1) {
+                optionButtons[currentQState.selectedAnswer].classList.add('selected-tryout');
+            }
+        } else { // Mode Latihan
+            if (currentQState.answered) {
+                submitAnswerForLatihan(true); // Re-show highlights
+            }
         }
     }
 
-
-    if (isTryOut && doubtfulButton) {
-        doubtfulButton.classList.remove('hidden');
-        doubtfulButton.textContent = currentQState.doubtful ? "Hapus Tanda Ragu" : "Tandai Ragu-ragu";
-    } else if (doubtfulButton) { // Latihan mode
-        doubtfulButton.classList.add('hidden');
-    }
-
-    if (nextQuestionButton) {
-        nextQuestionButton.innerText = (currentQuestionIndex < questions.length - 1) ? "Soal Berikutnya" : (isTryOut ? "Selesaikan Try Out" : "Lihat Hasil");
-        nextQuestionButton.classList.remove('hidden');
+    // Update next button text
+    const isLastQuestion = currentQuestionIndex >= (isReviewMode ? completedQuizData.questions.length : questions.length) - 1;
+    if (isLastQuestion) {
+        nextQuestionButton.textContent = isReviewMode ? "Kembali ke Hasil" : (isTryOut ? "Selesaikan Try Out" : "Lihat Hasil");
+    } else {
+        nextQuestionButton.textContent = "Soal Berikutnya";
     }
 }
 
 function selectOption(selectedIndex) {
-    if (!isTryOut && questionStates[currentQuestionIndex]?.answered) return; // Prevent re-selecting in Latihan
+    if (isReviewMode || (!isTryOut && questionStates[currentQuestionIndex]?.answered)) return;
 
     selectedOptionIndex = selectedIndex;
-    if (questionStates[currentQuestionIndex]) {
-      questionStates[currentQuestionIndex].selectedAnswer = selectedIndex;
-    }
-
-    if (optionsContainer) {
-        optionsContainer.querySelectorAll('.option-button').forEach((button, i) => {
-            button.classList.toggle('selected-tryout', i === selectedIndex);
-            if (!isTryOut) { // In Latihan, remove other selections
-                if (i !== selectedIndex) button.classList.remove('selected-tryout');
-            }
-        });
-    }
-
+    questionStates[currentQuestionIndex].selectedAnswer = selectedIndex;
+    
+    optionsContainer.querySelectorAll('.option-button').forEach((button, i) => {
+        button.classList.toggle('selected-tryout', i === selectedIndex);
+    });
+    
     if (!isTryOut) {
-        submitAnswerForLatihan();
+        submitAnswerForLatihan(false); // First time submitting
+    } else {
+        questionStates[currentQuestionIndex].answered = true;
+        renderQuestionNavigation(); // Update nav box to 'answered'
     }
 }
 
-if (doubtfulButton) {
-    doubtfulButton.addEventListener('click', () => {
-        if (!isTryOut || !questionStates[currentQuestionIndex]) return;
-        const currentQState = questionStates[currentQuestionIndex];
-        currentQState.doubtful = !currentQState.doubtful;
-        if (questionNavigationGrid) {
-            const navBox = questionNavigationGrid.querySelector(`.nav-question-box[data-index="${currentQuestionIndex}"]`);
-            if (navBox) navBox.classList.toggle('doubtful', currentQState.doubtful);
+function submitAnswerForLatihan(isReshow) {
+    const currentQ = questions[currentQuestionIndex];
+    const currentQState = questionStates[currentQuestionIndex];
+    if (!isReshow) { // First time answering
+        currentQState.answered = true;
+        answerSubmitted = true;
+        if (selectedOptionIndex === currentQ.answer) {
+            score++;
         }
-        doubtfulButton.textContent = currentQState.doubtful ? "Hapus Tanda Ragu" : "Tandai Ragu-ragu";
-    });
+    }
+
+    optionsContainer.querySelectorAll('.option-button').forEach(btn => btn.disabled = true);
+    
+    if (selectedOptionIndex === currentQ.answer) {
+        optionsContainer.children[selectedOptionIndex].classList.add('correct');
+    } else {
+        if (selectedOptionIndex !== -1) {
+            optionsContainer.children[selectedOptionIndex].classList.add('incorrect');
+        }
+        optionsContainer.children[currentQ.answer].classList.add('correct');
+    }
+    
+    explanationElement.innerHTML = `<strong>Penjelasan:</strong> ${currentQ.explanation || 'Tidak ada penjelasan.'}`;
+    explanationElement.classList.remove('hidden');
+    renderQuestionNavigation();
 }
 
-if (nextQuestionButton) {
-    nextQuestionButton.addEventListener('click', () => {
-        const currentQState = questionStates[currentQuestionIndex];
-        if (isTryOut && currentQState) { // Save answer for current question in TryOut
-            currentQState.selectedAnswer = selectedOptionIndex;
-            if (!currentQState.answered && selectedOptionIndex !== -1) { // Mark as answered if an option was selected
-                currentQState.answered = true;
-                if (questionNavigationGrid) {
-                    const navBox = questionNavigationGrid.querySelector(`.nav-question-box[data-index="${currentQuestionIndex}"]`);
-                    if (navBox) navBox.classList.add('answered');
-                }
-            }
-        }
-
-        if (currentQuestionIndex < questions.length - 1) {
-            currentQuestionIndex++;
-            selectedOptionIndex = questionStates[currentQuestionIndex]?.selectedAnswer ?? -1;
-            answerSubmitted = questionStates[currentQuestionIndex]?.answered ?? false; // for Latihan mode UI
-            showQuestion(questions[currentQuestionIndex]);
-        } else { // Last question
-            if (isTryOut) { stopOverallTimer(); finalizeTryOut(); }
-            else { previousViewForResult = previousViewForQuiz; showResult(); }
-        }
-    });
-}
 
 function showResult() {
     stopOverallTimer();
-    if (timerDisplaySidebar) timerDisplaySidebar.classList.add('hidden');
-    if (questionCounterElement) questionCounterElement.classList.add('hidden');
-    if (questionNavigationGrid) questionNavigationGrid.innerHTML = '';
-    if (explanationElement) { explanationElement.classList.add('hidden'); explanationElement.innerHTML = ''; }
-    if (doubtfulButton) doubtfulButton.classList.add('hidden');
-    showView(resultContainer, quizLayoutContainer);
+    
+    // Simpan data kuis yang baru selesai untuk fitur review dan retry
+    completedQuizData.questions = [...questions];
+    completedQuizData.questionStates = [...questionStates];
+    completedQuizData.quizName = currentQuizTitle;
 
-    const currentUserNameForResult = sessionStorage.getItem('userName') || userName || "Peserta";
-    let message = "";
-    const totalQuestions = questions.length;
+    let finalScore = 0;
+    let incorrectCount = 0;
+    const categoryBreakdown = {};
 
-    if (currentQuizMode === 'tryout-serius') {
-        score = 0; // Recalculate score for TryOut Serius based on final answers
-        questions.forEach((q, index) => {
-            const state = questionStates[index];
-            if (state?.answered && state.selectedAnswer === q.answer) score++;
-        });
-        message += `<span class="user-name-result">Selamat ${currentUserNameForResult}!</span><br>`;
-        if (totalQuestions > 0) {
-            message += `Hasil ${currentTryoutSeriusType || 'Try Out Serius'} Anda: <span class="score-value">${score}</span> benar dari ${totalQuestions} soal.<br>`;
-            let feedback = "";
-            if (score >= 1 && score <= 90) feedback = "NILAI KURANG, BELAJAR LEBIH GIAT LAGI";
-            else if (score >= 91 && score <= 120) feedback = "NILAI CUKUP, BELAJAR LAGI";
-            else if (score >= 121 && score <= TRYOUT_QUESTION_LIMIT) feedback = "NILAI BAGUS, PERTAHANKAN";
-            else if (score > TRYOUT_QUESTION_LIMIT) feedback = "NILAI LUAR BIASA, PERTAHANKAN!";
-            else if (score === 0) feedback = "ANDA BELUM MENJAWAB DENGAN BENAR, COBA LAGI!";
-            if (feedback) message += `Tanggapan: <strong>${feedback}</strong><br>`;
-        } else {
-            message += `Tidak ada soal untuk ${currentTryoutSeriusType || 'Try Out Serius'}.<br>`;
-        }
-        const minutesLeft = Math.floor(timeLeftOverallSeconds / 60);
-        const secondsLeft = timeLeftOverallSeconds % 60;
-        const timeLeftDisplay = timeLeftOverallSeconds >= 0 ? `${minutesLeft} menit ${secondsLeft} detik` : "Waktu Habis";
-        message += `Sisa Waktu Pengerjaan: ${timeLeftDisplay}.<br>`;
+    questions.forEach((q, index) => {
+        const state = questionStates[index];
+        const isCorrect = state.selectedAnswer === q.answer;
+        if(isCorrect) finalScore++;
+        if(state.selectedAnswer !== -1 && !isCorrect) incorrectCount++;
 
-    } else if (currentQuizMode === 'tryout-gabungan-semua') {
-        score = 0; // Recalculate score for TryOut Gabungan
-        const categoryBreakdown = {};
-        questions.forEach((q, index) => {
-            const state = questionStates[index];
+        // Breakdown for Try Out Gabungan
+        if (currentQuizMode === 'tryout-gabungan-semua') {
             const categoryKey = q.category || 'lainnya';
-            if (!categoryBreakdown[categoryKey]) categoryBreakdown[categoryKey] = { correct: 0, total: 0, attempted: 0 };
+            if (!categoryBreakdown[categoryKey]) categoryBreakdown[categoryKey] = { correct: 0, total: 0 };
             categoryBreakdown[categoryKey].total++;
+            if (isCorrect) categoryBreakdown[categoryKey].correct++;
+        }
+    });
 
-            if (state?.answered) {
-                if (state.selectedAnswer !== -1) categoryBreakdown[categoryKey].attempted++;
-                if (state.selectedAnswer === q.answer) {
-                    score++;
-                    categoryBreakdown[categoryKey].correct++;
-                }
-            }
+    if (!isTryOut) finalScore = score; // Latihan score is accumulated
+
+    // Save to history if not 'latihan-salah'
+    if(currentQuizMode !== 'latihan-salah'){
+        loadHistory();
+        quizHistory.push({
+            id: Date.now(),
+            quizName: currentQuizTitle,
+            score: finalScore,
+            totalQuestions: questions.length,
+            date: new Date().toISOString()
         });
-        message += `<span class="user-name-result">Selamat ${currentUserNameForResult}!</span><br>`;
-        message += `Skor Try Out Gabungan Anda: <span class="score-value">${score}</span> dari ${totalQuestions} soal.<br>`;
-        const minutesLeft = Math.floor(timeLeftOverallSeconds / 60);
-        const secondsLeft = timeLeftOverallSeconds % 60;
-        const timeLeftDisplay = timeLeftOverallSeconds >= 0 ? `${minutesLeft} menit ${secondsLeft} detik` : "Waktu Habis";
-        message += `Sisa Waktu Pengerjaan: ${timeLeftDisplay}.<br><br>`;
-        if (Object.keys(categoryBreakdown).length > 0) {
-            message += `<span class="category-breakdown-title">Rekapitulasi Hasil:</span><br>`;
-            for (const key in categoryBreakdown) {
-                const { correct, total, attempted } = categoryBreakdown[key];
-                message += `<span class="category-item"><span class="category-name">${formatCategoryName(key)}</span>: <span class="category-score">${correct}</span> benar dari ${attempted} dijawab (Total ${total} soal).</span><br>`;
-            }
-        } else message += "Tidak ada rincian kategori.<br>";
-
-    } else { // Latihan modes ('latihan-departemen', 'latihan-gabungan')
-        // Score for Latihan is accumulated directly
-        message += `<span class="user-name-result">Selamat ${currentUserNameForResult}!</span><br>`;
-        let quizTitle = "Latihan Pembahasan Soal";
-        if (currentQuizMode === 'latihan-departemen' && currentCategoryFileName) {
-            quizTitle = `Latihan ${formatCategoryName(currentCategoryFileName.replace('.json', ''))}`;
-        } else if (currentQuizMode === 'latihan-gabungan') {
-            quizTitle = `Latihan Pembahasan Soal Gabungan`;
-        }
-        message += `Skor ${quizTitle} Anda: <span class="score-value">${score}</span> dari ${totalQuestions} soal.`;
+        saveHistory();
     }
-    if(scoreElement) scoreElement.innerHTML = message;
-}
+    
+    resultTitleElement.textContent = `Hasil ${currentQuizTitle}`;
+    let message = `<span class="user-name-result">Selamat ${userName}!</span><br>`;
+    message += `Skor Anda: <span class="score-value">${finalScore}</span> benar dari ${questions.length} soal.<br>`;
 
-
-if (quizBackButton) {
-    quizBackButton.addEventListener('click', () => {
-        if (confirm("Anda yakin ingin kembali? Progress kuis ini akan hilang.")) {
-            if (isTryOut) stopOverallTimer();
-            // Reset common quiz elements
-            if (timerDisplaySidebar) timerDisplaySidebar.classList.add('hidden');
-            if (questionCounterElement) questionCounterElement.classList.add('hidden');
-            if (questionNavigationGrid) questionNavigationGrid.innerHTML = '';
-            if (explanationElement) { explanationElement.classList.add('hidden'); explanationElement.innerHTML = ''; }
-            if (doubtfulButton) doubtfulButton.classList.add('hidden');
-
-            // Reset state variables related to current quiz
-            questions = []; questionStates = [];
-            currentQuestionIndex = 0; score = 0; selectedOptionIndex = -1; answerSubmitted = false;
-            
-            showView(previousViewForQuiz || mainMenuViewContainer, quizLayoutContainer); // Go back to where quiz started from
-            // Resetting global mode flags for safety, though they should be set again on new quiz start
-            // isTryOut = false; currentQuizMode = null; currentTryoutSeriusType = null;
+    if (currentQuizMode === 'tryout-gabungan-semua') {
+        message += `<span class="category-breakdown-title">Rincian Per Kategori:</span><br>`;
+        for (const key in categoryBreakdown) {
+             message += `<span class="category-item"><span class="category-name">${formatCategoryName(key)}</span>: <span class="category-score">${categoryBreakdown[key].correct} / ${categoryBreakdown[key].total}</span> benar.</span><br>`;
         }
-    });
+    } else if (currentQuizMode === 'tryout-serius') {
+         let feedback = "ANDA BELUM MENJAWAB DENGAN BENAR, COBA LAGI!";
+         if (finalScore >= 1 && finalScore <= 90) feedback = "NILAI KURANG, BELAJAR LEBIH GIAT LAGI";
+         else if (finalScore >= 91 && finalScore <= 120) feedback = "NILAI CUKUP, BELAJAR LAGI";
+         else if (finalScore >= 121) feedback = "NILAI BAGUS, PERTAHANKAN";
+         message += `Tanggapan: <strong>${feedback}</strong><br>`;
+    }
+    
+    scoreElement.innerHTML = message;
+    
+    reviewAnswersButton.classList.remove('hidden');
+    retryIncorrectButton.classList.toggle('hidden', incorrectCount === 0);
+    
+    showView(resultContainer);
 }
-
-if (restartButton) {
-    restartButton.addEventListener('click', () => {
-        // Reset quiz-specific state for a fresh start from the selection menu
-        questions = []; allCategoryQuestions = []; questionStates = [];
-        currentQuestionIndex = 0; score = 0; selectedOptionIndex = -1; answerSubmitted = false;
-        // isTryOut, currentQuizMode, currentCategoryFileName, currentTryoutSeriusType will be reset when a new quiz/latihan is chosen.
-        
-        showView(previousViewForResult || mainMenuViewContainer, resultContainer); // Go back to the screen user was on before starting this quiz
-    });
-}
-console.log("script.js: All initializations and listeners setup complete.");
