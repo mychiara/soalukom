@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulasi Soal Keperawatan</title>
-    <!-- <link rel="stylesheet" href="style.css"> --> <!-- Dihilangkan karena CSS di-embed -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
     <style>
         body {
             font-family: "Times New Roman", Times, serif;
@@ -24,7 +22,7 @@
 
         /* Container untuk setiap view (login, menu, kuis, hasil) */
         .container-view {
-            max-width: 700px;
+            max-width: 800px; /* Lebarkan sedikit untuk grid card */
             width: 90%;
             margin: 25px auto;
             background: #ffffff;
@@ -50,6 +48,7 @@
 
         /* Styling untuk login container (license-form-container) */
         #license-form-container {
+            max-width: 700px;
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -80,16 +79,23 @@
 
         #license-form-container h1 {
             font-size: 2.4em;
-            /* margin-bottom: 12px; Rapat -> diubah di bawah */
             font-weight: bold;
             color: #ffffff;
             text-shadow: 0px 0px 5px rgba(0,0,0,0.9), 0px 0px 10px rgba(0,0,0,0.7), 1px 1px 2px rgba(0,0,0,0.5);
+            margin-bottom: 0px;
         }
 
         #license-form-container .app-title-highlight {
-            /* color: #FFD700; Emas -> diubah di bawah */
+            color: gold;
             font-weight: bold;
             text-shadow: 0px 0px 6px rgba(0,0,0,0.9), 0px 0px 3px rgba(255,223,0,0.6);
+        }
+
+        #license-form-container h3 {
+            margin-top: 0px;
+            margin-bottom: 15px;
+            color: #ffffff;
+            text-shadow: 0px 0px 5px rgba(0,0,0,0.9), 0px 0px 10px rgba(0,0,0,0.7), 1px 1px 2px rgba(0,0,0,0.5);
         }
 
         #license-form-container .app-description,
@@ -97,19 +103,17 @@
         #license-form-container .login-prompt {
             font-size: 1.1em;
             color: #ffffff;
-            /* margin-bottom: 10px; Rapat -> diubah di bawah */
-            /* line-height: 1.45; Rapat -> diubah di bawah */
             text-shadow: 0px 0px 5px rgba(0,0,0,0.9), 0px 0px 10px rgba(0,0,0,0.7), 1px 1px 2px rgba(0,0,0,0.5);
         }
 
-        #license-form-container .app-description {
-            margin-bottom: 12px;
-        }
+        #license-form-container .app-description { margin-bottom: 12px; }
+        #license-form-container .app-features-intro { margin-top: 15px; margin-bottom: 5px; }
+        #license-form-container .login-prompt { margin-top: 18px; font-weight: 500; }
 
         #license-form-container .app-features {
             list-style-type: none;
             padding-left: 0;
-            /* margin: 0 auto 15px auto; Rapat -> diubah di bawah */
+            margin: 0 auto 15px auto;
             max-width: 85%;
             text-align: left;
         }
@@ -117,16 +121,15 @@
         #license-form-container .app-features li {
             padding-left: 1.8em;
             position: relative;
-            /* margin-bottom: 7px; Rapat -> diubah di bawah */
+            margin-bottom: 7px;
             font-size: 1.05em;
             color: #ffffff;
-            /* line-height: 1.35;  Rapat -> diubah di bawah */
             text-shadow: 0px 0px 5px rgba(0,0,0,0.9), 0px 0px 10px rgba(0,0,0,0.7), 1px 1px 2px rgba(0,0,0,0.5);
         }
 
         #license-form-container .app-features li::before {
             content: "\2714";
-            color: #98FB98; /* PaleGreen */
+            color: #98FB98;
             font-weight: bold;
             font-size: 1.2em;
             position: absolute;
@@ -134,29 +137,37 @@
             top: -1px;
             text-shadow: 0px 0px 4px rgba(0,0,0,0.7);
         }
+        
+        #license-form-container .buy-license-prompt {
+            font-weight: bold;
+            color: #E67E22;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
 
-        #license-form-container .login-prompt {
-            /* margin-top: 18px; Rapat -> diubah di bawah */
-            /* margin-bottom: 10px; Rapat -> diubah di bawah */
-            font-weight: 500;
+        #license-form-container .buy-license-link-action {
+            font-weight: bold;
+            color: gold;
+            text-decoration: underline;
+        }
+        #license-form-container p:has(> .buy-license-link-action) {
+            margin-top: 0px;
+            margin-bottom: 15px;
         }
 
         #license-form-container input[type="text"] {
             padding: 11px 13px;
-            /* margin: 8px 0 14px 0; -> diubah di bawah */
+            margin: 4px 0;
             border: 1px solid #c0c0c0;
             border-radius: 8px;
             width: calc(100% - 28px);
             box-sizing: border-box;
             font-size: 1em;
             font-family: "Times New Roman", Times, serif;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
             background-color: rgba(255, 255, 255, 0.92);
             color: #1c1c1c;
         }
-        #license-form-container input[type="text"]::placeholder {
-            color: #5a5a5a;
-        }
+        #license-form-container input[type="text"]::placeholder { color: #5a5a5a; }
         #license-form-container input[type="text"]:focus {
             border-color: #007BFF;
             box-shadow: 0 0 0 0.2rem rgba(100, 173, 255, 0.35);
@@ -165,39 +176,62 @@
         }
 
         #license-form-container button#submit-license-button {
-            /* margin-top: 10px; -> diubah di bawah */
-            /* margin-bottom: 18px; -> diubah di bawah */
+            margin-top: 10px;
+            margin-bottom: 5px;
             padding: 11px 22px;
             font-size: 1.05em;
             font-weight: bold;
         }
 
-        #license-form-container .developer-credit {
-            /* margin-top: 15px; -> diubah di bawah */
-        }
-        #license-form-container .developer-credit p {
-            font-size: 0.9em; /* Disesuaikan agar tidak terlalu kecil */
-            /* margin-bottom: 4px; -> diubah di bawah */
-            /* line-height: 1.35; -> diubah di bawah */
-            color: #f5f5f5;
-            text-shadow: 0px 0px 3px rgba(0,0,0,0.8);
-        }
-        #license-form-container .developer-credit a {
-            color: #c1e0ff;
-        }
-        #license-form-container .developer-credit a:hover {
-            color: #ffffff;
-        }
-        #license-form-container .developer-credit img {
-            width: 75px; /* Sedikit disesuaikan */
-            height: 75px;
-            /* margin-bottom: 8px; -> diubah di bawah */
-            border-color: #e0e0e0;
-            box-shadow: 0 0 5px rgba(0,0,0,0.5);
-            border-radius: 50%; /* Added for developer photo in license form */
-            object-fit: cover;  /* Added for developer photo in license form */
+        #license-form-container #license-msg {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            min-height: 1.2em;
         }
 
+        #license-form-container .reset-prompt {
+            font-size: 0.9em;
+            color: #f5f5f5;
+            text-shadow: 0px 0px 4px rgba(0,0,0,0.8);
+            margin-top: 20px;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+
+        #license-form-container button#reset-session-button {
+            margin-top: 5px;
+            margin-bottom: 0px;
+            padding: 10px 20px;
+            font-size: 0.95em;
+            background-color: #ffc107;
+            color: #212529;
+            font-weight: 500;
+        }
+        #license-form-container button#reset-session-button:hover { background-color: #e0a800; }
+
+        #license-form-container #reset-session-msg {
+            margin-top: 8px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            min-height: 1.2em;
+            font-size: 0.9em;
+            color: #f0f0f0;
+            text-shadow: 0px 0px 4px rgba(0,0,0,0.8);
+        }
+
+        #license-form-container .developer-credit { margin-top: 5px; }
+        #license-form-container .developer-credit p { font-size: 0.9em; margin: 0; color: #f5f5f5; text-shadow: 0px 0px 3px rgba(0,0,0,0.8); }
+        #license-form-container .developer-credit a { color: #c1e0ff; }
+        #license-form-container .developer-credit a:hover { color: #ffffff; }
+        #license-form-container .developer-credit img {
+            width: 75px; height: 75px;
+            margin-bottom: 5px;
+            border-color: #e0e0e0;
+            box-shadow: 0 0 5px rgba(0,0,0,0.5);
+            border-radius: 50%;
+            object-fit: cover;
+        }
 
         /* Tombol Umum */
         button {
@@ -222,10 +256,7 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
-        button:active {
-            transform: translateY(0px);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+        button:active { transform: translateY(0px); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
 
         /* Tombol Navigasi Khusus */
         .btn-prev { background-color: #28a745; }
@@ -234,498 +265,262 @@
         .btn-home:hover { background-color: #b02a37; }
         .btn-doubtful { background-color: #ffc107; color: #212529; }
         .btn-doubtful:hover { background-color: #e0a800; }
-
-        /* Tombol Opsi Jawaban */
-        #options-container {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+        
+        /* ======== GAYA MENU KARTU BARU ======== */
+        .card-menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 20px;
+            width: 100%;
             margin-top: 20px;
         }
-        .option-button {
-            padding: 14px 18px;
-            border: 1px solid #d1d8e0;
-            border-radius: 8px;
+
+        .card-menu-grid-dense {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .card-menu-item {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+            border: 1px solid #f0f0f0;
             cursor: pointer;
-            background-color: #f8f9fa;
             text-align: left;
-            font-family: "Times New Roman", Times, serif;
-            font-weight: normal;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
             width: 100%;
             box-sizing: border-box;
-            transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
-            color: black !important;
-        }
-        .option-button:hover {
-            background-color: #e9ecef;
-            border-color: #adb5bd;
-            transform: translateY(-1px);
-        }
-        .option-button:disabled {
-            cursor: not-allowed;
-            opacity: 0.75;
-            transform: none;
-            background-color: #f8f9fa;
-        }
-        .option-button.correct {
-            background-color: #4CAF50 !important;
-            color: white !important;
-            border-color: #388E3C !important;
-            font-weight: bold;
-        }
-        .option-button.incorrect {
-            background-color: #f44336 !important;
-            color: white !important;
-            border-color: #D32F2F !important;
-            font-weight: bold;
-        }
-        .option-button.selected-tryout {
-            background-color: #cce5ff !important;
-            border-color: #b8daff !important;
-            color: black !important;
-        }
-
-        /* Pertanyaan dan Pesan Selamat Datang */
-        #question {
             font-family: "Times New Roman", Times, serif;
-            font-weight: normal;
-            font-size: 1.3em;
-            margin-bottom: 25px;
-            text-align: left;
-            color: #34495e;
-            line-height: 1.5;
-        }
-        #main-menu-welcome-user { /* ID untuk welcome message di menu utama baru */
-            margin-bottom: 25px;
-            font-size: 1.4em;
-            color: #34495e;
+            color: #333;
+            margin: 0;
+            letter-spacing: normal;
         }
 
-        /* Tombol Menu Baru (Main Menu, Latihan Submenu, Tryout Submenu) */
-        .menu-button-style {
-            display: block;
-            width: 70%;
-            margin: 15px auto;
-            padding: 14px 20px;
-            font-size: 1.1em;
-        }
-        /* Contoh pewarnaan spesifik jika diperlukan, bisa ditambahkan kelas khusus */
-        #main-menu-latihan-soal { background-color: #17a2b8; } /* Cyan */
-        #main-menu-latihan-soal:hover { background-color: #117a8b; }
-        #main-menu-tryout { background-color: #28a745; } /* Green */
-        #main-menu-tryout:hover { background-color: #1f7a34; }
-
-        #latihan-departemen-button { background-color: #ffc107; color: #212529; } /* Yellow */
-        #latihan-departemen-button:hover { background-color: #e0a800; }
-        #latihan-gabungan-button { background-color: #fd7e14; } /* Orange */
-        #latihan-gabungan-button:hover { background-color: #d36307; }
-
-        #tryout-gabungan-semua-button { background-color: #6f42c1; } /* Purple */
-        #tryout-gabungan-semua-button:hover { background-color: #5a32a3; }
-        #tryout-mode-serius-button { background-color: #e83e8c; } /* Pink */
-        #tryout-mode-serius-button:hover { background-color: #c22670; }
-
-
-        /* Tombol Navigasi (Next, Prev, Back) */
-        #navigation-buttons {
-            margin-top: 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        #navigation-buttons button { margin-bottom: 5px; }
-
-        /* Kategori Latihan Container */
-        #kategori-latihan-container .kategori-button {
-            display: block;
-            width: 70%;
-            margin: 10px auto;
-            padding: 12px 15px;
-            font-size: 1.05em;
-            color: white;
-        }
-        #kategori-latihan-container .kategori-button:nth-of-type(1) { background-color: #17a2b8; } /* Jiwa */
-        #kategori-latihan-container .kategori-button:nth-of-type(1):hover { background-color: #117a8b; }
-        #kategori-latihan-container .kategori-button:nth-of-type(2) { background-color: #ffc107; color: #212529;} /* Anak */
-        #kategori-latihan-container .kategori-button:nth-of-type(2):hover { background-color: #e0a800; color: #212529;}
-        #kategori-latihan-container .kategori-button:nth-of-type(3) { background-color: #fd7e14; } /* Keluarga */
-        #kategori-latihan-container .kategori-button:nth-of-type(3):hover { background-color: #d36307; }
-        #kategori-latihan-container .kategori-button:nth-of-type(4) { background-color: #6610f2; } /* Komunitas */
-        #kategori-latihan-container .kategori-button:nth-of-type(4):hover { background-color: #520dc2; }
-        #kategori-latihan-container .kategori-button:nth-of-type(5) { background-color: #20c997; } /* Medikal Bedah */
-        #kategori-latihan-container .kategori-button:nth-of-type(5):hover { background-color: #1baa80; }
-        #kategori-latihan-container .kategori-button:nth-of-type(6) { background-color: #e83e8c; } /* Gadar */
-        #kategori-latihan-container .kategori-button:nth-of-type(6):hover { background-color: #c22670; }
-        #kategori-latihan-container .kategori-button:nth-of-type(7) { background-color: #795548; } /* Manajemen */
-        #kategori-latihan-container .kategori-button:nth-of-type(7):hover { background-color: #5d4037; }
-
-        /* Tombol kembali di Kategori Latihan Container (ID baru) */
-        #kembali-ke-latihan-submenu-from-kategori.btn-home {
-            background-color: #6f42c1; /* Ungu */
-            margin-top: 25px;
-        }
-        #kembali-ke-latihan-submenu-from-kategori.btn-home:hover {
-            background-color: #5a32a3;
-        }
-        /* Fallback jika ada .btn-home lain di kategori container (jika diperlukan, jika tidak, ini bisa dihapus) */
-        #kategori-latihan-container .btn-home:not(#kembali-ke-latihan-submenu-from-kategori) {
-            background-color: #6c757d;
-        }
-        #kategori-latihan-container .btn-home:not(#kembali-ke-latihan-submenu-from-kategori):hover {
-            background-color: #545b62;
+        .card-menu-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
 
-        /* Tryout Serius Container */
-        #tryout-serius-container .tryout-serius-button {
-            display: block;
-            width: 70%; /* Anda bisa sesuaikan ini */
-            margin: 8px auto; /* Kurangi margin jika terlalu banyak tombol */
-            padding: 10px 15px; /* Sesuaikan padding jika perlu */
-            font-size: 1em; /* Sesuaikan font size jika perlu */
-            color: white;
-        }
-
-        /* Berikan warna berbeda untuk beberapa tombol TO jika diinginkan, atau gunakan satu warna default */
-        #tryout-serius-container .tryout-serius-button:nth-of-type(1) { background-color: #007bff; }
-        #tryout-serius-container .tryout-serius-button:nth-of-type(1):hover { background-color: #0056b3; }
-        #tryout-serius-container .tryout-serius-button:nth-of-type(2) { background-color: #17a2b8; }
-        #tryout-serius-container .tryout-serius-button:nth-of-type(2):hover { background-color: #117a8b; }
-        #tryout-serius-container .tryout-serius-button:nth-of-type(3) { background-color: #28a745; }
-        #tryout-serius-container .tryout-serius-button:nth-of-type(3):hover { background-color: #1e7e34; }
-        #tryout-serius-container .tryout-serius-button:nth-of-type(4) { background-color: #ffc107; color: #212529; }
-        #tryout-serius-container .tryout-serius-button:nth-of-type(4):hover { background-color: #e0a800; }
-        #tryout-serius-container .tryout-serius-button:nth-of-type(5) { background-color: #fd7e14; } /* Orange */
-        #tryout-serius-container .tryout-serius-button:nth-of-type(5):hover { background-color: #d36307; }
-        #tryout-serius-container .tryout-serius-button:nth-of-type(6) { background-color: #6f42c1; } /* Purple */
-        #tryout-serius-container .tryout-serius-button:nth-of-type(6):hover { background-color: #5a32a3; }
-        #tryout-serius-container .tryout-serius-button:nth-of-type(7) { background-color: #e83e8c; } /* Pink */
-        #tryout-serius-container .tryout-serius-button:nth-of-type(7):hover { background-color: #c22670; }
-        #tryout-serius-container .tryout-serius-button:nth-of-type(8) { background-color: #20c997; } /* Teal */
-        #tryout-serius-container .tryout-serius-button:nth-of-type(8):hover { background-color: #1baa80; }
-        #tryout-serius-container .tryout-serius-button:nth-of-type(9) { background-color: #6610f2; } /* Indigo */
-        #tryout-serius-container .tryout-serius-button:nth-of-type(9):hover { background-color: #520dc2; }
-        #tryout-serius-container .tryout-serius-button:nth-of-type(10) { background-color: #6c757d; } /* Gray */
-        #tryout-serius-container .tryout-serius-button:nth-of-type(10):hover { background-color: #545b62; }
-
-        /* Tombol kembali di Tryout Serius Container (ID baru) */
-        #kembali-ke-tryout-submenu-from-serius.btn-home {
-            background-color: #dc3545; /* Merah untuk tombol kembali */
-            margin-top: 25px;
-        }
-        #kembali-ke-tryout-submenu-from-serius.btn-home:hover {
-            background-color: #b02a37;
-        }
-
-
-        /* Penjelasan Jawaban */
-        #explanation {
-            margin-top: 20px;
-            padding: 15px;
-            border: 1px solid #e0e0e0;
-            background-color: #f9fafc;
-            border-radius: 8px;
-            text-align: left;
-            font-size: 1em;
-            line-height: 1.7;
-            color: #495057;
-        }
-        #explanation strong {
-            font-weight: bold;
-            color: #2c3e50;
-        }
-
-        /* Quiz Layout */
-        #quiz-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-        #question-counter {
-            font-size: 1em;
-            color: #555e68;
-            font-weight: 500;
-            margin-bottom: 15px;
-            text-align: left;
-        }
-        #timer-display-sidebar {
-            font-size: 1.1em;
-            font-weight: bold;
-            color: #c0392b;
-            background-color: #fdecea;
-            padding: 8px 12px;
-            border-radius: 6px;
-            border: 1px solid #f7c6c7;
-            text-align: center;
-        }
-        #quiz-layout-container {
-            display: flex;
-            flex-direction: row;
-            gap: 25px;
-            max-width: 1100px;
-            width: 95%;
-            padding: 0;
-            background: transparent;
-            box-shadow: none;
-            margin: 25px auto;
-        }
-        #quiz-main-content {
-            flex: 2.5;
-            padding: 25px 30px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-        }
-        #quiz-sidebar {
-            flex: 1;
-            padding: 25px;
-            background: #fdfdff;
-            border-radius: 12px;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            align-self: flex-start;
-        }
-        #user-biodata { /* Digunakan di HTML, bukan di CSS ini sebelumnya, tapi ditambahkan agar konsisten */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #e7e9ec; /* Dihapus dari CSS, dipindahkan ke HTML */
-            padding-bottom: 20px; /* Dihapus dari CSS, dipindahkan ke HTML */
-        }
-        #user-photo-icon {
-            font-size: 64px; /* Overridden by img style */
-            color: #007BFF;
-            margin-bottom: 12px;
-        }
-        #user-photo-icon img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #007bff;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #user-photo-icon .fa-user-circle { transition: transform 0.3s ease; } /* Jika menggunakan Font Awesome */
-        #user-photo-icon:hover .fa-user-circle { transform: scale(1.1); }
-        #user-name-display {
-            font-weight: bold;
-            font-size: 1.25em; /* Slightly larger font for the name */
-            color: #34495e;
-        }
-
-        /* Navigasi Soal di Sidebar */
-        #question-navigation-panel {
-            background-color: #ffffff;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #eef2f7;
-        }
-        #question-navigation-panel h4 {
-            margin-top: 0;
-            margin-bottom: 15px;
-            text-align: center;
-            font-size: 1.2em;
-            color: #34495e;
-        }
-        #question-navigation-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
-            gap: 8px;
-            max-height: 280px;
-            overflow-y: auto;
-            padding: 5px;
-            border-radius: 6px;
-        }
-        .nav-question-box {
-            width: 40px;
-            height: 40px;
+        .card-menu-icon-wrapper {
+            flex-shrink: 0;
+            width: 55px;
+            height: 55px;
+            border-radius: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 1px solid #ced4da;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.9em;
-            background-color: #f8f9fa;
-            color: #495057;
-            transition: background-color 0.2s, border-color 0.2s, color 0.2s, transform 0.15s ease, box-shadow 0.15s ease;
-        }
-        .nav-question-box:hover {
-            background-color: #e9ecef;
-            border-color: #adb5bd;
-            transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .nav-question-box.current {
-            background-color: #007BFF;
+            margin-right: 18px;
+            font-size: 26px;
             color: white;
-            border-color: #0056b3;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .card-menu-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-menu-title {
             font-weight: bold;
-            transform: scale(1.1);
-            box-shadow: 0 3px 8px rgba(0, 123, 255, 0.3);
-        }
-        .nav-question-box.answered {
-            background-color: #d4edda;
-            border-color: #b2dfc8;
-            color: #155724;
-        }
-        .nav-question-box.answered:hover {
-            background-color: #c3e6cb;
-            border-color: #a1d4b7;
-        }
-        .nav-question-box.doubtful {
-            background-color: #fff3cd;
-            border-color: #ffeeba;
-            color: #664d03;
-        }
-        .nav-question-box.doubtful:hover {
-            background-color: #ffeeba;
-            border-color: #ffd891;
-        }
-
-
-        /* Result Container - Tampilan Skor yang Dipercantik */
-        #result-container {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #ffffff;
-            padding: 35px 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 15px rgba(118, 75, 162, 0.5);
-            text-align: center;
-            animation: fadeInResult 0.8s ease-out;
-        }
-
-        @keyframes fadeInResult {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        #result-container p#score {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 1.3em;
-            line-height: 1.5;
-            margin-bottom: 25px;
-            white-space: pre-wrap;
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            display: inline-block;
-            max-width: 95%;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: left;
-        }
-
-        #result-container p#score span {
-            display: block;
-            margin-bottom: 4px;
-        }
-        #result-container p#score span:last-child {
-            margin-bottom: 0;
-        }
-
-
-        #result-container p#score .user-name-result {
-            font-weight: bold;
-            color: #c4e1ff;
-            font-size: 1.2em;
-            margin-bottom: 8px !important;
-        }
-
-        #result-container p#score .score-value {
-            font-size: 2.8em;
-            font-weight: bold;
-            color: #ffd700;
-            display: block;
-            margin: 5px 0 10px 0 !important;
-            text-align: center;
-            line-height: 1.1;
-        }
-
-        #result-container p#score .category-breakdown-title {
-            font-weight: bold;
-            margin-top: 12px !important;
-            margin-bottom: 6px !important;
-            display: block;
-            color: #e6e6fa;
             font-size: 1.15em;
+            color: #2c3e50;
+            margin-bottom: 3px;
+            line-height: 1.2;
         }
 
-        #result-container p#score .category-item {
-            display: block;
-            margin-bottom: 3px !important;
-            font-size: 0.95em;
-            color: #f0f0f0;
+        .card-menu-description {
+            font-size: 0.9em;
+            color: #555e68;
             line-height: 1.4;
         }
-        #result-container p#score .category-item .category-name {
-            font-weight: 500;
-            color: #d1c4e9;
-        }
-        #result-container p#score .category-item .category-score {
-            font-weight: bold;
-            color: #b2dfdb;
+        
+        .back-button-card {
+            margin-top: 25px;
         }
 
+        /* Palet Warna untuk Ikon Kartu */
+        .card-color-1 { background: linear-gradient(135deg, #17a2b8, #117a8b); } /* Cyan */
+        .card-color-2 { background: linear-gradient(135deg, #28a745, #1f7a34); } /* Green */
+        .card-color-3 { background: linear-gradient(135deg, #dc3545, #b02a37); } /* Red */
+        .card-color-4 { background: linear-gradient(135deg, #ffc107, #e0a800); } /* Yellow */
+        .card-color-4 span { color: #333; text-shadow: none; }
+        .card-color-5 { background: linear-gradient(135deg, #fd7e14, #d36307); } /* Orange */
+        .card-color-6 { background: linear-gradient(135deg, #6f42c1, #5a32a3); } /* Purple */
+        .card-color-7 { background: linear-gradient(135deg, #e83e8c, #c22670); } /* Pink */
+        .card-color-8 { background: linear-gradient(135deg, #6610f2, #520dc2); } /* Indigo */
+        .card-color-9 { background: linear-gradient(135deg, #20c997, #1baa80); } /* Teal */
+        .card-color-10 { background: linear-gradient(135deg, #795548, #5d4037); } /* Brown */
+        .card-color-11 { background: linear-gradient(135deg, #007bff, #0056b3); } /* Blue */
+        .card-color-default { background: linear-gradient(135deg, #6c757d, #545b62); } /* Gray */
+        /* ======== AKHIR GAYA MENU KARTU BARU ======== */
+
+        /* Tombol Opsi Jawaban */
+        #options-container { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+        .option-button {
+            padding: 14px 18px; border: 1px solid #d1d8e0; border-radius: 8px; cursor: pointer;
+            background-color: #f8f9fa; text-align: left; font-family: "Times New Roman", Times, serif;
+            font-weight: normal; width: 100%; box-sizing: border-box;
+            transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+            color: black !important;
+        }
+        .option-button:hover { background-color: #e9ecef; border-color: #adb5bd; transform: translateY(-1px); }
+        .option-button:disabled { cursor: not-allowed; opacity: 0.75; transform: none; background-color: #f8f9fa; }
+        .option-button.correct { background-color: #4CAF50 !important; color: white !important; border-color: #388E3C !important; font-weight: bold; }
+        .option-button.incorrect { background-color: #f44336 !important; color: white !important; border-color: #D32F2F !important; font-weight: bold; }
+        .option-button.selected-tryout { background-color: #cce5ff !important; border-color: #b8daff !important; color: black !important; }
+
+        /* Pertanyaan dan Pesan Selamat Datang */
+        #question {
+            font-family: "Times New Roman", Times, serif; font-weight: normal; font-size: 1.3em;
+            margin-bottom: 25px; text-align: left; color: #34495e; line-height: 1.5;
+        }
+        #main-menu-welcome-user { margin-bottom: 25px; font-size: 1.4em; color: #34495e; }
+
+        /* Tombol Navigasi (Next, Prev, Back) */
+        #navigation-buttons {
+            margin-top: 25px; display: flex; justify-content: space-between;
+            align-items: center; flex-wrap: wrap; gap: 10px;
+        }
+        #navigation-buttons button { margin-bottom: 5px; }
+        
+        /* Penjelasan Jawaban */
+        #explanation {
+            margin-top: 20px; padding: 15px; border: 1px solid #e0e0e0;
+            background-color: #f9fafc; border-radius: 8px; text-align: left;
+            font-size: 1em; line-height: 1.7; color: #495057;
+        }
+        #explanation strong { font-weight: bold; color: #2c3e50; }
+
+        /* Quiz Layout */
+        #quiz-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #eee;
+        }
+        #question-counter {
+            font-size: 1em; color: #555e68; font-weight: 500;
+            margin-bottom: 15px; text-align: left;
+        }
+        #timer-display-sidebar {
+            font-size: 1.1em; font-weight: bold; color: #c0392b; background-color: #fdecea;
+            padding: 8px 12px; border-radius: 6px; border: 1px solid #f7c6c7; text-align: center;
+        }
+        #quiz-layout-container {
+            display: flex; flex-direction: row; gap: 25px; max-width: 1100px;
+            width: 95%; padding: 0; background: transparent; box-shadow: none;
+            margin: 25px auto;
+        }
+        #quiz-main-content {
+            flex: 2.5; padding: 25px 30px; background: white; border-radius: 12px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1); display: flex;
+            flex-direction: column; text-align: left;
+        }
+        #quiz-sidebar {
+            flex: 1; padding: 25px; background: #fdfdff; border-radius: 12px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08); display: flex;
+            flex-direction: column; gap: 20px; align-self: flex-start;
+        }
+        #user-biodata {
+            display: flex; flex-direction: column; align-items: center; text-align: center;
+            margin-bottom: 20px; border-bottom: 1px solid #e7e9ec; padding-bottom: 20px;
+        }
+        #user-photo-icon { color: #007BFF; margin-bottom: 12px; }
+        #user-photo-icon img {
+            width: 80px; height: 80px; border-radius: 50%; object-fit: cover;
+            border: 2px solid #007bff; display: block; margin: auto;
+        }
+        #user-name-display { font-weight: bold; font-size: 1.25em; color: #34495e; }
+
+        /* Navigasi Soal di Sidebar */
+        #question-navigation-panel {
+            background-color: #ffffff; padding: 15px; border-radius: 8px;
+            border: 1px solid #eef2f7;
+        }
+        #question-navigation-panel h4 {
+            margin-top: 0; margin-bottom: 15px; text-align: center;
+            font-size: 1.2em; color: #34495e;
+        }
+        #question-navigation-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+            gap: 8px; max-height: 280px; overflow-y: auto; padding: 5px; border-radius: 6px;
+        }
+        .nav-question-box {
+            width: 40px; height: 40px; display: flex; justify-content: center; align-items: center;
+            border: 1px solid #ced4da; border-radius: 6px; cursor: pointer; font-size: 0.9em;
+            background-color: #f8f9fa; color: #495057;
+            transition: all 0.2s ease;
+        }
+        .nav-question-box:hover {
+            background-color: #e9ecef; border-color: #adb5bd;
+            transform: translateY(-2px) scale(1.05); box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nav-question-box.current {
+            background-color: #007BFF; color: white; border-color: #0056b3; font-weight: bold;
+            transform: scale(1.1); box-shadow: 0 3px 8px rgba(0, 123, 255, 0.3);
+        }
+        .nav-question-box.answered { background-color: #d4edda; border-color: #b2dfc8; color: #155724; }
+        .nav-question-box.answered:hover { background-color: #c3e6cb; border-color: #a1d4b7; }
+        .nav-question-box.doubtful { background-color: #fff3cd; border-color: #ffeeba; color: #664d03; }
+        .nav-question-box.doubtful:hover { background-color: #ffeeba; border-color: #ffd891; }
+
+        /* Result Container */
+        #result-container {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #ffffff;
+            padding: 35px 30px; border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 15px rgba(118, 75, 162, 0.5);
+            text-align: center; animation: fadeInResult 0.8s ease-out;
+        }
+        @keyframes fadeInResult { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        #result-container p#score {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1.3em;
+            line-height: 1.5; margin-bottom: 25px; white-space: pre-wrap;
+            background-color: rgba(255, 255, 255, 0.1); padding: 20px;
+            border-radius: 10px; display: inline-block; max-width: 95%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: left;
+        }
+        #result-container p#score span { display: block; margin-bottom: 4px; }
+        #result-container p#score .user-name-result { font-weight: bold; color: #c4e1ff; font-size: 1.2em; margin-bottom: 8px !important; }
+        #result-container p#score .score-value {
+            font-size: 2.8em; font-weight: bold; color: #ffd700; display: block;
+            margin: 5px 0 10px 0 !important; text-align: center; line-height: 1.1;
+        }
+        #result-container p#score .category-breakdown-title {
+            font-weight: bold; margin-top: 12px !important; margin-bottom: 6px !important;
+            display: block; color: #e6e6fa; font-size: 1.15em;
+        }
+        #result-container p#score .category-item {
+            display: block; margin-bottom: 3px !important; font-size: 0.95em;
+            color: #f0f0f0; line-height: 1.4;
+        }
+        #result-container p#score .category-item .category-name { font-weight: 500; color: #d1c4e9; }
+        #result-container p#score .category-item .category-score { font-weight: bold; color: #b2dfdb; }
         #result-container #restart-button {
-            background-color: #ffc107;
-            color: #333;
-            font-size: 1.15em;
-            font-weight: bold;
-            padding: 15px 30px;
-            border-radius: 25px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-            border: none;
-            letter-spacing: 0.5px;
-            margin-top: 10px;
+            background-color: #ffc107; color: #333; font-size: 1.15em; font-weight: bold;
+            padding: 15px 30px; border-radius: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border: none; letter-spacing: 0.5px; margin-top: 10px;
         }
         #result-container #restart-button:hover {
-            background-color: #e0a800;
-            transform: translateY(-3px) scale(1.03);
+            background-color: #e0a800; transform: translateY(-3px) scale(1.03);
             box-shadow: 0 6px 15px rgba(0,0,0,0.3);
         }
-        #result-container #restart-button:active {
-            transform: translateY(-1px) scale(1.01);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        }
-
 
         /* Footer */
         #footer {
-            width: 100%;
-            text-align: center;
-            background-color: #007BFF;
-            color: #ffffff;
-            padding: 10px 0;
-            margin-top: auto;
-            box-sizing: border-box;
-            font-size: 0.9em;
+            width: 100%; text-align: center; background-color: #007BFF;
+            color: #ffffff; padding: 10px 0; margin-top: auto;
+            box-sizing: border-box; font-size: 0.9em;
         }
+
+        /* Awalnya, main-app disembunyikan */
+        #main-app-content { display: none; }
+        #license-msg { margin-top: 10px; font-weight: bold; }
 
         /* Media Queries (Responsivitas) */
         @media (max-width: 992px) {
-            #quiz-layout-container {
-                flex-direction: column;
-                max-width: 700px;
-            }
-            #quiz-main-content, #quiz-sidebar {
-                flex: none;
-                width: 100%;
-                box-sizing: border-box;
-            }
+            #quiz-layout-container { flex-direction: column; max-width: 700px; }
+            #quiz-main-content, #quiz-sidebar { flex: none; width: 100%; box-sizing: border-box; }
             #quiz-sidebar { margin-top: 25px; }
             #navigation-buttons { justify-content: center; }
         }
@@ -734,218 +529,25 @@
             body { padding: 10px; }
             .container-view { padding: 20px 15px; margin: 15px auto; }
             #license-form-container { padding: 25px 20px; }
-            #quiz-main-content, #quiz-sidebar { padding: 20px; }
-
             h1 { font-size: 2em; }
-            #license-form-container h1 { font-size: 2.1em; }
-            .app-description, .app-features-intro, .login-prompt { font-size: 1em; }
-            .app-features li { font-size: 0.95em; }
-
             h2 { font-size: 1.7em; }
             h3 { font-size: 1.4em; }
+
+            .card-menu-grid { grid-template-columns: 1fr; gap: 15px; }
+            .card-menu-item { padding: 12px; }
+            .card-menu-icon-wrapper { width: 45px; height: 45px; font-size: 22px; margin-right: 15px; }
+            .card-menu-title { font-size: 1.05em; }
+            .card-menu-description { font-size: 0.85em; }
+
             #question { font-size: 1.15em; }
             button { padding: 10px 18px; font-size: 0.95em; }
-            
-            /* Target all menu buttons including new ones */
-            .menu-button-style,
-            #kategori-latihan-container .kategori-button,
-            #tryout-serius-container .tryout-serius-button {
-                width: 85%;
-                padding: 12px 18px;
-                font-size: 1em;
-            }
-
             .option-button { padding: 12px 15px; }
             .nav-question-box { width: 36px; height: 36px; font-size: 0.85em; }
             #question-navigation-grid { grid-template-columns: repeat(auto-fill, minmax(36px, 1fr)); }
-
-            #result-container {
-                padding: 25px 15px;
-            }
-            #result-container p#score {
-                font-size: 1.1em;
-                padding: 15px;
-                line-height: 1.45;
-            }
-            #result-container p#score .score-value {
-                font-size: 2.2em;
-            }
-            #result-container p#score .category-breakdown-title {
-                font-size: 1.05em;
-            }
-             #result-container p#score .category-item {
-                font-size: 0.9em;
-                line-height: 1.35;
-            }
-            #result-container #restart-button {
-                font-size: 1em;
-                padding: 12px 25px;
-            }
-
-            /* --- PENYESUAIAN BARU (dari style.css) --- */
-            #license-form-container h1 .app-title-highlight {
-                /* Ini adalah warna gold sebelumnya, jika ingin mengoverride dengan #2c3e50: */
-                /* color: #2c3e50; */ /* Warna teks lebih gelap dan jelas */
-                /* ATAU biarkan defaultnya dari #license-form-container .app-title-highlight jika itu yang diinginkan */
-                color: gold; /* Warna kuning menyala untuk Selamat Datang! (dari inline style HTML) */
-            }
-
-            #license-form-container p,
-            #license-form-container ul li {
-                margin-bottom: 8px;
-                line-height: 1.4;
-            }
-            #license-form-container ul {
-                margin: 0 auto 10px auto; /* Disesuaikan dari CSS sebelumnya, agar padding-left 0 efektif */
-                padding-left: 20px; /* Pastikan indentasi list tetap baik */
-            }
-            #license-form-container .app-features-intro {
-                margin-top: 15px;
-                margin-bottom: 5px;
-            }
-            #license-form-container .login-prompt {
-                margin-top: 15px;
-            }
-            /* --- AKHIR PENYESUAIAN BARU (dari style.css) --- */
+            #result-container { padding: 25px 15px; }
+            #result-container p#score { font-size: 1.1em; padding: 15px; line-height: 1.45; }
+            #result-container p#score .score-value { font-size: 2.2em; }
         }
-
-        /* --- Awalnya, main-app disembunyikan --- */
-        #main-app-content {
-            display: none;
-        }
-        #license { /* ID diubah ke license untuk script baru */
-            /* margin-top: 10px; -> Dihapus, akan diatur spesifik di bawah */
-        }
-        #license-msg {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        /* --- PENYESUAIAN DARI PERMINTAAN SEBELUMNYA (inline style HTML) --- */
-        #license-form-container h1 .app-title-highlight {
-            color: gold; /* Warna kuning menyala untuk Selamat Datang! */
-        }
-
-        #license-form-container p,
-        #license-form-container ul li {
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-        #license-form-container ul {
-            margin-bottom: 10px;
-            padding-left: 20px;
-        }
-        #license-form-container .app-features-intro {
-            margin-top: 15px;
-            margin-bottom: 5px;
-        }
-        #license-form-container .login-prompt {
-            margin-top: 15px;
-        }
-        /* --- AKHIR PENYESUAIAN DARI PERMINTAAN SEBELUMNYA (inline style HTML) --- */
-
-        /* --- PENYESUAIAN BARU UNTUK PROMPT BELI LISENSI (inline style HTML) --- */
-        .buy-license-prompt {
-            font-weight: bold;
-            color: #E67E22;
-            margin-top: 15px;
-        }
-        .buy-license-prompt a {
-            color: inherit;
-            text-decoration: underline;
-        }
-        .buy-license-prompt a:hover {
-            color: #F39C12;
-        }
-        /* --- AKHIR PENYESUAIAN BARU UNTUK PROMPT BELI LISENSI (inline style HTML) --- */
-
-        /* --- PENYESUAIAN TAMBAHAN UNTUK KERAPATAN DAN HIGHLIGHT (inline style HTML) --- */
-        #license-form-container h1 {
-            margin-bottom: 0px;
-        }
-        #license-form-container h3 {
-            margin-top: 0px;
-            margin-bottom: 15px;
-        }
-        #license-form-container .buy-license-prompt {
-            margin-bottom: 5px;
-        }
-        #license-form-container p:has(> .buy-license-link-action) {
-            margin-top: 0px;
-            margin-bottom: 15px;
-        }
-        .buy-license-link-action {
-            font-weight: bold;
-            color: gold;
-            text-decoration: underline;
-        }
-        .buy-license-link-action:hover {
-            color: #FFC107;
-        }
-
-        #name-input { /* Style for input "Nama Lengkap Anda" */
-            margin-bottom: 10px;
-            margin-top: 8px; /* Tambahkan margin-top agar tidak terlalu rapat dengan "BELI LISENSI" */
-        }
-        #license { /* Style for input "Masukkan Kode Lisensi Anda" */
-            margin-bottom: 10px;
-            margin-top: 0; /* Hapus margin atas default jika ada agar rapat dengan input nama */
-        }
-
-        #submit-license-button {
-            margin-top: 0px;
-            margin-bottom: 5px;
-        }
-        #license-msg {
-            margin-top: 5px;
-            margin-bottom: 5px; /* Disesuaikan agar lebih rapat */
-            min-height: 1.2em; /* Tambahkan ini untuk stabilitas layout */
-        }
-        .developer-credit { /* Style for developer credit section */
-            margin-top: 5px; /* Lebih rapat */
-        }
-        .developer-credit img { /* Style for developer image */
-            margin-bottom: 5px; /* Lebih rapat */
-        }
-        .developer-credit p { /* Style for developer text */
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-        /* --- AKHIR PENYESUAIAN TAMBAHAN (inline style HTML) --- */
-
-        /* STYLING BARU UNTUK TOMBOL RESET SESI DAN PESANNYA */
-        #license-form-container .reset-prompt {
-            font-size: 0.9em;
-            color: #f5f5f5;
-            text-shadow: 0px 0px 4px rgba(0,0,0,0.8);
-            margin-top: 20px;
-            margin-bottom: 5px;
-            line-height: 1.3;
-        }
-
-        #license-form-container button#reset-session-button {
-            margin-top: 5px;
-            margin-bottom: 0px;
-            padding: 10px 20px;
-            font-size: 0.95em;
-            background-color: #ffc107;
-            color: #212529;
-            font-weight: 500;
-        }
-        #license-form-container button#reset-session-button:hover {
-            background-color: #e0a800;
-        }
-
-        #license-form-container #reset-session-msg {
-            margin-top: 8px;
-            margin-bottom: 15px;
-            font-weight: bold;
-            min-height: 1.2em;
-            font-size: 0.9em;
-            color: #f0f0f0;
-            text-shadow: 0px 0px 4px rgba(0,0,0,0.8);
-        }
-        /* AKHIR STYLING BARU */
     </style>
 </head>
 <body>
@@ -971,13 +573,11 @@
         <button id="submit-license-button">Masuk & Mulai Belajar</button>
         <div id="license-msg"></div>
 
-        <!-- BARU: Tombol Reset Sesi dan Pesan -->
         <p class="reset-prompt">
             Lupa logout atau lisensi Anda masih tertaut ke sesi sebelumnya?
         </p>
         <button id="reset-session-button">Reset Sesi Aktif Saya</button>
         <div id="reset-session-msg"></div>
-        <!-- AKHIR BARU -->
 
         <div class="developer-credit">
             <img src="https://masandigital.com/assets/images/author-photo.jpeg" alt="Developer Photo">
@@ -985,7 +585,7 @@
             </p>
         </div>
     </div>
-    <!-- Skrip Lisensi Firebase -->
+    <!-- Skrip Lisensi Firebase (Dibiarkan sama) -->
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
       import { getFirestore, doc, getDoc, updateDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
@@ -999,10 +599,7 @@
         messagingSenderId: "809433417541", // GANTI DENGAN MESSAGING SENDER ID ANDA
         appId: "1:809433417541:web:48632b970a90840ab1602c" // GANTI DENGAN APP ID ANDA
       };
-
       let db;
-
-      // DOM Elements
       const licenseFormContainer = document.getElementById("license-form-container");
       const mainAppContent = document.getElementById("main-app-content");
       const submitButton = document.getElementById("submit-license-button");
@@ -1013,21 +610,12 @@
       const mainMenuViewContainerEl = document.getElementById("main-menu-container");
       const userNameDisplayQuizEl = document.getElementById("user-name-display");
       const logoutButton = document.getElementById("logout-button");
-
-      // BARU: DOM Elements untuk Reset Sesi
       const resetButton = document.getElementById("reset-session-button");
       const resetMsgElement = document.getElementById("reset-session-msg");
-
-
-      // Session Management Constants & Variables
-      const STALE_SESSION_THRESHOLD = 5 * 60 * 1000; // 5 minutes
-      const HEARTBEAT_INTERVAL = 2 * 60 * 1000; // 2 minutes
+      const STALE_SESSION_THRESHOLD = 5 * 60 * 1000;
+      const HEARTBEAT_INTERVAL = 2 * 60 * 1000;
       let heartbeatIntervalId = null;
-
-      function generateClientSessionId() {
-          return Math.random().toString(36).substring(2, 15) + Date.now().toString(36);
-      }
-
+      function generateClientSessionId() { return Math.random().toString(36).substring(2, 15) + Date.now().toString(36); }
       function clearLocalSessionData() {
           if (sessionStorage) {
               sessionStorage.removeItem('licenseValidated');
@@ -1036,73 +624,54 @@
               sessionStorage.removeItem('clientSessionId');
           }
       }
-      
       function showLoginForm(message = "") {
-          if (heartbeatIntervalId) {
-              clearInterval(heartbeatIntervalId);
-              heartbeatIntervalId = null;
-          }
+          if (heartbeatIntervalId) { clearInterval(heartbeatIntervalId); heartbeatIntervalId = null; }
           clearLocalSessionData();
-          if (typeof window.resetAppState === 'function') { // Call reset from script.js
-              window.resetAppState();
-          }
+          if (typeof window.resetAppState === 'function') { window.resetAppState(); }
           if (licenseFormContainer) licenseFormContainer.style.display = "block";
-          if (mainAppContent) mainAppContent.style.display = "none"; // Hide entire app content area
+          if (mainAppContent) mainAppContent.style.display = "none";
           if (msgElement) {
               msgElement.textContent = message;
-              msgElement.style.color = message.toLowerCase().includes("error") || message.toLowerCase().includes("gagal") || message.toLowerCase().includes("tidak") || message.toLowerCase().includes("kesalahan") ? "#FF0000" : "#87CEFA"; // Red or LightSkyBlue
+              msgElement.style.color = message.toLowerCase().includes("error") || message.toLowerCase().includes("gagal") || message.toLowerCase().includes("tidak") || message.toLowerCase().includes("kesalahan") ? "#FF0000" : "#87CEFA";
           }
           if (submitButton) submitButton.disabled = false;
-          if (resetButton) resetButton.disabled = false; // Enable reset button too
+          if (resetButton) resetButton.disabled = false;
           if (licenseInput) licenseInput.value = "";
-          if (resetMsgElement) resetMsgElement.textContent = ""; // Clear reset message
-          // Do not clear name input, user might want to retry
+          if (resetMsgElement) resetMsgElement.textContent = "";
       }
-
       function proceedToApp(userName, licenseKey, clientSessionId) {
-          if (welcomeUserMessageEl) welcomeUserMessageEl.textContent = `SELAMAT DATANG, ${userName}!`;
+          if (welcomeUserMessageEl) welcomeUserMessageEl.textContent = `SELAMAT DATANG, ${userName.toUpperCase()}!`;
           if (userNameDisplayQuizEl) userNameDisplayQuizEl.textContent = userName;
-          
           if (sessionStorage) {
               sessionStorage.setItem('licenseValidated', 'true');
               sessionStorage.setItem('userName', userName);
               sessionStorage.setItem('licenseKey', licenseKey);
               sessionStorage.setItem('clientSessionId', clientSessionId);
           }
-
           if (licenseFormContainer) licenseFormContainer.style.display = "none";
-          if (mainAppContent) mainAppContent.style.display = "block"; // Show main app content area
-
-          if (msgElement) msgElement.textContent = ""; // Clear any previous messages
-          if (resetMsgElement) resetMsgElement.textContent = ""; // Clear reset message
-
+          if (mainAppContent) mainAppContent.style.display = "block";
+          if (msgElement) msgElement.textContent = "";
+          if (resetMsgElement) resetMsgElement.textContent = "";
           startHeartbeat(licenseKey, clientSessionId);
-
-          // Show the new main menu first using the global showView function from script.js
           if (typeof window.showView === 'function' && mainMenuViewContainerEl) {
               window.showView(mainMenuViewContainerEl); 
           } else {
-              console.warn("window.showView or mainMenuViewContainerEl not found. Cannot show initial app view.");
+              console.warn("window.showView or mainMenuViewContainerEl not found.");
           }
       }
-
       async function heartbeat(licenseKey, clientSessionId) {
           if (!db || !licenseKey || !clientSessionId) return;
           try {
               const docRef = doc(db, "licenses", licenseKey);
               const docSnap = await getDoc(docRef);
-
               if (docSnap.exists()) {
                   const data = docSnap.data();
                   if (data.active === true && data.activeSessionId === clientSessionId) {
                       await updateDoc(docRef, { lastSeenAt: serverTimestamp() });
-                      // console.log("Heartbeat: Session renewed.", new Date().toLocaleTimeString());
                   } else {
-                      console.warn("Heartbeat: Session conflict or license deactivated. Logging out.");
-                      showLoginForm("Sesi Anda telah diakhiri karena lisensi digunakan di tempat lain atau tidak aktif lagi.");
+                      showLoginForm("Sesi Anda telah diakhiri karena lisensi digunakan di tempat lain.");
                   }
               } else {
-                  console.warn("Heartbeat: License document not found. Logging out.");
                   showLoginForm("Lisensi tidak ditemukan. Sesi diakhiri.");
               }
           } catch (error) {
@@ -1112,341 +681,305 @@
               }
           }
       }
-
       function startHeartbeat(licenseKey, clientSessionId) {
           if (heartbeatIntervalId) clearInterval(heartbeatIntervalId);
-          heartbeat(licenseKey, clientSessionId); // Initial heartbeat
-          heartbeatIntervalId = setInterval(() => {
-              heartbeat(licenseKey, clientSessionId);
-          }, HEARTBEAT_INTERVAL);
+          heartbeat(licenseKey, clientSessionId);
+          heartbeatIntervalId = setInterval(() => { heartbeat(licenseKey, clientSessionId); }, HEARTBEAT_INTERVAL);
       }
-
       try {
           const app = initializeApp(firebaseConfig);
           db = getFirestore(app);
-
           if (submitButton && licenseInput && msgElement && licenseFormContainer && mainAppContent && nameInputElement && mainMenuViewContainerEl) {
               submitButton.addEventListener("click", async (e) => {
                   e.preventDefault();
                   const licenseKey = licenseInput.value.trim();
                   const inputUserName = nameInputElement.value.trim();
-
-                  if(resetMsgElement) resetMsgElement.textContent = ""; // Clear reset message on login attempt
-
-                  if (!inputUserName) {
-                      msgElement.textContent = "Silakan masukkan nama Anda.";
-                      msgElement.style.color = "#FF0000"; // Red
-                      return;
-                  }
-                  if (!licenseKey) {
-                      msgElement.textContent = "Silakan masukkan kode lisensi.";
-                      msgElement.style.color = "#FF0000"; // Red
-                      return;
-                  }
-                  if (licenseKey.includes('/')) {
-                      msgElement.textContent = "Kode lisensi mengandung karakter tidak valid ('/').";
-                      msgElement.style.color = "#FF0000"; // Red
-                      return;
-                  }
-
-                  msgElement.textContent = "Memeriksa lisensi...";
-                  msgElement.style.color = "#FFA500"; // Orange
-                  submitButton.disabled = true;
-                  if(resetButton) resetButton.disabled = true;
-
-
+                  if(resetMsgElement) resetMsgElement.textContent = "";
+                  if (!inputUserName) { msgElement.textContent = "Silakan masukkan nama Anda."; msgElement.style.color = "#FF0000"; return; }
+                  if (!licenseKey) { msgElement.textContent = "Silakan masukkan kode lisensi."; msgElement.style.color = "#FF0000"; return; }
+                  if (licenseKey.includes('/')) { msgElement.textContent = "Kode lisensi mengandung karakter tidak valid ('/')."; msgElement.style.color = "#FF0000"; return; }
+                  msgElement.textContent = "Memeriksa lisensi..."; msgElement.style.color = "#FFA500";
+                  submitButton.disabled = true; if(resetButton) resetButton.disabled = true;
                   try {
                       const docRef = doc(db, "licenses", licenseKey);
                       const docSnap = await getDoc(docRef);
-
                       if (docSnap.exists() && docSnap.data().active === true) {
                           const licenseData = docSnap.data();
-                          const storedSessionId = licenseData.activeSessionId;
                           const lastSeenTimestamp = licenseData.lastSeenAt; 
                           const lastSeenDate = lastSeenTimestamp ? lastSeenTimestamp.toDate() : null;
-                          
-                          let canTakeLicense = false;
-
-                          if (!storedSessionId) {
-                              canTakeLicense = true;
-                          } else {
-                              if (!lastSeenDate) {
-                                  console.warn(`License ${licenseKey} has activeSessionId (${storedSessionId}) but no valid lastSeenAt timestamp. Considering it available.`);
-                                  canTakeLicense = true;
-                              } else {
-                                  if ((new Date().getTime() - lastSeenDate.getTime()) > STALE_SESSION_THRESHOLD) {
-                                      console.log(`License ${licenseKey} session ${storedSessionId} is stale. Last seen: ${lastSeenDate}. Current time: ${new Date()}`);
-                                      canTakeLicense = true; 
-                                  } else {
-                                      console.log(`License ${licenseKey} session ${storedSessionId} is active and not stale. Last seen: ${lastSeenDate}`);
-                                      canTakeLicense = false; 
-                                  }
-                              }
-                          }
-
+                          let canTakeLicense = !licenseData.activeSessionId || (lastSeenDate && (new Date().getTime() - lastSeenDate.getTime()) > STALE_SESSION_THRESHOLD);
                           if (canTakeLicense) {
                               const newClientSessionId = generateClientSessionId();
-                              await updateDoc(docRef, {
-                                  activeSessionId: newClientSessionId,
-                                  lastSeenAt: serverTimestamp(),
-                                  userName: inputUserName 
-                              });
-                              msgElement.style.color = "#90EE90"; // LightGreen
-                              msgElement.textContent = "Lisensi valid. Akses diberikan!";
+                              await updateDoc(docRef, { activeSessionId: newClientSessionId, lastSeenAt: serverTimestamp(), userName: inputUserName });
+                              msgElement.style.color = "#90EE90"; msgElement.textContent = "Lisensi valid. Akses diberikan!";
                               proceedToApp(inputUserName, licenseKey, newClientSessionId);
                           } else {
-                              msgElement.style.color = "#FF0000"; // Red
-                              msgElement.textContent = "Lisensi ini sedang aktif digunakan di browser/perangkat lain.";
+                              msgElement.style.color = "#FF0000"; msgElement.textContent = "Lisensi ini sedang aktif digunakan di browser/perangkat lain.";
                               clearLocalSessionData();
                           }
                       } else {
-                          msgElement.style.color = "#FF0000"; // Red
-                          if (!docSnap.exists()) {
-                             msgElement.textContent = "Mohon maaf, Lisensi tidak ditemukan.";
-                          } else if (docSnap.data().active === false) {
-                             msgElement.textContent = "Mohon maaf, Lisensi ini tidak aktif.";
-                          } else {
-                             msgElement.textContent = "Mohon maaf, Lisensi tidak valid atau tidak aktif.";
-                          }
+                          msgElement.style.color = "#FF0000";
+                          msgElement.textContent = docSnap.exists() ? "Mohon maaf, Lisensi ini tidak aktif." : "Mohon maaf, Lisensi tidak ditemukan.";
                           clearLocalSessionData();
                       }
                   } catch (error) {
                       console.error("Firestore GAGAL saat memeriksa lisensi:", error);
-                      if (error.code) {
-                          console.error("Kode Error Firebase:", error.code); 
-                      }
-                      msgElement.style.color = "#FF0000"; // Red
-                      msgElement.textContent = `Terjadi kesalahan (${error.code || 'Tidak Diketahui'}). Cek koneksi & lihat konsol browser (F12) untuk detail.`;
+                      msgElement.style.color = "#FF0000";
+                      msgElement.textContent = `Terjadi kesalahan (${error.code || 'Tidak Diketahui'}). Cek koneksi & konsol browser.`;
                       clearLocalSessionData();
                   } finally {
-                      submitButton.disabled = false;
-                      if(resetButton) resetButton.disabled = false;
+                      submitButton.disabled = false; if(resetButton) resetButton.disabled = false;
                   }
               });
-
               if (sessionStorage && sessionStorage.getItem('licenseValidated') === 'true') {
                   const savedUserName = sessionStorage.getItem('userName');
                   const savedLicenseKey = sessionStorage.getItem('licenseKey');
                   const savedClientSessionId = sessionStorage.getItem('clientSessionId');
-
                   if (savedUserName && savedLicenseKey && savedClientSessionId) {
-                      msgElement.textContent = "Memvalidasi sesi sebelumnya...";
-                      msgElement.style.color = "#FFA500"; // Orange
+                      msgElement.textContent = "Memvalidasi sesi..."; msgElement.style.color = "#FFA500";
                       (async () => {
                           try {
                               const docRef = doc(db, "licenses", savedLicenseKey);
                               const docSnap = await getDoc(docRef);
-                              if (docSnap.exists() && 
-                                  docSnap.data().active === true && 
-                                  docSnap.data().activeSessionId === savedClientSessionId) {
-                                  
+                              if (docSnap.exists() && docSnap.data().active === true && docSnap.data().activeSessionId === savedClientSessionId) {
                                   await updateDoc(docRef, { lastSeenAt: serverTimestamp() });
                                   proceedToApp(savedUserName, savedLicenseKey, savedClientSessionId);
-                              } else {
-                                  showLoginForm("Sesi sebelumnya tidak valid atau telah diambil alih. Silakan masuk kembali.");
-                              }
-                          } catch (err) {
-                              console.error("Error re-validating session:", err);
-                              showLoginForm(`Gagal memvalidasi sesi (${err.code || 'Tidak Diketahui'}). Silakan masuk kembali.`);
-                          }
+                              } else { showLoginForm("Sesi sebelumnya tidak valid. Silakan masuk kembali."); }
+                          } catch (err) { showLoginForm(`Gagal memvalidasi sesi (${err.code || 'Tidak Diketahui'}).`); }
                       })();
-                  } else {
-                      clearLocalSessionData(); // Ensure clean state if partial session data found
-                  }
+                  } else { clearLocalSessionData(); }
               }
-
-          } else {
-              console.error("Elemen form lisensi atau aplikasi utama tidak ditemukan! Periksa ID elemen.");
-              if(msgElement) {
-                msgElement.textContent = "Kesalahan konfigurasi halaman.";
-                msgElement.style.color = "#FF0000"; // Red
-              }
-          }
-
-          // BARU: Event Listener untuk Tombol Reset Sesi
+          } else { console.error("Elemen form lisensi atau aplikasi utama tidak ditemukan!"); }
           if (resetButton && licenseInput && resetMsgElement) {
               resetButton.addEventListener("click", async (e) => {
                   e.preventDefault();
                   const licenseKeyToReset = licenseInput.value.trim();
-
-                  if(msgElement) msgElement.textContent = ""; // Clear login message on reset attempt
-
-                  if (!licenseKeyToReset) {
-                      resetMsgElement.textContent = "Masukkan kode lisensi yang ingin direset sesinya.";
-                      resetMsgElement.style.color = "#FFFF00"; // Yellow (warning)
-                      return;
-                  }
-                  if (licenseKeyToReset.includes('/')) {
-                      resetMsgElement.textContent = "Kode lisensi mengandung karakter tidak valid ('/').";
-                      resetMsgElement.style.color = "#FF0000"; // Red
-                      return;
-                  }
-
-                  resetMsgElement.textContent = "Memproses permintaan reset sesi...";
-                  resetMsgElement.style.color = "#FFA500"; // Orange
-                  resetButton.disabled = true;
-                  if (submitButton) submitButton.disabled = true;
-
+                  if(msgElement) msgElement.textContent = "";
+                  if (!licenseKeyToReset) { resetMsgElement.textContent = "Masukkan kode lisensi yang ingin direset."; resetMsgElement.style.color = "#FFFF00"; return; }
+                  if (licenseKeyToReset.includes('/')) { resetMsgElement.textContent = "Kode lisensi mengandung karakter tidak valid ('/')."; resetMsgElement.style.color = "#FF0000"; return; }
+                  resetMsgElement.textContent = "Memproses..."; resetMsgElement.style.color = "#FFA500";
+                  resetButton.disabled = true; if (submitButton) submitButton.disabled = true;
                   try {
                       const docRef = doc(db, "licenses", licenseKeyToReset);
                       const docSnap = await getDoc(docRef);
-
                       if (docSnap.exists()) {
-                          const licenseData = docSnap.data();
-                          if (licenseData.active === true && licenseData.activeSessionId) {
-                              await updateDoc(docRef, {
-                                  activeSessionId: null,
-                                  lastSeenAt: serverTimestamp(),
-                              });
-                              resetMsgElement.style.color = "#90EE90"; // LightGreen
-                              resetMsgElement.textContent = `Sesi untuk lisensi "${licenseKeyToReset}" telah berhasil direset. Silakan coba masuk lagi.`;
-                          } else if (licenseData.active === true && !licenseData.activeSessionId) {
-                              resetMsgElement.style.color = "#87CEFA"; // LightSkyBlue
-                              resetMsgElement.textContent = `Lisensi "${licenseKeyToReset}" aktif tetapi tidak ada sesi yang tertaut untuk direset. Anda bisa langsung masuk.`;
-                          } else if (licenseData.active === false) {
-                               resetMsgElement.style.color = "#FF4500"; // OrangeRed
-                               resetMsgElement.textContent = `Lisensi "${licenseKeyToReset}" tidak aktif, tidak dapat mereset sesi.`;
-                          } else {
-                              resetMsgElement.style.color = "#87CEFA"; // LightSkyBlue (catch-all for found but not resettable)
-                              resetMsgElement.textContent = `Lisensi "${licenseKeyToReset}" ditemukan, namun statusnya tidak memungkinkan reset sesi atau tidak ada sesi aktif.`;
-                          }
+                          await updateDoc(docRef, { activeSessionId: null, lastSeenAt: serverTimestamp() });
+                          resetMsgElement.style.color = "#90EE90"; resetMsgElement.textContent = `Sesi untuk lisensi "${licenseKeyToReset}" telah berhasil direset. Silakan coba masuk lagi.`;
                       } else {
-                          resetMsgElement.style.color = "#FF4500"; // OrangeRed
-                          resetMsgElement.textContent = `Lisensi "${licenseKeyToReset}" tidak ditemukan.`;
+                          resetMsgElement.style.color = "#FF4500"; resetMsgElement.textContent = `Lisensi "${licenseKeyToReset}" tidak ditemukan.`;
                       }
                   } catch (error) {
                       console.error("Firestore GAGAL saat mereset sesi:", error);
-                      resetMsgElement.style.color = "#FF0000"; // Red
-                      resetMsgElement.textContent = `Terjadi kesalahan saat mereset sesi (${error.code || 'Tidak Diketahui'}).`;
+                      resetMsgElement.style.color = "#FF0000"; resetMsgElement.textContent = `Terjadi kesalahan saat mereset sesi (${error.code || 'Tidak Diketahui'}).`;
                   } finally {
-                      resetButton.disabled = false;
-                      if (submitButton) submitButton.disabled = false;
+                      resetButton.disabled = false; if (submitButton) submitButton.disabled = false;
                   }
               });
-          } else {
-              if (!resetButton) console.warn("Peringatan: Tombol reset sesi (reset-session-button) tidak ditemukan.");
-              if (!resetMsgElement) console.warn("Peringatan: Elemen pesan reset sesi (reset-session-msg) tidak ditemukan.");
           }
-
-
       } catch (error) { 
           console.error("Inisialisasi Firebase gagal:", error);
-          if(msgElement) {
-             msgElement.textContent = `Gagal menginisialisasi koneksi ke server (${error.code || 'Tidak Diketahui'}). Silakan coba lagi nanti.`;
-             msgElement.style.color = "#FF0000"; // Red
-          }
-           if(resetMsgElement) { // Also show error in reset message area if Firebase init fails
-             resetMsgElement.textContent = `Koneksi server gagal. Fitur reset tidak tersedia.`;
-             resetMsgElement.style.color = "#FF0000"; // Red
-          }
+          if(msgElement) { msgElement.textContent = `Gagal koneksi ke server. Coba lagi nanti.`; msgElement.style.color = "#FF0000"; }
       }
-
       if (logoutButton) {
           logoutButton.addEventListener('click', async () => {
               const licenseKey = sessionStorage.getItem('licenseKey');
               const clientSessionId = sessionStorage.getItem('clientSessionId');
-
               if (db && licenseKey && clientSessionId) {
                   try {
                       const docRef = doc(db, "licenses", licenseKey);
-                      const docSnap = await getDoc(docRef); 
-                      if (docSnap.exists() && docSnap.data().activeSessionId === clientSessionId) {
-                          await updateDoc(docRef, {
-                              activeSessionId: null,
-                              lastSeenAt: serverTimestamp() 
-                          });
-                          console.log("License released on logout.");
-                      } else {
-                          console.log("Session already released or taken by another client.");
-                      }
-                  } catch (error) {
-                      console.error("Error releasing license on logout:", error);
-                  }
+                      await updateDoc(docRef, { activeSessionId: null, lastSeenAt: serverTimestamp() });
+                  } catch (error) { console.error("Error releasing license on logout:", error); }
               }
               showLoginForm("Anda telah berhasil logout.");
           });
       }
-
       window.addEventListener('beforeunload', (event) => {
           if (sessionStorage && sessionStorage.getItem('licenseValidated') === 'true') {
               const licenseKey = sessionStorage.getItem('licenseKey');
-              const clientSessionId = sessionStorage.getItem('clientSessionId');
-
-              if (db && licenseKey && clientSessionId) {
+              if (db && licenseKey) {
                   const docRef = doc(db, "licenses", licenseKey);
-                  getDoc(docRef).then(docSnap => {
-                      if (docSnap.exists() && docSnap.data().activeSessionId === clientSessionId) {
-                          updateDoc(docRef, {
-                              lastSeenAt: serverTimestamp() 
-                          }).catch(err => {
-                              // console.warn("beforeunload: Error updating lastSeenAt (non-critical):", err);
-                          });
-                      }
-                  }).catch(err => {
-                      // console.warn("beforeunload: Error checking document before updating lastSeenAt (non-critical):", err);
-                  });
+                  updateDoc(docRef, { lastSeenAt: serverTimestamp() });
               }
           }
       });
-
     </script>
-
+    
     <!-- Kontainer untuk Aplikasi Utama (setelah lisensi valid) -->
     <div id="main-app-content">
-        <!-- NEW MAIN MENU -->
+        <!-- MENU UTAMA BARU -->
         <div id="main-menu-container" class="container-view hidden">
-            <h2 id="main-menu-welcome-user"></h2> <!-- Welcome message will appear here -->
+            <h2 id="main-menu-welcome-user"></h2>
             <h3>Menu Utama</h3>
-            <button id="main-menu-latihan-soal" class="menu-button-style">Latihan Pembahasan Soal</button>
-            <button id="main-menu-tryout" class="menu-button-style">Try Out</button>
-            <button id="logout-button" class="menu-button-style btn-home">Logout</button>
+            <div class="card-menu-grid">
+                <button id="main-menu-latihan-soal" class="card-menu-item">
+                    <div class="card-menu-icon-wrapper card-color-1"><span>📚</span></div>
+                    <div class="card-menu-text">
+                        <span class="card-menu-title">Latihan Pembahasan Soal</span>
+                        <span class="card-menu-description">Asah kemampuan per kategori dengan pembahasan lengkap.</span>
+                    </div>
+                </button>
+                <button id="main-menu-tryout" class="card-menu-item">
+                    <div class="card-menu-icon-wrapper card-color-2"><span>⏱️</span></div>
+                    <div class="card-menu-text">
+                        <span class="card-menu-title">Try Out</span>
+                        <span class="card-menu-description">Uji kemampuan menyeluruh dengan batas waktu.</span>
+                    </div>
+                </button>
+                <button id="logout-button" class="card-menu-item">
+                    <div class="card-menu-icon-wrapper card-color-3"><span>🚪</span></div>
+                    <div class="card-menu-text">
+                        <span class="card-menu-title">Logout</span>
+                        <span class="card-menu-description">Keluar dari sesi & kembali ke halaman login.</span>
+                    </div>
+                </button>
+            </div>
         </div>
 
-        <!-- NEW Latihan Pembahasan Soal SUBMENU -->
+        <!-- SUBMENU LATIHAN SOAL BARU -->
         <div id="latihan-soal-submenu-container" class="container-view hidden">
             <h3>Pilih Jenis Latihan Pembahasan Soal</h3>
-            <button id="latihan-departemen-button" class="menu-button-style">Latihan Pembahasan Soal per Departemen</button>
-            <button id="latihan-gabungan-button" class="menu-button-style" data-file="gabungan.json">Latihan Pembahasan Soal Gabungan</button>
-            <button id="kembali-ke-main-menu-from-latihan-submenu" class="menu-button-style btn-home">Kembali ke Menu Utama</button>
+            <div class="card-menu-grid">
+                <button id="latihan-departemen-button" class="card-menu-item">
+                    <div class="card-menu-icon-wrapper card-color-4"><span>📂</span></div>
+                    <div class="card-menu-text">
+                        <span class="card-menu-title">Latihan per Departemen</span>
+                        <span class="card-menu-description">Pilih soal dari 7 departemen keperawatan.</span>
+                    </div>
+                </button>
+                <button id="latihan-gabungan-button" class="card-menu-item" data-file="gabungan.json">
+                    <div class="card-menu-icon-wrapper card-color-5"><span>🔄</span></div>
+                    <div class="card-menu-text">
+                        <span class="card-menu-title">Latihan Soal Gabungan</span>
+                        <span class="card-menu-description">Kerjakan soal acak dari semua kategori.</span>
+                    </div>
+                </button>
+            </div>
+            <button id="kembali-ke-main-menu-from-latihan-submenu" class="card-menu-item back-button-card">
+                <div class="card-menu-icon-wrapper card-color-6"><span>↩️</span></div>
+                <div class="card-menu-text">
+                    <span class="card-menu-title">Kembali ke Menu Utama</span>
+                </div>
+            </button>
         </div>
         
-        <!-- NEW TRY OUT SUBMENU -->
+        <!-- SUBMENU TRY OUT BARU -->
         <div id="tryout-submenu-container" class="container-view hidden">
             <h3>Pilih Jenis Try Out</h3>
-            <button id="tryout-gabungan-semua-button" class="menu-button-style">Try Out Soal Gabungan (Semua Kategori)</button>
-            <button id="tryout-mode-serius-button" class="menu-button-style">Try Out Mode Serius (TO Type 1-10)</button>
-            <button id="kembali-ke-main-menu-from-tryout-submenu" class="menu-button-style btn-home">Kembali ke Menu Utama</button>
+            <div class="card-menu-grid">
+                <button id="tryout-gabungan-semua-button" class="card-menu-item">
+                    <div class="card-menu-icon-wrapper card-color-6"><span>🌐</span></div>
+                    <div class="card-menu-text">
+                        <span class="card-menu-title">Try Out Gabungan</span>
+                        <span class="card-menu-description">Simulasi 180 soal dari semua kategori.</span>
+                    </div>
+                </button>
+                <button id="tryout-mode-serius-button" class="card-menu-item">
+                    <div class="card-menu-icon-wrapper card-color-7"><span>🏆</span></div>
+                    <div class="card-menu-text">
+                        <span class="card-menu-title">Try Out Mode Serius</span>
+                        <span class="card-menu-description">Kerjakan paket soal TO yang telah disiapkan.</span>
+                    </div>
+                </button>
+            </div>
+            <button id="kembali-ke-main-menu-from-tryout-submenu" class="card-menu-item back-button-card">
+                <div class="card-menu-icon-wrapper card-color-3"><span>↩️</span></div>
+                <div class="card-menu-text">
+                    <span class="card-menu-title">Kembali ke Menu Utama</span>
+                </div>
+            </button>
         </div>
 
-        <!-- KATEGORI LATIHAN (Existing, but back button ID changed) -->
+        <!-- KATEGORI LATIHAN BARU -->
         <div id="kategori-latihan-container" class="container-view hidden">
             <h3>Pilih Kategori Latihan Pembahasan Soal</h3>
-            <button class="kategori-button" data-script="jiwa.js">Keperawatan Jiwa</button>
-            <button class="kategori-button" data-script="anak.js">Keperawatan Anak</button>
-            <button class="kategori-button" data-script="keluarga.js">Keperawatan Keluarga</button>
-            <button class="kategori-button" data-script="komunitas.js">Keperawatan Komunitas</button>
-            <button class="kategori-button" data-script="bedah.js">Keperawatan Medikal Bedah</button>
-            <button class="kategori-button" data-script="gadar.js">Keperawatan Gawat Darurat</button>
-            <button class="kategori-button" data-script="manajemen.js">Manajemen Keperawatan</button>
-            <button id="kembali-ke-latihan-submenu-from-kategori" class="btn-home">Kembali ke Pilihan Latihan</button>
+            <div class="card-menu-grid card-menu-grid-dense">
+                <button class="card-menu-item kategori-button" data-script="jiwa.js">
+                    <div class="card-menu-icon-wrapper card-color-1"><span>🧠</span></div>
+                    <div class="card-menu-text"><span class="card-menu-title">Keperawatan Jiwa</span></div>
+                </button>
+                <button class="card-menu-item kategori-button" data-script="anak.js">
+                    <div class="card-menu-icon-wrapper card-color-4"><span>👶</span></div>
+                    <div class="card-menu-text"><span class="card-menu-title">Keperawatan Anak</span></div>
+                </button>
+                <button class="card-menu-item kategori-button" data-script="keluarga.js">
+                    <div class="card-menu-icon-wrapper card-color-5"><span>👨‍👩‍👧</span></div>
+                    <div class="card-menu-text"><span class="card-menu-title">Keperawatan Keluarga</span></div>
+                </button>
+                <button class="card-menu-item kategori-button" data-script="komunitas.js">
+                    <div class="card-menu-icon-wrapper card-color-8"><span>🏘️</span></div>
+                    <div class="card-menu-text"><span class="card-menu-title">Keperawatan Komunitas</span></div>
+                </button>
+                <button class="card-menu-item kategori-button" data-script="bedah.js">
+                    <div class="card-menu-icon-wrapper card-color-9"><span>🏥</span></div>
+                    <div class="card-menu-text"><span class="card-menu-title">Keperawatan Medikal Bedah</span></div>
+                </button>
+                <button class="card-menu-item kategori-button" data-script="gadar.js">
+                    <div class="card-menu-icon-wrapper card-color-7"><span>🚑</span></div>
+                    <div class="card-menu-text"><span class="card-menu-title">Keperawatan Gawat Darurat</span></div>
+                </button>
+                <button class="card-menu-item kategori-button" data-script="manajemen.js">
+                    <div class="card-menu-icon-wrapper card-color-10"><span>📋</span></div>
+                    <div class="card-menu-text"><span class="card-menu-title">Manajemen Keperawatan</span></div>
+                </button>
+            </div>
+            <button id="kembali-ke-latihan-submenu-from-kategori" class="card-menu-item back-button-card">
+                 <div class="card-menu-icon-wrapper card-color-6"><span>↩️</span></div>
+                <div class="card-menu-text"><span class="card-menu-title">Kembali ke Pilihan Latihan</span></div>
+            </button>
         </div>
         
-        <!-- TRYOUT SERIUS (Existing, but back button ID changed) -->
+        <!-- TRYOUT SERIUS BARU -->
         <div id="tryout-serius-container" class="container-view hidden">
             <h3>Pilih Tipe Try Out Serius</h3>
-            <button class="tryout-serius-button" data-file="TO1.json" data-type="TO Tipe 1">TO Tipe 1</button>
-            <button class="tryout-serius-button" data-file="TO2.json" data-type="TO Tipe 2">TO Tipe 2</button>
-            <button class="tryout-serius-button" data-file="TO3.json" data-type="TO Tipe 3">TO Tipe 3</button>
-            <button class="tryout-serius-button" data-file="TO4.json" data-type="TO Tipe 4">TO Tipe 4</button>
-            <button class="tryout-serius-button" data-file="TO5.json" data-type="TO Tipe 5">TO Tipe 5</button>
-            <button class="tryout-serius-button" data-file="TO6.json" data-type="TO Tipe 6">TO Tipe 6</button>
-            <button class="tryout-serius-button" data-file="TO7.json" data-type="TO Tipe 7">TO Tipe 7</button>
-            <button class="tryout-serius-button" data-file="TO8.json" data-type="TO Tipe 8">TO Tipe 8</button>
-            <button class="tryout-serius-button" data-file="TO9.json" data-type="TO Tipe 9">TO Tipe 9</button>
-            <button class="tryout-serius-button" data-file="TO10.json" data-type="TO Tipe 10">TO Tipe 10</button>
-            <button id="kembali-ke-tryout-submenu-from-serius" class="btn-home">Kembali ke Pilihan Try Out</button>
+            <div class="card-menu-grid card-menu-grid-dense">
+                <button class="card-menu-item tryout-serius-button" data-file="TO1.json" data-type="TO Tipe 1">
+                    <div class="card-menu-icon-wrapper card-color-11"><span>📄</span></div>
+                    <div class="card-menu-text"><span class="card-menu-title">TO Tipe 1</span></div>
+                </button>
+                <button class="card-menu-item tryout-serius-button" data-file="TO2.json" data-type="TO Tipe 2">
+                    <div class="card-menu-icon-wrapper card-color-1"><span>📄</span></div>
+                    <div class="card-menu-text"><span class="card-menu-title">TO Tipe 2</span></div>
+                </button>
+                <button class="card-menu-item tryout-serius-button" data-file="TO3.json" data-type="TO Tipe 3">
+                    <div class="card-menu-icon-wrapper card-color-2"><span>📄</span></div>
+                    <div class="card-menu-text"><span class="card-menu-title">TO Tipe 3</span></div>
+                </button>
+                <button class="card-menu-item tryout-serius-button" data-file="TO4.json" data-type="TO Tipe 4">
+                    <div class="card-menu-icon-wrapper card-color-4"><span>📄</span></div>
+                    <div class="card-menu-text"><span class="card-menu-title">TO Tipe 4</span></div>
+                </button>
+                <button class="card-menu-item tryout-serius-button" data-file="TO5.json" data-type="TO Tipe 5">
+                    <div class="card-menu-icon-wrapper card-color-5"><span>📄</span></div>
+                    <div class="card-menu-text"><span class="card-menu-title">TO Tipe 5</span></div>
+                </button>
+                <button class="card-menu-item tryout-serius-button" data-file="TO6.json" data-type="TO Tipe 6">
+                    <div class="card-menu-icon-wrapper card-color-6"><span>📄</span></div>
+                    <div class="card-menu-text"><span class="card-menu-title">TO Tipe 6</span></div>
+                </button>
+                <button class="card-menu-item tryout-serius-button" data-file="TO7.json" data-type="TO Tipe 7">
+                    <div class="card-menu-icon-wrapper card-color-7"><span>📄</span></div>
+                    <div class="card-menu-text"><span class="card-menu-title">TO Tipe 7</span></div>
+                </button>
+                <button class="card-menu-item tryout-serius-button" data-file="TO8.json" data-type="TO Tipe 8">
+                    <div class="card-menu-icon-wrapper card-color-9"><span>📄</span></div>
+                    <div class="card-menu-text"><span class="card-menu-title">TO Tipe 8</span></div>
+                </button>
+                <button class="card-menu-item tryout-serius-button" data-file="TO9.json" data-type="TO Tipe 9">
+                    <div class="card-menu-icon-wrapper card-color-8"><span>📄</span></div>
+                    <div class="card-menu-text"><span class="card-menu-title">TO Tipe 9</span></div>
+                </button>
+                <button class="card-menu-item tryout-serius-button" data-file="TO10.json" data-type="TO Tipe 10">
+                    <div class="card-menu-icon-wrapper card-color-default"><span>📄</span></div>
+                    <div class="card-menu-text"><span class="card-menu-title">TO Tipe 10</span></div>
+                </button>
+            </div>
+            <button id="kembali-ke-tryout-submenu-from-serius" class="card-menu-item back-button-card">
+                <div class="card-menu-icon-wrapper card-color-3"><span>↩️</span></div>
+                <div class="card-menu-text"><span class="card-menu-title">Kembali ke Pilihan Try Out</span></div>
+            </button>
         </div>
 
+        <!-- Quiz & Result Views (Struktur tidak diubah, hanya CSS di atas) -->
         <div id="quiz-layout-container" class="container-view hidden">
             <div id="quiz-main-content">
                 <div id="question-counter" class="hidden">Soal 1 dari X</div>
@@ -1489,7 +1022,7 @@
     </div>
 
 
-    <!-- Skrip Aplikasi Utama Anda -->
+    <!-- Skrip Aplikasi Utama (Dibiarkan sama) -->
     <script src="script.js"></script>
        <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
 <script type="text/javascript">var _Hasync= _Hasync|| [];
