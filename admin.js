@@ -19,7 +19,7 @@ const db = getFirestore(app);
 // DOM Elements
 const loginView = document.getElementById('login-view');
 const dashboardView = document.getElementById('dashboard-view');
-const historyView = document.getElementById('history-view'); // Baru
+const historyView = document.getElementById('history-view');
 const loginButton = document.getElementById('login-button');
 const logoutButton = document.getElementById('logout-button');
 const loginMessage = document.getElementById('login-message');
@@ -29,10 +29,18 @@ const loadingIndicator = document.getElementById('loading-indicator');
 const addLicenseButton = document.getElementById('add-license-button');
 const newLicenseKeyInput = document.getElementById('new-license-key');
 const addLicenseMessage = document.getElementById('add-license-message');
-const backToDashboardButton = document.getElementById('back-to-dashboard-button'); // Baru
-const historyTbody = document.getElementById('history-tbody'); // Baru
-const historyLoadingIndicator = document.getElementById('history-loading-indicator'); // Baru
-const historyViewTitle = document.getElementById('history-view-title'); // Baru
+const backToDashboardButton = document.getElementById('back-to-dashboard-button');
+const historyTbody = document.getElementById('history-tbody');
+const historyLoadingIndicator = document.getElementById('history-loading-indicator');
+const historyViewTitle = document.getElementById('history-view-title');
+
+// DOM Elements untuk Ringkasan (BARU)
+const totalCountEl = document.getElementById('total-count');
+const onlineCountEl = document.getElementById('online-count');
+const idleCountEl = document.getElementById('idle-count');
+const offlineCountEl = document.getElementById('offline-count');
+const disabledCountEl = document.getElementById('disabled-count');
+
 
 let licensesUnsubscribe = null;
 
@@ -69,19 +77,51 @@ logoutButton.addEventListener('click', () => {
     signOut(auth);
 });
 
-// --- LICENSE MANAGEMENT ---
+// --- LICENSE MANAGEMENT (DIPERBARUI) ---
 function listenToLicenses() {
     loadingIndicator.style.display = 'block';
     const q = collection(db, "licenses");
     licensesUnsubscribe = onSnapshot(q, (querySnapshot) => {
+        // Reset tabel dan hitungan
         licensesTbody.innerHTML = '';
+        let onlineCount = 0, idleCount = 0, offlineCount = 0, disabledCount = 0;
+        const STALE_SESSION_THRESHOLD = 5 * 60 * 1000; // 5 menit
+
         if (querySnapshot.empty) {
             licensesTbody.innerHTML = '<tr><td colspan="5">Tidak ada lisensi ditemukan.</td></tr>';
         } else {
             querySnapshot.forEach(doc => {
-                displayLicense(doc.id, doc.data());
+                const data = doc.data();
+                const { active, activeSessionId, lastSeenAt } = data;
+
+                // --- Logika Penghitungan Status (BARU) ---
+                if (active) {
+                    if (activeSessionId) {
+                        const lastSeenDate = lastSeenAt ? lastSeenAt.toDate() : null;
+                        if (lastSeenDate && (new Date().getTime() - lastSeenDate.getTime()) < STALE_SESSION_THRESHOLD) {
+                            onlineCount++;
+                        } else {
+                            idleCount++;
+                        }
+                    } else {
+                        offlineCount++;
+                    }
+                } else {
+                    disabledCount++;
+                }
+
+                // Tampilkan lisensi di tabel (logika yang sudah ada)
+                displayLicense(doc.id, data);
             });
         }
+        
+        // --- Perbarui Tampilan Ringkasan (BARU) ---
+        totalCountEl.textContent = querySnapshot.size;
+        onlineCountEl.textContent = onlineCount;
+        idleCountEl.textContent = idleCount;
+        offlineCountEl.textContent = offlineCount;
+        disabledCountEl.textContent = disabledCount;
+
         loadingIndicator.style.display = 'none';
     }, (error) => {
         console.error("Error listening to licenses: ", error);
