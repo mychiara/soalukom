@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <!-- Container untuk Form Lisensi dan Login Awal (Tidak Berubah) -->
+    <!-- Container untuk Form Lisensi dan Login Awal -->
     <div id="license-form-container" class="container-view">
         <h1><span class="app-title-highlight">Selamat Datang!</span></h1>
         <h3><span class="app-title-highlight">di Aplikasi Bimbel UKOM</span></h3>
@@ -44,231 +44,7 @@
         </div>
     </div>
     
-    <!-- Skrip Lisensi Firebase (Dibiarkan sama) -->
-    <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-      import { getFirestore, doc, getDoc, updateDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
-
-      // --- KODE FIREBASE TIDAK BERUBAH ---
-      // [.. Salin dan tempel semua kode Firebase Anda yang sudah ada di sini ..]
-      const firebaseConfig = {
-        apiKey: "AIzaSyDnJvECVfNJIXPh9rZTsA3QcHQaTiE4Awc", // GANTI DENGAN API KEY ANDA
-        authDomain: "apodaca-bessie4762.firebaseapp.com", // GANTI DENGAN AUTH DOMAIN ANDA
-        databaseURL: "https://apodaca-bessie4762.firebaseio.com", // GANTI DENGAN DATABASE URL ANDA (jika menggunakan Realtime DB)
-        projectId: "apodaca-bessie4762", // GANTI DENGAN PROJECT ID ANDA
-        storageBucket: "apodaca-bessie4762.firebasestorage.app", // GANTI DENGAN STORAGE BUCKET ANDA
-        messagingSenderId: "809433417541", // GANTI DENGAN MESSAGING SENDER ID ANDA
-        appId: "1:809433417541:web:48632b970a90840ab1602c" // GANTI DENGAN APP ID ANDA
-      };
-      let db;
-      const licenseFormContainer = document.getElementById("license-form-container");
-      const mainAppContent = document.getElementById("main-app-content");
-      const submitButton = document.getElementById("submit-license-button");
-      const licenseInput = document.getElementById("license");
-      const nameInputElement = document.getElementById("name-input");
-      const msgElement = document.getElementById("license-msg");
-      const welcomeUserMessageEl = document.getElementById("main-menu-welcome-user");
-      const mainMenuViewContainerEl = document.getElementById("main-menu-container");
-      const userNameDisplayQuizEl = document.getElementById("user-name-display");
-      const logoutButton = document.getElementById("logout-button");
-      const resetButton = document.getElementById("reset-session-button");
-      const resetMsgElement = document.getElementById("reset-session-msg");
-      const STALE_SESSION_THRESHOLD = 5 * 60 * 1000;
-      const HEARTBEAT_INTERVAL = 2 * 60 * 1000;
-      let heartbeatIntervalId = null;
-      function generateClientSessionId() { return Math.random().toString(36).substring(2, 15) + Date.now().toString(36); }
-      function clearLocalSessionData() {
-          if (sessionStorage) {
-              sessionStorage.removeItem('licenseValidated');
-              sessionStorage.removeItem('userName');
-              sessionStorage.removeItem('licenseKey');
-              sessionStorage.removeItem('clientSessionId');
-          }
-          if (localStorage) { // Juga bersihkan data localstorage terkait sesi
-              // Hati-hati jangan hapus riwayat kuis, hanya progres yang sedang berjalan
-              // Logic untuk ini akan ditangani oleh skrip utama
-          }
-      }
-      function showLoginForm(message = "") {
-          if (heartbeatIntervalId) { clearInterval(heartbeatIntervalId); heartbeatIntervalId = null; }
-          clearLocalSessionData();
-          if (typeof window.resetAppState === 'function') { window.resetAppState(); }
-          if (licenseFormContainer) licenseFormContainer.style.display = "block";
-          if (mainAppContent) mainAppContent.style.display = "none";
-          if (msgElement) {
-              msgElement.textContent = message;
-              msgElement.style.color = message.toLowerCase().includes("error") || message.toLowerCase().includes("gagal") || message.toLowerCase().includes("tidak") || message.toLowerCase().includes("kesalahan") ? "#FF0000" : "#87CEFA";
-          }
-          if (submitButton) submitButton.disabled = false;
-          if (resetButton) resetButton.disabled = false;
-          if (licenseInput) licenseInput.value = "";
-          if (resetMsgElement) resetMsgElement.textContent = "";
-      }
-      function proceedToApp(userName, licenseKey, clientSessionId) {
-          if (welcomeUserMessageEl) welcomeUserMessageEl.textContent = `SELAMAT DATANG, ${userName.toUpperCase()}!`;
-          if (userNameDisplayQuizEl) userNameDisplayQuizEl.textContent = userName;
-          if (sessionStorage) {
-              sessionStorage.setItem('licenseValidated', 'true');
-              sessionStorage.setItem('userName', userName);
-              sessionStorage.setItem('licenseKey', licenseKey);
-              sessionStorage.setItem('clientSessionId', clientSessionId);
-          }
-          if (licenseFormContainer) licenseFormContainer.style.display = "none";
-          if (mainAppContent) mainAppContent.style.display = "block";
-          if (msgElement) msgElement.textContent = "";
-          if (resetMsgElement) resetMsgElement.textContent = "";
-          startHeartbeat(licenseKey, clientSessionId);
-          if (typeof window.showView === 'function' && mainMenuViewContainerEl) {
-              window.showView(mainMenuViewContainerEl); 
-          } else {
-              console.warn("window.showView or mainMenuViewContainerEl not found.");
-          }
-      }
-      async function heartbeat(licenseKey, clientSessionId) {
-          if (!db || !licenseKey || !clientSessionId) return;
-          try {
-              const docRef = doc(db, "licenses", licenseKey);
-              const docSnap = await getDoc(docRef);
-              if (docSnap.exists()) {
-                  const data = docSnap.data();
-                  if (data.active === true && data.activeSessionId === clientSessionId) {
-                      await updateDoc(docRef, { lastSeenAt: serverTimestamp() });
-                  } else {
-                      showLoginForm("Sesi Anda telah diakhiri karena lisensi digunakan di tempat lain.");
-                  }
-              } else {
-                  showLoginForm("Lisensi tidak ditemukan. Sesi diakhiri.");
-              }
-          } catch (error) {
-              console.error("Heartbeat error:", error);
-              if (error.code === 'permission-denied' || error.code === 'unauthenticated') {
-                  showLoginForm(`Kesalahan izin pada heartbeat (${error.code}). Sesi diakhiri.`);
-              }
-          }
-      }
-      function startHeartbeat(licenseKey, clientSessionId) {
-          if (heartbeatIntervalId) clearInterval(heartbeatIntervalId);
-          heartbeat(licenseKey, clientSessionId);
-          heartbeatIntervalId = setInterval(() => { heartbeat(licenseKey, clientSessionId); }, HEARTBEAT_INTERVAL);
-      }
-      try {
-          const app = initializeApp(firebaseConfig);
-          db = getFirestore(app);
-          if (submitButton && licenseInput && msgElement && licenseFormContainer && mainAppContent && nameInputElement && mainMenuViewContainerEl) {
-              submitButton.addEventListener("click", async (e) => {
-                  e.preventDefault();
-                  const licenseKey = licenseInput.value.trim();
-                  const inputUserName = nameInputElement.value.trim();
-                  if(resetMsgElement) resetMsgElement.textContent = "";
-                  if (!inputUserName) { msgElement.textContent = "Silakan masukkan nama Anda."; msgElement.style.color = "#FF0000"; return; }
-                  if (!licenseKey) { msgElement.textContent = "Silakan masukkan kode lisensi."; msgElement.style.color = "#FF0000"; return; }
-                  if (licenseKey.includes('/')) { msgElement.textContent = "Kode lisensi mengandung karakter tidak valid ('/')."; msgElement.style.color = "#FF0000"; return; }
-                  msgElement.textContent = "Memeriksa lisensi..."; msgElement.style.color = "#FFA500";
-                  submitButton.disabled = true; if(resetButton) resetButton.disabled = true;
-                  try {
-                      const docRef = doc(db, "licenses", licenseKey);
-                      const docSnap = await getDoc(docRef);
-                      if (docSnap.exists() && docSnap.data().active === true) {
-                          const licenseData = docSnap.data();
-                          const lastSeenTimestamp = licenseData.lastSeenAt; 
-                          const lastSeenDate = lastSeenTimestamp ? lastSeenTimestamp.toDate() : null;
-                          let canTakeLicense = !licenseData.activeSessionId || (lastSeenDate && (new Date().getTime() - lastSeenDate.getTime()) > STALE_SESSION_THRESHOLD);
-                          if (canTakeLicense) {
-                              const newClientSessionId = generateClientSessionId();
-                              await updateDoc(docRef, { activeSessionId: newClientSessionId, lastSeenAt: serverTimestamp(), userName: inputUserName });
-                              msgElement.style.color = "#90EE90"; msgElement.textContent = "Lisensi valid. Akses diberikan!";
-                              proceedToApp(inputUserName, licenseKey, newClientSessionId);
-                          } else {
-                              msgElement.style.color = "#FF0000"; msgElement.textContent = "Lisensi ini sedang aktif digunakan di browser/perangkat lain.";
-                              clearLocalSessionData();
-                          }
-                      } else {
-                          msgElement.style.color = "#FF0000";
-                          msgElement.textContent = docSnap.exists() ? "Mohon maaf, Lisensi ini tidak aktif." : "Mohon maaf, Lisensi tidak ditemukan.";
-                          clearLocalSessionData();
-                      }
-                  } catch (error) {
-                      console.error("Firestore GAGAL saat memeriksa lisensi:", error);
-                      msgElement.style.color = "#FF0000";
-                      msgElement.textContent = `Terjadi kesalahan (${error.code || 'Tidak Diketahui'}). Cek koneksi & konsol browser.`;
-                      clearLocalSessionData();
-                  } finally {
-                      submitButton.disabled = false; if(resetButton) resetButton.disabled = false;
-                  }
-              });
-              if (sessionStorage && sessionStorage.getItem('licenseValidated') === 'true') {
-                  const savedUserName = sessionStorage.getItem('userName');
-                  const savedLicenseKey = sessionStorage.getItem('licenseKey');
-                  const savedClientSessionId = sessionStorage.getItem('clientSessionId');
-                  if (savedUserName && savedLicenseKey && savedClientSessionId) {
-                      msgElement.textContent = "Memvalidasi sesi..."; msgElement.style.color = "#FFA500";
-                      (async () => {
-                          try {
-                              const docRef = doc(db, "licenses", savedLicenseKey);
-                              const docSnap = await getDoc(docRef);
-                              if (docSnap.exists() && docSnap.data().active === true && docSnap.data().activeSessionId === savedClientSessionId) {
-                                  await updateDoc(docRef, { lastSeenAt: serverTimestamp() });
-                                  proceedToApp(savedUserName, savedLicenseKey, savedClientSessionId);
-                              } else { showLoginForm("Sesi sebelumnya tidak valid. Silakan masuk kembali."); }
-                          } catch (err) { showLoginForm(`Gagal memvalidasi sesi (${err.code || 'Tidak Diketahui'}).`); }
-                      })();
-                  } else { clearLocalSessionData(); }
-              }
-          } else { console.error("Elemen form lisensi atau aplikasi utama tidak ditemukan!"); }
-          if (resetButton && licenseInput && resetMsgElement) {
-              resetButton.addEventListener("click", async (e) => {
-                  e.preventDefault();
-                  const licenseKeyToReset = licenseInput.value.trim();
-                  if(msgElement) msgElement.textContent = "";
-                  if (!licenseKeyToReset) { resetMsgElement.textContent = "Masukkan kode lisensi yang ingin direset."; resetMsgElement.style.color = "#FFFF00"; return; }
-                  if (licenseKeyToReset.includes('/')) { resetMsgElement.textContent = "Kode lisensi mengandung karakter tidak valid ('/')."; resetMsgElement.style.color = "#FF0000"; return; }
-                  resetMsgElement.textContent = "Memproses..."; resetMsgElement.style.color = "#FFA500";
-                  resetButton.disabled = true; if (submitButton) submitButton.disabled = true;
-                  try {
-                      const docRef = doc(db, "licenses", licenseKeyToReset);
-                      const docSnap = await getDoc(docRef);
-                      if (docSnap.exists()) {
-                          await updateDoc(docRef, { activeSessionId: null, lastSeenAt: serverTimestamp() });
-                          resetMsgElement.style.color = "#90EE90"; resetMsgElement.textContent = `Sesi untuk lisensi "${licenseKeyToReset}" telah berhasil direset. Silakan coba masuk lagi.`;
-                      } else {
-                          resetMsgElement.style.color = "#FF4500"; resetMsgElement.textContent = `Lisensi "${licenseKeyToReset}" tidak ditemukan.`;
-                      }
-                  } catch (error) {
-                      console.error("Firestore GAGAL saat mereset sesi:", error);
-                      resetMsgElement.style.color = "#FF0000"; resetMsgElement.textContent = `Terjadi kesalahan saat mereset sesi (${error.code || 'Tidak Diketahui'}).`;
-                  } finally {
-                      resetButton.disabled = false; if (submitButton) submitButton.disabled = false;
-                  }
-              });
-          }
-      } catch (error) { 
-          console.error("Inisialisasi Firebase gagal:", error);
-          if(msgElement) { msgElement.textContent = `Gagal koneksi ke server. Coba lagi nanti.`; msgElement.style.color = "#FF0000"; }
-      }
-      if (logoutButton) {
-          logoutButton.addEventListener('click', async () => {
-              const licenseKey = sessionStorage.getItem('licenseKey');
-              const clientSessionId = sessionStorage.getItem('clientSessionId');
-              if (db && licenseKey && clientSessionId) {
-                  try {
-                      const docRef = doc(db, "licenses", licenseKey);
-                      await updateDoc(docRef, { activeSessionId: null, lastSeenAt: serverTimestamp() });
-                  } catch (error) { console.error("Error releasing license on logout:", error); }
-              }
-              showLoginForm("Anda telah berhasil logout.");
-          });
-      }
-      window.addEventListener('beforeunload', (event) => {
-          if (sessionStorage && sessionStorage.getItem('licenseValidated') === 'true') {
-              const licenseKey = sessionStorage.getItem('licenseKey');
-              if (db && licenseKey) {
-                  const docRef = doc(db, "licenses", licenseKey);
-                  updateDoc(docRef, { lastSeenAt: serverTimestamp() });
-              }
-              // Progress saving is handled by script.js, not here.
-          }
-      });
-    </script>
+    <!-- Skrip Lisensi Firebase SUDAH DIPINDAHKAN KE script.js -->
     
     <!-- Kontainer untuk Aplikasi Utama (setelah lisensi valid) -->
     <div id="main-app-content">
@@ -291,7 +67,6 @@
                         <span class="card-menu-description">Uji kemampuan menyeluruh dengan batas waktu.</span>
                     </div>
                 </button>
-                <!-- Tombol Riwayat Baru -->
                 <button id="main-menu-history" class="card-menu-item">
                     <div class="card-menu-icon-wrapper card-color-6"><span>📈</span></div>
                     <div class="card-menu-text">
@@ -313,7 +88,6 @@
         <div id="history-container" class="container-view hidden">
             <h3>Riwayat Pengerjaan Kuis</h3>
             <div id="history-list-container">
-                <!-- Riwayat akan di-generate oleh JavaScript di sini -->
                 <p id="no-history-message">Anda belum memiliki riwayat pengerjaan.</p>
             </div>
             <button id="kembali-ke-main-menu-from-history" class="card-menu-item back-button-card">
@@ -323,8 +97,9 @@
                 </div>
             </button>
         </div>
-
-        <!-- SUBMENU LATIHAN SOAL BARU (Tidak Berubah) -->
+        
+        <!-- [.. SISA KONTEN HTML (SUBMENU, KUIS, DLL) TETAP SAMA ..] -->
+         <!-- SUBMENU LATIHAN SOAL BARU -->
         <div id="latihan-soal-submenu-container" class="container-view hidden">
             <h3>Pilih Jenis Latihan Pembahasan Soal</h3>
             <div class="card-menu-grid">
@@ -351,7 +126,7 @@
             </button>
         </div>
         
-        <!-- SUBMENU TRY OUT BARU (Tidak Berubah) -->
+        <!-- SUBMENU TRY OUT BARU -->
         <div id="tryout-submenu-container" class="container-view hidden">
             <h3>Pilih Jenis Try Out</h3>
             <div class="card-menu-grid">
@@ -378,7 +153,7 @@
             </button>
         </div>
 
-        <!-- KATEGORI LATIHAN BARU (Tidak Berubah) -->
+        <!-- KATEGORI LATIHAN BARU -->
         <div id="kategori-latihan-container" class="container-view hidden">
             <h3>Pilih Kategori Latihan Pembahasan Soal</h3>
             <div class="card-menu-grid card-menu-grid-dense">
@@ -417,7 +192,7 @@
             </button>
         </div>
         
-        <!-- TRYOUT SERIUS BARU (Tidak Berubah) -->
+        <!-- TRYOUT SERIUS BARU -->
         <div id="tryout-serius-container" class="container-view hidden">
             <h3>Pilih Tipe Try Out Serius</h3>
             <div class="card-menu-grid card-menu-grid-dense">
@@ -476,18 +251,15 @@
                 <div id="options-container"></div>
                 <div id="explanation" class="hidden"></div>
                 <div id="navigation-buttons">
-                    <!-- Tombol Ragu-ragu dipindah ke grup kiri -->
                     <div class="nav-left">
                         <button id="doubtful-button" class="btn-doubtful hidden">Tandai Ragu-ragu</button>
                     </div>
-                    <!-- Tombol Navigasi dipindah ke grup kanan -->
                     <div class="nav-right">
                          <button class="btn-home" id="quiz-back-button">Kembali</button>
                          <button class="btn-next" id="next-question-button" class="hidden">Soal Berikutnya</button>
                     </div>
                 </div>
             </div>
-
             <div id="quiz-sidebar">
                 <div id="user-biodata">
                     <div id="user-photo-icon">
@@ -505,11 +277,9 @@
                 </div>
             </div>
         </div>
-
         <div id="result-container" class="container-view hidden">
             <h2 id="result-title">Hasil Kuis</h2>
             <p id="score"></p>
-            <!-- Grup Tombol Hasil -->
             <div id="result-actions">
                 <button id="restart-button" class="btn-home">Kembali ke Menu</button>
                 <button id="review-answers-button" class="btn-review hidden">Tinjau Jawaban</button>
@@ -522,9 +292,8 @@
         </footer>
     </div>
 
-
-    <!-- Skrip Aplikasi Utama -->
-    <script src="script.js"></script>
+    <!-- **PERBAIKAN KUNCI DI SINI** -->
+    <script type="module" src="script.js"></script>
 
     <!-- Histats (Tidak Berubah) -->
     <div id="histats_counter"></div>
