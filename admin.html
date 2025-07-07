@@ -4,559 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel - Bimbel UKOM</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* CSS Variables & Base Styles */
         :root {
-            --primary-color: #4f46e5;
-            --primary-hover: #4338ca;
-            --primary-light: #6366f1;
-            --danger-color: #ef4444;
-            --danger-hover: #dc2626;
-            --danger-light: #f87171;
-            --warning-color: #f59e0b;
-            --warning-hover: #d97706;
-            --success-color: #22c55e;
-            --success-hover: #16a34a;
-            --success-light: #4ade80;
-
-            --bg-light: #f8fafc;
-            --bg-white: #ffffff;
-            --border-color: #e2e8f0;
-            --text-dark: #1e293b;
-            --text-light: #64748b;
-            --text-white: #ffffff;
-            
-            --status-online: #22c55e;
-            --status-idle: #f59e0b;
-            --status-offline: #64748b;
-            --status-disabled: #ef4444;
+            --bg-color: #f0f2f5; --text-color: #333; --card-bg: #ffffff;
+            --border-color: #e0e0e0; --primary-color: #007BFF; --primary-hover: #0056b3;
+            --danger-color: #dc3545; --danger-hover: #b02a37; --warning-color: #ffc107;
+            --warning-hover: #e0a800; --success-color: #28a745; --success-hover: #1e7e34;
+            --info-color: #17a2b8; --info-hover: #117a8b;
+            --status-online: #28a745; --status-idle: #ffc107; --status-offline: #6c757d; --status-disabled: #dc3545;
         }
-
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-light);
-            background-image: radial-gradient(circle at 1% 1%, #f1f5f9 0%, var(--bg-light) 100%);
-            color: var(--text-dark);
-            margin: 0;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-
+        body { font-family: Arial, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 20px; }
+        .container { max-width: 1200px; margin: auto; }
         .hidden { display: none !important; }
-
-        /* --- Login Page Styles --- */
-        #login-view {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #e0e7ff, #f8fafc);
-        }
-
-        .login-card {
-            background-color: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            padding: 40px;
-            border-radius: 16px;
-            border: 1px solid #ffffff;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            width: 100%;
-            max-width: 420px;
-            text-align: center;
-        }
-
-        .login-card .logo {
-            background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
-            color: var(--text-white);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
-        }
-
-        .login-card .logo svg {
-            width: 32px;
-            height: 32px;
-        }
-
-        .login-card h1 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin: 0 0 8px 0;
-            color: var(--text-dark);
-        }
-
-        .login-card p {
-            color: var(--text-light);
-            margin-bottom: 30px;
-        }
-
-        input[type="email"], input[type="password"], input[type="text"] {
-            width: 100%;
-            padding: 14px 16px;
-            margin-bottom: 16px;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            font-size: 1rem;
-            background-color: #f8fafc;
-            transition: border-color 0.2s, box-shadow 0.2s;
-        }
-
-        input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
-        }
-
-        /* --- Main Button Styles --- */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 8px;
-            color: var(--text-white);
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 4px 8px rgba(0,0,0,0.05);
-            transition: all 0.2s ease-in-out;
-        }
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07);
-        }
-        .btn:active {
-            transform: translateY(0px) scale(0.98);
-            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-        }
-        .btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-        }
-        .btn-full { width: 100%; }
-
-        .btn-primary { background: linear-gradient(135deg, var(--primary-light), var(--primary-color)); }
-        .btn-primary:hover { background: linear-gradient(135deg, #7173f5, var(--primary-hover)); }
-        .btn-danger { background: linear-gradient(135deg, var(--danger-light), var(--danger-color)); }
-        .btn-danger:hover { background: linear-gradient(135deg, #f88181, var(--danger-hover)); }
-        .btn-warning { background: linear-gradient(135deg, #fbbf24, var(--warning-color)); color: #525252; }
-        .btn-warning:hover { background: linear-gradient(135deg, #fccb4a, var(--warning-hover)); }
-        .btn-success { background: linear-gradient(135deg, var(--success-light), var(--success-color)); }
-        .btn-success:hover { background: linear-gradient(135deg, #5ee48d, var(--success-hover)); }
-
-        /* --- Dashboard Styles --- */
-        #dashboard-view {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        
-        .dashboard-header {
-            background-color: rgba(255, 255, 255, 0.85);
-            backdrop-filter: saturate(180%) blur(10px);
-            -webkit-backdrop-filter: saturate(180%) blur(10px);
-            padding: 16px 32px;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .dashboard-header .brand {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: -webkit-linear-gradient(135deg, var(--primary-color), #a855f7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .dashboard-header .btn svg { width: 20px; height: 20px; }
-
-
-        .dashboard-main {
-            padding: 32px;
-            flex-grow: 1;
-        }
-
-        .card {
-            background-color: var(--bg-white);
-            border-radius: 16px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-            padding: 25px;
-            margin-bottom: 32px;
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -4px rgba(0, 0, 0, 0.07);
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-top: 0;
-            margin-bottom: 20px;
-            color: var(--text-dark);
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 15px;
-        }
-
-        .user-info {
-            color: var(--text-light);
-            margin-bottom: 24px;
-            background-color: #eef2ff;
-            padding: 12px 16px;
-            border-radius: 8px;
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .add-license-form {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-        .add-license-form input {
-            flex-grow: 1;
-            margin-bottom: 0;
-        }
-        .add-license-form .btn { flex-shrink: 0; }
-        .add-license-form .btn svg { width: 20px; height: 20px; }
-
-        .message {
-            padding: 12px 16px;
-            margin-top: 16px;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: 500;
-        }
-        .error { background-color: #fee2e2; color: #b91c1c; border: 1px solid #fecaca;}
-        .success { background-color: #dcfce7; color: #14532d; border: 1px solid #bbf7d0;}
-        
-        /* --- [BARU] Summary Stats Card --- */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 20px;
-        }
-        .stat-item {
-            background-color: var(--bg-light);
-            padding: 20px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        .stat-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        .stat-icon svg { width: 24px; height: 24px; color: var(--text-white); }
-
-        .stat-icon-online { background-color: var(--status-online); }
-        .stat-icon-idle { background-color: var(--status-idle); }
-        .stat-icon-offline { background-color: var(--status-offline); }
-        .stat-icon-disabled { background-color: var(--status-disabled); }
-        .stat-icon-total { background-color: var(--primary-color); }
-
-        .stat-info .count {
-            font-size: 2rem;
-            font-weight: 700;
-            line-height: 1.2;
-            color: var(--text-dark);
-        }
-        .stat-info .label {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            font-weight: 500;
-        }
-        /* --- Akhir dari Summary Stats Card --- */
-
-        /* --- Table Styles --- */
-        .table-wrapper { overflow-x: auto; }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            padding: 16px;
-            border-bottom: 1px solid var(--border-color);
-            text-align: left;
-            vertical-align: middle;
-            white-space: nowrap;
-        }
-        th {
-            background-color: var(--bg-light);
-            font-weight: 600;
-            color: var(--text-light);
-            font-size: 0.8rem;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-        tbody tr { transition: background-color 0.15s ease-in-out; }
-        tbody tr:last-child td { border-bottom: none; }
-        tbody tr:hover { background-color: #f1f5f9; }
-
-        .status-badge {
-            display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px;
-            border-radius: 9999px; font-weight: 600; font-size: 0.8rem; border: 1px solid transparent;
-        }
-        .status-badge::before { content: ''; width: 8px; height: 8px; border-radius: 50%; }
-        .status-online { background-color: #dcfce7; color: #166534; border-color: #bbf7d0; }
-        .status-online::before { background-color: var(--status-online); }
-        .status-idle { background-color: #fef3c7; color: #92400e; border-color: #fde68a; }
-        .status-idle::before { background-color: var(--status-idle); }
-        .status-offline { background-color: #e2e8f0; color: #475569; border-color: #cbd5e1; }
-        .status-offline::before { background-color: var(--status-offline); }
-        .status-disabled { background-color: #fee2e2; color: #991b1b; border-color: #fecaca; }
-        .status-disabled::before { background-color: var(--status-disabled); }
-
-
-        /* --- [DIPERBARUI] Gaya Tombol Aksi Modern & Elegan --- */
-        .action-buttons {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-        .action-buttons .btn {
-            padding: 0;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%; 
-            background: var(--bg-white);
-            border: 1px solid var(--border-color);
-            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-            text-shadow: none;
-            transition: all 0.2s ease-out;
-        }
-        .action-buttons .btn svg {
-            width: 18px;
-            height: 18px;
-            transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .action-buttons .btn:hover:not(:disabled) {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            color: var(--text-white);
-        }
-        .action-buttons .btn:active:not(:disabled) {
-            transform: translateY(-1px) scale(0.98);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.06);
-        }
-
-        /* Tombol Toggle (Success/Warning) & Reset (Warning) */
-        .action-buttons .btn-warning {
-            color: var(--warning-hover); 
-            border-color: #fde68a; 
-        }
-        .action-buttons .btn-warning:hover:not(:disabled) {
-            background-color: var(--warning-color);
-            border-color: var(--warning-hover);
-        }
-        .action-buttons .btn.toggle-active-btn[data-active="false"] {
-             color: var(--success-hover); 
-             border-color: #bbf7d0;
-        }
-        .action-buttons .btn.toggle-active-btn[data-active="false"]:hover {
-             background-color: var(--success-color);
-             border-color: var(--success-hover);
-        }
-        .action-buttons .reset-session-btn:hover:not(:disabled) svg {
-            transform: rotate(270deg) scale(1.1);
-        }
-        
-        /* Tombol Hapus (Danger) */
-        .action-buttons .btn-danger {
-            color: var(--danger-hover);
-            border-color: #fecaca;
-        }
-        .action-buttons .btn-danger:hover:not(:disabled) {
-            background-color: var(--danger-color);
-            border-color: var(--danger-hover);
-        }
-        .action-buttons .btn-danger:hover:not(:disabled) svg {
-            animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
-        }
-        
-        /* Animasi getar untuk tombol hapus */
-        @keyframes shake {
-            10%, 90% { transform: translate3d(-1px, 0, 0) scale(1.1); }
-            20%, 80% { transform: translate3d(2px, 0, 0) scale(1.1); }
-            30%, 50%, 70% { transform: translate3d(-2px, 0, 0) scale(1.1); }
-            40%, 60% { transform: translate3d(2px, 0, 0) scale(1.1); }
-        }
-        /* --- Akhir dari Gaya Tombol Aksi --- */
-
-
-        /* Responsive Styles */
+        .card { background-color: var(--card-bg); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 25px; margin-bottom: 20px; }
+        h1, h2 { color: var(--primary-color); }
+        input[type="email"], input[type="password"], input[type="text"] { width: calc(100% - 24px); padding: 12px; margin-bottom: 15px; border: 1px solid var(--border-color); border-radius: 5px; font-size: 1em; }
+        button { padding: 10px 20px; border: none; border-radius: 5px; color: white; cursor: pointer; font-size: 1em; transition: background-color 0.2s; }
+        .btn-primary { background-color: var(--primary-color); } .btn-primary:hover { background-color: var(--primary-hover); }
+        .btn-danger { background-color: var(--danger-color); } .btn-danger:hover { background-color: var(--danger-hover); }
+        .btn-warning { background-color: var(--warning-color); color: #212529;} .btn-warning:hover { background-color: var(--warning-hover); }
+        .btn-success { background-color: var(--success-color); } .btn-success:hover { background-color: var(--success-hover); }
+        .btn-info { background-color: var(--info-color); } .btn-info:hover { background-color: var(--info-hover); }
+        #logout-button { float: right; }
+        .message { padding: 10px; margin-top: 10px; border-radius: 5px; text-align: center; }
+        .error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;}
+        .success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;}
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; border: 1px solid var(--border-color); text-align: left; vertical-align: middle; }
+        th { background-color: var(--bg-color); }
+        .action-buttons button { margin-right: 5px; margin-bottom: 5px; }
+        .status-badge { padding: 5px 10px; border-radius: 12px; color: white; font-weight: bold; font-size: 0.85em; text-align: center; }
+        .status-online { background-color: var(--status-online); } .status-idle { background-color: var(--status-idle); color: #212529;}
+        .status-offline { background-color: var(--status-offline); } .status-disabled { background-color: var(--status-disabled); }
+        .add-license-form { display: flex; gap: 10px; align-items: center; }
+        .add-license-form input { flex-grow: 1; margin-bottom: 0; }
         @media (max-width: 768px) {
-            .dashboard-header { padding: 16px; flex-direction: column; gap: 15px; }
-            .dashboard-main { padding: 16px; }
-            .card { padding: 20px; }
-            h2 { font-size: 1.25rem; }
-            .add-license-form { flex-direction: column; align-items: stretch; }
-            .stats-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
-            .stat-item { flex-direction: column; text-align: center; gap: 8px;}
+            body { padding: 10px; } .card { padding: 15px; } th, td { padding: 8px; font-size: 0.9em;}
+            .action-buttons button { padding: 8px 10px; font-size: 0.8em;} .add-license-form { flex-direction: column; align-items: stretch; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Login View -->
-    <div id="login-view">
-        <div class="login-card">
-            <div class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
-                </svg>
-            </div>
-            <h1>Admin Panel</h1>
+    <div class="container">
+        <!-- Login View -->
+        <div id="login-view" class="card">
+            <h1>Admin Panel Login</h1>
             <p>Silakan masuk menggunakan akun admin Anda.</p>
             <input type="email" id="login-email" placeholder="Email Admin">
             <input type="password" id="login-password" placeholder="Password">
-            <button id="login-button" class="btn btn-primary btn-full">Login</button>
+            <button id="login-button" class="btn-primary">Login</button>
             <div id="login-message" class="message hidden"></div>
         </div>
-    </div>
 
-    <!-- Admin Dashboard View -->
-    <div id="dashboard-view" class="hidden">
-        <header class="dashboard-header">
-            <div class="brand">Manajemen Lisensi Bimbel UKOM</div>
-            <button id="logout-button" class="btn btn-danger">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:18px; height:18px;">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
-                </svg>
-                <span>Logout</span>
-            </button>
-        </header>
-        
-        <main class="dashboard-main">
-            <div class="user-info">
-                Admin ter-login sebagai: <strong id="admin-email-display"></strong>
-            </div>
-
-            <!-- [BARU] Kartu Ringkasan Status -->
-            <div class="card">
-                <h2>Ringkasan Status</h2>
-                <div class="stats-grid">
-                    <!-- Stat Online -->
-                    <div class="stat-item">
-                        <div class="stat-icon stat-icon-online">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1012.728 0M12 3v9" /></svg>
-                        </div>
-                        <div class="stat-info">
-                            <div id="stats-online-count" class="count">0</div>
-                            <div class="label">Online</div>
-                        </div>
-                    </div>
-                    <!-- Stat Idle -->
-                    <div class="stat-item">
-                        <div class="stat-icon stat-icon-idle">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        </div>
-                        <div class="stat-info">
-                            <div id="stats-idle-count" class="count">0</div>
-                            <div class="label">Idle</div>
-                        </div>
-                    </div>
-                    <!-- Stat Offline -->
-                    <div class="stat-item">
-                        <div class="stat-icon stat-icon-offline">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg>
-                        </div>
-                        <div class="stat-info">
-                            <div id="stats-offline-count" class="count">0</div>
-                            <div class="label">Offline</div>
-                        </div>
-                    </div>
-                    <!-- Stat Disabled -->
-                    <div class="stat-item">
-                        <div class="stat-icon stat-icon-disabled">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" /></svg>
-                        </div>
-                        <div class="stat-info">
-                            <div id="stats-disabled-count" class="count">0</div>
-                            <div class="label">Nonaktif</div>
-                        </div>
-                    </div>
-                    <!-- Stat Total -->
-                    <div class="stat-item">
-                        <div class="stat-icon stat-icon-total">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
-                        </div>
-                        <div class="stat-info">
-                            <div id="stats-total-count" class="count">0</div>
-                            <div class="label">Total Lisensi</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Admin Dashboard View -->
+        <div id="dashboard-view" class="card hidden">
+            <button id="logout-button" class="btn-danger">Logout</button>
+            <h1>Dashboard Lisensi</h1>
+            <p>Admin ter-login sebagai: <strong id="admin-email-display"></strong></p>
 
             <div class="card">
                 <h2>Tambah Lisensi Baru</h2>
                 <div class="add-license-form">
                     <input type="text" id="new-license-key" placeholder="Masukkan Kode Lisensi Baru">
-                    <button id="add-license-button" class="btn btn-success">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:18px; height:18px;">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                        </svg>
-                        <span>Tambah Lisensi</span>
-                    </button>
+                    <button id="add-license-button" class="btn-success">Tambah</button>
                 </div>
                 <div id="add-license-message" class="message hidden"></div>
             </div>
 
-            <div class="card">
-                <h2>Daftar Lisensi Pengguna</h2>
-                <div id="loading-indicator">Memuat data lisensi...</div>
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Status</th>
-                                <th>Kode Lisensi</th>
-                                <th>Nama Pengguna</th>
-                                <th>Terakhir Dilihat</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody id="licenses-tbody">
-                            <!-- Data akan diisi oleh JavaScript -->
-                        </tbody>
-                    </table>
-                </div>
+            <h2>Daftar Lisensi Pengguna</h2>
+            <div id="loading-indicator">Memuat data lisensi...</div>
+            <div style="overflow-x:auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Kode Lisensi</th>
+                            <th>Nama Pengguna</th>
+                            <th>Terakhir Dilihat</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="licenses-tbody"></tbody>
+                </table>
             </div>
-        </main>
+        </div>
+
+        <!-- User History View (BARU) -->
+        <div id="history-view" class="card hidden">
+            <h2 id="history-view-title">Riwayat Kuis Pengguna</h2>
+            <div id="history-loading-indicator">Memuat riwayat...</div>
+            <div style="overflow-x:auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>Nama Kuis</th>
+                            <th>Skor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-tbody"></tbody>
+                </table>
+            </div>
+            <button id="back-to-dashboard-button" class="btn-primary" style="margin-top: 20px;">Kembali ke Dashboard</button>
+        </div>
     </div>
 
-    <!-- Skrip Logika Admin akan memuat semua yang dibutuhkan -->
     <script type="module" src="admin.js"></script>
 
 </body>
