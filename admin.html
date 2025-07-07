@@ -6,95 +6,383 @@
     <title>Admin Panel - Bimbel UKOM</title>
     <style>
         :root {
-            --bg-color: #f0f2f5; --text-color: #333; --card-bg: #ffffff;
-            --border-color: #e0e0e0; --primary-color: #007BFF; --primary-hover: #0056b3;
-            --danger-color: #dc3545; --danger-hover: #b02a37; --warning-color: #ffc107;
-            --warning-hover: #e0a800; --success-color: #28a745; --success-hover: #1e7e34;
-            --info-color: #17a2b8; --info-hover: #117a8b;
-            --status-online: #28a745; --status-idle: #ffc107; --status-offline: #6c757d; --status-disabled: #dc3545;
+            --bg-color: #f4f7fa;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --border-color: #e0e4e9;
+            --primary-color: #007BFF;
+            --primary-hover: #0056b3;
+            --danger-color: #dc3545;
+            --danger-hover: #b02a37;
+            --warning-color: #ffc107;
+            --warning-hover: #d39e00;
+            --success-color: #28a745;
+            --success-hover: #1e7e34;
+            --info-color: #17a2b8;
+            --info-hover: #117a8b;
+            --light-gray: #6c757d;
+
+            --status-online: var(--success-color);
+            --status-idle: var(--warning-color);
+            --status-offline: var(--light-gray);
+            --status-disabled: var(--danger-color);
+            --stat-total: var(--primary-color);
         }
-        body { font-family: Arial, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 20px; }
-        .container { max-width: 1200px; margin: auto; }
-        .hidden { display: none !important; }
-        .card { background-color: var(--card-bg); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 25px; margin-bottom: 20px; }
-        h1, h2 { color: var(--primary-color); }
-        input[type="email"], input[type="password"], input[type="text"] { width: calc(100% - 24px); padding: 12px; margin-bottom: 15px; border: 1px solid var(--border-color); border-radius: 5px; font-size: 1em; }
-        button { padding: 10px 20px; border: none; border-radius: 5px; color: white; cursor: pointer; font-size: 1em; transition: background-color 0.2s; }
+
+        /* --- Reset & Base Styles --- */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* --- Card & Layout --- */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 25px 30px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border-color);
+        }
+
+        h1, h2, h3 {
+            margin-top: 0;
+            color: #1e293b;
+        }
+        h1 { font-size: 1.8rem; }
+        h2 { font-size: 1.5rem; color: var(--primary-color); }
+        h3 { font-size: 1.2rem; }
+
+        /* --- Forms & Buttons --- */
+        input[type="email"], input[type="password"], input[type="text"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        button:hover {
+            transform: translateY(-2px);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+
         .btn-primary { background-color: var(--primary-color); } .btn-primary:hover { background-color: var(--primary-hover); }
         .btn-danger { background-color: var(--danger-color); } .btn-danger:hover { background-color: var(--danger-hover); }
-        .btn-warning { background-color: var(--warning-color); color: #212529;} .btn-warning:hover { background-color: var(--warning-hover); }
+        .btn-warning { background-color: var(--warning-color); color: #212529; } .btn-warning:hover { background-color: var(--warning-hover); }
         .btn-success { background-color: var(--success-color); } .btn-success:hover { background-color: var(--success-hover); }
         .btn-info { background-color: var(--info-color); } .btn-info:hover { background-color: var(--info-hover); }
-        #logout-button { float: right; }
-        .message { padding: 10px; margin-top: 10px; border-radius: 5px; text-align: center; }
-        .error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;}
-        .success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;}
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { padding: 12px; border: 1px solid var(--border-color); text-align: left; vertical-align: middle; }
-        th { background-color: var(--bg-color); }
-        .action-buttons button { margin-right: 5px; margin-bottom: 5px; }
-        .status-badge { padding: 5px 10px; border-radius: 12px; color: white; font-weight: bold; font-size: 0.85em; text-align: center; }
-        .status-online { background-color: var(--status-online); } .status-idle { background-color: var(--status-idle); color: #212529;}
-        .status-offline { background-color: var(--status-offline); } .status-disabled { background-color: var(--status-disabled); }
+        button .icon { width: 1.2em; height: 1.2em; }
+
+        /* --- Dashboard Specific --- */
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        #logout-button {
+            margin: 0;
+        }
+
+        /* --- Stats Cards --- */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        .stat-card .icon {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 10px;
+        }
+        .stat-title {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-bottom: 5px;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e293b;
+        }
+        .stat-card.total { border-color: var(--stat-total); } .stat-card.total .icon { color: var(--stat-total); }
+        .stat-card.online { border-color: var(--status-online); } .stat-card.online .icon { color: var(--status-online); }
+        .stat-card.idle { border-color: var(--status-idle); } .stat-card.idle .icon { color: var(--status-idle); }
+        .stat-card.offline { border-color: var(--status-offline); } .stat-card.offline .icon { color: var(--status-offline); }
+
+        /* --- Table Styling --- */
+        .table-wrapper { overflow-x: auto; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 15px;
+            border: none;
+            border-bottom: 1px solid var(--border-color);
+            text-align: left;
+            vertical-align: middle;
+        }
+        th {
+            background-color: var(--bg-color);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #475569;
+        }
+        tbody tr:hover {
+            background-color: #f8fafc;
+        }
+        .action-buttons button {
+            padding: 6px 10px;
+            font-size: 0.85em;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        .action-buttons .icon { width: 1em; height: 1em; }
+
+        .status-badge {
+            padding: 5px 12px;
+            border-radius: 999px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .status-badge .dot { width: 8px; height: 8px; border-radius: 50%; background-color: currentColor; }
+        .status-online { background-color: var(--status-online); }
+        .status-idle { background-color: var(--status-idle); color: #212529; }
+        .status-offline { background-color: var(--status-offline); }
+        .status-disabled { background-color: var(--status-disabled); }
+
+        /* --- Utilities & Messages --- */
         .add-license-form { display: flex; gap: 10px; align-items: center; }
         .add-license-form input { flex-grow: 1; margin-bottom: 0; }
+        .message { padding: 12px 15px; margin-top: 15px; border-radius: 8px; text-align: center; font-weight: 500; }
+        .error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .success { background-color: #d1fae5; color: #064e3b; border: 1px solid #a7f3d0; }
+        #loading-indicator, #history-loading-indicator {
+            text-align: center; color: var(--light-gray); padding: 40px; font-style: italic;
+        }
+        #back-to-dashboard-button { margin-top: 20px; }
+
+        /* --- Responsive --- */
         @media (max-width: 768px) {
-            body { padding: 10px; } .card { padding: 15px; } th, td { padding: 8px; font-size: 0.9em;}
-            .action-buttons button { padding: 8px 10px; font-size: 0.8em;} .add-license-form { flex-direction: column; align-items: stretch; }
+            body { padding: 10px; }
+            .card { padding: 20px; }
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.3rem; }
+            .dashboard-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+            th, td { padding: 10px 8px; font-size: 0.9em; }
+            .action-buttons button { padding: 8px; font-size: 0.9em; }
+            .add-license-form { flex-direction: column; align-items: stretch; }
+            .status-badge { padding: 4px 8px; font-size: 0.75rem; }
         }
     </style>
 </head>
 <body>
 
+    <!-- SVG Icon Definitions (Self-contained) -->
+    <svg style="display: none;">
+        <symbol id="icon-logout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line>
+        </symbol>
+        <symbol id="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
+        </symbol>
+        <symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </symbol>
+        <symbol id="icon-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </symbol>
+        <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+        </symbol>
+        <symbol id="icon-power" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path><line x1="12" y1="2" x2="12" y2="12"></line>
+        </symbol>
+         <symbol id="icon-history" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 4v6h6"></path><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+        </symbol>
+        <symbol id="icon-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line>
+        </symbol>
+         <symbol id="icon-disable" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+        </symbol>
+    </svg>
+
+
     <div class="container">
         <!-- Login View -->
         <div id="login-view" class="card">
             <h1>Admin Panel Login</h1>
-            <p>Silakan masuk menggunakan akun admin Anda.</p>
+            <p>Silakan masuk menggunakan akun admin Anda untuk mengelola lisensi.</p>
             <input type="email" id="login-email" placeholder="Email Admin">
             <input type="password" id="login-password" placeholder="Password">
-            <button id="login-button" class="btn-primary">Login</button>
+            <button id="login-button" class="btn-primary" style="width: 100%;">Login</button>
             <div id="login-message" class="message hidden"></div>
         </div>
 
         <!-- Admin Dashboard View -->
-        <div id="dashboard-view" class="card hidden">
-            <button id="logout-button" class="btn-danger">Logout</button>
-            <h1>Dashboard Lisensi</h1>
+        <div id="dashboard-view" class="hidden">
+            <div class="dashboard-header">
+                <h1>Dashboard Admin</h1>
+                <button id="logout-button" class="btn-danger">
+                    <svg class="icon"><use xlink:href="#icon-logout"></use></svg>
+                    Logout
+                </button>
+            </div>
             <p>Admin ter-login sebagai: <strong id="admin-email-display"></strong></p>
 
+            <!-- Stats Overview -->
+            <div class="stats-container">
+                <div class="stat-card total">
+                    <svg class="icon"><use xlink:href="#icon-users"></use></svg>
+                    <div class="stat-title">Total Lisensi</div>
+                    <div class="stat-number" id="total-licenses-count">-</div>
+                </div>
+                <div class="stat-card online">
+                    <svg class="icon"><use xlink:href="#icon-check-circle"></use></svg>
+                    <div class="stat-title">Pengguna Online</div>
+                    <div class="stat-number" id="online-users-count">-</div>
+                </div>
+                <div class="stat-card idle">
+                    <svg class="icon"><use xlink:href="#icon-clock"></use></svg>
+                    <div class="stat-title">Pengguna Idle</div>
+                    <div class="stat-number" id="idle-users-count">-</div>
+                </div>
+                <div class="stat-card offline">
+                    <svg class="icon"><use xlink:href="#icon-power"></use></svg>
+                    <div class="stat-title">Pengguna Offline</div>
+                    <div class="stat-number" id="offline-users-count">-</div>
+                </div>
+            </div>
+
             <div class="card">
-                <h2>Tambah Lisensi Baru</h2>
+                <h3>Tambah Lisensi Baru</h3>
                 <div class="add-license-form">
-                    <input type="text" id="new-license-key" placeholder="Masukkan Kode Lisensi Baru">
-                    <button id="add-license-button" class="btn-success">Tambah</button>
+                    <input type="text" id="new-license-key" placeholder="Masukkan Kode Lisensi Baru...">
+                    <button id="add-license-button" class="btn-success">
+                        <svg class="icon"><use xlink:href="#icon-plus"></use></svg>
+                        Tambah
+                    </button>
                 </div>
                 <div id="add-license-message" class="message hidden"></div>
             </div>
 
-            <h2>Daftar Lisensi Pengguna</h2>
-            <div id="loading-indicator">Memuat data lisensi...</div>
-            <div style="overflow-x:auto;">
-                <table>
-                    <thead>
+            <div class="card">
+                <h2>Daftar Lisensi Pengguna</h2>
+                <div id="loading-indicator">Memuat data lisensi...</div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Status</th>
+                                <th>Kode Lisensi</th>
+                                <th>Nama Pengguna</th>
+                                <th>Terakhir Dilihat</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="licenses-tbody">
+                        <!-- Contoh baris yang akan digenerate oleh JavaScript -->
+                        <!--
                         <tr>
-                            <th>Status</th>
-                            <th>Kode Lisensi</th>
-                            <th>Nama Pengguna</th>
-                            <th>Terakhir Dilihat</th>
-                            <th>Aksi</th>
+                            <td><span class="status-badge status-online"><span class="dot"></span> Online</span></td>
+                            <td>ABCDE-FGHIJ-KLMNO</td>
+                            <td>Budi Santoso</td>
+                            <td>Baru saja</td>
+                            <td class="action-buttons">
+                                <button class="btn-info" title="Lihat Riwayat"><svg class="icon"><use xlink:href="#icon-history"></use></svg></button>
+                                <button class="btn-danger" title="Nonaktifkan Lisensi"><svg class="icon"><use xlink:href="#icon-disable"></use></svg></button>
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody id="licenses-tbody"></tbody>
-                </table>
+                        <tr>
+                            <td><span class="status-badge status-disabled"><span class="dot"></span> Disabled</span></td>
+                            <td>PQRST-UVWXY-Z1234</td>
+                            <td>- (Belum diklaim)</td>
+                            <td>-</td>
+                            <td class="action-buttons">
+                                 <button class="btn-success" title="Aktifkan Kembali">...</button>
+                                 <button class="btn-danger" title="Hapus Lisensi"><svg class="icon"><use xlink:href="#icon-trash"></use></svg></button>
+                            </td>
+                        </tr>
+                        -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
-        <!-- User History View (BARU) -->
+        <!-- User History View -->
         <div id="history-view" class="card hidden">
             <h2 id="history-view-title">Riwayat Kuis Pengguna</h2>
+            <p>Menampilkan riwayat kuis untuk pengguna yang dipilih.</p>
             <div id="history-loading-indicator">Memuat riwayat...</div>
-            <div style="overflow-x:auto;">
+            <div class="table-wrapper">
                 <table>
                     <thead>
                         <tr>
@@ -106,7 +394,9 @@
                     <tbody id="history-tbody"></tbody>
                 </table>
             </div>
-            <button id="back-to-dashboard-button" class="btn-primary" style="margin-top: 20px;">Kembali ke Dashboard</button>
+            <button id="back-to-dashboard-button" class="btn-primary" style="margin-top: 20px;">
+                Kembali ke Dashboard
+            </button>
         </div>
     </div>
 
