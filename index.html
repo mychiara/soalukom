@@ -4,555 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulasi Soal Keperawatan</title>
-    <style>
-        body {
-            font-family: "Times New Roman", Times, serif;
-            background-color: #f0f4f8;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            font-weight: normal;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            box-sizing: border-box;
-            line-height: 1.6;
-        }
-
-        /* Container untuk setiap view (login, menu, kuis, hasil) */
-        .container-view {
-            max-width: 800px; /* Lebarkan sedikit untuk grid card */
-            width: 90%;
-            margin: 25px auto;
-            background: #ffffff;
-            padding: 25px 30px;
-            border-radius: 12px;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .hidden {
-            display: none !important;
-        }
-
-        /* Judul */
-        h1, h2, h3 {
-            font-family: "Georgia", "Times New Roman", Times, serif;
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-        h1 { font-size: 2.3em; }
-        h2 { font-size: 1.9em; }
-        h3 { font-size: 1.6em; }
-
-        /* Styling untuk login container (license-form-container) */
-        #license-form-container {
-            max-width: 700px;
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            padding: 25px 30px; /* Padding disesuaikan untuk kerapatan */
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            border-radius: 12px; /* Pastikan border-radius ada */
-        }
-
-        #license-form-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: linear-gradient(
-                rgba(0, 0, 0, 0.4),  /* Kegelapan overlay disesuaikan */
-                rgba(0, 0, 0, 0.6)
-            ), url('background.png');
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            border-radius: 12px; /* Samakan dengan container */
-            z-index: -1;
-        }
-
-        #license-form-container h1 {
-            font-size: 2.4em;
-            font-weight: bold;
-            color: #ffffff;
-            text-shadow: 0px 0px 5px rgba(0,0,0,0.9), 0px 0px 10px rgba(0,0,0,0.7), 1px 1px 2px rgba(0,0,0,0.5);
-            margin-bottom: 0px;
-        }
-
-        #license-form-container .app-title-highlight {
-            color: gold;
-            font-weight: bold;
-            text-shadow: 0px 0px 6px rgba(0,0,0,0.9), 0px 0px 3px rgba(255,223,0,0.6);
-        }
-
-        #license-form-container h3 {
-            margin-top: 0px;
-            margin-bottom: 15px;
-            color: #ffffff;
-            text-shadow: 0px 0px 5px rgba(0,0,0,0.9), 0px 0px 10px rgba(0,0,0,0.7), 1px 1px 2px rgba(0,0,0,0.5);
-        }
-
-        #license-form-container .app-description,
-        #license-form-container .app-features-intro,
-        #license-form-container .login-prompt {
-            font-size: 1.1em;
-            color: #ffffff;
-            text-shadow: 0px 0px 5px rgba(0,0,0,0.9), 0px 0px 10px rgba(0,0,0,0.7), 1px 1px 2px rgba(0,0,0,0.5);
-        }
-
-        #license-form-container .app-description { margin-bottom: 12px; }
-        #license-form-container .app-features-intro { margin-top: 15px; margin-bottom: 5px; }
-        #license-form-container .login-prompt { margin-top: 18px; font-weight: 500; }
-
-        #license-form-container .app-features {
-            list-style-type: none;
-            padding-left: 0;
-            margin: 0 auto 15px auto;
-            max-width: 85%;
-            text-align: left;
-        }
-
-        #license-form-container .app-features li {
-            padding-left: 1.8em;
-            position: relative;
-            margin-bottom: 7px;
-            font-size: 1.05em;
-            color: #ffffff;
-            text-shadow: 0px 0px 5px rgba(0,0,0,0.9), 0px 0px 10px rgba(0,0,0,0.7), 1px 1px 2px rgba(0,0,0,0.5);
-        }
-
-        #license-form-container .app-features li::before {
-            content: "\2714";
-            color: #98FB98;
-            font-weight: bold;
-            font-size: 1.2em;
-            position: absolute;
-            left: 0;
-            top: -1px;
-            text-shadow: 0px 0px 4px rgba(0,0,0,0.7);
-        }
-        
-        #license-form-container .buy-license-prompt {
-            font-weight: bold;
-            color: #E67E22;
-            margin-top: 15px;
-            margin-bottom: 5px;
-        }
-
-        #license-form-container .buy-license-link-action {
-            font-weight: bold;
-            color: gold;
-            text-decoration: underline;
-        }
-        #license-form-container p:has(> .buy-license-link-action) {
-            margin-top: 0px;
-            margin-bottom: 15px;
-        }
-
-        #license-form-container input[type="text"] {
-            padding: 11px 13px;
-            margin: 4px 0;
-            border: 1px solid #c0c0c0;
-            border-radius: 8px;
-            width: calc(100% - 28px);
-            box-sizing: border-box;
-            font-size: 1em;
-            font-family: "Times New Roman", Times, serif;
-            background-color: rgba(255, 255, 255, 0.92);
-            color: #1c1c1c;
-        }
-        #license-form-container input[type="text"]::placeholder { color: #5a5a5a; }
-        #license-form-container input[type="text"]:focus {
-            border-color: #007BFF;
-            box-shadow: 0 0 0 0.2rem rgba(100, 173, 255, 0.35);
-            outline: none;
-            background-color: #ffffff;
-        }
-
-        #license-form-container button#submit-license-button {
-            margin-top: 10px;
-            margin-bottom: 5px;
-            padding: 11px 22px;
-            font-size: 1.05em;
-            font-weight: bold;
-        }
-
-        #license-form-container #license-msg {
-            margin-top: 5px;
-            margin-bottom: 5px;
-            font-weight: bold;
-            min-height: 1.2em;
-        }
-
-        #license-form-container .reset-prompt {
-            font-size: 0.9em;
-            color: #f5f5f5;
-            text-shadow: 0px 0px 4px rgba(0,0,0,0.8);
-            margin-top: 20px;
-            margin-bottom: 5px;
-            line-height: 1.3;
-        }
-
-        #license-form-container button#reset-session-button {
-            margin-top: 5px;
-            margin-bottom: 0px;
-            padding: 10px 20px;
-            font-size: 0.95em;
-            background-color: #ffc107;
-            color: #212529;
-            font-weight: 500;
-        }
-        #license-form-container button#reset-session-button:hover { background-color: #e0a800; }
-
-        #license-form-container #reset-session-msg {
-            margin-top: 8px;
-            margin-bottom: 15px;
-            font-weight: bold;
-            min-height: 1.2em;
-            font-size: 0.9em;
-            color: #f0f0f0;
-            text-shadow: 0px 0px 4px rgba(0,0,0,0.8);
-        }
-
-        #license-form-container .developer-credit { margin-top: 5px; }
-        #license-form-container .developer-credit p { font-size: 0.9em; margin: 0; color: #f5f5f5; text-shadow: 0px 0px 3px rgba(0,0,0,0.8); }
-        #license-form-container .developer-credit a { color: #c1e0ff; }
-        #license-form-container .developer-credit a:hover { color: #ffffff; }
-        #license-form-container .developer-credit img {
-            width: 75px; height: 75px;
-            margin-bottom: 5px;
-            border-color: #e0e0e0;
-            box-shadow: 0 0 5px rgba(0,0,0,0.5);
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        /* Tombol Umum */
-        button {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            margin-left: 5px;
-            margin-right: 5px;
-            padding: 12px 22px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-family: "Times New Roman", Times, serif;
-            font-weight: 500;
-            font-size: 1em;
-            letter-spacing: 0.5px;
-            transition: background-color 0.2s ease-in-out, transform 0.15s ease-out, box-shadow 0.15s ease-out;
-        }
-        button:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        }
-        button:active { transform: translateY(0px); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-
-        /* Tombol Navigasi Khusus */
-        .btn-prev { background-color: #28a745; }
-        .btn-prev:hover { background-color: #1f7a34; }
-        .btn-home { background-color: #dc3545; }
-        .btn-home:hover { background-color: #b02a37; }
-        .btn-doubtful { background-color: #ffc107; color: #212529; }
-        .btn-doubtful:hover { background-color: #e0a800; }
-        
-        /* ======== GAYA MENU KARTU BARU ======== */
-        .card-menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-            gap: 20px;
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        .card-menu-grid-dense {
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        }
-
-        .card-menu-item {
-            display: flex;
-            align-items: center;
-            background-color: #ffffff;
-            border-radius: 12px;
-            padding: 16px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-            border: 1px solid #f0f0f0;
-            cursor: pointer;
-            text-align: left;
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-            width: 100%;
-            box-sizing: border-box;
-            font-family: "Times New Roman", Times, serif;
-            color: #333;
-            margin: 0;
-            letter-spacing: normal;
-        }
-
-        .card-menu-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .card-menu-icon-wrapper {
-            flex-shrink: 0;
-            width: 55px;
-            height: 55px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 18px;
-            font-size: 26px;
-            color: white;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-        }
-
-        .card-menu-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .card-menu-title {
-            font-weight: bold;
-            font-size: 1.15em;
-            color: #2c3e50;
-            margin-bottom: 3px;
-            line-height: 1.2;
-        }
-
-        .card-menu-description {
-            font-size: 0.9em;
-            color: #555e68;
-            line-height: 1.4;
-        }
-        
-        .back-button-card {
-            margin-top: 25px;
-        }
-
-        /* Palet Warna untuk Ikon Kartu */
-        .card-color-1 { background: linear-gradient(135deg, #17a2b8, #117a8b); } /* Cyan */
-        .card-color-2 { background: linear-gradient(135deg, #28a745, #1f7a34); } /* Green */
-        .card-color-3 { background: linear-gradient(135deg, #dc3545, #b02a37); } /* Red */
-        .card-color-4 { background: linear-gradient(135deg, #ffc107, #e0a800); } /* Yellow */
-        .card-color-4 span { color: #333; text-shadow: none; }
-        .card-color-5 { background: linear-gradient(135deg, #fd7e14, #d36307); } /* Orange */
-        .card-color-6 { background: linear-gradient(135deg, #6f42c1, #5a32a3); } /* Purple */
-        .card-color-7 { background: linear-gradient(135deg, #e83e8c, #c22670); } /* Pink */
-        .card-color-8 { background: linear-gradient(135deg, #6610f2, #520dc2); } /* Indigo */
-        .card-color-9 { background: linear-gradient(135deg, #20c997, #1baa80); } /* Teal */
-        .card-color-10 { background: linear-gradient(135deg, #795548, #5d4037); } /* Brown */
-        .card-color-11 { background: linear-gradient(135deg, #007bff, #0056b3); } /* Blue */
-        .card-color-default { background: linear-gradient(135deg, #6c757d, #545b62); } /* Gray */
-        /* ======== AKHIR GAYA MENU KARTU BARU ======== */
-
-        /* Tombol Opsi Jawaban */
-        #options-container { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
-        .option-button {
-            padding: 14px 18px; border: 1px solid #d1d8e0; border-radius: 8px; cursor: pointer;
-            background-color: #f8f9fa; text-align: left; font-family: "Times New Roman", Times, serif;
-            font-weight: normal; width: 100%; box-sizing: border-box;
-            transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
-            color: black !important;
-        }
-        .option-button:hover { background-color: #e9ecef; border-color: #adb5bd; transform: translateY(-1px); }
-        .option-button:disabled { cursor: not-allowed; opacity: 0.75; transform: none; background-color: #f8f9fa; }
-        .option-button.correct { background-color: #4CAF50 !important; color: white !important; border-color: #388E3C !important; font-weight: bold; }
-        .option-button.incorrect { background-color: #f44336 !important; color: white !important; border-color: #D32F2F !important; font-weight: bold; }
-        .option-button.selected-tryout { background-color: #cce5ff !important; border-color: #b8daff !important; color: black !important; }
-
-        /* Pertanyaan dan Pesan Selamat Datang */
-        #question {
-            font-family: "Times New Roman", Times, serif; font-weight: normal; font-size: 1.3em;
-            margin-bottom: 25px; text-align: left; color: #34495e; line-height: 1.5;
-        }
-        #main-menu-welcome-user { margin-bottom: 25px; font-size: 1.4em; color: #34495e; }
-
-        /* Tombol Navigasi (Next, Prev, Back) */
-        #navigation-buttons {
-            margin-top: 25px; display: flex; justify-content: space-between;
-            align-items: center; flex-wrap: wrap; gap: 10px;
-        }
-        #navigation-buttons button { margin-bottom: 5px; }
-        
-        /* Penjelasan Jawaban */
-        #explanation {
-            margin-top: 20px; padding: 15px; border: 1px solid #e0e0e0;
-            background-color: #f9fafc; border-radius: 8px; text-align: left;
-            font-size: 1em; line-height: 1.7; color: #495057;
-        }
-        #explanation strong { font-weight: bold; color: #2c3e50; }
-
-        /* Quiz Layout */
-        #quiz-header {
-            display: flex; justify-content: space-between; align-items: center;
-            margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #eee;
-        }
-        #question-counter {
-            font-size: 1em; color: #555e68; font-weight: 500;
-            margin-bottom: 15px; text-align: left;
-        }
-        #timer-display-sidebar {
-            font-size: 1.1em; font-weight: bold; color: #c0392b; background-color: #fdecea;
-            padding: 8px 12px; border-radius: 6px; border: 1px solid #f7c6c7; text-align: center;
-        }
-        #quiz-layout-container {
-            display: flex; flex-direction: row; gap: 25px; max-width: 1100px;
-            width: 95%; padding: 0; background: transparent; box-shadow: none;
-            margin: 25px auto;
-        }
-        #quiz-main-content {
-            flex: 2.5; padding: 25px 30px; background: white; border-radius: 12px;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1); display: flex;
-            flex-direction: column; text-align: left;
-        }
-        #quiz-sidebar {
-            flex: 1; padding: 25px; background: #fdfdff; border-radius: 12px;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08); display: flex;
-            flex-direction: column; gap: 20px; align-self: flex-start;
-        }
-        #user-biodata {
-            display: flex; flex-direction: column; align-items: center; text-align: center;
-            margin-bottom: 20px; border-bottom: 1px solid #e7e9ec; padding-bottom: 20px;
-        }
-        #user-photo-icon { color: #007BFF; margin-bottom: 12px; }
-        #user-photo-icon img {
-            width: 80px; height: 80px; border-radius: 50%; object-fit: cover;
-            border: 2px solid #007bff; display: block; margin: auto;
-        }
-        #user-name-display { font-weight: bold; font-size: 1.25em; color: #34495e; }
-
-        /* Navigasi Soal di Sidebar */
-        #question-navigation-panel {
-            background-color: #ffffff; padding: 15px; border-radius: 8px;
-            border: 1px solid #eef2f7;
-        }
-        #question-navigation-panel h4 {
-            margin-top: 0; margin-bottom: 15px; text-align: center;
-            font-size: 1.2em; color: #34495e;
-        }
-        #question-navigation-grid {
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
-            gap: 8px; max-height: 280px; overflow-y: auto; padding: 5px; border-radius: 6px;
-        }
-        .nav-question-box {
-            width: 40px; height: 40px; display: flex; justify-content: center; align-items: center;
-            border: 1px solid #ced4da; border-radius: 6px; cursor: pointer; font-size: 0.9em;
-            background-color: #f8f9fa; color: #495057;
-            transition: all 0.2s ease;
-        }
-        .nav-question-box:hover {
-            background-color: #e9ecef; border-color: #adb5bd;
-            transform: translateY(-2px) scale(1.05); box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .nav-question-box.current {
-            background-color: #007BFF; color: white; border-color: #0056b3; font-weight: bold;
-            transform: scale(1.1); box-shadow: 0 3px 8px rgba(0, 123, 255, 0.3);
-        }
-        .nav-question-box.answered { background-color: #d4edda; border-color: #b2dfc8; color: #155724; }
-        .nav-question-box.answered:hover { background-color: #c3e6cb; border-color: #a1d4b7; }
-        .nav-question-box.doubtful { background-color: #fff3cd; border-color: #ffeeba; color: #664d03; }
-        .nav-question-box.doubtful:hover { background-color: #ffeeba; border-color: #ffd891; }
-
-        /* Result Container */
-        #result-container {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #ffffff;
-            padding: 35px 30px; border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 15px rgba(118, 75, 162, 0.5);
-            text-align: center; animation: fadeInResult 0.8s ease-out;
-        }
-        @keyframes fadeInResult { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        #result-container p#score {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1.3em;
-            line-height: 1.5; margin-bottom: 25px; white-space: pre-wrap;
-            background-color: rgba(255, 255, 255, 0.1); padding: 20px;
-            border-radius: 10px; display: inline-block; max-width: 95%;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: left;
-        }
-        #result-container p#score span { display: block; margin-bottom: 4px; }
-        #result-container p#score .user-name-result { font-weight: bold; color: #c4e1ff; font-size: 1.2em; margin-bottom: 8px !important; }
-        #result-container p#score .score-value {
-            font-size: 2.8em; font-weight: bold; color: #ffd700; display: block;
-            margin: 5px 0 10px 0 !important; text-align: center; line-height: 1.1;
-        }
-        #result-container p#score .category-breakdown-title {
-            font-weight: bold; margin-top: 12px !important; margin-bottom: 6px !important;
-            display: block; color: #e6e6fa; font-size: 1.15em;
-        }
-        #result-container p#score .category-item {
-            display: block; margin-bottom: 3px !important; font-size: 0.95em;
-            color: #f0f0f0; line-height: 1.4;
-        }
-        #result-container p#score .category-item .category-name { font-weight: 500; color: #d1c4e9; }
-        #result-container p#score .category-item .category-score { font-weight: bold; color: #b2dfdb; }
-        #result-container #restart-button {
-            background-color: #ffc107; color: #333; font-size: 1.15em; font-weight: bold;
-            padding: 15px 30px; border-radius: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            border: none; letter-spacing: 0.5px; margin-top: 10px;
-        }
-        #result-container #restart-button:hover {
-            background-color: #e0a800; transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-        }
-
-        /* Footer */
-        #footer {
-            width: 100%; text-align: center; background-color: #007BFF;
-            color: #ffffff; padding: 10px 0; margin-top: auto;
-            box-sizing: border-box; font-size: 0.9em;
-        }
-
-        /* Awalnya, main-app disembunyikan */
-        #main-app-content { display: none; }
-        #license-msg { margin-top: 10px; font-weight: bold; }
-
-        /* Media Queries (Responsivitas) */
-        @media (max-width: 992px) {
-            #quiz-layout-container { flex-direction: column; max-width: 700px; }
-            #quiz-main-content, #quiz-sidebar { flex: none; width: 100%; box-sizing: border-box; }
-            #quiz-sidebar { margin-top: 25px; }
-            #navigation-buttons { justify-content: center; }
-        }
-
-        @media (max-width: 768px) {
-            body { padding: 10px; }
-            .container-view { padding: 20px 15px; margin: 15px auto; }
-            #license-form-container { padding: 25px 20px; }
-            h1 { font-size: 2em; }
-            h2 { font-size: 1.7em; }
-            h3 { font-size: 1.4em; }
-
-            .card-menu-grid { grid-template-columns: 1fr; gap: 15px; }
-            .card-menu-item { padding: 12px; }
-            .card-menu-icon-wrapper { width: 45px; height: 45px; font-size: 22px; margin-right: 15px; }
-            .card-menu-title { font-size: 1.05em; }
-            .card-menu-description { font-size: 0.85em; }
-
-            #question { font-size: 1.15em; }
-            button { padding: 10px 18px; font-size: 0.95em; }
-            .option-button { padding: 12px 15px; }
-            .nav-question-box { width: 36px; height: 36px; font-size: 0.85em; }
-            #question-navigation-grid { grid-template-columns: repeat(auto-fill, minmax(36px, 1fr)); }
-            #result-container { padding: 25px 15px; }
-            #result-container p#score { font-size: 1.1em; padding: 15px; line-height: 1.45; }
-            #result-container p#score .score-value { font-size: 2.2em; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Container untuk Form Lisensi dan Login Awal -->
+    <!-- Container untuk Form Lisensi dan Login Awal (Tidak Berubah) -->
     <div id="license-form-container" class="container-view">
         <h1><span class="app-title-highlight">Selamat Datang!</span></h1>
         <h3><span class="app-title-highlight">di Aplikasi Bimbel UKOM</span></h3>
@@ -564,6 +20,8 @@
             <li>Berlatih soal-soal sesuai kategori keperawatan.</li>
             <li>Melihat pembahasan untuk memahami jawaban yang benar.</li>
             <li>Menguji kemampuan secara menyeluruh dengan mode Try Out.</li>
+            <li>Menyimpan progres Try Out dan melanjutkan nanti.</li>
+            <li>Melihat riwayat dan meninjau kembali hasil ujian Anda.</li>
         </ul>
         <p class="login-prompt">Siap untuk memulai? Silakan masukkan nama dan kode lisensi Anda:</p>
         <p class="buy-license-prompt">Anda belum memiliki Lisensi? Silakan beli Lisensinya disini </p>
@@ -585,11 +43,14 @@
             </p>
         </div>
     </div>
+    
     <!-- Skrip Lisensi Firebase (Dibiarkan sama) -->
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
       import { getFirestore, doc, getDoc, updateDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
 
+      // --- KODE FIREBASE TIDAK BERUBAH ---
+      // [.. Salin dan tempel semua kode Firebase Anda yang sudah ada di sini ..]
       const firebaseConfig = {
         apiKey: "AIzaSyDnJvECVfNJIXPh9rZTsA3QcHQaTiE4Awc", // GANTI DENGAN API KEY ANDA
         authDomain: "apodaca-bessie4762.firebaseapp.com", // GANTI DENGAN AUTH DOMAIN ANDA
@@ -622,6 +83,10 @@
               sessionStorage.removeItem('userName');
               sessionStorage.removeItem('licenseKey');
               sessionStorage.removeItem('clientSessionId');
+          }
+          if (localStorage) { // Juga bersihkan data localstorage terkait sesi
+              // Hati-hati jangan hapus riwayat kuis, hanya progres yang sedang berjalan
+              // Logic untuk ini akan ditangani oleh skrip utama
           }
       }
       function showLoginForm(message = "") {
@@ -800,6 +265,7 @@
                   const docRef = doc(db, "licenses", licenseKey);
                   updateDoc(docRef, { lastSeenAt: serverTimestamp() });
               }
+              // Progress saving is handled by script.js, not here.
           }
       });
     </script>
@@ -825,6 +291,14 @@
                         <span class="card-menu-description">Uji kemampuan menyeluruh dengan batas waktu.</span>
                     </div>
                 </button>
+                <!-- Tombol Riwayat Baru -->
+                <button id="main-menu-history" class="card-menu-item">
+                    <div class="card-menu-icon-wrapper card-color-6"><span>📈</span></div>
+                    <div class="card-menu-text">
+                        <span class="card-menu-title">Riwayat & Performa</span>
+                        <span class="card-menu-description">Lihat riwayat pengerjaan dan skor Anda.</span>
+                    </div>
+                </button>
                 <button id="logout-button" class="card-menu-item">
                     <div class="card-menu-icon-wrapper card-color-3"><span>🚪</span></div>
                     <div class="card-menu-text">
@@ -835,7 +309,22 @@
             </div>
         </div>
 
-        <!-- SUBMENU LATIHAN SOAL BARU -->
+        <!-- View Riwayat Baru -->
+        <div id="history-container" class="container-view hidden">
+            <h3>Riwayat Pengerjaan Kuis</h3>
+            <div id="history-list-container">
+                <!-- Riwayat akan di-generate oleh JavaScript di sini -->
+                <p id="no-history-message">Anda belum memiliki riwayat pengerjaan.</p>
+            </div>
+            <button id="kembali-ke-main-menu-from-history" class="card-menu-item back-button-card">
+                <div class="card-menu-icon-wrapper card-color-3"><span>↩️</span></div>
+                <div class="card-menu-text">
+                    <span class="card-menu-title">Kembali ke Menu Utama</span>
+                </div>
+            </button>
+        </div>
+
+        <!-- SUBMENU LATIHAN SOAL BARU (Tidak Berubah) -->
         <div id="latihan-soal-submenu-container" class="container-view hidden">
             <h3>Pilih Jenis Latihan Pembahasan Soal</h3>
             <div class="card-menu-grid">
@@ -862,7 +351,7 @@
             </button>
         </div>
         
-        <!-- SUBMENU TRY OUT BARU -->
+        <!-- SUBMENU TRY OUT BARU (Tidak Berubah) -->
         <div id="tryout-submenu-container" class="container-view hidden">
             <h3>Pilih Jenis Try Out</h3>
             <div class="card-menu-grid">
@@ -889,7 +378,7 @@
             </button>
         </div>
 
-        <!-- KATEGORI LATIHAN BARU -->
+        <!-- KATEGORI LATIHAN BARU (Tidak Berubah) -->
         <div id="kategori-latihan-container" class="container-view hidden">
             <h3>Pilih Kategori Latihan Pembahasan Soal</h3>
             <div class="card-menu-grid card-menu-grid-dense">
@@ -928,7 +417,7 @@
             </button>
         </div>
         
-        <!-- TRYOUT SERIUS BARU -->
+        <!-- TRYOUT SERIUS BARU (Tidak Berubah) -->
         <div id="tryout-serius-container" class="container-view hidden">
             <h3>Pilih Tipe Try Out Serius</h3>
             <div class="card-menu-grid card-menu-grid-dense">
@@ -979,7 +468,7 @@
             </button>
         </div>
 
-        <!-- Quiz & Result Views (Struktur tidak diubah, hanya CSS di atas) -->
+        <!-- Quiz & Result Views -->
         <div id="quiz-layout-container" class="container-view hidden">
             <div id="quiz-main-content">
                 <div id="question-counter" class="hidden">Soal 1 dari X</div>
@@ -987,9 +476,15 @@
                 <div id="options-container"></div>
                 <div id="explanation" class="hidden"></div>
                 <div id="navigation-buttons">
-                    <button id="doubtful-button" class="btn-doubtful hidden">Tandai Ragu-ragu</button>
-                    <button class="btn-next" id="next-question-button" class="hidden">Soal Berikutnya</button>
-                    <button class="btn-home" id="quiz-back-button">Kembali</button>
+                    <!-- Tombol Ragu-ragu dipindah ke grup kiri -->
+                    <div class="nav-left">
+                        <button id="doubtful-button" class="btn-doubtful hidden">Tandai Ragu-ragu</button>
+                    </div>
+                    <!-- Tombol Navigasi dipindah ke grup kanan -->
+                    <div class="nav-right">
+                         <button class="btn-home" id="quiz-back-button">Kembali</button>
+                         <button class="btn-next" id="next-question-button" class="hidden">Soal Berikutnya</button>
+                    </div>
                 </div>
             </div>
 
@@ -1004,7 +499,7 @@
                     Sisa Waktu: <span id="time-left-sidebar">180:00</span>
                 </div>
                 <div id="question-navigation-panel">
-                    <h4>Navigasi Soal</h4>
+                    <h4 id="question-nav-title">Navigasi Soal</h4>
                     <div id="question-navigation-grid">
                     </div>
                 </div>
@@ -1012,8 +507,14 @@
         </div>
 
         <div id="result-container" class="container-view hidden">
+            <h2 id="result-title">Hasil Kuis</h2>
             <p id="score"></p>
-            <button id="restart-button">Mulai Lagi</button>
+            <!-- Grup Tombol Hasil -->
+            <div id="result-actions">
+                <button id="restart-button" class="btn-home">Kembali ke Menu</button>
+                <button id="review-answers-button" class="btn-review hidden">Tinjau Jawaban</button>
+                <button id="retry-incorrect-button" class="btn-retry hidden">Ulangi Soal Salah</button>
+            </div>
         </div>
 
         <footer id="footer">
@@ -1022,19 +523,21 @@
     </div>
 
 
-    <!-- Skrip Aplikasi Utama (Dibiarkan sama) -->
+    <!-- Skrip Aplikasi Utama -->
     <script src="script.js"></script>
-       <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
-<script type="text/javascript">var _Hasync= _Hasync|| [];
-_Hasync.push(['Histats.start', '1,4842415,4,1,120,40,00011111']);
-_Hasync.push(['Histats.fasi', '1']);
-_Hasync.push(['Histats.track_hits', '']);
-(function() {
-var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-hs.src = ('//s10.histats.com/js15_as.js');
-(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-})();</script>
-<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4842415&101" alt="" border="0"></a></noscript>
+
+    <!-- Histats (Tidak Berubah) -->
+    <div id="histats_counter"></div>
+    <script type="text/javascript">var _Hasync= _Hasync|| [];
+    _Hasync.push(['Histats.start', '1,4842415,4,1,120,40,00011111']);
+    _Hasync.push(['Histats.fasi', '1']);
+    _Hasync.push(['Histats.track_hits', '']);
+    (function() {
+    var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+    hs.src = ('//s10.histats.com/js15_as.js');
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+    })();</script>
+    <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4842415&101" alt="" border="0"></a></noscript>
 
 </body>
 </html>
