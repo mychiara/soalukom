@@ -62,9 +62,25 @@
 
     <!-- Achievement Popup Notification -->
     <div id="achievement-popup" class="achievement-popup">
-      <button class="close-achievement-btn" onclick="document.getElementById('achievement-popup').classList.remove('show')">
+      <button id="btn-close-achievement" class="close-achievement-btn" type="button">
         <i class="fa-solid fa-times"></i>
       </button>
+      <script>
+        // Script khusus untuk memastikan tombol close berfungsi
+        document.addEventListener('DOMContentLoaded', () => {
+            const closeBtn = document.getElementById('btn-close-achievement');
+            const popup = document.getElementById('achievement-popup');
+            
+            if(closeBtn && popup) {
+                closeBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation(); // Mencegah klik tembus
+                    popup.classList.remove('show');
+                    console.log('Achievement popup closed by user');
+                });
+            }
+        });
+      </script>
       <div class="achievement-header">
         <div class="achievement-badge">
           <i class="fa-solid fa-trophy"></i>
