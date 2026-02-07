@@ -3489,7 +3489,7 @@ body.dark-mode .achievement-description {
     background: white;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -3497,7 +3497,25 @@ body.dark-mode .achievement-description {
     transform: translateX(120%);
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     max-width: 350px;
+    width: 90%; /* Responsive width */
     border-left: 5px solid #ffd700;
+}
+
+/* Mobile Position: Bottom center */
+@media (max-width: 600px) {
+    .achievement-popup {
+        top: auto;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%) translateY(150%); /* Start from below */
+        left: auto;
+        width: 90%;
+        max-width: 400px;
+    }
+    
+    .achievement-popup.show {
+        transform: translateX(50%) translateY(0) !important;
+    }
 }
 
 .achievement-popup.show {
@@ -3700,5 +3718,11 @@ body.dark-mode .achievement-description {
         height: 32px;
         top: 8px;
         right: 8px;
+        z-index: 10010; /* Extra high for button */
+    }
+
+    /* Padding extra di bagian bawah agar popup tidak menutupi konten */
+    .container-view {
+        padding-bottom: 80px !important;
     }
 }
