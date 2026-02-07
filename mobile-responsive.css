@@ -149,21 +149,29 @@
   }
 
   #main-menu-container a .card-menu-item {
-    min-height: 85px;
-    padding: 18px 15px;
-    border: 2px solid var(--border-color);
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    grid-column: 1 / -1; /* Span full width */
+    min-height: 100px;
+    padding: 15px;
+    flex-direction: row;
+    text-align: left;
+    gap: 15px;
   }
 
   #main-menu-container a .card-menu-icon-wrapper {
     width: 60px;
     height: 60px;
     font-size: 1.8rem;
+    margin-bottom: 0;
   }
 
   #main-menu-container a .card-menu-icon-wrapper i {
-    font-size: 1.8rem;
-    color: white;
+    font-size: 1.8rem !important;
+    color: white !important;
+  }
+
+  #main-menu-container a .card-menu-text {
+    text-align: left;
+    align-items: flex-start;
   }
 
   #main-menu-container a .card-menu-title {
@@ -173,6 +181,7 @@
 
   #main-menu-container a .card-menu-description {
     font-size: 0.85rem;
+    display: block; /* Show description for blue print */
   }
 
   /* Card menu grid - 2 columns on mobile like features-grid */
@@ -362,64 +371,67 @@
     font-weight: 600;
   }
 
-  /* Card Menu Items - BIGGER ICONS for small screens */
+  /* Card Menu Items - 2 columns grid for small screens */
   .card-menu-grid {
-    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   .card-menu-item {
-    padding: 16px 12px;
-    min-height: 90px;
-    gap: 12px;
+    padding: 12px 10px;
+    min-height: 115px;
+    gap: 8px;
     background: white;
     border: 2px solid #e9ecef;
   }
 
   .card-menu-icon-wrapper {
-    width: 65px;
-    height: 65px;
-    font-size: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   }
 
   .card-menu-icon-wrapper i {
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
     color: white !important;
     font-weight: 900;
   }
 
   #main-menu-container a .card-menu-icon-wrapper {
-    width: 65px;
-    height: 65px;
-    font-size: 2rem;
+    width: 55px;
+    height: 55px;
+    font-size: 1.6rem;
   }
 
   #main-menu-container a .card-menu-icon-wrapper i {
-    font-size: 2rem !important;
+    font-size: 1.6rem !important;
     color: white !important;
   }
 
   .card-menu-title {
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     font-weight: 700;
     color: #2d3436 !important;
   }
 
   .card-menu-description {
-    font-size: 0.9rem;
-    line-height: 1.35;
+    font-size: 0.7rem;
+    line-height: 1.25;
     color: #636e72 !important;
+    display: none; /* Keep hidden on small screens */
   }
 
   #main-menu-container a .card-menu-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #2d3436 !important;
   }
 
   #main-menu-container a .card-menu-description {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #636e72 !important;
+    display: block;
   }
 }
 
