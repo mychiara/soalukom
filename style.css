@@ -3751,4 +3751,78 @@ body.dark-mode .achievement-description {
         background: #f8f9fa !important;
         border: 1px solid #ddd !important;
     }
+
+    /* ========================================
+       MENU UTAMA MOBILE FIXES
+       ======================================== */
+    
+    /* Pastikan container menu utama pas di layar */
+    #main-menu {
+        width: 100% !important;
+        padding: 10px 0 !important;
+        box-sizing: border-box;
+    }
+
+    /* Ubah Grid Menu jadi 1 Kolom Vertikal agar Rapi */
+    .card-menu-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        width: 100% !important;
+    }
+
+    /* Styling Kartu Menu */
+    .card-menu-item {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important; /* Icon kiri, Teks kanan */
+        align-items: center !important;
+        padding: 15px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+        min-height: 80px !important; /* Tinggi minimal agar seragam */
+        text-align: left !important;
+    }
+
+    /* Wrapper Icon: Ukuran tetap */
+    .card-menu-icon-wrapper {
+        width: 50px !important;
+        height: 50px !important;
+        flex-shrink: 0 !important; /* Jangan mengecil */
+        margin-right: 15px !important;
+        margin-bottom: 0 !important; /* Reset margin bawah jika ada */
+        font-size: 1.2rem !important;
+    }
+
+    /* Text Container */
+    .card-menu-text {
+        flex: 1 !important; /* Ambil sisa ruang */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        text-align: left !important;
+    }
+
+    /* Judul Menu */
+    .card-menu-title {
+        font-size: 1rem !important;
+        font-weight: 600 !important;
+        margin-bottom: 4px !important;
+        line-height: 1.3 !important;
+        white-space: normal !important; /* Allow wrap */
+    }
+
+    /* Deskripsi Menu (jika ada span tambahan) */
+    .card-menu-text span:not(.card-menu-title) {
+        font-size: 0.8rem !important;
+        color: #666;
+        line-height: 1.2 !important;
+    }
+
+    /* Sembunyikan elemen yang mengganggu layout */
+    .app-header {
+        padding: 15px !important;
+        border-radius: 0 0 20px 20px !important;
+        margin-bottom: 20px !important;
+    }
 }
