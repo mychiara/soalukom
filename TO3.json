@@ -1,0 +1,1212 @@
+[
+    {
+        "question": "61. Validitas kegiatan skrining tes penyakit DM yang dilakukan pada populasi 10.000 penduduk dengan menggunakan pemeriksaan urine adalah tingkat sensitifitasnya 70% dan spesifitasnya 80%. Asumsi prevalensi penderita DM pada populasi tersebut 5%. Dengan menggunakan table 2 x 2, berapakah nilai true positif dari kegiatan skrining tersebut?",
+        "options": [
+            "150",
+            "350",
+            "1900",
+            "7600"
+        ],
+        "answer": 1,
+        "explanation": "Prevalensi DM = 5% dari 10.000 = 0.05 * 10000 = 500 orang (ini adalah jumlah orang yang sebenarnya sakit DM). Sensitivitas = 70%, artinya tes dapat mendeteksi 70% dari mereka yang benar-benar sakit. Jadi, True Positive (TP) = Sensitivitas * Jumlah yang sakit = 0.70 * 500 = 350."
+    },
+    {
+        "question": "62. Sesuai dengan KMS balita bahwa anak sehat berarti bertambah umur akan bertambah berat badan dan kemampuannya. Pada usia anak berapakah intervensi pembinaan balita agar anak mempunyai kemampuan mencuci tangan dan mengeringkannya tanpa bantuan seharusnya mulai diberikan?",
+        "options": [
+            "18-24 bulan",
+            "2-3 tahun",
+            "3-4 tahun",
+            "4-5 tahun"
+        ],
+        "answer": 2,
+        "explanation": "Anak usia 3-4 tahun umumnya sudah memiliki kemampuan motorik kasar dan halus yang cukup untuk belajar mencuci tangan sendiri (membasahi tangan, mengambil sabun, menggosok, membilas) dan mengeringkannya, meskipun mungkin masih memerlukan pengawasan dan bimbingan awal."
+    },
+    {
+        "question": "63. Bp.P (75 thn) sering bernafas seperti terengah engah walaupun sedang istirahat duduk. Riwayat pekerjaan Bp.P adalah bekerja sebagai pembuat tempe di rumah yang menggunakan kayu bakar. Menurut istrinya, Bp.P sewaktu tidur, sering terlihat berhenti bernafas selama hitungan 20. Manakah tindakan yang dianjurkan untuk keluarga saat melihat Bp.P mengalami henti nafas?",
+        "options": [
+            "Meminta keluarga untuk membangunkan secara perlahan",
+            "Meminta keluarga untuk memantau lamanya henti nafas",
+            "Membawa Bp. P segera ke rumah sakit",
+            "Membantu proses pernafasan"
+        ],
+        "answer": 0,
+        "explanation": "Episode henti napas saat tidur (apnea) pada Bp. P, ditambah riwayat paparan asap kayu bakar dan sesak napas, mengarah pada kemungkinan sleep apnea atau kondisi PPOK dengan komplikasi. Jika keluarga melihat Bp. P berhenti bernapas, tindakan pertama yang sederhana dan bisa dilakukan adalah mencoba membangunkan secara perlahan untuk merangsang pernapasan. Jika sering terjadi atau mengkhawatirkan, evaluasi medis lebih lanjut diperlukan (opsi C), tapi tindakan langsung saat kejadian adalah A."
+    },
+    {
+        "question": "64. Respon dan ekspresi nyeri dipengaruhi oleh budaya. Bila anda mendapatkan klien mengeluh kesakitan yang tidak wajar, perawat harus dapat melakukan validasi keluhan tersebut. Manakah data fisik yang bisa dijadikan validasi terhadap keluhan nyeri klien?",
+        "options": [
+            "Nadi",
+            "Pernafasan",
+            "Tekanan darah",
+            "Suhu tubuh"
+        ],
+        "answer": 0,
+        "explanation": "Nyeri akut seringkali memicu respons fisiologis simpatis, yang dapat meliputi peningkatan denyut nadi (takikardia), peningkatan frekuensi pernapasan (takipnea), dan peningkatan tekanan darah. Peningkatan suhu tubuh tidak secara langsung terkait dengan nyeri, kecuali nyeri disebabkan oleh infeksi."
+    },
+    {
+        "question": "65. Saat perawat berkunjung ke rumah keluarga Bp. A, ditemukan anak berusia 1 tahun sedang mengalami diare hari pertama, sudah 6 kali BAB dalam sehari. Nenek sangat marah dan mempunyai prinsip anak harus dipuasakan hingga diarenya sembuh, kecuali minum ASI. Permintaan nenek tidak disetujui oleh menantunya yang merupakan ibu dari anak tersebut. Ketika perawat ada dalam situasi tersebut, intervensi apakah yang tepat diberikan pada keluarga?",
+        "options": [
+            "Memberikan oralit kepada keluarga",
+            "Mengajarkan cara membuat larutan gula garam",
+            "Menjelaskan ASI sebagai sumber cairan dan nutrisi yang aman",
+            "Mendiskusikan dengan nenek tentang kebutuhan cairan"
+        ],
+        "answer": 3,
+        "explanation": "Dalam situasi konflik antara nenek dan ibu, perawat perlu bertindak sebagai mediator dan edukator. Mendiskusikan pentingnya kebutuhan cairan pada anak diare dengan nenek (yang memiliki keyakinan salah) adalah langkah awal yang baik. Menjelaskan bahwa memuasakan anak justru berbahaya dan ASI harus tetap diberikan, serta perlunya cairan tambahan seperti oralit. Pilihan D membuka dialog dan edukasi kepada pembuat keputusan yang keliru."
+    },
+    {
+        "question": "66. Perawat T merasa canggung dalam merawat klien TB dengan HIV (+). Ia takut tertular walaupun telah memakai alat pelindung diri jika kontak dengan cairan tubuh klien. Manakah saran apa yang akan anda sampaikan ke perawat T, jika dia adalah sejawat anda?",
+        "options": [
+            "Meminta nasehat pada perawat senior",
+            "Menyampaikan ketakutannya kepada kepala ruangan",
+            "Memberikan buku tentang perawatan klien dengan HIV",
+            "Meminta pindah ke ruang rawat lain ke pihak manajemen"
+        ],
+        "answer": 1,
+        "explanation": "Mengungkapkan perasaan dan ketakutan kepada atasan (kepala ruangan) adalah langkah profesional. Kepala ruangan dapat memberikan dukungan, klarifikasi mengenai risiko penularan (yang minimal jika standar kewaspadaan universal diikuti), memastikan APD memadai, atau mengatur supervisi jika diperlukan. Ini juga membantu manajemen mengidentifikasi kebutuhan pelatihan atau dukungan staf."
+    },
+    {
+        "question": "67. Pasien dengan gagal ginjal kongestive mendapatkan terapi pembatasan minuman. Namun, keluarga membawa 'air berkah' dari guru spiritual keluarga yang harus diminumkan kepada pasien. Bagaimanakah sikap perawat sebaiknya?",
+        "options": [
+            "Melarang keluarga untuk memberikan minum air tersebut",
+            "Membolehkan diminum, namun sedikit saja",
+            "Membolehkan dan mengaturnya sebagai komponen intake cairan",
+            "Melarang untuk membawa hal yang berbau mistis ke rumah sakit"
+        ],
+        "answer": 2,
+        "explanation": "Perawat harus menghormati keyakinan pasien dan keluarga namun tetap menjaga keselamatan pasien. 'Air berkah' tersebut dapat diakomodasi dalam rencana pembatasan cairan. Perawat dapat menjelaskan bahwa air tersebut akan dihitung sebagai bagian dari total asupan cairan harian yang diizinkan untuk pasien, sehingga tidak melanggar terapi medis sambil menghargai aspek spiritual/budaya."
+    },
+    {
+        "question": "68. Pada saat anda memasang nasal kanula pada klien 'cedera kepala sedang' dengan kesadaran samnolen. Bagaimanakah yang sebaiknya perawat lakukan?",
+        "options": [
+            "Memberitahukan kepada klien sambil memasang nasal kanul",
+            "Meminta persetujuan kepada klien sebelum memasangnya",
+            "Meminta persetujuan keluarga sebelum memasangnya",
+            "Memasang nasal kanula secara langsung"
+        ],
+        "answer": 0,
+        "explanation": "Meskipun kesadaran klien menurun (samnolen), perawat tetap harus berkomunikasi dengan klien. Memberitahukan tindakan yang akan dilakukan ('Saya akan memasang selang oksigen di hidung Anda untuk membantu pernapasan') adalah bentuk penghormatan terhadap otonomi pasien dan dapat mengurangi kecemasan atau kebingungan pasien, meskipun responsnya mungkin terbatas."
+    },
+    {
+        "question": "69. Pada saat anda menjadi perawat sirkuler, anda melihat perawat instrument (scrub nurse) kelelahan di meja operasi dengan 2 orang dokter bedah. Terlihat keringat di wajah mereka. Respon pertama anda sebagai perawat sebaiknya adalah...",
+        "options": [
+            "Memberitahu mereka sebaiknya istirahat sejenak",
+            "Mempersiapkan diri untuk menggantikan mereka",
+            "Mengambil kasa untuk menyekakan keringat mereka",
+            "Memberi kasa steril kepada mereka untuk menyeka keringatnya"
+        ],
+        "answer": 3,
+        "explanation": "Sebagai perawat sirkuler, salah satu tugasnya adalah mengantisipasi kebutuhan tim bedah (scrub nurse dan dokter). Jika mereka berkeringat, perawat sirkuler (yang tidak steril) dapat membantu menyeka keringat dari dahi mereka menggunakan kasa steril untuk mencegah kontaminasi area steril dan menjaga kenyamanan tim."
+    },
+    {
+        "question": "70. Saat anda sebagai perawat masuk ruang istirahat, anda melihat sedang ada diskusi ringan tentang tanda klien dengan HIV/AIDS. Salah seorang menjelaskan bahwa tanda utama dari HIV/AIDS adalah penurunan berat badan secara drastis dan demam terus menerus. Manakah tanggapan yang tepat untuk situasi di atas?",
+        "options": [
+            "Tanda penurunan berat badan tersebut tidak khas bagi HIV/AIDS",
+            "ELISA dan Western Blot adalah diagnostik spesifik untuk HIV/AIDS",
+            "Bila terjadi infeksi flora oportunis berarti klien bisa menderita AIDS",
+            "Riwayat hubungan sex yang tidak sehat dan penurunan berat badan drastis"
+        ],
+        "answer": 1,
+        "explanation": "Penurunan berat badan drastis dan demam terus menerus bisa menjadi gejala HIV/AIDS, tetapi bukan merupakan tanda yang khas atau pasti. Banyak kondisi lain yang dapat menyebabkan gejala serupa. Diagnosis HIV/AIDS ditegakkan melalui tes serologis spesifik seperti ELISA dan dikonfirmasi dengan Western Blot (atau tes konfirmasi lainnya). Menyebutkan tes diagnostik spesifik adalah cara yang paling akurat untuk mengklarifikasi diskusi tersebut."
+    },
+    {
+        "question": "81. Seorang klien berusia 19 thn, mengalami fraktur tertutup radius ulna 1/3 distal dextra, di unit Gawat Darurat akan dilakukan pemasangan bidai. Manakah prinsip penanganan bidai yang benar?",
+        "options": [
+            "Bidai dipasang mulai telapak tangan hingga sendi bahu",
+            "Bidai dipasang mulai pergelangan tangan hingga bahu",
+            "Bidai dipasang mulai pangkal telapak tangan melampaui siku",
+            "Bidai dipasang mulai radius ulna hingga sebelum siku"
+        ],
+        "answer": 2,
+        "explanation": "Prinsip pemasangan bidai pada fraktur ekstremitas adalah mengimobilisasi sendi di atas dan di bawah area fraktur. Untuk fraktur radius ulna 1/3 distal (dekat pergelangan tangan), bidai harus melampaui pergelangan tangan (sendi di bawah) dan siku (sendi di atas). Pilihan C (melampaui siku) adalah yang paling sesuai dengan prinsip ini untuk fraktur di lengan bawah distal."
+    },
+    {
+        "question": "82. Seorang anak berusia 2,5 thn di barak pengungsian dilaporkan berak cair lebih dari 4 kali. Manakah data berikut ini yang mengindikasikan anak perlu dirujuk ke rumah sakit?",
+        "options": [
+            "Tidak bisa atau malas minum",
+            "Gelisah/rewel",
+            "Haus, minum dengan lahap",
+            "Turgor kulit perut agak lambat"
+        ],
+        "answer": 0,
+        "explanation": "Pada anak dengan diare, ketidakmampuan atau penolakan untuk minum (malas minum) adalah tanda bahaya dehidrasi berat atau perburukan kondisi. Jika anak tidak mau minum, rehidrasi oral menjadi sulit dan mungkin memerlukan rehidrasi intravena di rumah sakit. Gelisah/rewel bisa jadi tanda awal dehidrasi, haus dan minum lahap masih menunjukkan respons, turgor agak lambat menunjukkan dehidrasi ringan-sedang. Tapi 'tidak bisa minum' adalah red flag."
+    },
+    {
+        "question": "83. Seorang klien memiliki riwayat kontrasepsi oral 5 tahun yang lalu dan mendapat terapi anticoagulant karena mengalami embolus pulmonar. Manakah hal yang harus diobservasi terkait terapi di atas?",
+        "options": [
+            "Edema tungkai",
+            "Hematuria",
+            "Gastritis",
+            "Infeksi saluran kemih"
+        ],
+        "answer": 1,
+        "explanation": "Terapi antikoagulan bertujuan untuk mencegah pembekuan darah. Efek samping utama dan paling serius dari antikoagulan adalah perdarahan. Hematuria (darah dalam urin) adalah salah satu manifestasi perdarahan yang harus diobservasi ketat pada pasien yang menerima terapi antikoagulan."
+    },
+    {
+        "question": "84. Seorang klien dengan fraktur tibia terbuka akibat kecelakaan. Klien tersebut direncanakan akan diberikan anti tetanus serum (ATS). Manakah cara berikut ini yang paling tepat?",
+        "options": [
+            "Langsung berikan ATS secara intramuscular",
+            "Dahului dengan skin test, jika negatif, berikan ATS secara intravena",
+            "Langsung berikan ATS secara intravena",
+            "Dahului dengan skin test, jika negatif, berikan ATS secara intramuscular"
+        ],
+        "answer": 3,
+        "explanation": "Anti Tetanus Serum (ATS) berasal dari serum kuda dan berpotensi menyebabkan reaksi alergi/anafilaksis. Oleh karena itu, sebelum pemberian ATS (terutama jika akan diberikan secara intramuskular atau intravena), skin test (tes kulit) harus dilakukan terlebih dahulu untuk mendeteksi hipersensitivitas. Jika skin test negatif, ATS dapat diberikan secara intramuskular sesuai dosis yang dianjurkan."
+    },
+    {
+        "question": "85. Perawat telah selesai membersihkan trakheostomy tube dan mengganti pengikatnya. Bagaimanakah cara mengukur kekencangan pengikatan yang tepat?",
+        "options": [
+            "Bila klien mengangguk, ia merasa tetap nyaman",
+            "Tracheostomy tube tidak bergerak ketika klien batuk",
+            "Dua jari bisa masuk ke bawah pengikat dengan bebas",
+            "Klien tetap bisa menengok ke kiri-kanan dengan bebas"
+        ],
+        "answer": 2,
+        "explanation": "Pengikat trakeostomi harus cukup kencang untuk menjaga tube tetap pada tempatnya dan mencegah dislokasi atau ekstubasi yang tidak disengaja, namun tidak boleh terlalu ketat sehingga mengganggu sirkulasi atau menyebabkan iritasi kulit. Aturan umum adalah memastikan ada ruang untuk satu atau dua jari (tergantung ukuran pasien dan jenis pengikat) di antara pengikat dan leher pasien. Pilihan C adalah panduan praktis yang umum digunakan."
+    },
+    {
+        "question": "86. Klien pasca amputasi di bawah lutut (below knee amputation) telah tiba di ruang rawat. Stump tampak kering, drain produksi sedikit, warna drain sanguenosa. Manakah prinsip penempatan posisi stump yang benar untuk klien tersebut?",
+        "options": [
+            "Ganjal stump dengan bantal",
+            "Kontrol tekanan perban elastic pada stump",
+            "Tinggikan bagian kaki tempat tidur",
+            "Letakkan bantal di bawah lutut hingga stump"
+        ],
+        "answer": 2,
+        "explanation": "Setelah amputasi bawah lutut, penting untuk mencegah kontraktur fleksi pada sendi lutut dan pinggul. Meskipun elevasi stump pada bantal mungkin dilakukan pada periode awal untuk mengurangi edema, elevasi jangka panjang, terutama dengan mengganjal di bawah lutut, harus dihindari karena dapat menyebabkan kontraktur. Meninggikan bagian kaki tempat tidur (elevasi seluruh ekstremitas bawah tanpa menekuk lutut secara berlebihan) dapat membantu mengurangi edema pasca operasi awal tanpa risiko kontraktur yang signifikan jika dilakukan dengan benar dan tidak terus menerus."
+    },
+    {
+        "question": "87. Klien berusia 44 tahun, memiliki riwayat Diabetes Melitus (DM) type-2 tidak terkontrol. Datang ke poliklinik dengan keluhan ada luka yang tidak sembuh sembuh di ibu jari kaki. Klien bertanya, mengapa muncul gejala seperti di atas. Manakah jawaban yanga paling tepat untuk menjawab pertanyaan klien tersebut?",
+        "options": [
+            "Kekurangan insulin membuat nutrisi tidak bisa masuk ke dalam sel",
+            "Gula darah yang tinggi menyebabkan munculnya gejala khas DM",
+            "Gula darah yang tidak terkontrol menyumbat pembuluh darah",
+            "Penyempitan pembuluh darah menghalangi proses penyembuhan"
+        ],
+        "answer": 3,
+        "explanation": "DM yang tidak terkontrol menyebabkan hiperglikemia kronis. Kondisi ini dapat merusak pembuluh darah kecil (mikroangiopati) dan besar (makroangiopati), serta saraf (neuropati). Kerusakan pembuluh darah mengurangi aliran darah ke ekstremitas (iskemia), sehingga suplai oksigen dan nutrisi ke area luka berkurang, dan sel-sel imun sulit mencapai lokasi infeksi. Ini semua menghambat proses penyembuhan luka."
+    },
+    {
+        "question": "88. Seorang laki laki berusia 55 tahun dirawat di bangsal penyakit dalam sedang diberikan transfusi darah Whole Blood 500 ml. Tiba tiba pasien mengatakan sesak nafas, dada terasa berat dan terlihat gelisah. Pasien memiliki riwayat DM dan hipertensi sejak 10 tahun yang lalu. Manakah tindakan utama yang paling tepat untuk dilakukan?",
+        "options": [
+            "Posisikan tidur semi fowler's",
+            "Berikan oksigen dengan nasal kanul",
+            "Hentikan aliran transfusi darah",
+            "Observasi tanda tannda vital"
+        ],
+        "answer": 2,
+        "explanation": "Gejala sesak napas, dada terasa berat, dan gelisah yang muncul tiba-tiba selama transfusi darah menunjukkan kemungkinan reaksi transfusi, bisa berupa reaksi alergi, overload cairan (TACO), atau reaksi hemolitik akut. Tindakan pertama dan utama adalah segera menghentikan aliran transfusi darah untuk mencegah masuknya lebih banyak komponen darah yang mungkin menyebabkan reaksi."
+    },
+    {
+        "question": "89. Seorang remaja mengalami luka bakar pada muka dengan rambut terbakar dan baju sebagian besar terbakar. Diantar oleh petugas ambulan pemadam kebakaran ke Unit Gawat Darurat. Kesadaran compos mentis, mengerang kesakitan dengan suara serak. Manakah hal pertama yang harus dilakukan untuk menolong klien ini?",
+        "options": [
+            "Periksa adakah perubahan pharinx/larynx",
+            "Pasang infuse dengan jarum no 18 G",
+            "Hitung luas luka bakar dengan rumus 9 (rule of nine)",
+            "Berikan Oksigen therapi awal 2 lt/mnt"
+        ],
+        "answer": 0,
+        "explanation": "Pada korban luka bakar dengan riwayat inhalasi (rambut terbakar, suara serak), prioritas utama adalah Airway (jalan napas). Suara serak adalah tanda adanya edema laring atau cedera inhalasi yang dapat dengan cepat menyebabkan obstruksi jalan napas. Memeriksa dan memastikan patensi jalan napas, serta mengantisipasi kebutuhan intubasi dini jika ada tanda-tanda kompromi jalan napas, adalah yang paling krusial."
+    },
+    {
+        "question": "90. Seorang klien usia 56 tahun dirawat di bangsal penyakit dalam dengan diagnose Gagal Jantung Kongestif, dirawat karena asites. Terbangun malam hari karena tiba tiba terasa sesak saat tidur. Manakah tindakan mandiri yang akan anda lakukan untuk klien ini?",
+        "options": [
+            "Memberikan oksigen dengan nasal kanul",
+            "Mengingatkan penggunaan teknik nafas dalam bila sesak",
+            "Meninggikan posisi kepala tempat tidur",
+            "Menjelaskan perlunya pembatasan minum agar tidak sesak"
+        ],
+        "answer": 2,
+        "explanation": "Pasien gagal jantung yang mengalami sesak napas saat tidur (Paroxysmal Nocturnal Dyspnea - PND) atau orthopnea seringkali merasa lebih nyaman dan pernapasannya membaik dengan posisi duduk atau kepala ditinggikan. Meninggikan posisi kepala tempat tidur (misalnya dengan beberapa bantal atau mengatur tempat tidur ke posisi Fowler/semi-Fowler) membantu mengurangi venous return ke jantung dan paru, sehingga mengurangi kongesti paru dan meredakan sesak."
+    },
+    {
+        "question": "91. Klien berusia 55 tahun dirawat dengan diagnose Bronkopneumonia. Suhu tubuh 40°C, pernafasan cepat dan dangkal serta mengeluh sakit dada terutama bila batuk. Manakah cara yang tepat untuk membantu mengefektifkan pernafasan klien?",
+        "options": [
+            "Ajarkan untuk tetap menegakan dada dan kepala saat nafas",
+            "Gunakan penahan dada dengan bantal saat batuk",
+            "Ajarkan nafas dalam dan latihan batuk efektif",
+            "Bantu klien untuk tidur dalam posisi miring"
+        ],
+        "answer": 2,
+        "explanation": "Pada bronkopneumonia, sering terjadi penumpukan sekret di jalan napas yang menyebabkan batuk dan sesak. Mengajarkan napas dalam (untuk membuka alveoli) dan latihan batuk efektif (untuk mengeluarkan sekret) adalah cara yang tepat untuk membantu membersihkan jalan napas dan memperbaiki efektivitas pernapasan. Menggunakan bantal untuk menahan dada saat batuk (splinting) dapat mengurangi nyeri."
+    },
+    {
+        "question": "92. Seorang remaja dibawa ke UGD karena kecelakaan. Terdapat fraktur 1/3 distal tibia kanan dan dilakukan pembidaian sementara. Klien terlihat kesakitan dan hematoma di sekitar area fraktur. Setelah bidai terpasang, manakah tindakan utama yang sebaiknya akan anda lakukan?",
+        "options": [
+            "Cek pulsasi distal area fraktur",
+            "Tanyakan kembali perasaan nyerinya",
+            "Lihat simetrisitas kedua kaki",
+            "Observasi tanda kompartemen syndrome"
+        ],
+        "answer": 0,
+        "explanation": "Setelah pemasangan bidai pada fraktur ekstremitas, prioritas utama adalah memeriksa status neurovaskular distal dari area fraktur. Ini meliputi pengecekan pulsasi (nadi), warna kulit, suhu, sensasi, dan gerakan (capillary refill juga). Hilangnya pulsasi atau tanda-tanda gangguan sirkulasi lainnya adalah kondisi darurat yang memerlukan perhatian segera karena bisa mengindikasikan sindrom kompartemen atau cedera vaskular."
+    },
+    {
+        "question": "93. Klien berusia 34 tahun mengalami perdaran saluran cerna, muntah darah telah 4 kali dengan volume darah permuntah sekitar 1 gelas. Tekanan darah 80/60 mmHg. Hg Hb plasma 7,8mg/dL, rencana akan mendapatkan tranfusi. Manakah jenis transfusi darah yang kemungkinan akan diberikan?",
+        "options": [
+            "Packed red Cell",
+            "Whole blood",
+            "White blood cell",
+            "Fresh frozen plasma"
+        ],
+        "answer": 0,
+        "explanation": "Pasien mengalami perdarahan saluran cerna aktif dengan tanda-tanda syok hipovolemik (TD 80/60) dan anemia (Hb 7,8 g/dL). Tujuan utama transfusi dalam kondisi ini adalah untuk meningkatkan kapasitas angkut oksigen. Packed Red Cells (PRC) adalah pilihan utama karena menyediakan sel darah merah terkonsentrasi tanpa volume plasma yang berlebihan, sehingga efektif meningkatkan Hb dan oksigenasi jaringan dengan risiko overload cairan yang lebih rendah dibandingkan whole blood."
+    },
+    {
+        "question": "94. Klien dewasa, 24 tahun terpasang infus di pergelangan tangan. Tangan terlihat bengkak pada bagian proksimal infus dan klien mengeluh nyeri pada daerah tersebut. Manakah data pasti yang bisa menyatakan bahwa infus mengalami infiltrasi?",
+        "options": [
+            "Balutan infus lembab/basah",
+            "Tetesan infus lambat",
+            "Tetesan infus berhenti",
+            "Kaku pada sekitar tempat infus"
+        ],
+        "answer": 3,
+        "explanation": "Infiltrasi terjadi ketika cairan infus masuk ke jaringan subkutan di sekitar lokasi tusukan vena, bukan ke dalam vena. Tanda klasik infiltrasi meliputi pembengkakan di sekitar lokasi infus, kulit teraba dingin (karena cairan infus biasanya lebih dingin dari suhu tubuh), nyeri, dan kadang-kadang kekakuan atau rasa tegang pada area tersebut. Balutan basah bisa karena kebocoran, tetesan lambat/berhenti bisa karena banyak sebab. Namun, bengkak, dingin, dan kaku/nyeri sangat sugestif infiltrasi."
+    },
+    {
+        "question": "95. Korban trauma abdomen karena benturan benda tumpul, terlihat gelisah, tampak jejas lebam pada area thoraks dan lengan atas. Tekanan 80/50 mmHg, nadi 110x/menit dan pernafasan 24 x/menit. Tahap stabilisasi awal atas klien telah dilakukan. Monitoring apakah yang paling diperlukan pada klien ini?",
+        "options": [
+            "Tanda tanda vital",
+            "Saturasi oksigen",
+            "Tanda tanda pendarahan",
+            "Tingkat kesadaran"
+        ],
+        "answer": 0,
+        "explanation": "Pada korban trauma abdomen dengan tanda-tanda syok (TD 80/50, nadi 110x/menit, gelisah), monitoring tanda-tanda vital (tekanan darah, nadi, pernapasan, suhu) secara berkelanjutan dan sering adalah yang paling penting. Ini membantu menilai respons terhadap stabilisasi awal, mendeteksi perburukan kondisi (misalnya, perdarahan internal yang berlanjut), dan memandu intervensi lebih lanjut. Saturasi oksigen dan tingkat kesadaran juga penting dan merupakan bagian dari pengkajian tanda vital/status umum."
+    },
+    {
+        "question": "96. Seorang klien, usia 59 tahun dirawat karena stroke. Mengalami tetraparese, terdapat luka tekan di bagian bokong dengan diameter 5 cm. Luka tampak merah di bagian pinggir, agak pucat di bagian tengah. Manakah intervensi yang paling tepat untuk mencegah perburukan luka tersebut?",
+        "options": [
+            "Bersihkan dan rawat luka setiap hari",
+            "Program miring kiri-kanan telentang tiap 2 jam",
+            "Berikan pengalas lembut di bagian bokong",
+            "Bersihkan perineal dengan cairan antiseptic setiap BAB"
+        ],
+        "answer": 1,
+        "explanation": "Luka tekan (dekubitus) disebabkan oleh tekanan yang berkepanjangan pada area tertentu, yang mengganggu sirkulasi darah. Klien tetraparese memiliki risiko tinggi. Intervensi utama untuk mencegah perburukan (dan pembentukan luka baru) adalah mengurangi tekanan pada area yang berisiko dengan melakukan alih baring (miring kiri-kanan, telentang) secara teratur, idealnya setiap 2 jam. Perawatan luka juga penting, tapi pencegahan tekanan adalah kunci."
+    },
+    {
+        "question": "97. Seorang wanita berusia 50 tahun mengalami sesak nafas dan nyeri dada, dibawa ke UGD. Pernafasan 24 x/menit, nadi 100 x/menit. Saturasi oksigen pada oxymetry menunjukkan angka 90 mmHg. Manakah pemberian oksigen yang paling tepat?",
+        "options": [
+            "Masker sederhana",
+            "Kanule hidung",
+            "Masker rebreathing",
+            "Masker ventury"
+        ],
+        "answer": 1,
+        "explanation": "Dengan SpO2 90%, klien mengalami hipoksia ringan hingga sedang. Kanula hidung dapat memberikan aliran oksigen rendah (biasanya 1-6 L/menit) yang dapat meningkatkan FiO2 hingga sekitar 24-44%. Ini seringkali cukup untuk memperbaiki saturasi pada kondisi seperti ini, terutama sebagai langkah awal sambil mencari penyebab sesak dan nyeri dada lebih lanjut. Masker sederhana memberikan FiO2 sedikit lebih tinggi, rebreathing lebih tinggi lagi, dan Venturi untuk konsentrasi tepat."
+    },
+    {
+        "question": "98. Klien pria berusia 44 tahun, memiliki gagal jantung kiri dan sekarang terjadi efusi pleura. Manakah posisi tidur terbaik untuk klien ini?",
+        "options": [
+            "Semi Fowler's (setengah duduk)",
+            "Fowler's (duduk)",
+            "Sim's (miring)",
+            "Supine (terlentang)"
+        ],
+        "answer": 1,
+        "explanation": "Pada pasien gagal jantung dengan efusi pleura, posisi Fowler's (duduk tegak, 60-90 derajat) atau semi-Fowler's (30-45 derajat) adalah yang terbaik. Posisi ini membantu memaksimalkan ekspansi paru dengan memungkinkan diafragma turun sepenuhnya dan mengurangi tekanan isi abdomen pada diafragma. Ini juga membantu mengurangi venous return ke jantung. Duduk tegak (Fowler's) biasanya lebih efektif untuk sesak berat."
+    },
+    {
+        "question": "99. Seorang klien pria terpasang selang Water Seal Drainase (WSD) dengan sistem 2 botol. Saat klien bergerak, botol WSD tertarik hingga akhirnya tergelincir dan 1 botol yang berisi darah pecah. Manakah tindakan pertama yang harus anda lakukan?",
+        "options": [
+            "Sambungkan kembali ke botol yang utuh",
+            "Ganti dengan botol baru",
+            "Klem selang yang dekat dada",
+            "Lepaskan selang dari dada"
+        ],
+        "answer": 2,
+        "explanation": "Jika sistem WSD terputus atau botol pecah, tindakan pertama dan segera adalah mengklem selang dada yang berasal dari pasien (dekat dada) untuk mencegah masuknya udara ke rongga pleura (pneumotoraks). Setelah selang diklem, sistem WSD yang rusak harus segera diganti dengan yang baru dan steril."
+    },
+    {
+        "question": "100. Klien remaja riwayat tabrakan. Saat klien dibawa ke Unit Gawat Darurat (UGD), collar neck (penyangga leher) telah terpasang, terlihat tidak sadar, terdapat darah dalam mulut dan hidung pasien dan nafas terdengar mengorok. Manakah hal yang harus ada prioritaskan terlebih dahulu?",
+        "options": [
+            "Memasang jalan nafas buatan lewat mulut (gudel)",
+            "Memastikan tingkat kesadaran klien dengan cara memanggil",
+            "Melakukan suction ke dalam hidung dan mulut",
+            "Mencari sumbar perdarahan dan membersihkan darahnya"
+        ],
+        "answer": 2,
+        "explanation": "Napas mengorok (snoring) pada pasien tidak sadar menunjukkan adanya obstruksi jalan napas bagian atas, biasanya oleh lidah yang jatuh ke belakang. Darah dalam mulut dan hidung juga dapat menyumbat jalan napas. Prioritas utama adalah membersihkan jalan napas dengan melakukan suction (penyedotan) darah dan sekret. Setelah itu, jika obstruksi masih ada, pemasangan jalan napas buatan (gudel/OPA) mungkin diperlukan. Collar neck sudah terpasang untuk imobilisasi servikal."
+    },
+    {
+        "question": "101. Seorang perawat jarinya tertusuk jarum bekas pakai setelah melakukan pengambilan sampel darah. Manakah hal pertama yang harus dilakukan perawat tersebut?",
+        "options": [
+            "Meminta resep obat ARV pada dokter",
+            "Melakukan pemeriksaan darah HIV/AIDS",
+            "Melaporkan kejadian ini pada tim keselamatan kerja",
+            "Mencoba mengeluarkan darah dan desinfeksi bekas tusukan"
+        ],
+        "answer": 3,
+        "explanation": "Setelah tertusuk jarum bekas pakai (needlestick injury), tindakan pertama yang harus dilakukan adalah segera mencuci area yang tertusuk dengan air mengalir dan sabun, kemudian lakukan desinfeksi dengan antiseptik. Membiarkan darah mengalir sedikit (tidak memencet berlebihan) juga dianjurkan. Baru setelah itu melapor ke tim keselamatan kerja/PPI untuk penanganan lebih lanjut (profilaksis pasca pajanan jika diperlukan)."
+    },
+    {
+        "question": "102. Anda melihat teman sejawat anda tidak mencuci tangan saat akan mengganti balutan pasien. Apakah yang sebaiknya anda lakukan?",
+        "options": [
+            "Menegur sejawat tersebut",
+            "Mengingatkan untuk mencuci tangan",
+            "Menjelaskan tentang pencegahan umum",
+            "Menjelaskan pentingnya cuci tangan"
+        ],
+        "answer": 1,
+        "explanation": "Keselamatan pasien adalah tanggung jawab bersama. Jika melihat pelanggaran praktik kebersihan tangan yang berisiko menularkan infeksi, tindakan yang paling tepat dan langsung adalah mengingatkan sejawat tersebut untuk mencuci tangan sebelum melakukan tindakan. Ini dilakukan dengan cara yang sopan dan konstruktif, fokus pada keselamatan pasien."
+    },
+    {
+        "question": "103. Anda melihat senior melakukan cuci tangan, namun kurang benar, sementara senior tersebut akan merawat pasien di ruang isolasi bersama anda. Apakah hal terbaik yang akan anda katakan?",
+        "options": [
+            "Bu, sepertinya cuci tangannya, maaf",
+            "Sepertinya terburu-buru cuci tangannya?",
+            "“Bu, maaf, mengingatkan, sebaiknya cuci tangannya disempurnakan.",
+            "“Maaf bu, pasien isolasi sangat sensitif sebaiknya cuci tangan yang benar"
+        ],
+        "answer": 2,
+        "explanation": "Menyampaikan masukan kepada senior memerlukan kebijaksanaan. Pilihan C adalah yang paling sopan, tidak menghakimi, dan konstruktif. Menggunakan kata 'maaf, mengingatkan' dan 'sebaiknya disempurnakan' menunjukkan rasa hormat sambil tetap menyampaikan pesan penting tentang kebenaran teknik cuci tangan, terutama untuk pasien di ruang isolasi."
+    },
+    {
+        "question": "104. Pagi hari, biasanya aktifitas ruang rawat sangat sibuk. Manakah hal berbahaya bagi staf dan bagi pasien yang harus segera diatasi?",
+        "options": [
+            "Kabel elektroda EKG yang tidak teratur",
+            "Ketinggian tempat tidur yang tidak bisa diatur",
+            "Lantai basah tanpa diberi tanda licin",
+            "Roda tempat tidur tidak terkunci"
+        ],
+        "answer": 2,
+        "explanation": "Lantai basah tanpa tanda peringatan adalah bahaya langsung yang dapat menyebabkan staf, pasien, atau pengunjung terpeleset dan jatuh, mengakibatkan cedera. Ini adalah risiko keselamatan yang harus segera diatasi dengan membersihkan tumpahan dan memasang tanda lantai licin. Pilihan lain juga berpotensi bahaya, tetapi lantai basah adalah risiko jatuh yang akut dan universal."
+    },
+    {
+        "question": "105. Klien dengan meningitis, saat ini tingkat kesadaran gaduh gelisah, GCS(E3M5V3), cenderung akan melepas peralatan. Perawatan dan medis di tubuhnya. Apakah yang sebaiknya anda lakukan untuk klien ini?",
+        "options": [
+            "Memasang restrain (pengikat)",
+            "Menyarankan pemberian sedative",
+            "Memberikan penghalang lunak tempat tidur",
+            "Menyarankan keluarga memegangi pasien"
+        ],
+        "answer": 0,
+        "explanation": "Pasien gaduh gelisah dengan GCS rendah yang cenderung melepas peralatan medis (infus, kateter, dll.) berisiko membahayakan diri sendiri dan mengganggu terapi. Pemasangan restrain fisik mungkin diperlukan sebagai upaya terakhir untuk menjamin keselamatan pasien dan kelangsungan terapi, setelah upaya lain (seperti orientasi ulang, de-eskalasi, atau sedasi ringan jika diindikasikan) tidak berhasil atau tidak memadai. Penggunaan restrain harus sesuai protokol dan dengan pemantauan ketat."
+    },
+    {
+        "question": "106. Seorang klien baru dirawat di rumah sakit. Saat pertemuan pertama, seorang perawat menanyakan “Bagaimana perasaan ibu hari ini?”. Apakah tujuan dari kalimat tersebut?",
+        "options": [
+            "Klarifikasi perasaan",
+            "Membuka percakapan",
+            "Menanyakan perasaan",
+            "Mengevaluasi perasaan"
+        ],
+        "answer": 1,
+        "explanation": "Pertanyaan terbuka seperti 'Bagaimana perasaan ibu hari ini?' bertujuan untuk memulai interaksi, membangun hubungan terapeutik, dan memberikan kesempatan kepada pasien untuk mengungkapkan apa yang dirasakannya. Ini adalah cara yang baik untuk membuka percakapan dan menunjukkan kepedulian perawat."
+    },
+    {
+        "question": "107. Seorang keluarga klien mendatangi nurse station sambil marah marah dan mengancam dengan suara keras kepada anda. Bagaimanakah nada bicara anda sebaiknya dalam menanggapi klien di atas?",
+        "options": [
+            "Nada suara rendah volume rendah",
+            "Nada suara rendah dan volume tinggi",
+            "Volume suara keras dengan nada rendah",
+            "Volume tinggi dengan nada tinggi"
+        ],
+        "answer": 0,
+        "explanation": "Saat menghadapi seseorang yang marah dan berbicara keras, merespons dengan nada suara yang tenang, rendah, dan volume yang terkontrol (tidak berteriak balik) dapat membantu de-eskalasi situasi. Ini menunjukkan bahwa Anda tetap profesional, tidak terprovokasi, dan mencoba untuk mendengarkan serta memahami keluhan mereka."
+    },
+    {
+        "question": "108. Seorang wanita berusia 21 tahun dirawat di ruang rawat inap RS Jiwa. Saat makan siang, klien marah marah sambil melempar piring makan. perawat memutuskan untuk memasukkan klien ke ruang isolasi sambil berkata: “Jika kamu tidak marah seperti tadi lagi, akan segera dikeluarkan”. Apakah nama teknik terapi perilaku yang digunakan perawat tersebut?",
+        "options": [
+            "Positif reinforcement",
+            "Negative punishment",
+            "Negative reinforcement",
+            "Positive punishment"
+        ],
+        "answer": 1,
+        "explanation": "Negative punishment (hukuman negatif) terjadi ketika stimulus yang menyenangkan dihilangkan setelah perilaku yang tidak diinginkan muncul, dengan tujuan mengurangi kemungkinan perilaku tersebut terulang. Dalam kasus ini, kebebasan (stimulus menyenangkan) dihilangkan (dimasukkan ke ruang isolasi) akibat perilaku melempar piring (perilaku tidak diinginkan). Janji akan dikeluarkan jika tidak marah lagi adalah bagian dari strategi ini."
+    },
+    {
+        "question": "109. Bekerja sebagai Ners, terkadang harus mendelegasikan pekerjaan kepada sejawat dan bekerja sama dengan profesi lain. Manakah kalimat delegasi di bawah yang paling baik?",
+        "options": [
+            "Berikan amoxycilline 250 mg/oral bila pasien sadar",
+            "Bila pasien telah sadar penuh, berikan amoxycilline 250 mg/oral",
+            "Berikan obat bila pasien mulai sadar/oral amoxycilline 250 mg",
+            "Bantu pasien minum obat amoxycillin 250 mg bila telah sadar"
+        ],
+        "answer": 1,
+        "explanation": "Delegasi yang efektif harus jelas, spesifik, dan tidak ambigu. Kalimat 'Bila pasien telah sadar penuh, berikan amoxycilline 250 mg/oral' memberikan kriteria yang jelas (sadar penuh) untuk tindakan yang didelegasikan (pemberian amoxicillin 250 mg oral). Pilihan lain kurang spesifik mengenai tingkat kesadaran."
+    },
+    {
+        "question": "110. Seorang keluarga klien mendatangi perawat dan berkata “saya kecewa dengan pelayanan di sini, saya sudah bayar mahal, tapi tidak sesuai dengan pelayanannya”. Untuk mendapatkan gambaran yang lebih jelas tentang keluhan di atas, manakah respon profesional yang terbaik?",
+        "options": [
+            "“Maaf, pelayanan manakah yang mengecewakan bapak?”",
+            "“Maaf, maksud bapak, yang tidak baik apa ya?”",
+            "“Maaf, bila kami telah mengecewakan bapak",
+            "“Maaf, bila ada hal yang kurang berkenan di hati bapak”."
+        ],
+        "answer": 0,
+        "explanation": "Ketika menerima keluhan, langkah pertama adalah mendengarkan dengan empati dan mencoba memahami secara spesifik apa yang menjadi masalah. Bertanya 'Pelayanan manakah yang mengecewakan Bapak?' adalah cara yang profesional untuk menggali informasi lebih lanjut, menunjukkan bahwa Anda serius menanggapi keluhannya, dan membuka jalan untuk klarifikasi serta solusi."
+    },
+    {
+        "question": "111. Seorang laki laki, 27 tahun, dibawa keluarganya ke unit gawat darurat rumah sakit jiwa karena melakukan tindak kekerasan pada setiap orang yang ditemuinya. Hasil pemeriksaan psikiatri didapatkan pasien marah karena merasa dihina dan dimaki oleh tetangganya. Apakah masalah keperawatan utama yang terjadi pada pasien?",
+        "options": [
+            "Mencederai diri dan orang lain",
+            "Harga diri rendah",
+            "Marah",
+            "Perilaku kekerasan"
+        ],
+        "answer": 3,
+        "explanation": "Pasien dibawa karena melakukan tindak kekerasan, dan hasil pemeriksaan menunjukkan pasien marah. Perilaku kekerasan adalah manifestasi dari marah yang tidak terkontrol dan dapat membahayakan diri sendiri atau orang lain. Oleh karena itu, 'Perilaku kekerasan' adalah masalah keperawatan utama yang perlu segera ditangani untuk menjamin keselamatan."
+    },
+    {
+        "question": "112. Seorang klien wanita di ruang rawat kesehatan jiwa mengeluh dirinya tidak menarik, malu bertemu orang lain dan cenderung mengurung diri. Manakah cara perawat mengakhiri pembicaraan dengan klien yang paling tepat?",
+        "options": [
+            "“Bagaimana kalau kita bicara lagi tentang kemampuan yang dimiliki ibu saat ini?”",
+            "“Bagaimana perasaan ibu setelah kita berbincang tentang kemampuan positive yang ibu miliki?”",
+            "“Bagus sekali, sister senang, ibu masih dapat menyebutkan hal positive yang ibu miliki”",
+            "“Berapa lama kita bercakap tentang kemampuan terbaik yang dimiliki ibu?”"
+        ],
+        "answer": 1,
+        "explanation": "Mengakhiri sesi interaksi terapeutik sebaiknya melibatkan rangkuman singkat dari apa yang telah dibahas dan validasi perasaan klien terkait sesi tersebut. Pertanyaan 'Bagaimana perasaan ibu setelah kita berbincang tentang kemampuan positif yang ibu miliki?' memberikan kesempatan klien untuk merefleksikan pembicaraan, mengekspresikan perasaannya, dan memperkuat aspek positif yang telah diidentifikasi."
+    },
+    {
+        "question": "113. Di ruang rawat kesehatan jiwa, perawat sedang berbicara dengan klien: “Bila Ibu mendengar suara suara lagi, ibu bisa mencari suster untuk berbincang bincang. Suster ada di ruang jaga yaa...”. Apakah tujuan dari pernyataan suster tersebut?",
+        "options": [
+            "Bersikap terbuka, agar percaya diri",
+            "Penegasan kepada klien, perawat mempercayai klien",
+            "Meningkatkan kepercayaan klien, suster siap membantu",
+            "Menurunkan ketakutan klien, suster siap berjaga"
+        ],
+        "answer": 2,
+        "explanation": "Pernyataan perawat tersebut bertujuan untuk membangun trust (kepercayaan) dan menunjukkan bahwa perawat siap membantu klien ketika ia mengalami halusinasi ('mendengar suara-suara'). Ini juga memberdayakan klien dengan memberikan strategi koping (mencari suster) dan meyakinkan bahwa ada dukungan yang tersedia."
+    },
+    {
+        "question": "114. Seorang lanjut usia dibawa ke Unit Gawat Darurat, pasien terlihat nafas cepat dan dangkal, disorientasi, kulit kering dan panas. Apakah tindakan pertama yang paling tepat untuk pasien ini?",
+        "options": [
+            "Kaji jalan nafas, pernafasan dan sirkulasi",
+            "Kaji riwayat penyakit dan pencetusnya",
+            "Pasang infus dan lakukan pengkajian fisik",
+            "Berikan oksigen dan segera lakukan pengkajian"
+        ],
+        "answer": 0,
+        "explanation": "Dalam situasi gawat darurat, pendekatan ABC (Airway, Breathing, Circulation) adalah prioritas. Mengkaji jalan napas, pernapasan (frekuensi, kedalaman, usaha napas, suara napas), dan sirkulasi (nadi, tekanan darah, warna kulit, capillary refill) adalah langkah pertama untuk mengidentifikasi dan menangani kondisi yang mengancam jiwa. Gejala yang ada (napas cepat dangkal, disorientasi, kulit kering panas) bisa disebabkan berbagai hal, termasuk dehidrasi berat, heat stroke, atau infeksi."
+    },
+    {
+        "question": "115. Prosedur persiapan terapi kejang listrik (ECT) telah dilakukan dengan baik. Klien wanita berusia 24 tahun dinyatakan siap untuk ECT. Namun, saat memasuki ruang ECT, klien tampak wajah dan tangannya berkeringat. Apakah tindakan keperawatan utama yang harus dilakukan?",
+        "options": [
+            "Berikan penjelasan kembali, terapi ini tidak berbahaya",
+            "Tanyakan mengapa anda takut, banyak klien menjalani terapi ini",
+            "Tanyakan apa yang ditakutkan, berikan penjelasan",
+            "Dampingi klien, katakan anda pasti bisa"
+        ],
+        "answer": 2,
+        "explanation": "Wajah dan tangan berkeringat menunjukkan kecemasan. Tindakan keperawatan utama adalah menggali sumber kecemasan klien. Menanyakan 'Apa yang Anda takutkan?' atau 'Apa yang membuat Anda cemas?' memungkinkan klien mengungkapkan perasaannya. Setelah itu, perawat dapat memberikan penjelasan yang relevan, informasi yang menenangkan, atau klarifikasi untuk mengurangi ketakutannya sebelum prosedur ECT."
+    },
+    {
+        "question": "116. Seorang klien berusia 25 tahun, riwayat gagal kuliah, dirawat di rumah sakit jiwa. Saat jam makan siang, ia berjalan mondar mandir dengan wajah tegang, pandangan tajam ke arah pintu ruang makan dan menolak untuk makan. Berdasarkan data di atas, apakah masalah yang sedang dialami oleh klien ini?",
+        "options": [
+            "Halusinasi dengar",
+            "Halusinasi lihat",
+            "Waham Curiga",
+            "Waham Kebesaran"
+        ],
+        "answer": 2,
+        "explanation": "Perilaku klien (berjalan mondar-mandir, wajah tegang, pandangan tajam ke pintu, menolak makan) sangat sugestif adanya waham curiga (paranoid delusions). Klien mungkin merasa bahwa makanan telah diracuni atau ada ancaman di ruang makan, sehingga ia bersikap waspada, tegang, dan menolak makan. Halusinasi adalah persepsi sensorik tanpa stimulus eksternal."
+    },
+    {
+        "question": "117. Seorang pria berusia 30 tahun dirawat rumah sakit jiwa karena di rumah bicara sendiri, marah marah dan keluyuran. Klien baru pertama kali dirawat di rumah sakit jiwa dan mendapatkan pengobatan Haloperidol (HLP), Triheksifenidil (THP), Clorpromazine (CPZ). Klien ini juga memiliki penyakit Diabetes Melitus type 2. Setelah minum obat, klien mengalami kaku kuduk, tremor dan gejala ekstrapiramidal. Efek apakah yang menyebabkan klien mengalami gejala tersebut?",
+        "options": [
+            "Haloperidol (HLP)",
+            "Triheksilpenidil (THP)",
+            "Clorpromazine (CPZ)",
+            "Hipoglikemia"
+        ],
+        "answer": 0,
+        "explanation": "Haloperidol dan Chlorpromazine adalah antipsikotik tipikal yang memiliki risiko tinggi menyebabkan Gejala Ekstrapiramidal (EPS) seperti kaku kuduk, tremor, distonia, akathisia. Trihexyphenidyl (THP) adalah obat antikolinergik yang justru sering diberikan untuk mengatasi atau mencegah EPS yang disebabkan oleh antipsikotik. Jadi, HLP atau CPZ adalah penyebab EPS tersebut."
+    },
+    {
+        "question": "118. Seorang gadis (y) berusia 22 tahun, dirawat di rumah sakit jiwa karena tidak mau mandi dan selalu mengunci diri di kamar. Ketika perawat sore mengajak klien mandi, ia mengatakan Saya sudah mandi dan ganti baju, suster. Perawat mengatakan “Bagus sekali, y sudah mandi dan bersih”. Apakah teknik terapi perilaku yang digunakan oleh perawat kepada Nn.y?",
+        "options": [
+            "Positive reinforcement",
+            "Negative Punishment",
+            "Negative reinforcement",
+            "Positif Punishment"
+        ],
+        "answer": 0,
+        "explanation": "Positive reinforcement (penguatan positif) terjadi ketika stimulus yang menyenangkan (pujian 'Bagus sekali, y sudah mandi dan bersih') diberikan setelah perilaku yang diinginkan muncul (klien mengatakan sudah mandi, meskipun mungkin belum), dengan tujuan meningkatkan kemungkinan perilaku yang diinginkan (mandi dan menjaga kebersihan) akan terulang. Perawat memberikan pujian atas klaim positif klien."
+    },
+    {
+        "question": "119. Seorang pria berusia 66 tahun di panti werda mengeluh sulit tidur, tak nafsu makan. Klien tampak selalu murung, sedih berkepanjangan dan sulit diajak berfikir. Apakah kemungkinan masalah yang dialami klien di atas?",
+        "options": [
+            "Depresi",
+            "Stress",
+            "Cemas",
+            "Ketidakberdayaan"
+        ],
+        "answer": 0,
+        "explanation": "Gejala sulit tidur, tidak nafsu makan, murung, sedih berkepanjangan, dan kesulitan berpikir (konsentrasi) adalah gejala klasik dari depresi, terutama pada lansia. Keluhan-keluhan ini secara signifikan mempengaruhi kualitas hidup dan fungsi sehari-hari."
+    },
+    {
+        "question": "120. Seorang wanita berusia 68 tahun tampak sendirian, termenung sambil memandang langit langit di sebuah panti werda. Manakah pertanyaan pembuka yang tepat agar klien mengungkapkan perasaannya?",
+        "options": [
+            "Apakah ibu sedang sedih?”",
+            "Mengapa ibu senang sendiri?”",
+            "“Apa yang sedang ibu pikirkan?”",
+            "“Bagaimana perasaan ibu hari ini?”"
+        ],
+        "answer": 3,
+        "explanation": "Pertanyaan terbuka dan tidak menghakimi seperti 'Bagaimana perasaan Ibu hari ini?' atau 'Apa yang sedang Ibu pikirkan?' (Pilihan C juga baik) adalah cara yang baik untuk memulai percakapan dan mendorong klien untuk mengungkapkan perasaannya. Pilihan D secara langsung menanyakan perasaan, yang mungkin lebih efektif. 'Apakah ibu sedang sedih?' adalah pertanyaan tertutup dan sugestif. 'Mengapa ibu senang sendiri?' berasumsi klien senang."
+    },
+    {
+        "question": "121. Saat dinas di tempat bencana perawat menemui Bapak X. Bapak X tampak mengantuk, matanya merah dan sering menguap. Perawat berkata: “Bapak tampak lelah dan mengantuk?”. Apakah tujuan teknik komunikasi yang digunakan oleh perawat di atas?",
+        "options": [
+            "Menfokuskan",
+            "Menyatakan hasil observasi",
+            "Mengklarifikasi",
+            "Merefleksikan"
+        ],
+        "answer": 1,
+        "explanation": "Perawat melakukan observasi (melihat Bapak X mengantuk, mata merah, menguap) dan kemudian menyatakan hasil observasinya kepada Bapak X ('Bapak tampak lelah dan mengantuk?'). Ini adalah teknik komunikasi terapeutik yang disebut 'menyatakan hasil observasi' atau 'sharing observations', yang bertujuan untuk membuka percakapan dan memvalidasi persepsi."
+    },
+    {
+        "question": "122. Seorang klien berusia 69 tahun mengeluh sulit tidur malam hari. Klien memiliki DM type 2, hypertensi dan riwayat dyspepsia. Klien mengaku selalu tidur siang. Manakah anjuran yang paling tepat untuk mengatasi keluhan di atas?",
+        "options": [
+            "Minum air susu hangat sebelum tidur",
+            "Mengurangi waktu tidur di siang hari",
+            "Minum teh hangat sebelum tidur",
+            "Mendengarkan musik yang lembut sebelum tidur"
+        ],
+        "answer": 1,
+        "explanation": "Tidur siang yang terlalu lama atau terlalu sering dapat mengganggu pola tidur malam dan menyebabkan insomnia. Mengurangi atau menghindari tidur siang adalah salah satu intervensi perilaku (sleep hygiene) yang penting untuk membantu memperbaiki kualitas tidur malam."
+    },
+    {
+        "question": "123. Seorang klien dirawat karena penyakit Chron's. saat ini akan mendapatkan terapi Total Parenteral Nutrition (TPN) untuk 24 jam. Anda menyadari bahwa jumlah tersebut tidak akan habis dalam waktu tersebut. Apa yang sebaiknya anda lakukan?",
+        "options": [
+            "Cepatkan tetesannya",
+            "Hubungi kembali dokter",
+            "Sesuaikan tetesannya",
+            "Hitung ulang tetesannya"
+        ],
+        "answer": 1,
+        "explanation": "Jika perawat menyadari bahwa TPN tidak akan habis sesuai waktu yang diinstruksikan, dan jika tidak ada instruksi spesifik untuk menyesuaikan kecepatan, maka langkah yang paling tepat adalah menghubungi kembali dokter (atau ahli gizi/farmasi yang terlibat dalam peresepan TPN). Mempercepat atau memperlambat TPN tanpa instruksi dapat menyebabkan komplikasi metabolik (misalnya, hiperglikemia atau hipoglikemia). Dokter perlu mengkaji ulang dan memberikan instruksi yang sesuai."
+    },
+    {
+        "question": "124. Anda bekerja merawat 6 pasien dibantu oleh seorang mahasiswa perawat. Anda akan membimbing pekerjaan kepada mahasiswa perawat. Manakah pasien yang sebaiknya diarahnya untuk dilayani paling akhir oleh mahasiswa tersebut?",
+        "options": [
+            "Pasien berumur 55 tahun dengan DM, gula darah 189 mg/dL, makan pagi habis 1/3 porsi dan meminta teh manis",
+            "Pasien berumur 76 tahun dengan PPO, terapi O2 3 lt/mnt dan membutuhkan pengukuran tanda vital dan pencatatan SpO2",
+            "Pasien berumur 34 tahun dengan varicous vein dan membutuhkan perbaikan pemasangan perban elastis",
+            "Pasien berumur 71 tahun dengan perdarahan saluran cerna dan membutuhkan pispot"
+        ],
+        "answer": 2,
+        "explanation": "Dalam mendelegasikan tugas kepada mahasiswa, perawat harus mempertimbangkan stabilitas pasien dan kompleksitas tugas. Pasien C (varicous vein, butuh perbaikan perban) tampaknya paling stabil dan tugasnya relatif rutin dibandingkan yang lain. Pasien A (DM dengan gula darah tinggi dan permintaan khusus), B (PPOK dengan O2, butuh monitoring vital), dan D (perdarahan SC, butuh pispot) memerlukan pengawasan atau intervensi yang mungkin lebih kompleks atau segera."
+    },
+    {
+        "question": "125. Setelah membaca laporan dan mengikuti operan dinas (hand over) suatu pagi disimpulkan ada beberapa hal yang harus dikerjakan. Kondisi manakah yang sebaiknya ditindak lanjuti terlebih dahulu?",
+        "options": [
+            "Telepon dokter, meminta laksatif untuk klien yang belum BAB 2 hari.",
+            "Lapor dokter, klien terapi heparin dengan masa protrombine 48 detik",
+            "Linen/kasur tampak kotor, klien BAK di tempat tidur, minta dimandikan",
+            "Lakukan pengkajian keliling sambil mengontrol pemberian obat oral"
+        ],
+        "answer": 1,
+        "explanation": "Masa protrombin (PT) normal biasanya sekitar 11-13.5 detik. INR (International Normalized Ratio) adalah standar untuk memantau terapi heparin atau warfarin. Jika 'masa protrombine 48 detik' mengacu pada PT yang sangat memanjang atau aPTT (untuk heparin) yang sangat tinggi, ini menunjukkan risiko perdarahan yang signifikan. Kondisi ini perlu segera dilaporkan ke dokter untuk penyesuaian dosis heparin atau intervensi lain. Konstipasi 2 hari atau linen kotor kurang mendesak."
+    },
+    {
+        "question": "126. Seorang laki laki berusia 54 tahun, dirawat di bangsal penyakit dalam, terlihat pucat, sesak serta kelelahan. Pernafasan 32 x/ menit, terdengar ronchi pada kiri/ kanan paru, retraksi dada (+). Manakah masalah keperawatan utama yang paling tepat?",
+        "options": [
+            "Bersihan jalan nafas tidak efektif",
+            "Gangguan pertukaran gas",
+            "Intoleransi aktifitas",
+            "Pola nafas tidak efektif"
+        ],
+        "answer": 0,
+        "explanation": "Adanya ronchi pada kedua paru menunjukkan adanya sekret atau cairan di jalan napas. Ini, ditambah dengan sesak, pernapasan cepat, dan retraksi dada, mengarah pada diagnosis 'Bersihan jalan napas tidak efektif'. Sekret menghalangi aliran udara, menyebabkan gangguan pernapasan. Jika bersihan jalan napas tidak diatasi, bisa berlanjut ke gangguan pertukaran gas."
+    },
+    {
+        "question": "127. Di ruang UGD perawat klien dengan luka bakar mayor. Perawat telah melakukan pembersihan luka di daerah dada dan abdomen dengan NaCl 0,9% dan ditutp dengan Silversulfadiazine dan balutan kasa steril. Manakah dokumentasi di bawah ini yang paling tepat?",
+        "options": [
+            "Luka bakar di dada dan abdomen di rawat dengan NaCl 0,9%, dioles silversulfadiazine dan ditutup kasa steril (09.00) 12/01/10-Ns. Samsom",
+            "Luka bakar grade II-III di dada dan abdomen dibersihkan dengan NaCl 0,9%, diolesi Silversulfadiazine dan ditutup dengan kasa steril-Ns. Samsom",
+            "Luka bakar grade II-III di dada dan abdomen dibersihkan dengan NaCl 0,9%, diolesi Silversulfadiazine dan ditutup dengan kasa steril- 09.00-12/01/10-Ns. Samsom",
+            "Merawat luka bakar dengan NaCl 0,9% dan silversulfadiazine. 09.00 (12/01/10). Ns. Samsom"
+        ],
+        "answer": 2,
+        "explanation": "Dokumentasi yang baik harus lengkap, akurat, dan informatif. Pilihan C mencakup: jenis/derajat luka bakar (grade II-III), lokasi (dada dan abdomen), tindakan yang dilakukan (dibersihkan dengan NaCl 0,9%, diolesi Silversulfadiazine, ditutup kasa steril), waktu tindakan (09.00), tanggal (12/01/10), dan identitas perawat (Ns. Samsom). Penambahan durasi (misalnya -12/01/10) bisa merujuk pada periode dinas atau validitas order, tapi informasi inti sudah ada."
+    },
+    {
+        "question": "128. Perawat sirkuler sedang mengikuti operasi laparotomi ekploratif diminta membantu sementara membantu mencatat hasil monitoring tanda vital oleh dokter anesthesi. Apakah rasional dari tindakan monitoring tersebut?",
+        "options": [
+            "Nyeri dapat meningkatkan frequensi nadi",
+            "Lingkungan yang dingin dapat meyebabkan vasokontriksi pembuluh darah",
+            "Prosedur pembedahan tersebut menyebabkan kehilangan darah yang banyak",
+            "Efek anestesi umum dapat membuat vasodilatasi pembuluh darah"
+        ],
+        "answer": 3,
+        "explanation": "Anestesi umum memiliki efek depresan pada sistem kardiovaskular dan pernapasan. Obat-obat anestesi dapat menyebabkan vasodilatasi, penurunan kontraktilitas miokard, dan depresi pernapasan. Oleh karena itu, pemantauan tanda vital (tekanan darah, nadi, SpO2, laju napas, suhu) secara ketat dan berkelanjutan oleh dokter anestesi sangat penting untuk mendeteksi dan mengatasi perubahan hemodinamik atau pernapasan selama operasi."
+    },
+    {
+        "question": "129. Saat anda sedang mengganti balutan klien anak usia 6 tahun 4 bulan, anak tersebut menangis dan menjerit dengan keras. Bagaimanakah tindakan anda sebaiknya?",
+        "options": [
+            "Berhenti sejenak dan meminta bantuan perawat lain untuk memegangi daerah luka sambil mendistraksi anak",
+            "Berhenti sejenak dan melibatkan ibu dari anak tersebut untuk menenangkan dan mengalihkan perhatian anak",
+            "Berhenti sejenak, meminta perawat lain untuk mengambilkan benda kesayangannya",
+            "Tersenyum kepada anaknya, mengelus kepala dan menghentikan kegiatan sementara, menanyakan mengapa menangis"
+        ],
+        "answer": 1,
+        "explanation": "Perawatan luka bisa menakutkan dan menyakitkan bagi anak. Melibatkan orang tua (ibu) dapat memberikan rasa aman dan kenyamanan bagi anak. Ibu dapat membantu menenangkan anak, mengalihkan perhatiannya (misalnya dengan cerita atau mainan), sementara perawat melanjutkan prosedur dengan lebih cepat dan efisien. Ini adalah pendekatan yang berpusat pada keluarga dan mengurangi trauma pada anak."
+    },
+    {
+        "question": "130. Seorang anak berusia 12 tahun dirawat dibangsal bedah, pasca apendictomy. Hari pertama, tampak murung, pagi itu ia menolak minum obat. Manakah sikap terbaik yang seharusnya dilakukan perawat?",
+        "options": [
+            "Menanyakan kepada kenapa pagi ini tampak murung dan menerangkan bahayanya bila obat tidak diminum",
+            "Menanyakan kondisinya, menawarkan bantuan dan meyakinkan kembali perlunya minum obat",
+            "Menanyakan kepada kenapa pagi ini tampak murung dan tidak mau minum obat dan dampingi saat waktunya minum obat",
+            "Menasehatkan bahwa minum obat adalah untuk kebaikan dirinya dan meninggalkan obat dengan air minumnya di meja pasien"
+        ],
+        "answer": 2,
+        "explanation": "Ketika pasien, terutama anak, menolak minum obat, penting untuk menggali alasannya dengan empati. Menanyakan mengapa ia murung dan tidak mau minum obat membuka dialog. Kemudian, perawat dapat memberikan penjelasan yang sesuai dengan usia anak tentang pentingnya obat tersebut dan mendampingi saat ia minum obat untuk memberikan dukungan dan memastikan obat diminum."
+    },
+    {
+        "question": "131. Seorang klien berusia 70 tahun, 2 mingguyang lalu didiagnosis TB paru. Perawat melakukan kunjungan rumah rutin untuk memantau perkembangan kesehatan klien. Bagaimanakah cara perawat untuk mencegah penularan saat memeriksa pernafasan klien yang tepat?",
+        "options": [
+            "Meminta Bp.A untuk menahan batuk saat diperiksa",
+            "Menjaga jarak sekitar 50 cm dari pasien saat pemeriksaan",
+            "Pemeriksaan dilakukan di tempat terbuka",
+            "Pemeriksaan dilakukan dari arah samping klien"
+        ],
+        "answer": 1,
+        "explanation": "TB Paru menular melalui droplet nuclei yang dikeluarkan saat pasien batuk, bersin, atau berbicara. Saat memeriksa pernapasan pasien TB, perawat harus menggunakan Alat Pelindung Diri (APD) yang sesuai, terutama masker N95 atau yang setara. Menjaga jarak juga penting, tetapi pilihan yang paling efektif untuk pencegahan penularan saat kontak dekat adalah penggunaan masker yang adekuat oleh perawat. Meminta pasien menahan batuk saat pemeriksaan juga membantu mengurangi penyebaran droplet."
+    },
+    {
+        "question": "132. Ibu H memiliki bayi laki laki berusia 5 bulan yang sedang mengalami infeksi saluran pernafasan atas (ISPA). Ibu H biasa langsung diajarkan secara turun temurun dan tidak ada masalah. Apakah yang harus dilakukan pertama kali oleh perawat kepada ibu H?",
+        "options": [
+            "Menjelaskan dampak dari tindakan yang dilakukan ibu",
+            "Menganjurkan berkumur setelah tindakan",
+            "Menanyakan apakah ibu tahu bahaya dari tindakan tersebut",
+            "Menjelaskan cara lain yang lebih baik secara langsung"
+        ],
+        "answer": 2,
+        "explanation": "Kalimat soal ini agak membingungkan ('Ibu H biasa langsung diajarkan secara turun temurun dan tidak ada masalah'). Asumsinya adalah Ibu H melakukan suatu tindakan tradisional untuk mengatasi ISPA bayi. Langkah pertama perawat adalah mengkaji pemahaman Ibu H tentang tindakan yang dilakukannya dan potensi bahayanya. Menanyakan 'Apakah Ibu tahu bahaya dari tindakan tersebut?' (jika tindakan itu berisiko) atau 'Bisa Ibu ceritakan apa yang biasa Ibu lakukan dan mengapa?' akan membuka diskusi dan memungkinkan perawat memberikan edukasi yang tepat."
+    },
+    {
+        "question": "133. Anak berusia 3 tahun, sedang mengalami diare yakni buang air besar lebih dari 3 kali, cair dengan butiran seperti biji cabe. Keluarga tidak memperdulikan hal tersebut. Keluarga berpendapat bahwa diare pada anak adalah pertanda kemampuan anak akan bertambah. Bagaimanakah saran terbaik difokuskan untuk keluarga anak dalam kondisi di atas?",
+        "options": [
+            "Mengajarkan cara cuci tangan yang baik dan benar",
+            "Menganjurkan keluarga mencatat banyaknya cairan yang keluar",
+            "Memenuhi keinginan anak agar tidak rewel",
+            "Menganjurkan tetap memberikan makan dan minum sebaik mungkin"
+        ],
+        "answer": 3,
+        "explanation": "Persepsi keluarga bahwa diare adalah pertanda baik sangat keliru dan berbahaya. Prioritas utama adalah mengoreksi miskonsepsi ini dan menekankan pentingnya rehidrasi dan nutrisi selama diare. Menganjurkan keluarga untuk tetap memberikan makan dan minum (terutama cairan seperti ASI, oralit, atau kuah sayur) adalah krusial untuk mencegah dehidrasi dan mempercepat pemulihan. Mengajarkan tanda bahaya diare juga penting."
+    },
+    {
+        "question": "134. Seorang ibu berusia 40 tahun sedang hamil 8 bulan, mengalami bengkak di daerah ekstremitas bagian bawah. Masyarakat setempat beranggapan bahwa ibu hamil yang mengalami pembengkakan harus dibatasi minumnya karena kelebihan air, sementara ibu hamil juga dilarang meninggikan kakinya karena bayi akan menjauhi jalan lahir. Apakah tindakan terpentingyang sebaiknya dilakukan perawat?",
+        "options": [
+            "Menginformasikan penyebab pembengkakan",
+            "Memberikan cara alternatif untuk menghilangkan pembengkakan",
+            "Membiarkan ibu mengikuti anjuran masyarakat",
+            "Mempengaruhi ibu untuk melanggar anjuran masyarakat yang salah"
+        ],
+        "answer": 0,
+        "explanation": "Bengkak pada ekstremitas bawah saat hamil tua bisa fisiologis atau patologis (misalnya, preeklamsia). Keyakinan masyarakat tentang pembatasan minum dan larangan meninggikan kaki adalah salah dan berpotensi membahayakan. Tindakan terpenting perawat adalah memberikan informasi yang benar mengenai penyebab pembengkakan (jika fisiologis, normal karena tekanan uterus; jika patologis, perlu evaluasi lebih lanjut), menjelaskan bahwa pembatasan minum justru berbahaya, dan menganjurkan cara yang aman untuk mengurangi bengkak (seperti meninggikan kaki saat istirahat, senam kaki ringan, hindari berdiri terlalu lama)."
+    },
+    {
+        "question": "135. Seorang laki lai berusia 79 tahun kontrol rawat jalan karena hipertensi. Klien harus teratur minum obat untuk mempertahankan tekanan darahnya. Klien sudah memiliki tanda tanda penururunan fungsi kognitif, ditandai dengan sering lupa terhadap hari atau meletakkan kacamata. Untuk menjaga keamanan pengobatan hipertensi, apakah hal terpenting yang harus disampaikan kepada keluarga?",
+        "options": [
+            "Menjelaskan cara minum obat yang aman",
+            "Menempatkan obat untuk satu kali minum dalam tempatnya",
+            "Memberi nomor obat sesuai tanggal dan waktu minum obat",
+            "Meminta anggota keluarga untuk memantau klien minum obat"
+        ],
+        "answer": 3,
+        "explanation": "Dengan adanya penurunan fungsi kognitif (sering lupa), kepatuhan minum obat menjadi berisiko. Melibatkan anggota keluarga untuk membantu memantau dan memastikan klien minum obat secara teratur dan benar adalah strategi yang paling penting untuk menjaga keamanan dan efektivitas pengobatan hipertensi. Keluarga dapat membantu menyiapkan obat, mengingatkan, atau bahkan memberikan obat jika diperlukan."
+    },
+    {
+        "question": "136. Seorang ibu datang ke klinik tumbuh kembang anak, mengeluh bahwa anaknya yang berusia 2,5 tahun sering cedera di rumah akibat jatuh atau memainkan benda benda di sekitar rumah. Manakah nasehat utama di bawah ini yang paling tepat diberikan?",
+        "options": [
+            "Menempatkan anak pada ruangan khusus",
+            "Menciptakan lingkunganyang aman",
+            "Selalu mengawasi dengan ketat aktifitas anak",
+            "Melatih anak untuk konsentrasi"
+        ],
+        "answer": 1,
+        "explanation": "Anak usia 2,5 tahun secara alami aktif, eksploratif, dan belum sepenuhnya memahami bahaya. Nasehat utama untuk mencegah cedera adalah menciptakan lingkungan rumah yang aman (childproofing). Ini meliputi menyingkirkan benda berbahaya, memasang pengaman pada tangga atau jendela, menutup stop kontak, menyimpan bahan kimia di tempat terkunci, dll. Meskipun pengawasan penting, menciptakan lingkungan aman mengurangi risiko cedera bahkan saat pengawasan sesaat lengah."
+    },
+    {
+        "question": "137. Anak usia 6 tahun, dirawat di RS dengan keluhan sesak, pilek, malas makan, batuk berdahak kental berwarna hijau. Vital sign: RR 35x/mnt, HR 80 x/mnt, BP 100/70 mmHg, T 38,5 C. Klien mengeluh kadang nyeri dada jika batuk. Perawat menetapkan diagnosa bersihan jalan nafas tidak efektif. Apakah etiology dari diagnosa di atas yang benar?",
+        "options": [
+            "Penurunan ekspansi paru",
+            "Hipersekresi mucus",
+            "Vasodilatasi bronkus",
+            "Spasme bronkus"
+        ],
+        "answer": 1,
+        "explanation": "Bersihan jalan napas tidak efektif pada kasus ini disebabkan oleh produksi mukus (dahak) yang berlebihan dan kental (hipersekresi mukus), yang sulit dikeluarkan oleh anak. Dahak kental berwarna hijau menunjukkan adanya infeksi bakteri. Akumulasi mukus ini menyumbat jalan napas dan mengganggu aliran udara."
+    },
+    {
+        "question": "138. Seorang ibu berusia 31 tahun datang ke klinik bersalin dengan riwayat sebagai berikut: abortus pada kehamilan 12 minggu tahun 2000; lahir normal anak laki laki pada tahun 2002; kelahiran anak perempuan prematur 33 minggu pada tahun 2005. Bagaimanakah pencatatan paritas yang benar pada klien di atas?",
+        "options": [
+            "Gravida 3 para 2",
+            "Gravida 2 para 3",
+            "Gravida 4 para 4",
+            "Gravida 3 para 3"
+        ],
+        "answer": 0,
+        "explanation": "Gravida (G) adalah jumlah kehamilan, termasuk kehamilan saat ini (jika ada) dan semua kehamilan sebelumnya, tanpa memandang hasilnya. Para (P) adalah jumlah kelahiran hidup setelah usia kehamilan viabel (biasanya >20 minggu). Dalam kasus ini: Abortus 2000 (G1, P0). Lahir normal 2002 (G2, P1). Lahir prematur 2005 (G3, P2). Jadi, jika ibu tidak sedang hamil saat ini, statusnya adalah G3P2. Jika ia sedang hamil, menjadi G4P2. Pilihan yang paling mendekati dan umum digunakan jika tidak ada informasi kehamilan saat ini adalah Gravida 3 Para 2 (menghitung jumlah kehamilan yang pernah dialami dan jumlah kelahiran hidup >20 minggu)."
+    },
+    {
+        "question": "139. Saat pembukaan lengkap, apakah yang dianjurkan penolong persalinan kepada ibu yang akan melahirkan?",
+        "options": [
+            "Menganjurkan ibu untuk mengedan sesuai dorongan alamiahnya",
+            "Meningkatkan koping terhadap stimulus ketidaknyaman pada kala dua",
+            "Menganjurkan istirahat diantara kontraksi",
+            "Melakukan manajemen nyeri persalinan dengan melibatkan keluarga"
+        ],
+        "answer": 0,
+        "explanation": "Pada kala dua persalinan (pembukaan lengkap), ibu dianjurkan untuk mengedan (meneran) secara efektif saat ada kontraksi dan dorongan untuk mengedan. Mengedan sesuai dengan dorongan alamiah tubuh dan dipandu oleh penolong persalinan akan membantu proses penurunan dan kelahiran bayi. Istirahat di antara kontraksi penting untuk menghemat energi."
+    },
+    {
+        "question": "140. Bayi lahir cukup bulan, lahir normal, mekoneum ibu jernih, tonus otot bayi dan menangis spontan dilakukan penghisapan lendir. Manakah bahaya yang harus diperhatikan pada tindakan tersebut?",
+        "options": [
+            "Henti bernafas",
+            "Apgar menurun",
+            "Bradikardi",
+            "Tachicardia"
+        ],
+        "answer": 2,
+        "explanation": "Penghisapan lendir (suctioning) pada bayi baru lahir, jika dilakukan terlalu agresif atau terlalu dalam, dapat merangsang saraf vagus. Stimulasi vagal dapat menyebabkan bradikardia (penurunan denyut jantung) pada bayi. Oleh karena itu, suctioning harus dilakukan dengan hati-hati, tidak terlalu lama, dan dengan tekanan yang sesuai, sambil memantau denyut jantung bayi."
+    },
+    {
+        "question": "141. Klien wanita datang ke klinik bersalin mengeluh mual di pagi hari, merasa mudah lelah dan merasa ada perubahan di payudaranya. Klien mengatakan bulan ini tidak menstruasi. Test kehamilan menunjukkan hasil positive. Nasehat manakah yang paling tepat untuk mengurangi rasa lelah klien?",
+        "options": [
+            "Berhenti dari kegiatan rutin",
+            "Sarankan mengambil cuti kerja",
+            "Atur kegiatan dengan jeda istirahat",
+            "Berikan vitamin dan suplemen dua kali dosis"
+        ],
+        "answer": 2,
+        "explanation": "Kelelahan adalah keluhan umum pada awal kehamilan. Nasehat yang paling tepat adalah mengatur aktivitas sehari-hari dengan menyisipkan jeda istirahat yang cukup. Tidur siang singkat jika memungkinkan, dan memastikan tidur malam yang berkualitas juga membantu. Menghentikan kegiatan rutin atau cuti kerja mungkin tidak selalu praktis atau diperlukan, kecuali kelelahan sangat berat."
+    },
+    {
+        "question": "142. Klien hamil 32 minggu mengeluh sesak nafas, sakit kepala, penglihatan kabur, bengkak pada kedua tungkai. Apakah tindakan yang tepat untuk klien di atas?",
+        "options": [
+            "Memberikan pendidikan kesehatan",
+            "Melakukan pengukuran tekanan darah",
+            "Melakukan pemeriksaan refleksi patela",
+            "Menganjurkan rawat inap"
+        ],
+        "answer": 1,
+        "explanation": "Gejala sesak napas, sakit kepala, penglihatan kabur, dan bengkak pada ibu hamil 32 minggu adalah tanda-tanda bahaya yang sangat sugestif preeklamsia berat. Tindakan pertama yang paling penting adalah segera mengukur tekanan darah klien. Jika tekanan darah tinggi, ini akan mengkonfirmasi kecurigaan preeklamsia dan memerlukan tindakan segera, termasuk kemungkinan rujukan atau rawat inap."
+    },
+    {
+        "question": "143. Seorang perempuan sedang dirawat di ruang bersalin dan baru saja melahirkan anak keduanya. Saat ini bayi baru lahir sedang ditaruh di dada ibu untuk proses inisiasi menyusui dini. Suntikan oksitosin di paha luar pasien diberikan dan kontraksi uterus sedang diperiksa. Apakah intervensi keperawatan selanjutnya?",
+        "options": [
+            "Melahirkan plasenta",
+            "Mengecek adanya pendarahan",
+            "Mengecek kemungkinan bayi kembar",
+            "Memberikan vitami K kepada bayi"
+        ],
+        "answer": 0,
+        "explanation": "Setelah bayi lahir dan oksitosin diberikan untuk merangsang kontraksi uterus (manajemen aktif kala III), intervensi selanjutnya adalah menunggu dan membantu proses pelahiran plasenta. Tanda-tanda pelepasan plasenta (semburan darah tiba-tiba, tali pusat memanjang, uterus menjadi globuler dan naik) akan dipantau. Setelah plasenta lahir, baru dilakukan pemeriksaan kelengkapan plasenta dan penjahitan robekan jika ada."
+    },
+    {
+        "question": "144. Di ruang persalinan, seorang ibu sedang dalam observasi proses melahirkan. Kontraksi semakin sering dan lama, tiba tiba pasien mengeluh seperti ngompol. Setelah diperiksa, ternyata ketuban telah pecah. Manakah hal penting yang harus diperiksa dan dicatat perawat berkaitan dengan cairan amnion tersebut?",
+        "options": [
+            "Warna",
+            "Temperatur",
+            "Bau",
+            "Konsistensi"
+        ],
+        "answer": 0,
+        "explanation": "Setelah ketuban pecah, hal penting yang harus segera diperiksa dan dicatat adalah warna cairan amnion. Warna normalnya jernih atau sedikit keruh. Warna kehijauan (tercampur mekonium) dapat mengindikasikan gawat janin. Jumlah, bau, dan waktu pecahnya ketuban juga penting dicatat, tetapi warna adalah indikator klinis yang krusial."
+    },
+    {
+        "question": "145. Seorang ibu yang sedang dalam periode menyusui, konsultasi ke dokter dan mendapat terapi antibiotik dari dokter. Mengetahui hal tersebut, perawat memberikan konsultasi kepada klien. Manakah saran minum obat yang tepat?",
+        "options": [
+            "30-60 menit setelah menyusui",
+            "30-60 menit sebelum menyusui",
+            "90-120 menit sebelum menyusui",
+            "90-120 menit setelah menyusui"
+        ],
+        "answer": 0,
+        "explanation": "Untuk meminimalkan paparan bayi terhadap antibiotik melalui ASI, disarankan agar ibu minum obat segera setelah selesai menyusui. Ini memberikan waktu bagi obat untuk dimetabolisme dan kadarnya dalam ASI menurun sebelum sesi menyusui berikutnya. Pilihan A (30-60 menit setelah menyusui) adalah interval yang masuk akal. Saran spesifik bisa berbeda tergantung jenis antibiotik dan waktu paruhnya."
+    },
+    {
+        "question": "146. Seorang ibu berusia 32 tahun, melahirkan anak pertama secara spontan, dengan perineum derajat III. Hasil follow up hari ke lima post partum tanda REDA negatif. Apakah arti dari keadaan di atas?",
+        "options": [
+            "Mengalami infeksi",
+            "Luka masih terbuka",
+            "Mengalami selulitis",
+            "Sembuh primer"
+        ],
+        "answer": 3,
+        "explanation": "REDA adalah akronim yang digunakan untuk menilai penyembuhan luka perineum: Redness (kemerahan), Edema (bengkak), Ecchymosis (memar), Discharge (cairan/nanah), Approximation (kerapatan tepi luka). Jika tanda REDA negatif pada hari kelima, ini menunjukkan tidak ada tanda-tanda infeksi atau komplikasi, dan luka menyembuh dengan baik (sembuh primer)."
+    },
+    {
+        "question": "147. Seorang ibu baru memiliki bayi pertamanya. Pengajaran perawatan bayi di rumah telah diajarkan. Saat ini klien akan pulang dari rumah sakit dengan bayinya. Manakah jawaban dari klien yang mengindikasikan bahwa klien telah memahami prinsip pencegahan infeksi tali pusat yang benar?",
+        "options": [
+            "Bayi harus dipakaikan gurita yang kering",
+            "Menjaga sekitar tali pusar selalu bersih dan kering",
+            "Kompres tali pusar dengan alkohol",
+            "Periksa kulit perut bayi setiap hari setelah mandi"
+        ],
+        "answer": 1,
+        "explanation": "Prinsip utama perawatan tali pusat adalah menjaganya tetap bersih dan kering untuk mencegah infeksi dan mempercepat proses pengeringan serta pelepasan. Penggunaan alkohol atau antiseptik lain tidak lagi direkomendasikan secara rutin kecuali ada indikasi khusus. Membiarkan tali pusat terbuka (tidak ditutup gurita atau popok) dan menjaga area sekitarnya bersih adalah praktik terbaik."
+    },
+    {
+        "question": "148. Seorang ibu dengan kelahiran pervaginam mengalami robekan perineum dan telah dijahit. Hari kedua kelahiran akan dilakukan perawatan perineum. Manakah posisi yang paling nyaman dan aman untuk intervensi tersebut?",
+        "options": [
+            "Posisi dorsal recumben",
+            "Posisi litotomi",
+            "Posisi Sims",
+            "Posisi supine"
+        ],
+        "answer": 2,
+        "explanation": "Posisi Sims (miring ke kiri dengan lutut kanan ditekuk ke arah dada) memberikan paparan yang baik pada area perineum untuk inspeksi dan perawatan, sekaligus relatif nyaman bagi ibu pasca melahirkan. Posisi litotomi lebih sering digunakan saat persalinan atau penjahitan, dan mungkin kurang nyaman untuk perawatan rutin. Dorsal recumbent juga bisa, tapi Sims sering lebih disukai untuk akses dan kenyamanan."
+    },
+    {
+        "question": "149. Remaja A usia 16 tahun dirawat di rumah sakit karena leukimia. Pasca pengobatan kemoterapi A tampak murung, rambutnya rontok(alopesia). Manakah komunikasi yang pertama kali sebaiknya diucapkan?",
+        "options": [
+            "Selamat pagi A, bagaimana kabarnya hari ini?",
+            "Halo A, apa yang bisa dibantu oleh suster?”",
+            "“Masalah apa yang sedang dihadapi A?”",
+            "A sedang sedih, ya?"
+        ],
+        "answer": 0,
+        "explanation": "Membuka komunikasi dengan sapaan umum yang ramah dan menanyakan kabar ('Selamat pagi A, bagaimana kabarnya hari ini?') adalah cara yang baik untuk memulai interaksi, menunjukkan kepedulian, dan memberikan kesempatan kepada remaja tersebut untuk merespons sesuai dengan perasaannya. Ini tidak langsung mengasumsikan masalah atau kesedihan, tetapi membuka pintu untuk diskusi lebih lanjut jika A ingin berbagi."
+    },
+    {
+        "question": "150. Saat berdinas di posyandu seorang ibu bertanya kepada perawat”Bu, sekarang mainan kan banyak sekali dijual, bagaimanakah mainan yang baik bagi anak?”. Manakah jawaban awal yang paling tepat untuk menjawab pertanyaan di atas?",
+        "options": [
+            "Tidak tajam",
+            "Sesuai usia anak",
+            "Tidak berbahaya",
+            "Tidak dapat tertelan"
+        ],
+        "answer": 1,
+        "explanation": "Kriteria utama dalam memilih mainan yang baik dan aman untuk anak adalah kesesuaian dengan usia dan tahap perkembangan anak. Mainan yang sesuai usia akan menstimulasi perkembangan anak secara optimal dan juga mempertimbangkan aspek keamanan (misalnya, tidak ada bagian kecil yang bisa tertelan untuk bayi, bahan tidak beracun). Kriteria lain seperti 'tidak tajam' atau 'tidak berbahaya' adalah bagian dari pertimbangan kesesuaian usia."
+    },
+    {
+        "question": "151. Seorang anak usia 2 tahun dibawa oleh ibunya ke puskesmas dengan keluhan batuk pilek sejak 1 minggu yang lalu. Saat anak masih dalam gendongan ibunya, perawat akan memulai pengkajian. Apakah data pengamatan awal yang sangat penting didapatkan sebelum melangkah pada pengkajian berikutnya?",
+        "options": [
+            "Kemampuan menghisap",
+            "Rewel/gelisah",
+            "Tarikan dinding dada",
+            "Kesadaran"
+        ],
+        "answer": 2,
+        "explanation": "Pada anak dengan keluhan batuk pilek, pengamatan adanya tarikan dinding dada (retraksi interkostal, subkostal, atau suprasternal) adalah tanda penting adanya distres pernapasan atau kesulitan bernapas. Ini menunjukkan bahwa anak menggunakan otot bantu napas dan bisa menjadi indikasi kondisi yang lebih serius seperti pneumonia. Ini adalah data observasi awal yang krusial."
+    },
+    {
+        "question": "152. Anak berumur 2 tahun dirawat karena diare, pada saat anak akan dipasang infus maka perlu dipasang pengikat. Apakah jenis pengikatan yang aman saat akan dilakukan pemasangan infus?",
+        "options": [
+            "Mumi",
+            "Jaket",
+            "Lengan jaket sikut",
+            "Papan lengan (armboard)"
+        ],
+        "answer": 3,
+        "explanation": "Untuk mengamankan infus pada anak kecil yang aktif dan mungkin mencoba mencabutnya, penggunaan papan lengan (armboard) adalah metode yang umum dan aman. Papan lengan membantu mengimobilisasi sendi di dekat lokasi infus (misalnya, pergelangan tangan atau siku) sehingga mengurangi risiko kanula infus bergeser atau tercabut. Istilah 'mumi' atau 'jaket' kurang spesifik untuk pengamanan infus. *Catatan: Jawaban ini mengasumsikan 'papan lengan' sebagai interpretasi terbaik dari pilihan yang ada, karena 'lengan jaket sikut' tidak standar.*"
+    },
+    {
+        "question": "153. Seorang anak mendapat order 50 mg Amoxycillin trihydrate oral. Syrup Amoxycillin tryhidrate tersedia tersedia 125 mg dalam 5 ml. Berapa ml syrup harus diberikan?",
+        "options": [
+            "1,5 ml",
+            "3 ml",
+            "2 ml",
+            "2,5 ml"
+        ],
+        "answer": 2,
+        "explanation": "Dosis order = 50 mg. Sediaan = 125 mg / 5 ml.  Kita bisa gunakan rumus: (Dosis Order / Dosis Sediaan) * Volume Sediaan.  Jadi, (50 mg / 125 mg) * 5 ml = (2/5) * 5 ml = 2 ml."
+    },
+    {
+        "question": "154. Seorang anak usia 1 tahun mendapatkan terapi Gentamisin 2 ml/IM. Manakah area injeksi yang paling aman untuk anak tersebut?",
+        "options": [
+            "Deltoid",
+            "Dorsogluteal",
+            "Vastus lateralis",
+            "Gluteus"
+        ],
+        "answer": 2,
+        "explanation": "Untuk anak usia 1 tahun, otot vastus lateralis (bagian anterolateral paha) adalah area yang direkomendasikan dan paling aman untuk injeksi intramuskular (IM). Otot ini cukup berkembang pada usia ini dan jauh dari saraf besar atau pembuluh darah. Otot deltoid belum cukup berkembang, dan dorsogluteal berisiko mencederai saraf skiatik."
+    },
+    {
+        "question": "155. Seorang anak usia 5 tahun menderita demam berdarah dan dibutuhkan transfusi. 30 menit setelah pemberian transfusi, muka anak menjadi merah, mengeluh kedinginan dan menggigil. Manakah tindakan awal yang harus dilakukan?",
+        "options": [
+            "Memberi selimut hangat",
+            "Memberikan asetaminophen sesuai order",
+            "Memposisikan anak pada posisi setengah duduk",
+            "Menghentikan transfusi segera"
+        ],
+        "answer": 3,
+        "explanation": "Gejala muka merah, kedinginan, dan menggigil yang muncul selama atau setelah transfusi adalah tanda-tanda reaksi transfusi, kemungkinan reaksi febril non-hemolitik atau reaksi alergi. Tindakan awal yang paling penting adalah segera menghentikan transfusi untuk mencegah masuknya lebih banyak komponen darah yang menyebabkan reaksi."
+    },
+    {
+        "question": "156. Seorang bayi berusia 2 bulan dibawa ke posyandu oleh ibunya. Perawat menjelaskan penting imunisasi lengkap. Ibu setuju anaknya diimunisasi. Manakah imunisasi yang seharusnya diberikan pada periode usia tersebut?",
+        "options": [
+            "Polio-DPT",
+            "Cacar-tetanus",
+            "Rubela-campak",
+            "Typoid-tuberkulin"
+        ],
+        "answer": 0,
+        "explanation": "Menurut jadwal imunisasi dasar di Indonesia, bayi usia 2 bulan mendapatkan imunisasi DPT-HB-Hib (sering disebut Pentabio) dosis pertama dan Polio (bisa oral/OPV atau suntik/IPV) dosis pertama atau kedua (tergantung kapan Polio 0 diberikan). Jadi, kombinasi Polio dan DPT (sebagai bagian dari Pentabio) adalah yang sesuai. Campak diberikan usia 9 bulan, Rubella biasanya dalam MMR usia 18 bulan."
+    },
+    {
+        "question": "157. Seorang anak berusia 10 tahun dirawat karena Demam Berdarah Dengue, hari kedua. Saat ini temperatur masih tinggi dan mengeluh mual, tekanan darah cenderung normal stabil. Manakah data laboratorium penting yang harus dicatat dan dievaluasi secara teratur?",
+        "options": [
+            "Netrofil dan leukosit",
+            "Hemoglobin dan leukosit",
+            "Trombosit dan hematokrit",
+            "Hemoglobin dan hematokrit"
+        ],
+        "answer": 2,
+        "explanation": "Pada Demam Berdarah Dengue (DBD), pemantauan kadar trombosit dan hematokrit sangat penting. Trombositopenia (penurunan jumlah trombosit) adalah ciri khas DBD dan meningkatkan risiko perdarahan. Peningkatan hematokrit (hemokonsentrasi) menunjukkan adanya kebocoran plasma, yang merupakan tanda perburukan menuju Dengue Shock Syndrome (DSS). Leukosit juga dipantau (biasanya leukopenia)."
+    },
+    {
+        "question": "158. Seorang anak usia 2 tahun dirawat di sebuah rumah sakit dengan leukimia. Anak tampak pucat dan kurang bergairah. Hb 8 mg/dL dan leukosit 3000/yL. Manakah hal utama dan efisien yang harus perawat lakukan untuk anak ini?",
+        "options": [
+            "Membatasi pengunjung",
+            "Menyiapkan ruangan khusus",
+            "Membuka baraksot khusus",
+            "Menggunakan masker"
+        ],
+        "answer": 0,
+        "explanation": "Anak dengan leukemia dan leukosit rendah (leukopenia, 3000/µL) mengalami imunosupresi dan sangat rentan terhadap infeksi. Hb rendah (8 mg/dL) menunjukkan anemia. Membatasi pengunjung adalah tindakan penting untuk mengurangi paparan terhadap kuman dari luar dan mencegah infeksi nosokomial. Kebersihan tangan yang ketat dan kewaspadaan isolasi (jika diindikasikan) juga krusial."
+    },
+    {
+        "question": "159. Hasil observasi pada bayi dengan didapatkan suhu 39°C, pernafasan 26 x/mnt. Mukosa bibir dan mulut kering serta ubun cekung. Kulit sekitar perineal memerah. Manakah masalah keperawatan prioritas bayi di atas?",
+        "options": [
+            "Gangguan integritas kulit",
+            "Perubahan rasa aman dan nyaman",
+            "Gangguan pemenuhan kebutuhan oksigen",
+            "Perubahan keseimbangan cairan dan elektrolit"
+        ],
+        "answer": 3,
+        "explanation": "Suhu tinggi (39°C), mukosa bibir dan mulut kering, serta ubun-ubun cekung adalah tanda-tanda klasik dehidrasi pada bayi. Demam meningkatkan insensible water loss (IWL), dan jika asupan cairan tidak adekuat, bayi cepat mengalami dehidrasi. Ini mengarah pada masalah 'Perubahan keseimbangan cairan dan elektrolit' atau 'Defisit volume cairan' sebagai prioritas."
+    },
+    {
+        "question": "160. Seorang anaka usia 3 tahun dirawat karena gizi buruk. Klien sangat kurus, tidak ada jaringan lemak di bawah kulit. Manakah hal berikut ini yang paling efektif untuk menghindari hipotermi saat malam hari?",
+        "options": [
+            "Diberikan selimut tidur",
+            "Tidur dengan dipeluk orang tuanya",
+            "Cek suhu tubuh setiap 2 jam",
+            "Beri susu hangat menjelang tidur"
+        ],
+        "answer": 1,
+        "explanation": "Bayi atau anak dengan gizi buruk memiliki sedikit jaringan lemak subkutan, sehingga sangat rentan terhadap hipotermia. Tidur dengan dipeluk orang tua (kontak kulit ke kulit jika memungkinkan, atau setidaknya dekapan hangat) adalah cara yang sangat efektif untuk mentransfer kehangatan tubuh orang tua ke anak dan menjaga suhu tubuh anak tetap stabil, terutama di malam hari saat suhu lingkungan bisa turun."
+    },
+    {
+        "question": "161. Saat melakukan kunjungan rumah, didapatkan keluarga dengan anak usia toddler dan pre school. Rumah tampak berantakan. Keluarga mengatakan selalu sibuk dan rumahnya biasa seperti ini. Manakah saran penting yang perlu disampaikan kepada keluarga terkait kondisi rumahnya?",
+        "options": [
+            "Simpan bahan toksik/beracun dilemari tertutup",
+            "Ikut sertakan anak dalam merapikan rumah",
+            "Beri alat main yang disukai anak sesuai usia",
+            "Biarkan anak mengeksplorasi lingkungan"
+        ],
+        "answer": 0,
+        "explanation": "Rumah yang berantakan dapat menyembunyikan bahaya bagi anak usia toddler dan prasekolah yang aktif dan eksploratif. Saran yang paling penting terkait keselamatan adalah memastikan bahan-bahan toksik/beracun (seperti pembersih, obat-obatan, pestisida) disimpan dengan aman di lemari yang terkunci atau di tempat yang tidak terjangkau anak-anak untuk mencegah keracunan yang tidak disengaja."
+    },
+    {
+        "question": "162. Keluarga dengan anak usia 9 bulan datang ke perawat untuk konseling. Mereka merasa cemas, karena anaknya belum bisa dilatih mengatur BABnya. Orang tua bertanya Kapan sebenarnya anak mulai bisa dilatih toilet training”. Manakah jawaban yang tepat untuk pertanyaan tersebut?",
+        "options": [
+            "Sejak anak berusia 6 bulan",
+            "Setelah bisa duduk dan berkomunikasi sederhana",
+            "Bila anak mampu membuka dan memakai bajunya",
+            "Setelah anak bisa berjalan dengan lancar"
+        ],
+        "answer": 1,
+        "explanation": "Toilet training biasanya dimulai ketika anak menunjukkan tanda-tanda kesiapan fisik dan psikologis, yang umumnya terjadi antara usia 18 bulan hingga 3 tahun. Kesiapan fisik meliputi kemampuan untuk duduk, berjalan, dan mengontrol kandung kemih/usus untuk beberapa waktu. Kesiapan psikologis meliputi kemampuan untuk memahami instruksi sederhana dan mengekspresikan keinginan untuk ke toilet. Usia 9 bulan umumnya terlalu dini. Jawaban 'Setelah bisa duduk dan berkomunikasi sederhana' adalah indikator awal yang lebih masuk akal daripada usia 6 bulan, meskipun usia idealnya lebih tua."
+    },
+    {
+        "question": "163. Seorang anak usia 5 tahun akan dilakukan operasi perbaikan katup jantung. Kondisi sadar penuh, terlihat ceria bersama pengasuhnya, dan kadang kadang didampingi bersama orang tuanya. Manakah tindakan keperawatan yang harus dilakukan untuk persiapan adaptasi stress operasi anak tersebut?",
+        "options": [
+            "Jelaskan secara lengkap tentang proses operasi melalui gambar",
+            "Hadirkan saudara kandung dan teman sebaya agar mereka saling interaksi",
+            "Jelaskan hal hal yang berkaitan dengan tindakan operasi melalui teknik bermain",
+            "Dorong anak untuk mengekspresikan perasaan kecemasannya kepada perawat"
+        ],
+        "answer": 2,
+        "explanation": "Untuk anak usia prasekolah (5 tahun), menjelaskan prosedur medis melalui teknik bermain (therapeutic play) adalah cara yang paling efektif. Perawat dapat menggunakan boneka, alat peraga, atau gambar untuk menjelaskan apa yang akan terjadi selama operasi dengan bahasa yang sesuai usia anak. Ini membantu mengurangi kecemasan, meningkatkan pemahaman, dan mempersiapkan anak secara emosional."
+    },
+    {
+        "question": "164. Bayi lahir cukup bulan, pervagiinam, ketuban jernih. Bayi menangis spontan, tonus otot kuat dan bergerak aktif. Bayi dikeringkan dan tali pusat telah dipotong. Manakah tindakan yang tepat selanjutnya?",
+        "options": [
+            "Letakan bayi di atas perut ibu",
+            "Keringkan vernix bayi",
+            "Bedong bayi dengan gurita",
+            "Tempelkan mulut bayi di payudara ibu"
+        ],
+        "answer": 0,
+        "explanation": "Setelah bayi lahir, dikeringkan, dan tali pusat dipotong (jika kondisi bayi stabil), langkah selanjutnya yang penting adalah melakukan Inisiasi Menyusu Dini (IMD). Bayi diletakkan di dada atau perut ibu (kontak kulit ke kulit) untuk memberikan kehangatan, rasa aman, dan kesempatan bayi untuk mencari puting susu ibu secara naluriah dan mulai menyusu."
+    },
+    {
+        "question": "165. Anak usia 1 tahun, BB saat ini 7,8 kg, sesak batuk dan pilek, demam, wajah tampak kebiruan jika menangis, akral dingin. N 135 x/mnt, RR 50 x/mnt, T 38,5 C. Hasil pemeriksaan penunjang menunjukkan hipertropi ventrikel kanan dan defek pada septum ventrikel. Ibu anak tersebut bertanya, mengapa anak perlu dibatasi aktifitasnya atau dicegah jangan sering menangis? Apakah jawaban yang tepat untuk pertanyaan tersebut?",
+        "options": [
+            "Meningkatkan metabolisme basal",
+            "Meningkatkan kekuatan otot jantung",
+            "Menurunkan konsumsi oksigen",
+            "Menurunkan ekspansi paru"
+        ],
+        "answer": 2,
+        "explanation": "Anak dengan kelainan jantung bawaan (defek septum ventrikel dengan hipertropi ventrikel kanan) dan gejala sianosis/sesak memiliki cadangan jantung yang terbatas. Aktivitas berlebih atau menangis kencang akan meningkatkan kebutuhan oksigen tubuh dan beban kerja jantung. Membatasi aktivitas dan mencegah menangis berlebihan bertujuan untuk menurunkan konsumsi oksigen dan mengurangi stres pada jantung yang sudah bekerja keras."
+    },
+    {
+        "question": "166. Klien dengan Talasemia Mayor, tampak pucat, mengeluh sesak, pernafasan 30 x/mnt dan nadi 130 x/mnt? Manakah tindakan utama untuk mengatasi keluhan klien ini?",
+        "options": [
+            "Lakukan analisa gas darah",
+            "Beri oksigen sesuai program",
+            "Fasilitasi posisi tidur semi fowler",
+            "Beri transfusi darah sesuai program"
+        ],
+        "answer": 3,
+        "explanation": "Talasemia mayor menyebabkan anemia kronis berat karena produksi hemoglobin yang abnormal. Gejala pucat, sesak, takipnea, dan takikardia adalah manifestasi dari anemia dan hipoksia jaringan. Tindakan utama untuk mengatasi anemia berat dan memperbaiki kapasitas angkut oksigen pada pasien talasemia mayor adalah transfusi darah (sel darah merah) secara teratur sesuai program."
+    },
+    {
+        "question": "167. Bayi usia 6 bulan dengan riwayat jatuh dari tempat tidur, dirawat di rumah sakit. Riwayat kejang sehari sebelum masuk rumah sakit. Dari hasil scan terlihat edema otak. Manakah tindakan yang tepat untuk mencegah terjadinya kejang berulang pada bayi ini?",
+        "options": [
+            "Pemberian oksigen",
+            "Pemberian lasix/diuretika",
+            "Pemantauan saturasi oksigen",
+            "Pembatasan pemberian cairan"
+        ],
+        "answer": 1,
+        "explanation": "Edema otak dapat meningkatkan tekanan intrakranial dan memicu kejang. Pemberian diuretik osmotik (seperti manitol) atau loop diuretik (seperti furosemide/Lasix) bertujuan untuk mengurangi edema otak dengan menarik cairan dari jaringan otak ke dalam sirkulasi untuk diekskresikan melalui ginjal. Ini membantu menurunkan tekanan intrakranial dan mencegah kejang berulang. Pemberian antikonvulsan juga mungkin diperlukan."
+    },
+    {
+        "question": "168. Bayi berusia 1 bulanh dibawa ke posyandu. Dari pengkajian, dinyatakan bayi belum mendapatkan imunisasi BCG dan hasil uji turbekulin negative. Bagaimanakah cara pemberian imunisasi BCG yang benar?",
+        "options": [
+            "Skin tes",
+            "Subkutan",
+            "Intramuskular",
+            "Intrakutan"
+        ],
+        "answer": 3,
+        "explanation": "Vaksin BCG (Bacillus Calmette-Guérin) diberikan secara intrakutan (intradermal), yaitu disuntikkan ke dalam lapisan kulit (dermis), biasanya di lengan atas bagian luar (regio deltoid kanan). Penyuntikan intrakutan yang benar akan menimbulkan gelembung kecil (indurasi) di kulit."
+    },
+    {
+        "question": "169. Seorang anak berusia 3 tahun dirawat dengan Syndrom Nefrotik. Klien mengalami proteinuria dan edema anasarka. Manakah tindakan penting dan akurat serta bisa diajarkan kepada keluarga untuk mengatasi masalah edema di atas?",
+        "options": [
+            "Mencatat intake dan output",
+            "Monitor tekanan darah",
+            "Timbang berat badan harian",
+            "Pemijatan rutin bagian edema"
+        ],
+        "answer": 2,
+        "explanation": "Pada sindrom nefrotik, terjadi kehilangan protein masif melalui urin (proteinuria) yang menyebabkan hipoalbuminemia dan edema anasarka (seluruh tubuh). Memantau dan menimbang berat badan harian pada waktu yang sama dengan pakaian yang minimal adalah cara yang paling akurat dan sederhana untuk menilai perubahan status cairan dan efektivitas terapi diuretik. Kenaikan berat badan menunjukkan retensi cairan, penurunan menunjukkan respons terhadap diuretik."
+    },
+    {
+        "question": "170. Seorang klien, 45 tahun, mengalami batu ginjal. Pasien mengatakan nyeri daerah pinggang menjalar ke pelvis, pasien mengeluh mual dan muntah. Pada saat pasien mengungkapkan keluhannya, bagaimanakah sikap perawat sebaiknya?",
+        "options": [
+            "Membantu pasien melanjutkan komunikasi",
+            "Mendengarkan secara aktif",
+            "Mengeksplorasi keluhan lebih lanjut",
+            "Membiarkan pasien menyampaikan keluhannya"
+        ],
+        "answer": 1,
+        "explanation": "Ketika pasien mengungkapkan keluhan, sikap perawat yang paling penting adalah mendengarkan secara aktif. Ini melibatkan memberikan perhatian penuh, mempertahankan kontak mata (sesuai budaya), mengangguk, menggunakan respons verbal minimal ('ya', 'lalu?'), dan menunjukkan empati. Mendengarkan aktif membantu pasien merasa didengar dan dipahami, serta memungkinkan perawat mengumpulkan informasi yang akurat."
+    },
+    {
+        "question": "171. Klien dirawat dengan kanker nasofaring, klien direncanakan akan dilakukan kemoterapi. Setelah mendengarkan penjelasan, klien mengeluh takut rambutnya botak, takut mual dan muntah. Bagaimanakah sebaiknya sikap tubuh perawat pada saat pasien mengekspresikan perasaan seperti di atas?",
+        "options": [
+            "Mencondongkan badan sedikit",
+            "Mengangguk ke arah pasien",
+            "Mempertahankan sikap terbuka",
+            "Mempertahankan kontak mata"
+        ],
+        "answer": 0,
+        "explanation": "Saat pasien mengekspresikan ketakutan atau kecemasan, sikap tubuh perawat yang menunjukkan perhatian dan keterlibatan adalah penting. Mencondongkan badan sedikit ke arah pasien adalah salah satu bentuk komunikasi non-verbal yang menunjukkan bahwa perawat mendengarkan dengan saksama dan tertarik pada apa yang disampaikan pasien. Ini melengkapi kontak mata yang sesuai dan sikap terbuka."
+    },
+    {
+        "question": "172. Tiga liter cairan RL (Ringer's Laktate) dijadwalkan untuk 12 jam. Faktor tetes infus adalah 15. Infuse telah berjalan selama 9 jam, cairan tersisa adalah 800 ml. Berapa jumlah tetes permenit diperlukan agar infuse habis tepat waktu?",
+        "options": [
+            "67 tetes/menit",
+            "70 tetes/menit",
+            "60 tetes/menit",
+            "56 tetes/menit"
+        ],
+        "answer": 3,
+        "explanation": "Cairan tersisa = 800 ml. Waktu tersisa = 12 jam - 9 jam = 3 jam.  3 jam = 3 * 60 menit = 180 menit. Rumus tetesan per menit (TPM) = (Jumlah cairan (ml) * Faktor tetes) / Waktu (menit). TPM = (800 ml * 15) / 180 menit = 12000 / 180 = 66.67 tetes/menit. Dibulatkan menjadi 67 tetes/menit. Pilihan A paling mendekati. *Namun, jika kita hitung dari awal: 3000 ml / 12 jam = 250 ml/jam. (250 ml * 15) / 60 menit = 62.5 tetes/menit. Ini menunjukkan ada ketidaksesuaian dalam soal atau pilihan. Mengacu pada sisa cairan dan sisa waktu, A adalah jawaban yang dihitung.* Mari kita cek ulang dengan asumsi target awal yang benar: (3000ml * 15) / (12 jam * 60 menit) = 45000 / 720 = 62.5 tpm. Jika 800ml sisa dalam 3 jam: (800ml * 15) / (3 jam * 60 menit) = 12000 / 180 = 66.67 tpm. Jawaban A (67) adalah yang paling logis berdasarkan sisa cairan dan waktu."
+    },
+    {
+        "question": "173. Ny. N, 50 tahun, dirawat akibat luka bakar derajat II dengan luas 40%. Hasil pengkajian didapatkan data: suhu tuubuh 39°C, pernafasan 20 x/mnt, nadi: 89 x/mnt. Ny. N mengeluh kesakitan dan terlihat pucat. Apakah faktor utama yang menyebabkan peningkatan suhu tubuh pasien?",
+        "options": [
+            "Penguapan cairan",
+            "Kehilangan cairan tubuh",
+            "Reseptor suhu tidak berfungsi",
+            "Luka bakar yang luas"
+        ],
+        "answer": 3,
+        "explanation": "Luka bakar yang luas menyebabkan kerusakan pada barrier kulit, yang mengakibatkan peningkatan kehilangan panas melalui evaporasi dan gangguan termoregulasi. Selain itu, respons inflamasi sistemik yang masif akibat luka bakar dapat memicu demam. Jadi, luka bakar itu sendiri, melalui kerusakan kulit dan respons inflamasi, adalah faktor utama peningkatan suhu. Kehilangan cairan berkontribusi pada masalah lain (syok hipovolemik) tetapi demam lebih terkait inflamasi dan gangguan termoregulasi."
+    },
+    {
+        "question": "174. Satu jam yang lalu, perawat memberikan suntikan obat Lasix sebanyak 2 ampul pada Bp. F (45 thn) dengan diagnosa Gagal Ginjal derajat 3 dengan edema tungkai. Manakah hal penting yang harus dipantau setelah pemberian obat tersebut?",
+        "options": [
+            "Suhu tubuh",
+            "Frekuensi nadi",
+            "Tekanan darah",
+            "Pernafasan"
+        ],
+        "answer": 2,
+        "explanation": "Lasix (furosemide) adalah diuretik kuat yang bekerja cepat untuk mengeluarkan kelebihan cairan dari tubuh. Efek samping yang umum dan penting untuk dipantau adalah penurunan tekanan darah (hipotensi) akibat diuresis yang cepat dan masif, serta gangguan elektrolit (terutama hipokalemia). Oleh karena itu, memantau tekanan darah secara berkala setelah pemberian Lasix sangat penting."
+    },
+    {
+        "question": "175. Perawat akan memberikan obat captopril (ace inhibitor) pada Bp X yang didiagnosa hipertensi. Sebelum menyiapkan obat tersebut, apakah tindakan utama perawat seharusnya?",
+        "options": [
+            "Melihat kembali intruksi medis",
+            "Menanyakan kondisi pasien",
+            "Mengukur tekanan darah",
+            "Mengkaji riwayat hipertensi"
+        ],
+        "answer": 2,
+        "explanation": "Sebelum memberikan obat antihipertensi seperti captopril, tindakan utama yang harus dilakukan perawat adalah mengukur tekanan darah pasien saat itu. Ini untuk memastikan bahwa pemberian obat aman (pasien tidak hipotensi) dan untuk mengevaluasi efektivitas terapi sebelumnya. Jika tekanan darah terlalu rendah, pemberian obat mungkin perlu ditunda atau dosis disesuaikan setelah konsultasi dengan dokter."
+    },
+    {
+        "question": "176. Seorang klien mengeluh sering lemas, konjunctiva terlihat anemis. Klien menolak diberikan tablet Fe, karena mual bila meminum obat tersebut. Klien juga mengatakan takut gemuk. Bagaimanakah saran yang tepat untuk klien ini?",
+        "options": [
+            "Menganjurkan minum obat setelah makan",
+            "Menganjurkan makan yang bergizi untuk mengganti tablet Fe",
+            "Menganjurkan minum obat menjelang tidur malam",
+            "Sikat gigi dan berkumur setelah minum obat"
+        ],
+        "answer": 0,
+        "explanation": "Mual adalah efek samping umum dari suplemen zat besi (tablet Fe). Minum tablet Fe bersamaan dengan makanan atau segera setelah makan dapat membantu mengurangi iritasi lambung dan mual. Meskipun penyerapan zat besi optimal saat perut kosong, kepatuhan lebih penting. Jika mual parah, alternatif sediaan atau dosis mungkin perlu dipertimbangkan."
+    },
+    {
+        "question": "177. Seorang klien memiliki riwayat batuk 3 bulan. Dalam periode tersebut ia kehilangan berat badan 8 kg. Sputum tampak kental dan purulent. Suhu tubuh 38,5°C. Manakah intervensi pengumpulan spesimen sputum yang benar?",
+        "options": [
+            "Ambil sputum setelah makan",
+            "Tinggalkan tabung spesimen di dekat tempat tidur",
+            "Ambil sputum batuk setelah bangun pagi",
+            "Ambil sputum saat malam hari"
+        ],
+        "answer": 2,
+        "explanation": "Pengumpulan spesimen sputum untuk pemeriksaan BTA (Basil Tahan Asam) pada dugaan TB Paru paling baik dilakukan pada pagi hari segera setelah bangun tidur. Pada saat itu, sputum biasanya lebih banyak terkumpul di saluran napas setelah semalaman dan belum tercampur makanan atau minuman. Pasien diinstruksikan untuk berkumur dengan air (bukan antiseptik), kemudian batuk dalam dan mengeluarkan dahak (bukan air liur) ke dalam wadah steril."
+    },
+    {
+        "question": "178. Klien dengan cedera kepala dengan kesadaran suporo koma terpasang oral airway (Gudel), terdengar suara pernafasan ngorok (snoring). Tindakan manakah yang sebaiknya dilakukan perawat?",
+        "options": [
+            "Suction lendir",
+            "Fisioterapi dada",
+            "Miringkan kepala klien",
+            "Cek kepatenan gudel"
+        ],
+        "answer": 3,
+        "explanation": "Suara napas ngorok (snoring) meskipun sudah terpasang OPA (Gudel) menunjukkan kemungkinan OPA tidak terpasang dengan benar (misalnya, ukuran tidak sesuai atau posisi salah) atau masih ada obstruksi oleh lidah atau sekret. Langkah pertama adalah memeriksa kepatenan dan posisi OPA. Jika OPA sudah benar, reposisi kepala (head tilt-chin lift atau jaw thrust jika curiga cedera servikal) mungkin diperlukan untuk membuka jalan napas. Suction dilakukan jika ada sekret."
+    },
+    {
+        "question": "179. Seorang ibu rumah tangga memiliki riwayat asthma dan dibawa ke IGD karena sesak nafas berat. Saat ini klien terlihat gelisah dan sulit diajak bicara, frekuensi pernafasan 28 x/menit. Diberikan intervensi awal O2 per nasal kanul 4 lt/ menit. Diberikan intervensi tambahan untuk memaksimalkan oksigenasi klien?",
+        "options": [
+            "Memberi posisi semi Fowler's",
+            "Menenangkan klien",
+            "Memberi posisi ortopnea",
+            "Mengajarkan nafas dalam"
+        ],
+        "answer": 0,
+        "explanation": "Pada pasien asma dengan sesak napas berat, memberikan posisi semi-Fowler's atau Fowler's (duduk) dapat membantu memaksimalkan ekspansi paru dan memudahkan pernapasan. Posisi ini memungkinkan diafragma turun lebih leluasa dan mengurangi usaha napas. Pemberian bronkodilator nebulisasi juga merupakan intervensi utama untuk mengatasi bronkospasme."
+    },
+    {
+        "question": "180. Anda diminta oleh dokter yang merawat untuk memberikan cairan infus 500 ml dalam 12 jam. Berapa tetes/ menit kah cairan infus yang akan anda berikan, bila faktor tetesnya 20?",
+        "options": [
+            "14",
+            "10",
+            "20",
+            "24"
+        ],
+        "answer": 0,
+        "explanation": "Jumlah cairan = 500 ml. Waktu = 12 jam = 12 * 60 menit = 720 menit. Faktor tetes = 20 gtt/ml. Rumus tetesan per menit (TPM) = (Jumlah cairan (ml) * Faktor tetes) / Waktu (menit). TPM = (500 ml * 20 gtt/ml) / 720 menit = 10000 gtt / 720 menit = 13.88 gtt/menit. Dibulatkan menjadi 14 tetes/menit."
+    }
+]

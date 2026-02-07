@@ -1,0 +1,1124 @@
+[
+    {
+        "question": "Seorang perawat komunitas melakukan kunjungan rumah ke keluarga dengan balita yang mengalami diare. Ibu mengatakan anaknya sudah BAB cair >5 kali hari ini. Tindakan pertama yang paling penting diajarkan perawat adalah...",
+        "options": [
+            "Segera membawa anak ke Puskesmas",
+            "Memberikan larutan oralit setiap kali anak BAB cair",
+            "Memberikan makanan padat agar feses mengeras",
+            "Menghentikan pemberian ASI atau susu formula"
+        ],
+        "answer": 1,
+        "explanation": "Prioritas utama pada diare adalah mencegah dehidrasi. Pemberian oralit segera setiap kali BAB cair sangat penting untuk menggantikan cairan dan elektrolit yang hilang."
+    },
+    {
+        "question": "Di sebuah desa, ditemukan peningkatan kasus Demam Berdarah Dengue (DBD). Program pemberantasan sarang nyamuk (PSN) 3M Plus yang paling efektif melibatkan peran serta masyarakat adalah...",
+        "options": [
+            "Fogging massal setiap minggu oleh petugas kesehatan",
+            "Pembagian abate gratis tanpa penyuluhan",
+            "Mengadakan kerja bakti rutin membersihkan lingkungan dan menguras bak mandi oleh warga",
+            "Menyediakan ikan pemakan jentik di setiap rumah"
+        ],
+        "answer": 2,
+        "explanation": "PSN 3M Plus (Menguras, Menutup, Mendaur ulang, plus menghindari gigitan nyamuk) yang melibatkan partisipasi aktif masyarakat melalui kerja bakti adalah metode paling berkelanjutan dan efektif."
+    },
+    {
+        "question": "Perawat Puskesmas sedang merencanakan program penyuluhan tentang hipertensi di suatu RW. Langkah awal yang harus dilakukan perawat sebelum menyusun materi adalah...",
+        "options": [
+            "Menentukan metode penyuluhan yang menarik",
+            "Melakukan pengkajian kebutuhan belajar dan tingkat pengetahuan warga tentang hipertensi",
+            "Menyiapkan leaflet dan poster sebanyak-banyaknya",
+            "Mengundang dokter spesialis sebagai narasumber"
+        ],
+        "answer": 1,
+        "explanation": "Pengkajian kebutuhan belajar adalah langkah fundamental dalam perencanaan pendidikan kesehatan untuk memastikan materi yang disampaikan relevan, sesuai, dan mudah dipahami oleh sasaran."
+    },
+    {
+        "question": "Seorang kader kesehatan melaporkan bahwa banyak lansia di wilayahnya mengeluh nyeri sendi dan kesulitan beraktivitas. Intervensi keperawatan komunitas yang paling tepat adalah...",
+        "options": [
+            "Memberikan obat anti-nyeri secara massal",
+            "Merujuk semua lansia ke rumah sakit",
+            "Mengadakan senam lansia rutin dan penyuluhan tentang manajemen nyeri sendi non-farmakologis",
+            "Menyarankan lansia untuk istirahat total"
+        ],
+        "answer": 2,
+        "explanation": "Senam lansia dapat meningkatkan fleksibilitas dan mengurangi nyeri sendi. Penyuluhan manajemen nyeri non-farmakologis memberdayakan lansia untuk mengatasi masalahnya secara mandiri."
+    },
+    {
+        "question": "Hasil survei di suatu RW menunjukkan tingginya angka balita dengan status gizi kurang. Program intervensi yang paling komprehensif adalah...",
+        "options": [
+            "Pemberian makanan tambahan (PMT) pemulihan saja",
+            "Penyuluhan gizi seimbang kepada ibu balita dan PMT",
+            "Menimbang berat badan balita setiap bulan tanpa tindak lanjut",
+            "Merujuk semua balita gizi kurang ke ahli gizi"
+        ],
+        "answer": 1,
+        "explanation": "Intervensi komprehensif mencakup penyuluhan untuk meningkatkan pengetahuan dan praktik ibu dalam pemberian makan anak, serta PMT sebagai dukungan langsung untuk perbaikan status gizi."
+    },
+    {
+        "question": "Perawat komunitas menemukan seorang lansia yang tinggal sendiri dan berisiko jatuh karena penerangan rumah yang kurang dan lantai licin. Tindakan pencegahan primer yang dapat disarankan adalah...",
+        "options": [
+            "Memasang pegangan di kamar mandi setelah lansia jatuh",
+            "Menyarankan penggunaan alat bantu jalan",
+            "Memperbaiki penerangan dan menghilangkan potensi bahaya di lantai",
+            "Mengajarkan cara jatuh yang aman"
+        ],
+        "answer": 2,
+        "explanation": "Pencegahan primer berfokus pada menghilangkan faktor risiko sebelum kejadian. Memperbaiki lingkungan rumah adalah tindakan preventif utama untuk mengurangi risiko jatuh."
+    },
+    {
+        "question": "Dalam upaya deteksi dini kanker serviks di komunitas, metode skrining yang paling umum dan efektif di tingkat Puskesmas adalah...",
+        "options": [
+            "Pemeriksaan Pap Smear",
+            "Pemeriksaan Inspeksi Visual Asam Asetat (IVA)",
+            "Biopsi serviks",
+            "Kolposkopi"
+        ],
+        "answer": 1,
+        "explanation": "IVA test adalah metode skrining kanker serviks yang sederhana, murah, dan dapat dilakukan oleh tenaga kesehatan terlatih di fasilitas kesehatan primer seperti Puskesmas, sehingga jangkauannya lebih luas."
+    },
+    {
+        "question": "Seorang perawat komunitas ingin meningkatkan partisipasi ibu dalam membawa balitanya ke Posyandu. Strategi komunikasi yang paling efektif adalah...",
+        "options": [
+            "Memberikan ancaman jika tidak datang ke Posyandu",
+            "Menggunakan pendekatan persuasif, menjelaskan manfaat Posyandu secara personal dan kelompok",
+            "Menempelkan pengumuman jadwal Posyandu di balai desa saja",
+            "Hanya mengandalkan informasi dari kader"
+        ],
+        "answer": 1,
+        "explanation": "Pendekatan persuasif yang menjelaskan manfaat langsung bagi ibu dan anak, disertai komunikasi yang baik secara personal maupun kelompok, akan lebih efektif meningkatkan kesadaran dan partisipasi."
+    },
+    {
+        "question": "Penyakit Tuberkulosis (TB) masih menjadi masalah kesehatan di suatu wilayah. Peran perawat komunitas dalam program Penanggulangan TB Nasional sebagai Pengawas Minum Obat (PMO) adalah...",
+        "options": [
+            "Mendiagnosis kasus baru TB",
+            "Memberikan suntikan streptomisin setiap hari",
+            "Memastikan pasien minum obat secara teratur dan tuntas sesuai petunjuk",
+            "Menentukan jenis OAT (Obat Anti Tuberkulosis) yang diberikan"
+        ],
+        "answer": 2,
+        "explanation": "Peran utama PMO adalah memastikan kepatuhan pasien dalam minum obat TB secara lengkap dan teratur untuk mencegah resistensi obat dan menjamin kesembuhan."
+    },
+    {
+        "question": "Di sebuah sekolah dasar, perawat komunitas menemukan banyak siswa dengan kuku panjang dan kotor. Program Usaha Kesehatan Sekolah (UKS) yang relevan adalah...",
+        "options": [
+            "Pemeriksaan kuku massal dan pemberian sanksi",
+            "Penyuluhan tentang Personal Hygiene (PHBS) dan demonstrasi cara mencuci tangan yang benar",
+            "Memberikan gunting kuku gratis kepada semua siswa",
+            "Melaporkan kepada orang tua murid saja"
+        ],
+        "answer": 1,
+        "explanation": "Penyuluhan PHBS dan demonstrasi praktik yang benar akan meningkatkan pengetahuan dan keterampilan siswa dalam menjaga kebersihan diri, termasuk kebersihan kuku dan tangan."
+    },
+    {
+        "question": "Seorang perawat melakukan pengkajian komunitas dan menemukan data bahwa sebagian besar warga membuang sampah di sungai. Masalah keperawatan komunitas utama yang muncul adalah...",
+        "options": [
+            "Risiko peningkatan kasus penyakit kulit",
+            "Defisit pengetahuan warga tentang pengelolaan sampah",
+            "Potensial peningkatan vektor penyakit (misalnya, tikus, lalat)",
+            "Ketidakefektifan manajemen kesehatan lingkungan"
+        ],
+        "answer": 3,
+        "explanation": "Pembuangan sampah sembarangan ke sungai menunjukkan adanya masalah dalam manajemen kesehatan lingkungan yang berdampak pada berbagai risiko kesehatan. Ini adalah masalah yang lebih luas dan mendasar."
+    },
+    {
+        "question": "Perawat komunitas merencanakan intervensi untuk mengatasi masalah sampah di sungai. Tindakan kolaborasi yang paling tepat adalah...",
+        "options": [
+            "Melakukan penyuluhan sendiri kepada seluruh warga",
+            "Mengusulkan kepada kepala desa untuk membuat peraturan desa tentang sampah dan menyediakan TPS",
+            "Membagikan kantong sampah ke setiap rumah",
+            "Mengorganisir warga untuk membersihkan sungai setiap hari"
+        ],
+        "answer": 1,
+        "explanation": "Kolaborasi dengan pemerintah desa untuk membuat regulasi dan menyediakan fasilitas (TPS) adalah pendekatan sistemik yang lebih berkelanjutan untuk mengatasi masalah sampah."
+    },
+    {
+        "question": "Pada saat kunjungan rumah, perawat menemukan seorang ibu hamil trimester pertama mengeluh mual muntah berlebihan. Pendidikan kesehatan prioritas yang diberikan adalah...",
+        "options": [
+            "Cara mengatasi mual muntah dengan diet porsi kecil tapi sering dan menghindari bau merangsang",
+            "Pentingnya olahraga berat untuk menjaga kebugaran",
+            "Segera minum obat antiemetik dosis tinggi",
+            "Menyarankan untuk banyak minum minuman bersoda"
+        ],
+        "answer": 0,
+        "explanation": "Edukasi tentang manajemen mual muntah (hiperemesis gravidarum ringan) dengan modifikasi diet dan menghindari pemicu adalah intervensi awal yang aman dan efektif."
+    },
+    {
+        "question": "Seorang perawat di Puskesmas sedang memberikan penyuluhan tentang pentingnya imunisasi dasar lengkap pada bayi. Manfaat utama imunisasi yang perlu ditekankan adalah...",
+        "options": [
+            "Agar bayi cepat gemuk dan tinggi",
+            "Mencegah bayi dari penyakit berbahaya yang dapat dicegah dengan imunisasi (PD3I)",
+            "Supaya bayi tidak mudah menangis",
+            "Sebagai syarat masuk sekolah"
+        ],
+        "answer": 1,
+        "explanation": "Tujuan utama imunisasi adalah untuk membentuk kekebalan tubuh bayi terhadap Penyakit-Penyakit yang Dapat Dicegah Dengan Imunisasi (PD3I), sehingga melindungi bayi dari kesakitan, kecacatan, atau kematian."
+    },
+    {
+        "question": "Di suatu daerah dengan sanitasi buruk, sering terjadi wabah diare. Upaya pencegahan primer yang paling fundamental untuk dilakukan oleh perawat komunitas adalah...",
+        "options": [
+            "Pengobatan massal penderita diare",
+            "Penyuluhan tentang pentingnya cuci tangan pakai sabun (CTPS) dan penggunaan jamban sehat",
+            "Pemberian oralit ke setiap rumah",
+            "Melakukan fogging untuk membunuh lalat"
+        ],
+        "answer": 1,
+        "explanation": "CTPS dan penggunaan jamban sehat adalah pilar utama dalam pencegahan penyakit berbasis lingkungan seperti diare, dengan memutus mata rantai penularan kuman."
+    },
+    {
+        "question": "Perawat komunitas melakukan skrining tekanan darah pada kelompok usia produktif di sebuah pabrik. Ditemukan beberapa karyawan dengan tekanan darah >140/90 mmHg. Tindak lanjut yang paling tepat adalah...",
+        "options": [
+            "Langsung memberikan obat antihipertensi",
+            "Menyarankan untuk berhenti bekerja",
+            "Memberikan edukasi tentang gaya hidup sehat, diet rendah garam, dan merujuk ke fasilitas kesehatan untuk konfirmasi diagnosis dan penanganan lebih lanjut",
+            "Meminta semua karyawan tersebut untuk cuti"
+        ],
+        "answer": 2,
+        "explanation": "Skrining adalah deteksi dini. Karyawan dengan hasil tinggi perlu edukasi, modifikasi gaya hidup, dan rujukan untuk diagnosis pasti serta penatalaksanaan yang tepat oleh dokter."
+    },
+    {
+        "question": "Seorang remaja putri datang ke klinik remaja Puskesmas, mengeluh keputihan yang gatal dan berbau. Sikap perawat yang paling tepat dalam menggali informasi adalah...",
+        "options": [
+            "Menghakimi perilaku seksual remaja tersebut",
+            "Memberikan ceramah tentang moral dan agama",
+            "Menciptakan suasana percaya, mendengarkan aktif, dan menanyakan riwayat serta gejala secara spesifik tanpa menghakimi",
+            "Langsung merujuk ke dokter spesialis kulit dan kelamin"
+        ],
+        "answer": 2,
+        "explanation": "Untuk mendapatkan informasi yang akurat, terutama pada kasus sensitif, perawat harus membangun hubungan saling percaya, bersikap empati, tidak menghakimi, dan menggunakan teknik komunikasi terapeutik."
+    },
+    {
+        "question": "Program Posyandu Lansia bertujuan untuk meningkatkan kualitas hidup lansia. Salah satu kegiatan utama di Posyandu Lansia adalah...",
+        "options": [
+            "Pemberian imunisasi lengkap",
+            "Pemeriksaan kehamilan rutin",
+            "Skrining kesehatan dasar (TB, BB, TD), penyuluhan, dan senam lansia",
+            "Pemberian makanan tambahan untuk balita"
+        ],
+        "answer": 2,
+        "explanation": "Posyandu Lansia fokus pada pemantauan kesehatan dasar lansia, deteksi dini masalah kesehatan, pemberian edukasi, dan aktivitas fisik yang sesuai seperti senam."
+    },
+    {
+        "question": "Perawat komunitas bertugas di daerah pasca bencana banjir. Masalah kesehatan yang paling mungkin muncul segera setelah banjir surut adalah...",
+        "options": [
+            "Peningkatan kasus penyakit degeneratif seperti diabetes",
+            "Wabah penyakit leptospirosis, diare, dan penyakit kulit",
+            "Peningkatan kasus gizi buruk kronis",
+            "Munculnya banyak kasus kanker"
+        ],
+        "answer": 1,
+        "explanation": "Setelah banjir, kondisi sanitasi yang buruk, air bersih terkontaminasi, dan kontak dengan air kotor meningkatkan risiko penyakit infeksi seperti leptospirosis, diare, dan penyakit kulit."
+    },
+    {
+        "question": "Seorang perawat melakukan pengkajian pada keluarga dengan anak usia sekolah yang sering tidak masuk sekolah karena sakit batuk pilek. Data menunjukkan rumah lembab dan ventilasi kurang. Intervensi keperawatan keluarga yang tepat adalah...",
+        "options": [
+            "Memberikan antibiotik setiap kali anak batuk pilek",
+            "Menyarankan keluarga untuk pindah rumah",
+            "Memberikan pendidikan kesehatan tentang rumah sehat (ventilasi, pencahayaan) dan PHBS",
+            "Melaporkan kondisi rumah ke dinas sosial"
+        ],
+        "answer": 2,
+        "explanation": "Edukasi tentang rumah sehat dan PHBS memberdayakan keluarga untuk memodifikasi lingkungan dan perilaku guna mencegah penyakit ISPA berulang pada anak."
+    },
+    {
+        "question": "Dalam melakukan pengkajian komunitas, perawat menggunakan teknik 'windshield survey'. Apakah tujuan utama dari teknik ini?",
+        "options": [
+            "Mengumpulkan data kuantitatif secara detail",
+            "Melakukan wawancara mendalam dengan tokoh masyarakat",
+            "Mengobservasi komunitas secara langsung sambil berkeliling untuk mendapatkan gambaran umum kondisi fisik dan sosial lingkungan",
+            "Menganalisis data statistik kesehatan yang sudah ada"
+        ],
+        "answer": 2,
+        "explanation": "Windshield survey adalah metode pengkajian cepat dengan cara observasi langsung komunitas dari kendaraan atau berjalan kaki untuk mengidentifikasi karakteristik, sumber daya, dan masalah potensial secara visual."
+    },
+    {
+        "question": "Seorang perawat komunitas sedang memberikan penyuluhan tentang bahaya merokok kepada kelompok remaja. Media yang paling menarik dan efektif untuk kelompok usia ini adalah...",
+        "options": [
+            "Ceramah panjang dengan slide teks penuh",
+            "Video pendek testimoni mantan perokok atau animasi dampak merokok, diskusi interaktif",
+            "Membagikan leaflet berisi data statistik saja",
+            "Menyuruh mereka membaca buku teks tentang bahaya rokok"
+        ],
+        "answer": 1,
+        "explanation": "Remaja lebih tertarik pada media visual yang dinamis, interaktif, dan relevan dengan dunia mereka. Video pendek dan diskusi lebih engaging daripada metode pasif."
+    },
+    {
+        "question": "Apa yang dimaksud dengan 'surveilans epidemiologi' dalam konteks keperawatan komunitas?",
+        "options": [
+            "Pengobatan massal saat terjadi wabah",
+            "Pengumpulan, analisis, dan interpretasi data kesehatan secara sistematis dan terus menerus untuk perencanaan, implementasi, dan evaluasi praktik kesehatan masyarakat",
+            "Kunjungan rumah ke semua warga tanpa terkecuali",
+            "Penyuluhan kesehatan serentak di seluruh wilayah kerja"
+        ],
+        "answer": 1,
+        "explanation": "Surveilans epidemiologi adalah kegiatan pengamatan sistematis terhadap kejadian dan distribusi penyakit serta faktor-faktor yang mempengaruhinya untuk tindakan pencegahan dan pengendalian yang efektif."
+    },
+    {
+        "question": "Seorang perawat komunitas akan membentuk kelompok bantu diri (self-help group) untuk penderita diabetes melitus. Manfaat utama dari kelompok ini bagi anggotanya adalah...",
+        "options": [
+            "Mendapatkan obat diabetes gratis secara rutin",
+            "Saling berbagi pengalaman, dukungan emosional, dan informasi praktis dalam mengelola diabetes",
+            "Menggantikan peran dokter dalam pengobatan",
+            "Menjamin kesembuhan total dari diabetes"
+        ],
+        "answer": 1,
+        "explanation": "Kelompok bantu diri memberikan dukungan psikososial, memfasilitasi pertukaran informasi dan pengalaman, serta meningkatkan motivasi anggota dalam mengelola kondisi kronis mereka."
+    },
+    {
+        "question": "Perawat di desa menemukan banyak ibu hamil tidak memeriksakan kehamilannya secara teratur karena jarak Puskesmas yang jauh. Upaya yang paling tepat untuk meningkatkan cakupan ANC (Antenatal Care) adalah...",
+        "options": [
+            "Memarahi ibu hamil yang tidak datang",
+            "Mengadakan kelas ibu hamil di tingkat desa atau dusun secara terjadwal",
+            "Menunggu ibu hamil datang sendiri ke Puskesmas",
+            "Memberikan denda bagi yang tidak ANC"
+        ],
+        "answer": 1,
+        "explanation": "Mendekatkan layanan kesehatan seperti mengadakan kelas ibu hamil atau posyandu di tingkat desa/dusun akan memudahkan akses bagi ibu hamil dan meningkatkan cakupan ANC."
+    },
+    {
+        "question": "Dalam promosi kesehatan, apa yang dimaksud dengan pendekatan 'pemberdayaan masyarakat' (community empowerment)?",
+        "options": [
+            "Memberikan bantuan langsung berupa uang atau barang",
+            "Mengambil alih semua keputusan terkait kesehatan masyarakat",
+            "Proses di mana masyarakat memperoleh kontrol lebih besar atas keputusan dan tindakan yang mempengaruhi kesehatan mereka",
+            "Menyediakan layanan kesehatan pasif menunggu pasien datang"
+        ],
+        "answer": 2,
+        "explanation": "Pemberdayaan masyarakat adalah proses memampukan dan memandirikan masyarakat agar mereka dapat mengenali masalah, merencanakan, dan melakukan tindakan untuk meningkatkan kesehatan mereka sendiri."
+    },
+    {
+        "question": "Seorang perawat komunitas melakukan kunjungan ke keluarga dengan lansia yang menderita hipertensi. Lansia tersebut mengeluh sering pusing. Pemeriksaan fisik awal yang perlu dilakukan perawat adalah...",
+        "options": [
+            "Pemeriksaan laboratorium lengkap",
+            "Pengukuran tekanan darah, nadi, dan menanyakan pola makan serta kepatuhan minum obat",
+            "Rontgen kepala",
+            "EKG (Elektrokardiogram)"
+        ],
+        "answer": 1,
+        "explanation": "Pada lansia hipertensi dengan keluhan pusing, pemeriksaan tekanan darah adalah prioritas, diikuti pengkajian faktor terkait seperti diet dan kepatuhan obat, sebelum tindakan invasif atau rujukan."
+    },
+    {
+        "question": "Program Kesehatan Jiwa Masyarakat (Keswamas) bertujuan untuk...",
+        "options": [
+            "Mengisolasi semua orang dengan gangguan jiwa (ODGJ) di rumah sakit jiwa",
+            "Memberikan obat penenang dosis tinggi kepada semua ODGJ",
+            "Meningkatkan deteksi dini, penanganan, dan rehabilitasi ODGJ di masyarakat, serta mengurangi stigma",
+            "Fokus hanya pada pengobatan ODGJ berat"
+        ],
+        "answer": 2,
+        "explanation": "Keswamas bertujuan untuk mengintegrasikan layanan kesehatan jiwa ke dalam sistem kesehatan primer, mempromosikan kesehatan jiwa, mencegah gangguan jiwa, dan memberikan perawatan serta rehabilitasi berbasis komunitas dengan mengurangi stigma."
+    },
+    {
+        "question": "Perawat komunitas menemukan kasus gizi buruk pada balita. Selain memberikan PMT, kolaborasi penting dilakukan dengan siapa untuk penanganan yang komprehensif?",
+        "options": [
+            "Hanya dengan dokter anak",
+            "Dengan ahli gizi, dokter, dan kader kesehatan untuk pemantauan serta edukasi berkelanjutan",
+            "Hanya dengan kader kesehatan",
+            "Dengan tokoh agama untuk mendoakan"
+        ],
+        "answer": 1,
+        "explanation": "Penanganan gizi buruk memerlukan pendekatan tim. Ahli gizi untuk perencanaan diet, dokter untuk penanganan medis, dan kader untuk dukungan serta pemantauan di tingkat komunitas."
+    },
+    {
+        "question": "Untuk menilai status gizi balita di Posyandu, indikator yang paling umum digunakan adalah...",
+        "options": [
+            "Berat Badan menurut Tinggi Badan (BB/TB)",
+            "Indeks Massa Tubuh (IMT) saja",
+            "Lingkar Lengan Atas (LILA) saja",
+            "Tinggi Badan menurut Umur (TB/U) dan Berat Badan menurut Umur (BB/U)"
+        ],
+        "answer": 3,
+        "explanation": "Indikator BB/U, TB/U, dan BB/TB (atau Panjang Badan untuk <2 tahun) adalah standar WHO yang digunakan dalam Kartu Menuju Sehat (KMS) untuk memantau pertumbuhan dan status gizi balita."
+    },
+    {
+        "question": "Dalam pelaksanaan Musyawarah Masyarakat Desa (MMD) bidang kesehatan, peran utama perawat komunitas adalah...",
+        "options": [
+            "Memimpin dan mengambil semua keputusan dalam MMD",
+            "Menjadi notulen dan mencatat hasil diskusi saja",
+            "Memfasilitasi proses diskusi, menyajikan data temuan masalah kesehatan, dan membantu masyarakat merumuskan rencana tindak lanjut",
+            "Hanya hadir sebagai undangan"
+        ],
+        "answer": 2,
+        "explanation": "Perawat komunitas berperan sebagai fasilitator dalam MMD, membantu masyarakat menganalisis masalah kesehatan berdasarkan data, dan bersama-sama menyusun rencana intervensi yang partisipatif."
+    },
+    {
+        "question": "Seorang perawat akan melakukan penyuluhan tentang pencegahan ISPA pada kelompok ibu balita. Metode yang paling interaktif adalah...",
+        "options": [
+            "Ceramah satu arah selama 1 jam",
+            "Diskusi kelompok kecil dengan curah pendapat dan tanya jawab, disertai demonstrasi",
+            "Menayangkan film dokumenter tanpa diskusi",
+            "Membagikan brosur untuk dibaca di rumah"
+        ],
+        "answer": 1,
+        "explanation": "Metode interaktif seperti diskusi kelompok dan demonstrasi memungkinkan partisipasi aktif peserta, meningkatkan pemahaman, dan retensi informasi dibandingkan metode pasif."
+    },
+    {
+        "question": "Salah satu strategi global untuk promosi kesehatan yang dikenal dengan 'Piagam Ottawa' menekankan pada lima area aksi. Salah satunya adalah...",
+        "options": [
+            "Membangun rumah sakit mewah",
+            "Menciptakan lingkungan yang mendukung (supportive environment)",
+            "Mengandalkan teknologi medis canggih",
+            "Fokus pada pengobatan kuratif saja"
+        ],
+        "answer": 1,
+        "explanation": "Piagam Ottawa mencakup: membangun kebijakan publik yang sehat, menciptakan lingkungan yang mendukung, memperkuat aksi komunitas, mengembangkan keterampilan individu, dan reorientasi pelayanan kesehatan. Lingkungan yang mendukung sangat krusial."
+    },
+    {
+        "question": "Perawat komunitas melakukan kunjungan rumah pada pasien pasca stroke dengan hemiparesis. Edukasi yang penting diberikan kepada keluarga untuk mencegah komplikasi adalah...",
+        "options": [
+            "Membiarkan pasien tirah baring total tanpa mobilisasi",
+            "Mengajarkan tentang pentingnya latihan gerak pasif/aktif, pencegahan dekubitus, dan nutrisi adekuat",
+            "Memberikan makanan tinggi lemak agar cepat pulih",
+            "Menghentikan semua obat dari dokter"
+        ],
+        "answer": 1,
+        "explanation": "Pasien pasca stroke memerlukan rehabilitasi. Keluarga perlu diedukasi tentang latihan gerak untuk mencegah kontraktur, perawatan kulit untuk mencegah dekubitus, dan pemenuhan nutrisi untuk mendukung pemulihan."
+    },
+    {
+        "question": "Data di Puskesmas menunjukkan tingginya kasus anemia pada ibu hamil. Intervensi keperawatan komunitas yang berfokus pada pencegahan primer adalah...",
+        "options": [
+            "Transfusi darah massal pada ibu hamil",
+            "Penyuluhan tentang pentingnya konsumsi makanan sumber zat besi dan tablet tambah darah (TTD) selama kehamilan",
+            "Memberikan suplemen zat besi dosis tinggi hanya setelah ibu hamil didiagnosis anemia berat",
+            "Merujuk semua ibu hamil ke spesialis hematologi"
+        ],
+        "answer": 1,
+        "explanation": "Pencegahan primer anemia pada ibu hamil meliputi edukasi gizi seimbang kaya zat besi dan suplementasi TTD sesuai program pemerintah untuk semua ibu hamil."
+    },
+    {
+        "question": "Seorang perawat akan melakukan pengkajian kebutuhan dasar manusia pada keluarga binaan. Aspek yang termasuk dalam kebutuhan eliminasi adalah...",
+        "options": [
+            "Pola tidur dan istirahat keluarga",
+            "Ketersediaan dan penggunaan jamban keluarga, serta pola BAB/BAK anggota keluarga",
+            "Jenis makanan yang dikonsumsi sehari-hari",
+            "Aktivitas fisik dan olahraga rutin"
+        ],
+        "answer": 1,
+        "explanation": "Kebutuhan eliminasi mencakup aspek buang air besar (BAB) dan buang air kecil (BAK), termasuk ketersediaan fasilitas sanitasi yang layak seperti jamban keluarga."
+    },
+    {
+        "question": "Perawat komunitas menemukan seorang anak usia sekolah belum pernah mendapatkan imunisasi DPT lanjutan (booster). Tindakan yang tepat adalah...",
+        "options": [
+            "Memarahi orang tua anak tersebut",
+            "Memberikan edukasi kepada orang tua tentang pentingnya imunisasi lanjutan dan merujuk ke Puskesmas untuk melengkapi imunisasi",
+            "Menganggap imunisasi dasar sudah cukup",
+            "Melaporkan ke pihak sekolah agar anak dikeluarkan"
+        ],
+        "answer": 1,
+        "explanation": "Edukasi dan rujukan adalah tindakan yang tepat. Imunisasi lanjutan (booster) penting untuk mempertahankan tingkat kekebalan yang optimal terhadap penyakit."
+    },
+    {
+        "question": "Pendidikan kesehatan tentang Perilaku Hidup Bersih dan Sehat (PHBS) tatanan rumah tangga mencakup beberapa indikator. Salah satu indikator penting adalah...",
+        "options": [
+            "Memiliki mobil pribadi",
+            "Memberantas jentik nyamuk di rumah seminggu sekali",
+            "Berlangganan TV kabel",
+            "Menggunakan pendingin ruangan (AC)"
+        ],
+        "answer": 1,
+        "explanation": "Memberantas jentik nyamuk adalah salah satu dari 10 indikator PHBS tatanan rumah tangga yang bertujuan mencegah penyakit tular vektor seperti DBD."
+    },
+    {
+        "question": "Seorang perawat komunitas melakukan pengkajian pada kelompok lansia. Keluhan yang paling sering muncul terkait fungsi sensorik adalah...",
+        "options": [
+            "Peningkatan nafsu makan",
+            "Penurunan pendengaran (presbikusis) dan penglihatan (presbiopi)",
+            "Peningkatan kekuatan otot",
+            "Memori jangka pendek yang sangat baik"
+        ],
+        "answer": 1,
+        "explanation": "Proses penuaan seringkali disertai penurunan fungsi organ sensorik, terutama pendengaran (presbikusis) dan penglihatan (presbiopi), yang dapat mempengaruhi kualitas hidup lansia."
+    },
+    {
+        "question": "Dalam penanganan diare pada balita di tingkat komunitas, selain oralit, penting juga memberikan suplementasi Zinc selama 10-14 hari. Apa tujuan utama pemberian Zinc?",
+        "options": [
+            "Sebagai pengganti makanan utama",
+            "Untuk mengurangi durasi dan keparahan diare, serta mencegah episode diare berulang",
+            "Sebagai obat penurun panas",
+            "Untuk menghentikan BAB secara instan"
+        ],
+        "answer": 1,
+        "explanation": "Suplementasi Zinc terbukti efektif dalam mengurangi lama dan beratnya diare, serta membantu memulihkan kesehatan usus dan meningkatkan daya tahan tubuh terhadap infeksi berikutnya."
+    },
+    {
+        "question": "Perawat komunitas sedang melakukan screening Katarak pada lansia di Posyandu. Tanda awal yang sering dikeluhkan penderita katarak adalah...",
+        "options": [
+            "Mata merah dan berair",
+            "Penglihatan kabur seperti berkabut atau berasap",
+            "Nyeri hebat pada mata",
+            "Penglihatan ganda mendadak"
+        ],
+        "answer": 1,
+        "explanation": "Gejala katarak yang paling umum adalah penglihatan yang buram atau kabur secara bertahap, sering digambarkan seperti melihat melalui kaca yang berkabut."
+    },
+    {
+        "question": "Di sebuah wilayah kerja Puskesmas, banyak ditemukan kasus stunting pada balita. Fokus intervensi gizi spesifik yang paling krusial adalah...",
+        "options": [
+            "Pemberian makanan tinggi gula dan lemak",
+            "Intervensi pada 1000 Hari Pertama Kehidupan (HPK), yaitu sejak konsepsi hingga anak usia 2 tahun",
+            "Pemberian suplemen vitamin C dosis tinggi saja",
+            "Fokus pada anak usia sekolah saja"
+        ],
+        "answer": 1,
+        "explanation": "1000 HPK adalah periode emas pertumbuhan dan perkembangan. Intervensi gizi pada periode ini (ibu hamil, ibu menyusui, bayi 0-6 bulan, baduta 6-24 bulan) sangat menentukan pencegahan stunting."
+    },
+    {
+        "question": "Perawat komunitas memberikan penyuluhan tentang pentingnya ASI Eksklusif selama 6 bulan pertama. Manfaat ASI Eksklusif bagi bayi adalah...",
+        "options": [
+            "Membuat bayi cepat berjalan",
+            "Mengandung semua zat gizi yang dibutuhkan bayi, antibodi, dan mudah dicerna",
+            "Sebagai pengganti imunisasi lengkap",
+            "Menyebabkan bayi sering alergi"
+        ],
+        "answer": 1,
+        "explanation": "ASI adalah makanan terbaik untuk bayi karena komposisinya lengkap, mengandung antibodi untuk kekebalan, mudah dicerna, dan mendukung tumbuh kembang optimal serta melindungi dari infeksi."
+    },
+    {
+        "question": "Seorang perawat akan melakukan pemeriksaan fisik dasar pada pasien di komunitas. Urutan pemeriksaan fisik umum yang benar adalah...",
+        "options": [
+            "Palpasi, Inspeksi, Perkusi, Auskultasi",
+            "Inspeksi, Palpasi, Perkusi, Auskultasi",
+            "Auskultasi, Perkusi, Palpasi, Inspeksi",
+            "Perkusi, Auskultasi, Inspeksi, Palpasi"
+        ],
+        "answer": 1,
+        "explanation": "Urutan standar pemeriksaan fisik (kecuali abdomen) adalah Inspeksi (melihat), Palpasi (meraba), Perkusi (mengetuk), dan Auskultasi (mendengar dengan stetoskop)."
+    },
+    {
+        "question": "Pendidikan kesehatan kepada keluarga pasien TB Paru tentang cara pencegahan penularan yang efektif adalah...",
+        "options": [
+            "Memisahkan alat makan pasien tanpa perlu dicuci khusus",
+            "Pasien harus selalu berada di kamar tertutup tanpa ventilasi",
+            "Pasien menutup mulut saat batuk/bersin, ventilasi rumah baik, dan jemur alat tidur secara teratur",
+            "Menghindari kontak fisik sama sekali dengan pasien"
+        ],
+        "answer": 2,
+        "explanation": "Pencegahan penularan TB meliputi etika batuk yang benar, rumah dengan ventilasi dan sinar matahari cukup, serta menjaga kebersihan lingkungan dan alat tidur pasien."
+    },
+    {
+        "question": "Perawat komunitas menemukan seorang ibu yang baru melahirkan (masa nifas) tampak murung, mudah menangis, dan cemas. Kondisi ini kemungkinan adalah...",
+        "options": [
+            "Skizofrenia postpartum",
+            "Baby blues syndrome atau depresi postpartum ringan",
+            "Gangguan bipolar",
+            "Kelelahan fisik biasa"
+        ],
+        "answer": 1,
+        "explanation": "Gejala murung, menangis, cemas, dan sensitif pada masa nifas awal seringkali merupakan manifestasi dari 'baby blues syndrome', yang jika berlanjut atau memberat bisa menjadi depresi postpartum."
+    },
+    {
+        "question": "Dalam program Usaha Kesehatan Gigi Sekolah (UKGS), kegiatan yang termasuk pencegahan primer karies gigi adalah...",
+        "options": [
+            "Penambalan gigi berlubang",
+            "Pencabutan gigi yang sudah goyang",
+            "Penyuluhan cara menyikat gigi yang benar dan aplikasi fluor",
+            "Pembersihan karang gigi"
+        ],
+        "answer": 2,
+        "explanation": "Pencegahan primer karies gigi meliputi edukasi cara sikat gigi yang benar, pengaturan pola makan rendah gula, dan penggunaan fluor untuk memperkuat enamel gigi."
+    },
+    {
+        "question": "Seorang perawat komunitas memberikan obat cacing kepada anak-anak sekolah dasar. Ini merupakan contoh dari intervensi...",
+        "options": [
+            "Promosi kesehatan",
+            "Pencegahan primer (spesifik protection)",
+            "Pencegahan sekunder (early diagnosis and prompt treatment)",
+            "Pencegahan tersier (rehabilitation)"
+        ],
+        "answer": 1, 
+        "explanation": "Pemberian obat cacing massal pada anak sekolah bertujuan untuk mencegah terjadinya infeksi cacingan yang berat dan komplikasinya, ini termasuk dalam perlindungan spesifik (pencegahan primer)."
+    },
+    {
+        "question": "Kader Posyandu memiliki peran penting dalam sistem kesehatan masyarakat. Salah satu tugas utama kader adalah...",
+        "options": [
+            "Memberikan resep obat kepada warga",
+            "Melakukan diagnosis penyakit berat",
+            "Membantu pelaksanaan Posyandu, melakukan penyuluhan dasar, dan memotivasi masyarakat untuk berperilaku sehat",
+            "Melakukan tindakan medis invasif"
+        ],
+        "answer": 2,
+        "explanation": "Kader adalah ujung tombak di masyarakat yang membantu tenaga kesehatan dalam pelaksanaan kegiatan Posyandu, memberikan informasi kesehatan dasar, dan menjadi motivator PHBS."
+    },
+    {
+        "question": "Perawat komunitas akan melakukan 'focus group discussion' (FGD) untuk menggali persepsi masyarakat tentang masalah DBD. Karakteristik utama FGD adalah...",
+        "options": [
+            "Wawancara individual dengan setiap warga",
+            "Diskusi terarah dalam kelompok kecil (6-10 orang) dengan topik spesifik, dipandu fasilitator",
+            "Survei dengan kuesioner tertutup kepada banyak responden",
+            "Observasi partisipan selama seminggu penuh"
+        ],
+        "answer": 1,
+        "explanation": "FGD adalah teknik kualitatif untuk mengumpulkan data melalui diskusi kelompok kecil yang terfokus pada suatu topik, dipandu oleh seorang moderator/fasilitator untuk menggali pandangan dan pengalaman peserta."
+    },
+    {
+        "question": "Pentingnya menjaga kebersihan lingkungan sekitar rumah, seperti tidak ada genangan air, adalah untuk mencegah perkembangbiakan nyamuk Aedes Aegypti yang merupakan vektor penyakit...",
+        "options": [
+            "Malaria",
+            "Tuberkulosis",
+            "Demam Berdarah Dengue (DBD)",
+            "Leptospirosis"
+        ],
+        "answer": 2,
+        "explanation": "Nyamuk Aedes aegypti adalah vektor utama virus Dengue penyebab penyakit Demam Berdarah Dengue. Nyamuk ini berkembang biak di genangan air bersih di sekitar rumah."
+    },
+    {
+        "question": "Seorang perawat komunitas melakukan kunjungan rumah pada keluarga dengan anak remaja yang menunjukkan perilaku menarik diri dan penurunan prestasi belajar. Pendekatan awal yang sebaiknya dilakukan perawat adalah...",
+        "options": [
+            "Menasihati remaja tersebut dengan keras",
+            "Langsung merujuk ke psikiater",
+            "Membangun hubungan saling percaya dengan remaja dan keluarga, melakukan pengkajian psikososial",
+            "Memberikan obat penenang kepada remaja"
+        ],
+        "answer": 2,
+        "explanation": "Masalah psikososial remaja memerlukan pendekatan yang hati-hati. Membangun trust dan melakukan pengkajian komprehensif adalah langkah awal untuk memahami masalah dan merencanakan intervensi yang tepat."
+    },
+    {
+        "question": "Dalam memberikan pendidikan kesehatan tentang diet pasien diabetes melitus, prinsip '3J' yang perlu ditekankan adalah...",
+        "options": [
+            "Jumlah, Jenis, dan Jadwal makan",
+            "Jajan, Jarak, dan Jaminan mutu",
+            "Jujur, Jaga, dan Jauhi pantangan",
+            "Jemur, Jalan, dan Jaga berat badan"
+        ],
+        "answer": 0,
+        "explanation": "Prinsip 3J (Jumlah kalori sesuai kebutuhan, Jenis makanan yang dianjurkan/dihindari, dan Jadwal makan teratur) adalah pilar penting dalam pengelolaan diet pasien diabetes melitus."
+    },
+    {
+        "question": "Perawat komunitas mengidentifikasi adanya kelompok risiko tinggi penyakit HIV/AIDS di wilayah kerjanya. Intervensi promosi kesehatan yang efektif adalah...",
+        "options": [
+            "Menghindari kelompok tersebut sama sekali",
+            "Memberikan penyuluhan tentang perilaku seksual aman, penggunaan kondom, dan bahaya NAPZA suntik",
+            "Melakukan tes HIV paksa pada semua anggota kelompok",
+            "Mengumumkan identitas mereka kepada masyarakat luas"
+        ],
+        "answer": 1,
+        "explanation": "Pendidikan kesehatan tentang perilaku berisiko, cara pencegahan (ABCDE: Abstinence, Be faithful, Condom, no Drugs, Education), dan pentingnya VCT (Voluntary Counseling and Testing) adalah kunci dalam pencegahan HIV/AIDS."
+    },
+    {
+        "question": "Seorang perawat melakukan pemeriksaan tanda-tanda vital pada seorang dewasa. Hasil: TD 120/80 mmHg, Nadi 80x/menit, Suhu 36.5°C, Pernapasan 18x/menit. Interpretasi hasil ini adalah...",
+        "options": [
+            "Semua tanda vital dalam batas abnormal",
+            "Tekanan darah tinggi, lainnya normal",
+            "Semua tanda vital dalam batas normal",
+            "Nadi terlalu cepat, lainnya normal"
+        ],
+        "answer": 2,
+        "explanation": "Hasil pemeriksaan tanda-tanda vital tersebut berada dalam rentang normal untuk orang dewasa sehat."
+    },
+    {
+        "question": "Perawat komunitas mengajarkan teknik relaksasi napas dalam kepada sekelompok lansia yang sering mengeluh cemas. Tujuan utama teknik ini adalah...",
+        "options": [
+            "Meningkatkan kekuatan otot pernapasan",
+            "Mengurangi ketegangan fisik dan mental, serta meningkatkan rasa nyaman",
+            "Mengobati penyakit jantung koroner",
+            "Sebagai pengganti obat anti-cemas"
+        ],
+        "answer": 1,
+        "explanation": "Teknik relaksasi napas dalam membantu menenangkan sistem saraf, mengurangi respons stres, dan meningkatkan perasaan rileks serta fokus, sehingga efektif mengurangi kecemasan ringan."
+    },
+    {
+        "question": "Pelaksanaan tindakan keperawatan pemasangan infus pada pasien di rumah (home care) memerlukan prinsip aseptik untuk mencegah...",
+        "options": [
+            "Dehidrasi",
+            "Infeksi aliran darah",
+            "Emboli udara",
+            "Nyeri pada bekas tusukan"
+        ],
+        "answer": 1,
+        "explanation": "Prinsip aseptik (bebas kuman) sangat penting dalam prosedur invasif seperti pemasangan infus untuk mencegah masuknya mikroorganisme ke dalam aliran darah yang dapat menyebabkan infeksi."
+    },
+    {
+        "question": "Seorang perawat memberikan edukasi cara merawat luka diabetes pada kaki pasien. Hal penting yang harus ditekankan adalah...",
+        "options": [
+            "Merendam kaki dengan air panas setiap hari",
+            "Membersihkan luka dengan antiseptik kuat seperti alkohol",
+            "Menjaga luka tetap kering dan bersih, mengganti balutan secara teratur, dan mengenali tanda-tanda infeksi",
+            "Membiarkan luka terbuka agar cepat kering"
+        ],
+        "answer": 2,
+        "explanation": "Perawatan luka diabetes memerlukan kehati-hatian: jaga kebersihan, gunakan cairan pembersih yang lembut (NaCl 0.9%), balut dengan benar, dan segera kenali tanda infeksi (kemerahan, bengkak, nanah, bau)."
+    },
+    {
+        "question": "Anatomi sistem pernapasan manusia terdiri dari saluran napas atas dan bawah. Yang termasuk saluran napas atas adalah...",
+        "options": [
+            "Bronkus, bronkiolus, alveolus",
+            "Hidung, faring, laring",
+            "Paru-paru dan pleura",
+            "Trakea dan diafragma"
+        ],
+        "answer": 1,
+        "explanation": "Saluran napas atas meliputi rongga hidung, sinus paranasal, faring (tekak), dan laring (pangkal tenggorokan). Trakea adalah bagian awal saluran napas bawah."
+    },
+    {
+        "question": "Obat Parasetamol (Acetaminophen) bekerja sebagai analgesik dan antipiretik. Mekanisme kerja utamanya adalah...",
+        "options": [
+            "Menghambat produksi prostaglandin di sistem saraf pusat",
+            "Memblokir reseptor opioid di otak",
+            "Sebagai antibiotik membunuh bakteri penyebab demam",
+            "Merelaksasi otot-otot polos"
+        ],
+        "answer": 0,
+        "explanation": "Parasetamol menghambat enzim siklooksigenase (COX) di otak, sehingga mengurangi produksi prostaglandin yang berperan dalam timbulnya nyeri dan demam."
+    },
+    {
+        "question": "Seorang pasien mengonsumsi obat antihipertensi golongan ACE inhibitor (misal: Captopril) dan mengeluh batuk kering yang mengganggu. Perawat mengetahui ini adalah efek samping yang umum dan menyarankan pasien untuk...",
+        "options": [
+            "Menggandakan dosis obat agar batuk hilang",
+            "Segera menghentikan obat tanpa konsultasi dokter",
+            "Berkonsultasi kembali dengan dokter untuk kemungkinan penyesuaian terapi",
+            "Minum obat batuk yang dijual bebas"
+        ],
+        "answer": 2,
+        "explanation": "Batuk kering adalah efek samping umum ACE inhibitor. Pasien harus berkonsultasi dengan dokter, yang mungkin akan mengganti obat atau menyesuaikan dosis, bukan menghentikan sendiri atau menambah obat lain tanpa anjuran."
+    },
+    {
+        "question": "Penyakit Diabetes Melitus tipe 2 terutama disebabkan oleh...",
+        "options": [
+            "Infeksi virus pada pankreas",
+            "Kerusakan autoimun sel beta pankreas",
+            "Resistensi insulin dan defisiensi insulin relatif",
+            "Konsumsi gula berlebih saat masa kanak-kanak"
+        ],
+        "answer": 2,
+        "explanation": "DM tipe 2 ditandai dengan ketidakmampuan tubuh merespons insulin secara efektif (resistensi insulin) dan seiring waktu, produksi insulin oleh pankreas juga dapat menurun."
+    },
+    {
+        "question": "Pemeriksaan laboratorium yang paling umum digunakan untuk memantau kadar gula darah jangka panjang pada pasien diabetes adalah...",
+        "options": [
+            "Gula Darah Sewaktu (GDS)",
+            "Gula Darah Puasa (GDP)",
+            "Tes Toleransi Glukosa Oral (TTGO)",
+            "Hemoglobin A1c (HbA1c)"
+        ],
+        "answer": 3,
+        "explanation": "HbA1c mencerminkan rata-rata kadar glukosa darah selama 2-3 bulan terakhir, sehingga menjadi indikator kontrol glikemik jangka panjang yang baik."
+    },
+    {
+        "question": "Seorang perawat komunitas berkomunikasi dengan seorang lansia yang mengalami gangguan pendengaran. Teknik komunikasi yang efektif adalah...",
+        "options": [
+            "Berbicara dengan suara sangat keras dan cepat",
+            "Berbicara dengan jelas, intonasi normal, menghadap pasien, dan menggunakan gestur jika perlu",
+            "Menulis semua pesan di kertas",
+            "Meminta anggota keluarga lain untuk selalu menjadi perantara"
+        ],
+        "answer": 1,
+        "explanation": "Komunikasi dengan lansia gangguan pendengaran memerlukan kesabaran: bicara jelas, tidak terlalu cepat, hadap wajah, minimalkan bising latar, dan gunakan bantuan visual atau sentuhan jika sesuai."
+    },
+    {
+        "question": "Pentingnya 'informed consent' sebelum melakukan tindakan keperawatan invasif di komunitas adalah untuk...",
+        "options": [
+            "Menakut-nakuti pasien agar patuh",
+            "Memastikan perawat tidak dituntut jika terjadi kesalahan",
+            "Menghargai otonomi pasien, memberikan informasi yang cukup agar pasien dapat membuat keputusan tentang perawatannya",
+            "Mempercepat proses tindakan tanpa banyak pertanyaan"
+        ],
+        "answer": 2,
+        "explanation": "Informed consent adalah persetujuan tindakan medis/keperawatan setelah pasien mendapatkan penjelasan lengkap mengenai tindakan, tujuan, risiko, manfaat, dan alternatifnya, sehingga pasien dapat berpartisipasi dalam pengambilan keputusan."
+    },
+    {
+        "question": "Seorang perawat Puskesmas melakukan kunjungan ke rumah pasien dengan diagnosis Hipertensi. Pasien mengatakan masih sering mengonsumsi makanan asin. Intervensi keperawatan prioritas adalah...",
+        "options": [
+            "Memberikan obat diuretik tambahan",
+            "Memarahi pasien karena tidak patuh",
+            "Memberikan pendidikan kesehatan tentang diet rendah garam dan dampaknya pada tekanan darah, serta menggali kendala pasien",
+            "Melaporkan pasien ke dokter agar dosis obat dinaikkan"
+        ],
+        "answer": 2,
+        "explanation": "Edukasi tentang pentingnya diet rendah garam, dampaknya terhadap kontrol hipertensi, dan membantu pasien mengidentifikasi serta mengatasi hambatan dalam menjalankan diet adalah langkah penting."
+    },
+    {
+        "question": "Dalam pengkajian kebutuhan dasar manusia, perawat menanyakan tentang pola tidur pasien. Informasi yang relevan untuk digali adalah...",
+        "options": [
+            "Merek kasur yang digunakan",
+            "Jumlah jam tidur, kualitas tidur, adanya gangguan tidur (misal: insomnia, sering terbangun)",
+            "Warna sprei favorit",
+            "Apakah pasien tidur dengan lampu menyala atau mati"
+        ],
+        "answer": 1,
+        "explanation": "Pengkajian pola tidur meliputi durasi tidur, kontinuitas tidur, persepsi pasien terhadap kualitas tidurnya, serta adanya faktor-faktor yang mengganggu tidur."
+    },
+    {
+        "question": "Perawat memberikan pendidikan kesehatan kepada keluarga tentang cara pemberian obat sirup antibiotik pada anak. Hal yang harus dipastikan adalah...",
+        "options": [
+            "Obat diminum sampai gejala hilang saja",
+            "Dosis obat sesuai takaran sendok makan orang dewasa",
+            "Obat diminum sampai habis sesuai anjuran dokter, dengan dosis dan interval waktu yang tepat",
+            "Obat boleh dicampur dengan minuman manis apa saja"
+        ],
+        "answer": 2,
+        "explanation": "Antibiotik harus dihabiskan sesuai resep dokter untuk mencegah resistensi bakteri. Dosis harus tepat menggunakan alat takar yang sesuai, dan interval pemberian juga harus diperhatikan."
+    },
+    {
+        "question": "Pemeriksaan fisik dengan teknik palpasi bertujuan untuk...",
+        "options": [
+            "Mendengarkan bunyi dalam tubuh",
+            "Melihat adanya kelainan bentuk atau warna",
+            "Meraba untuk mengetahui ukuran, bentuk, konsistensi, dan nyeri tekan pada organ atau bagian tubuh",
+            "Mengetuk permukaan tubuh untuk menilai resonansi"
+        ],
+        "answer": 2,
+        "explanation": "Palpasi adalah teknik pemeriksaan dengan menggunakan indera peraba (tangan dan jari) untuk mendeteksi karakteristik fisik seperti suhu, getaran, ukuran, konsistensi, tekstur, dan nyeri."
+    },
+    {
+        "question": "Seorang ibu membawa anaknya yang berusia 4 tahun ke Puskesmas dengan keluhan demam tinggi selama 3 hari, muncul bintik merah di kulit, dan mimisan. Perawat mencurigai kemungkinan Demam Berdarah Dengue (DBD). Pemeriksaan diagnostik awal yang mungkin dianjurkan dokter adalah...",
+        "options": [
+            "Tes fungsi hati (SGOT/SGPT)",
+            "Pemeriksaan darah lengkap terutama trombosit dan hematokrit",
+            "Kultur darah untuk bakteri",
+            "Rontgen dada"
+        ],
+        "answer": 1,
+        "explanation": "Pada suspek DBD, pemeriksaan darah lengkap untuk melihat kadar trombosit (biasanya turun) dan hematokrit (biasanya meningkat karena kebocoran plasma) adalah kunci diagnosis awal."
+    },
+    {
+        "question": "Dalam komunikasi dengan pasien yang cemas, perawat sebaiknya menunjukkan sikap...",
+        "options": [
+            "Tidak peduli dan mengalihkan pembicaraan",
+            "Empati, tenang, mendengarkan aktif, dan memberikan dukungan",
+            "Mengatakan 'jangan cemas' berulang kali",
+            "Menjelaskan semua prosedur medis dengan detail yang rumit"
+        ],
+        "answer": 1,
+        "explanation": "Sikap empati, tenang, dan mendengarkan aktif membantu pasien merasa didengarkan dan dipahami, yang dapat mengurangi tingkat kecemasannya. Memberikan informasi sederhana dan jelas juga penting."
+    },
+    {
+        "question": "Keperawatan komunitas berfokus pada tiga tingkat pencegahan. Contoh kegiatan pencegahan sekunder adalah...",
+        "options": [
+            "Penyuluhan tentang bahaya merokok",
+            "Skrining tekanan darah massal dan Pap Smear",
+            "Rehabilitasi pasien pasca stroke",
+            "Imunisasi balita"
+        ],
+        "answer": 1,
+        "explanation": "Pencegahan sekunder bertujuan untuk deteksi dini penyakit dan pengobatan segera. Skrining (penapisan) seperti pemeriksaan tekanan darah dan Pap Smear adalah contohnya."
+    },
+    {
+        "question": "Saat melakukan kunjungan rumah, perawat menemukan lingkungan rumah yang kotor dan tidak terawat. Pendekatan yang paling baik untuk memotivasi keluarga agar mau membersihkan rumahnya adalah...",
+        "options": [
+            "Langsung membersihkan rumah tersebut untuk memberi contoh",
+            "Memarahi keluarga karena jorok",
+            "Memberikan penyuluhan tentang hubungan kebersihan lingkungan dengan kesehatan, serta mendiskusikan manfaat dan cara menjaga kebersihan secara bertahap",
+            "Melaporkan ke ketua RT agar keluarga tersebut ditegur"
+        ],
+        "answer": 2,
+        "explanation": "Pendekatan edukatif dan partisipatif, dengan menjelaskan kaitan antara lingkungan bersih dan kesehatan, serta memberdayakan keluarga untuk melakukan perubahan, lebih efektif daripada tindakan direktif atau menghakimi."
+    },
+    {
+        "question": "Seorang perawat komunitas melakukan pengkajian pada ibu hamil dan menemukan tekanan darahnya 150/100 mmHg. Ibu juga mengeluh sakit kepala dan pandangan kabur. Tindakan segera yang paling tepat oleh perawat adalah...",
+        "options": [
+            "Memberikan obat penurun tekanan darah yang biasa diminum suami",
+            "Menyarankan ibu untuk istirahat total di rumah",
+            "Segera merujuk ibu ke fasilitas kesehatan (Puskesmas/Rumah Sakit) untuk penanganan preeklamsia",
+            "Mengukur tekanan darah ulang 1 jam kemudian"
+        ],
+        "answer": 2,
+        "explanation": "Tanda dan gejala tersebut mengarah pada preeklamsia berat, suatu kondisi kegawatdaruratan obstetrik yang memerlukan penanganan segera di fasilitas kesehatan yang memadai untuk mencegah komplikasi pada ibu dan janin."
+    },
+    {
+        "question": "Penyakit infeksi Saluran Pernapasan Akut (ISPA) pada balita sering disebabkan oleh virus. Faktor risiko utama dari lingkungan yang memperberat ISPA adalah...",
+        "options": [
+            "Konsumsi buah-buahan setiap hari",
+            "Paparan asap rokok di dalam rumah dan polusi udara",
+            "Kebiasaan mencuci tangan pakai sabun",
+            "Imunisasi lengkap"
+        ],
+        "answer": 1,
+        "explanation": "Paparan asap rokok (perokok pasif), polusi udara dalam ruangan (misalnya dari asap dapur), dan kepadatan hunian merupakan faktor risiko lingkungan yang signifikan untuk ISPA pada balita."
+    },
+    {
+        "question": "Perawat komunitas sedang mempersiapkan sesi pendidikan kesehatan untuk kelompok lansia tentang osteoporosis. Materi yang paling relevan untuk disampaikan adalah...",
+        "options": [
+            "Pentingnya olahraga angkat beban berat",
+            "Pencegahan jatuh, diet kaya kalsium dan vitamin D, serta aktivitas fisik teratur sesuai kemampuan",
+            "Cara menggunakan alat kontrasepsi",
+            "Manajemen stres pada usia produktif"
+        ],
+        "answer": 1,
+        "explanation": "Edukasi untuk lansia dengan risiko osteoporosis harus fokus pada pencegahan patah tulang melalui modifikasi lingkungan, asupan kalsium dan vitamin D yang cukup, serta latihan fisik yang aman."
+    },
+    {
+        "question": "Seorang pasien dewasa datang ke Puskesmas dengan keluhan batuk berdahak >2 minggu, kadang disertai darah, demam ringan, dan penurunan berat badan. Perawat mencurigai TB Paru. Pemeriksaan penunjang utama untuk diagnosis adalah...",
+        "options": [
+            "Tes Mantoux (Tuberkulin)",
+            "Pemeriksaan dahak BTA (Bakteri Tahan Asam)",
+            "Spirometri",
+            "Foto Rontgen Thorax saja"
+        ],
+        "answer": 1,
+        "explanation": "Pemeriksaan mikroskopis dahak untuk menemukan Bakteri Tahan Asam (BTA) adalah baku emas untuk diagnosis TB Paru. Foto rontgen dada dapat mendukung diagnosis."
+    },
+    {
+        "question": "Perawat mengajarkan cara perawatan tali pusat pada bayi baru lahir kepada ibu. Prinsip utama perawatan tali pusat adalah...",
+        "options": [
+            "Mengoleskan alkohol atau betadine setiap hari",
+            "Menutup tali pusat dengan koin atau ramuan tradisional",
+            "Menjaga tali pusat tetap kering dan bersih, tidak membubuhi apapun, dan melipat popok di bawah tali pusat",
+            "Menarik-narik tali pusat agar cepat lepas"
+        ],
+        "answer": 2,
+        "explanation": "Perawatan tali pusat modern merekomendasikan 'dry care' atau perawatan kering: jaga kebersihan, biarkan terbuka atau ditutup kasa steril kering jika perlu, dan hindari pemberian zat apapun untuk mencegah infeksi dan mempercepat proses pengeringan."
+    },
+    {
+        "question": "Dalam melakukan komunikasi terapeutik, perawat menggunakan teknik 'klarifikasi'. Tujuan dari teknik ini adalah...",
+        "options": [
+            "Mengubah topik pembicaraan jika pasien terlihat bosan",
+            "Menyimpulkan seluruh isi pembicaraan",
+            "Memperjelas kembali ungkapan atau pesan pasien yang kurang jelas agar pemahamannya sama",
+            "Memberikan nasihat langsung kepada pasien"
+        ],
+        "answer": 2,
+        "explanation": "Klarifikasi adalah teknik komunikasi untuk memastikan perawat memahami dengan benar apa yang dimaksud oleh pasien, dengan cara meminta pasien menjelaskan kembali atau mengulang pesan dengan kata-kata sendiri."
+    },
+    {
+        "question": "Perawat komunitas menemukan seorang anak usia 10 bulan belum bisa duduk sendiri. Menurut tahapan perkembangan normal, ini menunjukkan adanya...",
+        "options": [
+            "Perkembangan yang sangat cepat",
+            "Perkembangan normal sesuai usia",
+            "Keterlambatan perkembangan motorik kasar",
+            "Keterlambatan perkembangan bahasa"
+        ],
+        "answer": 2,
+        "explanation": "Bayi umumnya sudah bisa duduk tanpa bantuan pada usia 6-9 bulan. Jika pada usia 10 bulan belum bisa duduk sendiri, ini mengindikasikan adanya kemungkinan keterlambatan perkembangan motorik kasar yang perlu diinvestigasi lebih lanjut."
+    },
+    {
+        "question": "Di suatu daerah endemis malaria, perawat komunitas melakukan penyuluhan tentang pencegahan. Salah satu cara pencegahan yang efektif adalah...",
+        "options": [
+            "Minum air rebusan daun pepaya setiap hari",
+            "Menggunakan kelambu berinsektisida saat tidur dan menghindari gigitan nyamuk Anopheles",
+            "Melakukan fogging setiap hari di seluruh desa",
+            "Tidak keluar rumah sama sekali setelah jam 6 sore"
+        ],
+        "answer": 1,
+        "explanation": "Pencegahan malaria utama adalah menghindari gigitan nyamuk Anopheles (vektor malaria) dengan menggunakan kelambu berinsektisida, repellent, dan membersihkan tempat perindukan nyamuk."
+    },
+    {
+        "question": "Perawat komunitas sedang melakukan pengkajian keluarga menggunakan genogram. Informasi apa yang bisa didapatkan dari genogram?",
+        "options": [
+            "Status ekonomi keluarga secara detail",
+            "Pola hubungan dan riwayat penyakit dalam keluarga minimal tiga generasi",
+            "Denah rumah dan sanitasi lingkungan",
+            "Jadwal kegiatan harian anggota keluarga"
+        ],
+        "answer": 1,
+        "explanation": "Genogram adalah alat visual untuk menggambarkan struktur keluarga, pola hubungan antar anggota keluarga, dan riwayat kesehatan atau penyakit yang diturunkan dalam keluarga selama beberapa generasi."
+    },
+    {
+        "question": "Seorang perawat menjelaskan tentang efek samping obat anti-diabetes oral Metformin kepada pasien. Efek samping yang paling sering muncul di awal penggunaan adalah...",
+        "options": [
+            "Peningkatan berat badan drastis",
+            "Gangguan saluran cerna seperti mual, diare, atau rasa tidak nyaman di perut",
+            "Hipoglikemia berat jika diminum tanpa makan",
+            "Rambut rontok"
+        ],
+        "answer": 1,
+        "explanation": "Efek samping gastrointestinal (mual, kembung, diare) adalah yang paling umum terjadi pada awal penggunaan Metformin, dan biasanya bersifat sementara. Risiko hipoglikemia Metformin rendah jika digunakan sebagai monoterapi."
+    },
+    {
+        "question": "Penyakit menular seksual (PMS) seperti Gonore dan Sifilis disebabkan oleh...",
+        "options": [
+            "Virus",
+            "Bakteri",
+            "Jamur",
+            "Parasit"
+        ],
+        "answer": 1,
+        "explanation": "Gonore disebabkan oleh bakteri Neisseria gonorrhoeae, dan Sifilis disebabkan oleh bakteri Treponema pallidum. Keduanya ditularkan melalui kontak seksual."
+    },
+    {
+        "question": "Saat melakukan pemeriksaan fisik pada bayi, perawat menemukan adanya 'fontanel anterior' (ubun-ubun besar) yang masih terbuka dan datar. Hal ini normal pada bayi hingga usia...",
+        "options": [
+            "3 bulan",
+            "6 bulan",
+            "12-18 bulan",
+            "24 bulan"
+        ],
+        "answer": 2,
+        "explanation": "Fontanel anterior (ubun-ubun besar) normalnya menutup pada usia sekitar 9 hingga 18 bulan. Fontanel yang cekung bisa menandakan dehidrasi, sedangkan yang menonjol bisa menandakan peningkatan tekanan intrakranial."
+    },
+    {
+        "question": "Perawat komunitas melakukan kunjungan pada pasien dengan gagal jantung kongestif. Edukasi penting terkait aktivitas fisik adalah...",
+        "options": [
+            "Harus bedrest total dan tidak boleh bergerak",
+            "Boleh beraktivitas fisik ringan-sedang secara teratur sesuai toleransi, hindari aktivitas berat yang memicu sesak",
+            "Harus lari marathon setiap pagi",
+            "Menghentikan semua aktivitas dan hanya tidur"
+        ],
+        "answer": 1,
+        "explanation": "Pasien gagal jantung dianjurkan melakukan aktivitas fisik terprogram yang disesuaikan dengan kemampuannya untuk menjaga kebugaran dan fungsi jantung, namun harus menghindari aktivitas yang berlebihan."
+    },
+    {
+        "question": "Seorang perawat sedang mengajarkan cara menyusui yang benar (perlekatan/latch-on) kepada ibu baru. Tanda perlekatan yang baik adalah...",
+        "options": [
+            "Hanya puting yang masuk ke mulut bayi",
+            "Dagu bayi tidak menempel pada payudara, mulut bayi monyong",
+            "Sebagian besar areola masuk ke mulut bayi, bibir bayi terlipat keluar, dagu menempel payudara, tidak ada suara decak",
+            "Ibu merasa kesakitan hebat saat bayi menyusu"
+        ],
+        "answer": 2,
+        "explanation": "Perlekatan yang benar ditandai dengan mulut bayi terbuka lebar, sebagian besar areola masuk mulut, bibir bawah bayi melengkung keluar (dower), dagu menyentuh payudara, dan ibu tidak merasa nyeri."
+    },
+    {
+        "question": "Dalam upaya pencegahan penyakit tidak menular (PTM), GERMAS (Gerakan Masyarakat Hidup Sehat) menganjurkan beberapa aktivitas. Salah satunya adalah...",
+        "options": [
+            "Makan makanan cepat saji setiap hari",
+            "Melakukan aktivitas fisik minimal 30 menit setiap hari",
+            "Merokok 1 bungkus sehari untuk menghilangkan stres",
+            "Tidur larut malam secara teratur"
+        ],
+        "answer": 1,
+        "explanation": "GERMAS menekankan beberapa poin penting, diantaranya adalah melakukan aktivitas fisik secara teratur, konsumsi buah dan sayur, tidak merokok, tidak mengonsumsi alkohol, dan cek kesehatan secara berkala."
+    },
+    {
+        "question": "Perawat komunitas melakukan skrining perkembangan anak menggunakan KPSP (Kuesioner Pra Skrining Perkembangan). Jika ditemukan hasil 'penyimpangan', tindak lanjut yang tepat adalah...",
+        "options": [
+            "Langsung menyatakan anak mengalami retardasi mental",
+            "Merujuk anak ke dokter spesialis anak atau fasilitas tumbuh kembang untuk pemeriksaan lebih lanjut dan intervensi dini",
+            "Mengulang KPSP setiap hari sampai hasilnya normal",
+            "Memberitahu orang tua bahwa anaknya tidak normal"
+        ],
+        "answer": 1,
+        "explanation": "Hasil KPSP 'Penyimpangan' menunjukkan adanya dugaan masalah perkembangan. Anak perlu dirujuk untuk diagnosis pasti dan mendapatkan stimulasi atau intervensi dini yang sesuai."
+    },
+    {
+        "question": "Seorang kader melaporkan ada warga yang baru pulang dari daerah terjangkit penyakit menular berbahaya dan menunjukkan gejala demam serta ruam. Tindakan awal perawat komunitas yang paling tepat adalah...",
+        "options": [
+            "Mengabaikan laporan tersebut karena belum pasti",
+            "Segera melakukan kunjungan rumah untuk verifikasi, pengkajian, dan jika perlu, koordinasi dengan surveilans Puskesmas untuk tindakan isolasi atau rujukan",
+            "Menyuruh kader untuk mengobati sendiri warga tersebut",
+            "Mengumumkan di desa agar semua warga menjauhi orang tersebut"
+        ],
+        "answer": 1,
+        "explanation": "Laporan potensi penyakit menular harus ditindaklanjuti segera. Perawat perlu melakukan verifikasi, pengkajian awal, dan berkoordinasi dengan tim surveilans untuk mencegah penyebaran lebih lanjut."
+    },
+    {
+        "question": "Teknik 'mendengarkan aktif' (active listening) dalam komunikasi keperawatan melibatkan...",
+        "options": [
+            "Memotong pembicaraan pasien jika tidak setuju",
+            "Memberikan perhatian penuh, kontak mata, anggukan, dan merespon secara verbal maupun nonverbal untuk menunjukkan pemahaman",
+            "Sambil bermain handphone saat pasien berbicara",
+            "Segera memberikan solusi sebelum pasien selesai berbicara"
+        ],
+        "answer": 1,
+        "explanation": "Mendengarkan aktif berarti memberikan perhatian penuh kepada pembicara, memahami pesan yang disampaikan (baik verbal maupun nonverbal), mengingat informasi, dan merespons dengan tepat."
+    },
+    {
+        "question": "Perawat komunitas menemukan banyak anak usia sekolah di suatu SD mengalami obesitas. Program intervensi yang komprehensif melibatkan...",
+        "options": [
+            "Hanya memberikan obat pelangsing kepada anak-anak tersebut",
+            "Penyuluhan gizi seimbang dan pentingnya aktivitas fisik kepada siswa, guru, dan orang tua, serta perbaikan menu kantin sekolah",
+            "Melarang semua anak jajan di luar sekolah",
+            "Menyuruh anak-anak tersebut diet ketat tanpa pengawasan"
+        ],
+        "answer": 1,
+        "explanation": "Penanganan obesitas pada anak sekolah memerlukan pendekatan multi-komponen: edukasi gizi, promosi aktivitas fisik, pelibatan orang tua dan sekolah, serta modifikasi lingkungan (kantin sehat)."
+    },
+    {
+        "question": "Apa yang dimaksud dengan 'rantai dingin' (cold chain) dalam program imunisasi?",
+        "options": [
+            "Proses pendinginan ruangan tempat imunisasi",
+            "Sistem penyimpanan dan distribusi vaksin pada suhu yang direkomendasikan dari pabrik hingga digunakan, untuk menjaga potensinya",
+            "Efek samping menggigil setelah imunisasi",
+            "Jenis vaksin yang harus diberikan dalam keadaan beku"
+        ],
+        "answer": 1,
+        "explanation": "Rantai dingin adalah serangkaian prosedur dan peralatan yang dirancang untuk menjaga vaksin dalam rentang suhu yang tepat (biasanya 2-8°C) selama penyimpanan dan transportasi agar kualitas dan efektivitas vaksin tetap terjaga."
+    },
+    {
+        "question": "Seorang perawat melakukan pemeriksaan tekanan darah pada lengan atas pasien. Posisi manset yang benar adalah...",
+        "options": [
+            "Sangat longgar agar pasien nyaman",
+            "Menutupi seluruh lengan atas sampai bahu",
+            "Melilit pas di lengan atas, 2-3 cm di atas lipatan siku (fossa cubiti), dengan pipa karet manset di sisi medial lengan",
+            "Di bawah lipatan siku"
+        ],
+        "answer": 2,
+        "explanation": "Manset harus dipasang dengan benar: tidak terlalu ketat atau longgar, sekitar 2-3 cm (2 jari) di atas fossa cubiti, dan bagian tengah bladder manset berada di atas arteri brachialis."
+    },
+    {
+        "question": "Perawat komunitas menjelaskan tentang pentingnya deteksi dini kanker payudara dengan SADARI (Periksa Payudara Sendiri). Waktu terbaik untuk melakukan SADARI bagi wanita usia subur adalah...",
+        "options": [
+            "Setiap hari sebelum mandi",
+            "Saat sedang menstruasi deras",
+            "7-10 hari setelah hari pertama menstruasi, atau tanggal yang sama setiap bulan bagi yang sudah menopause",
+            "Hanya jika ada benjolan yang teraba"
+        ],
+        "answer": 2,
+        "explanation": "Waktu terbaik melakukan SADARI adalah setelah menstruasi selesai (hari ke 7-10), karena pada saat itu payudara tidak terlalu tegang atau nyeri, sehingga lebih mudah mendeteksi adanya perubahan."
+    },
+    {
+        "question": "Seorang perawat menemukan pasien di rumah dengan luka bakar derajat dua pada lengan akibat tersiram air panas. Tindakan pertama yang harus diajarkan kepada keluarga adalah...",
+        "options": [
+            "Mengoleskan odol atau mentega pada luka",
+            "Segera mendinginkan area yang terbakar dengan air mengalir suhu normal (bukan es) selama 10-20 menit",
+            "Memecahkan semua lepuhan (bulla) yang timbul",
+            "Menutup luka rapat dengan kapas"
+        ],
+        "answer": 1,
+        "explanation": "Pertolongan pertama pada luka bakar adalah menghentikan proses panas dengan mendinginkan area luka di bawah air mengalir (suhu sejuk, bukan es) selama beberapa menit. Hindari penggunaan bahan-bahan seperti odol atau mentega."
+    },
+    {
+        "question": "Fisiologi proses laktasi (produksi ASI) dipengaruhi terutama oleh dua hormon, yaitu...",
+        "options": [
+            "Estrogen dan Testosteron",
+            "Prolaktin (untuk produksi ASI) dan Oksitosin (untuk pengeluaran ASI/let-down reflex)",
+            "Insulin dan Glukagon",
+            "Hormon Tiroid dan Adrenalin"
+        ],
+        "answer": 1,
+        "explanation": "Prolaktin merangsang sel-sel di alveoli payudara untuk memproduksi ASI, sedangkan Oksitosin merangsang kontraksi sel-sel mioepitel di sekitar alveoli untuk mengeluarkan ASI (refleks pengeluaran ASI)."
+    },
+    {
+        "question": "Perawat komunitas memberikan penyuluhan tentang Keluarga Berencana (KB) pasca salin. Metode KB yang aman digunakan segera setelah melahirkan dan saat menyusui adalah...",
+        "options": [
+            "Pil KB Kombinasi",
+            "Metode Amenorea Laktasi (MAL) jika syarat terpenuhi, atau KB progestin (suntik, pil, implan)",
+            "Sistem kalender",
+            "Spermatisida saja"
+        ],
+        "answer": 1,
+        "explanation": "MAL efektif jika menyusui eksklusif, belum haid, dan bayi <6 bulan. Metode KB hormonal yang hanya mengandung progestin (mini pil, suntik progestin, implan) atau IUD aman untuk ibu menyusui dan bisa dimulai segera pasca salin."
+    },
+    {
+        "question": "Seorang pasien diketahui alergi terhadap Penisilin. Jika dokter meresepkan Amoksisilin (turunan Penisilin), perawat harus...",
+        "options": [
+            "Tetap memberikan obat tersebut karena dosisnya kecil",
+            "Menginformasikan kepada dokter tentang riwayat alergi pasien sebelum obat diberikan",
+            "Memberikan obat tersebut sambil menyiapkan obat anti-alergi",
+            "Menyuruh pasien minum obat tersebut sedikit demi sedikit"
+        ],
+        "answer": 1,
+        "explanation": "Alergi terhadap satu jenis penisilin sering berarti alergi terhadap turunan penisilin lainnya. Perawat wajib mengkonfirmasi dan menginformasikan dokter untuk mencegah reaksi alergi yang berpotensi fatal."
+    },
+    {
+        "question": "Penyakit campak (Measles) adalah penyakit infeksi virus yang sangat menular. Gejala khas awal campak sebelum muncul ruam adalah...",
+        "options": [
+            "Nyeri sendi hebat",
+            "Demam tinggi, batuk, pilek, mata merah (konjungtivitis), dan Koplik's spot (bintik putih di mukosa mulut)",
+            "Pembengkakan kelenjar parotis",
+            "Diare cair terus menerus"
+        ],
+        "answer": 1,
+        "explanation": "Stadium prodromal campak ditandai dengan demam, malaise, dan 'tiga C': Cough (batuk), Coryza (pilek), Conjunctivitis (mata merah). Koplik's spot (bintik putih kebiruan di mukosa pipi) adalah tanda patognomonik."
+    },
+    {
+        "question": "Perawat komunitas menjelaskan cara pembuatan larutan gula garam (LGG) sebagai pertolongan pertama diare di rumah jika oralit tidak tersedia. Komposisi dasar LGG adalah...",
+        "options": [
+            "Gula 1 sendok makan, garam 1 sendok makan, air 1 gelas",
+            "Gula 1 sendok teh, garam sejumput (1/4 sendok teh), air matang 1 gelas (200 ml)",
+            "Gula saja dilarutkan dalam air",
+            "Garam saja dilarutkan dalam air"
+        ],
+        "answer": 1,
+        "explanation": "Komposisi LGG yang umum diajarkan adalah 1 sendok teh gula pasir dan seperempat sendok teh garam dapur dilarutkan dalam 1 gelas (200 ml) air matang. Ini untuk mengganti cairan dan elektrolit dasar."
+    },
+    {
+        "question": "Pemeriksaan fisik abdomen yang benar memiliki urutan yang sedikit berbeda, yaitu...",
+        "options": [
+            "Inspeksi, Palpasi, Perkusi, Auskultasi",
+            "Inspeksi, Auskultasi, Perkusi, Palpasi",
+            "Palpasi, Perkusi, Auskultasi, Inspeksi",
+            "Auskultasi, Inspeksi, Palpasi, Perkusi"
+        ],
+        "answer": 1,
+        "explanation": "Urutan pemeriksaan fisik abdomen adalah Inspeksi, Auskultasi (mendengarkan bising usus sebelum dimanipulasi), Perkusi, baru kemudian Palpasi. Ini untuk menghindari perubahan bising usus akibat manipulasi perkusi/palpasi."
+    }
+]

@@ -1,0 +1,1642 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulasi Soal Keperawatan</title>
+
+    <!-- ⚡ PERFORMANCE OPTIMIZATIONS -->
+    <!-- DNS Prefetch for faster connection -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+
+    <!-- Google Fonts: Poppins (optimized - only weights actually used) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="phase4-styles.css" />
+    <link rel="stylesheet" href="error-handler.css" />
+    <link rel="stylesheet" href="layout-fixes.css" />
+    <link rel="stylesheet" href="mobile-responsive.css" />
+
+    <!-- Firebase Configuration (must load first) -->
+    <script src="config.js"></script>
+
+    <!-- Global Error Handler (must load first) -->
+    <script src="error-handler.js"></script>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#667eea" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Bimbel UKOM" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+  </head>
+  <body>
+    <!-- Dark Mode Toggle Button -->
+    <button
+      id="theme-toggle-btn"
+      title="Toggle Dark Mode"
+      aria-label="Toggle Dark Mode"
+    >
+      <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <!-- Achievement Popup Notification -->
+    <div id="achievement-popup" class="achievement-popup">
+      <button class="close-achievement-btn" onclick="document.getElementById('achievement-popup').classList.remove('show')">
+        <i class="fa-solid fa-times"></i>
+      </button>
+      <div class="achievement-header">
+        <div class="achievement-badge">
+          <i class="fa-solid fa-trophy"></i>
+        </div>
+        <div>
+          <div class="achievement-title" id="achievement-popup-title">
+            Achievement Unlocked!
+          </div>
+          <div class="achievement-subtitle">Congratulations! 🎉</div>
+        </div>
+      </div>
+      <div class="achievement-description" id="achievement-popup-description">
+        You've earned a new badge!
+      </div>
+    </div>
+
+    <!-- Container untuk Form Lisensi dan Login Awal -->
+    <!-- Container untuk Form Lisensi dan Login Awal -->
+    <div id="license-form-container" class="container-view welcome-container">
+      <div class="logo-area">
+        <div class="logo-circle">
+          <i class="fa-solid fa-user-nurse"></i>
+        </div>
+      </div>
+      
+      <div class="welcome-header">
+        <h1>Selamat Datang</h1>
+        <h3>di Aplikasi Bimbel UKOM</h3>
+        <p class="app-description">
+          Platform persiapan Uji Kompetensi Perawat (Ners & D3) terlengkap dengan metode belajar yang efektif dan terukur.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon c-1"><i class="fa-solid fa-book-open"></i></div>
+          <div class="feature-text">
+            <strong>Latihan Soal</strong>
+            <span>Ribuan soal vignette per departemen</span>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon c-2"><i class="fa-solid fa-file-contract"></i></div>
+          <div class="feature-text">
+            <strong>Try Out</strong>
+            <span>Simulasi 180 soal sesuai Blue Print</span>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon c-3"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="feature-text">
+            <strong>Analisis</strong>
+            <span>Pantau progres & statistik nilai</span>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon c-4"><i class="fa-solid fa-trophy"></i></div>
+          <div class="feature-text">
+            <strong>Peringkat</strong>
+            <span>Kompetisi global dengan user lain</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOCIAL PROOF STATS -->
+      <!-- SOCIAL PROOF STATS -->
+      <div class="social-proof-stats">
+        <div class="proof-card">
+          <div class="proof-icon icon-yellow">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <div class="proof-text">
+            <h3>2.147</h3>
+            <p>Jumlah Pengguna</p>
+          </div>
+        </div>
+        <div class="proof-card">
+          <div class="proof-icon icon-cyan">
+            <i class="fa-solid fa-chart-column"></i>
+          </div>
+          <div class="proof-text">
+            <h3>10.735</h3>
+            <p>Try Out Terlaksana</p>
+          </div>
+        </div>
+        <div class="proof-card">
+          <div class="proof-icon icon-purple">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <div class="proof-text">
+            <h3>1.975</h3>
+            <p>Alumni Kompeten</p>
+          </div>
+        </div>
+        <!-- Total Soal Card -->
+        <div class="proof-card">
+          <div class="proof-icon icon-green">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <div class="proof-text">
+            <h3 id="total-soal-landing">Loading...</h3>
+            <p>Total Bank Soal Teupdate dan pasti bertambah</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="login-section">
+        <p class="login-prompt">
+          Masuk untuk Memulai Belajar
+        </p>
+
+        <div class="input-container">
+          <div class="input-group">
+            <i class="fa-solid fa-graduation-cap input-icon"></i>
+            <select id="program-select">
+              <option value="D3 Keperawatan" selected>D3 Keperawatan</option>
+              <option value="Profesi Ners">Profesi Ners</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <i class="fa-solid fa-user input-icon"></i>
+            <input type="text" id="name-input" placeholder="Nama Lengkap" />
+          </div>
+          <div class="input-group">
+            <i class="fa-solid fa-key input-icon"></i>
+            <input
+              type="text"
+              id="license"
+              placeholder="Kode Lisensi"
+            />
+          </div>
+        </div>
+
+        <button id="submit-license-button" class="btn-primary-gradient">
+          <i class="fa-solid fa-sign-in-alt"></i> Masuk Sekarang
+        </button>
+        <div id="license-msg"></div>
+
+        <div class="secondary-actions">
+            <button id="reset-session-button" class="btn-text-only">
+                <i class="fa-solid fa-sync-alt"></i> Reset Sesi Tertaut
+            </button>
+            <div id="reset-session-msg"></div>
+        </div>
+
+        <div class="license-info">
+            Belum punya akun? 
+            <a href="http://lynk.id/mascleine/8ed8kdpk0qrx" target="_blank" rel="noopener noreferrer">
+                Dapatkan Lisensi Disini <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+      </div>
+
+      <!-- MENGAPA HARUS APLIKASI INI -->
+      <div class="why-us-container">
+        <h3 class="section-title-center">Mengapa Harus Aplikasi Ini?</h3>
+        <div class="why-us-grid">
+          <div class="why-card">
+            <div class="why-icon w-1"><i class="fa-solid fa-book-medical"></i></div>
+            <div class="why-content">
+              <h4>Metode Lengkap & Up-to-Date</h4>
+              <p>Kurikulum disusun berdasarkan kisi-kisi resmi, memastikan semua materi yang diuji sudah diperbarui sesuai standar ujian terbaru.</p>
+            </div>
+          </div>
+          <div class="why-card">
+            <div class="why-icon w-2"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <div class="why-content">
+              <h4>Teknologi Belajar Kekinian</h4>
+              <p>Akses platform modern dengan fitur interaktif yang memudahkan peserta belajar di manapun dan kapan saja.</p>
+            </div>
+          </div>
+          <div class="why-card">
+            <div class="why-icon w-3"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="why-content">
+              <h4>Simulasi Try Out Mirip Asli</h4>
+              <p>Simulasi ujian berbasis teknologi modern yang 100% sesuai format ujian Kompetensi.</p>
+            </div>
+          </div>
+          <div class="why-card">
+            <div class="why-icon w-4"><i class="fa-solid fa-brain"></i></div>
+            <div class="why-content">
+              <h4>Metode Belajar Smart</h4>
+              <p>Pendekatan belajar interaktif dan efektif yang membuat peserta dapat lebih memahami materi dengan mudah.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TESTIMONIALS -->
+      <div class="testimonials-container">
+        <h3 class="section-title-center">Apa Kata Mereka?</h3>
+        <div class="testimonial-grid">
+          <!-- 1. Budi Santoso (A.Md.Kep) -->
+          <div class="testi-card">
+            <div class="testi-header">
+              <div class="testi-avatar" style="background: #81ecec; color: #00b894;"><i class="fa-solid fa-user-check"></i></div>
+              <div class="testi-info">
+                <h5>Budi Santoso, A.Md.Kep</h5>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+            <p class="testi-text">"Fitur analisisnya ngebantu banget buat tau kelemahan saya dimana. Belajar jadi lebih terarah dan nggak buang waktu."</p>
+          </div>
+
+          <!-- 2. Dewi Sartika (A.Md.Kep) -->
+          <div class="testi-card">
+            <div class="testi-header">
+              <div class="testi-avatar" style="background: #a29bfe; color: #6c5ce7;"><i class="fa-solid fa-laptop-medical"></i></div>
+              <div class="testi-info">
+                <h5>Dewi Sartika, A.Md.Kep</h5>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+            <p class="testi-text">"Tampilannya enak dilihat, gak bikin pusing. Mode gelapnya membantu banget pas belajar malam-malam."</p>
+          </div>
+
+          <!-- 3. Bambang S (A.Md.Kep) -->
+          <div class="testi-card">
+            <div class="testi-header">
+              <div class="testi-avatar" style="background: #dfe6e9; color: #2d3436;"><i class="fa-solid fa-user-check"></i></div>
+              <div class="testi-info">
+                <h5>Bambang S, A.Md.Kep</h5>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+              </div>
+            </div>
+            <p class="testi-text">"Sangat membantu persiapan D3. Soalnya update terus, jadi gak ketinggalan materi terbaru."</p>
+          </div>
+
+          <!-- 4. Nurul Hidayah (A.Md.Kep) -->
+          <div class="testi-card">
+            <div class="testi-header">
+              <div class="testi-avatar" style="background: #e17055; color: white;"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="testi-info">
+                <h5>Nurul Hidayah, A.Md.Kep</h5>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+            <p class="testi-text">"Bisa diakses di HP, jadi bisa belajar pas lagi jam istirahat dinas. Praktis banget!"</p>
+          </div>
+
+          <!-- 5. Indah Permata (A.Md.Kep) -->
+          <div class="testi-card">
+            <div class="testi-header">
+              <div class="testi-avatar" style="background: #6c5ce7; color: white;"><i class="fa-solid fa-gem"></i></div>
+              <div class="testi-info">
+                <h5>Indah Permata, A.Md.Kep</h5>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+            <p class="testi-text">"Recommended banget buat fresh graduate yang mau persiapan UKOM. Paket lengkap pokoknya!"</p>
+          </div>
+
+          <!-- 6. Rudi Hartono (A.Md.Kep) -->
+          <div class="testi-card">
+            <div class="testi-header">
+              <div class="testi-avatar" style="background: #00cec9; color: white;"><i class="fa-solid fa-user-clock"></i></div>
+              <div class="testi-info">
+                <h5>Rudi Hartono, A.Md.Kep</h5>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+            <p class="testi-text">"Saya suka soal KMB-nya, menantang banget. Pas ujian asli ternyata banyak yang similar kasusnya."</p>
+          </div>
+
+          <!-- 7. Sinta Bella (A.Md.Kep) -->
+          <div class="testi-card">
+            <div class="testi-header">
+              <div class="testi-avatar" style="background: #fd79a8; color: white;"><i class="fa-solid fa-heart"></i></div>
+              <div class="testi-info">
+                <h5>Sinta Bella, A.Md.Kep</h5>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+            <p class="testi-text">"Simulasinya bikin kita gak kaget pas hari H. Soalnya sistem CAT-nya mirip banget."</p>
+          </div>
+
+          <!-- 8. Andi Pratama (A.Md.Kep) -->
+          <div class="testi-card">
+            <div class="testi-header">
+              <div class="testi-avatar" style="background: #fab1a0; color: #d63031;"><i class="fa-solid fa-user-shield"></i></div>
+              <div class="testi-info">
+                <h5>Andi Pratama, A.Md.Kep</h5>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+            <p class="testi-text">"Berguna banget buat ngisi waktu luang sambil nunggu pasien. Sedikit-sedikit lama-lama paham."</p>
+          </div>
+
+          <!-- 9. Lia Anggraini (A.Md.Kep) -->
+          <div class="testi-card">
+            <div class="testi-header">
+              <div class="testi-avatar" style="background: #55efc4; color: #00b894;"><i class="fa-solid fa-book-reader"></i></div>
+              <div class="testi-info">
+                <h5>Lia Anggraini, A.Md.Kep</h5>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+            <p class="testi-text">"Penjelasan rasionalnya detail. Jadi kita tau kenapa jawaban A salah dan B benar."</p>
+          </div>
+
+          <!-- 10. Bayu Saputra (A.Md.Kep) -->
+          <div class="testi-card">
+            <div class="testi-header">
+              <div class="testi-avatar" style="background: #74b9ff; color: #0984e3;"><i class="fa-solid fa-user-gear"></i></div>
+              <div class="testi-info">
+                <h5>Bayu Saputra, A.Md.Kep</h5>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+            <p class="testi-text">"Udah nyoba beberapa aplikasi lain, tapi balik lagi kesini karena soalnya paling relevan sama D3."</p>
+          </div>
+
+          <!-- 11. Ners Rina (S.Kep.Ns) -->
+          <div class="testi-card">
+            <div class="testi-header">
+              <div class="testi-avatar" style="background: #ffeaa7; color: #d35400;"><i class="fa-solid fa-user-nurse"></i></div>
+              <div class="testi-info">
+                <h5>Ners Rina, S.Kep.Ns</h5>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+            <p class="testi-text">"Alhamdulillah lulus UKOM one shot! Soal-soalnya sangat mirip dengan aslinya. Terima kasih banget!"</p>
+          </div>
+
+          <!-- 12. Rizky Pratama (S.Kep.Ns) -->
+          <div class="testi-card">
+            <div class="testi-header">
+              <div class="testi-avatar" style="background: #fdcb6e; color: #e17055;"><i class="fa-solid fa-user-graduate"></i></div>
+              <div class="testi-info">
+                <h5>Rizky Pratama, S.Kep.Ns</h5>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+              </div>
+            </div>
+            <p class="testi-text">"Worth it banget! Daripada ikut bimbel mahal, mending latihan disini. Bisa diulang berkali-kali sampai paham."</p>
+          </div>
+
+          <!-- 13. Putri Wulandari (S.Kep.Ns) -->
+          <div class="testi-card">
+            <div class="testi-header">
+              <div class="testi-avatar" style="background: #0984e3; color: white;"><i class="fa-solid fa-stethoscope"></i></div>
+              <div class="testi-info">
+                <h5>Putri Wulandari, S.Kep.Ns</h5>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+            <p class="testi-text">"Suka fitur bookmark-nya. Soal yang susah bisa disimpen buat dipelajari lagi pas deket ujian."</p>
+          </div>
+
+          <!-- 14. Kurniawan (S.Kep.Ns) -->
+          <div class="testi-card">
+            <div class="testi-header">
+              <div class="testi-avatar" style="background: #636e72; color: white;"><i class="fa-solid fa-chart-line"></i></div>
+              <div class="testi-info">
+                <h5>Kurniawan, S.Kep.Ns</h5>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+            <p class="testi-text">"Materi manajemen dan etikanya lengkap. Bagian itu yang paling sering menjebak, tapi disini pembahasannya jelas."</p>
+          </div>
+
+          <!-- 15. Tono Setiawan (S.Kep.Ns) -->
+          <div class="testi-card">
+            <div class="testi-header">
+              <div class="testi-avatar" style="background: #d63031; color: white;"><i class="fa-solid fa-trophy"></i></div>
+              <div class="testi-info">
+                <h5>Tono Setiawan, S.Kep.Ns</h5>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </div>
+            </div>
+            <p class="testi-text">"Ranking global bikin semangat belajar. Jadi ketahuan posisi kita dibanding peserta lain se-Indonesia."</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="developer-credit-slim">
+        <small>Developed by <strong>Mas Andy</strong> &bull; masandigital.com</small>
+      </div>
+    </div>
+
+    <!-- Skrip Lisensi Firebase SUDAH DIPINDAHKAN KE script.js -->
+
+    <!-- Kontainer untuk Aplikasi Utama (setelah lisensi valid) -->
+    <div id="main-app-content">
+      <!-- MENU UTAMA BARU -->
+      <div id="main-menu-container" class="container-view hidden">
+        <h2 id="main-menu-welcome-user"></h2>
+        <h3>Menu Utama</h3>
+
+        <!-- Daily Stats Panel -->
+        <div id="daily-stats-panel">
+          <div class="stats-row">
+            <div class="stat-card">
+              <div class="stat-icon">🔥</div>
+              <div class="stat-value" id="streak-value">0</div>
+              <div class="stat-label">Hari Berturut-turut</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🎯</div>
+              <div class="stat-value" id="daily-progress-value">0/10</div>
+              <div class="stat-label">Target Harian</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">⏱️</div>
+              <div class="stat-value" id="study-time-value">0m</div>
+              <div class="stat-label">Waktu Belajar</div>
+            </div>
+          </div>
+          <div class="progress-bar-container">
+            <div
+              class="progress-bar-fill"
+              id="daily-progress-bar"
+              style="width: 0%"
+            ></div>
+          </div>
+        </div>
+
+        <!-- NEW BLUE PRINT MENU -->
+        <a href="https://drive.google.com/file/d/1gjcA2QKVALtS3wYwvN02I1t9qkn1CuT-/view" target="_blank" style="text-decoration: none; display: block; max-width: 600px; margin: 0 auto 25px auto;">
+          <div class="card-menu-item" style="align-items: center; justify-content: flex-start;">
+            <div class="card-menu-icon-wrapper card-color-10">
+              <i class="fa-solid fa-file-contract"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">BLUE PRINT UJI KOMPETENSI</span>
+              <span class="card-menu-description">Panduan resmi materi uji kompetensi perawat terbaru.</span>
+            </div>
+          </div>
+        </a>
+
+        <div class="card-menu-grid">
+          <button id="main-menu-latihan-soal" class="card-menu-item">
+            <div class="card-menu-icon-wrapper card-color-1">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Latihan Pembahasan Soal</span>
+              <span class="card-menu-description"
+                >Asah kemampuan per kategori dengan pembahasan lengkap.</span
+              >
+            </div>
+          </button>
+          <button id="main-menu-tryout" class="card-menu-item">
+            <div class="card-menu-icon-wrapper card-color-2">
+              <i class="fa-solid fa-stopwatch"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Try Out</span>
+              <span class="card-menu-description"
+                >Uji kemampuan menyeluruh dengan batas waktu.</span
+              >
+            </div>
+          </button>
+          <button id="main-menu-history" class="card-menu-item">
+            <div class="card-menu-icon-wrapper card-color-6">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Riwayat & Statistik</span>
+              <span class="card-menu-description"
+                >Lihat grafik perkembangan nilai Anda.</span
+              >
+            </div>
+          </button>
+          <!-- NEW BUTTONS -->
+          <button id="main-menu-leaderboard" class="card-menu-item">
+            <div class="card-menu-icon-wrapper card-color-7">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Peringkat Global</span>
+              <span class="card-menu-description"
+                >Lihat 10 peraih nilai tertinggi.</span
+              >
+            </div>
+          </button>
+          <button id="main-menu-bookmarks" class="card-menu-item">
+            <div class="card-menu-icon-wrapper card-color-5">
+              <i class="fa-solid fa-bookmark"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Soal Disimpan</span>
+              <span class="card-menu-description"
+                >Akses kembali soal-soal yang Anda tandai.</span
+              >
+            </div>
+          </button>
+          <!-- END NEW BUTTONS -->
+
+          <!-- PHASE 2 FEATURES -->
+          <button id="main-menu-analytics" class="card-menu-item">
+            <div class="card-menu-icon-wrapper card-color-8">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Analisis Performa</span>
+              <span class="card-menu-description"
+                >Lihat analisis mendalam performa belajar Anda.</span
+              >
+            </div>
+          </button>
+          <button id="main-menu-filter" class="card-menu-item">
+            <div class="card-menu-icon-wrapper card-color-9">
+              <i class="fa-solid fa-filter"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Filter Soal</span>
+              <span class="card-menu-description"
+                >Cari dan filter soal berdasarkan kriteria.</span
+              >
+            </div>
+          </button>
+          <button id="main-menu-pomodoro" class="card-menu-item">
+            <div class="card-menu-icon-wrapper card-color-10">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Pomodoro Timer</span>
+              <span class="card-menu-description"
+                >Atur waktu belajar dengan teknik Pomodoro.</span
+              >
+            </div>
+          </button>
+          <button id="main-menu-comparison" class="card-menu-item">
+            <div class="card-menu-icon-wrapper card-color-11">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Bandingkan Performa</span>
+              <span class="card-menu-description"
+                >Lihat performa Anda vs rata-rata pengguna.</span
+              >
+            </div>
+          </button>
+          <!-- END PHASE 2 FEATURES -->
+
+          <!-- PHASE 3 FEATURES -->
+          <button id="main-menu-achievements" class="card-menu-item">
+            <div class="card-menu-icon-wrapper card-color-12">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Achievement Showcase</span>
+              <span class="card-menu-description"
+                >Lihat koleksi achievement yang telah Anda raih.</span
+              >
+            </div>
+          </button>
+          <button id="main-menu-flashcard" class="card-menu-item">
+            <div class="card-menu-icon-wrapper card-color-13">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Flashcard Mode</span>
+              <span class="card-menu-description"
+                >Review soal dengan metode flashcard & spaced repetition.</span
+              >
+            </div>
+          </button>
+          <button id="main-menu-quiz-builder" class="card-menu-item">
+            <div class="card-menu-icon-wrapper card-color-14">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Quiz Builder</span>
+              <span class="card-menu-description"
+                >Buat quiz custom dengan soal pilihan Anda sendiri.</span
+              >
+            </div>
+          </button>
+          <!-- END PHASE 3 FEATURES -->
+
+          <!-- SYSTEM MENU -->
+          <button id="main-menu-question-stats" class="card-menu-item">
+            <div class="card-menu-icon-wrapper card-color-4">
+              <i class="fa-solid fa-list-ol"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Detail Jumlah Soal</span>
+              <span class="card-menu-description"
+                >Lihat rincian jumlah soal per kategori.</span
+              >
+            </div>
+          </button>
+
+          <button id="main-menu-panduan" class="card-menu-item">
+            <div class="card-menu-icon-wrapper card-color-15">
+              <i class="fa-solid fa-book-reader"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Panduan Aplikasi</span>
+              <span class="card-menu-description"
+                >Panduan lengkap fitur dan penggunaan aplikasi.</span
+              >
+            </div>
+          </button>
+
+          <button id="logout-button" class="card-menu-item">
+            <div class="card-menu-icon-wrapper card-color-3">
+              <i class="fa-solid fa-sign-out-alt"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Logout</span>
+              <span class="card-menu-description"
+                >Keluar dari sesi & kembali ke halaman login.</span
+              >
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- View Riwayat Baru dengan Grafik -->
+      <div id="history-container" class="container-view hidden">
+        <h3><i class="fa-solid fa-history"></i> Riwayat Pengerjaan Kuis</h3>
+        <!-- Chart Container -->
+        <div
+          style="
+            position: relative;
+            height: 300px;
+            width: 100%;
+            margin-bottom: 30px;
+          "
+        >
+          <canvas id="progressChart"></canvas>
+        </div>
+        <div id="history-list-container">
+          <p id="no-history-message">Anda belum memiliki riwayat pengerjaan.</p>
+        </div>
+        <button
+          id="kembali-ke-main-menu-from-history"
+          class="back-button-footer"
+        >
+          <i class="fa-solid fa-house"></i> <span>Kembali ke Menu Utama</span>
+        </button>
+      </div>
+
+      <!-- LEADERBOARD CONTAINER -->
+      <div id="leaderboard-container" class="container-view hidden">
+        <h3>
+          <i class="fa-solid fa-trophy" style="color: gold"></i> Peringkat 10
+          Besar
+        </h3>
+        <div
+          id="leaderboard-list-container"
+          style="text-align: left; margin-bottom: 20px"
+        >
+          <!-- Leaderboard items will ideally be injected here as table or list -->
+          <p style="text-align: center">Memuat data peringkat...</p>
+        </div>
+        <button
+          id="kembali-ke-main-menu-from-leaderboard"
+          class="back-button-footer"
+        >
+          <i class="fa-solid fa-house"></i> <span>Kembali ke Menu Utama</span>
+        </button>
+      </div>
+
+      <!-- BOOKMARKS CONTAINER -->
+      <div id="bookmarks-container" class="container-view hidden">
+        <h3>
+          <i
+            class="fa-solid fa-bookmark"
+            style="color: var(--secondary-color)"
+          ></i>
+          Soal Disimpan
+        </h3>
+        <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px">
+          Berikut adalah soal-soal yang telah Anda tandai untuk dipelajari
+          nanti.
+        </p>
+        <div
+          id="bookmarks-list-container"
+          class="card-menu-grid card-menu-grid-dense"
+        >
+          <!-- Bookmark items injected here -->
+          <p style="text-align: center; width: 100%">
+            Belum ada soal yang disimpan.
+          </p>
+        </div>
+        <button
+          id="kembali-ke-main-menu-from-bookmarks"
+          class="back-button-footer"
+        >
+          <i class="fa-solid fa-house"></i> <span>Kembali ke Menu Utama</span>
+        </button>
+      </div>
+
+      <!-- PHASE 2 CONTAINERS -->
+
+      <!-- Analytics Dashboard Container -->
+      <div id="analytics-container" class="container-view hidden">
+        <div id="analytics-content"></div>
+        <button
+          id="kembali-ke-main-menu-from-analytics"
+          class="back-button-footer"
+        >
+          <i class="fa-solid fa-house"></i> <span>Kembali ke Menu Utama</span>
+        </button>
+      </div>
+
+      <!-- Smart Filter Container -->
+      <div id="filter-container" class="container-view hidden">
+        <div id="filter-content"></div>
+        <button
+          id="kembali-ke-main-menu-from-filter"
+          class="back-button-footer"
+        >
+          <i class="fa-solid fa-house"></i> <span>Kembali ke Menu Utama</span>
+        </button>
+      </div>
+
+      <!-- Pomodoro Timer Container -->
+      <div id="pomodoro-container-view" class="container-view hidden">
+        <div id="pomodoro-content"></div>
+        <button
+          id="kembali-ke-main-menu-from-pomodoro"
+          class="back-button-footer"
+        >
+          <i class="fa-solid fa-house"></i> <span>Kembali ke Menu Utama</span>
+        </button>
+      </div>
+
+      <!-- Performance Comparison Container -->
+      <div id="comparison-container" class="container-view hidden">
+        <div id="comparison-content"></div>
+        <button
+          id="kembali-ke-main-menu-from-comparison"
+          class="back-button-footer"
+        >
+          <i class="fa-solid fa-house"></i> <span>Kembali ke Menu Utama</span>
+        </button>
+      </div>
+
+      <!-- END PHASE 2 CONTAINERS -->
+
+      <!-- PHASE 3 CONTAINERS -->
+
+      <!-- Achievement Showcase Container -->
+      <div id="achievements-container" class="container-view hidden">
+        <div id="achievements-content"></div>
+        <button
+          id="kembali-ke-main-menu-from-achievements"
+          class="back-button-footer"
+        >
+          <i class="fa-solid fa-house"></i> <span>Kembali ke Menu Utama</span>
+        </button>
+      </div>
+
+      <!-- Flashcard Mode Container -->
+      <div id="flashcard-container-view" class="container-view hidden">
+        <div id="flashcard-content"></div>
+        <button
+          id="kembali-ke-main-menu-from-flashcard"
+          class="back-button-footer"
+        >
+          <i class="fa-solid fa-house"></i> <span>Kembali ke Menu Utama</span>
+        </button>
+      </div>
+
+      <!-- Custom Quiz Builder Container -->
+      <div id="quiz-builder-container" class="container-view hidden">
+        <div id="quiz-builder-content"></div>
+        <button
+          id="kembali-ke-main-menu-from-quiz-builder"
+          class="back-button-footer"
+        >
+          <i class="fa-solid fa-house"></i> <span>Kembali ke Menu Utama</span>
+        </button>
+      </div>
+
+      <!-- END PHASE 3 CONTAINERS -->
+
+      <!-- END PHASE 3 CONTAINERS -->
+
+      <!-- Question Stats Container -->
+      <div id="question-stats-container" class="container-view hidden">
+        <h3>
+          <i class="fa-solid fa-list-ol" style="color: #6c5ce7"></i> Detail Jumlah Soal
+        </h3>
+        <div id="stats-content-wrapper" style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <p style="text-align: center; color: #666; margin-bottom: 20px;">Berikut adalah rincian jumlah soal yang tersedia dalam database aplikasi:</p>
+            
+            <div id="stats-loading" style="text-align: center; padding: 20px;">
+                <i class="fa-solid fa-spinner fa-spin fa-2x" style="color: #6c5ce7;"></i>
+                <p>Memuat data...</p>
+            </div>
+
+            <div id="stats-list" class="hidden">
+                <!-- Stats items will be injected here -->
+            </div>
+            
+            <div id="total-stats-summary" style="margin-top: 20px; padding-top: 20px; border-top: 2px dashed #eee; text-align: center; font-weight: bold; font-size: 1.1rem; color: #2d3436;">
+                Total Keseluruhan: <span id="grand-total-questions">0</span> Soal
+            </div>
+        </div>
+        <button
+          id="kembali-ke-main-menu-from-stats"
+          class="back-button-footer"
+        >
+          <i class="fa-solid fa-house"></i> <span>Kembali ke Menu Utama</span>
+        </button>
+      </div>
+
+      <!-- Panduan Container -->
+      <div id="panduan-container" class="container-view hidden">
+        <h3>
+          <i class="fa-solid fa-book-reader" style="color: #11998e"></i> Panduan
+          Aplikasi
+        </h3>
+        <div
+          id="panduan-content"
+          style="
+            text-align: left;
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+          "
+        >
+          <h4
+            style="
+              color: var(--primary-color);
+              margin-bottom: 20px;
+              text-align: center;
+              font-size: 1.5rem;
+            "
+          >
+            Selamat Datang di Bimbel UKOM! 🎓
+          </h4>
+          <p
+            style="
+              margin-bottom: 25px;
+              line-height: 1.8;
+              text-align: justify;
+              color: #555;
+            "
+          >
+            Aplikasi ini adalah teman belajar komprehensif Anda untuk
+            menaklukkan Uji Kompetensi Perawat. Kami menggabungkan metode
+            belajar efektif dengan teknologi modern untuk memastikan Anda tidak
+            hanya menghafal, tapi benar-benar memahami materi.
+          </p>
+
+          <div class="panduan-section" style="margin-bottom: 30px">
+            <h5
+              style="
+                color: #2d3436;
+                border-bottom: 2px solid #eee;
+                padding-bottom: 10px;
+                margin-bottom: 15px;
+              "
+            >
+              <i
+                class="fa-solid fa-star"
+                style="color: var(--secondary-color)"
+              ></i>
+              Fitur Utama
+            </h5>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 15px;
+              "
+            >
+              <div
+                style="
+                  background: #f8f9fa;
+                  padding: 15px;
+                  border-radius: 10px;
+                  border-left: 4px solid #4a90e2;
+                "
+              >
+                <h6 style="margin: 0 0 8px 0; color: #4a90e2; font-weight: 700">
+                  1. Latihan Pembahasan Soal
+                </h6>
+                <p style="font-size: 0.9rem; margin: 0; color: #666">
+                  Mode santai untuk belajar per topik. Jawaban langsung
+                  dikoreksi dan disertai <strong>penjelasan lengkap</strong>.
+                  Cocok untuk memperdalam pemahaman di area spesifik (misal:
+                  Keperawatan Anak).
+                </p>
+              </div>
+
+              <div
+                style="
+                  background: #f8f9fa;
+                  padding: 15px;
+                  border-radius: 10px;
+                  border-left: 4px solid #ff6b6b;
+                "
+              >
+                <h6 style="margin: 0 0 8px 0; color: #ff6b6b; font-weight: 700">
+                  2. Try Out (Simulasi Ujian)
+                </h6>
+                <p style="font-size: 0.9rem; margin: 0; color: #666">
+                  Simulasi kondisi ujian sebenarnya.
+                  <strong>180 soal dalam 180 menit</strong>. Anda tidak akan
+                  melihat kunci jawaban sampai tes selesai. Gunakan fitur
+                  "Ragu-ragu" untuk menandai soal.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="panduan-section" style="margin-bottom: 30px">
+            <h5
+              style="
+                color: #2d3436;
+                border-bottom: 2px solid #eee;
+                padding-bottom: 10px;
+                margin-bottom: 15px;
+              "
+            >
+              <i class="fa-solid fa-rocket" style="color: #6c5ce7"></i> Fitur
+              Unggulan Baru
+            </h5>
+            <div style="display: grid; gap: 15px">
+              <div
+                style="
+                  display: flex;
+                  gap: 15px;
+                  align-items: flex-start;
+                  background: #fff;
+                  border: 1px solid #eee;
+                  padding: 15px;
+                  border-radius: 10px;
+                "
+              >
+                <div
+                  style="
+                    background: rgba(108, 92, 231, 0.1);
+                    padding: 10px;
+                    border-radius: 50%;
+                    color: #6c5ce7;
+                  "
+                >
+                  <i class="fa-solid fa-chart-pie"></i>
+                </div>
+                <div>
+                  <h6 style="margin: 0 0 5px 0; font-weight: 700">
+                    Analisis Performa Mendalam
+                  </h6>
+                  <p style="font-size: 0.9rem; margin: 0; color: #666">
+                    Jangan belajr buta! Lihat grafik
+                    <strong>Kekuatan & Kelemahan</strong> Anda. Aplikasi melacak
+                    akurasi Anda di setiap kategori (Jiwa, KMB, dll) sehingga
+                    Anda tahu mana yang perlu dipush.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  gap: 15px;
+                  align-items: flex-start;
+                  background: #fff;
+                  border: 1px solid #eee;
+                  padding: 15px;
+                  border-radius: 10px;
+                "
+              >
+                <div
+                  style="
+                    background: rgba(253, 203, 110, 0.1);
+                    padding: 10px;
+                    border-radius: 50%;
+                    color: #fdcb6e;
+                  "
+                >
+                  <i class="fa-solid fa-bookmark"></i>
+                </div>
+                <div>
+                  <h6 style="margin: 0 0 5px 0; font-weight: 700">
+                    Bookmark & Smart Filter
+                  </h6>
+                  <p style="font-size: 0.9rem; margin: 0; color: #666">
+                    Temukan soal sulit? Simpan ke <strong>Bookmark</strong>.
+                    Gunakan <strong>Filter Soal</strong> untuk mencari soal
+                    spesifik berdasarkan kata kunci atau kategori.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  gap: 15px;
+                  align-items: flex-start;
+                  background: #fff;
+                  border: 1px solid #eee;
+                  padding: 15px;
+                  border-radius: 10px;
+                "
+              >
+                <div
+                  style="
+                    background: rgba(255, 118, 117, 0.1);
+                    padding: 10px;
+                    border-radius: 50%;
+                    color: #ff7675;
+                  "
+                >
+                  <i class="fa-solid fa-clock"></i>
+                </div>
+                <div>
+                  <h6 style="margin: 0 0 5px 0; font-weight: 700">
+                    Pomodoro Timer
+                  </h6>
+                  <p style="font-size: 0.9rem; margin: 0; color: #666">
+                    Jaga fokus belajar dengan teknik Pomodoro. Timer bawaan
+                    membantu Anda mengatur sesi belajar efektif (25 menit
+                    belajar, 5 menit istirahat).
+                  </p>
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  gap: 15px;
+                  align-items: flex-start;
+                  background: #fff;
+                  border: 1px solid #eee;
+                  padding: 15px;
+                  border-radius: 10px;
+                "
+              >
+                <div
+                  style="
+                    background: rgba(0, 184, 148, 0.1);
+                    padding: 10px;
+                    border-radius: 50%;
+                    color: #00b894;
+                  "
+                >
+                  <i class="fa-solid fa-trophy"></i>
+                </div>
+                <div>
+                  <h6 style="margin: 0 0 5px 0; font-weight: 700">
+                    Sistem Achievement
+                  </h6>
+                  <p style="font-size: 0.9rem; margin: 0; color: #666">
+                    Dapatkan lencana (badge) saat Anda mencapai target tertentu.
+                    Jadikan belajar lebih seru seperti bermain game!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panduan-section">
+            <h5
+              style="
+                color: #2d3436;
+                border-bottom: 2px solid #eee;
+                padding-bottom: 10px;
+                margin-bottom: 15px;
+              "
+            >
+              <i class="fa-solid fa-lightbulb" style="color: #fab1a0"></i> Tips
+              Lulus UKOM
+            </h5>
+            <ul
+              style="
+                font-size: 0.9rem;
+                color: #555;
+                padding-left: 20px;
+                line-height: 1.6;
+              "
+            >
+              <li style="margin-bottom: 8px">
+                <strong>Konsistensi Kunci Utama:</strong> Lebih baik belajar 30
+                menit setiap hari daripada 5 jam tapi seminggu sekali.
+              </li>
+              <li style="margin-bottom: 8px">
+                <strong>Pahami, Jangan Menghafal:</strong> Soal UKOM seringkali
+                berupa kasus. Pahami patofisiologi dan logika asuhan
+                keperawatannya.
+              </li>
+              <li style="margin-bottom: 8px">
+                <strong>Analisis Soal Salah:</strong> Jangan abaikan soal yang
+                Anda jawab salah. Baca penjelasannya sampai Anda mengerti
+                *mengapa* jawaban Anda salah.
+              </li>
+              <li style="margin-bottom: 8px">
+                <strong>Manajemen Waktu:</strong> Latih diri Anda mengerjakan 1
+                soal dalam < 1 menit. Gunakan fitur Try Out untuk membiasakan
+                diri.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button
+          id="kembali-ke-main-menu-from-panduan"
+          class="back-button-footer"
+        >
+          <i class="fa-solid fa-house"></i> <span>Kembali ke Menu Utama</span>
+        </button>
+      </div>
+
+      <!-- [.. SISA KONTEN HTML (SUBMENU, KUIS, DLL) TETAP SAMA ..] -->
+      <!-- SUBMENU LATIHAN SOAL BARU -->
+      <div id="latihan-soal-submenu-container" class="container-view hidden">
+        <h3>Pilih Jenis Latihan Pembahasan Soal</h3>
+        <div class="card-menu-grid">
+          <button id="latihan-departemen-button" class="card-menu-item">
+            <div class="card-menu-icon-wrapper card-color-4">
+              <i class="fa-solid fa-folder-open"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Latihan per Departemen</span>
+              <span class="card-menu-description"
+                >Pilih soal dari 9 departemen keperawatan.</span
+              >
+            </div>
+          </button>
+          <button
+            id="latihan-gabungan-button"
+            class="card-menu-item"
+            data-file="gabungan.json"
+          >
+            <div class="card-menu-icon-wrapper card-color-5">
+              <i class="fa-solid fa-shuffle"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Latihan Soal Gabungan</span>
+              <span class="card-menu-description"
+                >Kerjakan soal acak dari semua kategori.</span
+              >
+            </div>
+          </button>
+        </div>
+        <button
+          id="kembali-ke-main-menu-from-latihan-submenu"
+          class="card-menu-item back-button-card"
+        >
+          <div class="card-menu-icon-wrapper card-color-6">
+            <i class="fa-solid fa-arrow-left"></i>
+          </div>
+          <div class="card-menu-text">
+            <span class="card-menu-title">Kembali ke Menu Utama</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- SUBMENU TRY OUT BARU -->
+      <div id="tryout-submenu-container" class="container-view hidden">
+        <h3>Pilih Jenis Try Out</h3>
+        <div class="card-menu-grid">
+          <button id="tryout-gabungan-semua-button" class="card-menu-item">
+            <div class="card-menu-icon-wrapper card-color-6">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Try Out Gabungan</span>
+              <span class="card-menu-description"
+                >Simulasi 180 soal dari semua kategori.</span
+              >
+            </div>
+          </button>
+          <button id="tryout-mode-serius-button" class="card-menu-item">
+            <div class="card-menu-icon-wrapper card-color-7">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Try Out Mode Serius</span>
+              <span class="card-menu-description"
+                >Kerjakan paket soal TO yang telah disiapkan.</span
+              >
+            </div>
+          </button>
+        </div>
+        <button
+          id="kembali-ke-main-menu-from-tryout-submenu"
+          class="card-menu-item back-button-card"
+        >
+          <div class="card-menu-icon-wrapper card-color-3">
+            <i class="fa-solid fa-arrow-left"></i>
+          </div>
+          <div class="card-menu-text">
+            <span class="card-menu-title">Kembali ke Menu Utama</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- KATEGORI LATIHAN BARU -->
+      <div id="kategori-latihan-container" class="container-view hidden">
+        <h3>Pilih Kategori Latihan Pembahasan Soal</h3>
+        <div class="card-menu-grid card-menu-grid-dense">
+          <button class="card-menu-item kategori-button" data-script="jiwa.js">
+            <div class="card-menu-icon-wrapper card-color-1">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Keperawatan Jiwa</span>
+            </div>
+          </button>
+          <button class="card-menu-item kategori-button" data-script="anak.js">
+            <div class="card-menu-icon-wrapper card-color-4">
+              <i class="fa-solid fa-baby"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Keperawatan Anak</span>
+            </div>
+          </button>
+          <button
+            class="card-menu-item kategori-button"
+            data-script="keluarga.js"
+          >
+            <div class="card-menu-icon-wrapper card-color-5">
+              <i class="fa-solid fa-people-roof"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Keperawatan Keluarga</span>
+            </div>
+          </button>
+          <button
+            class="card-menu-item kategori-button"
+            data-script="komunitas.js"
+          >
+            <div class="card-menu-icon-wrapper card-color-8">
+              <i class="fa-solid fa-users-rays"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Keperawatan Komunitas</span>
+            </div>
+          </button>
+          <button class="card-menu-item kategori-button" data-script="bedah.js">
+            <div class="card-menu-icon-wrapper card-color-9">
+              <i class="fa-solid fa-procedures"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Keperawatan Medikal Bedah</span>
+            </div>
+          </button>
+          <button class="card-menu-item kategori-button" data-script="gadar.js">
+            <div class="card-menu-icon-wrapper card-color-7">
+              <i class="fa-solid fa-ambulance"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Keperawatan Gawat Darurat</span>
+            </div>
+          </button>
+          <button
+            class="card-menu-item kategori-button"
+            data-script="manajemen.js"
+          >
+            <div class="card-menu-icon-wrapper card-color-10">
+              <i class="fa-solid fa-clipboard-list"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Manajemen Keperawatan</span>
+            </div>
+          </button>
+          <button
+            class="card-menu-item kategori-button"
+            data-script="maternitas.js"
+          >
+            <div class="card-menu-icon-wrapper card-color-3">
+              <i class="fa-solid fa-baby-carriage"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Keperawatan Maternitas</span>
+            </div>
+          </button>
+          <button
+            class="card-menu-item kategori-button"
+            data-script="gerontik.js"
+          >
+            <div class="card-menu-icon-wrapper card-color-4">
+              <i class="fa-solid fa-person-cane"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">Keperawatan Gerontik</span>
+            </div>
+          </button>
+        </div>
+        <button
+          id="kembali-ke-latihan-submenu-from-kategori"
+          class="card-menu-item back-button-card"
+        >
+          <div class="card-menu-icon-wrapper card-color-6">
+            <i class="fa-solid fa-arrow-left"></i>
+          </div>
+          <div class="card-menu-text">
+            <span class="card-menu-title">Kembali ke Pilihan Latihan</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- TRYOUT SERIUS BARU -->
+      <div id="tryout-serius-container" class="container-view hidden">
+        <h3>Pilih Tipe Try Out Serius</h3>
+        <div class="card-menu-grid card-menu-grid-dense">
+          <button
+            class="card-menu-item tryout-serius-button"
+            data-file="TO1.json"
+            data-type="TO Tipe 1"
+          >
+            <div class="card-menu-icon-wrapper card-color-11">
+              <i class="fa-solid fa-file-alt"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">TO Tipe 1</span>
+            </div>
+          </button>
+          <button
+            class="card-menu-item tryout-serius-button"
+            data-file="TO2.json"
+            data-type="TO Tipe 2"
+          >
+            <div class="card-menu-icon-wrapper card-color-1">
+              <i class="fa-solid fa-file-alt"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">TO Tipe 2</span>
+            </div>
+          </button>
+          <button
+            class="card-menu-item tryout-serius-button"
+            data-file="TO3.json"
+            data-type="TO Tipe 3"
+          >
+            <div class="card-menu-icon-wrapper card-color-2">
+              <i class="fa-solid fa-file-alt"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">TO Tipe 3</span>
+            </div>
+          </button>
+          <button
+            class="card-menu-item tryout-serius-button"
+            data-file="TO4.json"
+            data-type="TO Tipe 4"
+          >
+            <div class="card-menu-icon-wrapper card-color-4">
+              <i class="fa-solid fa-file-alt"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">TO Tipe 4</span>
+            </div>
+          </button>
+          <button
+            class="card-menu-item tryout-serius-button"
+            data-file="TO5.json"
+            data-type="TO Tipe 5"
+          >
+            <div class="card-menu-icon-wrapper card-color-5">
+              <i class="fa-solid fa-file-alt"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">TO Tipe 5</span>
+            </div>
+          </button>
+          <button
+            class="card-menu-item tryout-serius-button"
+            data-file="TO6.json"
+            data-type="TO Tipe 6"
+          >
+            <div class="card-menu-icon-wrapper card-color-6">
+              <i class="fa-solid fa-file-alt"></i>
+            </div>
+            <div class="card-menu-text">
+              <span class="card-menu-title">TO Tipe 6</span>
+            </div>
+          </button>
+        </div>
+        <button
+          id="kembali-ke-tryout-submenu-from-serius"
+          class="card-menu-item back-button-card"
+        >
+          <div class="card-menu-icon-wrapper card-color-3">
+            <i class="fa-solid fa-arrow-left"></i>
+          </div>
+          <div class="card-menu-text">
+            <span class="card-menu-title">Kembali ke Pilihan Try Out</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Quiz & Result Views -->
+      <div id="quiz-layout-container" class="container-view hidden">
+        <div id="quiz-main-content">
+          <div id="question-header-bar">
+            <div id="question-counter" class="hidden">
+              <i class="fa-regular fa-flag"></i> Soal 1 dari X
+            </div>
+
+            <!-- Bookmark Button -->
+            <button id="bookmark-button" class="icon-btn" title="Simpan Soal">
+              <i class="fa-regular fa-bookmark"></i>
+            </button>
+
+            <div id="timer-display-main" class="hidden">
+              <i class="fa-regular fa-clock"></i>
+              <span id="time-left-main">--:--</span>
+            </div>
+          </div>
+
+          <div id="question"></div>
+          <div id="options-container"></div>
+
+          <div id="explanation" class="hidden">
+            <h4><i class="fa-solid fa-lightbulb"></i> Pembahasan:</h4>
+            <div id="explanation-content"></div>
+          </div>
+
+          <div id="navigation-buttons">
+            <div class="nav-left">
+              <button id="doubtful-button" class="btn-doubtful hidden">
+                <i class="fa-solid fa-question-circle"></i> Ragu-ragu
+              </button>
+            </div>
+            <div class="nav-right">
+              <button class="btn-home" id="quiz-back-button">
+                <i class="fa-solid fa-arrow-left"></i> Kembali
+              </button>
+              <button class="btn-next" id="next-question-button" class="hidden">
+                Soal Berikutnya <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="quiz-sidebar">
+          <div id="user-biodata">
+            <div id="user-photo-icon">
+              <img src="user.png" alt="Foto Pengguna" />
+            </div>
+            <div id="user-name-display">Nama Pengguna</div>
+          </div>
+          <!-- Timer di sidebar disembunyikan jika layar kecil (dipindah ke header) -->
+          <div id="timer-display-sidebar" class="hidden">
+            <i class="fa-regular fa-clock"></i> Sisa Waktu:
+            <span id="time-left-sidebar">180:00</span>
+          </div>
+          <div id="question-navigation-panel">
+            <h4 id="question-nav-title">
+              <i class="fa-solid fa-map"></i> Navigasi Soal
+            </h4>
+            <div id="question-navigation-grid"></div>
+          </div>
+        </div>
+      </div>
+      <div id="result-container" class="container-view hidden">
+        <div class="result-header-icon">
+          <i class="fa-solid fa-award fa-4x" style="color: #ffd700"></i>
+        </div>
+        <h2 id="result-title">Hasil Kuis</h2>
+        <p id="score"></p>
+        <div id="result-actions">
+          <button id="restart-button" class="btn-home">
+            <i class="fa-solid fa-house"></i> Kembali ke Menu
+          </button>
+          <button id="review-answers-button" class="btn-review hidden">
+            <i class="fa-solid fa-magnifying-glass"></i> Tinjau Jawaban
+          </button>
+          <button id="retry-incorrect-button" class="btn-retry hidden">
+            <i class="fa-solid fa-rotate-left"></i> Ulangi Soal Salah
+          </button>
+        </div>
+      </div>
+
+      <footer id="footer">
+        <center>
+          <p>
+            With <i class="fa-solid fa-heart" style="color: #ff6b6b"></i> ©
+            Copyright by Mas Andy
+          </p>
+        </center>
+      </footer>
+    </div>
+
+    <!-- **PERBAIKAN KUNCI DI SINI** -->
+    <script type="module" src="script.js"></script>
+
+    <!-- Phase 1 Features: Dark Mode, Daily Stats, Achievements -->
+    <script type="module" src="features-phase1.js"></script>
+
+    <!-- Phase 2 Features: Analytics, Filtering, Pomodoro, Comparison -->
+    <script type="module" src="features-phase2.js"></script>
+
+    <!-- Phase 2 Integration: Connect features to main app -->
+    <script type="module" src="features-phase2-integration.js"></script>
+
+    <!-- Phase 3 Features: Gamification, Flashcards, Custom Quiz -->
+    <script type="module" src="features-phase3.js"></script>
+
+    <!-- Phase 3 Integration: Connect Phase 3 features to main app -->
+    <script type="module" src="features-phase3-integration.js"></script>
+
+    <!-- Phase 4 Features: PWA, Offline Mode, Push Notifications -->
+    <script type="module" src="features-phase4.js"></script>
+
+    <!-- Phase 4 Integration: Connect PWA features to main app -->
+    <script type="module" src="features-phase4-integration.js"></script>
+
+    <!-- Histats (Tidak Berubah) -->
+    <div id="histats_counter"></div>
+    <script type="text/javascript">
+      var _Hasync = _Hasync || [];
+      _Hasync.push(["Histats.start", "1,4842415,4,1,120,40,00011111"]);
+      _Hasync.push(["Histats.fasi", "1"]);
+      _Hasync.push(["Histats.track_hits", ""]);
+      (function () {
+        var hs = document.createElement("script");
+        hs.type = "text/javascript";
+        hs.async = true;
+        hs.src = "//s10.histats.com/js15_as.js";
+        (
+          document.getElementsByTagName("head")[0] ||
+          document.getElementsByTagName("body")[0]
+        ).appendChild(hs);
+      })();
+    </script>
+    <noscript
+      ><a href="/" target="_blank"
+        ><img
+          src="//sstatic1.histats.com/0.gif?4842415&101"
+          alt=""
+          border="0" /></a
+    ></noscript>
+    <!-- Script khusus untuk Welcome Page Stats -->
+    <style>
+      .icon-green { background: #e8f5e9; color: #4caf50; }
+    </style>
+    <script>
+      async function countTotalQuestions() {
+        const el = document.getElementById('total-soal-landing');
+        if (!el) return;
+
+        // Jika dibuka via file://, fetch biasanya diblokir CORS.
+        // Langsung pakai angka default saja agar tidak error.
+        if (window.location.protocol === 'file:') {
+             el.innerText = "2.500+"; 
+             return;
+        }
+
+        const files = [
+            'jiwa.json', 'anak.json', 'keluarga.json', 'komunitas.json', 
+            'bedah.json', 'gadar.json', 'manajemen.json', 'maternitas.json', 'gerontik.json'
+        ];
+        
+        let total = 0;
+        
+        try {
+            // Gunakan Promise.allSettled agar satu gagal tidak membatalkan semua
+            const promises = files.map(file => fetch(file).then(res => res.json()));
+            const results = await Promise.allSettled(promises);
+            
+            results.forEach(result => {
+                if (result.status === 'fulfilled' && Array.isArray(result.value)) {
+                    total += result.value.length;
+                }
+            });
+            
+            if (total > 0) {
+                const formattedTotal = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                el.innerText = formattedTotal;
+            } else {
+                el.innerText = "2.500+";
+            }
+            
+        } catch (error) {
+            // Silent catch agar tidak memicu error handler global
+            // console.warn("Auto-count skipped:", error);
+            el.innerText = "2.500+"; 
+        }
+      }
+      
+      // Jalankan saat load
+      document.addEventListener('DOMContentLoaded', countTotalQuestions);
+    </script>
+  </body>
+</html>

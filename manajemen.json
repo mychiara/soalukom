@@ -1,0 +1,618 @@
+[
+    {
+        "question": "Seorang pasien laki-laki usia 55 tahun dirawat dengan diagnosis gagal jantung kongestif. Pasien mengeluh sesak napas saat beraktivitas ringan dan terdapat pitting edema +2 pada kedua ekstremitas bawah. Intervensi keperawatan prioritas adalah...",
+        "options": [
+            "Memberikan edukasi tentang diet rendah garam",
+            "Mengukur intake dan output cairan secara ketat",
+            "Menganjurkan pasien untuk tirah baring total",
+            "Memberikan terapi oksigen sesuai program"
+        ],
+        "answer": 3,
+        "explanation": "Sesak napas adalah manifestasi utama dari kelebihan cairan pada gagal jantung. Pemberian oksigen akan membantu mengurangi hipoksia dan meringankan sesak, ini adalah prioritas ABC (Airway, Breathing, Circulation)."
+    },
+    {
+        "question": "Perawat sedang melakukan pengkajian pada pasien baru di ruang rawat inap. Pasien tampak cemas dan sering bertanya tentang penyakitnya. Teknik komunikasi terapeutik yang paling tepat digunakan adalah...",
+        "options": [
+            "Memberikan jaminan palsu bahwa semuanya akan baik-baik saja",
+            "Mengalihkan pembicaraan ke topik lain untuk mengurangi kecemasan",
+            "Mendengarkan aktif dan memberikan kesempatan pasien untuk mengekspresikan perasaannya",
+            "Menjelaskan secara detail semua prosedur medis yang akan dilakukan"
+        ],
+        "answer": 2,
+        "explanation": "Mendengarkan aktif dan memvalidasi perasaan pasien adalah teknik komunikasi terapeutik yang efektif untuk membangun kepercayaan dan mengurangi kecemasan pasien."
+    },
+    {
+        "question": "Seorang pasien pasca operasi apendiktomi hari ke-2 mengeluh nyeri pada luka operasi dengan skala 6/10. Perawat telah memberikan analgesik 30 menit yang lalu. Tindakan keperawatan selanjutnya yang paling tepat adalah...",
+        "options": [
+            "Melaporkan kepada dokter untuk penambahan dosis analgesik",
+            "Mengajarkan teknik relaksasi napas dalam",
+            "Mengobservasi kembali tingkat nyeri setelah 1 jam",
+            "Memberikan kompres dingin pada area luka"
+        ],
+        "answer": 1,
+        "explanation": "Setelah pemberian analgesik, intervensi non-farmakologis seperti teknik relaksasi napas dalam dapat membantu mengurangi persepsi nyeri dan memberikan kenyamanan tambahan."
+    },
+    {
+        "question": "Perawat akan melakukan pemasangan infus pada pasien dewasa. Prinsip utama yang harus diperhatikan untuk mencegah infeksi adalah...",
+        "options": [
+            "Menggunakan sarung tangan steril",
+            "Melakukan teknik aseptik saat insersi",
+            "Memilih vena yang paling besar",
+            "Mengganti set infus setiap 24 jam"
+        ],
+        "answer": 1,
+        "explanation": "Teknik aseptik, termasuk desinfeksi kulit yang adekuat dan penggunaan alat steril, adalah kunci utama dalam mencegah infeksi terkait pemasangan infus (phlebitis, infeksi aliran darah)."
+    },
+    {
+        "question": "Seorang pasien DM tipe 2 akan pulang. Perawat memberikan pendidikan kesehatan tentang perawatan kaki. Informasi mana yang paling penting untuk ditekankan?",
+        "options": [
+            "Menggunakan sepatu yang sedikit longgar",
+            "Merendam kaki dengan air hangat setiap hari",
+            "Memeriksa kaki setiap hari adanya luka atau lecet",
+            "Memotong kuku kaki mengikuti lengkungan jari"
+        ],
+        "answer": 2,
+        "explanation": "Pasien DM sering mengalami neuropati perifer sehingga sensasi berkurang. Memeriksa kaki setiap hari adalah cara deteksi dini adanya luka yang bisa berisiko infeksi dan ulkus diabetik."
+    },
+    {
+        "question": "Pasien Tn. A, 60 tahun, dengan riwayat stroke, mengalami kesulitan menelan (disfagia). Saat perawat membantu memberikan makan, tindakan yang harus dihindari adalah...",
+        "options": [
+            "Memberikan makanan dalam porsi kecil",
+            "Memposisikan pasien duduk tegak (90 derajat)",
+            "Memberikan makanan cair menggunakan sedotan",
+            "Memastikan pasien menelan sebelum memberikan suapan berikutnya"
+        ],
+        "answer": 2,
+        "explanation": "Memberikan makanan cair menggunakan sedotan pada pasien disfagia dapat meningkatkan risiko aspirasi karena cairan langsung mengalir ke tenggorokan tanpa kontrol yang adekuat."
+    },
+    {
+        "question": "Seorang ibu membawa anaknya usia 2 tahun ke klinik dengan keluhan diare cair lebih dari 5 kali sehari. Anak tampak lemas dan matanya cekung. Prioritas tindakan keperawatan adalah...",
+        "options": [
+            "Memberikan edukasi tentang kebersihan makanan",
+            "Mengukur suhu tubuh anak",
+            "Menilai tanda-tanda dehidrasi lebih lanjut",
+            "Memberikan obat antidiare sesuai resep"
+        ],
+        "answer": 2,
+        "explanation": "Tanda-tanda seperti lemas dan mata cekung menunjukkan dehidrasi. Menilai tingkat dehidrasi (turgor kulit, mukosa bibir, ubun-ubun, frekuensi BAK) adalah prioritas untuk menentukan intervensi rehidrasi yang tepat."
+    },
+    {
+        "question": "Perawat menemukan pasien tidak sadarkan diri di kamar mandi. Langkah pertama yang harus dilakukan perawat sesuai prinsip Bantuan Hidup Dasar (BHD) adalah...",
+        "options": [
+            "Memeriksa nadi karotis",
+            "Memberikan napas buatan",
+            "Memastikan keamanan lingkungan dan diri sendiri",
+            "Memulai kompresi dada"
+        ],
+        "answer": 2,
+        "explanation": "Dalam BHD, langkah pertama adalah 'Danger' (D), yaitu memastikan keamanan penolong, korban, dan lingkungan sebelum mendekati korban."
+    },
+    {
+        "question": "Seorang pasien mengeluh gatal-gatal dan muncul kemerahan pada kulit setelah pemberian antibiotik intravena. Reaksi ini kemungkinan adalah...",
+        "options": [
+            "Efek samping obat yang umum",
+            "Reaksi anafilaktik ringan",
+            "Interaksi obat dengan makanan",
+            "Gejala infeksi nosokomial"
+        ],
+        "answer": 1,
+        "explanation": "Gatal-gatal dan kemerahan kulit (urtikaria) adalah tanda umum reaksi alergi obat, yang bisa bersifat ringan hingga berat (anafilaksis). Ini perlu segera dihentikan dan dilaporkan."
+    },
+    {
+        "question": "Saat melakukan pemeriksaan fisik pada pasien dengan asma, suara napas tambahan yang khas terdengar saat ekspirasi adalah...",
+        "options": [
+            "Ronkhi basah",
+            "Wheezing",
+            "Stridor",
+            "Vesikuler normal"
+        ],
+        "answer": 1,
+        "explanation": "Wheezing (mengi) adalah suara napas bernada tinggi akibat penyempitan saluran napas, khas pada pasien asma terutama saat ekspirasi."
+    },
+    {
+        "question": "Perawat akan memberikan obat melalui suntikan intramuskular pada orang dewasa di area ventrogluteal. Landmark yang benar untuk lokasi penyuntikan adalah...",
+        "options": [
+            "Sepertiga tengah otot deltoid",
+            "Antara krista iliaka anterior superior dan trokanter mayor femur",
+            "Kuadran luar atas bokong",
+            "Otot vastus lateralis pada paha"
+        ],
+        "answer": 1,
+        "explanation": "Area ventrogluteal diidentifikasi dengan meletakkan telapak tangan pada trokanter mayor, jari telunjuk pada spina iliaka anterior superior, dan jari tengah direntangkan sepanjang krista iliaka. Suntikan diberikan di area V yang terbentuk."
+    },
+    {
+        "question": "Pasien dengan diagnosis Tuberkulosis Paru aktif akan dipulangkan. Pendidikan kesehatan yang paling penting terkait pencegahan penularan adalah...",
+        "options": [
+            "Minum obat anti tuberkulosis (OAT) secara teratur",
+            "Makan makanan bergizi seimbang",
+            "Menutup mulut saat batuk dan memakai masker",
+            "Istirahat yang cukup dan menghindari stres"
+        ],
+        "answer": 2,
+        "explanation": "TB Paru menular melalui droplet saat batuk atau bersin. Mengajarkan etika batuk (menutup mulut) dan penggunaan masker adalah kunci pencegahan penularan kepada orang lain."
+    },
+    {
+        "question": "Seorang pasien mengeluh sulit tidur (insomnia) selama dirawat di rumah sakit. Intervensi keperawatan yang dapat membantu mengatasi masalah ini adalah...",
+        "options": [
+            "Memberikan obat tidur sesuai program setiap malam",
+            "Menganjurkan pasien menonton televisi hingga larut malam",
+            "Menciptakan lingkungan yang tenang dan nyaman",
+            "Memberikan minuman hangat seperti kopi sebelum tidur"
+        ],
+        "answer": 2,
+        "explanation": "Menciptakan lingkungan yang kondusif untuk tidur (mengurangi kebisingan, cahaya, suhu yang nyaman) adalah intervensi non-farmakologis yang penting untuk mengatasi insomnia."
+    },
+    {
+        "question": "Perawat sedang merawat pasien dengan luka bakar derajat II pada lengan kanan. Saat mengganti balutan, perawat menemukan adanya pus kekuningan dan bau tidak sedap. Tindakan prioritas perawat adalah...",
+        "options": [
+            "Membersihkan luka dengan larutan NaCl 0.9% dan menutup dengan kassa steril",
+            "Memberikan antibiotik topikal sesuai order",
+            "Melakukan kultur pus dan melaporkan temuan kepada dokter",
+            "Mengajarkan pasien cara merawat luka di rumah"
+        ],
+        "answer": 2,
+        "explanation": "Pus kekuningan dan bau tidak sedap adalah tanda infeksi. Melakukan kultur pus akan membantu mengidentifikasi mikroorganisme penyebab dan sensitivitas antibiotik, serta melaporkan ke dokter untuk penanganan lebih lanjut adalah prioritas."
+    },
+    {
+        "question": "Seorang pasien lansia berisiko jatuh. Intervensi keperawatan yang paling efektif untuk mencegah jatuh adalah...",
+        "options": [
+            "Memasang penghalang tempat tidur setiap saat",
+            "Memastikan bel panggilan mudah dijangkau pasien",
+            "Menganjurkan pasien untuk tetap di tempat tidur",
+            "Memberikan pencahayaan yang adekuat di kamar pasien"
+        ],
+        "answer": 1,
+        "explanation": "Memastikan bel panggilan mudah dijangkau memungkinkan pasien meminta bantuan saat akan turun dari tempat tidur, ditambah orientasi lingkungan dan pencahayaan yang cukup, sangat penting untuk mencegah jatuh. Penghalang tempat tidur bisa meningkatkan risiko cedera jika pasien mencoba memanjat."
+    },
+    {
+        "question": "Tekanan darah normal pada orang dewasa rata-rata adalah...",
+        "options": [
+            "140/90 mmHg",
+            "120/80 mmHg",
+            "100/60 mmHg",
+            "130/85 mmHg"
+        ],
+        "answer": 1,
+        "explanation": "Menurut JNC 8 dan pedoman lainnya, tekanan darah normal pada orang dewasa umumnya dianggap <120 mmHg sistolik DAN <80 mmHg diastolik."
+    },
+    {
+        "question": "Pemeriksaan laboratorium yang paling spesifik untuk menilai fungsi ginjal adalah...",
+        "options": [
+            "Ureum",
+            "Kreatinin serum",
+            "Asam urat",
+            "Hemoglobin"
+        ],
+        "answer": 1,
+        "explanation": "Kreatinin serum adalah produk sisa metabolisme otot yang diekskresikan oleh ginjal. Peningkatannya lebih spesifik menunjukkan penurunan fungsi ginjal dibandingkan ureum yang bisa dipengaruhi oleh diet protein dan status hidrasi."
+    },
+    {
+        "question": "Seorang pasien wanita, 45 tahun, mengeluh nyeri dada kiri menjalar ke lengan kiri, disertai keringat dingin dan mual. Perawat mencurigai pasien mengalami serangan jantung (infark miokard akut). Tindakan segera yang harus dilakukan adalah...",
+        "options": [
+            "Memberikan minum air hangat",
+            "Melakukan EKG dan memberikan oksigen",
+            "Mengukur tekanan darah dan nadi",
+            "Menanyakan riwayat penyakit jantung keluarga"
+        ],
+        "answer": 1,
+        "explanation": "Pada dugaan IMA, melakukan EKG 12 sadapan adalah diagnostik awal yang krusial, diikuti pemberian oksigen untuk mengurangi hipoksia miokard, dan persiapan pemberian terapi awal (misal: aspirin, nitrat) sesuai protokol."
+    },
+    {
+        "question": "Perawat akan memberikan pendidikan kesehatan tentang diet rendah kolesterol. Makanan yang sebaiknya dihindari adalah...",
+        "options": [
+            "Ikan laut dalam",
+            "Kuning telur dan jeroan",
+            "Buah-buahan segar",
+            "Sayuran hijau"
+        ],
+        "answer": 1,
+        "explanation": "Kuning telur, jeroan (hati, otak, usus), dan lemak hewan adalah sumber kolesterol tinggi yang perlu dibatasi atau dihindari dalam diet rendah kolesterol."
+    },
+    {
+        "question": "Prinsip 'lima benar' dalam pemberian obat meliputi, kecuali...",
+        "options": [
+            "Benar pasien",
+            "Benar obat",
+            "Benar waktu",
+            "Benar harga"
+        ],
+        "answer": 3,
+        "explanation": "Prinsip 'lima benar' adalah: Benar Pasien, Benar Obat, Benar Dosis, Benar Waktu, dan Benar Cara/Rute pemberian. 'Benar harga' tidak termasuk."
+    },
+    {
+        "question": "Seorang pasien mengalami perdarahan aktif dari luka di lengan. Tindakan pertama untuk mengontrol perdarahan adalah...",
+        "options": [
+            "Meninggikan posisi lengan",
+            "Memberikan tekanan langsung pada luka",
+            "Memasang torniket di atas luka",
+            "Membersihkan luka dengan antiseptik"
+        ],
+        "answer": 1,
+        "explanation": "Tekanan langsung (direct pressure) pada sumber perdarahan adalah tindakan pertama dan paling efektif untuk menghentikan atau mengurangi perdarahan arteri maupun vena."
+    },
+    {
+        "question": "Pasien dengan COPD (Penyakit Paru Obstruktif Kronis) mengalami sesak napas. Posisi yang paling nyaman untuk membantu pernapasannya adalah...",
+        "options": [
+            "Supinasi (terlentang datar)",
+            "Prone (tengkurap)",
+            "Semi-Fowler atau Fowler tinggi (duduk atau setengah duduk)",
+            "Trendelenburg"
+        ],
+        "answer": 2,
+        "explanation": "Posisi semi-Fowler atau Fowler tinggi memungkinkan ekspansi paru yang lebih maksimal dan mengurangi kerja napas pada pasien dengan gangguan pernapasan seperti COPD."
+    },
+    {
+        "question": "Seorang perawat sedang melakukan pengkajian nyeri pada pasien dengan menggunakan skala numerik (0-10). Pasien menyatakan nyerinya 'sedang'. Angka yang paling mungkin ditunjukkan pasien adalah...",
+        "options": [
+            "0-1",
+            "2-3",
+            "4-6",
+            "8-10"
+        ],
+        "answer": 2,
+        "explanation": "Pada skala nyeri numerik 0-10: 0=tidak nyeri, 1-3=nyeri ringan, 4-6=nyeri sedang, 7-10=nyeri berat. Jadi 'nyeri sedang' berkisar antara 4-6."
+    },
+    {
+        "question": "Untuk mencegah penyebaran infeksi di rumah sakit, tindakan cuci tangan yang paling efektif dilakukan pada momen...",
+        "options": [
+            "Hanya setelah kontak dengan pasien",
+            "Hanya sebelum melakukan tindakan invasif",
+            "Sesuai dengan 5 momen cuci tangan WHO",
+            "Saat tangan terlihat kotor saja"
+        ],
+        "answer": 2,
+        "explanation": "WHO merekomendasikan 5 momen cuci tangan: 1) Sebelum kontak pasien, 2) Sebelum tindakan aseptik, 3) Setelah risiko paparan cairan tubuh, 4) Setelah kontak pasien, 5) Setelah kontak dengan lingkungan sekitar pasien. Ini adalah standar pencegahan infeksi."
+    },
+    {
+        "question": "Seorang pasien anak usia 5 tahun dijadwalkan untuk operasi tonsilektomi. Komunikasi yang paling tepat untuk menjelaskan prosedur kepada anak adalah...",
+        "options": [
+            "Menggunakan istilah medis yang akurat dan detail",
+            "Menjelaskan dengan bahasa sederhana dan menggunakan alat peraga (boneka)",
+            "Meminta orang tua untuk menjelaskan kepada anak",
+            "Tidak menjelaskan apa-apa untuk menghindari kecemasan anak"
+        ],
+        "answer": 1,
+        "explanation": "Untuk anak usia prasekolah, penjelasan harus sederhana, konkret, dan menggunakan alat bantu visual seperti boneka atau gambar untuk membantu pemahaman dan mengurangi ketakutan."
+    },
+    {
+        "question": "Pasien Tn. B, 70 tahun, dirawat dengan diagnosis pneumonia. Hasil pemeriksaan menunjukkan suhu 38.5°C, frekuensi napas 28x/menit, dan terdengar ronkhi basah di kedua lapang paru. Masalah keperawatan utama adalah...",
+        "options": [
+            "Hipertermia",
+            "Pola napas tidak efektif",
+            "Bersihan jalan napas tidak efektif",
+            "Risiko kekurangan volume cairan"
+        ],
+        "answer": 2,
+        "explanation": "Adanya ronkhi basah menunjukkan akumulasi sekret di jalan napas. Oleh karena itu, bersihan jalan napas tidak efektif menjadi masalah utama yang perlu diatasi untuk memperbaiki oksigenasi dan pola napas."
+    },
+    {
+        "question": "Perawat akan memberikan obat digoxin kepada pasien gagal jantung. Sebelum memberikan obat, tindakan keperawatan yang wajib dilakukan adalah...",
+        "options": [
+            "Mengukur tekanan darah pasien",
+            "Memeriksa frekuensi nadi apikal selama 1 menit penuh",
+            "Menanyakan apakah pasien sudah makan",
+            "Memeriksa kadar kalium serum terakhir"
+        ],
+        "answer": 1,
+        "explanation": "Digoxin dapat menyebabkan bradikardia. Oleh karena itu, nadi apikal harus diperiksa selama satu menit penuh. Jika nadi <60x/menit (atau sesuai parameter dokter), obat ditahan dan dokter dihubungi. Kadar kalium juga penting, tetapi nadi adalah pemeriksaan bedside primer."
+    },
+    {
+        "question": "Seorang pasien baru saja didiagnosis menderita hipertensi. Pendidikan kesehatan awal yang paling penting diberikan adalah...",
+        "options": [
+            "Pentingnya operasi jika tekanan darah tidak terkontrol",
+            "Cara kerja obat antihipertensi secara detail",
+            "Modifikasi gaya hidup (diet rendah garam, aktivitas fisik, stop merokok)",
+            "Jadwal kontrol ke dokter spesialis setiap minggu"
+        ],
+        "answer": 2,
+        "explanation": "Modifikasi gaya hidup adalah pilar utama dalam manajemen hipertensi, seringkali menjadi langkah awal sebelum atau bersamaan dengan terapi farmakologis. Ini memberdayakan pasien untuk mengelola kondisinya."
+    },
+    {
+        "question": "Saat membantu pasien BAB di atas pispot, perawat harus memastikan privasi pasien dengan cara...",
+        "options": [
+            "Membiarkan pintu kamar terbuka agar mudah diawasi",
+            "Menutup tirai atau pintu kamar pasien",
+            "Meminta pasien untuk cepat menyelesaikan BAB",
+            "Mengajak pasien berbicara selama proses BAB"
+        ],
+        "answer": 1,
+        "explanation": "Menjaga privasi pasien adalah aspek penting dalam asuhan keperawatan. Menutup tirai atau pintu kamar membantu pasien merasa lebih nyaman dan dihargai selama prosedur yang bersifat pribadi."
+    },
+    {
+        "question": "Seorang pasien mengeluh mual dan muntah setelah kemoterapi. Intervensi keperawatan untuk mengurangi mual adalah...",
+        "options": [
+            "Memberikan makanan dalam porsi besar sekaligus",
+            "Menganjurkan pasien minum banyak air putih segera setelah makan",
+            "Memberikan makanan dalam porsi kecil tapi sering, hindari bau menyengat",
+            "Menganjurkan pasien berbaring datar setelah makan"
+        ],
+        "answer": 2,
+        "explanation": "Makan porsi kecil tapi sering, menghindari makanan berbau tajam atau terlalu berlemak, dan tidak langsung berbaring setelah makan dapat membantu mengurangi mual dan muntah pasca kemoterapi."
+    },
+    {
+        "question": "Nadi normal pada bayi baru lahir (neonatus) berkisar antara...",
+        "options": [
+            "60-100x/menit",
+            "80-120x/menit",
+            "120-160x/menit",
+            "100-180x/menit"
+        ],
+        "answer": 3,
+        "explanation": "Frekuensi nadi normal pada neonatus (0-28 hari) adalah lebih tinggi daripada orang dewasa, berkisar antara 100-180x/menit saat istirahat, bisa lebih tinggi saat menangis atau aktif."
+    },
+    {
+        "question": "Perawat menemukan pasien terpasang infus dengan tetesan yang sangat lambat dan area sekitar insersi bengkak, dingin, serta pucat. Kondisi ini menunjukkan komplikasi infus berupa...",
+        "options": [
+            "Phlebitis",
+            "Infiltrasi",
+            "Hematoma",
+            "Infeksi lokal"
+        ],
+        "answer": 1,
+        "explanation": "Infiltrasi terjadi ketika cairan infus masuk ke jaringan subkutan sekitar vena, ditandai dengan bengkak, dingin, pucat, dan nyeri. Tetesan infus juga melambat atau berhenti."
+    },
+    {
+        "question": "Seorang pasien lansia dengan demensia menunjukkan agitasi dan mencoba melepaskan infusnya. Tindakan pertama yang harus dilakukan perawat adalah...",
+        "options": [
+            "Memberikan obat penenang sesuai order",
+            "Memasang restriksi fisik pada tangan pasien",
+            "Mencoba menenangkan pasien dengan komunikasi verbal dan pengalihan perhatian",
+            "Segera melaporkan kepada dokter jaga"
+        ],
+        "answer": 2,
+        "explanation": "Pendekatan de-eskalasi verbal dan pengalihan perhatian adalah lini pertama. Restriksi fisik hanya sebagai upaya terakhir jika pasien membahayakan diri atau orang lain dan intervensi lain gagal."
+    },
+    {
+        "question": "Obat parasetamol (acetaminophen) utamanya berfungsi sebagai...",
+        "options": [
+            "Antiinflamasi dan analgesik",
+            "Analgesik dan antipiretik",
+            "Antipiretik dan antikoagulan",
+            "Analgesik dan antibiotik"
+        ],
+        "answer": 1,
+        "explanation": "Parasetamol memiliki efek utama sebagai analgesik (pereda nyeri) dan antipiretik (penurun demam). Efek antiinflamasinya sangat lemah."
+    },
+    {
+        "question": "Saat melakukan pemeriksaan fisik abdomen, urutan teknik yang benar adalah...",
+        "options": [
+            "Inspeksi, Palpasi, Perkusi, Auskultasi",
+            "Inspeksi, Auskultasi, Perkusi, Palpasi",
+            "Palpasi, Perkusi, Inspeksi, Auskultasi",
+            "Auskultasi, Inspeksi, Palpasi, Perkusi"
+        ],
+        "answer": 1,
+        "explanation": "Urutan pemeriksaan fisik abdomen yang benar adalah Inspeksi, Auskultasi, Perkusi, lalu Palpasi. Auskultasi dilakukan sebelum perkusi dan palpasi karena manipulasi abdomen dapat mengubah bising usus."
+    },
+    {
+        "question": "Pasien dengan gagal ginjal kronis menjalani hemodialisis. Diet yang dianjurkan umumnya adalah...",
+        "options": [
+            "Tinggi protein, tinggi kalium, rendah natrium",
+            "Rendah protein, rendah kalium, rendah natrium, pembatasan cairan",
+            "Tinggi protein, tinggi kalium, tinggi natrium",
+            "Bebas protein, bebas kalium, bebas natrium"
+        ],
+        "answer": 1,
+        "explanation": "Pasien hemodialisis memerlukan pembatasan asupan protein (tergantung tahap dan frekuensi dialisis), kalium, natrium, dan fosfor, serta pembatasan cairan untuk mencegah penumpukan sisa metabolisme dan cairan berlebih di antara sesi dialisis."
+    },
+    {
+        "question": "Seorang pasien mengeluh sesak napas tiba-tiba, nyeri dada pleuritik, dan batuk darah. Saturasi oksigen 88%. Perawat mencurigai emboli paru. Prioritas tindakan keperawatan adalah...",
+        "options": [
+            "Memberikan posisi semi-Fowler dan oksigen nasal kanul aliran tinggi",
+            "Melakukan pemeriksaan fisik paru secara detail",
+            "Menyiapkan pasien untuk pemeriksaan rontgen toraks",
+            "Mengambil sampel darah untuk pemeriksaan D-dimer"
+        ],
+        "answer": 0,
+        "explanation": "Pada dugaan emboli paru dengan hipoksia, prioritas adalah memperbaiki oksigenasi dengan memberikan posisi yang nyaman (semi-Fowler) dan terapi oksigen aliran tinggi, sambil segera melapor ke dokter."
+    },
+    {
+        "question": "Perawat memberikan edukasi kepada pasien yang baru didiagnosis diabetes mellitus tipe 1. Poin penting yang harus disampaikan mengenai insulin adalah...",
+        "options": [
+            "Insulin dapat dihentikan jika gula darah sudah normal",
+            "Insulin adalah pengobatan seumur hidup untuk DM tipe 1",
+            "Dosis insulin dapat disesuaikan sendiri oleh pasien",
+            "Insulin hanya digunakan saat gula darah sangat tinggi"
+        ],
+        "answer": 1,
+        "explanation": "DM tipe 1 disebabkan oleh kerusakan sel beta pankreas sehingga tidak dapat memproduksi insulin. Oleh karena itu, terapi insulin bersifat substitusi dan diperlukan seumur hidup."
+    },
+    {
+        "question": "Untuk menilai tingkat kesadaran pasien secara kuantitatif, skala yang umum digunakan adalah...",
+        "options": [
+            "Skala Nyeri Numerik (NRS)",
+            "Skala Glasgow Coma Scale (GCS)",
+            "Skala Morse Fall Risk",
+            "Skala Braden"
+        ],
+        "answer": 1,
+        "explanation": "Glasgow Coma Scale (GCS) adalah alat penilaian neurologis yang mengukur tingkat kesadaran berdasarkan respons mata, verbal, dan motorik."
+    },
+    {
+        "question": "Pasien Ny. S, 30 tahun, postpartum hari pertama, mengeluh nyeri pada perineum dan kesulitan BAK. Perawat menemukan perineum tampak edema. Intervensi yang tepat adalah...",
+        "options": [
+            "Menganjurkan pasien untuk menahan BAK",
+            "Memberikan kompres hangat pada perineum",
+            "Memberikan kompres dingin pada perineum dan analgesik",
+            "Memasang kateter urin menetap segera"
+        ],
+        "answer": 2,
+        "explanation": "Kompres dingin pada 24 jam pertama postpartum dapat membantu mengurangi edema dan nyeri perineum. Analgesik juga dapat diberikan. Kompres hangat biasanya setelah 24 jam."
+    },
+    {
+        "question": "Seorang pasien laki-laki, 65 tahun, mengeluh tidak bisa buang air kecil (BAK) sejak 12 jam yang lalu dan perut bagian bawah terasa penuh serta nyeri. Kemungkinan besar pasien mengalami...",
+        "options": [
+            "Infeksi saluran kemih",
+            "Gagal ginjal akut",
+            "Retensi urin akut",
+            "Batu ginjal"
+        ],
+        "answer": 2,
+        "explanation": "Ketidakmampuan BAK disertai rasa penuh dan nyeri pada suprapubik adalah gejala khas retensi urin akut, yang sering terjadi pada pria lansia akibat pembesaran prostat."
+    },
+    {
+        "question": "Perawat akan memberikan obat sublingual kepada pasien. Cara pemberian yang benar adalah...",
+        "options": [
+            "Menelan obat dengan sedikit air",
+            "Meletakkan obat di bawah lidah hingga larut",
+            "Mengunyah obat hingga hancur",
+            "Melarutkan obat dalam air lalu diminum"
+        ],
+        "answer": 1,
+        "explanation": "Obat sublingual diberikan dengan cara meletakkannya di bawah lidah agar diserap langsung oleh pembuluh darah mukosa di area tersebut, sehingga efeknya lebih cepat dan menghindari metabolisme lintas pertama di hati."
+    },
+    {
+        "question": "Seorang pasien dengan riwayat penyakit maag (gastritis) mengeluh nyeri ulu hati. Anjuran pola makan yang tepat adalah...",
+        "options": [
+            "Makan 3 kali sehari porsi besar",
+            "Hindari makan malam",
+            "Makan porsi kecil tapi sering, hindari makanan pedas dan asam",
+            "Makan hanya jika terasa lapar"
+        ],
+        "answer": 2,
+        "explanation": "Pada gastritis, dianjurkan makan porsi kecil tapi sering untuk menjaga agar lambung tidak kosong terlalu lama dan tidak terlalu penuh. Makanan yang merangsang asam lambung (pedas, asam, kopi) sebaiknya dihindari."
+    },
+    {
+        "question": "Tujuan utama dari tindakan pemasangan Nasogastric Tube (NGT) pada pasien dengan perdarahan saluran cerna atas adalah...",
+        "options": [
+            "Memberikan nutrisi enteral",
+            "Mendekompresi lambung dan memantau perdarahan",
+            "Memberikan obat-obatan secara langsung ke lambung",
+            "Mencegah aspirasi pneumonia"
+        ],
+        "answer": 1,
+        "explanation": "Pada perdarahan saluran cerna atas, NGT dipasang untuk dekompresi (mengeluarkan isi lambung, termasuk darah), membilas lambung (lavage), dan memantau kelanjutan atau berhentinya perdarahan."
+    },
+    {
+        "question": "Seorang pasien anak mengalami demam tinggi. Selain pemberian antipiretik, tindakan keperawatan untuk membantu menurunkan suhu tubuh adalah...",
+        "options": [
+            "Memberikan selimut tebal agar berkeringat",
+            "Memberikan kompres air hangat pada lipatan tubuh",
+            "Memberikan minuman dingin dalam jumlah banyak",
+            "Menganjurkan anak untuk banyak bergerak"
+        ],
+        "answer": 1,
+        "explanation": "Kompres air hangat (tepid sponge bath) pada dahi, ketiak, dan lipat paha membantu proses evaporasi dan konduksi sehingga menurunkan suhu tubuh. Kompres dingin dapat menyebabkan menggigil dan vasokonstriksi."
+    },
+    {
+        "question": "Perawat sedang berkomunikasi dengan pasien lansia yang mengalami gangguan pendengaran. Teknik yang tepat adalah...",
+        "options": [
+            "Berbicara dengan suara sangat keras dan cepat",
+            "Berbicara dengan jelas, nada sedang, dan menghadap pasien",
+            "Menulis semua pesan di kertas",
+            "Meminta anggota keluarga untuk selalu mendampingi"
+        ],
+        "answer": 1,
+        "explanation": "Berbicara dengan jelas, intonasi normal atau sedikit lebih keras (tidak berteriak), tempo lambat, dan memastikan wajah terlihat (untuk membaca gerak bibir) akan membantu pasien dengan gangguan pendengaran memahami pesan."
+    },
+    {
+        "question": "Untuk menilai risiko dekubitus pada pasien tirah baring lama, perawat menggunakan skala...",
+        "options": [
+            "Skala Norton atau Braden",
+            "Skala Glasgow Coma Scale",
+            "Skala Apgar",
+            "Skala Wong-Baker FACES"
+        ],
+        "answer": 0,
+        "explanation": "Skala Norton dan Skala Braden adalah alat pengkajian yang umum digunakan untuk menilai risiko terjadinya luka tekan (dekubitus) pada pasien, berdasarkan faktor-faktor seperti persepsi sensori, kelembaban, aktivitas, mobilitas, nutrisi, gesekan, dan tekanan."
+    },
+    {
+        "question": "Seorang pasien datang ke UGD dengan keluhan nyeri hebat pada perut kanan bawah, mual, dan demam ringan. Pemeriksaan fisik menunjukkan nyeri tekan lepas di titik McBurney. Kondisi ini mengarah pada...",
+        "options": [
+            "Gastritis akut",
+            "Apendisitis akut",
+            "Kolesistitis akut",
+            "Pankreatitis akut"
+        ],
+        "answer": 1,
+        "explanation": "Nyeri perut kanan bawah, mual, demam, dan nyeri tekan lepas di titik McBurney (rebound tenderness) adalah gejala klasik dari apendisitis akut (radang usus buntu)."
+    },
+    {
+        "question": "Saat melakukan perawatan luka, perawat harus mengganti balutan jika...",
+        "options": [
+            "Balutan masih bersih dan kering setelah 3 hari",
+            "Balutan basah oleh eksudat atau darah",
+            "Pasien merasa nyaman dengan balutan lama",
+            "Tidak ada perintah dokter untuk mengganti balutan"
+        ],
+        "answer": 1,
+        "explanation": "Balutan yang basah oleh eksudat atau darah menjadi media pertumbuhan kuman dan dapat menyebabkan maserasi kulit. Balutan harus segera diganti untuk mencegah infeksi dan menjaga kebersihan luka."
+    },
+    {
+        "question": "Pendidikan kesehatan untuk pasien dengan anemia defisiensi besi sebaiknya menekankan konsumsi makanan tinggi zat besi, seperti...",
+        "options": [
+            "Susu dan produk olahannya",
+            "Daging merah, hati, dan sayuran hijau tua",
+            "Buah-buahan sitrus",
+            "Roti gandum utuh"
+        ],
+        "answer": 1,
+        "explanation": "Sumber zat besi heme (lebih mudah diserap) terdapat pada daging merah, unggas, ikan, dan hati. Sumber non-heme terdapat pada sayuran hijau tua (bayam, kangkung), kacang-kacangan, dan sereal yang difortifikasi."
+    },
+    {
+        "question": "Perawat akan melakukan suction (penghisapan lendir) pada pasien dengan trakeostomi. Sebelum melakukan tindakan, perawat harus...",
+        "options": [
+            "Memastikan pasien dalam posisi supinasi",
+            "Memberikan hiperoksigenasi selama 30 detik - 1 menit",
+            "Mengatur tekanan suction maksimal (di atas 150 mmHg)",
+            "Memasukkan kateter suction tanpa menyalakan mesin"
+        ],
+        "answer": 1,
+        "explanation": "Hiperoksigenasi sebelum suction bertujuan untuk meningkatkan saturasi oksigen pasien dan mencegah hipoksia yang dapat terjadi selama prosedur penghisapan lendir."
+    },
+    {
+        "question": "Seorang pasien pasca stroke mengalami hemiparesis kanan dan afasia motorik. Saat berkomunikasi, perawat sebaiknya...",
+        "options": [
+            "Berbicara dengan cepat agar pasien tidak bosan",
+            "Menggunakan pertanyaan tertutup yang hanya membutuhkan jawaban 'ya' atau 'tidak'",
+            "Menghindari kontak mata agar pasien tidak malu",
+            "Meminta pasien untuk menulis semua kebutuhannya"
+        ],
+        "answer": 1,
+        "explanation": "Pasien dengan afasia motorik (Broca) kesulitan mengekspresikan diri secara verbal. Pertanyaan tertutup, penggunaan gestur, gambar, atau papan tulis dapat membantu komunikasi."
+    },
+    {
+        "question": "Frekuensi pernapasan normal pada orang dewasa saat istirahat adalah...",
+        "options": [
+            "8-12 kali/menit",
+            "12-20 kali/menit",
+            "22-30 kali/menit",
+            "30-40 kali/menit"
+        ],
+        "answer": 1,
+        "explanation": "Frekuensi pernapasan normal untuk orang dewasa yang sehat saat istirahat berkisar antara 12 hingga 20 kali per menit."
+    },
+    {
+        "question": "Pemberian obat tetes mata yang benar adalah dengan meneteskan obat ke...",
+        "options": [
+            "Sudut mata bagian dalam (dekat hidung)",
+            "Langsung ke kornea mata",
+            "Sakus konjungtiva inferior (kelopak mata bagian bawah)",
+            "Sudut mata bagian luar"
+        ],
+        "answer": 2,
+        "explanation": "Obat tetes mata diteteskan ke dalam sakus konjungtiva inferior (kantong yang terbentuk ketika kelopak mata bawah ditarik dengan lembut) untuk penyerapan yang optimal dan menghindari iritasi kornea."
+    },
+    {
+        "question": "Seorang pasien mengeluh pusing berputar (vertigo) hebat saat mengubah posisi kepala. Intervensi keperawatan yang utama adalah...",
+        "options": [
+            "Menganjurkan pasien untuk banyak minum",
+            "Membantu pasien bergerak secara perlahan dan hati-hati, serta memastikan keamanan",
+            "Memberikan kompres dingin di dahi",
+            "Mengajarkan senam kepala dengan cepat"
+        ],
+        "answer": 1,
+        "explanation": "Pada pasien vertigo, perubahan posisi yang tiba-tiba dapat memicu serangan. Membantu pasien bergerak perlahan dan memastikan lingkungan aman untuk mencegah jatuh adalah prioritas."
+    },
+    {
+        "question": "Seorang pasien dengan diabetes mellitus tidak sadarkan diri. Pemeriksaan Gula Darah Sewaktu (GDS) menunjukkan 45 mg/dL. Tindakan segera yang paling tepat oleh perawat (jika akses IV sudah terpasang) adalah...",
+        "options": [
+            "Memberikan suntikan insulin subkutan",
+            "Memberikan larutan Dextrose 40% intravena sesuai protokol",
+            "Memberikan minuman manis kepada pasien",
+            "Menunggu instruksi dokter lebih lanjut"
+        ],
+        "answer": 1,
+        "explanation": "GDS 45 mg/dL menunjukkan hipoglikemia berat. Jika pasien tidak sadar dan akses IV ada, pemberian Dextrose 40% IV adalah tindakan penyelamatan jiwa untuk segera menaikkan kadar gula darah."
+    }
+]

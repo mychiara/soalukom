@@ -1,0 +1,161 @@
+/* ========================================
+   PERBAIKAN LAYOUT PEMBAHASAN
+   ======================================== */
+
+/* Tombol Pembahasan Container - Flexbox Layout */
+.quiz-action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Styling untuk tombol Ragu-ragu */
+#doubtful-button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+#doubtful-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+#doubtful-button i {
+    font-size: 1.1rem;
+}
+
+/* Styling untuk tombol Kembali */
+#back-to-menu-button {
+    background: linear-gradient(135deg, #fd746c, #ff9068);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(253, 116, 108, 0.3);
+}
+
+#back-to-menu-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(253, 116, 108, 0.4);
+}
+
+#back-to-menu-button i {
+    font-size: 1.1rem;
+}
+
+/* Styling untuk tombol Soal Berikutnya */
+#next-question-button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    flex: 1;
+    justify-content: center;
+    min-width: 200px;
+}
+
+#next-question-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+#next-question-button i {
+    font-size: 1.1rem;
+}
+
+/* Layout responsif untuk tombol */
+@media (max-width: 768px) {
+    .quiz-action-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    #doubtful-button,
+    #back-to-menu-button,
+    #next-question-button {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Urutan tombol di mobile */
+    #doubtful-button {
+        order: 1;
+    }
+    
+    #next-question-button {
+        order: 2;
+    }
+    
+    #back-to-menu-button {
+        order: 3;
+    }
+}
+
+/* Dark mode support */
+[data-theme="dark"] #doubtful-button,
+[data-theme="dark"] #next-question-button {
+    background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+[data-theme="dark"] #back-to-menu-button {
+    background: linear-gradient(135deg, #ff9068, #fd746c);
+}
+
+/* Perbaikan untuk Pembahasan box */
+.explanation-box {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    border-left: 4px solid #667eea;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .explanation-box {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    border-left-color: #764ba2;
+}
+
+.explanation-box strong {
+    color: #667eea;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+[data-theme="dark"] .explanation-box strong {
+    color: #a78bfa;
+}
+
+.explanation-box strong i {
+    margin-right: 8px;
+}

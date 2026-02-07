@@ -1,0 +1,406 @@
+/* ========================================
+   PHASE 4: PWA & NOTIFICATIONS STYLES
+   ======================================== */
+
+/* === PWA Install Banner === */
+
+.pwa-install-banner {
+    position: fixed;
+    bottom: -200px;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 20px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    transition: bottom 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.pwa-install-banner.show {
+    bottom: 0;
+}
+
+.install-banner-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+}
+
+.install-icon {
+    font-size: 2.5rem;
+}
+
+.install-text {
+    flex: 1;
+}
+
+.install-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.install-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.install-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-install {
+    background: white;
+    color: #667eea;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-install:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.btn-dismiss {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-dismiss:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* === Update Notification === */
+
+.update-notification {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10000;
+    background: #2ecc71;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: top 0.4s ease;
+}
+
+.update-notification.show {
+    top: 0;
+}
+
+.update-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.update-icon {
+    font-size: 1.5rem;
+}
+
+.update-text {
+    font-weight: 600;
+}
+
+.btn-update {
+    background: white;
+    color: #2ecc71;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-update:hover {
+    transform: scale(1.05);
+}
+
+/* === Offline Status Banner === */
+
+.connection-status-banner {
+    position: fixed;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9998;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: bottom 0.3s ease;
+}
+
+.connection-status-banner.show {
+    bottom: 20px;
+}
+
+.offline-status {
+    background: #e74c3c;
+    color: white;
+}
+
+.online-status {
+    background: #2ecc71;
+    color: white;
+}
+
+/* === Offline Mode Badge === */
+
+.offline-badge {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 1000;
+    background: #e74c3c;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 2px 12px rgba(231, 76, 60, 0.4);
+}
+
+/* === PWA Mode Indicators === */
+
+body.pwa-mode {
+    padding-top: env(safe-area-inset-top);
+}
+
+body.pwa-mode #main-header {
+    padding-top: calc(20px + env(safe-area-inset-top));
+}
+
+/* === PWA Settings Modal === */
+
+.pwa-settings-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10001;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.pwa-settings-modal .modal-content {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 16px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.pwa-settings-modal h2 {
+    margin-bottom: 25px;
+    color: var(--text-dark);
+}
+
+.pwa-settings-modal h3 {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.settings-section {
+    margin-bottom: 25px;
+}
+
+.settings-section label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+.settings-section input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.settings-section p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.settings-section button {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.settings-section button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pwa-settings-modal .btn-close {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.pwa-settings-modal .btn-close:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* === Loading States === */
+
+.pwa-loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: pwa-spin 0.8s linear infinite;
+}
+
+@keyframes pwa-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* === Notification Permission Prompt === */
+
+.notification-permission-prompt {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    text-align: center;
+}
+
+.notification-permission-prompt .icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.notification-permission-prompt h3 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.notification-permission-prompt p {
+    color: var(--text-light);
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.notification-permission-prompt .button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.notification-permission-prompt button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.notification-permission-prompt .btn-allow {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+}
+
+.notification-permission-prompt .btn-deny {
+    background: var(--bg-tertiary);
+    color: var(--text-dark);
+    border: 2px solid var(--border-color);
+}
+
+/* === Responsive PWA Styles === */
+
+@media (max-width: 768px) {
+    .pwa-install-banner {
+        padding: 15px;
+    }
+    
+    .install-banner-content {
+        flex-wrap: wrap;
+    }
+    
+    .install-actions {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .btn-install, .btn-dismiss {
+        flex: 1;
+    }
+    
+    .update-notification {
+        left: 10px;
+        right: 10px;
+        transform: none;
+    }
+    
+    .offline-badge {
+        top: 70px;
+        right: 10px;
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+}
+
+/* === Dark Mode PWA Styles === */
+
+[data-theme="dark"] .pwa-settings-modal .modal-content {
+    background: var(--bg-secondary);
+}
+
+[data-theme="dark"] .notification-permission-prompt {
+    background: var(--bg-secondary);
+}

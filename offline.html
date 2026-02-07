@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Bimbel UKOM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .offline-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            padding: 60px 40px;
+            text-align: center;
+            max-width: 500px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .offline-icon {
+            font-size: 120px;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        h1 {
+            font-size: 2rem;
+            color: #2d3436;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        p {
+            color: #636e72;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .features-list {
+            text-align: left;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+        
+        .features-list h3 {
+            color: #2d3436;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        
+        .features-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features-list li {
+            padding: 8px 0;
+            color: #636e72;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .features-list li::before {
+            content: '✓';
+            color: #00b894;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .btn-retry {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+            margin-top: 20px;
+        }
+        
+        .btn-retry:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.6);
+        }
+        
+        .btn-retry:active {
+            transform: translateY(0);
+        }
+        
+        .connection-status {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #ff7675;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .connection-status.online {
+            background: #00b894;
+        }
+        
+        .spinner {
+            display: none;
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 600px) {
+            .offline-container {
+                padding: 40px 20px;
+            }
+            
+            .offline-icon {
+                font-size: 80px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="offline-icon">📡</div>
+        
+        <div class="connection-status" id="status">
+            🔴 Tidak Ada Koneksi
+        </div>
+        
+        <h1>Oops! Kamu Sedang Offline</h1>
+        
+        <p>
+            Sepertinya koneksi internet kamu terputus. 
+            Beberapa fitur mungkin tidak tersedia, tapi jangan khawatir!
+        </p>
+        
+        <div class="features-list">
+            <h3>Yang Masih Bisa Kamu Lakukan:</h3>
+            <ul>
+                <li>Lihat riwayat quiz kamu</li>
+                <li>Review soal yang sudah di-cache</li>
+                <li>Lihat achievement yang sudah di-unlock</li>
+                <li>Akses flashcard yang tersimpan</li>
+                <li>Lihat statistik pembelajaran</li>
+            </ul>
+        </div>
+        
+        <p style="font-size: 0.95rem; color: #95a5a6;">
+            💡 <strong>Tips:</strong> Pastikan WiFi atau data seluler kamu aktif, 
+            lalu klik tombol di bawah untuk mencoba lagi.
+        </p>
+        
+        <div class="spinner" id="spinner"></div>
+        
+        <button class="btn-retry" id="retryBtn" onclick="checkConnection()">
+            🔄 Coba Lagi
+        </button>
+        
+        <p style="margin-top: 30px; font-size: 0.85rem; color: #b2bec3;">
+            Data kamu tersimpan dengan aman dan akan otomatis ter-sync 
+            saat koneksi kembali tersedia.
+        </p>
+    </div>
+    
+    <script>
+        // Check online status
+        function updateStatus() {
+            const status = document.getElementById('status');
+            if (navigator.onLine) {
+                status.textContent = '🟢 Online';
+                status.classList.add('online');
+            } else {
+                status.textContent = '🔴 Offline';
+                status.classList.remove('online');
+            }
+        }
+        
+        // Check connection and reload if online
+        async function checkConnection() {
+            const retryBtn = document.getElementById('retryBtn');
+            const spinner = document.getElementById('spinner');
+            
+            retryBtn.disabled = true;
+            retryBtn.textContent = 'Memeriksa...';
+            spinner.style.display = 'block';
+            
+            try {
+                const response = await fetch('/', { 
+                    method: 'HEAD',
+                    cache: 'no-cache'
+                });
+                
+                if (response.ok) {
+                    retryBtn.textContent = '✓ Terhubung!';
+                    setTimeout(() => {
+                        window.location.href = '/';
+                    }, 500);
+                } else {
+                    throw new Error('Not connected');
+                }
+            } catch (error) {
+                retryBtn.textContent = '❌ Masih Offline';
+                retryBtn.disabled = false;
+                spinner.style.display = 'none';
+                
+                setTimeout(() => {
+                    retryBtn.textContent = '🔄 Coba Lagi';
+                }, 2000);
+            }
+        }
+        
+        // Listen for online/offline events
+        window.addEventListener('online', () => {
+            updateStatus();
+            // Auto reload when back online
+            setTimeout(() => {
+                window.location.href = '/';
+            }, 1000);
+        });
+        
+        window.addEventListener('offline', updateStatus);
+        
+        // Initial status check
+        updateStatus();
+        
+        // Periodic check (every 30 seconds)
+        setInterval(() => {
+            if (navigator.onLine) {
+                fetch('/', { method: 'HEAD', cache: 'no-cache' })
+                    .then(() => window.location.href = '/')
+                    .catch(() => {});
+            }
+        }, 30000);
+    </script>
+</body>
+</html>
