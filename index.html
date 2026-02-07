@@ -62,26 +62,55 @@
 
     <!-- Achievement Popup Notification -->
     <div id="achievement-popup" class="achievement-popup">
-      <button class="close-achievement-btn" onclick="closeAchievementPopup(event)" aria-label="Close">
-        <i class="fa-solid fa-times"></i>
-      </button>
+      <div id="force-close-achievement" style="position: absolute; top: 10px; right: 10px; width: 40px; height: 40px; background: #f0f0f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 99999; font-weight: bold; font-size: 20px; color: #555; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+        ✕
+      </div>
       
       <script>
-        // Global function to ensure close always works
-        window.closeAchievementPopup = function(e) {
-            if(e) {
-                e.preventDefault();
-                e.stopPropagation();
+        // Paksa event listener untuk tombol close achievement
+        (function() {
+            function setupCloseButton() {
+                const btn = document.getElementById('force-close-achievement');
+                const popup = document.getElementById('achievement-popup');
+                
+                if (btn && popup) {
+                    // Hapus listener lama (cloning node)
+                    const newBtn = btn.cloneNode(true);
+                    btn.parentNode.replaceChild(newBtn, btn);
+                    
+                    newBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        popup.classList.remove('show');
+                        popup.style.display = 'none'; // Paksa hilang
+                        
+                        // Reset display setelah animasi selesai (opsional)
+                        setTimeout(() => { popup.style.display = ''; }, 1000);
+                        console.log("Popup ditutup paksa.");
+                    }, true); // Use capture phase
+                    
+                    // Tambahkan juga touchstart untuk responsivitas mobile yang lebih baik
+                    newBtn.addEventListener('touchstart', function(e) {
+                         e.preventDefault(); // Prevent mouse emulation
+                         popup.classList.remove('show');
+                         popup.style.display = 'none';
+                    }, {passive: false});
+                }
             }
             
-            const popup = document.getElementById('achievement-popup');
-            if(popup) {
-                popup.classList.remove('show');
-                // Paksa sembunyikan via style direct jika class gagal
-                // popup.style.display = 'none'; 
-                // setTimeout(() => popup.style.display = '', 500); // Reset after anim
-            }
-        };
+            // Coba pasang listener sekarang dan saat DOM siap
+            setupCloseButton();
+            document.addEventListener('DOMContentLoaded', setupCloseButton);
+            
+            // Expose global function sebagai cadangan
+            window.closeAchievementPopup = function() {
+                const popup = document.getElementById('achievement-popup');
+                if(popup) {
+                    popup.classList.remove('show');
+                    popup.style.display = 'none';
+                }
+            };
+        })();
       </script>
       <div class="achievement-header">
         <div class="achievement-badge">
