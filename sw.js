@@ -46,6 +46,8 @@ const QUESTION_FILES = [
   '/keluarga.json',
   '/komunitas.json',
   '/manajemen.json',
+  '/maternitas.json',
+  '/gerontik.json',
   '/gabungan.json',
   '/TO1.json',
   '/TO2.json',
@@ -70,22 +72,43 @@ self.addEventListener('install', (event) => {
   
   event.waitUntil(
     Promise.all([
-      // Cache static assets
-      caches.open(STATIC_CACHE).then((cache) => {
+      // Cache static assets (individually to handle failures)
+      caches.open(STATIC_CACHE).then(async (cache) => {
         console.log('[SW] Caching static assets');
-        return cache.addAll(STATIC_ASSETS);
+        for (const asset of STATIC_ASSETS) {
+          try {
+            await cache.add(asset);
+          } catch (error) {
+            // Silent fail - some assets may not exist in development
+            console.warn(`[SW] Could not cache ${asset}`);
+          }
+        }
       }),
       
-      // Cache question files
-      caches.open(DYNAMIC_CACHE).then((cache) => {
+      // Cache question files (individually to handle failures)
+      caches.open(DYNAMIC_CACHE).then(async (cache) => {
         console.log('[SW] Caching question files');
-        return cache.addAll(QUESTION_FILES);
+        for (const file of QUESTION_FILES) {
+          try {
+            await cache.add(file);
+          } catch (error) {
+            // Silent fail - some files may not exist yet
+            console.warn(`[SW] Could not cache ${file}`);
+          }
+        }
       }),
       
-      // Cache images
-      caches.open(IMAGE_CACHE).then((cache) => {
+      // Cache images (individually to handle failures)
+      caches.open(IMAGE_CACHE).then(async (cache) => {
         console.log('[SW] Caching images');
-        return cache.addAll(ASSET_FILES);
+        for (const asset of ASSET_FILES) {
+          try {
+            await cache.add(asset);
+          } catch (error) {
+            // Silent fail - some images may not exist
+            console.warn(`[SW] Could not cache ${asset}`);
+          }
+        }
       })
     ]).then(() => {
       console.log('[SW] Installation complete');
@@ -201,8 +224,7 @@ async function networkFirstStrategy(request) {
     
     return networkResponse;
   } catch (error) {
-    console.error('[SW] Network failed, trying cache:', error);
-    
+    // Silent fail for network errors - try cache instead
     const cachedResponse = await caches.match(request);
     
     if (cachedResponse) {
@@ -236,12 +258,12 @@ async function staleWhileRevalidate(request) {
         const cache = await caches.open(STATIC_CACHE);
         await cache.put(request, responseToCache);
       } catch (error) {
-        console.error('[SW] Cache update failed:', error);
+        // Silent fail - cache update is not critical
       }
     }
     return networkResponse;
   }).catch((error) => {
-    console.error('[SW] Background fetch failed:', error);
+    // Silent fail - background fetch is not critical if we have cache
     return null;
   });
   
