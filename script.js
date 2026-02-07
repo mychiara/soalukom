@@ -363,15 +363,28 @@ function attachAuthEventListeners() {
 
   logoutButton.addEventListener("click", async () => {
     const licenseKey = sessionStorage.getItem("licenseKey");
+    
+    // Stop heartbeat first
+    if (heartbeatIntervalId) {
+      clearInterval(heartbeatIntervalId);
+      heartbeatIntervalId = null;
+    }
+    
+    // Clear session from Firebase
     if (db && licenseKey) {
       try {
         const docRef = doc(db, "licenses", licenseKey);
-        await updateDoc(docRef, { activeSessionId: null });
+        await updateDoc(docRef, { 
+          activeSessionId: null,
+          lastSeenAt: serverTimestamp()
+        });
       } catch (error) {
         console.error("Error on logout:", error);
       }
     }
-    showLoginForm("Anda telah berhasil logout.");
+    
+    // Reset app state and show login form
+    resetAppState();
   });
 }
 
