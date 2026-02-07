@@ -10,15 +10,23 @@
 @media (max-width: 768px) {
   /* Reduce body padding on mobile */
   body {
-    padding: 10px;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+    overflow-x: hidden !important;
+    width: 100%;
   }
 
-  /* Container adjustments */
+  /* Container adjustments - CRITICAL FIX */
   .container-view {
-    padding: 20px 15px;
-    margin: 10px auto;
-    width: 100%;
-    border-radius: 15px;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    box-sizing: border-box !important;
+    border-left: none !important;
+    border-right: none !important;
   }
 
   /* Typography scaling */
@@ -53,26 +61,30 @@
      ======================================== */
   
   #main-menu-container {
-    padding: 15px 12px;
+    padding: 15px !important;
     max-width: 100%;
+    margin: 0 !important;
+    box-sizing: border-box;
+    width: 100%;
   }
 
   #main-menu-welcome-user {
-    font-size: 1.05rem;
-    margin-bottom: 4px;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
     color: var(--text-dark);
     font-weight: 700;
+    line-height: 1.3;
   }
 
   #main-menu-container h3 {
-    font-size: 0.9rem;
-    margin-bottom: 12px;
+    font-size: 1.05rem;
+    margin-bottom: 18px;
     color: var(--text-light);
     font-weight: 600;
   }
 
   /* ========================================
-     DAILY STATS PANEL - MOBILE
+     DAILY STATS PANEL - MOBILE (1 COLUMN)
      ======================================== */
   
   #daily-stats-panel {
@@ -85,40 +97,59 @@
 
   .stats-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 12px;
+    grid-template-columns: 1fr; /* 1 Column Vertical */
+    gap: 12px;
+    margin-bottom: 15px;
   }
 
+  /* Stat Card: Horizontal Layout (Icon Left, Text Right) */
   .stat-card {
+    display: grid; 
+    grid-template-columns: 50px 1fr; /* Icon width fixed, content fluid */
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "icon value"
+      "icon label";
+    align-items: center;
     background: white;
-    padding: 12px 8px;
-    border-radius: 10px;
-    text-align: center;
+    padding: 15px; /* Comfortable padding */
+    border-radius: 14px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border: 1px solid #e9ecef;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    column-gap: 15px;
   }
 
   .stat-icon {
-    font-size: 1.8rem;
-    margin-bottom: 6px;
-    display: block;
+    grid-area: icon;
+    font-size: 2.2rem;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .stat-value {
-    font-size: 1.2rem;
+    grid-area: value;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #4a90e2;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     display: block;
+    text-align: left;
   }
 
   .stat-label {
-    font-size: 0.7rem;
-    line-height: 1.2;
+    grid-area: label;
+    font-size: 0.9rem; /* Bigger font for readability */
+    line-height: 1.3;
     color: #495057;
     font-weight: 600;
     display: block;
+    text-align: left;
+    white-space: normal; /* Allow wrap */
   }
 
   .progress-bar-container {
@@ -126,7 +157,7 @@
     background: #e9ecef;
     border-radius: 10px;
     overflow: hidden;
-    margin-top: 0;
+    margin-top: 5px;
     border: 1px solid #dee2e6;
   }
 
@@ -140,7 +171,7 @@
      BLUE PRINT MENU LINK - MOBILE
      ======================================== */
   
-  #main-menu-container a {
+  #main-menu-container > a {
     display: block;
     width: 100%;
     max-width: 100%;
@@ -148,92 +179,119 @@
     text-decoration: none;
   }
 
-  #main-menu-container a .card-menu-item {
+  #main-menu-container > a .card-menu-item {
     grid-column: 1 / -1; /* Span full width */
-    min-height: 100px;
-    padding: 15px;
-    flex-direction: row;
-    text-align: left;
-    gap: 15px;
-  }
-
-  #main-menu-container a .card-menu-icon-wrapper {
-    width: 60px;
-    height: 60px;
-    font-size: 1.8rem;
-    margin-bottom: 0;
-  }
-
-  #main-menu-container a .card-menu-icon-wrapper i {
-    font-size: 1.8rem !important;
-    color: white !important;
-  }
-
-  #main-menu-container a .card-menu-text {
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  #main-menu-container a .card-menu-title {
-    font-size: 1.05rem;
-    font-weight: 700;
-  }
-
-  #main-menu-container a .card-menu-description {
-    font-size: 0.85rem;
-    display: block; /* Show description for blue print */
-  }
-
-  /* Card menu grid - 2 columns on mobile like features-grid */
-  .card-menu-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-top: 0;
-  }
-
-  /* Card menu items - styled like feature-item */
-  .card-menu-item {
-    padding: 15px 12px;
-    border-radius: 14px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    min-height: 100px !important;
+    padding: 18px !important;
+    flex-direction: row !important;
+    text-align: left !important;
+    gap: 15px !important;
     background: white;
     border: 2px solid #e9ecef;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    text-align: center;
-    width: 100%;
-    min-height: 120px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   }
 
-  .card-menu-item:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-  }
-
-  .card-menu-icon-wrapper {
-    width: 55px;
-    height: 55px;
-    font-size: 1.6rem;
-    margin-right: 0;
-    margin-bottom: 0;
+  #main-menu-container > a .card-menu-icon-wrapper {
+    width: 65px !important;
+    height: 65px !important;
+    font-size: 2rem !important;
+    margin-bottom: 0 !important;
+    margin-right: 0 !important;
     border-radius: 14px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
+
+  #main-menu-container > a .card-menu-icon-wrapper i {
+    font-size: 2rem !important;
     color: white !important;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    font-weight: 900;
+  }
+
+  #main-menu-container > a .card-menu-text {
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+
+  #main-menu-container > a .card-menu-title {
+    font-size: 1.1rem !important;
+    font-weight: 700;
+    color: #2d3436 !important;
+    margin-bottom: 5px;
+  }
+
+  #main-menu-container > a .card-menu-description {
+    font-size: 0.85rem !important;
+    display: block !important; /* Show description for blue print */
+    color: #636e72 !important;
+    line-height: 1.4;
+  }
+
+  /* ========================================
+     CARD MENU GRID - MOBILE (LAYOUT 1 COLUMN SAFE MODE)
+     ======================================== */
+  
+  .card-menu-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important; /* 1 Column */
+    gap: 15px !important;
+    margin: 0 !important;
+    padding: 0 5px !important;
+    width: 100%;
+    box-sizing: border-box !important;
+  }
+
+  /* ========================================
+     CARD MENU ITEMS - MOBILE (VERTICAL)
+     ======================================== */
+  
+  .card-menu-grid .card-menu-item {
+    padding: 20px 15px !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    flex-direction: column !important; /* VERTICAL LAYOUT */
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    background: white !important;
+    border: 2px solid #e9ecef !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.3s ease;
+    text-align: center !important;
+    width: 100% !important;
+    min-height: auto !important;
+    position: relative;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+  }
+
+  .card-menu-grid .card-menu-item:active {
+    transform: scale(0.97) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12) !important;
+  }
+
+  /* ========================================
+     ICON WRAPPER - MOBILE (LARGER & VISIBLE)
+     ======================================== */
+  
+  .card-menu-grid .card-menu-icon-wrapper {
+    width: 70px !important;
+    height: 70px !important;
+    font-size: 2.2rem !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    border-radius: 18px !important;
+    flex-shrink: 0;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: white !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25) !important;
     position: relative;
     overflow: visible;
   }
 
-  .card-menu-icon-wrapper i {
-    font-size: 1.6rem !important;
+  .card-menu-grid .card-menu-icon-wrapper i {
+    font-size: 2.2rem !important;
     color: white !important;
     display: block;
     line-height: 1;
@@ -289,28 +347,36 @@
     background: linear-gradient(135deg, #11998e, #38ef7d) !important;
   }
 
-  .card-menu-text {
+  /* ========================================
+     TEXT CONTENT - MOBILE (READABLE)
+     ======================================== */
+  
+  .card-menu-grid .card-menu-text {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 5px !important;
+    width: 100% !important;
   }
 
-  .card-menu-title {
-    font-size: 0.9rem;
+  .card-menu-grid .card-menu-title {
+    font-size: 1.1rem !important;
     margin-bottom: 0;
     font-weight: 700;
     color: #2d3436 !important;
-    line-height: 1.2;
+    line-height: 1.3;
+    text-align: center !important;
+    white-space: normal !important;
   }
 
-  .card-menu-description {
-    font-size: 0.75rem;
-    line-height: 1.3;
+  .card-menu-grid .card-menu-description {
+    font-size: 0.85rem !important;
+    line-height: 1.4;
     color: #636e72 !important;
-    margin: 0;
-    display: none; /* Hide description on mobile for cleaner look */
+    display: block !important;
+    text-align: center !important;
   }
 
 }
@@ -323,21 +389,22 @@
 @media (max-width: 400px) {
   /* Main Menu Container */
   #main-menu-container {
-    padding: 20px 12px;
+    padding: 18px 12px;
   }
 
   #main-menu-welcome-user {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #2d3436 !important;
+    line-height: 1.3;
   }
 
   #main-menu-container h3 {
-    font-size: 1.15rem;
-    margin-bottom: 18px;
+    font-size: 1rem;
+    margin-bottom: 16px;
     color: #636e72 !important;
   }
 
-  /* Daily Stats Panel - Smaller screens */
+  /* Daily Stats Panel - Smaller screens (STILL 1 COLUMN) */
   #daily-stats-panel {
     padding: 12px;
     margin-bottom: 20px;
@@ -346,92 +413,123 @@
   }
 
   .stats-row {
-    gap: 8px;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
   }
 
+  /* Force Horizontal Layout for Stats on Small Screens too */
   .stat-card {
-    padding: 10px 6px;
+    display: grid !important; 
+    grid-template-columns: 40px 1fr !important; 
+    grid-template-rows: auto auto !important;
+    grid-template-areas: 
+      "icon value"
+      "icon label" !important;
+    align-items: center !important;
+    padding: 12px !important;
+    text-align: left !important;
+    column-gap: 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
     background: white;
     border: 1px solid #e9ecef;
   }
 
   .stat-icon {
-    font-size: 1.6rem;
-    margin-bottom: 5px;
+    grid-area: icon;
+    font-size: 1.8rem !important; /* Slightly smaller icon */
+    margin-bottom: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .stat-value {
-    font-size: 1.1rem;
+    grid-area: value;
+    font-size: 1.2rem !important;
+    text-align: left !important;
     color: #4a90e2 !important;
   }
 
   .stat-label {
-    font-size: 0.65rem;
+    grid-area: label;
+    font-size: 0.8rem !important;
+    white-space: normal !important;
+    text-align: left !important;
     color: #495057 !important;
     font-weight: 600;
   }
 
-  /* Card Menu Items - 2 columns grid for small screens */
+  /* Card Menu Items - 1 COLUMN for small screens too */
   .card-menu-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
   }
 
-  .card-menu-item {
-    padding: 12px 10px;
-    min-height: 115px;
-    gap: 8px;
-    background: white;
-    border: 2px solid #e9ecef;
+  .card-menu-grid .card-menu-item {
+    padding: 15px 12px !important;
+    min-height: auto !important;
+    gap: 10px !important;
+    background: white !important;
+    border: 2px solid #e9ecef !important;
+    border-radius: 16px !important;
+    flex-direction: column !important; /* FORCE VERTICAL */
+    align-items: center !important;
+    text-align: center !important;
   }
 
-  .card-menu-icon-wrapper {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  .card-menu-grid .card-menu-icon-wrapper {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 1.8rem !important;
+    border-radius: 14px !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25) !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
   }
 
-  .card-menu-icon-wrapper i {
-    font-size: 1.5rem !important;
+  .card-menu-grid .card-menu-icon-wrapper i {
+    font-size: 1.8rem !important;
     color: white !important;
     font-weight: 900;
   }
 
-  #main-menu-container a .card-menu-icon-wrapper {
-    width: 55px;
-    height: 55px;
-    font-size: 1.6rem;
+  #main-menu-container > a .card-menu-icon-wrapper {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 1.8rem !important;
   }
 
-  #main-menu-container a .card-menu-icon-wrapper i {
-    font-size: 1.6rem !important;
+  #main-menu-container > a .card-menu-icon-wrapper i {
+    font-size: 1.8rem !important;
     color: white !important;
   }
 
-  .card-menu-title {
-    font-size: 0.85rem;
+  .card-menu-grid .card-menu-title {
+    font-size: 1rem !important;
     font-weight: 700;
     color: #2d3436 !important;
+    line-height: 1.3;
+    text-align: center !important;
   }
 
-  .card-menu-description {
-    font-size: 0.7rem;
-    line-height: 1.25;
+  .card-menu-grid .card-menu-description {
+    font-size: 0.8rem !important;
+    line-height: 1.3;
     color: #636e72 !important;
-    display: none; /* Keep hidden on small screens */
+    display: block !important;
+    text-align: center !important;
   }
 
-  #main-menu-container a .card-menu-title {
-    font-size: 1rem;
+  #main-menu-container > a .card-menu-title {
+    font-size: 1.05rem !important;
     color: #2d3436 !important;
   }
 
-  #main-menu-container a .card-menu-description {
-    font-size: 0.8rem;
+  #main-menu-container > a .card-menu-description {
+    font-size: 0.82rem !important;
     color: #636e72 !important;
-    display: block;
+    display: block !important;
   }
 }
 
