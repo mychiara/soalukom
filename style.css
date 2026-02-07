@@ -3723,6 +3723,32 @@ body.dark-mode .achievement-description {
 
     /* Padding extra di bagian bawah agar popup tidak menutupi konten */
     .container-view {
-        padding-bottom: 80px !important;
+        padding-bottom: 100px !important;
+    }
+
+    /* PENTING! Tambahkan padding kiri-kanan agar tidak mepet layar */
+    body {
+        overflow-x: hidden;
+    }
+    
+    .welcome-container {
+        width: 95% !important; /* Jangan 100% full */
+        margin: 10px auto !important; /* Beri margin atas bawah */
+        border-radius: 15px !important; /* Sedikit rounded di mobile */
+    }
+
+    /* Override popup position agar tidak nabrak header */
+    .achievement-popup {
+       bottom: 80px !important; /* Naikkan sedikit dari toolbar bawah */
+    }
+
+    /* Styling khusus tombol close baru */
+    #force-close-achievement {
+        width: 36px !important;
+        height: 36px !important;
+        top: 12px !important;
+        right: 12px !important;
+        background: #f8f9fa !important;
+        border: 1px solid #ddd !important;
     }
 }
