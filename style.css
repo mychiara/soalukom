@@ -3546,26 +3546,159 @@ body.dark-mode .achievement-description {
     position: absolute;
     top: 5px;
     right: 5px;
-    background: none;
-    border: none;
-    color: #aaa;
+    background: white; /* Beri background agar terlihat jelas */
+    border: 1px solid #eee;
+    color: #888;
     cursor: pointer;
     font-size: 1.1rem;
-    padding: 5px;
-    transition: color 0.2s;
+    padding: 0;
+    transition: all 0.2s;
     line-height: 1;
-    width: 30px;
-    height: 30px;
-    box-shadow: none;
+    width: 28px;
+    height: 28px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    z-index: 10005 !important; /* Pastikan di atas semua elemen */
+    pointer-events: auto !important; /* Pastikan bisa diklik */
 }
 
 .close-achievement-btn:hover {
     color: #ff6b6b;
     background: #fff0f0;
-    transform: none;
-    box-shadow: none;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* ======================================== 
+   MOBILE OPTIMIZATION FIXES (Screen < 480px)
+   ======================================== */
+@media (max-width: 480px) {
+    /* Container Utama: Hilangkan margin berlebih */
+    .welcome-container {
+        width: 100% !important;
+        margin: 0 !important;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    /* Header: Kecilkan font dan padding */
+    .welcome-header {
+        padding: 25px 15px 10px 15px;
+    }
+
+    .welcome-header h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .welcome-header h3 {
+        font-size: 1rem;
+    }
+
+    .app-description {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    /* Logo: Kecilkan sedikit */
+    .logo-circle {
+        width: 65px;
+        height: 65px;
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    /* Stats: Ubah jadi Grid 2 kolom yang rapi */
+    .social-proof-stats {
+        padding: 0 15px 20px 15px;
+        gap: 10px;
+    }
+
+    .proof-card {
+        flex: 1 1 45%; /* Paksa 2 kolom */
+        min-width: 140px; 
+        padding: 15px 10px;
+        flex-direction: column; /* Icon di atas */
+        text-align: center;
+        gap: 8px;
+    }
+
+    .proof-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        margin: 0 auto; /* Center icon */
+    }
+
+    .proof-text {
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .proof-text h3 {
+        font-size: 1.3rem;
+    }
+    
+    .proof-text p {
+        font-size: 0.75rem;
+        white-space: normal; /* Allow wrap */
+    }
+
+    /* Features: List vertikal 1 kolom */
+    .features-grid {
+        grid-template-columns: 1fr;
+        padding: 10px 15px;
+        gap: 12px;
+    }
+    
+    .feature-item {
+        padding: 15px;
+    }
+
+    /* Form Login: Full width */
+    .login-section {
+        padding: 30px 15px;
+    }
+    
+    .input-container, .btn-primary-gradient {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Why Us & Testimoni: 1 Kolom */
+    .why-us-container, .testimonials-container {
+        padding: 20px 15px 40px 15px;
+    }
+    
+    .why-us-grid, .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .why-card {
+        flex-direction: row; /* Tetap row biar icon di kiri */
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .why-content p {
+        text-align: left;
+    }
+
+    /* Footer Credits */
+    .developer-credit-slim {
+        font-size: 0.7rem;
+        padding: 10px;
+    }
+
+    /* Fix tombol close achievement di mobile */
+    .close-achievement-btn {
+        width: 32px; /* Lebih besar biar mudah ditap */
+        height: 32px;
+        top: 8px;
+        right: 8px;
+    }
 }
